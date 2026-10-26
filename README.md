@@ -20,6 +20,9 @@ como produto.
 
 O estado do deploy, credenciais demo e backups estão em [`DEPLOY.md`](DEPLOY.md) §10.
 
+As capturas originais e a `ui_spec` descodificada **não** entram no repositório:
+são material de referência/instrumento (`repack_suspect`), não entregável.
+
 ## O que existe
 
 | Pasta | Conteúdo |
