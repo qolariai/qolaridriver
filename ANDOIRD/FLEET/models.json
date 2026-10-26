@@ -1,0 +1,7174 @@
+{
+ "com.qolari.model.core.generated.rtapi.services.identity.AddSSOIDAccountGroup": {
+  "fields": [
+   {
+    "name": "linkedTokens",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.AddSSOIDAccountGroup_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.AddSSOIDRequest": {
+  "fields": [
+   {
+    "name": "srcRefreshTokens",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   },
+   {
+    "name": "tgtRefreshTokens",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.AddSSOIDRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.AddSSOIDResponse": {
+  "fields": [
+   {
+    "name": "accountGroups",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.rtapi.services.identity.AddSSOIDAccountGroup;>;"
+   },
+   {
+    "name": "wontAdd",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.AddSSOIDResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.ExpiresIn": {
+  "fields": [
+   {
+    "name": "value",
+    "type": "long"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetAppsNotInDeviceSessionGroupErrors": {
+  "fields": [
+   {
+    "name": "badRequestError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.BadRequest"
+   },
+   {
+    "name": "code",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "forbiddenError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Forbidden"
+   },
+   {
+    "name": "internalServerError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.ServerError"
+   },
+   {
+    "name": "notFoundError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.NotFound"
+   },
+   {
+    "name": "rateLimited",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.RateLimited"
+   },
+   {
+    "name": "unauthorizedError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Unauthenticated"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetAppsNotInDeviceSessionGroupRequest": {
+  "fields": [
+   {
+    "name": "installedApps",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.rtapi.services.app.AppID;>;"
+   },
+   {
+    "name": "sessionID",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetAppsNotInDeviceSessionGroupRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetAppsNotInDeviceSessionGroupResponse": {
+  "fields": [
+   {
+    "name": "appsNotInDeviceSessionGroup",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.rtapi.services.app.AppID;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetAppsNotInDeviceSessionGroupResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetUserIdTokenErrors": {
+  "fields": [
+   {
+    "name": "badRequestError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.BadRequest"
+   },
+   {
+    "name": "code",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "forbiddenError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Forbidden"
+   },
+   {
+    "name": "internalServerError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.ServerError"
+   },
+   {
+    "name": "notFoundError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.NotFound"
+   },
+   {
+    "name": "rateLimited",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.RateLimited"
+   },
+   {
+    "name": "unauthorizedError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Unauthenticated"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetUserIDTokenRequest": {
+  "fields": [
+   {
+    "name": "clientID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "skipSigning",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetUserIDTokenRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetUserIDTokenResponse": {
+  "fields": [
+   {
+    "name": "idToken",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GetUserIDTokenResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GroupDeviceSessionsErrors": {
+  "fields": [
+   {
+    "name": "badRequestError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.BadRequest"
+   },
+   {
+    "name": "code",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "forbiddenError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Forbidden"
+   },
+   {
+    "name": "internalServerError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.ServerError"
+   },
+   {
+    "name": "notFoundError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.NotFound"
+   },
+   {
+    "name": "rateLimited",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.RateLimited"
+   },
+   {
+    "name": "unauthorizedError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Unauthenticated"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GroupDeviceSessionsRequest": {
+  "fields": [
+   {
+    "name": "appID",
+    "type": "com.qolari.model.core.generated.rtapi.services.app.AppID"
+   },
+   {
+    "name": "appsToSessionID",
+    "type": "Lcom.google.common.collect.h<Lcom.qolari.model.core.generated.rtapi.services.app.AppID;Ljava.lang.String;>;"
+   },
+   {
+    "name": "sessionID",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.GroupDeviceSessionsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.IdentityClient": {
+  "fields": [
+   {
+    "name": "realtimeClient",
+    "type": "Lcom.qolari.presidio.realtime.core.RealtimeClient<TD;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.IdentityClient_Factory": {
+  "fields": [
+   {
+    "name": "clientProvider",
+    "type": "Ljavax.inject.Provider<Lcom.qolari.presidio.realtime.core.RealtimeClient<TD;>;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.InvalidateTokenErrors": {
+  "fields": [
+   {
+    "name": "badRequestError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.BadRequest"
+   },
+   {
+    "name": "code",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "forbiddenError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Forbidden"
+   },
+   {
+    "name": "internalServerError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.ServerError"
+   },
+   {
+    "name": "notFoundError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.NotFound"
+   },
+   {
+    "name": "rateLimited",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.RateLimited"
+   },
+   {
+    "name": "unauthorizedError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Unauthenticated"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.InvalidateTokenRequest": {
+  "fields": [
+   {
+    "name": "token",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.InvalidateTokenRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.RevokeAuthSessionErrors": {
+  "fields": [
+   {
+    "name": "badRequestError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.BadRequest"
+   },
+   {
+    "name": "code",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "internalServerError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.ServerError"
+   },
+   {
+    "name": "rateLimited",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.RateLimited"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.RevokeAuthSessionRequest": {
+  "fields": [
+   {
+    "name": "accessToken",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "includeSSO",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "token",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.RevokeAuthSessionRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.SsoExchangeTokenErrors": {
+  "fields": [
+   {
+    "name": "badRequestError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.BadRequest"
+   },
+   {
+    "name": "code",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "forbiddenError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Forbidden"
+   },
+   {
+    "name": "internalServerError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.ServerError"
+   },
+   {
+    "name": "notFoundError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.NotFound"
+   },
+   {
+    "name": "rateLimited",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.RateLimited"
+   },
+   {
+    "name": "unauthorizedError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Unauthenticated"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.SSOExchangeTokenRequest": {
+  "fields": [
+   {
+    "name": "srcRefreshToken",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tgtAppID",
+    "type": "com.qolari.model.core.generated.rtapi.services.app.AppID"
+   },
+   {
+    "name": "tgtClientID",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.SSOExchangeTokenRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.TokenErrors": {
+  "fields": [
+   {
+    "name": "badRequestError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.BadRequest"
+   },
+   {
+    "name": "code",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "forbiddenError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Forbidden"
+   },
+   {
+    "name": "internalServerError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.ServerError"
+   },
+   {
+    "name": "notFoundError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.NotFound"
+   },
+   {
+    "name": "rateLimited",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.RateLimited"
+   },
+   {
+    "name": "unauthorizedError",
+    "type": "com.qolari.model.core.generated.rtapi.models.exception.Unauthenticated"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.TokenInternalRequest": {
+  "fields": [
+   {
+    "name": "clientID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "clientSecret",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "grantType",
+    "type": "com.qolari.model.core.generated.rtapi.services.identity.GrantType"
+   },
+   {
+    "name": "refreshToken",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "scope",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.TokenInternalRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.TokenResponse": {
+  "fields": [
+   {
+    "name": "accessToken",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "expiresIn",
+    "type": "com.qolari.model.core.generated.rtapi.services.identity.ExpiresIn"
+   },
+   {
+    "name": "idToken",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "refreshToken",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "refreshTokenExpiresIn",
+    "type": "com.qolari.model.core.generated.rtapi.services.identity.ExpiresIn"
+   },
+   {
+    "name": "scope",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "sessionID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tokenType",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.rtapi.services.identity.TokenResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.Campaign": {
+  "fields": [
+   {
+    "name": "cityId",
+    "type": "int"
+   },
+   {
+    "name": "constraints",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.Constraints"
+   },
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "memo",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "name",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "notificationPolicy",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.NotificationPolicy"
+   },
+   {
+    "name": "rule",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.Rule"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "status",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.CampaignStatus"
+   },
+   {
+    "name": "type",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.CampaignType"
+   },
+   {
+    "name": "userTag",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.CampaignView": {
+  "fields": [
+   {
+    "name": "campaign",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.Campaign"
+   },
+   {
+    "name": "eligibilityText",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedDescription",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTitle",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "moreInfoText",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "ruleView",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.RuleView"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.CampaignView_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.Campaign_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.Constraints": {
+  "fields": [
+   {
+    "name": "mbgConstraints",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.MBGConstraints"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.Constraints_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetCampaignViewRequest": {
+  "fields": [
+   {
+    "name": "campaignUUID",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetCampaignViewRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetCampaignViewResponse": {
+  "fields": [
+   {
+    "name": "campaignView",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.CampaignView"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetCampaignViewResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetPartnerCampaignViewRequest": {
+  "fields": [
+   {
+    "name": "campaignUUID",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.UUID"
+   },
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetPartnerCampaignViewRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetPartnerCampaignViewResponse": {
+  "fields": [
+   {
+    "name": "partnerCampaignView",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.PartnerCampaignView"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetPartnerCampaignViewResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetPartnerPromotionViewRequest": {
+  "fields": [
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetPartnerPromotionViewRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetPartnerPromotionViewResponse": {
+  "fields": [
+   {
+    "name": "partnerCampaignViews",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.driver.fleetincentive.PartnerCampaignView;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.GetPartnerPromotionViewResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.MBGConstraints": {
+  "fields": [
+   {
+    "name": "maxPercentTripsCancelled",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "maxPercentTripsStarpowerOpted",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "minPercentTripsAccepted",
+    "type": "java.lang.Double"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.MBGConstraints_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.NotificationPolicy": {
+  "fields": [
+   {
+    "name": "time",
+    "type": "dl1.d"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.NotificationPolicy_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.PartnerCampaignView": {
+  "fields": [
+   {
+    "name": "campaignView",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.CampaignView"
+   },
+   {
+    "name": "earning",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "formattedEarning",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedMaxEarning",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedMinEarning",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "maxEarning",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "minEarning",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "trips",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "vbiPartnerCampaignView",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.VBIPartnerCampaignView"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.PartnerCampaignView_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.Rule": {
+  "fields": [
+   {
+    "name": "vbiRule",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.VBIRule"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.RuleView": {
+  "fields": [
+   {
+    "name": "vbiRuleView",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.VBIRuleView"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.RuleView_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.Rule_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.Tier": {
+  "fields": [
+   {
+    "name": "payout",
+    "type": "int"
+   },
+   {
+    "name": "target",
+    "type": "int"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.TierView": {
+  "fields": [
+   {
+    "name": "formattedPayout",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTarget",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tier",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.Tier"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.TierView_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.Tier_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.VBIPartnerCampaignView": {
+  "fields": [
+   {
+    "name": "vehicleViews",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.driver.fleetincentive.VehicleView;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.VBIPartnerCampaignView_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.VBIRule": {
+  "fields": [
+   {
+    "name": "tiers",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.driver.fleetincentive.Tier;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.VBIRuleView": {
+  "fields": [
+   {
+    "name": "bottomLegend",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "rule",
+    "type": "com.qolari.model.core.generated.driver.fleetincentive.VBIRule"
+   },
+   {
+    "name": "tierViews",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.driver.fleetincentive.TierView;>;"
+   },
+   {
+    "name": "topLegend",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.VBIRuleView_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.VBIRule_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.VehicleView": {
+  "fields": [
+   {
+    "name": "earning",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "formattedEarning",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "imgUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "make",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "model",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "motivationMessage",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "trips",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.driver.fleetincentive.VehicleView_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.DriverOverview": {
+  "fields": [
+   {
+    "name": "email",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lastOnlineTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "mobile",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "name",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "onboardingStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.OnboardingStatus"
+   },
+   {
+    "name": "orgDriverInfo",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.OrganizationDriverInfo"
+   },
+   {
+    "name": "pictureUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "realtimeStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.DriverStatus"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "waitlistedByFleet",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.DriverOverview_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.GetDriverCurrentSupplyV2Request": {
+  "fields": [
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.GetDriverCurrentSupplyV2Request_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.GetDriverCurrentSupplyV2Response": {
+  "fields": [
+   {
+    "name": "driverOverview",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.DriverOverview"
+   },
+   {
+    "name": "formattedEarnings",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lastKnownLocation",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.Location"
+   },
+   {
+    "name": "tripCount",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.GetDriverCurrentSupplyV2Response_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.Location": {
+  "fields": [
+   {
+    "name": "latitude",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "longitude",
+    "type": "java.lang.Double"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.Location_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.OrganizationDriverInfo": {
+  "fields": [
+   {
+    "name": "driverID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver_supply.OrganizationDriverInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.Interval": {
+  "fields": [
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.Interval_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.Label": {
+  "fields": [
+   {
+    "name": "value",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.Label_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.OrganizationIdentifier": {
+  "fields": [
+   {
+    "name": "clientID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.OrganizationIdentifier_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingOptions": {
+  "fields": [
+   {
+    "name": "pageSize",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "pageToken",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingOptions_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingResult": {
+  "fields": [
+   {
+    "name": "nextPageToken",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingResult_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PhoneNumber": {
+  "fields": [
+   {
+    "name": "countryCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "nationalPhoneNumber",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PhoneNumber_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier": {
+  "fields": [
+   {
+    "name": "clientID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "supplierOrgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_communication.InboxMessageAction": {
+  "fields": [
+   {
+    "name": "actionType",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_communication.InboxMessageActionType"
+   },
+   {
+    "name": "messageSubtype",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "messageType",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "messageUUID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "position",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_communication.InboxMessageAction_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_communication.UpdateInboxMessageRequest": {
+  "fields": [
+   {
+    "name": "action",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_communication.InboxMessageAction"
+   },
+   {
+    "name": "userUUID",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_communication.UpdateInboxMessageRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.ComplianceInfo": {
+  "fields": [
+   {
+    "name": "documents",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_documents.Document;>;"
+   },
+   {
+    "name": "status",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.ComplianceStatus"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.ComplianceInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.CreateDocumentRequest": {
+  "fields": [
+   {
+    "name": "documentTypeUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "entityType",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_documents.DocumentEntityType"
+   },
+   {
+    "name": "entityUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "fileBody",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.Base64"
+   },
+   {
+    "name": "fileType",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "orgIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.OrganizationIdentifier"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.CreateDocumentRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.CreateDocumentResponse": {
+  "fields": [
+   {
+    "name": "document",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_documents.Document"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.CreateDocumentResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_documents.Document": {
+  "fields": [
+   {
+    "name": "createdAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "documentTypeName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "documentTypeUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "expiresAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "fileType",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "isReadOnly",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "status",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_documents.DocumentComplianceStatus"
+   },
+   {
+    "name": "statusReasonName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_documents.Document_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.Driver": {
+  "fields": [
+   {
+    "name": "associatedVehicles",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.Vehicle;>;"
+   },
+   {
+    "name": "complianceInfo",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.ComplianceInfo"
+   },
+   {
+    "name": "member",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.Member"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.Driver_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriverFilters": {
+  "fields": [
+   {
+    "name": "complianceStatuses",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_compliancemanager.ComplianceStatus;>;"
+   },
+   {
+    "name": "documentComplianceStatuses",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_documents.DocumentComplianceStatus;>;"
+   },
+   {
+    "name": "documentExpirationFilter",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.TimestampRange"
+   },
+   {
+    "name": "vehicleAssignmentStatuses",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleAssignmentStatus;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriverFilters_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriverRequest": {
+  "fields": [
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "orgIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.OrganizationIdentifier"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriverRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriverResponse": {
+  "fields": [
+   {
+    "name": "driver",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.Driver"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriverResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriversRequest": {
+  "fields": [
+   {
+    "name": "filters",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriverFilters"
+   },
+   {
+    "name": "orgIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.OrganizationIdentifier"
+   },
+   {
+    "name": "pagingOptions",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingOptions"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriversRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriversResponse": {
+  "fields": [
+   {
+    "name": "drivers",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.Driver;>;"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "pagingResult",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingResult"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.GetDriversResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.SearchDriversRequest": {
+  "fields": [
+   {
+    "name": "orgIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.OrganizationIdentifier"
+   },
+   {
+    "name": "pagingOptions",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingOptions"
+   },
+   {
+    "name": "searchCriteria",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchMemberCriteria"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.SearchDriversRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.SearchDriversResponse": {
+  "fields": [
+   {
+    "name": "drivers",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.Driver;>;"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "pagingResult",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingResult"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_drivermanager.SearchDriversResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsBreakdown": {
+  "fields": [
+   {
+    "name": "category",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "description",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "items",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsBreakdownItem;>;"
+   },
+   {
+    "name": "total",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsBreakdownItem": {
+  "fields": [
+   {
+    "name": "amount",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "description",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "disclaimer",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedAmount",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "icon",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "itemType",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "recognizedAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "shouldShowPlusSign",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsBreakdownItem_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsBreakdown_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsSummary": {
+  "fields": [
+   {
+    "name": "bankDeposit",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "cashCollected",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "cashouts",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "currencyCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "estimatedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedBankDeposit",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedCashCollected",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedCashouts",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedEstimatedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedMiscTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTripEarning",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "isFinalized",
+    "type": "boolean"
+   },
+   {
+    "name": "isInstantPayAvailable",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "miscTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "statementUuid",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "timezone",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "total",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tripEarning",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsSummary_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.GetDriverDailyEarningsWithTripsRequest": {
+  "fields": [
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.GetDriverDailyEarningsWithTripsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.GetDriverDailyEarningsWithTripsResponse": {
+  "fields": [
+   {
+    "name": "breakdown",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsBreakdown;>;"
+   },
+   {
+    "name": "summary",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsSummary"
+   },
+   {
+    "name": "trips",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.TripEarnings;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.GetDriverDailyEarningsWithTripsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.TripEarnings": {
+  "fields": [
+   {
+    "name": "breakdown",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.EarningsBreakdown;>;"
+   },
+   {
+    "name": "driverFare",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "driverUuid",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "dropoffAddress",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "duration",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "formattedCashCollected",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedDistance",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedDriverFare",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "pickupAddress",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "processedAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "requestAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "routeMap",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "timezone",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "total",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "vehicleType",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_earnings.TripEarnings_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.ComplianceNotFoundException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.ComplianceNotFoundCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.ComplianceNotFoundException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DeleteAssignedVehicleException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DeleteAssignedVehicleCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DeleteAssignedVehicleException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DocumentTypeNotFoundException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DocumentTypeNotFoundCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DocumentTypeNotFoundException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DriverNotActiveException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DriverNotActiveCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DriverNotActiveException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DriverNotFoundException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DriverNotFoundCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.DriverNotFoundException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.EntityAlreadyExistsException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "existingEntityUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.EntityAlreadyExistsException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.InternalServerErrorException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.InternalServerErrorCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.InternalServerErrorException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.InvalidArgumentException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.InvalidArgumentCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.InvalidArgumentException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.InvalidRequestException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "errors",
+    "type": "Lcom.google.common.collect.h<Ljava.lang.String;Ljava.lang.String;>;"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.InvalidRequestException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.MembershipNotFoundException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.MembershipNotFoundCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.MembershipNotFoundException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.MissingArgumentException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.MissingArgumentCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.MissingArgumentException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.NotFoundException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "resourceId",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.NotFoundException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.NotVehicleOwnerException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.NotVehicleOwnerCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.NotVehicleOwnerException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.OrganizationNotAuthorizedException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.OrganizationNotAuthorizedCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.OrganizationNotAuthorizedException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.OrganizationNotFoundException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.OrganizationNotFoundCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.OrganizationNotFoundException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.RateLimitedException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.RateLimitedCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.RateLimitedException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.ServiceErrorException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.ServiceErrorException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.TerritoryMismatchException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.TerritoryMismatchCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.TerritoryMismatchException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.UnauthorizedException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.UnauthorizedException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.UserNotFoundException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.UserNotFoundCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.UserNotFoundException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleAlreadyExistsException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleAlreadyExistsCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleAlreadyExistsException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleAlreadyUnassignedException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleAlreadyUnassignedCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleAlreadyUnassignedException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleNotActiveException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleNotActiveCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleNotActiveException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleNotFoundException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleNotFoundCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleNotFoundException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleSupplierOwnerNotFoundException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleSupplierOwnerNotFoundCode"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "translatedMessage",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.VehicleSupplierOwnerNotFoundException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InvitedUserInfo": {
+  "fields": [
+   {
+    "name": "email",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "name",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.UserName"
+   },
+   {
+    "name": "phone",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PhoneNumber"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InvitedUserInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InviteUserToOrgRequest": {
+  "fields": [
+   {
+    "name": "invitedUserInfo",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InvitedUserInfo"
+   },
+   {
+    "name": "membershipLabels",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.types.Label;>;"
+   },
+   {
+    "name": "membershipType",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.MembershipType"
+   },
+   {
+    "name": "orgIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.OrganizationIdentifier"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InviteUserToOrgRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InviteUserToOrgResponse": {
+  "fields": [
+   {
+    "name": "membershipUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InviteUserToOrgResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.Member": {
+  "fields": [
+   {
+    "name": "membership",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.Membership"
+   },
+   {
+    "name": "user",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.User"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.Membership": {
+  "fields": [
+   {
+    "name": "labels",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.types.Label;>;"
+   },
+   {
+    "name": "linkedAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "userUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.MembershipInvite": {
+  "fields": [
+   {
+    "name": "createdAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "invitedUserInfo",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InvitedUserInfo"
+   },
+   {
+    "name": "membershipLabels",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.types.Label;>;"
+   },
+   {
+    "name": "membershipType",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.MembershipType"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "status",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InviteStatus"
+   },
+   {
+    "name": "user",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.User"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.MembershipInvite_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.Membership_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.Member_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchInvitesCriteria": {
+  "fields": [
+   {
+    "name": "inviteCreatedAt",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.Interval"
+   },
+   {
+    "name": "inviteStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.InviteStatus"
+   },
+   {
+    "name": "membershipType",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.MembershipType"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchInvitesCriteria_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchInvitesRequest": {
+  "fields": [
+   {
+    "name": "orgIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.OrganizationIdentifier"
+   },
+   {
+    "name": "pagingOptions",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingOptions"
+   },
+   {
+    "name": "searchCriteria",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchInvitesCriteria"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchInvitesRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchInvitesResponse": {
+  "fields": [
+   {
+    "name": "invites",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.MembershipInvite;>;"
+   },
+   {
+    "name": "pagingResult",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PagingResult"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchInvitesResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchMemberCriteria": {
+  "fields": [
+   {
+    "name": "searchFields",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchableFieldType;>;"
+   },
+   {
+    "name": "searchText",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_membershipmanager.SearchMemberCriteria_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.GetSupplierContextErrors": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "invalidRequest",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.InvalidRequestException"
+   },
+   {
+    "name": "serviceError",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.ServiceErrorException"
+   },
+   {
+    "name": "unauthorized",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_exceptions.UnauthorizedException"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.GetSupplierContextRequest": {
+  "fields": [
+   {
+    "name": "features",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.GetSupplierContextRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.GetSupplierContextResponse": {
+  "fields": [
+   {
+    "name": "properties",
+    "type": "Lcom.google.common.collect.h<Ljava.lang.String;Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.SupplierContextValue;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.GetSupplierContextResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.SupplierContextClient": {
+  "fields": [
+   {
+    "name": "realtimeClient",
+    "type": "Lcom.qolari.presidio.realtime.core.RealtimeClient<TD;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.SupplierContextValue": {
+  "fields": [
+   {
+    "name": "boolValue",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "integerValue",
+    "type": "java.lang.Long"
+   },
+   {
+    "name": "stringValue",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "type",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.SupplierContextValueUnionType"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.SupplierContextValueUnionType": {
+  "fields": [
+   {
+    "name": "value",
+    "type": "int"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_supplier_context.SupplierContextValue_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FleetSurveyAnswer": {
+  "fields": [
+   {
+    "name": "schema",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.SurveySchema"
+   },
+   {
+    "name": "sourceUuid",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   },
+   {
+    "name": "value",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FleetSurveyAnswer_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FormattedCurrencyAmount": {
+  "fields": [
+   {
+    "name": "currencyAmount",
+    "type": "com.qolari.model.core.generated.data.schemas.money.CurrencyAmount"
+   },
+   {
+    "name": "formattedAmount",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedAmountDescription",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FormattedCurrencyAmount_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetIncentiveProgressRequest": {
+  "fields": [
+   {
+    "name": "incentiveUUID",
+    "type": "com.qolari.model.core.generated.data.schemas.basic.UUID"
+   },
+   {
+    "name": "supplierUUID",
+    "type": "com.qolari.model.core.generated.data.schemas.basic.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetIncentiveProgressRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetIncentiveProgressResponse": {
+  "fields": [
+   {
+    "name": "incentive",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.Incentive"
+   },
+   {
+    "name": "mbgIncentiveProgress",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGIncentiveProgress"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetIncentiveProgressResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetIncentiveVehicleProgressRequest": {
+  "fields": [
+   {
+    "name": "incentiveUUID",
+    "type": "com.qolari.model.core.generated.data.schemas.basic.UUID"
+   },
+   {
+    "name": "supplierUUID",
+    "type": "com.qolari.model.core.generated.data.schemas.basic.UUID"
+   },
+   {
+    "name": "tierIndex",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetIncentiveVehicleProgressRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetIncentiveVehicleProgressResponse": {
+  "fields": [
+   {
+    "name": "vehiclesProgress",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.VehicleProgress;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetIncentiveVehicleProgressResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetSupplierIncentivesRequest": {
+  "fields": [
+   {
+    "name": "incentiveTypes",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.IncentiveType;>;"
+   },
+   {
+    "name": "interval",
+    "type": "com.qolari.model.core.generated.data.schemas.time.Interval"
+   },
+   {
+    "name": "supplierUUID",
+    "type": "com.qolari.model.core.generated.data.schemas.basic.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetSupplierIncentivesRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetSupplierIncentivesResponse": {
+  "fields": [
+   {
+    "name": "incentives",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.Incentive;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetSupplierIncentivesResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetSurveysRequest": {
+  "fields": [
+   {
+    "name": "cityID",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "eventSource",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "locale",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "userType",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "userUUID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "variants",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.GetSurveysRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.Incentive": {
+  "fields": [
+   {
+    "name": "earnedAmount",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FormattedCurrencyAmount"
+   },
+   {
+    "name": "formattedIncentiveDescription",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedIncentiveEligibility",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedIncentiveTitle",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "incentiveParams",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.IncentiveParams"
+   },
+   {
+    "name": "incentiveType",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.IncentiveType"
+   },
+   {
+    "name": "incentiveUUID",
+    "type": "com.qolari.model.core.generated.data.schemas.basic.UUID"
+   },
+   {
+    "name": "interval",
+    "type": "com.qolari.model.core.generated.data.schemas.time.Interval"
+   },
+   {
+    "name": "supplierUUID",
+    "type": "com.qolari.model.core.generated.data.schemas.basic.UUID"
+   },
+   {
+    "name": "territoryID",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.IncentiveParams": {
+  "fields": [
+   {
+    "name": "mbgParams",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGParams"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.IncentiveParams_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.Incentive_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGIncentiveProgress": {
+  "fields": [
+   {
+    "name": "achivedGuaranteedAmount",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FormattedCurrencyAmount"
+   },
+   {
+    "name": "earnedGuaranteedAmount",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FormattedCurrencyAmount"
+   },
+   {
+    "name": "formattedMaxGuaranteedMessage",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "maxGuaranteedAmount",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FormattedCurrencyAmount"
+   },
+   {
+    "name": "progress",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGTierProgress;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGIncentiveProgress_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGParams": {
+  "fields": [
+   {
+    "name": "mbgTiers",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGTier;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGParams_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGTier": {
+  "fields": [
+   {
+    "name": "formattedTierDescription",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "guaranteedAmount",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FormattedCurrencyAmount"
+   },
+   {
+    "name": "minTripCount",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGTierProgress": {
+  "fields": [
+   {
+    "name": "formattedMotivationMessage",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGTier"
+   },
+   {
+    "name": "vehiclesInTier",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGTierProgress_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGTier_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGVehicleProgress": {
+  "fields": [
+   {
+    "name": "guaranteeAmountEarned",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FormattedCurrencyAmount"
+   },
+   {
+    "name": "highestFulfilledTierNumber",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "motivationMessage",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "payoutAmount",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FormattedCurrencyAmount"
+   },
+   {
+    "name": "tripsCompleted",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGVehicleProgress_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.SubmitSurveyRequest": {
+  "fields": [
+   {
+    "name": "answers",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.FleetSurveyAnswer;>;"
+   },
+   {
+    "name": "surveyInstanceUuid",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.SubmitSurveyRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.VehicleProgress": {
+  "fields": [
+   {
+    "name": "mbgVehicleProgress",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.MBGVehicleProgress"
+   },
+   {
+    "name": "vehicle",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.VehicleView"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.VehicleProgress_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.VehicleView": {
+  "fields": [
+   {
+    "name": "earning",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "formattedEarning",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "imgUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "make",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "model",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "motivationMessage",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "trips",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_survey.VehicleView_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.DriverInfo": {
+  "fields": [
+   {
+    "name": "completedTripsCount",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "onboardingStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.driver.DriverOnboardingStatus"
+   },
+   {
+    "name": "recognitionRating",
+    "type": "java.lang.Double"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.DriverInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.User": {
+  "fields": [
+   {
+    "name": "driverInfo",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.DriverInfo"
+   },
+   {
+    "name": "email",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "isBanned",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "name",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.UserName"
+   },
+   {
+    "name": "phone",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.PhoneNumber"
+   },
+   {
+    "name": "pictureUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.UserName": {
+  "fields": [
+   {
+    "name": "firstName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lastName",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.UserName_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_user.User_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.AssignVehicleRequest": {
+  "fields": [
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "vehicleSupplierIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.AssignVehicleRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.CreateVehicleRequest": {
+  "fields": [
+   {
+    "name": "vehicle",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.Vehicle"
+   },
+   {
+    "name": "vehicleSupplierIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.CreateVehicleRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.CreateVehicleResponse": {
+  "fields": [
+   {
+    "name": "vehicle",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.Vehicle"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.CreateVehicleResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.DeleteVehicleRequest": {
+  "fields": [
+   {
+    "name": "vehicleSupplierIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.DeleteVehicleRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehicleRequest": {
+  "fields": [
+   {
+    "name": "fields",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "vehicleSupplierIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehicleRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehicleResponse": {
+  "fields": [
+   {
+    "name": "vehicle",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.Vehicle"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehicleResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehiclesByOwnerFilters": {
+  "fields": [
+   {
+    "name": "documentComplianceStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.DocumentComplianceStatus"
+   },
+   {
+    "name": "documentExpirationFilter",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.TimestampRange"
+   },
+   {
+    "name": "vehicleAssignmentStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleAssignmentStatus"
+   },
+   {
+    "name": "vehicleComplianceStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleComplianceStatus"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehiclesByOwnerFilters_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehiclesByOwnerRequest": {
+  "fields": [
+   {
+    "name": "fields",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "filters",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehiclesByOwnerFilters"
+   },
+   {
+    "name": "pageSize",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "pageToken",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "vehicleOrgUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "vehicleSupplierIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehiclesByOwnerRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehiclesByOwnerResponse": {
+  "fields": [
+   {
+    "name": "nextPageToken",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "vehicles",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.Vehicle;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.GetVehiclesByOwnerResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.ModifyVehicleLabelsRequest": {
+  "fields": [
+   {
+    "name": "addLabels",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.types.Label;>;"
+   },
+   {
+    "name": "removeLabels",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.types.Label;>;"
+   },
+   {
+    "name": "vehicleSupplierIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.ModifyVehicleLabelsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.ModifyVehicleLabelsResponse": {
+  "fields": [
+   {
+    "name": "labels",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.types.Label;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.ModifyVehicleLabelsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.SearchVehicleFilters": {
+  "fields": [
+   {
+    "name": "labelValues",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "scope",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.OrganizationScope"
+   },
+   {
+    "name": "vehicleUUIDs",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID;>;"
+   },
+   {
+    "name": "vin",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.SearchVehicleFilters_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.SearchVehiclesRequest": {
+  "fields": [
+   {
+    "name": "fields",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "filters",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.SearchVehicleFilters"
+   },
+   {
+    "name": "vehicleSupplierIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.SearchVehiclesRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.SearchVehiclesResponse": {
+  "fields": [
+   {
+    "name": "vehicles",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.Vehicle;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.SearchVehiclesResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.TimestampRange": {
+  "fields": [
+   {
+    "name": "endTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "startTime",
+    "type": "dl1.d"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.TimestampRange_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.UnassignVehicleRequest": {
+  "fields": [
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "vehicleSupplierIdentifier",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.VehicleSupplierIdentifier"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.UnassignVehicleRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.Vehicle": {
+  "fields": [
+   {
+    "name": "assignments",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleAssignment;>;"
+   },
+   {
+    "name": "color",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "colorHexCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "compliance",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleCompliance"
+   },
+   {
+    "name": "imageURL",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "labels",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.types.Label;>;"
+   },
+   {
+    "name": "lastModified",
+    "type": "dl1.d"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "make",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "model",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "ownerUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "vin",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "year",
+    "type": "java.lang.Short"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleAssignment": {
+  "fields": [
+   {
+    "name": "entityUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleAssignment_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleCompliance": {
+  "fields": [
+   {
+    "name": "documents",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleDocument;>;"
+   },
+   {
+    "name": "status",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleComplianceStatus"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleCompliance_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleDocument": {
+  "fields": [
+   {
+    "name": "documentTypeName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "documentTypeUUID",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.types.UUID"
+   },
+   {
+    "name": "expiresAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "isBlanketDocument",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "status",
+    "type": "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.DocumentComplianceStatus"
+   },
+   {
+    "name": "statusReasonName",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.VehicleDocument_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vehicle_supplier.vs_vehiclemanager.Vehicle_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.DriverEvent": {
+  "fields": [
+   {
+    "name": "driverLocation",
+    "type": "com.qolari.model.core.generated.edge.services.vs_livemap.DriverLocation"
+   },
+   {
+    "name": "driverStatus",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "driverStatusState",
+    "type": "com.qolari.model.core.generated.edge.services.vs_livemap.DriverStatusState"
+   },
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   },
+   {
+    "name": "dropOffInfo",
+    "type": "com.qolari.model.core.generated.edge.services.vs_livemap.DropOffInfo"
+   },
+   {
+    "name": "eventTimestamp",
+    "type": "dl1.d"
+   },
+   {
+    "name": "firstVVID",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.DriverEvent_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.DriverLocation": {
+  "fields": [
+   {
+    "name": "course",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "latitude",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "longitude",
+    "type": "java.lang.Double"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.DriverLocation_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.DropOffInfo": {
+  "fields": [
+   {
+    "name": "locations",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vs_livemap.DropOffLocation;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.DropOffInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.DropOffLocation": {
+  "fields": [
+   {
+    "name": "latitude",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "longitude",
+    "type": "java.lang.Double"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.DropOffLocation_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.GetDriverEventsRequest": {
+  "fields": [
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.GetDriverEventsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.GetDriverEventsResponse": {
+  "fields": [
+   {
+    "name": "driverEvents",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vs_livemap.DriverEvent;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_livemap.GetDriverEventsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.DriverOverview": {
+  "fields": [
+   {
+    "name": "email",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lastOnlineTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "mobile",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "name",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "onboardingStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vs_supplier_management.OnboardingStatus"
+   },
+   {
+    "name": "orgDriverInfo",
+    "type": "com.qolari.model.core.generated.edge.services.vs_supplier_management.OrganizationDriverInfo"
+   },
+   {
+    "name": "pictureUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "realtimeStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vs_supplier_management.DriverStatus"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   },
+   {
+    "name": "waitlistedByFleet",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.DriverOverview_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.DriverPerformanceAnalytics": {
+  "fields": [
+   {
+    "name": "avgDriverSupplyHours",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "driverSupplyHours",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.DriverPerformanceAnalytics_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.GetDriversPerformanceAnalyticsRequest": {
+  "fields": [
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.GetDriversPerformanceAnalyticsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.GetDriversPerformanceAnalyticsResponse": {
+  "fields": [
+   {
+    "name": "driverOverview",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vs_supplier_management.DriverOverview;>;"
+   },
+   {
+    "name": "fleetAvgSupplyHours",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "performanceAnalytics",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vs_supplier_management.DriverPerformanceAnalytics;>;"
+   },
+   {
+    "name": "period",
+    "type": "com.qolari.model.core.generated.edge.services.vs_supplier_management.Period"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.GetDriversPerformanceAnalyticsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.GetUserOrganizationsErrors": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "invalidRequest",
+    "type": "com.qolari.model.core.generated.edge.models.exception.BadRequest"
+   },
+   {
+    "name": "notFound",
+    "type": "com.qolari.model.core.generated.edge.models.exception.NotFound"
+   },
+   {
+    "name": "serviceError",
+    "type": "com.qolari.model.core.generated.edge.models.exception.ServerError"
+   },
+   {
+    "name": "unauthorized",
+    "type": "com.qolari.model.core.generated.edge.models.exception.Unauthorized"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.GetUserOrganizationsResponse": {
+  "fields": [
+   {
+    "name": "orgs",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vs_supplier_management.UserOrganization;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.GetUserOrganizationsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.Organization": {
+  "fields": [
+   {
+    "name": "name",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "onboardingStatus",
+    "type": "com.qolari.model.core.generated.edge.services.vs_supplier_management.OrganizationOnboardingStatus"
+   },
+   {
+    "name": "organizationTypes",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vs_supplier_management.OrganizationType;>;"
+   },
+   {
+    "name": "parentOrgUUID",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.OrganizationDriverInfo": {
+  "fields": [
+   {
+    "name": "driverID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.basic.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.OrganizationDriverInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.Organization_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.Period": {
+  "fields": [
+   {
+    "name": "periodLength",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "periodType",
+    "type": "com.qolari.model.core.generated.edge.models.data.schemas.time.TemporalUnit"
+   },
+   {
+    "name": "timeRange",
+    "type": "com.qolari.model.core.generated.edge.services.vs_supplier_management.TimeRange"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.Period_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.RoleIdentifier": {
+  "fields": [
+   {
+    "name": "name",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.RoleIdentifier_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.TimeRange": {
+  "fields": [
+   {
+    "name": "fromTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "toTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "weekOffset",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.TimeRange_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.UserOrganization": {
+  "fields": [
+   {
+    "name": "org",
+    "type": "com.qolari.model.core.generated.edge.services.vs_supplier_management.Organization"
+   },
+   {
+    "name": "userRoles",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.edge.services.vs_supplier_management.RoleIdentifier;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.UserOrganization_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.edge.services.vs_supplier_management.VSSupplierManagementClient": {
+  "fields": [
+   {
+    "name": "realtimeClient",
+    "type": "Lcom.qolari.presidio.realtime.core.RealtimeClient<TD;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.CurrencyAmount": {
+  "fields": [
+   {
+    "name": "amount",
+    "type": "com.qolari.model.core.generated.supply.armada.Decimal"
+   },
+   {
+    "name": "currencyCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "exchangeRate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedAmount",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "multiplier",
+    "type": "com.qolari.model.core.generated.supply.armada.Decimal"
+   },
+   {
+    "name": "quantizedAmount",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.CurrencyAmount_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.Decimal": {
+  "fields": [
+   {
+    "name": "value",
+    "type": "long"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.DriverAction": {
+  "fields": [
+   {
+    "name": "activeVehicleUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "destinationAddress",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "driverActionType",
+    "type": "com.qolari.model.core.generated.supply.armada.DriverActionType"
+   },
+   {
+    "name": "flowType",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedFare",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "timestamp",
+    "type": "dl1.d"
+   },
+   {
+    "name": "tripUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.DriverAction_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.DriverCoordinates": {
+  "fields": [
+   {
+    "name": "course",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "point",
+    "type": "com.qolari.model.core.generated.supply.armada.Point"
+   },
+   {
+    "name": "realtimeStatus",
+    "type": "com.qolari.model.core.generated.supply.armada.DriverStatus"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.DriverCoordinates_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.DriverOverview": {
+  "fields": [
+   {
+    "name": "lastOnlineTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "mobile",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "name",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "onboardingStatus",
+    "type": "com.qolari.model.core.generated.supply.armada.OnboardingStatus"
+   },
+   {
+    "name": "pictureUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "realtimeStatus",
+    "type": "com.qolari.model.core.generated.supply.armada.DriverStatus"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "vehicleUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "waitlistedByFleet",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.DriverOverview_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.EarningInfoWarning": {
+  "fields": [
+   {
+    "name": "warningInfo",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.EarningInfoWarning_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.EarningsBreakdown": {
+  "fields": [
+   {
+    "name": "category",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "description",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "items",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.EarningsBreakdownItem;>;"
+   },
+   {
+    "name": "total",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.EarningsBreakdownItem": {
+  "fields": [
+   {
+    "name": "amount",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "description",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "disclaimer",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedAmount",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "icon",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "itemType",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "recognizedAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "shouldShowPlusSign",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.EarningsBreakdownItem_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.EarningsBreakdown_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.EarningsSummary": {
+  "fields": [
+   {
+    "name": "bankDeposit",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "cashCollected",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "cashouts",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "currencyCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "estimatedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedBankDeposit",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedCashCollected",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedCashouts",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedEstimatedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedMiscTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTripEarning",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "isFinalized",
+    "type": "boolean"
+   },
+   {
+    "name": "isInstantPayAvailable",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "miscTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "statementUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "timezone",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "total",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tripEarning",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.EarningsSummary_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.FleetEarningInfo": {
+  "fields": [
+   {
+    "name": "driverStatements",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.FleetEarningStatement;>;"
+   },
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "ledger",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.LedgerItem;>;"
+   },
+   {
+    "name": "partnerStatement",
+    "type": "com.qolari.model.core.generated.supply.armada.FleetEarningStatement"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "warning",
+    "type": "com.qolari.model.core.generated.supply.armada.EarningInfoWarning"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.FleetEarningInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.FleetEarningStatement": {
+  "fields": [
+   {
+    "name": "paymentStatement",
+    "type": "com.qolari.model.core.generated.supply.armada.FleetPaymentStatement"
+   },
+   {
+    "name": "tripStats",
+    "type": "com.qolari.model.core.generated.supply.armada.TripStats"
+   },
+   {
+    "name": "userProfile",
+    "type": "com.qolari.model.core.generated.supply.armada.UserProfile"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.FleetEarningStatement_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.FleetPaymentStatement": {
+  "fields": [
+   {
+    "name": "breakdown",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.EarningsBreakdown;>;"
+   },
+   {
+    "name": "endAvailableAmount",
+    "type": "com.qolari.model.core.generated.supply.armada.CurrencyAmount"
+   },
+   {
+    "name": "startAvailableAmount",
+    "type": "com.qolari.model.core.generated.supply.armada.CurrencyAmount"
+   },
+   {
+    "name": "summary",
+    "type": "com.qolari.model.core.generated.supply.armada.EarningsSummary"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.FleetPaymentStatement_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverCurrentSupplyRequest": {
+  "fields": [
+   {
+    "name": "driverUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "partnerUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverCurrentSupplyRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverCurrentSupplyResponse": {
+  "fields": [
+   {
+    "name": "driverOverview",
+    "type": "com.qolari.model.core.generated.supply.armada.DriverOverview"
+   },
+   {
+    "name": "formattedEarnings",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lastDriverAction",
+    "type": "com.qolari.model.core.generated.supply.armada.DriverAction"
+   },
+   {
+    "name": "location",
+    "type": "com.qolari.model.core.generated.supply.armada.DriverCoordinates"
+   },
+   {
+    "name": "route",
+    "type": "com.qolari.model.core.generated.supply.armada.Route"
+   },
+   {
+    "name": "supplyOverview",
+    "type": "com.qolari.model.core.generated.supply.armada.SupplyOverview"
+   },
+   {
+    "name": "tripCount",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverCurrentSupplyResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverDailyEarningsWithTripsRequest": {
+  "fields": [
+   {
+    "name": "driverUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "partnerUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverDailyEarningsWithTripsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverDailyEarningsWithTripsResponse": {
+  "fields": [
+   {
+    "name": "breakdown",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.EarningsBreakdown;>;"
+   },
+   {
+    "name": "summary",
+    "type": "com.qolari.model.core.generated.supply.armada.EarningsSummary"
+   },
+   {
+    "name": "trips",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.TripEarnings;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverDailyEarningsWithTripsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverStatementRequest": {
+  "fields": [
+   {
+    "name": "driverUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "partnerUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "statementUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverStatementRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverStatementResponse": {
+  "fields": [
+   {
+    "name": "driverStatement",
+    "type": "com.qolari.model.core.generated.supply.armada.PaymentStatement"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetDriverStatementResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetFleetEarningsV2Request": {
+  "fields": [
+   {
+    "name": "driverFilter",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.UUID;>;"
+   },
+   {
+    "name": "offsetTimeFilter",
+    "type": "com.qolari.model.core.generated.supply.armada.OffsetTimeFilter"
+   },
+   {
+    "name": "partnerUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "productFilter",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetFleetEarningsV2Request_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetFleetEarningsV2Response": {
+  "fields": [
+   {
+    "name": "appliedDriverFilter",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.UUID;>;"
+   },
+   {
+    "name": "appliedProductFilter",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   },
+   {
+    "name": "appliedTimeFilter",
+    "type": "com.qolari.model.core.generated.supply.armada.TimeFilterResponse"
+   },
+   {
+    "name": "availableDateRanges",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.TimeFilterResponse;>;"
+   },
+   {
+    "name": "dateRanges",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.TimeFilterResponse;>;"
+   },
+   {
+    "name": "driverProfiles",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.UserProfile;>;"
+   },
+   {
+    "name": "earningInfo",
+    "type": "com.qolari.model.core.generated.supply.armada.FleetEarningInfo"
+   },
+   {
+    "name": "pastWeeks",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.TimeFilterResponse;>;"
+   },
+   {
+    "name": "products",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.ProductType;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetFleetEarningsV2Response_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetPartnerStatementHistoryRequest": {
+  "fields": [
+   {
+    "name": "partnerUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetPartnerStatementHistoryRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetPartnerStatementHistoryResponse": {
+  "fields": [
+   {
+    "name": "partnerStatementHistory",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.StatementSummary;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetPartnerStatementHistoryResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetPartnerStatementRequest": {
+  "fields": [
+   {
+    "name": "partnerUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "statementUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetPartnerStatementRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetPartnerStatementResponse": {
+  "fields": [
+   {
+    "name": "partnerStatement",
+    "type": "com.qolari.model.core.generated.supply.armada.PaymentStatement"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetPartnerStatementResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetTripEarningsRequest": {
+  "fields": [
+   {
+    "name": "partnerUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "tripUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetTripEarningsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetTripEarningsResponse": {
+  "fields": [
+   {
+    "name": "trip",
+    "type": "com.qolari.model.core.generated.supply.armada.TripEarnings"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.GetTripEarningsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.InvalidRequestException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "errors",
+    "type": "Lcom.google.common.collect.h<Ljava.lang.String;Ljava.lang.String;>;"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.InvalidRequestException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.LedgerItem": {
+  "fields": [
+   {
+    "name": "amount",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "datetime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "description",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "disclaimer",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "driverFirstName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "driverLastName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "driverUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "formattedAmount",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "itemType",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "orgDriverInfo",
+    "type": "com.qolari.model.core.generated.supply.armada.OrganizationDriverInfo"
+   },
+   {
+    "name": "processedAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "requestAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "tripUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.LedgerItem_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.OffsetTimeFilter": {
+  "fields": [
+   {
+    "name": "period",
+    "type": "com.qolari.model.core.generated.supply.armada.PeriodType"
+   },
+   {
+    "name": "periodsAgo",
+    "type": "int"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.OffsetTimeFilter_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.OrganizationDriverInfo": {
+  "fields": [
+   {
+    "name": "driverID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.OrganizationDriverInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.PaymentStatement": {
+  "fields": [
+   {
+    "name": "breakdown",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.EarningsBreakdown;>;"
+   },
+   {
+    "name": "days",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.EarningsSummary;>;"
+   },
+   {
+    "name": "promotion",
+    "type": "com.qolari.model.core.generated.supply.armada.EarningsBreakdown"
+   },
+   {
+    "name": "summary",
+    "type": "com.qolari.model.core.generated.supply.armada.EarningsSummary"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.PaymentStatement_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.PhoneInfo": {
+  "fields": [
+   {
+    "name": "countryCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "phoneNumber",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.PhoneInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.Point": {
+  "fields": [
+   {
+    "name": "latitude",
+    "type": "double"
+   },
+   {
+    "name": "longitude",
+    "type": "double"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.Point_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.ProductType": {
+  "fields": [
+   {
+    "name": "description",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "name",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.ProductType_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.Route": {
+  "fields": [
+   {
+    "name": "distance",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "duration",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "polyline",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.Route_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.ServiceErrorException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.ServiceErrorException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.StatementSummary": {
+  "fields": [
+   {
+    "name": "currencyCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "formattedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "isPaid",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "timezone",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "total",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.StatementSummary_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.SupplyOverview": {
+  "fields": [
+   {
+    "name": "cityName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "destination",
+    "type": "com.qolari.model.core.generated.supply.armada.Point"
+   },
+   {
+    "name": "destinationAddress",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "destinationNeighborhood",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "pickup",
+    "type": "com.qolari.model.core.generated.supply.armada.Point"
+   },
+   {
+    "name": "pickupAddress",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "surge",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tripStartTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "tripStatus",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tripUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.SupplyOverview_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.TimeFilterResponse": {
+  "fields": [
+   {
+    "name": "endTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "offsetTimeFilter",
+    "type": "com.qolari.model.core.generated.supply.armada.OffsetTimeFilter"
+   },
+   {
+    "name": "startTime",
+    "type": "dl1.d"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.TimeFilterResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.TripEarnings": {
+  "fields": [
+   {
+    "name": "breakdown",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.armada.EarningsBreakdown;>;"
+   },
+   {
+    "name": "driverFare",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "driverUuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "dropoffAddress",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "duration",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "formattedCashCollected",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedDistance",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedDriverFare",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "pickupAddress",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "processedAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "requestAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "routeMap",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "timezone",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "total",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   },
+   {
+    "name": "vehicleType",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.TripEarnings_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.TripStats": {
+  "fields": [
+   {
+    "name": "tripCount",
+    "type": "int"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.TripStats_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.UnauthorizedException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.UnauthorizedException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.UserProfile": {
+  "fields": [
+   {
+    "name": "avatarUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "firstName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lastName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "phoneInfo",
+    "type": "com.qolari.model.core.generated.supply.armada.PhoneInfo"
+   },
+   {
+    "name": "userRating",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.supply.armada.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.armada.UserProfile_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetfinance.InvalidRequestException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "errors",
+    "type": "Lcom.google.common.collect.h<Ljava.lang.String;Ljava.lang.String;>;"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetfinance.InvalidRequestException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetfinance.ServiceErrorException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetfinance.ServiceErrorException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetfinance.UnauthorizedException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetfinance.UnauthorizedException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.ClientErrorException": {
+  "fields": [
+   {
+    "name": "code",
+    "type": "int"
+   },
+   {
+    "name": "message",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "title",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.ClientErrorException_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.DriverAction": {
+  "fields": [
+   {
+    "name": "activeVehicleUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   },
+   {
+    "name": "destinationAddress",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "driverActionType",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.DriverActionType"
+   },
+   {
+    "name": "flowType",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedFare",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "timestamp",
+    "type": "dl1.d"
+   },
+   {
+    "name": "tripUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.DriverAction_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.DriverFeedbackCount": {
+  "fields": [
+   {
+    "name": "driverInfo",
+    "type": "com.qolari.model.core.generated.supply.notifications.DriverInfo"
+   },
+   {
+    "name": "feedbackCount",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.DriverFeedbackCount_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.DriverOverview": {
+  "fields": [
+   {
+    "name": "email",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lastOnlineTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "mobile",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "name",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "onboardingStatus",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.OnboardingStatus"
+   },
+   {
+    "name": "orgDriverInfo",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.OrganizationDriverInfo"
+   },
+   {
+    "name": "pictureUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "realtimeStatus",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.DriverStatus"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   },
+   {
+    "name": "waitlistedByFleet",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.DriverOverview_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetDriverActionLogRequest": {
+  "fields": [
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   },
+   {
+    "name": "fromTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   },
+   {
+    "name": "toTime",
+    "type": "dl1.d"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetDriverActionLogRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetDriverActionLogResponse": {
+  "fields": [
+   {
+    "name": "driverActions",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.fleetmanager.DriverAction;>;"
+   },
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetDriverActionLogResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetDriversFeedbackCountRequest": {
+  "fields": [
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetDriversFeedbackCountRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetDriversFeedbackCountResponse": {
+  "fields": [
+   {
+    "name": "driversFeedbackCount",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.fleetmanager.DriverFeedbackCount;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetDriversFeedbackCountResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFeedbackOverviewRequest": {
+  "fields": [
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   },
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFeedbackOverviewRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFeedbackOverviewResponse": {
+  "fields": [
+   {
+    "name": "feedbacks",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.notifications.DriverFeedbackContent;>;"
+   },
+   {
+    "name": "summary",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.RatingSummary"
+   },
+   {
+    "name": "tagTranslations",
+    "type": "Lcom.google.common.collect.h<Ljava.lang.String;Lcom.qolari.model.core.generated.supply.fleetmanager.TagTranslation;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFeedbackOverviewResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFleetDriversFilter": {
+  "fields": [
+   {
+    "name": "activeOnly",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "driverCountOnly",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "includeCurrentWeeklyEarnings",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "includeLicensePlate",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFleetDriversFilter_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFleetDriversRequest": {
+  "fields": [
+   {
+    "name": "filter",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.GetFleetDriversFilter"
+   },
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFleetDriversRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFleetDriversResponse": {
+  "fields": [
+   {
+    "name": "currentWeeklyEarnings",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "driverCount",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "drivers",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.fleetmanager.DriverOverview;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetFleetDriversResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetIsAuthorizedFleetPartnerRequest": {
+  "fields": [
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetIsAuthorizedFleetPartnerRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetIsAuthorizedFleetPartnerResponse": {
+  "fields": [
+   {
+    "name": "isAuthorizedFleetPartner",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetIsAuthorizedFleetPartnerResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetPartnerInfoRequest": {
+  "fields": [
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetPartnerInfoRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetPendingRegulatoryDocumentsRequest": {
+  "fields": [
+   {
+    "name": "userUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetPendingRegulatoryDocumentsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetPendingRegulatoryDocumentsResponse": {
+  "fields": [
+   {
+    "name": "documents",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.fleetmanager.RegulatoryDocument;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.GetPendingRegulatoryDocumentsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.OrganizationDriverInfo": {
+  "fields": [
+   {
+    "name": "driverID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.OrganizationDriverInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.PartnerInfo": {
+  "fields": [
+   {
+    "name": "city",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "cityID",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "country",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "email",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "firstName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lastName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "mobilePluginConfig",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.types.MobilePluginConfig"
+   },
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   },
+   {
+    "name": "phoneNumber",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.PhoneNumber"
+   },
+   {
+    "name": "pictureURL",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "timezone",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.PartnerInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.PhoneNumber": {
+  "fields": [
+   {
+    "name": "countryCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "nationalPhoneNumber",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.PhoneNumber_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.RatingSummary": {
+  "fields": [
+   {
+    "name": "averageRating",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "badgesCount",
+    "type": "Lcom.google.common.collect.h<Ljava.lang.String;Ljava.lang.Integer;>;"
+   },
+   {
+    "name": "ratingsCounts",
+    "type": "Lcom.google.common.collect.h<Ljava.lang.String;Ljava.lang.Integer;>;"
+   },
+   {
+    "name": "tagsCount",
+    "type": "Lcom.google.common.collect.h<Ljava.lang.String;Ljava.lang.Integer;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.RatingSummary_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.RegulatoryDocument": {
+  "fields": [
+   {
+    "name": "id",
+    "type": "long"
+   },
+   {
+    "name": "priority",
+    "type": "int"
+   },
+   {
+    "name": "requiresOpenOnMobile",
+    "type": "boolean"
+   },
+   {
+    "name": "tags",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   },
+   {
+    "name": "title",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "url",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "version",
+    "type": "int"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.RegulatoryDocument_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.RtLong": {
+  "fields": [
+   {
+    "name": "value",
+    "type": "long"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.SignRegulatoryDocumentsRequest": {
+  "fields": [
+   {
+    "name": "regulatoryDocumentIds",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.fleetmanager.RtLong;>;"
+   },
+   {
+    "name": "userUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.SignRegulatoryDocumentsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.TagTranslation": {
+  "fields": [
+   {
+    "name": "improvementSuggestionTranslated",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tag",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "tagTranslated",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.TagTranslation_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.types.MobilePluginConfig": {
+  "fields": [
+   {
+    "name": "pluginBlacklisted",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.fleetmanager.types.UUID;>;"
+   },
+   {
+    "name": "pluginWhitelisted",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.fleetmanager.types.UUID;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.fleetmanager.types.MobilePluginConfig_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.notifications.DriverFeedbackContent": {
+  "fields": [
+   {
+    "name": "driverinfo",
+    "type": "com.qolari.model.core.generated.supply.notifications.DriverInfo"
+   },
+   {
+    "name": "feedback",
+    "type": "com.qolari.model.core.generated.supply.notifications.Feedback"
+   },
+   {
+    "name": "vehicle",
+    "type": "com.qolari.model.core.generated.supply.notifications.Vehicle"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.notifications.DriverFeedbackContent_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.notifications.DriverInfo": {
+  "fields": [
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.types.UUID"
+   },
+   {
+    "name": "email",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "firstName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "fullName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lastName",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "mobile",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "mobileCountryCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "pictureUrl",
+    "type": "java.lang.String"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.notifications.DriverInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.notifications.Feedback": {
+  "fields": [
+   {
+    "name": "createdAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "rating",
+    "type": "java.lang.Short"
+   },
+   {
+    "name": "tags",
+    "type": "Lcom.google.common.collect.ImmutableList<Ljava.lang.String;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.notifications.Feedback_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.notifications.Vehicle": {
+  "fields": [
+   {
+    "name": "color",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "imageURL",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "make",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "model",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.types.UUID"
+   },
+   {
+    "name": "year",
+    "type": "java.lang.Short"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.notifications.Vehicle_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.DriverPerformanceMetrics": {
+  "fields": [
+   {
+    "name": "dailyBreakdown",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.performanceanalytics.DriverPerformanceSummary;>;"
+   },
+   {
+    "name": "driverUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.types.UUID"
+   },
+   {
+    "name": "email",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "name",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "orgDriverInfo",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.OrganizationDriverInfo"
+   },
+   {
+    "name": "phoneNumber",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "pictureUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "summary",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.DriverPerformanceSummary"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.DriverPerformanceMetrics_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.DriverPerformanceSummary": {
+  "fields": [
+   {
+    "name": "earnings",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.EarningMetrics"
+   },
+   {
+    "name": "endTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "ratings",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.RatingMetrics"
+   },
+   {
+    "name": "startTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "trips",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.TripMetrics"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.DriverPerformanceSummary_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.EarningMetrics": {
+  "fields": [
+   {
+    "name": "cashCollected",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "currencyCode",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "fareType",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.FareType"
+   },
+   {
+    "name": "formattedCashCollected",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedPerDistanceOnTrip",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedPerHourOnline",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedPerTrip",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedTotal",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "perDistanceOnTrip",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "perHourOnline",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "perTrip",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "total",
+    "type": "java.lang.Double"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.EarningMetrics_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.FleetPerformanceSummary": {
+  "fields": [
+   {
+    "name": "drivers",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.performanceanalytics.DriverPerformanceMetrics;>;"
+   },
+   {
+    "name": "earnings",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.EarningMetrics"
+   },
+   {
+    "name": "endTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "numOfDrivers",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "numOfVehicles",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "ratings",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.RatingMetrics"
+   },
+   {
+    "name": "startTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "trips",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.TripMetrics"
+   },
+   {
+    "name": "vehicles",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.performanceanalytics.VehiclePerformanceMetrics;>;"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.FleetPerformanceSummary_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.GetAggregatePerformanceMetricsRequest": {
+  "fields": [
+   {
+    "name": "endAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "options",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.RequestOptions"
+   },
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.types.UUID"
+   },
+   {
+    "name": "startAt",
+    "type": "dl1.d"
+   },
+   {
+    "name": "weekOffset",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.GetAggregatePerformanceMetricsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.GetAggregatePerformanceMetricsResponse": {
+  "fields": [
+   {
+    "name": "dailyBreakdown",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.performanceanalytics.FleetPerformanceSummary;>;"
+   },
+   {
+    "name": "numOfDrivers",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "numOfVehicles",
+    "type": "java.lang.Integer"
+   },
+   {
+    "name": "partnerUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.types.UUID"
+   },
+   {
+    "name": "summary",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.FleetPerformanceSummary"
+   },
+   {
+    "name": "weekOffset",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.GetAggregatePerformanceMetricsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.OrganizationDriverInfo": {
+  "fields": [
+   {
+    "name": "driverID",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "orgUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.OrganizationDriverInfo_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.RatingMetrics": {
+  "fields": [
+   {
+    "name": "acceptanceRate",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "currentRating",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "driverCancellationRate",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "formattedAcceptanceRate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedDriverCancellationRate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "lifetimeRating",
+    "type": "java.lang.Double"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.RatingMetrics_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.RequestOptions": {
+  "fields": [
+   {
+    "name": "includeDailyBreakdown",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "includeDrivers",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "includeVehicles",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.RequestOptions_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.TripMetrics": {
+  "fields": [
+   {
+    "name": "distancePerTrip",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "formattedDistancePerTrip",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "formattedHoursOnline",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "hoursOnline",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "perHourOnline",
+    "type": "java.lang.Double"
+   },
+   {
+    "name": "total",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.TripMetrics_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.VehiclePerformanceMetrics": {
+  "fields": [
+   {
+    "name": "dailyBreakdown",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.performanceanalytics.VehiclePerformanceSummary;>;"
+   },
+   {
+    "name": "licensePlate",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "make",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "model",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "pictureUrl",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "summary",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.VehiclePerformanceSummary"
+   },
+   {
+    "name": "vehicleUUID",
+    "type": "com.qolari.model.core.generated.supply.fleetmanager.types.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.VehiclePerformanceMetrics_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.VehiclePerformanceSummary": {
+  "fields": [
+   {
+    "name": "earnings",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.EarningMetrics"
+   },
+   {
+    "name": "endTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "startTime",
+    "type": "dl1.d"
+   },
+   {
+    "name": "trips",
+    "type": "com.qolari.model.core.generated.supply.performanceanalytics.TripMetrics"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.performanceanalytics.VehiclePerformanceSummary_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.Answer": {
+  "fields": [
+   {
+    "name": "annotation",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "answer",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "nextQuestionID",
+    "type": "com.qolari.model.core.generated.supply.survey.UUID"
+   },
+   {
+    "name": "questionID",
+    "type": "com.qolari.model.core.generated.supply.survey.UUID"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.supply.survey.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.Answer_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.GetSurveyQuestionsRequest": {
+  "fields": [
+   {
+    "name": "userUUID",
+    "type": "com.qolari.model.core.generated.supply.survey.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.GetSurveyQuestionsRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.GetSurveyQuestionsResponse": {
+  "fields": [
+   {
+    "name": "completed",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "questions",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.survey.Question;>;"
+   },
+   {
+    "name": "showModal",
+    "type": "java.lang.Boolean"
+   },
+   {
+    "name": "userSkippableCount",
+    "type": "java.lang.Integer"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.GetSurveyQuestionsResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.Question": {
+  "fields": [
+   {
+    "name": "answers",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.survey.Answer;>;"
+   },
+   {
+    "name": "question",
+    "type": "java.lang.String"
+   },
+   {
+    "name": "type",
+    "type": "com.qolari.model.core.generated.supply.survey.QuestionType"
+   },
+   {
+    "name": "uuid",
+    "type": "com.qolari.model.core.generated.supply.survey.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.Question_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.SaveSurveyAnswersRequest": {
+  "fields": [
+   {
+    "name": "selectedAnswerUUIDs",
+    "type": "Lcom.google.common.collect.ImmutableList<Lcom.qolari.model.core.generated.supply.survey.UUID;>;"
+   },
+   {
+    "name": "userUUID",
+    "type": "com.qolari.model.core.generated.supply.survey.UUID"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.SaveSurveyAnswersRequest_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.SaveSurveyAnswersResponse": {
+  "fields": [
+   {
+    "name": "success",
+    "type": "java.lang.Boolean"
+   }
+  ]
+ },
+ "com.qolari.model.core.generated.supply.survey.SaveSurveyAnswersResponse_GsonTypeAdapter": {
+  "fields": [
+   {
+    "name": "gson",
+    "type": "com.google.gson.Gson"
+   }
+  ]
+ }
+}

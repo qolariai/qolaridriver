@@ -1,0 +1,18 @@
+{
+ "driverTasks": {
+  "driverState": {
+   "online": true,
+   "available": true,
+   "dispatchable": true,
+   "awaitingRequesterConfirmation": false,
+   "preferencesState": {
+    "isEnabled": false,
+    "isSet": false
+   }
+  },
+  "taskScopes": [],
+  "meta": {
+   "lastModifiedTimeMs": 1792803735404.896
+  }
+ }
+}

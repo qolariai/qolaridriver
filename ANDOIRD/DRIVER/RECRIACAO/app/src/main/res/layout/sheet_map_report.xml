@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_sheet"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingTop="24dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/map_report_title"
+        android:textColor="@color/qd_ink"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/map_report_subtitle"
+        android:textColor="@color/qd_core_gray600"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/reportReasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/reportReasonAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/map_report_reason_address"
+            android:textColor="@color/qd_ink"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/reportReasonClosed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/map_report_reason_closed"
+            android:textColor="@color/qd_ink"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/reportReasonOutdated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/map_report_reason_outdated"
+            android:textColor="@color/qd_ink"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/reportReasonOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/map_report_reason_other"
+            android:textColor="@color/qd_ink"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/reportNote"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_input"
+        android:gravity="top|start"
+        android:hint="@string/map_report_note_hint"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine|textCapSentences"
+        android:maxLength="400"
+        android:padding="16dp"
+        android:textColor="@color/qd_ink"
+        android:textColorHint="@color/qd_core_gray600"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/reportError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/qd_core_red600"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reportSend"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/map_report_send"
+        android:textColor="@color/qd_core_white"
+        android:textSize="16sp"
+        app:backgroundTint="@color/qd_ink"
+        app:cornerRadius="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reportCancel"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/map_report_cancel"
+        android:textColor="@color/qd_ink" />
+</LinearLayout>

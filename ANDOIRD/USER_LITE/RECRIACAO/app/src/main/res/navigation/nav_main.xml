@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.qolari.userlite.ui.welcome.WelcomeFragment"
+        android:label="welcome">
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/loginPhoneFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_welcome_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginPhoneFragment"
+        android:name="com.qolari.userlite.ui.login.LoginPhoneFragment"
+        android:label="login-phone">
+        <action
+            android:id="@+id/action_login_to_code"
+            app:destination="@id/loginCodeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginCodeFragment"
+        android:name="com.qolari.userlite.ui.login.LoginCodeFragment"
+        android:label="login-code">
+        <action
+            android:id="@+id/action_code_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/loginPhoneFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.qolari.userlite.ui.home.HomeFragment"
+        android:label="home">
+        <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+        <action
+            android:id="@+id/action_home_to_menu"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_home_to_active"
+            app:destination="@id/activeTripFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.qolari.userlite.ui.search.SearchFragment"
+        android:label="search">
+        <action
+            android:id="@+id/action_search_to_ride"
+            app:destination="@id/rideOptionsFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rideOptionsFragment"
+        android:name="com.qolari.userlite.ui.ride.RideOptionsFragment"
+        android:label="ride-options">
+        <action
+            android:id="@+id/action_ride_to_active"
+            app:destination="@id/activeTripFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/activeTripFragment"
+        android:name="com.qolari.userlite.ui.ride.ActiveTripFragment"
+        android:label="active-trip">
+        <action
+            android:id="@+id/action_active_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_active_to_search"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.qolari.userlite.ui.menu.MenuFragment"
+        android:label="menu">
+        <action android:id="@+id/action_menu_to_wallet" app:destination="@id/walletFragment" />
+        <action android:id="@+id/action_menu_to_activity" app:destination="@id/activityFragment" />
+        <action android:id="@+id/action_menu_to_help" app:destination="@id/helpFragment" />
+        <action android:id="@+id/action_menu_to_promotions" app:destination="@id/promotionsFragment" />
+        <action android:id="@+id/action_menu_to_legal" app:destination="@id/legalFragment" />
+        <action android:id="@+id/action_menu_to_account" app:destination="@id/accountFragment" />
+        <action android:id="@+id/action_menu_to_support" app:destination="@id/supportFragment" />
+        <action android:id="@+id/action_menu_to_safety" app:destination="@id/safetyFragment" />
+        <action android:id="@+id/action_menu_to_saved" app:destination="@id/savedPlacesFragment" />
+        <action android:id="@+id/action_menu_to_extras" app:destination="@id/accountExtrasFragment" />
+        <action android:id="@+id/action_menu_to_appearance" app:destination="@id/appearanceFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/walletFragment" android:name="com.qolari.userlite.ui.wallet.WalletFragment" android:label="wallet" />
+    <fragment android:id="@+id/activityFragment" android:name="com.qolari.userlite.ui.activity.ActivityFragment" android:label="activity" />
+    <fragment android:id="@+id/helpFragment" android:name="com.qolari.userlite.ui.help.HelpFragment" android:label="help">
+        <action android:id="@+id/action_help_to_topic" app:destination="@id/helpTopicFragment" />
+    </fragment>
+    <fragment android:id="@+id/helpTopicFragment" android:name="com.qolari.userlite.ui.help.HelpTopicFragment" android:label="help-topic" />
+    <fragment android:id="@+id/promotionsFragment" android:name="com.qolari.userlite.ui.promotions.PromotionsFragment" android:label="promotions" />
+    <fragment android:id="@+id/legalFragment" android:name="com.qolari.userlite.ui.legal.LegalFragment" android:label="legal">
+        <action android:id="@+id/action_legal_to_topic" app:destination="@id/legalTopicFragment" />
+    </fragment>
+    <fragment android:id="@+id/legalTopicFragment" android:name="com.qolari.userlite.ui.legal.LegalTopicFragment" android:label="legal-topic" />
+    <fragment android:id="@+id/accountFragment" android:name="com.qolari.userlite.ui.account.AccountFragment" android:label="account" />
+    <fragment android:id="@+id/savedPlacesFragment" android:name="com.qolari.userlite.ui.account.SavedPlacesFragment" android:label="saved-places" />
+    <fragment android:id="@+id/accountExtrasFragment" android:name="com.qolari.userlite.ui.account.AccountExtrasFragment" android:label="account-extras" />
+    <fragment android:id="@+id/appearanceFragment" android:name="com.qolari.userlite.ui.account.AppearanceFragment" android:label="appearance" />
+    <fragment android:id="@+id/supportFragment" android:name="com.qolari.userlite.ui.support.SupportFragment" android:label="support" />
+    <fragment android:id="@+id/safetyFragment" android:name="com.qolari.userlite.ui.safety.SafetyFragment" android:label="safety" />
+    <fragment android:id="@+id/infoFragment" android:name="com.qolari.userlite.ui.info.InfoFragment" android:label="info" />
+
+</navigation>

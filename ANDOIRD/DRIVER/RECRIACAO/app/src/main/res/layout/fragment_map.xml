@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qd_tile">
+
+    <!-- Modo mapa (captura 110): ecrã inteiro, sem barra de separadores. Mapa desenhado (espaço reservado). -->
+    <com.qolari.shared.map.GoogleMapView
+        android:id="@+id/mapFull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/mapHome"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_circle_white"
+        android:contentDescription="@string/tab_home"
+        android:elevation="3dp"
+        android:padding="13dp"
+        android:src="@drawable/ic_home_map"
+        app:tint="@color/qd_ink" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_pill_pro"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="10dp">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_diamond"
+            app:tint="@color/qd_gold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="@string/map_pro"
+            android:textColor="@color/qd_core_white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="14dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_chevron_down"
+            app:tint="@color/qd_core_white" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/mapSearch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_circle_white"
+        android:contentDescription="@string/map_search"
+        android:elevation="3dp"
+        android:padding="13dp"
+        android:src="@drawable/ic_search"
+        app:tint="@color/qd_ink" />
+
+    <!-- Atalhos do lado direito (relâmpago, comunicar, tendências, localização). -->
+    <LinearLayout
+        android:id="@+id/mapShortcuts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="132dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/mapBolt"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_circle_white"
+            android:contentDescription="@string/map_opportunities"
+            android:elevation="3dp"
+            android:padding="13dp"
+            android:src="@drawable/ic_bolt"
+            app:tint="@color/qd_ink" />
+
+        <ImageButton
+            android:id="@+id/mapReport"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_circle_white"
+            android:contentDescription="@string/map_report"
+            android:elevation="3dp"
+            android:padding="13dp"
+            android:src="@drawable/ic_pin_plus"
+            app:tint="@color/qd_core_orange500" />
+
+        <ImageButton
+            android:id="@+id/mapTrends"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_circle_white"
+            android:contentDescription="@string/map_trends"
+            android:elevation="3dp"
+            android:padding="13dp"
+            android:src="@drawable/ic_chart"
+            app:tint="@color/qd_ink" />
+
+        <ImageButton
+            android:id="@+id/mapLocate"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_circle_white"
+            android:contentDescription="@string/map_locate"
+            android:elevation="3dp"
+            android:padding="13dp"
+            android:src="@drawable/ic_locate"
+            app:tint="@color/qd_ink" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/mapShield"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="132dp"
+        android:background="@drawable/bg_circle_white"
+        android:contentDescription="@string/menu_safety"
+        android:elevation="3dp"
+        android:padding="13dp"
+        android:src="@drawable/ic_shield"
+        app:tint="@color/qd_core_blue600" />
+
+    <!-- Botão redondo INICIAR (offline) -->
+    <TextView
+        android:id="@+id/mapStart"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="124dp"
+        android:background="@drawable/bg_start_button"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="@string/map_start"
+        android:textColor="@color/qd_core_white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- "Radar de viagens": aparece com o motorista online (captura 100_online_004) -->
+    <LinearLayout
+        android:id="@+id/radarPill"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/bg_pill_radar"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingEnd="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/drive_radar"
+            android:textColor="@color/qd_ink"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/radarCount"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/bg_circle_badge"
+            android:gravity="center"
+            android:textColor="@color/qd_core_white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/offerCard"
+        layout="@layout/view_offer_card" />
+
+    <include
+        android:id="@+id/tripCard"
+        layout="@layout/view_trip_card" />
+
+    <!-- Painel inferior com a alça de arrastar, o estado e a lista -->
+    <LinearLayout
+        android:id="@+id/statusPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_panel_map"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_pill_gray" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/mapPrefs"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/home_preferences"
+                android:padding="12dp"
+                android:src="@drawable/ic_filter"
+                app:tint="@color/qd_ink" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mapStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/qd_ink"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mapStatusHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/qd_core_red600"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/map_content"
+                android:padding="12dp"
+                android:src="@drawable/ic_list"
+                app:tint="@color/qd_ink" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

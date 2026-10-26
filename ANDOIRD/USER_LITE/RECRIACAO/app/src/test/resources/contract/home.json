@@ -1,0 +1,37 @@
+{
+  "greeting": "Boa tarde",
+  "firstName": "Ana",
+  "headline": "O seu motorista pode chegar em 3 min",
+  "etaMin": 3,
+  "savedPlace": {
+    "id": "home",
+    "name": "Casa",
+    "line1": "R. José Gomes Ferreira",
+    "line2": "Lisboa",
+    "full": "Casa, Lisboa",
+    "lat": 38.753,
+    "lng": -9.145
+  },
+  "city": "Lisboa",
+  "cash": {
+    "cents": 0,
+    "label": "0,00 €",
+    "currency": "EUR"
+  },
+  "suggestions": [
+    {
+      "id": "ride",
+      "title": "Viajar",
+      "subtitle": "Peça uma viagem",
+      "icon": "car"
+    }
+  ],
+  "promos": [
+    {
+      "id": "bemvindo",
+      "title": "Poupe uma viagem",
+      "subtitle": "Use o código BEMVINDO",
+      "action": "Use o código"
+    }
+  ]
+}

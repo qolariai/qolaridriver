@@ -1,0 +1,172 @@
+captura,toolkit_provavel,ids_especificos,nos_compose,nos_webview,melhor_layout
+000_arranque_original,views + ilhas Compose,16,2,0,map_section_view.xml
+010_descobrir,views (XML),33,0,0,opportunity_center.xml
+011_rendimentos,views + ilhas Compose,21,1,0,banner_view_layout_v2.xml
+012_caixa_entrada,compose,1,1,0,inbox_tab_view.xml
+013_menu,views + ilhas Compose,17,1,0,driver_menu_default_header_v3.xml
+014_ferramentas_seguranca,views (XML),12,0,0,ub__carbon_share_location_safety_toolkit_row_v4.xml
+015_verificacao_pin,compose,0,1,0,
+016_comprovativo_estado_viagem,web (pagina dentro da app),2,1,2,ub__rich_web_ui_v3.xml
+017_centro_seguranca,views (XML),15,0,0,ub__safety_checkup_accordion.xml
+018_centro_seguranca_detalhes,views (XML),15,0,0,ub__safety_checkup_accordion.xml
+019_limite_velocidade,views (XML),7,0,0,ub__speed_intervention_settings.xml
+020_centro_seguranca_preferencias,views (XML),15,0,0,ub__safety_checkup_accordion.xml
+021_verificacao_pin_config,compose,0,1,0,
+022_gravacao_video,views (XML),13,0,0,ub__audio_video_app_settings_screen.xml
+023_acompanhar_viagem_contacto,views + ilhas Compose,8,1,0,vertical_scrolling_page_view.xml
+024_centro_seguranca_recursos,views (XML),11,0,0,ub__safety_checkup_accordion.xml
+025_informacoes_hub,views (XML),6,0,0,horizontal_section_view.xml
+026_video_boas_vindas,views (XML),6,0,0,exo_player_view.xml
+027_comfort_proximos_passos,views (XML),12,0,0,learning_hub_topics_list_header_view.xml
+028_comfort_licao_1,views (XML),15,0,0,learning_hub_topic_view_can_block_swipe.xml
+029_comfort_licao_2,views (XML),9,0,0,learning_hub_topic_view_can_block_swipe.xml
+030_comfort_normas_servico,views + ilhas Compose,6,2,0,ub__learning_quiz_layout.xml
+031_sem_sessao_arranque,views (XML),22,0,0,ub__carbon_animated_welcome.xml
+032_login_outra_conta,web (pagina dentro da app),4,0,1,ub__rich_web_ui_v3.xml
+035_home_autenticada_acoes_necessarias,views (XML),21,0,0,map_section_view.xml
+036_descobrir_lembretes,views (XML),30,0,0,opportunity_center.xml
+037_descobrir_limpo,views (XML),31,0,0,opportunity_center.xml
+039_descobrir_filtros_repostos,views (XML),30,0,0,opportunity_center.xml
+041_menu_autenticado,views + ilhas Compose,17,1,0,driver_menu_default_header_v3.xml
+042_menu_ajuda,views (XML),3,0,0,ub__help_card_expandable.xml
+043_menu_definicoes,compose,0,1,0,
+044_def_acessibilidade,compose,0,1,0,
+045_def_comunicacao,views (XML),18,0,0,ub__comms_preferences_settings_v2.xml
+046_def_navegacao,views (XML),10,0,0,navigation_switch.xml
+047_def_sons_voz,compose,0,1,0,
+048_def_privacidade,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+049_acess_audicao,compose,0,1,0,
+050_acess_def_comunicacao,views (XML),18,0,0,ub__comms_preferences_settings_v2.xml
+051_comunicacao_push,views (XML),25,0,0,ub__comms_preferences_settings_v2.xml
+052_comunicacao_fundo,views (XML),19,0,0,ub__comms_preferences_settings_v2.xml
+053_privacidade_meio,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+054_privacidade_fundo,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+060_inicio,views (XML),19,0,0,map_section_view.xml
+060_inicio_s1,views + ilhas Compose,9,2,0,map_section_view.xml
+060_inicio_s2,views (XML),4,0,0,glide_go_online.xml
+060_inicio_s3,views (XML),4,0,0,glide_go_online.xml
+061_descobrir,views (XML),29,0,0,opportunity_center.xml
+061_descobrir_s1,views (XML),24,0,0,opportunity_center.xml
+061_descobrir_s2,views (XML),24,0,0,opportunity_center.xml
+061_descobrir_s3,views (XML),24,0,0,opportunity_center.xml
+062_rendimentos,views + ilhas Compose,21,1,0,banner_view_layout_v2.xml
+062_rendimentos_s1,views + ilhas Compose,17,1,0,ub__icon_link_component.xml
+062_rendimentos_s2,views + ilhas Compose,17,1,0,ub__icon_link_component.xml
+063_caixa_entrada,compose,1,1,0,inbox_tab_view.xml
+063_caixa_entrada_s1,compose,1,1,0,inbox_tab_view.xml
+063_caixa_entrada_s2,compose,1,1,0,inbox_tab_view.xml
+064_menu,views + ilhas Compose,16,1,0,driver_menu_default_header_v3.xml
+064_menu_s1,compose,1,1,0,menu_tab_view.xml
+064_menu_s2,compose,1,1,0,menu_tab_view.xml
+065_ajuda,views (XML),3,0,0,ub__help_card_expandable.xml
+065_ajuda_s1,views (XML),3,0,0,ub__help_card_expandable.xml
+066_definicoes,compose,0,1,0,
+070_menu_veiculo,web (pagina dentro da app),2,0,2,ub__rich_web_ui_v3.xml
+071_menu_documentos,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+071_menu_documentos_s1,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+071_menu_documentos_s2,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+072_menu_seguro,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+072_menu_seguro_s1,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+074_menu_info_fiscais,views (XML),6,0,0,ub__tax_landing.xml
+075_menu_formas_pagamento,views (XML),4,0,0,ub__earner_payments_management_view.xml
+077_menu_sobre,compose,0,1,0,
+080_descobrir_cartoes_h0,views (XML),29,0,0,opportunity_center.xml
+080_descobrir_cartoes_h1,views (XML),29,0,0,opportunity_center.xml
+080_descobrir_cartoes_h2,views (XML),29,0,0,opportunity_center.xml
+080_descobrir_cartoes_h3,views (XML),29,0,0,opportunity_center.xml
+080_descobrir_cartoes_h4,views (XML),29,0,0,opportunity_center.xml
+080_descobrir_cartoes_h5,views (XML),29,0,0,opportunity_center.xml
+080_veiculos,web (pagina dentro da app),2,0,2,ub__rich_web_ui_v3.xml
+081_descobrir_dias_h0,views (XML),29,0,0,opportunity_center.xml
+081_descobrir_dias_h1,views (XML),29,0,0,opportunity_center.xml
+081_veic_adicionar,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+082_veic_gerir,web (pagina dentro da app),2,0,2,ub__rich_web_ui_v3.xml
+083_documentos,web (pagina dentro da app),4,0,1,ub__rich_web_ui_v3.xml
+084_doc_carta_conducao,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+085_doc_tvde,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+085_doc_tvde_s1,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+086_doc_registo_criminal,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+086_doc_registo_criminal_s1,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+087_doc_cartao_cidadao,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+087_doc_cartao_cidadao_s1,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+087_doc_cartao_cidadao_s2,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+088_doc_dua,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+088_doc_dua_s1,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+088_doc_dua_s2,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+088_doc_dua_s3,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+089_doc_seguro_carta_verde,web (pagina dentro da app),3,0,2,ub__rich_web_ui_v3.xml
+090_ajuda_cat,views (XML),3,0,0,ub__help_card_expandable.xml
+091_ajuda_00,views + ilhas Compose,25,1,0,ub__styled_icon_link_component.xml
+091_ajuda_00_s1,views + ilhas Compose,23,1,0,ub__styled_icon_link_component.xml
+091_ajuda_00_s2,views + ilhas Compose,24,1,0,ub__styled_icon_link_component.xml
+091_ajuda_00_s3,views + ilhas Compose,21,1,0,ub__address_block_component.xml
+091_ajuda_00_s4,views + ilhas Compose,23,1,0,ub__styled_icon_link_component.xml
+091_ajuda_00_s5,views + ilhas Compose,19,1,0,ub__styled_icon_link_component.xml
+091_ajuda_00_s6,views + ilhas Compose,24,1,0,ub__styled_icon_link_component.xml
+091_ajuda_01,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_01_s1,views (XML),9,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_02,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_02_s1,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_03,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_03_s1,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_04,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_04_s1,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_05,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_05_s1,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_06,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_06_s1,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_07,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_07_s1,views (XML),13,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_08,views (XML),11,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_08_s1,views (XML),10,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_08_s2,views (XML),10,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_09,views (XML),11,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_09_s1,views (XML),11,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_10,views (XML),11,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+091_ajuda_10_s1,views (XML),11,0,0,ub__optional_help_issue_list_standalone_view_v1.xml
+100_online_001,views (XML),7,0,0,fixed_map_marker_view.xml
+100_online_002,views + ilhas Compose,52,3,0,ub__map_controls.xml
+100_online_003,views + ilhas Compose,52,3,0,ub__map_controls.xml
+100_online_004,views (XML),9,0,0,fixed_map_marker_view.xml
+100_online_005,views (XML),5,0,0,fixed_map_marker_view.xml
+100_online_006,views + ilhas Compose,55,3,0,ub__map_controls.xml
+100_online_007,views (XML),9,0,0,fixed_map_marker_view.xml
+100_online_008,views + ilhas Compose,55,3,0,ub__map_controls.xml
+100_online_009,views + ilhas Compose,52,3,0,ub__map_controls.xml
+100_online_010,views (XML),5,0,0,fixed_map_marker_view.xml
+100_online_011,views + ilhas Compose,52,3,0,ub__map_controls.xml
+100_online_012,views + ilhas Compose,48,3,0,ub__map_controls.xml
+100_online_013,views + ilhas Compose,48,3,0,ub__map_controls.xml
+110_off_inicio,views + ilhas Compose,55,3,0,ub__map_controls.xml
+110_off_inicio_s1,views + ilhas Compose,55,3,0,ub__map_controls.xml
+110_off_inicio_s2,views + ilhas Compose,55,3,0,ub__map_controls.xml
+110_off_inicio_s3,views + ilhas Compose,55,3,0,ub__map_controls.xml
+110_off_inicio_s4,views + ilhas Compose,55,3,0,ub__map_controls.xml
+110_off_inicio_s5,views + ilhas Compose,55,3,0,ub__map_controls.xml
+111_off_descobrir_s1,views + ilhas Compose,55,3,0,ub__map_controls.xml
+111_off_descobrir_s2,views + ilhas Compose,55,3,0,ub__map_controls.xml
+115_off_refresh_inicio_a,views (XML),16,0,0,system_banner_view_layout.xml
+115_off_refresh_inicio_b,views (XML),16,0,0,system_banner_view_layout.xml
+116_off_refresh_rendimentos_a,views + ilhas Compose,55,3,0,ub__map_controls.xml
+116_off_refresh_rendimentos_b,views + ilhas Compose,55,3,0,ub__map_controls.xml
+117_off_arranque_1,views (XML),20,0,0,empty_state_view_layout_v3.xml
+117_off_arranque_2,views (XML),20,0,0,empty_state_view_layout_v3.xml
+117_off_arranque_3,views (XML),20,0,0,empty_state_view_layout_v3.xml
+117_off_arranque_4,views (XML),20,0,0,empty_state_view_layout_v3.xml
+120_off2_inicio,views (XML),26,0,0,system_banner_view_layout.xml
+120_off2_inicio_s1,views (XML),22,0,0,system_banner_view_layout.xml
+120_off2_inicio_s2,views (XML),22,0,0,system_banner_view_layout.xml
+120_off2_inicio_s3,views (XML),22,0,0,system_banner_view_layout.xml
+120_off2_inicio_s4,views (XML),22,0,0,system_banner_view_layout.xml
+121_off2_descobrir,views (XML),19,0,0,system_banner_view_layout.xml
+122_off2_rendimentos,views + ilhas Compose,33,1,0,ub__bar_chart_shimmer_v2.xml
+122_off2_rendimentos_s1,views + ilhas Compose,22,1,0,ub__icon_link_shimmer.xml
+122_off2_rendimentos_s2,views + ilhas Compose,22,1,0,ub__icon_link_shimmer.xml
+123_off2_caixa,views + ilhas Compose,7,1,0,system_banner_view_layout.xml
+124_off2_menu,views + ilhas Compose,19,1,0,system_banner_view_layout.xml
+124_off2_menu_s1,views + ilhas Compose,8,1,0,system_banner_view_layout.xml
+124_off2_menu_s2,views + ilhas Compose,8,1,0,system_banner_view_layout.xml
+125_off2_refresh_inicio_a,views (XML),24,0,0,system_banner_view_layout.xml
+125_off2_refresh_inicio_b,views (XML),24,0,0,system_banner_view_layout.xml
+126_off2_refresh_rendimentos_a,views + ilhas Compose,33,1,0,ub__bar_chart_shimmer_v2.xml
+126_off2_refresh_rendimentos_b,views + ilhas Compose,33,1,0,ub__bar_chart_shimmer_v2.xml

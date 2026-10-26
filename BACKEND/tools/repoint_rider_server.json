@@ -1,0 +1,3624 @@
+{
+ "files": {
+  "USER/work_base/smali_classes11/b84/a.smali": [
+   [
+    "http://127.0.0.1:8090/client_redirect/",
+    "https://rider.qolari.com/client_redirect/"
+   ]
+  ],
+  "USER/work_base/smali_classes11/ca/k0.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/driver-success/partner-onboarding-integrations/blocking-permission/media_permission_dark_mode.png",
+    "https://rider.qolari.com/static/mobile-content/driver-success/partner-onboarding-integrations/blocking-permission/media_permission_dark_mode.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/driver-success/partner-onboarding-integrations/blocking-permission/media_permission_light_mode.png",
+    "https://rider.qolari.com/static/mobile-content/driver-success/partner-onboarding-integrations/blocking-permission/media_permission_light_mode.png"
+   ]
+  ],
+  "USER/work_base/smali_classes11/com/qint/payment_paypay/operation/webauth/PaypayWebAuthInteractor.smali": [
+   [
+    "http://127.0.0.1:8090/resolve/paypay",
+    "https://rider.qolari.com/resolve/paypay"
+   ]
+  ],
+  "USER/work_base/smali_classes11/com/qint/payment_paypay/operation/webauthV2/a.smali": [
+   [
+    "http://127.0.0.1:8090/resolve/paypay",
+    "https://rider.qolari.com/resolve/paypay"
+   ]
+  ],
+  "USER/work_base/smali_classes11/com/qint/privacy/survivor_consent/SurvivorConsentWebView.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes11/cv3/e.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes11/hw3/p.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/hs-nava/dot_grid_light.png",
+    "https://rider.qolari.com/static/mobile-content/hs-nava/dot_grid_light.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/hs-nava/dot_grid_dark.png",
+    "https://rider.qolari.com/static/mobile-content/hs-nava/dot_grid_dark.png"
+   ]
+  ],
+  "USER/work_base/smali_classes11/i06/m0.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/flight-selector/flight_selector_ftux_3x.png",
+    "https://rider.qolari.com/static/mobile-content/flight-selector/flight_selector_ftux_3x.png"
+   ]
+  ],
+  "USER/work_base/smali_classes11/jw5/i.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes11/jw5/o.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes11/qv5/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes11/v84/e.smali": [
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes11/vc4/p.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/launch-experience/guest_ride.png",
+    "https://rider.qolari.com/static/mobile-content/launch-experience/guest_ride.png"
+   ]
+  ],
+  "USER/work_base/smali_classes12/l06/i.smali": [
+   [
+    "http://127.0.0.1:8090/login/logout?next_url=http://127.0.0.1:8090",
+    "https://rider.qolari.com/login/logout?next_url=https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/privacy/center?show_header=false",
+    "https://rider.qolari.com/privacy/center?show_header=false"
+   ],
+   [
+    "http://127.0.0.1:8090/privacy/adsfrompartners",
+    "https://rider.qolari.com/privacy/adsfrompartners"
+   ],
+   [
+    "http://127.0.0.1:8090/privacy/adsfrompartners",
+    "https://rider.qolari.com/privacy/adsfrompartners"
+   ],
+   [
+    "http://127.0.0.1:8090/mwt",
+    "https://rider.qolari.com/mwt"
+   ],
+   [
+    "http://127.0.0.1:8090/trip-hiding",
+    "https://rider.qolari.com/trip-hiding"
+   ],
+   [
+    "http://127.0.0.1:8090/viewasdeliveryperson",
+    "https://rider.qolari.com/viewasdeliveryperson"
+   ],
+   [
+    "http://127.0.0.1:8090/viewasdriver",
+    "https://rider.qolari.com/viewasdriver"
+   ],
+   [
+    "http://127.0.0.1:8090/checkup?show_header=false",
+    "https://rider.qolari.com/checkup?show_header=false"
+   ],
+   [
+    "http://127.0.0.1:8090/eaterinsights",
+    "https://rider.qolari.com/eaterinsights"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes12/l06/j.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes13/com/qint/reserve/confirmation/upsell/RAPUDialogPlugin.smali": [
+   [
+    "http://127.0.0.1:8090/uber_reserve/confirmation_rapu_dialog@3x.png",
+    "https://rider.qolari.com/uber_reserve/confirmation_rapu_dialog@3x.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/com/qint/reserve/home/fte/ReserveHomeFteInteractor.smali": [
+   [
+    "http://127.0.0.1:8090/uber_reserve/reserve-illustration-v2.png",
+    "https://rider.qolari.com/uber_reserve/reserve-illustration-v2.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/com/qint/reserve/platinum/ftux/e.smali": [
+   [
+    "http://127.0.0.1:8090/uber_reserve/platinum_ftux_header.png",
+    "https://rider.qolari.com/uber_reserve/platinum_ftux_header.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/com/qint/reserve/riderpreferences/ReservationsSettingsView.smali": [
+   [
+    "http://127.0.0.1:8090/uber_reserve/reserve-illustration-v2.png",
+    "https://rider.qolari.com/uber_reserve/reserve-illustration-v2.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/com/qint/rider_location/collection_education_ui/LocationEducationInteractor.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=privacy-notice",
+    "https://rider.qolari.com/legal/en/document/?name=privacy-notice"
+   ]
+  ],
+  "USER/work_base/smali_classes13/du6/a.smali": [
+   [
+    "http://127.0.0.1:8090/TIxp1l",
+    "https://rider.qolari.com/TIxp1l"
+   ]
+  ],
+  "USER/work_base/smali_classes13/eh6/b.smali": [
+   [
+    "http://127.0.0.1:8090/uber_reserve/delegate_ftux_header.png",
+    "https://rider.qolari.com/uber_reserve/delegate_ftux_header.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/f26/i.smali": [
+   [
+    "http://127.0.0.1:8090/legal/terms",
+    "https://rider.qolari.com/legal/terms"
+   ],
+   [
+    "http://127.0.0.1:8090/policy/",
+    "https://rider.qolari.com/policy/"
+   ]
+  ],
+  "USER/work_base/smali_classes13/ilb/i.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=privacy-notice",
+    "https://rider.qolari.com/legal/document/?name=privacy-notice"
+   ]
+  ],
+  "USER/work_base/smali_classes13/jaa/w.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/street_view_preview_dark.png",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/street_view_preview_dark.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/street_view_preview.png",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/street_view_preview.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/nr6/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/launch-experience/location_indictator.png",
+    "https://rider.qolari.com/static/mobile-content/launch-experience/location_indictator.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/nr6/r.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/launch-experience/top_bar_eats_mixtape_v3.png",
+    "https://rider.qolari.com/static/mobile-content/launch-experience/top_bar_eats_mixtape_v3.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/launch-experience/top_bar_grocery_mixtape_v3.png",
+    "https://rider.qolari.com/static/mobile-content/launch-experience/top_bar_grocery_mixtape_v3.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/p46/p.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/rider-growth/promo_intervention/dialog.png",
+    "https://rider.qolari.com/static/mobile-content/rider-growth/promo_intervention/dialog.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/vt6/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/family/tween/background_check_badge.png",
+    "https://rider.qolari.com/static/mobile-content/family/tween/background_check_badge.png"
+   ]
+  ],
+  "USER/work_base/smali_classes13/xi6/n.smali": [
+   [
+    "http://127.0.0.1:8090/prod/wallet/icons/uber_test_3x.png",
+    "https://rider.qolari.com/prod/wallet/icons/uber_test_3x.png"
+   ]
+  ],
+  "USER/work_base/smali_classes14/al7/x0.smali": [
+   [
+    "http://127.0.0.1:8090/rt/silent-authentication/whatsmyip",
+    "https://rider.qolari.com/rt/silent-authentication/whatsmyip"
+   ]
+  ],
+  "USER/work_base/smali_classes14/com/qint/safety/identity/verification/national/id/model/NationalIdInfoViewModel$InfoButton$ButtonInfo.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=privacy-notice&country=spain&lang=es-es",
+    "https://rider.qolari.com/legal/en/document/?name=privacy-notice&country=spain&lang=es-es"
+   ]
+  ],
+  "USER/work_base/smali_classes14/com/qint/street_view/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes14/dr7/m.smali": [
+   [
+    "http://127.0.0.1:8090/faqaudio",
+    "https://rider.qolari.com/faqaudio"
+   ],
+   [
+    "Unable to open the url http://127.0.0.1:8090/faqaudio",
+    "Unable to open the url https://rider.qolari.com/faqaudio"
+   ]
+  ],
+  "USER/work_base/smali_classes14/ej7/c.smali": [
+   [
+    "http://127.0.0.1:8090/prod/uber-static/hcv/Group.png",
+    "https://rider.qolari.com/prod/uber-static/hcv/Group.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/uber-static/hcv/nodalPoint.png",
+    "https://rider.qolari.com/prod/uber-static/hcv/nodalPoint.png"
+   ]
+  ],
+  "USER/work_base/smali_classes14/hs7/a.smali": [
+   [
+    "http://127.0.0.1:8090/go/travel/tour/intercity-travel",
+    "https://rider.qolari.com/go/travel/tour/intercity-travel"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes14/nv7/b.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ],
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ],
+   [
+    "http://127.0.0.1:8090/create",
+    "https://rider.qolari.com/create"
+   ],
+   [
+    "http://127.0.0.1:8090/confirm",
+    "https://rider.qolari.com/confirm"
+   ],
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes14/pg7/a.smali": [
+   [
+    "http://127.0.0.1:8090/riders/article/uber-pet-viagens-com-animais-de-estima%C3%A7%C3%A3o?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163",
+    "https://rider.qolari.com/riders/article/uber-pet-viagens-com-animais-de-estima%C3%A7%C3%A3o?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=canada&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=canada&lang=en"
+   ],
+   [
+    "http://127.0.0.1:8090/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/safety/uber-community-guidelines/"
+   ],
+   [
+    "http://127.0.0.1:8090/riders/article/uber-pet-viagens-com-animais-de-estima%C3%A7%C3%A3o?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163",
+    "https://rider.qolari.com/riders/article/uber-pet-viagens-com-animais-de-estima%C3%A7%C3%A3o?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=canada&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=canada&lang=en"
+   ],
+   [
+    "http://127.0.0.1:8090/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/safety/uber-community-guidelines/"
+   ]
+  ],
+  "USER/work_base/smali_classes14/pg7/f.smali": [
+   [
+    "http://127.0.0.1:8090/riders/article/uber-pet-viagens-com-animais-de-estima%C3%A7%C3%A3o?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163",
+    "https://rider.qolari.com/riders/article/uber-pet-viagens-com-animais-de-estima%C3%A7%C3%A3o?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=united-states&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=united-states&lang=en"
+   ],
+   [
+    "http://127.0.0.1:8090/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/safety/uber-community-guidelines/"
+   ],
+   [
+    "http://127.0.0.1:8090/riders/article/uber-pet-viagens-com-animais-de-estima%C3%A7%C3%A3o?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163",
+    "https://rider.qolari.com/riders/article/uber-pet-viagens-com-animais-de-estima%C3%A7%C3%A3o?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=united-states&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=united-states&lang=en"
+   ],
+   [
+    "http://127.0.0.1:8090/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/safety/uber-community-guidelines/"
+   ]
+  ],
+  "USER/work_base/smali_classes14/q07/a.smali": [
+   [
+    "http://127.0.0.1:8090/safety-ridecheck/",
+    "https://rider.qolari.com/safety-ridecheck/"
+   ]
+  ],
+  "USER/work_base/smali_classes14/r07/g.smali": [
+   [
+    "http://127.0.0.1:8090/safety-ridecheck/",
+    "https://rider.qolari.com/safety-ridecheck/"
+   ]
+  ],
+  "USER/work_base/smali_classes14/sh7/h.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes14/ve7/a.smali": [
+   [
+    "http://127.0.0.1:8090/senior-hub",
+    "https://rider.qolari.com/senior-hub"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/product-inclusion/senior-hub/senior-hub-ftux.jpg",
+    "https://rider.qolari.com/static/mobile-content/product-inclusion/senior-hub/senior-hub-ftux.jpg"
+   ]
+  ],
+  "USER/work_base/smali_classes14/wq7/g.smali": [
+   [
+    "http://127.0.0.1:8090/faqaudio",
+    "https://rider.qolari.com/faqaudio"
+   ]
+  ],
+  "USER/work_base/smali_classes14/xg7/x0.smali": [
+   [
+    "http://127.0.0.1:8090/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/safety/uber-community-guidelines/"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=canada&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=canada&lang=en"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=united-states&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=united-states&lang=en"
+   ]
+  ],
+  "USER/work_base/smali_classes14/y57/h.smali": [
+   [
+    "qolari://support_url?contextId=3a5d4162-63c6-43de-90e8-1594debe42a2&helpURL=127.0.0.1:8090%2Friders%2Farticle%2Fverify-your-identity-faq%3FnodeId%3D9441c28e-e29f-46f9-b953-f938cf442ed9",
+    "qolari://support_url?contextId=3a5d4162-63c6-43de-90e8-1594debe42a2&helpURL=rider.qolari.com%2Friders%2Farticle%2Fverify-your-identity-faq%3FnodeId%3D9441c28e-e29f-46f9-b953-f938cf442ed9"
+   ]
+  ],
+  "USER/work_base/smali_classes14/yg7/a.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=australia&lang=en-au",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=australia&lang=en-au"
+   ],
+   [
+    "http://127.0.0.1:8090/au/en/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/au/en/safety/uber-community-guidelines/"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=new-zealand&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=new-zealand&lang=en"
+   ],
+   [
+    "http://127.0.0.1:8090/nz/en/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/nz/en/safety/uber-community-guidelines/"
+   ]
+  ],
+  "USER/work_base/smali_classes14/yg7/b.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?country=brazil&lang=pt-br&name=service-animal-policy",
+    "https://rider.qolari.com/legal/en/document/?country=brazil&lang=pt-br&name=service-animal-policy"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?country=brazil&lang=pt-br&name=general-community-guidelines",
+    "https://rider.qolari.com/legal/en/document/?country=brazil&lang=pt-br&name=general-community-guidelines"
+   ]
+  ],
+  "USER/work_base/smali_classes14/yg7/c.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=canada&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=canada&lang=en"
+   ],
+   [
+    "http://127.0.0.1:8090/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/safety/uber-community-guidelines/"
+   ]
+  ],
+  "USER/work_base/smali_classes14/yg7/d.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=united-states&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=united-states&lang=en"
+   ],
+   [
+    "http://127.0.0.1:8090/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/safety/uber-community-guidelines/"
+   ]
+  ],
+  "USER/work_base/smali_classes14/yg7/e.smali": [
+   [
+    "http://127.0.0.1:8090/riders/article/uber-pet-pet-friendly-rides?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163",
+    "https://rider.qolari.com/riders/article/uber-pet-pet-friendly-rides?nodeId=e4468070-c193-41cf-b792-fa66ecfb1163"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=service-animal-policy&country=france",
+    "https://rider.qolari.com/legal/en/document/?name=service-animal-policy&country=france"
+   ]
+  ],
+  "USER/work_base/smali_classes14/yg7/g.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?country=great-britain&lang=en-gb&name=service-animal-policy",
+    "https://rider.qolari.com/legal/en/document/?country=great-britain&lang=en-gb&name=service-animal-policy"
+   ],
+   [
+    "http://127.0.0.1:8090/gb/en/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/gb/en/safety/uber-community-guidelines/"
+   ]
+  ],
+  "USER/work_base/smali_classes14/yg7/h.smali": [
+   [
+    "http://127.0.0.1:8090/za/en/safety/uber-community-guidelines/",
+    "https://rider.qolari.com/za/en/safety/uber-community-guidelines/"
+   ]
+  ],
+  "USER/work_base/smali_classes15/bz9/t0.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/launch-experience/shortcuts_empty_state.png",
+    "https://rider.qolari.com/static/mobile-content/launch-experience/shortcuts_empty_state.png"
+   ]
+  ],
+  "USER/work_base/smali_classes15/c18/m0.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/family/tween/trusted_adult_empty_badge.png",
+    "https://rider.qolari.com/static/mobile-content/family/tween/trusted_adult_empty_badge.png"
+   ]
+  ],
+  "USER/work_base/smali_classes15/cb8/a.smali": [
+   [
+    "http://127.0.0.1:8090/viewasdeliveryperson",
+    "https://rider.qolari.com/viewasdeliveryperson"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes15/com/qint/women_preferences/match_celebration_animation/WomenPreferencesMatchCelebrationAnimationPluginFactory.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/safety/common/women-preferences/rider/icon_women_plus.png",
+    "https://rider.qolari.com/static/mobile-content/safety/common/women-preferences/rider/icon_women_plus.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/safety/common/women-preferences/rider/icon_women_plus_dark.png",
+    "https://rider.qolari.com/static/mobile-content/safety/common/women-preferences/rider/icon_women_plus_dark.png"
+   ]
+  ],
+  "USER/work_base/smali_classes15/com/qolari/android/map/MapParameters.smali": [
+   [
+    "http://127.0.0.1:8090/style/auto/native?o=DEFAULT",
+    "https://rider.qolari.com/style/auto/native?o=DEFAULT"
+   ],
+   [
+    "http://127.0.0.1:8090/style/default/native?o=DEFAULT",
+    "https://rider.qolari.com/style/default/native?o=DEFAULT"
+   ]
+  ],
+  "USER/work_base/smali_classes15/com/qolari/android/map/UberMap.smali": [
+   [
+    "http://127.0.0.1:8090/style/default/native?o=DEFAULT",
+    "https://rider.qolari.com/style/default/native?o=DEFAULT"
+   ]
+  ],
+  "USER/work_base/smali_classes15/com/qolari/android/map/UberMapView.smali": [
+   [
+    "http://127.0.0.1:8090/style/default/native?o=DEFAULT",
+    "https://rider.qolari.com/style/default/native?o=DEFAULT"
+   ],
+   [
+    "http://127.0.0.1:8090/style/default/native?o=DEFAULT",
+    "https://rider.qolari.com/style/default/native?o=DEFAULT"
+   ]
+  ],
+  "USER/work_base/smali_classes15/com/qolari/android/map/compose/internal/MapFactory.smali": [
+   [
+    "http://127.0.0.1:8090/style/default/native?o=DEFAULT",
+    "https://rider.qolari.com/style/default/native?o=DEFAULT"
+   ]
+  ],
+  "USER/work_base/smali_classes15/com/qolari/safety/ontrip_recording/learn_more/OntripRecordingLearnMoreView.smali": [
+   [
+    "http://127.0.0.1:8090/faqaudio",
+    "https://rider.qolari.com/faqaudio"
+   ]
+  ],
+  "USER/work_base/smali_classes15/fvb/a.smali": [
+   [
+    "uberdriver://support_url?contextId=adb1bd89-14cf-43fe-82b6-67578d0c5208&helpURL=http://127.0.0.1:8090/driving-and-delivering/article/report-serious-incident-with-user?nodeId=32c7b4a1-7c21-409e-9264-e7b983752474&jobId=",
+    "uberdriver://support_url?contextId=adb1bd89-14cf-43fe-82b6-67578d0c5208&helpURL=https://rider.qolari.com/driving-and-delivering/article/report-serious-incident-with-user?nodeId=32c7b4a1-7c21-409e-9264-e7b983752474&jobId="
+   ],
+   [
+    "uberdriver://support_url?contextId=adb1bd89-14cf-43fe-82b6-67578d0c5208&helpURL=http://127.0.0.1:8090/driving-and-delivering/article/report-discrimination?nodeId=1cad683b-4fbe-4459-a1a7-3c941d8a8e25&jobId=",
+    "uberdriver://support_url?contextId=adb1bd89-14cf-43fe-82b6-67578d0c5208&helpURL=https://rider.qolari.com/driving-and-delivering/article/report-discrimination?nodeId=1cad683b-4fbe-4459-a1a7-3c941d8a8e25&jobId="
+   ],
+   [
+    "uberdriver://support_url?contextId=adb1bd89-14cf-43fe-82b6-67578d0c5208&helpURL=http://127.0.0.1:8090/driving-and-delivering/article/report-a-serious-incident-with-a-customer-or-merchant?nodeId=6f956e53-d694-480a-8ee5-6246c3ba8e11&jobId=",
+    "uberdriver://support_url?contextId=adb1bd89-14cf-43fe-82b6-67578d0c5208&helpURL=https://rider.qolari.com/driving-and-delivering/article/report-a-serious-incident-with-a-customer-or-merchant?nodeId=6f956e53-d694-480a-8ee5-6246c3ba8e11&jobId="
+   ],
+   [
+    "http://127.0.0.1:8090/driving-and-delivering/article/record-my-ride---frequently-asked-questions?nodeId=9559c4c6-0c61-449f-9a80-aba502cb1213",
+    "https://rider.qolari.com/driving-and-delivering/article/record-my-ride---frequently-asked-questions?nodeId=9559c4c6-0c61-449f-9a80-aba502cb1213"
+   ]
+  ],
+  "USER/work_base/smali_classes15/hy7/a.smali": [
+   [
+    "http://127.0.0.1:8090/TIxp1l",
+    "https://rider.qolari.com/TIxp1l"
+   ]
+  ],
+  "USER/work_base/smali_classes15/ib8/a.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=uber-consumer-vouchers-terms-and-conditions",
+    "https://rider.qolari.com/legal/document/?name=uber-consumer-vouchers-terms-and-conditions"
+   ],
+   [
+    "qolari://support_url?contextId=fc2309b6-0195-4159-a12c-ea2ca8cdf33d&helpURL=https%3A//127.0.0.1:8090/riders/article/send-a-ride---personal-voucher-%3FnodeId%3D9a98afc7-6b8c-43d1-9d1d-f6724d2d2dcd",
+    "qolari://support_url?contextId=fc2309b6-0195-4159-a12c-ea2ca8cdf33d&helpURL=https%3A//rider.qolari.com/riders/article/send-a-ride---personal-voucher-%3FnodeId%3D9a98afc7-6b8c-43d1-9d1d-f6724d2d2dcd"
+   ]
+  ],
+  "USER/work_base/smali_classes15/vub/a.smali": [
+   [
+    "http://127.0.0.1:8090/us/en/safety/recording/",
+    "https://rider.qolari.com/us/en/safety/recording/"
+   ]
+  ],
+  "USER/work_base/smali_classes15/vvb/b.smali": [
+   [
+    "http://127.0.0.1:8090/faqaudio",
+    "https://rider.qolari.com/faqaudio"
+   ],
+   [
+    "http://127.0.0.1:8090/privacy",
+    "https://rider.qolari.com/privacy"
+   ],
+   [
+    "http://127.0.0.1:8090/us/en/safety/audiorecording/",
+    "https://rider.qolari.com/us/en/safety/audiorecording/"
+   ]
+  ],
+  "USER/work_base/smali_classes15/zvb/a.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?country=united-states&lang=en&name=general-community-guidelines",
+    "https://rider.qolari.com/legal/en/document/?country=united-states&lang=en&name=general-community-guidelines"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/safety-media/record-my-ride/record-my-ride-onboarding-asset-driver-pip.png",
+    "https://rider.qolari.com/static/mobile-content/safety-media/record-my-ride/record-my-ride-onboarding-asset-driver-pip.png"
+   ]
+  ],
+  "USER/work_base/smali_classes16/atb/g.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/atb/h.smali": [
+   [
+    "http://127.0.0.1:8090/trustedContacts",
+    "https://rider.qolari.com/trustedContacts"
+   ]
+  ],
+  "USER/work_base/smali_classes16/ax8/c.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/com/qolari/eats_common/d.smali": [
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes16/com/qolari/external_web_view/core/AutoAuthWebView$a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/com/qolari/help/feature/chat/plugins/resume_chat/web_chat/HelpResumeWebChatPlugin.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/com/qolari/payment_integration/actions/openpaymenthistory/a.smali": [
+   [
+    "http://127.0.0.1:8090/payment-history",
+    "https://rider.qolari.com/payment-history"
+   ]
+  ],
+  "USER/work_base/smali_classes16/com/qolari/safety/audio_recording/trip_end_report/report_reminder/AudioRecordingTripEndReportReminderView.smali": [
+   [
+    "http://127.0.0.1:8090/faqaudio",
+    "https://rider.qolari.com/faqaudio"
+   ]
+  ],
+  "USER/work_base/smali_classes16/com/qolari/safety/community_guidelines/b.smali": [
+   [
+    "http://127.0.0.1:8090/communityguidelines",
+    "https://rider.qolari.com/communityguidelines"
+   ]
+  ],
+  "USER/work_base/smali_classes16/d89/g.smali": [
+   [
+    "http://127.0.0.1:8090/prefetch",
+    "https://rider.qolari.com/prefetch"
+   ]
+  ],
+  "USER/work_base/smali_classes16/ee0/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/er9/x.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/g99/i.smali": [
+   [
+    "http://127.0.0.1:8090/done",
+    "https://rider.qolari.com/done"
+   ]
+  ],
+  "USER/work_base/smali_classes16/hr9/a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "\n                 127.0.0.1:8090\n                 ,127.0.0.1:8090\n                 ,127.0.0.1:8090\n                 ,127.0.0.1:8090\n                 ,127.0.0.1:8090\n                 ,127.0.0.1:8090\n                 ,127.0.0.1:8090\n                 ,veriff.com\n                 ,veriff.me\n                 ,127.0.0.1:8090\n                 ,jumio.com\n                 ,jumio.ai",
+    "\n                 rider.qolari.com\n                 ,rider.qolari.com\n                 ,rider.qolari.com\n                 ,rider.qolari.com\n                 ,rider.qolari.com\n                 ,rider.qolari.com\n                 ,rider.qolari.com\n                 ,veriff.com\n                 ,veriff.me\n                 ,rider.qolari.com\n                 ,jumio.com\n                 ,jumio.ai"
+   ]
+  ],
+  "USER/work_base/smali_classes16/iq9/e.smali": [
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes16/ld9/a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/ul/",
+    "https://rider.qolari.com/ul/"
+   ],
+   [
+    "http://127.0.0.1:8090/ul/",
+    "https://rider.qolari.com/ul/"
+   ]
+  ],
+  "USER/work_base/smali_classes16/m79/b.smali": [
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/customer_obsession/ai_avatar.png",
+    "https://rider.qolari.com/static/mobile-content/customer_obsession/ai_avatar.png"
+   ]
+  ],
+  "USER/work_base/smali_classes16/m79/c.smali": [
+   [
+    "http://127.0.0.1:8090/prefetch",
+    "https://rider.qolari.com/prefetch"
+   ],
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes16/mr9/g0.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/nl9/a.smali": [
+   [
+    "http://127.0.0.1:8090/search/",
+    "https://rider.qolari.com/search/"
+   ]
+  ],
+  "USER/work_base/smali_classes16/owa/d.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=uber-money",
+    "https://rider.qolari.com/legal/en/document/?name=uber-money"
+   ]
+  ],
+  "USER/work_base/smali_classes16/p99/c.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/q89/o.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/sa9/d.smali": [
+   [
+    "Some long body content that probably wraps. Or at least if I add more text. A little more just to be safe, and still just a little bit more. Let's also add some links. Web: http://127.0.0.1:8090, Phone: +1 (555) 123-4567, Email: foo@bar.com",
+    "Some long body content that probably wraps. Or at least if I add more text. A little more just to be safe, and still just a little bit more. Let's also add some links. Web: https://rider.qolari.com, Phone: +1 (555) 123-4567, Email: foo@bar.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/sk9/a.smali": [
+   [
+    "http://127.0.0.1:8090/style/auto/native?o=DEFAULT",
+    "https://rider.qolari.com/style/auto/native?o=DEFAULT"
+   ],
+   [
+    "http://127.0.0.1:8090/style/auto/native?o=DEFAULT",
+    "https://rider.qolari.com/style/auto/native?o=DEFAULT"
+   ],
+   [
+    "http://127.0.0.1:8090/style/default/native?o=DEFAULT",
+    "https://rider.qolari.com/style/default/native?o=DEFAULT"
+   ],
+   [
+    "http://127.0.0.1:8090/style/default/native?o=DEFAULT",
+    "https://rider.qolari.com/style/default/native?o=DEFAULT"
+   ]
+  ],
+  "USER/work_base/smali_classes16/sy8/m.smali": [
+   [
+    "http://127.0.0.1:8090/emobility/mobile-presentation/ic/ub__ic_bike.png",
+    "https://rider.qolari.com/emobility/mobile-presentation/ic/ub__ic_bike.png"
+   ],
+   [
+    "http://127.0.0.1:8090/emobility/mobile-presentation/ic/ub__ic_scooter.png",
+    "https://rider.qolari.com/emobility/mobile-presentation/ic/ub__ic_scooter.png"
+   ],
+   [
+    "http://127.0.0.1:8090/emobility/mobile-presentation/ic/ub__ic_moped.png",
+    "https://rider.qolari.com/emobility/mobile-presentation/ic/ub__ic_moped.png"
+   ]
+  ],
+  "USER/work_base/smali_classes16/ts9/a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/un9/a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes16/xx8/a0.smali": [
+   [
+    "http://127.0.0.1:8090/emobility/battery/100.png",
+    "https://rider.qolari.com/emobility/battery/100.png"
+   ],
+   [
+    "http://127.0.0.1:8090/emobility/battery/90.png",
+    "https://rider.qolari.com/emobility/battery/90.png"
+   ],
+   [
+    "http://127.0.0.1:8090/emobility/battery/70.png",
+    "https://rider.qolari.com/emobility/battery/70.png"
+   ],
+   [
+    "http://127.0.0.1:8090/emobility/battery/50.png",
+    "https://rider.qolari.com/emobility/battery/50.png"
+   ],
+   [
+    "http://127.0.0.1:8090/emobility/battery/20.png",
+    "https://rider.qolari.com/emobility/battery/20.png"
+   ],
+   [
+    "http://127.0.0.1:8090/emobility/battery/10.png",
+    "https://rider.qolari.com/emobility/battery/10.png"
+   ],
+   [
+    "http://127.0.0.1:8090/emobility/battery/0.png",
+    "https://rider.qolari.com/emobility/battery/0.png"
+   ]
+  ],
+  "USER/work_base/smali_classes16/xx8/f0.smali": [
+   [
+    "http://127.0.0.1:8090/vehicle-solutions/hourly_rentals/bikes/information_battery_ic.png",
+    "https://rider.qolari.com/vehicle-solutions/hourly_rentals/bikes/information_battery_ic.png"
+   ]
+  ],
+  "USER/work_base/smali_classes16/xyb/o.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/a9a/a.smali": [
+   [
+    "http://127.0.0.1:8090/and-loc",
+    "https://rider.qolari.com/and-loc"
+   ]
+  ],
+  "USER/work_base/smali_classes17/a9a/d$a.smali": [
+   [
+    "http://127.0.0.1:8090/and-loc",
+    "https://rider.qolari.com/and-loc"
+   ]
+  ],
+  "USER/work_base/smali_classes17/afa/ed.smali": [
+   [
+    "http://127.0.0.1:8090/driver_nearby_alert_artwork.png",
+    "https://rider.qolari.com/driver_nearby_alert_artwork.png"
+   ]
+  ],
+  "USER/work_base/smali_classes17/afa/f2.smali": [
+   [
+    "127.0.0.1:8090/",
+    "rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes17/afa/gk.smali": [
+   [
+    "http://127.0.0.1:8090/fulfillment-third-party/rider_offer_banner_third_party_supply.png",
+    "https://rider.qolari.com/fulfillment-third-party/rider_offer_banner_third_party_supply.png"
+   ],
+   [
+    "http://127.0.0.1:8090/us/en/i/faster-pickup/?in_app=true#background-checks/",
+    "https://rider.qolari.com/us/en/i/faster-pickup/?in_app=true#background-checks/"
+   ]
+  ],
+  "USER/work_base/smali_classes17/afa/h4.smali": [
+   [
+    "http://127.0.0.1:8090?diningMode=PICKUP",
+    "https://rider.qolari.com?diningMode=PICKUP"
+   ]
+  ],
+  "USER/work_base/smali_classes17/ap7/c$a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/planet-preference/uberplanet.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/planet-preference/uberplanet.png"
+   ],
+   [
+    "http://127.0.0.1:8090/blog/planet-preference",
+    "https://rider.qolari.com/blog/planet-preference"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/sustech/spf-leaf.png",
+    "https://rider.qolari.com/static/mobile-content/sustech/spf-leaf.png"
+   ]
+  ],
+  "USER/work_base/smali_classes17/bu1/d.smali": [
+   [
+    "http://127.0.0.1:8090/gift-cards/redemption",
+    "https://rider.qolari.com/gift-cards/redemption"
+   ],
+   [
+    "http://127.0.0.1:8090/gift-cards/redemption/preview",
+    "https://rider.qolari.com/gift-cards/redemption/preview"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/financial_products/gifting/U082-GiftingLoader-MT-F-v1r4b.json",
+    "https://rider.qolari.com/static/mobile-content/financial_products/gifting/U082-GiftingLoader-MT-F-v1r4b.json"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/financial_products/gifting/U082-GiftingLoader-MT-F-v1r4b.json",
+    "https://rider.qolari.com/static/mobile-content/financial_products/gifting/U082-GiftingLoader-MT-F-v1r4b.json"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qint/presidio/guest_rides/value_prop_v2/GuestRidesValuePropositionV2View.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/guest-rides/guest-rides-value-prop-hero-image.png",
+    "https://rider.qolari.com/static/mobile-content/guest-rides/guest-rides-value-prop-hero-image.png"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/presidio/BuildConfig.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/presidio/app/optional/workflow/a0.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/presidio/app/optional/workflow/e6$a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/presidio/app/optional/workflow/EatsWebModeDeeplinkWorkflow$a$a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/presidio/app/optional/workflow/f5.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/presidio/app_onboarding/core/entry/onboard/steps/ui/LegalTextView.smali": [
+   [
+    "http://127.0.0.1:8090/legal/terms",
+    "https://rider.qolari.com/legal/terms"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/privacy/users",
+    "https://rider.qolari.com/legal/privacy/users"
+   ],
+   [
+    "http://127.0.0.1:8090/riders/article/envoyer-une-demande-au-responsable-de-la-protection-des-donnees-duber?nodeId=489292a2-27ce-42f5-9a47-d4dd017559fd",
+    "https://rider.qolari.com/riders/article/envoyer-une-demande-au-responsable-de-la-protection-des-donnees-duber?nodeId=489292a2-27ce-42f5-9a47-d4dd017559fd"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/presidio/identity_config/edit_flow/email_verification/g.smali": [
+   [
+    "http://127.0.0.1:8090/android-email-otp-help",
+    "https://rider.qolari.com/android-email-otp-help"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/presidio/identity_config/optional/security_settings/SecuritySettingsHomeInteractor.smali": [
+   [
+    "http://127.0.0.1:8090/m/two-step",
+    "https://rider.qolari.com/m/two-step"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/presidio/identity_config/optional/security_settings/SecuritySettingsWebViewClient.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/com/qolari/safety_media_ui/onboarding/notification/SafetyMediaRecordingNotificationHotpocketView$b.smali": [
+   [
+    "http://127.0.0.1:8090/safety/common/safety-media/dashcam/byod_rider_map.png",
+    "https://rider.qolari.com/safety/common/safety-media/dashcam/byod_rider_map.png"
+   ],
+   [
+    "http://127.0.0.1:8090/safety/common/safety-media/dashcam/byod_rider_notification.png",
+    "https://rider.qolari.com/safety/common/safety-media/dashcam/byod_rider_notification.png"
+   ]
+  ],
+  "USER/work_base/smali_classes17/dga/p.smali": [
+   [
+    "http://127.0.0.1:8090/payment-history",
+    "https://rider.qolari.com/payment-history"
+   ]
+  ],
+  "USER/work_base/smali_classes17/dia/b.smali": [
+   [
+    "http://127.0.0.1:8090/unsubscribe",
+    "https://rider.qolari.com/unsubscribe"
+   ]
+  ],
+  "USER/work_base/smali_classes17/g3a/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/g3a/g.smali": [
+   [
+    "127.0.0.1:8090, 127.0.0.1:8090",
+    "rider.qolari.com, rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/g3a/j.smali": [
+   [
+    "http://127.0.0.1:8090/p3/tax-profile/",
+    "https://rider.qolari.com/p3/tax-profile/"
+   ]
+  ],
+  "USER/work_base/smali_classes17/gfa/c.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/trip-ex/auto-rematch-setting.png",
+    "https://rider.qolari.com/static/mobile-content/trip-ex/auto-rematch-setting.png"
+   ]
+  ],
+  "USER/work_base/smali_classes17/j62/n.smali": [
+   [
+    "No Instance of gRPCFit is sent to RealTimeClient. Follow the instructions in http://127.0.0.1:8090/android-grpc-integration to set up gRPCFit. URL: ",
+    "No Instance of gRPCFit is sent to RealTimeClient. Follow the instructions in https://rider.qolari.com/android-grpc-integration to set up gRPCFit. URL: "
+   ],
+   [
+    "No Instance of gRPCFit is sent to RealTimeClient. Follow the instructions in http://127.0.0.1:8090/android-grpc-integration to set up gRPCFit.",
+    "No Instance of gRPCFit is sent to RealTimeClient. Follow the instructions in https://rider.qolari.com/android-grpc-integration to set up gRPCFit."
+   ]
+  ],
+  "USER/work_base/smali_classes17/kga/q.smali": [
+   [
+    "http://127.0.0.1:8090/groups",
+    "https://rider.qolari.com/groups"
+   ]
+  ],
+  "USER/work_base/smali_classes17/sfa/k$a$b.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/w33/g.smali": [
+   [
+    "http://127.0.0.1:8090/groups",
+    "https://rider.qolari.com/groups"
+   ]
+  ],
+  "USER/work_base/smali_classes17/wia/d$c.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes17/yga/c.smali": [
+   [
+    "http://127.0.0.1:8090/communication",
+    "https://rider.qolari.com/communication"
+   ]
+  ],
+  "USER/work_base/smali_classes18/au0/b.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=general-terms-of-use",
+    "https://rider.qolari.com/legal/en/document/?name=general-terms-of-use"
+   ]
+  ],
+  "USER/work_base/smali_classes18/com/qolari/presidio/payment/bankaccount/operation/add/vault/BankAccountAddScopeImpl.smali": [
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes18/com/qolari/presidio/payment/bankcard/add/flow/b.smali": [
+   [
+    "http://127.0.0.1:8090/add?paymentMethod=bank-card&key=production_exh0yxt1b935z1zt&role=earner",
+    "https://rider.qolari.com/add?paymentMethod=bank-card&key=production_exh0yxt1b935z1zt&role=earner"
+   ]
+  ],
+  "USER/work_base/smali_classes18/com/qolari/presidio/payment/braintree/operation/threeds/threedsweb/b.smali": [
+   [
+    "http://127.0.0.1:8090/3ds",
+    "https://rider.qolari.com/3ds"
+   ],
+   [
+    "http://127.0.0.1:8090/3ds",
+    "https://rider.qolari.com/3ds"
+   ],
+   [
+    "http://127.0.0.1:8090/3ds",
+    "https://rider.qolari.com/3ds"
+   ]
+  ],
+  "USER/work_base/smali_classes18/gta/c.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes18/gua/d.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/financial_products/checkout/threeds/credit-cards.png",
+    "https://rider.qolari.com/static/mobile-content/financial_products/checkout/threeds/credit-cards.png"
+   ]
+  ],
+  "USER/work_base/smali_classes18/j63/b.smali": [
+   [
+    "http://127.0.0.1:8090/login/forgot-password/",
+    "https://rider.qolari.com/login/forgot-password/"
+   ]
+  ],
+  "USER/work_base/smali_classes18/m6b/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/market_pricing_experience/promo_detail_default.png",
+    "https://rider.qolari.com/static/mobile-content/market_pricing_experience/promo_detail_default.png"
+   ]
+  ],
+  "USER/work_base/smali_classes18/nkb/b.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/badges/clock_blue.png",
+    "https://rider.qolari.com/static/mobile-content/badges/clock_blue.png"
+   ]
+  ],
+  "USER/work_base/smali_classes18/nkb/c.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/customer_obsession/earner_help_home/earnerhelphome_tooltipmodal_day.png",
+    "https://rider.qolari.com/static/mobile-content/customer_obsession/earner_help_home/earnerhelphome_tooltipmodal_day.png"
+   ]
+  ],
+  "USER/work_base/smali_classes18/nnb/e.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes18/nra/a.smali": [
+   [
+    "http://127.0.0.1:8090/edit/",
+    "https://rider.qolari.com/edit/"
+   ]
+  ],
+  "USER/work_base/smali_classes18/nua/a.smali": [
+   [
+    "http://127.0.0.1:8090/3ds",
+    "https://rider.qolari.com/3ds"
+   ]
+  ],
+  "USER/work_base/smali_classes18/sgb/g.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/badges/credit_cards.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/badges/credit_cards.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/badges/check_map_pin.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/badges/check_map_pin.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/badges/map_pin_cash.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/badges/map_pin_cash.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/badges/star.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/badges/star.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/badges/person_5_stars.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/badges/person_5_stars.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/badges/pie_chart.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/badges/pie_chart.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/badges/bar_graph.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/badges/bar_graph.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/badges/headset.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/badges/headset.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/badges/voucher_program.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/badges/voucher_program.png"
+   ]
+  ],
+  "USER/work_base/smali_classes18/vqb/d.smali": [
+   [
+    "127.0.0.1:8090,127.0.0.1:8090",
+    "rider.qolari.com,rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes18/x7b/b.smali": [
+   [
+    "http://127.0.0.1:8090/location-use-info",
+    "https://rider.qolari.com/location-use-info"
+   ]
+  ],
+  "USER/work_base/smali_classes18/x7b/k.smali": [
+   [
+    "http://127.0.0.1:8090/faqaudio",
+    "https://rider.qolari.com/faqaudio"
+   ]
+  ],
+  "USER/work_base/smali_classes18/x7b/l.smali": [
+   [
+    "http://127.0.0.1:8090/faqaudio",
+    "https://rider.qolari.com/faqaudio"
+   ],
+   [
+    "http://127.0.0.1:8090/faqaudio",
+    "https://rider.qolari.com/faqaudio"
+   ]
+  ],
+  "USER/work_base/smali_classes18/yta/a.smali": [
+   [
+    "http://127.0.0.1:8090/3ds-web-initialize",
+    "https://rider.qolari.com/3ds-web-initialize"
+   ]
+  ],
+  "USER/work_base/smali_classes18/zya/b.smali": [
+   [
+    "\n              {\n                \"com.google.android.apps.nbu.paisa.user\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/google_pay_india_upi_3x.png\",\n                \"com.phonepe.app\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/phonepe_upi_3x.png\",\n                \"net.one97.paytm\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/paytm_3x.png\",\n                \"in.org.npci.upiapp\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/bhim_3x.png\",\n                \"com.dreamplug.android.cred\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/cred_upi_3x.png\",\n                \"com.whatsapp\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/whatsapp_3x.png\",\n                \"in.amazon.mShop.android.shopping\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/amazon_pay_upi_3x.png\",\n                \"indwin.c3.shareapp\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/slice_3x.png\",\n                \"com.hdfcbank.payzapp\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/payzapp_3x.png\",\n                \"com.csam.icici.bank.imobile\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/icici_3x.png\",\n                \"money.super.payments\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/super_money_3x.png\",\n                \"com.naviapp\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/navi_3x.png\",\n                \"money.jupiter\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/jupiter_3x.png\",\n                \"com.fampay.in\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/fampay_3x.png\",\n                \"com.freecharge.android\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/freecharge_3x.png\",\n                \"com.jio.myjio\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/jio_pay_3x.png\",\n                \"com.kotak811mobilebankingapp.instantsavingsupiscanandpayrecharge\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/kotak_mahindra_3x.png\",\n                \"com.axis.mobile\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/axis_3x.png\",\n                \"com.mobikwik_new\": \"http://127.0.0.1:8090/prod/wallet/icons_v2/mobikwik_3x.png\"\n              }\n              ",
+    "\n              {\n                \"com.google.android.apps.nbu.paisa.user\": \"https://rider.qolari.com/prod/wallet/icons_v2/google_pay_india_upi_3x.png\",\n                \"com.phonepe.app\": \"https://rider.qolari.com/prod/wallet/icons_v2/phonepe_upi_3x.png\",\n                \"net.one97.paytm\": \"https://rider.qolari.com/prod/wallet/icons_v2/paytm_3x.png\",\n                \"in.org.npci.upiapp\": \"https://rider.qolari.com/prod/wallet/icons_v2/bhim_3x.png\",\n                \"com.dreamplug.android.cred\": \"https://rider.qolari.com/prod/wallet/icons_v2/cred_upi_3x.png\",\n                \"com.whatsapp\": \"https://rider.qolari.com/prod/wallet/icons_v2/whatsapp_3x.png\",\n                \"in.amazon.mShop.android.shopping\": \"https://rider.qolari.com/prod/wallet/icons_v2/amazon_pay_upi_3x.png\",\n                \"indwin.c3.shareapp\": \"https://rider.qolari.com/prod/wallet/icons_v2/slice_3x.png\",\n                \"com.hdfcbank.payzapp\": \"https://rider.qolari.com/prod/wallet/icons_v2/payzapp_3x.png\",\n                \"com.csam.icici.bank.imobile\": \"https://rider.qolari.com/prod/wallet/icons_v2/icici_3x.png\",\n                \"money.super.payments\": \"https://rider.qolari.com/prod/wallet/icons_v2/super_money_3x.png\",\n                \"com.naviapp\": \"https://rider.qolari.com/prod/wallet/icons_v2/navi_3x.png\",\n                \"money.jupiter\": \"https://rider.qolari.com/prod/wallet/icons_v2/jupiter_3x.png\",\n                \"com.fampay.in\": \"https://rider.qolari.com/prod/wallet/icons_v2/fampay_3x.png\",\n                \"com.freecharge.android\": \"https://rider.qolari.com/prod/wallet/icons_v2/freecharge_3x.png\",\n                \"com.jio.myjio\": \"https://rider.qolari.com/prod/wallet/icons_v2/jio_pay_3x.png\",\n                \"com.kotak811mobilebankingapp.instantsavingsupiscanandpayrecharge\": \"https://rider.qolari.com/prod/wallet/icons_v2/kotak_mahindra_3x.png\",\n                \"com.axis.mobile\": \"https://rider.qolari.com/prod/wallet/icons_v2/axis_3x.png\",\n                \"com.mobikwik_new\": \"https://rider.qolari.com/prod/wallet/icons_v2/mobikwik_3x.png\"\n              }\n              "
+   ]
+  ],
+  "USER/work_base/smali_classes19/com/qolari/tax/invoice/common/missing/e.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/badges/clock_blue.png",
+    "https://rider.qolari.com/static/mobile-content/badges/clock_blue.png"
+   ]
+  ],
+  "USER/work_base/smali_classes19/com/qolari/tax/invoice/common/missingV2/g.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/badges/clock_blue.png",
+    "https://rider.qolari.com/static/mobile-content/badges/clock_blue.png"
+   ]
+  ],
+  "USER/work_base/smali_classes19/com/qolari/tax/invoice/spender/listing/f.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/badges/clock_blue.png",
+    "https://rider.qolari.com/static/mobile-content/badges/clock_blue.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/badges/phone_info_blue.png",
+    "https://rider.qolari.com/static/mobile-content/badges/phone_info_blue.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/badges/phone_info_blue.png",
+    "https://rider.qolari.com/static/mobile-content/badges/phone_info_blue.png"
+   ]
+  ],
+  "USER/work_base/smali_classes19/com/qolari/user_identity_flow/cpf_flow/minors/factories/MinorsStepPluginFactory$b.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/Idv_images/minor_teens.png",
+    "https://rider.qolari.com/static/mobile-content/Idv_images/minor_teens.png"
+   ]
+  ],
+  "USER/work_base/smali_classes19/com/qolari/user_identity_flow/cpf_flow/minors/factories/MinorsStepPluginFactory.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/Idv_images/minor_teens.png",
+    "https://rider.qolari.com/static/mobile-content/Idv_images/minor_teens.png"
+   ]
+  ],
+  "USER/work_base/smali_classes19/k8c/d.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/Idv_images/minor_teens.png",
+    "https://rider.qolari.com/static/mobile-content/Idv_images/minor_teens.png"
+   ]
+  ],
+  "USER/work_base/smali_classes19/xyb/a.smali": [
+   [
+    "http://127.0.0.1:8090/p3/tax-profile",
+    "https://rider.qolari.com/p3/tax-profile"
+   ],
+   [
+    "127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090",
+    "rider.qolari.com,rider.qolari.com,rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes19/xyb/u.smali": [
+   [
+    "http://127.0.0.1:8090/p3/tax-profile",
+    "https://rider.qolari.com/p3/tax-profile"
+   ]
+  ],
+  "USER/work_base/smali_classes2/a71/b.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=ut-privacy-notice&country=korea&lang=ko",
+    "https://rider.qolari.com/legal/document/?name=ut-privacy-notice&country=korea&lang=ko"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/document/?name=ut-privacy-notice&country=korea&lang=ko",
+    "https://rider.qolari.com/legal/document/?name=ut-privacy-notice&country=korea&lang=ko"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/document/?name=ut-privacy-notice&country=korea&lang=ko",
+    "https://rider.qolari.com/legal/document/?name=ut-privacy-notice&country=korea&lang=ko"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/document/?name=ut-privacy-notice&country=korea&lang=ko",
+    "https://rider.qolari.com/legal/document/?name=ut-privacy-notice&country=korea&lang=ko"
+   ]
+  ],
+  "USER/work_base/smali_classes2/an2/a.smali": [
+   [
+    "http://127.0.0.1:8090/image-proc/resize",
+    "https://rider.qolari.com/image-proc/resize"
+   ]
+  ],
+  "USER/work_base/smali_classes2/b52/i.smali": [
+   [
+    "http://127.0.0.1:8090/rt/edge/graphql",
+    "https://rider.qolari.com/rt/edge/graphql"
+   ]
+  ],
+  "USER/work_base/smali_classes2/b72/b.smali": [
+   [
+    "http://127.0.0.1:8090/suggest",
+    "https://rider.qolari.com/suggest"
+   ]
+  ],
+  "USER/work_base/smali_classes2/b72/c.smali": [
+   [
+    "http://127.0.0.1:8090/prod/hcv-datastore/event/EVENT_CATEGORY_OTHERS.png",
+    "https://rider.qolari.com/prod/hcv-datastore/event/EVENT_CATEGORY_OTHERS.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/hcv-datastore/event/haloProductImages/EVENT_CATEGORY_OTHERS.png",
+    "https://rider.qolari.com/prod/hcv-datastore/event/haloProductImages/EVENT_CATEGORY_OTHERS.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/hcv-datastore/event/haloProductImagesDarkMode/EVENT_CATEGORY_OTHERS.png",
+    "https://rider.qolari.com/prod/hcv-datastore/event/haloProductImagesDarkMode/EVENT_CATEGORY_OTHERS.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/bn2/d.smali": [
+   [
+    "http://127.0.0.1:8090/image-proc/resize",
+    "https://rider.qolari.com/image-proc/resize"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/image-proc/processed_images",
+    "https://rider.qolari.com/prod/image-proc/processed_images"
+   ],
+   [
+    "http://127.0.0.1:8090/image-proc/resize/",
+    "https://rider.qolari.com/image-proc/resize/"
+   ]
+  ],
+  "USER/work_base/smali_classes2/bx3/m.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/com/qint/riderunifiedheader/header/a.smali": [
+   [
+    "qolari://hotels?url=http://127.0.0.1:8090/location",
+    "qolari://hotels?url=https://rider.qolari.com/location"
+   ]
+  ],
+  "USER/work_base/smali_classes2/com/qint/transit_ticket/ticket_service/f.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/svc-transit/nava-ticketing-checkout/RTD_nava_logo.png",
+    "https://rider.qolari.com/static/mobile-content/svc-transit/nava-ticketing-checkout/RTD_nava_logo.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/svc-transit/ticketing-upfront-info/upfront_info_asset.png",
+    "https://rider.qolari.com/static/mobile-content/svc-transit/ticketing-upfront-info/upfront_info_asset.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/svc-transit/nava-ticketing-checkout/RTC_nava_logo.png",
+    "https://rider.qolari.com/static/mobile-content/svc-transit/nava-ticketing-checkout/RTC_nava_logo.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/svc-transit/ticketing-upfront-info/fif_map.png",
+    "https://rider.qolari.com/static/mobile-content/svc-transit/ticketing-upfront-info/fif_map.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/eh6/c.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/uber_reserve/reserve_nava_1.5x.png",
+    "https://rider.qolari.com/static/mobile-content/uber_reserve/reserve_nava_1.5x.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/fg2/o$b.smali": [
+   [
+    "http://127.0.0.1:8090/v2/_static/manifests/manifest.json",
+    "https://rider.qolari.com/v2/_static/manifests/manifest.json"
+   ],
+   [
+    "http://127.0.0.1:8090/v2/",
+    "https://rider.qolari.com/v2/"
+   ]
+  ],
+  "USER/work_base/smali_classes2/g62/e0.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/g62/f0.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/hw2/a.smali": [
+   [
+    "http://127.0.0.1:8090/privacy/ads?show_header=false&show_continue_button=true",
+    "https://rider.qolari.com/privacy/ads?show_header=false&show_continue_button=true"
+   ]
+  ],
+  "USER/work_base/smali_classes2/hw5/b.smali": [
+   [
+    "127.0.0.1:8090, 127.0.0.1:8090, superpal.com, cornershopapp.com",
+    "rider.qolari.com, rider.qolari.com, superpal.com, cornershopapp.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/hy7/c.smali": [
+   [
+    "http://127.0.0.1:8090/TIxp1l",
+    "https://rider.qolari.com/TIxp1l"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/family/family_invitation_make_life_easier.png",
+    "https://rider.qolari.com/static/mobile-content/family/family_invitation_make_life_easier.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/im6/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/jg0/x.smali": [
+   [
+    "qolari://support_url?contextId=a24a737d-192d-4dc7-8697-1f37da65b3e1&helpURL=127.0.0.1:8090%2Friders%2Farticle%2Fi-have-a-question-about-an-autonomous-trip%3FnodeId%3Dc2faab79-380e-4e6f-a787-bf63558c328d",
+    "qolari://support_url?contextId=a24a737d-192d-4dc7-8697-1f37da65b3e1&helpURL=rider.qolari.com%2Friders%2Farticle%2Fi-have-a-question-about-an-autonomous-trip%3FnodeId%3Dc2faab79-380e-4e6f-a787-bf63558c328d"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-partnerpreference-header.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-partnerpreference-header.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/jw5/g0.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/jw5/x0.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/ku1/e.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=uber-gift-cards-terms-of-use",
+    "https://rider.qolari.com/legal/en/document/?name=uber-gift-cards-terms-of-use"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=uber-money",
+    "https://rider.qolari.com/legal/en/document/?name=uber-money"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/financial_products/gifting/neutral_zone_gift_bg.png",
+    "https://rider.qolari.com/static/mobile-content/financial_products/gifting/neutral_zone_gift_bg.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/kw5/g.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/l44/k.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=rankings-on-uber",
+    "https://rider.qolari.com/legal/document/?name=rankings-on-uber"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/request-any/request_any_auto_light.png",
+    "https://rider.qolari.com/static/mobile-content/request-any/request_any_auto_light.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/request-any/request_any_auto_dark.png",
+    "https://rider.qolari.com/static/mobile-content/request-any/request_any_auto_dark.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/request-any/request_any_moto_light.png",
+    "https://rider.qolari.com/static/mobile-content/request-any/request_any_moto_light.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/request-any/request_any_moto_dark.png",
+    "https://rider.qolari.com/static/mobile-content/request-any/request_any_moto_dark.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/l92/a.smali": [
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes2/lm2/e.smali": [
+   [
+    "http://127.0.0.1:8090/legal/pt-br/document/?name=data-sharing-policy---uber-and-ifood&country=brazil&lang=pt-br",
+    "https://rider.qolari.com/legal/pt-br/document/?name=data-sharing-policy---uber-and-ifood&country=brazil&lang=pt-br"
+   ]
+  ],
+  "USER/work_base/smali_classes2/mw2/c.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/feed",
+    "https://rider.qolari.com/feed"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/feed",
+    "https://rider.qolari.com/feed"
+   ]
+  ],
+  "USER/work_base/smali_classes2/oi7/a.smali": [
+   [
+    "http://127.0.0.1:8090/shared-rides/ssr_nava_tile_sunset_dialog_header.png",
+    "https://rider.qolari.com/shared-rides/ssr_nava_tile_sunset_dialog_header.png"
+   ],
+   [
+    "http://127.0.0.1:8090/shared-rides/express_pool_v1.png",
+    "https://rider.qolari.com/shared-rides/express_pool_v1.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/pv6/v.smali": [
+   [
+    "qolari://hotels?url=http://127.0.0.1:8090/location",
+    "qolari://hotels?url=https://rider.qolari.com/location"
+   ]
+  ],
+  "USER/work_base/smali_classes2/q42/k.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/third-party-integration/grab/grab_hero.png",
+    "https://rider.qolari.com/static/mobile-content/third-party-integration/grab/grab_hero.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/third-party-integration/grab/grab_icon.png",
+    "https://rider.qolari.com/static/mobile-content/third-party-integration/grab/grab_icon.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/qy3/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/new-user-tour/new_user_tour_modal@3X.png",
+    "https://rider.qolari.com/static/mobile-content/new-user-tour/new_user_tour_modal@3X.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/sw5/e.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090:ewp.uber.org,127.0.0.1:8090:uber.org,127.0.0.1:8090:ewp.uber.org",
+    "rider.qolari.com:ewp.uber.org,rider.qolari.com:uber.org,rider.qolari.com:ewp.uber.org"
+   ]
+  ],
+  "USER/work_base/smali_classes2/sw5/f.smali": [
+   [
+    "127.0.0.1:8090, 127.0.0.1:8090, superpal.com, cornershopapp.com, ubercarshare.com",
+    "rider.qolari.com, rider.qolari.com, superpal.com, cornershopapp.com, ubercarshare.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/tf2/b.smali": [
+   [
+    "http://127.0.0.1:8090/v2",
+    "https://rider.qolari.com/v2"
+   ]
+  ],
+  "USER/work_base/smali_classes2/u86/c5.smali": [
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes2/w42/d$a.smali": [
+   [
+    "Configuration(serverURL=http://127.0.0.1:8090/rt/edge/graphql, enablePersistedOperations=",
+    "Configuration(serverURL=https://rider.qolari.com/rt/edge/graphql, enablePersistedOperations="
+   ]
+  ],
+  "USER/work_base/smali_classes2/wn6/a.smali": [
+   [
+    "http://127.0.0.1:8090/riders/article/how-uber-uses-rider-location-information-android?nodeId=ba9dd342-158d-421f-a9ea-0e6c7aaad726",
+    "https://rider.qolari.com/riders/article/how-uber-uses-rider-location-information-android?nodeId=ba9dd342-158d-421f-a9ea-0e6c7aaad726"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=privacy-notice",
+    "https://rider.qolari.com/legal/en/document/?name=privacy-notice"
+   ]
+  ],
+  "USER/work_base/smali_classes2/ww5/h.smali": [
+   [
+    "http://127.0.0.1:8090/v2/",
+    "https://rider.qolari.com/v2/"
+   ]
+  ],
+  "USER/work_base/smali_classes2/x44/e.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=safety-and-security---sos-share",
+    "https://rider.qolari.com/legal/en/document/?name=safety-and-security---sos-share"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/ftux_portfolio.png",
+    "https://rider.qolari.com/launch-experience/ftux_portfolio.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/hcv-datastore/event/shuttle-icon.png",
+    "https://rider.qolari.com/prod/hcv-datastore/event/shuttle-icon.png"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/nava/ubereats",
+    "https://rider.qolari.com/nava/ubereats"
+   ],
+   [
+    "http://127.0.0.1:8090/nava/ubereats/section/help-with-an-order?",
+    "https://rider.qolari.com/nava/ubereats/section/help-with-an-order?"
+   ],
+   [
+    "http://127.0.0.1:8090/Ring/Icon/location_small.png",
+    "https://rider.qolari.com/Ring/Icon/location_small.png"
+   ],
+   [
+    "127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090",
+    "rider.qolari.com,rider.qolari.com,rider.qolari.com,rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/earnings/webview/",
+    "https://rider.qolari.com/earnings/webview/"
+   ],
+   [
+    "http://127.0.0.1:8090/earnings/trips/",
+    "https://rider.qolari.com/earnings/trips/"
+   ],
+   [
+    "http://127.0.0.1:8090/blog/important-changes-for-couriers-in-nyc",
+    "https://rider.qolari.com/blog/important-changes-for-couriers-in-nyc"
+   ],
+   [
+    "127.0.0.1:8090,127.0.0.1:8090",
+    "rider.qolari.com,rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090,veriff.com,veriff.me,127.0.0.1:8090,jumio.com,jumio.ai,verify.socure.com,socure.com",
+    "rider.qolari.com,rider.qolari.com,rider.qolari.com,rider.qolari.com,rider.qolari.com,rider.qolari.com,rider.qolari.com,veriff.com,veriff.me,rider.qolari.com,jumio.com,jumio.ai,verify.socure.com,socure.com"
+   ],
+   [
+    "http://127.0.0.1:8090/referrals/home",
+    "https://rider.qolari.com/referrals/home"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/one_earner_referrals/invitation_sent_modal_image_compressed.png",
+    "https://rider.qolari.com/static/mobile-content/one_earner_referrals/invitation_sent_modal_image_compressed.png"
+   ],
+   [
+    "http://127.0.0.1:8090/beacon-ota/beacon_signed_v1.1.3.5.rel",
+    "https://rider.qolari.com/beacon-ota/beacon_signed_v1.1.3.5.rel"
+   ],
+   [
+    "http://127.0.0.1:8090/beacon-ota/st_4.8.11_6_signed.rel",
+    "https://rider.qolari.com/beacon-ota/st_4.8.11_6_signed.rel"
+   ],
+   [
+    "http://127.0.0.1:8090/personalized-promos-offers?dsa=true",
+    "https://rider.qolari.com/personalized-promos-offers?dsa=true"
+   ],
+   [
+    "http://127.0.0.1:8090/privacy/ads-settings?dsa=true",
+    "https://rider.qolari.com/privacy/ads-settings?dsa=true"
+   ],
+   [
+    "http://127.0.0.1:8090/personalized-promos-offers",
+    "https://rider.qolari.com/personalized-promos-offers"
+   ],
+   [
+    "http://127.0.0.1:8090/address-gateway/flawless-address-validation/building_type_header_image_v2.jpg",
+    "https://rider.qolari.com/address-gateway/flawless-address-validation/building_type_header_image_v2.jpg"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/membership/uber_one_identity_hub_square@3x.png",
+    "https://rider.qolari.com/static/mobile-content/membership/uber_one_identity_hub_square@3x.png"
+   ],
+   [
+    "http://127.0.0.1:8090/ubereats/restaurants/article/scheduling-your-uber-gift?nodeId=c96f05ab-4092-4725-b2af-a0b8f2f9597e",
+    "https://rider.qolari.com/ubereats/restaurants/article/scheduling-your-uber-gift?nodeId=c96f05ab-4092-4725-b2af-a0b8f2f9597e"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/financial_products/gifting/neutral_zone_gift_bg.png",
+    "https://rider.qolari.com/static/mobile-content/financial_products/gifting/neutral_zone_gift_bg.png"
+   ],
+   [
+    "http://127.0.0.1:8090/pcp/management",
+    "https://rider.qolari.com/pcp/management"
+   ],
+   [
+    "http://127.0.0.1:8090/performance",
+    "https://rider.qolari.com/performance"
+   ],
+   [
+    "http://127.0.0.1:8090/promotions",
+    "https://rider.qolari.com/promotions"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/third-party-integration/grab/grab_hero.png",
+    "https://rider.qolari.com/static/mobile-content/third-party-integration/grab/grab_hero.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/third-party-integration/grab/grab_icon.png",
+    "https://rider.qolari.com/static/mobile-content/third-party-integration/grab/grab_icon.png"
+   ],
+   [
+    "http://127.0.0.1:8090/style/auto-santurce-driver/native?o=DEFAULT",
+    "https://rider.qolari.com/style/auto-santurce-driver/native?o=DEFAULT"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/group-ride/interstitial-header.png",
+    "https://rider.qolari.com/static/mobile-content/group-ride/interstitial-header.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content2/passenger/generic/start-ride-generic-light.png",
+    "https://rider.qolari.com/prod/amd-mobile-content2/passenger/generic/start-ride-generic-light.png"
+   ],
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=general-terms-of-use",
+    "https://rider.qolari.com/legal/en/document/?name=general-terms-of-use"
+   ],
+   [
+    "http://127.0.0.1:8090/privacy/adsfrompartners?dsa=true",
+    "https://rider.qolari.com/privacy/adsfrompartners?dsa=true"
+   ],
+   [
+    "http://127.0.0.1:8090/global/ko/south-korea-drivers-consent/#thirdparty-provision-of-personal-info",
+    "https://rider.qolari.com/global/ko/south-korea-drivers-consent/#thirdparty-provision-of-personal-info"
+   ],
+   [
+    "http://127.0.0.1:8090/global/ko/south-korea-drivers-consent/#overseas-transfer",
+    "https://rider.qolari.com/global/ko/south-korea-drivers-consent/#overseas-transfer"
+   ],
+   [
+    "http://127.0.0.1:8090/global/ko/south-korea-drivers-consent/#collection-use-marketing",
+    "https://rider.qolari.com/global/ko/south-korea-drivers-consent/#collection-use-marketing"
+   ],
+   [
+    "http://127.0.0.1:8090/global/ko/south-korea-drivers-consent/#collection-use-personal-info",
+    "https://rider.qolari.com/global/ko/south-korea-drivers-consent/#collection-use-personal-info"
+   ],
+   [
+    "http://127.0.0.1:8090/login/logout?next_url=127.0.0.1:8090",
+    "https://rider.qolari.com/login/logout?next_url=rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/checkup/Home",
+    "https://rider.qolari.com/checkup/Home"
+   ],
+   [
+    "http://127.0.0.1:8090/mwt?page=consentsNoticeReconsent",
+    "https://rider.qolari.com/mwt?page=consentsNoticeReconsent"
+   ],
+   [
+    "http://127.0.0.1:8090/view-as/delivery-person",
+    "https://rider.qolari.com/view-as/delivery-person"
+   ],
+   [
+    "http://127.0.0.1:8090/view-as/driver",
+    "https://rider.qolari.com/view-as/driver"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/product-inclusion/senior-hub/senior-hub-ftux.jpg",
+    "https://rider.qolari.com/static/mobile-content/product-inclusion/senior-hub/senior-hub-ftux.jpg"
+   ],
+   [
+    "http://127.0.0.1:8090/create-u4b-account,http://127.0.0.1:8090/legal,http://127.0.0.1:8090/accessibility/service-animal/settings,http://127.0.0.1:8090/commute-hub-explore-rides,http://127.0.0.1:8090/u4b/business-hub/profile-content,http://127.0.0.1:8090/inbox",
+    "https://rider.qolari.com/create-u4b-account,https://rider.qolari.com/legal,https://rider.qolari.com/accessibility/service-animal/settings,https://rider.qolari.com/commute-hub-explore-rides,https://rider.qolari.com/u4b/business-hub/profile-content,https://rider.qolari.com/inbox"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/commute-pass/prepaid_pass_success_dialog_image.png",
+    "https://rider.qolari.com/static/mobile-content/commute-pass/prepaid_pass_success_dialog_image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/go/home",
+    "https://rider.qolari.com/go/home"
+   ],
+   [
+    "127.0.0.1:8090,127.0.0.1:8090",
+    "rider.qolari.com,rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/document/?name=rankings-on-uber",
+    "https://rider.qolari.com/legal/document/?name=rankings-on-uber"
+   ],
+   [
+    "http://127.0.0.1:8090/safety/uber-community-guidelines",
+    "https://rider.qolari.com/safety/uber-community-guidelines"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/safety/common/women-preferences/earner/earner_women_preferences_value_prop.jpeg",
+    "https://rider.qolari.com/static/mobile-content/safety/common/women-preferences/earner/earner_women_preferences_value_prop.jpeg"
+   ],
+   [
+    "http://127.0.0.1:8090/shared-rides/express_pool_v2.png",
+    "https://rider.qolari.com/shared-rides/express_pool_v2.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/uber-static/hcv/Group.png",
+    "https://rider.qolari.com/prod/uber-static/hcv/Group.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/uber-static/hcv/nodalPoint.png",
+    "https://rider.qolari.com/prod/uber-static/hcv/nodalPoint.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/badges/clock_blue.png",
+    "https://rider.qolari.com/static/mobile-content/badges/clock_blue.png"
+   ],
+   [
+    "http://127.0.0.1:8090/TIxp1l",
+    "https://rider.qolari.com/TIxp1l"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/family/family_invitation_make_life_easier.png",
+    "https://rider.qolari.com/static/mobile-content/family/family_invitation_make_life_easier.png"
+   ],
+   [
+    "http://127.0.0.1:8090/riders/article/node-title?nodeId=5d85b8cd-27df-4aca-832e-dbc7dacf4e76",
+    "https://rider.qolari.com/riders/article/node-title?nodeId=5d85b8cd-27df-4aca-832e-dbc7dacf4e76"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/family/family_payment_validator_3ds_education_screen.png",
+    "https://rider.qolari.com/static/mobile-content/family/family_payment_validator_3ds_education_screen.png"
+   ],
+   [
+    "http://127.0.0.1:8090/riders/article/verify-your-identity-faq?nodeId=9441c28e-e29f-46f9-b953-f938cf442ed9",
+    "https://rider.qolari.com/riders/article/verify-your-identity-faq?nodeId=9441c28e-e29f-46f9-b953-f938cf442ed9"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/delegate-profile/delegated_profile_value_props_header_image_new.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/delegate-profile/delegated_profile_value_props_header_image_new.png"
+   ],
+   [
+    "http://127.0.0.1:8090/confirm",
+    "https://rider.qolari.com/confirm"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/employee-linking/profile_switcher.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/employee-linking/profile_switcher.png"
+   ],
+   [
+    "http://127.0.0.1:8090/manager/",
+    "https://rider.qolari.com/manager/"
+   ],
+   [
+    "http://127.0.0.1:8090/manager/embedded/urate?source=APP_FEEDBACK",
+    "https://rider.qolari.com/manager/embedded/urate?source=APP_FEEDBACK"
+   ],
+   [
+    "http://127.0.0.1:8090/embedded/urate?source={source}&appVersion={version}&platformType={platform}",
+    "https://rider.qolari.com/embedded/urate?source={source}&appVersion={version}&platformType={platform}"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090,127.0.0.1:8090,superpal.com,cornershopapp.com",
+    "rider.qolari.com,rider.qolari.com,superpal.com,cornershopapp.com"
+   ],
+   [
+    "127.0.0.1:8090:127.0.0.1:8090,127.0.0.1:8090:127.0.0.1:8090",
+    "rider.qolari.com:rider.qolari.com,rider.qolari.com:rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090,127.0.0.1:8090,superpal.com,cornershopapp.com,ubercarshare.com,uber.org",
+    "rider.qolari.com,rider.qolari.com,superpal.com,cornershopapp.com,ubercarshare.com,uber.org"
+   ]
+  ],
+  "USER/work_base/smali_classes2/xk0/a.smali": [
+   [
+    "http://127.0.0.1:8090/uberBetaTutorialV2",
+    "https://rider.qolari.com/uberBetaTutorialV2"
+   ]
+  ],
+  "USER/work_base/smali_classes2/yd0/c.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes2/yx1/a.smali": [
+   [
+    "http://127.0.0.1:8090/launch-experience/ftux_auto.png",
+    "https://rider.qolari.com/launch-experience/ftux_auto.png"
+   ]
+  ],
+  "USER/work_base/smali_classes2/z13/b.smali": [
+   [
+    "http://127.0.0.1:8090/Ring/Icon/interstitial_safety_shield.png",
+    "https://rider.qolari.com/Ring/Icon/interstitial_safety_shield.png"
+   ],
+   [
+    "http://127.0.0.1:8090/Ring/Icon/prelude_transit_1.png",
+    "https://rider.qolari.com/Ring/Icon/prelude_transit_1.png"
+   ],
+   [
+    "http://127.0.0.1:8090/Ring/Icon/prelude_transit_2.png",
+    "https://rider.qolari.com/Ring/Icon/prelude_transit_2.png"
+   ],
+   [
+    "http://127.0.0.1:8090/Ring/Icon/enroute_safety_seatbelt.png",
+    "https://rider.qolari.com/Ring/Icon/enroute_safety_seatbelt.png"
+   ],
+   [
+    "http://127.0.0.1:8090/public/messages/e284d860-8b92-442e-bd70-64e03f16bde7",
+    "https://rider.qolari.com/public/messages/e284d860-8b92-442e-bd70-64e03f16bde7"
+   ]
+  ],
+  "USER/work_base/smali_classes3/a5a/n1.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/bq9/l.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090,http://127.0.0.1:8090",
+    "https://rider.qolari.com,https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/com/qolari/healthline/alternate/launch/core/a.smali": [
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes3/com/qolari/healthline/server_side/mitigation/core/ServerSideMitigationAppStartup.smali": [
+   [
+    "Unable to initiate connection to 127.0.0.1:8090",
+    "Unable to initiate connection to rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/com/qolari/network/ramen/RamenChannel.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/ramen/events/recv",
+    "https://rider.qolari.com/ramen/events/recv"
+   ]
+  ],
+  "USER/work_base/smali_classes3/com/qolari/rx2/java/stackelementtagging/TaggingDisabledCompletableObserver.smali": [
+   [
+    "Inferred subscribe point: Tagging is disabled for this app session. See http://127.0.0.1:8090/stackelementtagging_runbook",
+    "Inferred subscribe point: Tagging is disabled for this app session. See https://rider.qolari.com/stackelementtagging_runbook"
+   ]
+  ],
+  "USER/work_base/smali_classes3/com/qolari/rx2/java/stackelementtagging/TaggingDisabledMaybeObserver.smali": [
+   [
+    "Inferred subscribe point: Tagging is disabled for this app session. See http://127.0.0.1:8090/stackelementtagging_runbook",
+    "Inferred subscribe point: Tagging is disabled for this app session. See https://rider.qolari.com/stackelementtagging_runbook"
+   ]
+  ],
+  "USER/work_base/smali_classes3/com/qolari/rx2/java/stackelementtagging/TaggingDisabledObserver.smali": [
+   [
+    "Inferred subscribe point: Tagging is disabled for this app session. See http://127.0.0.1:8090/stackelementtagging_runbook",
+    "Inferred subscribe point: Tagging is disabled for this app session. See https://rider.qolari.com/stackelementtagging_runbook"
+   ]
+  ],
+  "USER/work_base/smali_classes3/com/qolari/rx2/java/stackelementtagging/TaggingDisabledSingleObserver.smali": [
+   [
+    "Inferred subscribe point: Tagging is disabled for this app session. See http://127.0.0.1:8090/stackelementtagging_runbook",
+    "Inferred subscribe point: Tagging is disabled for this app session. See https://rider.qolari.com/stackelementtagging_runbook"
+   ]
+  ],
+  "USER/work_base/smali_classes3/com/qolari/rx2/java/stackelementtagging/TaggingDisabledSubscriber.smali": [
+   [
+    "Inferred subscribe point: Tagging is disabled for this app session. See http://127.0.0.1:8090/stackelementtagging_runbook",
+    "Inferred subscribe point: Tagging is disabled for this app session. See https://rider.qolari.com/stackelementtagging_runbook"
+   ]
+  ],
+  "USER/work_base/smali_classes3/cq9/b.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/fi8/a.smali": [
+   [
+    "http://127.0.0.1:8090/prod/base-assets/vectors/badge/safety_record_video.xml",
+    "https://rider.qolari.com/prod/base-assets/vectors/badge/safety_record_video.xml"
+   ]
+  ],
+  "USER/work_base/smali_classes3/fvb/b.smali": [
+   [
+    "http://127.0.0.1:8090/us/en/safety/recording/",
+    "https://rider.qolari.com/us/en/safety/recording/"
+   ]
+  ],
+  "USER/work_base/smali_classes3/go9/c.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/io9/f.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090,http://127.0.0.1:8090",
+    "https://rider.qolari.com,https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/io9/g.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/k29/n.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/k39/b.smali": [
+   [
+    "127.0.0.1:8090/commute?referrer=",
+    "rider.qolari.com/commute?referrer="
+   ]
+  ],
+  "USER/work_base/smali_classes3/mdb/g.smali": [
+   [
+    "http://127.0.0.1:8090/metro-android",
+    "https://rider.qolari.com/metro-android"
+   ],
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes3/n59/r.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/airports/homescreen_widget/homescreen_d2p_default_image.png",
+    "https://rider.qolari.com/static/mobile-content/airports/homescreen_widget/homescreen_d2p_default_image.png"
+   ]
+  ],
+  "USER/work_base/smali_classes3/nfb/d1.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/employee-linking/post_linking_header_image.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/employee-linking/post_linking_header_image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/employee-linking/rider_business_trip_image.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/employee-linking/rider_business_trip_image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/employee-linking/profile_switch_in_progress.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/employee-linking/profile_switch_in_progress.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/employee-linking/check_email_screen_image.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/employee-linking/check_email_screen_image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/employee-linking/check_email_screen_image_v2.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/employee-linking/check_email_screen_image_v2.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/u4b/delegate-profile/delegated_profile_value_props_header_image.png",
+    "https://rider.qolari.com/static/mobile-content/u4b/delegate-profile/delegated_profile_value_props_header_image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=general-terms-of-use",
+    "https://rider.qolari.com/legal/en/document/?name=general-terms-of-use"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=privacy-notice",
+    "https://rider.qolari.com/legal/en/document/?name=privacy-notice"
+   ]
+  ],
+  "USER/work_base/smali_classes3/nh9/a.smali": [
+   [
+    "http://127.0.0.1:8090/and-loc",
+    "https://rider.qolari.com/and-loc"
+   ]
+  ],
+  "USER/work_base/smali_classes3/nh9/b.smali": [
+   [
+    "http://127.0.0.1:8090/riders/article/how-uber-uses-rider-location-information-android?nodeId=ba9dd342-158d-421f-a9ea-0e6c7aaad726",
+    "https://rider.qolari.com/riders/article/how-uber-uses-rider-location-information-android?nodeId=ba9dd342-158d-421f-a9ea-0e6c7aaad726"
+   ],
+   [
+    "http://127.0.0.1:8090/uploads/images/gUMQ6j4TbAUFVEWfDNEyZBKg5S0oDZASaFOPvYosQmc=/2022-03-15/Artwork%201-d5beeed0-a47d-11ec-9e27-cb157d2484db.png",
+    "https://rider.qolari.com/uploads/images/gUMQ6j4TbAUFVEWfDNEyZBKg5S0oDZASaFOPvYosQmc=/2022-03-15/Artwork%201-d5beeed0-a47d-11ec-9e27-cb157d2484db.png"
+   ],
+   [
+    "http://127.0.0.1:8090/uploads/images/gUMQ6j4TbAUFVEWfDNEyZBKg5S0oDZASaFOPvYosQmc=/2022-03-15/Artwork%202-d5bec7c0-a47d-11ec-9e27-cb157d2484db.png",
+    "https://rider.qolari.com/uploads/images/gUMQ6j4TbAUFVEWfDNEyZBKg5S0oDZASaFOPvYosQmc=/2022-03-15/Artwork%202-d5bec7c0-a47d-11ec-9e27-cb157d2484db.png"
+   ],
+   [
+    "http://127.0.0.1:8090/uploads/images/gUMQ6j4TbAUFVEWfDNEyZBKg5S0oDZASaFOPvYosQmc=/2022-03-15/Artwork%203-d5bf3cf0-a47d-11ec-9e27-cb157d2484db.png",
+    "https://rider.qolari.com/uploads/images/gUMQ6j4TbAUFVEWfDNEyZBKg5S0oDZASaFOPvYosQmc=/2022-03-15/Artwork%203-d5bf3cf0-a47d-11ec-9e27-cb157d2484db.png"
+   ],
+   [
+    "http://127.0.0.1:8090/uploads/images/gUMQ6j4TbAUFVEWfDNEyZBKg5S0oDZASaFOPvYosQmc=/2022-03-15/Artwork%204-d5bf6400-a47d-11ec-9e27-cb157d2484db.png",
+    "https://rider.qolari.com/uploads/images/gUMQ6j4TbAUFVEWfDNEyZBKg5S0oDZASaFOPvYosQmc=/2022-03-15/Artwork%204-d5bf6400-a47d-11ec-9e27-cb157d2484db.png"
+   ]
+  ],
+  "USER/work_base/smali_classes3/ol9/a.smali": [
+   [
+    "http://127.0.0.1:8090/Ring/Icon/location_small.png",
+    "https://rider.qolari.com/Ring/Icon/location_small.png"
+   ],
+   [
+    "http://127.0.0.1:8090/Ring/Icon/location_large.png",
+    "https://rider.qolari.com/Ring/Icon/location_large.png"
+   ],
+   [
+    "http://127.0.0.1:8090/privacy/adsfrompartners?dsa=true",
+    "https://rider.qolari.com/privacy/adsfrompartners?dsa=true"
+   ],
+   [
+    "http://127.0.0.1:8090/personalized-promos-offers?dsa=true",
+    "https://rider.qolari.com/personalized-promos-offers?dsa=true"
+   ]
+  ],
+  "USER/work_base/smali_classes3/pr8/a$a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/rla/o.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/tdb/b.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/tp9/n0.smali": [
+   [
+    "http://127.0.0.1:8090/,https://cn-dc1.geixahba.com/,https://cn-dc1.shaipeeg.net/,http://127.0.0.1:8090/,https://cn-dc1.ooshahwa.biz/,https://cn-dc1.naevooda.co/",
+    "https://rider.qolari.com/,https://cn-dc1.geixahba.com/,https://cn-dc1.shaipeeg.net/,https://rider.qolari.com/,https://cn-dc1.ooshahwa.biz/,https://cn-dc1.naevooda.co/"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/tp9/z1.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/tt8/m.smali": [
+   [
+    "127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090,127.0.0.1:8090",
+    "rider.qolari.com,rider.qolari.com,rider.qolari.com,rider.qolari.com,rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/usb/i.smali": [
+   [
+    "http://127.0.0.1:8090/communityguidelines",
+    "https://rider.qolari.com/communityguidelines"
+   ]
+  ],
+  "USER/work_base/smali_classes3/v29/h.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/vka/f.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/wia/d$a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes3/wia/d.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes4/com/qint/payment/thirdparty/paypalclient/connect/PayPalConnectActivityDependenciesProvider.smali": [
+   [
+    "http://127.0.0.1:8090/client_redirect/braintree-paypal-connect.",
+    "https://rider.qolari.com/client_redirect/braintree-paypal-connect."
+   ]
+  ],
+  "USER/work_base/smali_classes4/com/qint/payment/thirdparty/venmoclient/connect/VenmoConnectActivity.smali": [
+   [
+    "http://127.0.0.1:8090/client_redirect/braintree-venmo-connect.",
+    "https://rider.qolari.com/client_redirect/braintree-venmo-connect."
+   ]
+  ],
+  "USER/work_base/smali_classes4/sd/u.smali": [
+   [
+    "http://127.0.0.1:8090/v2/",
+    "https://rider.qolari.com/v2/"
+   ],
+   [
+    "http://127.0.0.1:8090/v2/",
+    "https://rider.qolari.com/v2/"
+   ]
+  ],
+  "USER/work_base/smali_classes4/ww5/i.smali": [
+   [
+    "http://127.0.0.1:8090/v2/",
+    "https://rider.qolari.com/v2/"
+   ],
+   [
+    "http://127.0.0.1:8090/v2/",
+    "https://rider.qolari.com/v2/"
+   ]
+  ],
+  "USER/work_base/smali_classes5/com/qint/activityhome/cell/viewmodel/ActivityLiveCardViewModel.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/car_android.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/car_android.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/car_android.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/car_android.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/com/qint/activity_tracker/viewmodel/ActivityTrackerOntripViewModel.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/car_android.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/car_android.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/com/qint/activity_tracker/viewmodel/ActivityTrackerViewModel.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/car_android.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/car_android.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/car_android.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/car_android.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/com/qint/beta/migration/modal/BetaMigrationModalInteractor.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mobile-platform/rider.png",
+    "https://rider.qolari.com/static/mobile-content/mobile-platform/rider.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/com/qint/floatingwidget/viewmodel/ActiveOrderAvatarViewModel$Companion.smali": [
+   [
+    "http://127.0.0.1:8090/launch-experience/connect.png",
+    "https://rider.qolari.com/launch-experience/connect.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/ConnectCourier.png",
+    "https://rider.qolari.com/launch-experience/ConnectCourier.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/ride.png",
+    "https://rider.qolari.com/launch-experience/ride.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/com/qint/floatingwidget/viewmodel/ActiveOrderAvatarViewModel.smali": [
+   [
+    "http://127.0.0.1:8090/launch-experience/ConnectCourier.png",
+    "https://rider.qolari.com/launch-experience/ConnectCourier.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/connect.png",
+    "https://rider.qolari.com/launch-experience/connect.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/ride.png",
+    "https://rider.qolari.com/launch-experience/ride.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/com/qint/floatingwidget/viewmodel/ActiveOrderViewModel$PreTripViewModel.smali": [
+   [
+    "http://127.0.0.1:8090/launch-experience/ride.png",
+    "https://rider.qolari.com/launch-experience/ride.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/com/qint/floatingwidget/viewmodel/FloatingWidgetViewModelMapperKt.smali": [
+   [
+    "http://127.0.0.1:8090/launch-experience/connect.png",
+    "https://rider.qolari.com/launch-experience/connect.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/ConnectCourier.png",
+    "https://rider.qolari.com/launch-experience/ConnectCourier.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/ride.png",
+    "https://rider.qolari.com/launch-experience/ride.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/dx1/d.smali": [
+   [
+    "http://127.0.0.1:8090/launch-experience/ride.png",
+    "https://rider.qolari.com/launch-experience/ride.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/e50/i.smali": [
+   [
+    "127.0.0.1",
+    "127.0.0.1"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes5/ee6/f.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/airports/airline-logos/{iata_code}.png",
+    "https://rider.qolari.com/static/mobile-content/airports/airline-logos/{iata_code}.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/f50/c.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/driver-success/partner-onboarding-integrations/blocking-permission/camera_permission_dark_mode.png",
+    "https://rider.qolari.com/static/mobile-content/driver-success/partner-onboarding-integrations/blocking-permission/camera_permission_dark_mode.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/driver-success/partner-onboarding-integrations/blocking-permission/camera_permission_light_mode.png",
+    "https://rider.qolari.com/static/mobile-content/driver-success/partner-onboarding-integrations/blocking-permission/camera_permission_light_mode.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/gh0/e.smali": [
+   [
+    "http://127.0.0.1:8090/blog/autonomous-vehicle-safety-guidelines/",
+    "https://rider.qolari.com/blog/autonomous-vehicle-safety-guidelines/"
+   ]
+  ],
+  "USER/work_base/smali_classes5/h40/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/accessibility-settings/simplemodesettingsbanner.png",
+    "https://rider.qolari.com/static/mobile-content/accessibility-settings/simplemodesettingsbanner.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/hh0/h.smali": [
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-video.mp4",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-video.mp4"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-video-first-frame.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-video-first-frame.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-vehicle-day-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-vehicle-day-image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-vehicle-night-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-vehicle-night-image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-card-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-card-image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-share-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-share-image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-map-day-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-map-day-image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-map-day-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-map-day-image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-tos-hero-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-tos-hero-image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/av-waymo-terms-of-service",
+    "https://rider.qolari.com/av-waymo-terms-of-service"
+   ],
+   [
+    "http://127.0.0.1:8090/av-waymo-privacy-policy",
+    "https://rider.qolari.com/av-waymo-privacy-policy"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-atl-map-day-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-atl-map-day-image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-atl-map-night-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-atl-map-night-image.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/amd-mobile-content/mobility/waymo-interestlist-atl-share-day-image.png",
+    "https://rider.qolari.com/prod/amd-mobile-content/mobility/waymo-interestlist-atl-share-day-image.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/i90/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/airports/pin_ftux.png",
+    "https://rider.qolari.com/static/mobile-content/airports/pin_ftux.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/in0/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/Rio-guide-day.jpg",
+    "https://rider.qolari.com/static/mobile-content/Rio-guide-day.jpg"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/travel_pass.png",
+    "https://rider.qolari.com/static/mobile-content/travel_pass.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/membership/All_merchants_Uber_One_promo_icon_56x56_2x.png",
+    "https://rider.qolari.com/static/mobile-content/membership/All_merchants_Uber_One_promo_icon_56x56_2x.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/test_hotel.png",
+    "https://rider.qolari.com/static/mobile-content/test_hotel.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/eats_test.png",
+    "https://rider.qolari.com/static/mobile-content/eats_test.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/reserve_test.png",
+    "https://rider.qolari.com/static/mobile-content/reserve_test.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/rental_test.png",
+    "https://rider.qolari.com/static/mobile-content/rental_test.png"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/image-proc/processed_images/33816bcce5d94c6ea35652d003e20970/7915c4a78a9f94ed56316c7c4dc0ec89.jpeg",
+    "https://rider.qolari.com/prod/image-proc/processed_images/33816bcce5d94c6ea35652d003e20970/7915c4a78a9f94ed56316c7c4dc0ec89.jpeg"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/image-proc/processed_images/894491ced077ca8fe1b6cb77a116c918/c67d558c633281f9c71fc6a90ef470ae.jpeg",
+    "https://rider.qolari.com/prod/image-proc/processed_images/894491ced077ca8fe1b6cb77a116c918/c67d558c633281f9c71fc6a90ef470ae.jpeg"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/image-proc/processed_images/5a7daa6d3bf08829b0fa30eeebd70dcb/e2547b97411a0fc403ec67ec324fe9e5.jpeg",
+    "https://rider.qolari.com/prod/image-proc/processed_images/5a7daa6d3bf08829b0fa30eeebd70dcb/e2547b97411a0fc403ec67ec324fe9e5.jpeg"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/image-proc/processed_images/b8eb89a1400b97dd8c1c7c7f7d9cc147/9b3aae4cf90f897799a5ed357d60e09d.webp",
+    "https://rider.qolari.com/prod/image-proc/processed_images/b8eb89a1400b97dd8c1c7c7f7d9cc147/9b3aae4cf90f897799a5ed357d60e09d.webp"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/image-proc/processed_images/f6c6eb0a3fbd199de51256541b975d7a/9b3aae4cf90f897799a5ed357d60e09d.jpeg",
+    "https://rider.qolari.com/prod/image-proc/processed_images/f6c6eb0a3fbd199de51256541b975d7a/9b3aae4cf90f897799a5ed357d60e09d.jpeg"
+   ],
+   [
+    "http://127.0.0.1:8090/prod/image-proc/processed_images/186a032e84b958f409c639addc2a3c00/63d18745892c100be9e4ef3c560c9204.jpeg",
+    "https://rider.qolari.com/prod/image-proc/processed_images/186a032e84b958f409c639addc2a3c00/63d18745892c100be9e4ef3c560c9204.jpeg"
+   ]
+  ],
+  "USER/work_base/smali_classes5/k30/t0.smali": [
+   [
+    "http://127.0.0.1:8090/us/en/about/accessibility/",
+    "https://rider.qolari.com/us/en/about/accessibility/"
+   ]
+  ],
+  "USER/work_base/smali_classes5/k30/u0.smali": [
+   [
+    "http://127.0.0.1:8090/us/en/about/accessibility/",
+    "https://rider.qolari.com/us/en/about/accessibility/"
+   ]
+  ],
+  "USER/work_base/smali_classes5/kq0/b.smali": [
+   [
+    "qolari://support_url?contextId=67d4b0a4-9e50-4d35-a420-b6eff423508c&helpURL=127.0.0.1:8090%2Friders%2Farticle%2Fcommute-price-lock%3FnodeId%3D5f6de94c-f5a0-4cb4-84da-cdf274279c2f",
+    "qolari://support_url?contextId=67d4b0a4-9e50-4d35-a420-b6eff423508c&helpURL=rider.qolari.com%2Friders%2Farticle%2Fcommute-price-lock%3FnodeId%3D5f6de94c-f5a0-4cb4-84da-cdf274279c2f"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/commute-pass/prepaid_pass_success_dialog_image.png",
+    "https://rider.qolari.com/static/mobile-content/commute-pass/prepaid_pass_success_dialog_image.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/ku1/a.smali": [
+   [
+    "http://127.0.0.1:8090/ul/",
+    "https://rider.qolari.com/ul/"
+   ],
+   [
+    "http://127.0.0.1:8090/ul/",
+    "https://rider.qolari.com/ul/"
+   ]
+  ],
+  "USER/work_base/smali_classes5/mw1/g.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/flight-selector/flight_selector_ftux_3x.png",
+    "https://rider.qolari.com/static/mobile-content/flight-selector/flight_selector_ftux_3x.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/rq0/u.smali": [
+   [
+    "http://127.0.0.1:8090/legal/et/document/?name=uber-simple-mode-terms-of-use&country=united-states&lang=en",
+    "https://rider.qolari.com/legal/et/document/?name=uber-simple-mode-terms-of-use&country=united-states&lang=en"
+   ]
+  ],
+  "USER/work_base/smali_classes5/t30/y.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/accessibility-settings/simplemodesettingsbanner.png",
+    "https://rider.qolari.com/static/mobile-content/accessibility-settings/simplemodesettingsbanner.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/tl0/f2.smali": [
+   [
+    "qolari://webmode?urlString=http://127.0.0.1:8090/booking-agent",
+    "qolari://webmode?urlString=https://rider.qolari.com/booking-agent"
+   ]
+  ],
+  "USER/work_base/smali_classes5/u30/f0.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/accessibility-settings/visionsettingsbanner.png",
+    "https://rider.qolari.com/static/mobile-content/accessibility-settings/visionsettingsbanner.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/v30/b.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/safety/common/equity/easyEntranceVehicles.png",
+    "https://rider.qolari.com/static/mobile-content/safety/common/equity/easyEntranceVehicles.png"
+   ]
+  ],
+  "USER/work_base/smali_classes5/vq0/e.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/commute-hub/circle_check_dark_mode.json",
+    "https://rider.qolari.com/static/mobile-content/commute-hub/circle_check_dark_mode.json"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/commute-hub/circle_check.json",
+    "https://rider.qolari.com/static/mobile-content/commute-hub/circle_check.json"
+   ]
+  ],
+  "USER/work_base/smali_classes5/xp0/h.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/intercomMessageArtworks/ai-mark.xml",
+    "https://rider.qolari.com/static/mobile-content/intercomMessageArtworks/ai-mark.xml"
+   ]
+  ],
+  "USER/work_base/smali_classes6/au1/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/au8/a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/bm1/b0.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/bm1/c0.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/bm1/t.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/bm1/y.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/bu1/b.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/bu1/e.smali": [
+   [
+    "http://127.0.0.1:8090/ubereats/restaurants/article/scheduling-your-uber-gift?nodeId=c96f05ab-4092-4725-b2af-a0b8f2f9597e",
+    "https://rider.qolari.com/ubereats/restaurants/article/scheduling-your-uber-gift?nodeId=c96f05ab-4092-4725-b2af-a0b8f2f9597e"
+   ],
+   [
+    "http://127.0.0.1:8090/ubereats/stores/article/order-issues-with-uber-gift-?nodeId=a1fc6e96-6986-4150-b722-3bfecb764a80",
+    "https://rider.qolari.com/ubereats/stores/article/order-issues-with-uber-gift-?nodeId=a1fc6e96-6986-4150-b722-3bfecb764a80"
+   ]
+  ],
+  "USER/work_base/smali_classes6/bu1/f.smali": [
+   [
+    "http://127.0.0.1:8090/android-app-gifting",
+    "https://rider.qolari.com/android-app-gifting"
+   ]
+  ],
+  "USER/work_base/smali_classes6/com/qint/connect/checkout/listitems/imageupload/a$d.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=general-community-guidelines",
+    "https://rider.qolari.com/legal/document/?name=general-community-guidelines"
+   ]
+  ],
+  "USER/work_base/smali_classes6/com/qint/connect/checkout/listitems/imageupload/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/com/qint/connect/core/a.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=courier-terms-and-conditions",
+    "https://rider.qolari.com/legal/document/?name=courier-terms-and-conditions"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/connect/label_your_package_v2.png",
+    "https://rider.qolari.com/static/mobile-content/connect/label_your_package_v2.png"
+   ],
+   [
+    "http://127.0.0.1:8090/global/en/privacy-notice-riders-order-recipients/",
+    "https://rider.qolari.com/global/en/privacy-notice-riders-order-recipients/"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=courier-terms-and-conditions",
+    "https://rider.qolari.com/legal/en/document/?name=courier-terms-and-conditions"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=courier-terms-and-conditions",
+    "https://rider.qolari.com/legal/en/document/?name=courier-terms-and-conditions"
+   ]
+  ],
+  "USER/work_base/smali_classes6/com/qint/driver_widget/match_celebration/sustainable_trip/OTESMatchCelebrationAnimationPluginFactory.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/sustech/leaf_in_circle.png",
+    "https://rider.qolari.com/static/mobile-content/sustech/leaf_in_circle.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/sustech/leaf_in_circle_dark_mode.png",
+    "https://rider.qolari.com/static/mobile-content/sustech/leaf_in_circle_dark_mode.png"
+   ]
+  ],
+  "USER/work_base/smali_classes6/com/qint/eatsweb/internal/EatsWebInternalInteractor.smali": [
+   [
+    "http://127.0.0.1:8090/",
+    "https://rider.qolari.com/"
+   ]
+  ],
+  "USER/work_base/smali_classes6/com/qint/eats_web_integration/d.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/com/qint/uber_connect_package_guidelines/model/ConnectPackageGuidelinesViewModelStream.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=uber-connect-terms-and-conditions",
+    "https://rider.qolari.com/legal/document/?name=uber-connect-terms-and-conditions"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/document/?name=uber-connect-terms-and-conditions",
+    "https://rider.qolari.com/legal/document/?name=uber-connect-terms-and-conditions"
+   ]
+  ],
+  "USER/work_base/smali_classes6/ee1/k.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/et1/m.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/fe1/b.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/g01/b.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/connect/courier-package-illustration.png",
+    "https://rider.qolari.com/static/mobile-content/connect/courier-package-illustration.png"
+   ]
+  ],
+  "USER/work_base/smali_classes6/gx0/c.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=privacy-notice",
+    "https://rider.qolari.com/legal/document/?name=privacy-notice"
+   ]
+  ],
+  "USER/work_base/smali_classes6/hp1/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mobility-growth/dispatch/fact_default.png",
+    "https://rider.qolari.com/static/mobile-content/mobility-growth/dispatch/fact_default.png"
+   ]
+  ],
+  "USER/work_base/smali_classes6/j61/n.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/connect/earner-upfront-tip.png",
+    "https://rider.qolari.com/static/mobile-content/connect/earner-upfront-tip.png"
+   ]
+  ],
+  "USER/work_base/smali_classes6/l71/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/group-ride/interstitial-header.png",
+    "https://rider.qolari.com/static/mobile-content/group-ride/interstitial-header.png"
+   ]
+  ],
+  "USER/work_base/smali_classes6/mk1/a.smali": [
+   [
+    "http://127.0.0.1:8090/privacy/adsfrompartners?dsa=true",
+    "https://rider.qolari.com/privacy/adsfrompartners?dsa=true"
+   ]
+  ],
+  "USER/work_base/smali_classes6/mk1/f.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/nt1/c.smali": [
+   [
+    "http://127.0.0.1:8090/legal/terms",
+    "https://rider.qolari.com/legal/terms"
+   ],
+   [
+    "http://127.0.0.1:8090/policy/",
+    "https://rider.qolari.com/policy/"
+   ]
+  ],
+  "USER/work_base/smali_classes6/qd1/b.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/ri1/g2.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/sustech/leaf_in_circle_dark_mode.png",
+    "https://rider.qolari.com/static/mobile-content/sustech/leaf_in_circle_dark_mode.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/sustech/leaf_in_circle.png",
+    "https://rider.qolari.com/static/mobile-content/sustech/leaf_in_circle.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/sustech/leaf_in_circle_dark_mode.png",
+    "https://rider.qolari.com/static/mobile-content/sustech/leaf_in_circle_dark_mode.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/sustech/leaf_in_circle.png",
+    "https://rider.qolari.com/static/mobile-content/sustech/leaf_in_circle.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/safety/common/women-preferences/rider/icon_women_plus_dark.png",
+    "https://rider.qolari.com/static/mobile-content/safety/common/women-preferences/rider/icon_women_plus_dark.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/safety/common/women-preferences/rider/icon_women_plus.png",
+    "https://rider.qolari.com/static/mobile-content/safety/common/women-preferences/rider/icon_women_plus.png"
+   ]
+  ],
+  "USER/work_base/smali_classes6/vv0/c.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=uber-connect-terms-and-conditions",
+    "https://rider.qolari.com/legal/document/?name=uber-connect-terms-and-conditions"
+   ]
+  ],
+  "USER/work_base/smali_classes6/wl1/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes6/ww0/e.smali": [
+   [
+    "http://127.0.0.1:8090/legal/document/?name=privacy-notice",
+    "https://rider.qolari.com/legal/document/?name=privacy-notice"
+   ]
+  ],
+  "USER/work_base/smali_classes7/bm2/c.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/commute-hub/account_tile_dialog_artwork.png",
+    "https://rider.qolari.com/static/mobile-content/commute-hub/account_tile_dialog_artwork.png"
+   ]
+  ],
+  "USER/work_base/smali_classes7/bn2/f.smali": [
+   [
+    "http://127.0.0.1:8090/image-proc/resize/rider-wayfinding/format=",
+    "https://rider.qolari.com/image-proc/resize/rider-wayfinding/format="
+   ]
+  ],
+  "USER/work_base/smali_classes7/by1/x.smali": [
+   [
+    "http://127.0.0.1:8090/prod/ad-exchange/dishtok/ftux/ftux_swipe_up.json",
+    "https://rider.qolari.com/prod/ad-exchange/dishtok/ftux/ftux_swipe_up.json"
+   ]
+  ],
+  "USER/work_base/smali_classes7/cg2/w0.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/cg2/w1.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/v2",
+    "https://rider.qolari.com/v2"
+   ]
+  ],
+  "USER/work_base/smali_classes7/com/qint/general_agent/a$a.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=generative-ai-features-at-uber",
+    "https://rider.qolari.com/legal/en/document/?name=generative-ai-features-at-uber"
+   ]
+  ],
+  "USER/work_base/smali_classes7/com/qint/generic_web_mode/b.smali": [
+   [
+    "127.0.0.1:8090;ubercarshare.com",
+    "rider.qolari.com;ubercarshare.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/com/qint/identity/api/uauth/internal/helper/USLActivity.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/com/qint/identity/api/uauth/internal/webview/UAuthWebViewClient.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/com/qint/identity/uam/rib/a.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/com/qint/loyalty_points_to_ubercash/webview/LoyaltyPointsWebViewView.smali": [
+   [
+    "http://127.0.0.1:8090/legal/en/document/?name=uber-cash-terms-of-use&country=canada&lang=en",
+    "https://rider.qolari.com/legal/en/document/?name=uber-cash-terms-of-use&country=canada&lang=en"
+   ]
+  ],
+  "USER/work_base/smali_classes7/d92/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/e42/d.smali": [
+   [
+    "http://127.0.0.1:8090/android-app-gifting",
+    "https://rider.qolari.com/android-app-gifting"
+   ]
+  ],
+  "USER/work_base/smali_classes7/hc2/a.smali": [
+   [
+    "http://127.0.0.1:8090/home?hide_nav_bar=true",
+    "https://rider.qolari.com/home?hide_nav_bar=true"
+   ],
+   [
+    "127.0.0.1:8090,127.0.0.1:8090",
+    "rider.qolari.com,rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/ig2/a.smali": [
+   [
+    "http://127.0.0.1:8090/oauth/client/social/authorize",
+    "https://rider.qolari.com/oauth/client/social/authorize"
+   ]
+  ],
+  "USER/work_base/smali_classes7/in2/g$b.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/ring/inbox_mailbox_3x.png",
+    "https://rider.qolari.com/static/mobile-content/ring/inbox_mailbox_3x.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/ring/inbox_bullhorn_3x.png",
+    "https://rider.qolari.com/static/mobile-content/ring/inbox_bullhorn_3x.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/ring/inbox_pricetag_3x.png",
+    "https://rider.qolari.com/static/mobile-content/ring/inbox_pricetag_3x.png"
+   ]
+  ],
+  "USER/work_base/smali_classes7/j62/m.smali": [
+   [
+    "No Instance of gRPCFit is sent to RealTimeClient. Follow the instructions in http://127.0.0.1:8090/android-grpc-integration to set up gRPCFit. URL: ",
+    "No Instance of gRPCFit is sent to RealTimeClient. Follow the instructions in https://rider.qolari.com/android-grpc-integration to set up gRPCFit. URL: "
+   ]
+  ],
+  "USER/work_base/smali_classes7/m62/n.smali": [
+   [
+    "http://127.0.0.1:8090/launch-experience/ride.png",
+    "https://rider.qolari.com/launch-experience/ride.png"
+   ]
+  ],
+  "USER/work_base/smali_classes7/mm2/g0.smali": [
+   [
+    "http://127.0.0.1:8090/legal/pt-br/document/?name=data-sharing-policy---uber-and-ifood&country=brazil&lang=pt-br",
+    "https://rider.qolari.com/legal/pt-br/document/?name=data-sharing-policy---uber-and-ifood&country=brazil&lang=pt-br"
+   ]
+  ],
+  "USER/work_base/smali_classes7/mm2/h.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/ifood_consent_hero.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/ifood_consent_hero.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/ifood_web_badge.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/ifood_web_badge.png"
+   ]
+  ],
+  "USER/work_base/smali_classes7/nh2/h.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/pi2/d.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/qh2/a.smali": [
+   [
+    "http://127.0.0.1:8090/identity/invite",
+    "https://rider.qolari.com/identity/invite"
+   ]
+  ],
+  "USER/work_base/smali_classes7/qm2/a.smali": [
+   [
+    "http://127.0.0.1:8090/legal/pt-br/document/?name=data-sharing-policy---uber-and-ifood&country=brazil&lang=pt-br",
+    "https://rider.qolari.com/legal/pt-br/document/?name=data-sharing-policy---uber-and-ifood&country=brazil&lang=pt-br"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/ifood_consent_hero.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/ifood_consent_hero.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/consumer-experience/ifood_web_badge.png",
+    "https://rider.qolari.com/static/mobile-content/consumer-experience/ifood_web_badge.png"
+   ]
+  ],
+  "USER/work_base/smali_classes7/rp2/e.smali": [
+   [
+    "127.0.0.1:8090,127.0.0.1:8090",
+    "rider.qolari.com,rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090/learning-center",
+    "https://rider.qolari.com/learning-center"
+   ]
+  ],
+  "USER/work_base/smali_classes7/so5/l.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/va2/l.smali": [
+   [
+    "http://127.0.0.1:8090/shortcuts/pet_supplies_v2.png",
+    "https://rider.qolari.com/shortcuts/pet_supplies_v2.png"
+   ]
+  ],
+  "USER/work_base/smali_classes7/va2/m$a.smali": [
+   [
+    "http://127.0.0.1:8090/launch-experience/ride.png",
+    "https://rider.qolari.com/launch-experience/ride.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/connect.png",
+    "https://rider.qolari.com/launch-experience/connect.png"
+   ],
+   [
+    "http://127.0.0.1:8090/car-types/haloProductImages/v1.1/Motorcycle.png",
+    "https://rider.qolari.com/car-types/haloProductImages/v1.1/Motorcycle.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/UberTeen.png",
+    "https://rider.qolari.com/launch-experience/UberTeen.png"
+   ],
+   [
+    "http://127.0.0.1:8090/uber_reserve/reserve_clock.png",
+    "https://rider.qolari.com/uber_reserve/reserve_clock.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/transit.png",
+    "https://rider.qolari.com/launch-experience/transit.png"
+   ],
+   [
+    "http://127.0.0.1:8090/car-types/haloProductImages/Tembici_Bike.png",
+    "https://rider.qolari.com/car-types/haloProductImages/Tembici_Bike.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/top_bar_grocery.png",
+    "https://rider.qolari.com/launch-experience/top_bar_grocery.png"
+   ]
+  ],
+  "USER/work_base/smali_classes7/wk2/b.smali": [
+   [
+    "idverify-data, 127.0.0.1:8090",
+    "idverify-data, rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes7/xq2/h.smali": [
+   [
+    "http://127.0.0.1:8090/learning-center",
+    "https://rider.qolari.com/learning-center"
+   ]
+  ],
+  "USER/work_base/smali_classes8/by2/a.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes8/com/qint/marketing_attribution_v2/model/DeeplinkModel$Companion.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes8/com/qint/marketing_attribution_v2/model/DeeplinkModel.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes8/com/qint/mobilestudio/networkbehavior/NetworkBehaviorInteractor.smali": [
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes8/cy2/a.smali": [
+   [
+    "http://127.0.0.1:8090/membership/student-verification",
+    "https://rider.qolari.com/membership/student-verification"
+   ],
+   [
+    "http://127.0.0.1:8090/membership",
+    "https://rider.qolari.com/membership"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes8/ew2/l.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/map_type_standard_preview.jpg",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/map_type_standard_preview.jpg"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/map_type_standard_preview_dark.jpg",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/map_type_standard_preview_dark.jpg"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/map_type_aerial_preview.jpg",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/map_type_aerial_preview.jpg"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/map_type_aerial_preview.jpg",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/map_type_aerial_preview.jpg"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/map_type_aerial_preview_square.png",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/map_type_aerial_preview_square.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/map_type_3d_preview.jpg",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/map_type_3d_preview.jpg"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/map_type_3d_preview_dark.jpg",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/map_type_3d_preview_dark.jpg"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/map_type_3d_preview_square.png",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/map_type_3d_preview_square.png"
+   ],
+   [
+    "http://127.0.0.1:8090/static/mobile-content/mapdisplay/map_type_selection_gesture_ftux_lottie.json",
+    "https://rider.qolari.com/static/mobile-content/mapdisplay/map_type_selection_gesture_ftux_lottie.json"
+   ]
+  ],
+  "USER/work_base/smali_classes8/ey2/a.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/membership/fsto.png",
+    "https://rider.qolari.com/static/mobile-content/membership/fsto.png"
+   ],
+   [
+    "http://127.0.0.1:8090/legal/en/document/?country=united-states&lang=en&name=renewable-passes-terms&_ga=2.115665414.1264194611.1633613327-521686787.1619036041",
+    "https://rider.qolari.com/legal/en/document/?country=united-states&lang=en&name=renewable-passes-terms&_ga=2.115665414.1264194611.1633613327-521686787.1619036041"
+   ]
+  ],
+  "USER/work_base/smali_classes8/h13/d.smali": [
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ],
+   [
+    "127.0.0.1:8090",
+    "rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes8/l33/b.smali": [
+   [
+    "http://127.0.0.1:8090/privacy/adsfrompartners?dsa=true",
+    "https://rider.qolari.com/privacy/adsfrompartners?dsa=true"
+   ],
+   [
+    "http://127.0.0.1:8090/personalized-promos-offers?dsa=true",
+    "https://rider.qolari.com/personalized-promos-offers?dsa=true"
+   ]
+  ],
+  "USER/work_base/smali_classes8/ny6/c.smali": [
+   [
+    "http://127.0.0.1:8090/privacy/adsfrompartners?dsa=true",
+    "https://rider.qolari.com/privacy/adsfrompartners?dsa=true"
+   ],
+   [
+    "http://127.0.0.1:8090/personalized-promos-offers?dsa=true",
+    "https://rider.qolari.com/personalized-promos-offers?dsa=true"
+   ]
+  ],
+  "USER/work_base/smali_classes8/p73/u.smali": [
+   [
+    "http://127.0.0.1:8090/en/riders/article/uber-for-seniors-faqs?nodeId=61c69dd2-22e1-4bb3-98ad-4244538ec1a8",
+    "https://rider.qolari.com/en/riders/article/uber-for-seniors-faqs?nodeId=61c69dd2-22e1-4bb3-98ad-4244538ec1a8"
+   ]
+  ],
+  "USER/work_base/smali_classes8/sa9/b$a.smali": [
+   [
+    "http://127.0.0.1:8090/riders/article/going-online?nodeId=287cfcdf-738d-490f-a5b5-ae4dd9863756",
+    "https://rider.qolari.com/riders/article/going-online?nodeId=287cfcdf-738d-490f-a5b5-ae4dd9863756"
+   ]
+  ],
+  "USER/work_base/smali_classes8/sa9/k.smali": [
+   [
+    "http://127.0.0.1:8090/static/mobile-content/freight/bundles/checkShieldBlue3x.png",
+    "https://rider.qolari.com/static/mobile-content/freight/bundles/checkShieldBlue3x.png"
+   ]
+  ],
+  "USER/work_base/smali_classes8/sa9/m$i.smali": [
+   [
+    "http://127.0.0.1:8090/prod/image-proc/processed_images/4b5f97667f468c91b8e7c55b2674417c/a19bb09692310dfd41e49a96c424b3a6.jpeg",
+    "https://rider.qolari.com/prod/image-proc/processed_images/4b5f97667f468c91b8e7c55b2674417c/a19bb09692310dfd41e49a96c424b3a6.jpeg"
+   ]
+  ],
+  "USER/work_base/smali_classes8/sa9/q.smali": [
+   [
+    "Open http://127.0.0.1:8090",
+    "Open https://rider.qolari.com"
+   ],
+   [
+    "http://127.0.0.1:8090",
+    "https://rider.qolari.com"
+   ]
+  ],
+  "USER/work_base/smali_classes8/u13/e.smali": [
+   [
+    "http://127.0.0.1:8090/prefetch",
+    "https://rider.qolari.com/prefetch"
+   ]
+  ],
+  "USER/work_base/smali_classes8/wn6/c.smali": [
+   [
+    "http://127.0.0.1:8090/riders/article/how-uber-uses-rider-location-information-android?nodeId=ba9dd342-158d-421f-a9ea-0e6c7aaad726",
+    "https://rider.qolari.com/riders/article/how-uber-uses-rider-location-information-android?nodeId=ba9dd342-158d-421f-a9ea-0e6c7aaad726"
+   ]
+  ],
+  "USER/work_base/smali_classes8/wp5/b0.smali": [
+   [
+    "http://127.0.0.1:8090/launch-experience/guest-rides/intro-modal-foreground.png",
+    "https://rider.qolari.com/launch-experience/guest-rides/intro-modal-foreground.png"
+   ],
+   [
+    "http://127.0.0.1:8090/launch-experience/guest-rides/intro-guest-goodbye-detection.png",
+    "https://rider.qolari.com/launch-experience/guest-rides/intro-guest-goodbye-detection.png"
+   ]
+  ],
+  "USER/work_base/smali_classes9/di6/a.smali": [
+   [
+    "qolari://webmode?contentId=EMISSIONS&urlString=http://127.0.0.1:8090/rider-emissions?utm_source=helix%26utm_medium=identity_menu",
+    "qolari://webmode?contentId=EMISSIONS&urlString=https://rider.qolari.com/rider-emissions?utm_source=helix%26utm_medium=identity_menu"
+   ]
+  ]
+ },
+ "dirs": {
+  "USER/work_base/smali_classes11": 13,
+  "USER/work_base/smali_classes12": 2,
+  "USER/work_base/smali_classes13": 15,
+  "USER/work_base/smali_classes14": 23,
+  "USER/work_base/smali_classes15": 15,
+  "USER/work_base/smali_classes16": 31,
+  "USER/work_base/smali_classes17": 31,
+  "USER/work_base/smali_classes18": 20,
+  "USER/work_base/smali_classes19": 8,
+  "USER/work_base/smali_classes2": 42,
+  "USER/work_base/smali_classes3": 35,
+  "USER/work_base/smali_classes4": 4,
+  "USER/work_base/smali_classes5": 29,
+  "USER/work_base/smali_classes6": 32,
+  "USER/work_base/smali_classes7": 30,
+  "USER/work_base/smali_classes8": 18,
+  "USER/work_base/smali_classes9": 1
+ },
+ "leftover": [
+  "USER/work_base/smali_classes5/e50/i.smali"
+ ]
+}

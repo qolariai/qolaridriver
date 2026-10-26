@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fundo escuro do ecrã de boas-vindas (captura 031): ilustração própria, volante e telemóvel em formas planas. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="520dp"
+    android:viewportWidth="360"
+    android:viewportHeight="520">
+    <path android:fillColor="#1E2B45" android:pathData="M0,0 H360 V520 H0 Z" />
+    <path android:fillColor="#25365A" android:pathData="M-40,330 a230,230 0 1,1 460,0 Z" />
+    <path android:fillColor="#142036" android:pathData="M60,120 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0 Z" />
+    <path android:fillColor="#1E2B45" android:pathData="M110,120 a100,100 0 1,0 200,0 a100,100 0 1,0 -200,0 Z" />
+    <path android:fillColor="#142036" android:pathData="M204,120 h12 v110 h-12 Z M90,114 h240 v12 h-240 Z" />
+    <path android:fillColor="#E8A24A" android:pathData="M220,250 L300,222 L336,312 L256,344 Z" />
+    <path android:fillColor="#2C3E63" android:pathData="M232,256 L292,236 L318,304 L258,326 Z" />
+    <path android:fillColor="#7BA6FF" android:pathData="M246,296 h10 v16 h-10 Z M262,284 h10 v28 h-10 Z M278,272 h10 v40 h-10 Z" />
+    <path android:fillColor="#F6BC2F" android:pathData="M244,318 h6 v6 h-6 Z M256,318 h6 v6 h-6 Z M268,318 h6 v6 h-6 Z" />
+</vector>

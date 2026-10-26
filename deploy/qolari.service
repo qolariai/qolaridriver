@@ -1,0 +1,21 @@
+[Unit]
+Description=Qolari Mobility backend (Driver/Rider/Fleet/consola)
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=qolari
+Group=qolari
+WorkingDirectory=/opt/qolari/BACKEND
+EnvironmentFile=/etc/qolari/qolari.env
+ExecStart=/opt/qolari/BACKEND/.venv/bin/python server.py
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/qolari/BACKEND/data /opt/qolari/BACKEND/logs /var/backups/qolari
+
+[Install]
+WantedBy=multi-user.target

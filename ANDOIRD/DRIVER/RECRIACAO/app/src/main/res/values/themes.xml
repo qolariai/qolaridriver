@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores semânticas: apontam para a paleta medida na original (colors_core.xml, gerada de design_tokens.json). -->
+    <color name="qd_primary">@color/qd_core_black</color>
+    <color name="qd_on_primary">@color/qd_core_white</color>
+    <color name="qd_accent">@color/qd_core_blue600</color>
+    <color name="qd_background">@color/qd_core_white</color>
+    <color name="qd_nav_active">#111111</color>
+    <color name="qd_ink">#111111</color>
+    <color name="qd_tile">#f6f6f6</color>
+    <color name="qd_line">@color/qd_core_gray200</color>
+    <color name="qd_chevron">@color/qd_core_gray300</color>
+    <color name="qd_gold">@color/qd_core_yellow300</color>
+    <color name="qd_surface_variant">@color/qd_core_gray50</color>
+    <color name="qd_divider">@color/qd_core_gray100</color>
+    <color name="qd_text_primary">@color/qd_core_black</color>
+    <color name="qd_text_secondary">@color/qd_core_gray900</color>
+    <color name="qd_error">@color/qd_core_red600</color>
+    <color name="qd_success">@color/qd_core_green600</color>
+
+    <!-- A original tem "Modo noturno: Sempre desligado" por omissão (captura 043): tema só claro. -->
+    <style name="Theme.QolariDriver" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/qd_primary</item>
+        <item name="colorOnPrimary">@color/qd_on_primary</item>
+        <item name="colorSecondary">@color/qd_accent</item>
+        <item name="android:colorBackground">@color/qd_background</item>
+        <item name="colorSurface">@color/qd_background</item>
+        <item name="colorSurfaceContainer">@color/qd_background</item>
+        <item name="colorOnSurface">@color/qd_text_primary</item>
+        <!-- Sem sobreposicao de elevacao: o Material tingia o branco com colorPrimary (preto) e dava #EAEAEA na barra e no cartao. -->
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="colorError">@color/qd_error</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="bottomNavigationStyle">@style/Widget.QolariDriver.BottomNav</item>
+    </style>
+
+    <!-- Barra de 5 separadores: rótulo a negrito no separador ativo, sem fundo de seleção (ux_behavior.md §1.1). -->
+    <style name="Widget.QolariDriver.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/qd_background</item>
+        <item name="itemTextColor">@color/nav_item_tint</item>
+        <item name="itemIconTint">@color/nav_item_tint</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.QolariDriver.BottomNav.NoIndicator</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:minHeight">64dp</item>
+        <item name="itemPaddingTop">10dp</item>
+        <item name="itemPaddingBottom">10dp</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.QolariDriver.NavLabel.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.QolariDriver.NavLabel</item>
+    </style>
+    <style name="Widget.QolariDriver.BottomNav.NoIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <!-- Rotulos da barra: mais pequenos que o padrao do Material 3 (a original trunca menos), ativo a negrito. -->
+    <style name="TextAppearance.QolariDriver.NavLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="TextAppearance.QolariDriver.NavLabel.Active">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Botões de filtro de Descobrir (captura 036): cinzentos desligados, pretos ligados (selecionado). -->
+    <style name="Widget.QolariDriver.Chip" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:background">@drawable/bg_chip_state</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:drawableTint">@color/chip_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">@color/chip_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

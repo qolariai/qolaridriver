@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qolari Driver</string>
+
+    <!-- Separadores (ux_behavior.md §1.1; textos observados nas capturas) -->
+    <string name="tab_home">Página inicial</string>
+    <string name="tab_discover">Descobrir</string>
+    <string name="tab_earnings">Rendimentos</string>
+    <string name="tab_inbox">Caixa de entrada</string>
+    <string name="tab_menu">Menu</string>
+
+    <string name="back">Voltar</string>
+
+    <!-- Menu (capturas 013, 041, 064). Dados pessoais: só fixtures. -->
+    <string name="menu_tier_gold">Gold</string>
+    <string name="menu_help">Ajuda</string>
+    <string name="menu_safety">Segurança</string>
+    <string name="menu_settings">Definições</string>
+    <string name="menu_section_earn_more">Mais formas de aumentar os rendimentos</string>
+    <string name="menu_discover_opportunities">Descubra oportunidades</string>
+    <string name="menu_pro">Qolari Pro</string>
+    <string name="menu_work_hub">Hub de trabalho</string>
+    <string name="menu_referrals">Recomendações</string>
+    <string name="menu_section_manage">Gerir</string>
+    <string name="menu_vehicles">Veículos</string>
+    <string name="menu_documents">Documentos</string>
+    <string name="menu_insurance">Seguro</string>
+    <string name="menu_section_money">Dinheiro</string>
+    <string name="menu_tax_info">Informações fiscais</string>
+    <string name="menu_payment_methods">Formas de pagamento</string>
+    <string name="menu_section_resources">Recursos</string>
+    <string name="menu_about">Sobre</string>
+    <string name="menu_switch_account">Mudar de conta</string>
+    <string name="menu_sign_out">Terminar sessão</string>
+
+    <!-- Definições (043) -->
+    <string name="settings_title">Definições</string>
+    <string name="settings_section_account">Conta</string>
+    <string name="settings_manage_account">Gerir conta Qolari</string>
+    <string name="settings_privacy">Privacidade</string>
+    <string name="settings_edit_address">Editar endereço</string>
+    <string name="settings_section_general">Geral</string>
+    <string name="settings_accessibility">Acessibilidade</string>
+    <string name="settings_communication">Comunicação</string>
+    <string name="settings_navigation">Navegação</string>
+    <string name="settings_sounds">Sons e voz</string>
+    <string name="settings_night_mode">Modo noturno</string>
+    <string name="settings_night_mode_off">Sempre desligado</string>
+
+    <!-- Acessibilidade (044) e Audição (049) -->
+    <string name="a11y_intro">Defina as suas preferências de acessibilidade. Para saber mais sobre a acessibilidade na Qolari, </string>
+    <string name="a11y_intro_link">visite o nosso website.</string>
+    <string name="a11y_hearing">Audição</string>
+    <string name="a11y_hearing_desc">Opte por divulgar se é surdo ou é portador de uma deficiência auditiva</string>
+    <string name="a11y_vibration">Vibração para pedidos</string>
+    <string name="a11y_vibration_desc">O seu telemóvel irá vibrar e tocar um alerta sonoro assim que receber um pedido.</string>
+    <string name="a11y_flash">Iluminação do ecrã para pedidos</string>
+    <string name="a11y_flash_desc">O seu telefone irá piscar e tocar um alerta sonoro assim que receber um pedido.</string>
+    <string name="a11y_comm">Definições de comunicação</string>
+    <string name="a11y_comm_desc">Informe as pessoas sobre como precisa ou prefere comunicar.</string>
+    <string name="hearing_intro">Opte por divulgar aos utilizadores se é surdo ou é portador de uma deficiência auditiva</string>
+    <string name="hearing_deaf">Sou surdo</string>
+    <string name="hearing_hard">Sou portador de uma deficiência auditiva</string>
+    <string name="hearing_both">Sou surdo ou sou portador de uma deficiência auditiva</string>
+
+    <!-- Sons e voz (047) -->
+    <string name="sounds_title">Sons &amp; Voz</string>
+    <string name="sounds_general">Geral</string>
+    <string name="sounds_general_desc">Controla todo o áudio na aplicação Motorista Qolari</string>
+    <string name="sounds_alerts">Alertas</string>
+    <string name="sounds_alerts_desc">Inclui avisos de pedidos de viagem.</string>
+    <string name="sounds_test_alert_volume">Testar o volume de alertas</string>
+    <string name="sounds_test">Teste</string>
+    <string name="sounds_seatbelt">Lembrete sobre o cinto de segurança</string>
+    <string name="sounds_voice">Voz</string>
+    <string name="sounds_voice_desc">Inclui navegação por voz.</string>
+    <string name="sounds_test_voice_volume">Testar o volume da voz</string>
+    <string name="sounds_soft_voice">Reproduzir voz a um volume 30% mais suave</string>
+    <string name="sounds_voice_nav">Navegação por voz</string>
+
+    <!-- Sobre (077) -->
+    <string name="about_title">Sobre</string>
+    <string name="about_version">Versão %1$s</string>
+    <string name="about_acknowledgements">Confirmações</string>
+
+    <!-- Comunicação (045, 051) -->
+    <string name="comm_title">Comunicação</string>
+    <string name="comm_contact_title">Preferências de contacto</string>
+    <string name="comm_contact_desc">Escolha como quer que os clientes o contactem</string>
+    <string name="comm_call_or_chat">Ligue ou envie um chat</string>
+    <string name="comm_recommended">Recomendado</string>
+    <string name="comm_call">Efetuar chamada</string>
+    <string name="comm_chat">Chat</string>
+    <string name="comm_marketing_title">Preferências de marketing</string>
+    <string name="comm_marketing_desc">Escolha como receber ofertas especiais, promoções, sugestões personalizadas e muito mais</string>
+    <string name="comm_push">Notificações push</string>
+    <string name="comm_email">E-mail</string>
+    <string name="comm_legal">Como utilizamos os seus dados de comunicações</string>
+    <string name="comm_learn_more">Saiba mais →</string>
+    <string name="comm_notice">As alterações poderão não ser aplicadas a viagens ativas</string>
+    <string name="comm_save">Guardar alterações</string>
+    <string name="push_sheet_title">Ativar as notificações push</string>
+    <string name="push_sheet_body">Push notifications are used to provide updates on your order. You may also receive promotional offers and recommendations. You can change this in Settings.</string>
+    <string name="push_sheet_update">Atualizar definições</string>
+    <string name="push_sheet_cancel">Cancelar</string>
+
+    <!-- Navegação (046) -->
+    <string name="nav_title">Navegação</string>
+    <string name="nav_app_section">Aplicação de navegação</string>
+    <string name="nav_own">Navegação Qolari</string>
+    <string name="nav_own_desc">Recomendado: fique nesta aplicação</string>
+    <string name="nav_gmaps">Google Maps</string>
+    <string name="nav_waze">Waze</string>
+    <string name="nav_separate_app">Abre numa aplicação separada</string>
+    <string name="nav_settings_section">Definições de navegação</string>
+    <string name="nav_auto">Navegação automática</string>
+    <string name="nav_auto_desc">Irá ver uma perspetiva geral da rota antes de a navegação começar automaticamente.</string>
+
+    <!-- Ajuda (042, 090) -->
+    <string name="help_title">Ajuda</string>
+    <string name="help_all_categories">Todas as categorias</string>
+    <string name="help_cat_trip">Ajuda com uma viagem</string>
+    <string name="help_cat_account">Conta e aplicação</string>
+    <string name="help_cat_earnings">Rendimentos</string>
+    <string name="help_cat_evs">VEs</string>
+    <string name="help_cat_fleet">Frota</string>
+    <string name="help_cat_guides">Guias</string>
+    <string name="help_cat_delivery">Entrega de artigos</string>
+    <string name="help_cat_safety">Segurança</string>
+    <string name="help_cat_appointment">Agendar uma marcação</string>
+    <string name="help_cat_accessibility">Acessibilidade</string>
+    <string name="help_cat_legal">Informações legais</string>
+    <string name="help_cat_privacy">Privacidade</string>
+    <string name="help_cat_diagnostics">Diagnóstico</string>
+    <string name="help_cat_map">Problemas com o mapa</string>
+    <!-- Início e offline (lote 2: capturas 000, 060, 110, 115, 117, 120) -->
+    <string name="home_offline">Está offline</string>
+    <string name="home_online">Está online</string>
+    <string name="home_blocked">Não é possível ficar online</string>
+    <string name="home_ready">Tudo pronto?</string>
+    <string name="home_go_online">Ficar online</string>
+    <string name="home_go_offline">Ficar offline</string>
+    <string name="home_preferences">Preferências</string>
+    <string name="home_open_map">Abrir o mapa</string>
+    <string name="home_actions_title">Ações necessárias (%1$d)</string>
+    <string name="home_actions_subtitle">Ficar online quando estiver resolvido</string>
+    <string name="home_error_title">Ocorreu um erro</string>
+    <string name="home_error_body">Parece que ocorreu um problema.</string>
+    <string name="home_error_retry">Tente novamente</string>
+    <string name="home_banner_error">Parece que algo correu mal</string>
+    <string name="home_section_opportunities">Oportunidades</string>
+    <string name="home_opp_1_title">Receba mais 15 € ao concluir 14 viagens</string>
+    <string name="home_opp_1_sub">Começa sexta-feira, às 21:30</string>
+    <string name="home_opp_2_title">Receba mais 16 € ao concluir 14 viagens</string>
+    <string name="home_opp_2_sub">Começa sábado, às 2:00</string>
+    <string name="home_opp_3_title">Receba mais 12 € ao concluir 14 viagens</string>
+    <string name="home_opp_3_sub">Começa sábado, às 16:00</string>
+    <string name="home_trends_title">Tendências de rendimentos para viagens em Cascais - Oeiras - Sintra</string>
+    <string name="home_trends_desc">Veja quais são as melhores horas e locais para conduzir hoje.</string>
+    <string name="home_trends_axis">Tempo real</string>
+    <string name="home_airport_title">Horas de ponta de voos no aeroporto LIS</string>
+    <string name="home_airport_desc">A maioria dos voos chega entre as 21 e as 23 hoje</string>
+    <string name="home_tag_opportunity">Oportunidade</string>
+
+    <string name="banner_no_network">Nenhuma rede detetada. Verifique a sua ligação.</string>
+    <string name="error_sheet_title">Erro</string>
+    <string name="error_sheet_body">Lamentamos, mas algo correu mal. Tente novamente mais tarde.</string>
+    <string name="error_sheet_retry">Tentar novamente</string>
+    <string name="error_sheet_cancel">Cancelar</string>
+
+    <!-- Rendimentos (lote 3: capturas 011, 062, 122, 126) -->
+    <string name="earnings_help">Ajuda</string>
+    <string name="earnings_no_network">Sem ligação de rede</string>
+    <string name="earnings_trips">Viagens</string>
+    <string name="earnings_details">Ver detalhes</string>
+    <string name="earnings_balance">Saldo</string>
+    <string name="earnings_trends_card">Veja um mapa das tendências dos rendimentos na sua cidade</string>
+    <string name="earnings_recent">As suas sessões recentes</string>
+    <string name="earnings_empty_title">Sem informações a apresentar de momento</string>
+    <string name="earnings_empty_body">Não conduziu nos últimos 14 dias. Conclua uma viagem para ver aqui os seus rendimentos.</string>
+    <string name="earnings_challenge">Desafio</string>
+    <string name="earnings_challenge_sub">Ver as opções disponíveis</string>
+    <string name="earnings_tier">Qolari Pro Gold</string>
+    <string name="earnings_tier_sub">Os pontos vão ser repostos a 31/10</string>
+    <string name="earnings_tier_goal">Ganhe mais 450 pontos para alcançar o estatuto Platinum</string>
+    <string name="earnings_row_discover_sub">Ver as opções disponíveis</string>
+    <string name="earnings_row_refer">Recomende amigos e aumente os seus rendimentos</string>
+    <string name="earnings_row_refer_sub">Ganhe ao convidar amigos para conduzirem consigo. Toque para ver as ofertas disponíveis.</string>
+
+    <!-- Proposta e viagem (lote 4: capturas 100_online_*) -->
+    <string name="drive_accept">Aceitar</string>
+    <string name="drive_decline">Recusar</string>
+    <string name="drive_after_fee">Após dedução de taxa de serviço</string>
+    <string name="drive_radar">Radar de viagens</string>
+    <string name="drive_pickup_title">Recolher %1$s</string>
+    <string name="drive_dropoff_title">Deixar %1$s</string>
+    <string name="drive_rider_rating">★ %1$s</string>
+    <string name="drive_fare">Tarifa: %1$s</string>
+    <string name="drive_wait">Tempo de espera: %1$s</string>
+    <string name="drive_slide_arrived">Deslize: cheguei</string>
+    <string name="drive_slide_pickup">Deslize: recolher</string>
+    <string name="drive_slide_end">Deslize: terminar viagem</string>
+    <string name="drive_enter_pin">Introduzir o PIN do passageiro</string>
+    <string name="drive_done_title">Viagem concluída</string>
+    <string name="drive_rate_rider">Como foi o passageiro?</string>
+    <string name="drive_send">Enviar</string>
+    <string name="drive_skip">Saltar</string>
+    <string name="drive_location_hint">Autorize a localização para o servidor saber onde está.</string>
+
+    <!-- Segurança, Veículos, Documentos, Informação (lote 5: capturas 014-024, 070-089) -->
+    <string name="loading">A carregar…</string>
+    <string name="safety_toolkit_title">Conjunto de Ferramentas de Segurança</string>
+    <string name="safety_center_title">Centro de segurança</string>
+    <string name="vehicles_title">Veículos</string>
+    <string name="vehicles_yours">Os seus veículos</string>
+    <string name="vehicles_manage">Gerir veículos</string>
+    <string name="vehicles_none">Ainda não tem veículos associados à sua conta.</string>
+    <string name="docs_requirements">Requisitos de motorista</string>
+    <string name="docs_terms">Termos e Condições</string>
+    <string name="docs_done">Concluído</string>
+    <string name="docs_pending">Em análise</string>
+    <string name="docs_rejected">Rejeitado</string>
+    <string name="docs_expires">Válido até %1$s</string>
+    <string name="menu_online_hours">Online</string>
+    <string name="docs_detail_done">Este documento já foi enviado e aprovado.</string>
+    <string name="docs_detail_pending">Este documento está a ser analisado. O envio é feito pelo seu parceiro de frota ou pela equipa de apoio.</string>
+    <string name="docs_detail_rejected">Este documento foi rejeitado. Fale com o seu parceiro de frota ou com a equipa de apoio.</string>
+    <string name="info_insurance_body">O seguro é gerido através do seu parceiro de frota. Se tiver alguma dúvida, contacte-o.</string>
+    <string name="info_payments_body">Os pagamentos são geridos através do seu parceiro de frota. Se tiver alguma dúvida, contacte-o. Se não faz parte de uma frota, envie um pedido para a nossa equipa de apoio.</string>
+    <string name="info_tax_title">Resumos de impostos</string>
+    <string name="info_tax_body">Os resumos de impostos ficam disponíveis no fim do ano fiscal, depois de fechados os seus rendimentos.</string>
+    <string name="info_pro_body">O Qolari Pro é o nível de fidelidade do laboratório. Nesta recriação não há pontos nem benefícios acumulados; os ganhos e o histórico continuam disponíveis no separador Rendimentos.</string>
+    <string name="info_work_body">O Hub de trabalho reúne as oportunidades de outras frotas. Nesta recriação só existe a Frota Tejo; fale com o seu gestor de frota para mudar de parceiro.</string>
+    <string name="info_referrals_body">Pode recomendar um motorista à Qolari. Nesta recriação o convite é tratado pela equipa de apoio: envie o nome e o telefone do motorista pelo Ajuda.</string>
+
+    <!-- Descobrir (capturas 010, 036, 061, 080, 081) -->
+    <string name="discover_reminders">Lembretes</string>
+    <string name="discover_promos">Promoções</string>
+    <string name="discover_airports">Aeroportos</string>
+    <string name="discover_save">Guardar</string>
+    <string name="discover_saved">Guardado</string>
+
+    <!-- Caixa de entrada (capturas 012, 063) -->
+    <string name="inbox_tab_notifications">Notificações</string>
+    <string name="inbox_tab_support">Apoio</string>
+    <string name="inbox_empty">Sem notificações</string>
+    <string name="inbox_support_empty">Sem mensagens de apoio</string>
+
+    <!-- Login nativo (D6; capturas 031-033) -->
+    <string name="welcome_header">Bem-vindo(a) à\nApp Qolari Driver</string>
+    <string name="welcome_continue">Continuar</string>
+    <string name="welcome_rider">ou viajar com a Qolari</string>
+    <string name="login_phone_title">Introduza o seu número de telemóvel</string>
+    <string name="login_country_pt">PT +351</string>
+    <string name="login_phone_hint">Número de telemóvel</string>
+    <string name="login_sms_notice">Aceite receber um código de verificação por mensagem de texto. Poderão ser aplicadas taxas de dados e de mensagens.</string>
+    <string name="login_code_title">Introduza o código de 4 dígitos</string>
+    <string name="login_code_sent">Enviámos um código para %1$s</string>
+    <string name="login_next">Seguinte</string>
+    <string name="login_error_wrong_code">Código errado. Tente novamente.</string>
+    <string name="login_error_no_account">Não existe nenhuma conta com este número.</string>
+    <string name="login_error_network">Sem ligação. Verifique a rede e tente novamente.</string>
+    <string name="login_error_other">Não foi possível iniciar sessão. Tente novamente.</string>
+
+    <!-- Mapa (captura 110) -->
+    <string name="map_start">INICIAR</string>
+    <string name="map_search">Procurar locais</string>
+    <string name="map_pro">Qolari Pro</string>
+    <string name="map_offline_no_network">Sem ligação de rede</string>
+    <string name="map_online_hint">À procura de viagens</string>
+    <string name="map_report">Comunicar um problema com o mapa</string>
+    <string name="map_trends">Tendências de rendimentos</string>
+    <string name="map_locate">A minha posição</string>
+    <string name="map_content">Conteúdo</string>
+
+    <!-- Conteúdo próprio das categorias de Ajuda (D7: não é o conteúdo do original). -->
+    <string name="help_body_trip">Ajuda com uma viagem\n\n• Confirme o estado da viagem no Início.\n• Para cancelar, abra a viagem ativa e escolha o motivo.\n• Se o valor estiver errado, consulte Rendimentos e registe o problema.</string>
+    <string name="help_body_account">Conta e aplicação\n\n• Altere os dados em Menu → Gerir conta.\n• Termine a sessão em Menu → Terminar sessão.\n• No laboratório, o código de entrada é 0000.</string>
+    <string name="help_body_earnings">Rendimentos\n\n• O resumo diário e semanal está em Rendimentos.\n• A comissão e a taxa da frota aparecem no detalhe de cada viagem.\n• O saldo é liquidado no fecho do período.</string>
+    <string name="help_body_evs">VEs\n\n• O estado da bateria e a autonomia são informativos.\n• O mapa usa o Google Maps.\n• Carregamentos não são cobrados nesta versão.</string>
+    <string name="help_body_fleet">Frota\n\n• A frota vê motoristas e veículos no backoffice.\n• Convites e documentos são geridos pelo operador.\n• O motorista independente não tem frota associada.</string>
+    <string name="help_body_guides">Guias\n\n• Guias rápidos de utilização da app.\n• Conteúdo próprio do laboratório Qolari.\n• Não substitui formação oficial.</string>
+    <string name="help_body_delivery">Entrega de artigos\n\n• A entrega de artigos não faz parte do âmbito desta recriação.\n• As entradas foram retiradas da UI.\n• A vertical coberta é ride-hailing.</string>
+    <string name="help_body_safety">Segurança\n\n• O centro de segurança tem ferramentas e PIN.\n• Em emergência, contacte o 112 (não integrado).\n• Partilhe a viagem com alguém de confiança.</string>
+    <string name="help_body_appointment">Agendar uma marcação\n\n• As marcações são tratadas pelo suporte.\n• Use a Caixa de entrada para mensagens.\n• O laboratório não agenda serviços externos.</string>
+    <string name="help_body_accessibility">Acessibilidade\n\n• Ative os modos em Definições → Acessibilidade.\n• As preferências ficam guardadas no dispositivo.\n• O texto e os contrastes seguem o tema do sistema.</string>
+    <string name="help_body_legal">Informações legais\n\n• Termos e privacidade são conteúdo próprio.\n• A marca Uber não é usada no entregável.\n• Consulte a página de Privacidade para detalhes.</string>
+    <string name="help_body_privacy">Privacidade\n\n• Os dados ficam na base de dados local do laboratório.\n• Não são enviados para serviços de terceiros.\n• Pode terminar a sessão e apagar os dados da app.</string>
+    <string name="help_body_diagnostics">Diagnóstico\n\n• O estado da rede aparece no banner.\n• Os logs ficam no servidor local.\n• Reporte falhas pela Caixa de entrada.</string>
+    <string name="help_body_map">Problemas com o mapa\n\n• O mapa usa o Google Maps.\n• Use “A minha posição” para recentrar.\n• Se a rota não aparecer, verifique a rede ou o servidor.</string>
+
+    <!-- Pesquisa de locais no mapa (Driver) -->
+    <string name="map_search_title">Procurar locais</string>
+    <string name="map_search_hint">Rua, praça ou local</string>
+    <string name="map_opportunities">Oportunidades</string>
+    <string name="map_search_empty">Sem resultados.</string>
+    <string name="place_casa">Casa, Lisboa</string>
+    <string name="place_casa_detail">Ponto de recolha guardado</string>
+    <string name="place_airport">Aeroporto Humberto Delgado</string>
+    <string name="place_airport_detail">Terminal 1, Lisboa</string>
+    <string name="place_pombal">Praça Marquês de Pombal</string>
+    <string name="place_pombal_detail">Lisboa</string>
+    <string name="place_rossio">Praça do Rossio</string>
+    <string name="place_rossio_detail">Baixa, Lisboa</string>
+    <string name="place_cordoaria">Cordoaria Nacional</string>
+    <string name="place_cordoaria_detail">Belém, Lisboa</string>
+    <string name="place_oriente">Gare do Oriente</string>
+    <string name="place_oriente_detail">Parque das Nações, Lisboa</string>
+    <string name="place_luz">Estádio da Luz</string>
+    <string name="place_luz_detail">Benfica, Lisboa</string>
+    <string name="place_alfama">Alfama</string>
+    <string name="place_alfama_detail">Lisboa</string>
+
+    <!-- Comunicar problema de mapa (Driver) -->
+    <string name="map_report_title">Comunicar um problema com o mapa</string>
+    <string name="map_report_subtitle">Diga o que está errado. O suporte recebe o registo com a sua posição.</string>
+    <string name="map_report_reason_address">Rua ou morada errada</string>
+    <string name="map_report_reason_closed">Local fechado ou inexistente</string>
+    <string name="map_report_reason_outdated">Mapa desatualizado</string>
+    <string name="map_report_reason_other">Outro problema</string>
+    <string name="map_report_note_hint">Detalhes (opcional)</string>
+    <string name="map_report_send">Enviar</string>
+    <string name="map_report_cancel">Cancelar</string>
+    <string name="map_report_sent">Obrigado. O problema foi registado.</string>
+
+    <!-- Suporte -->
+    <string name="support_title">Suporte</string>
+    <string name="support_hint">Escreva a sua mensagem</string>
+    <string name="support_send">Enviar</string>
+    <string name="support_attach">Anexar</string>
+    <string name="support_call">Ligar apoio</string>
+    <string name="support_category">Assunto: Outro</string>
+    <string name="support_attached">Anexo: %1$s</string>
+    <string name="support_attach_error">Não foi possível anexar. Use JPG, PNG, WEBP ou PDF até 8 MB.</string>
+    <string name="support_phone">+351210000000</string>
+    <string name="support_share">Partilhar ecrã</string>
+    <string name="support_share_stop">Parar partilha</string>
+    <string name="support_share_on">A partilhar o ecrã do dispositivo com o apoio…</string>
+    <string name="support_share_denied">Sem permissão para partilhar o ecrã.</string>
+    <string name="support_cat_trip">Viagem</string>
+    <string name="support_cat_account">Conta</string>
+    <string name="support_cat_payment">Pagamento</string>
+    <string name="support_cat_safety">Segurança</string>
+    <string name="support_cat_bug">Problema na app</string>
+    <string name="support_cat_other">Outro</string>
+    <string name="support_empty">Sem conversas. Escreva a primeira mensagem.</string>
+    <string name="support_error">Não foi possível enviar. Tente novamente.</string>
+
+    <!-- Segurança -->
+    <string name="safety_center_intro">Contactos de confiança, SOS e partilha da viagem em curso.</string>
+    <string name="safety_contacts_title">Contactos de confiança</string>
+    <string name="safety_contacts_empty">Ainda não tem contactos. Adicione alguém de confiança.</string>
+    <string name="safety_add_contact">Adicionar contacto</string>
+    <string name="safety_contact_name">Nome</string>
+    <string name="safety_contact_phone">Telefone</string>
+    <string name="safety_add">Adicionar</string>
+    <string name="safety_remove">Remover</string>
+    <string name="safety_emergency_title">Emergência</string>
+    <string name="safety_sos">Pedir ajuda (SOS)</string>
+    <string name="safety_sos_detail">Regista um alerta para a operação.</string>
+    <string name="safety_sos_ok">Alerta registado. A operação foi notificada.\n\nEm perigo imediato, ligue 112.</string>
+    <string name="safety_call_112">Ligar 112</string>
+    <string name="safety_call_112_detail">Emergência (não integrado)</string>
+    <string name="safety_trip_title">Viagem</string>
+    <string name="safety_share">Partilhar viagem</string>
+    <string name="safety_share_detail">Cria uma ligação para acompanhar a viagem.</string>
+    <string name="safety_share_text">Estou numa viagem Qolari. Acompanhe aqui: %1$s</string>
+    <string name="safety_share_no_trip">Não há viagem ativa para partilhar.</string>
+    <string name="safety_error">Não foi possível concluir. Tente novamente.</string>
+    <string name="safety_close">Fechar</string>
+    <string name="safety_cancel">Cancelar</string>
+    <string name="safety_ride_check">Ride check</string>
+    <string name="safety_ride_check_detail">Check-in de segurança durante a viagem.</string>
+    <string name="safety_ride_check_question">Está tudo bem nesta viagem?</string>
+    <string name="safety_ride_ok">Está tudo bem</string>
+    <string name="safety_ride_help">Preciso de ajuda</string>
+    <string name="safety_ride_help_detail">A operação foi avisada. Em perigo imediato, ligue 112.</string>
+    <string name="safety_ride_ok_sent">Check-in registado.</string>
+    <string name="safety_no_trip">Não há viagem ativa.</string>
+
+    <!-- Documentos -->
+    <string name="docs_upload">Enviar documento</string>
+    <string name="docs_verify_identity">Verificar identidade</string>
+    <string name="docs_upload_ok">Documento enviado. Fica em análise.</string>
+    <string name="docs_upload_error">Não foi possível enviar. Use JPG, PNG, WEBP ou PDF até 8 MB.</string>
+    <string name="doc_kind_license">Carta de condução</string>
+    <string name="doc_kind_cc">Cartão de cidadão</string>
+    <string name="doc_kind_tvde">Certificado TVDE</string>
+    <string name="doc_kind_criminal">Registo criminal</string>
+    <string name="doc_kind_medical">Atestado médico</string>
+
+    <!-- Preferências de condução -->
+    <string name="menu_driving_prefs">Preferências de condução</string>
+    <string name="prefs_title">Preferências de condução</string>
+    <string name="prefs_intro">Escolha para onde quer ir e como quer receber viagens.</string>
+    <string name="prefs_destination">Modo destino</string>
+    <string name="prefs_destination_hint">Destino (ex.: Aeroporto de Lisboa)</string>
+    <string name="prefs_area">Preferência de área</string>
+    <string name="prefs_area_hint">Zona (ex.: Rossio)</string>
+    <string name="prefs_radius">Raio em km</string>
+    <string name="prefs_auto">Aceitação automática</string>
+    <string name="prefs_auto_detail">Aceita propostas compatíveis sem tocar no ecrã.</string>
+    <string name="prefs_save">Guardar</string>
+    <string name="prefs_saved">Preferências guardadas.</string>
+    <string name="prefs_error">Não foi possível guardar. Tente novamente.</string>
+    <string name="prefs_error_address">Indique um local que o mapa reconheça.</string>
+    <string name="prefs_break_15">Pausa 15 min</string>
+    <string name="prefs_break_30">Pausa 30 min</string>
+    <string name="prefs_resume">Retomar</string>
+    <string name="prefs_break_set">Pausa atualizada.</string>
+    <string name="prefs_break_active">Pausa ativa até %1$s.</string>
+    <string name="prefs_break_inactive">Sem pausa ativa.</string>
+
+    <!-- Fila do aeroporto -->
+    <string name="queue_title">Fila do aeroporto</string>
+    <string name="queue_intro">Entre na fila para receber viagens do aeroporto por ordem de chegada.</string>
+    <string name="queue_position">Posição %1$d</string>
+    <string name="queue_waiting">%1$d motoristas em espera · %2$s</string>
+    <string name="queue_not_joined">Não está na fila</string>
+    <string name="queue_join">Entrar na fila</string>
+    <string name="queue_leave">Sair da fila</string>
+    <string name="queue_error">Não foi possível atualizar a fila. Verifique se está online e com veículo ativo.</string>
+
+    <!-- Incentivos -->
+    <string name="incentives_title">Incentivos</string>
+    <string name="incentives_points">%1$d pontos</string>
+    <string name="incentives_tier_next">Nível %1$s · próximo nível aos %2$d pontos</string>
+    <string name="incentives_tier_max">Nível %1$s · nível máximo</string>
+    <string name="incentives_quests">Missões</string>
+    <string name="incentives_no_quests">Sem missões ativas.</string>
+    <string name="incentives_progress">%1$d de %2$d viagens · recompensa %3$s</string>
+    <string name="incentives_claim">Receber recompensa</string>
+    <string name="incentives_claimed">Recompensa recebida</string>
+    <string name="incentives_referral">Recomendar motoristas</string>
+    <string name="incentives_referral_detail">%1$d convidados · %2$d pendentes · %3$s</string>
+    <string name="incentives_share">Partilhar código</string>
+    <string name="incentives_invite">Convidar por telefone</string>
+    <string name="incentives_phone">Telefone do motorista</string>
+    <string name="incentives_send">Convidar</string>
+    <string name="incentives_share_text">Entra na Qolari Driver com o meu código %1$s.</string>
+    <string name="incentives_error">Não foi possível carregar os incentivos.</string>
+
+    <!-- Perfil empresarial -->
+    <string name="business_title">Perfil empresarial</string>
+    <string name="business_off">Sem perfil empresarial ativo.</string>
+    <string name="business_on">%1$s · NIF %2$s</string>
+    <string name="business_edit">Configurar perfil empresarial</string>
+    <string name="business_company">Nome da empresa</string>
+    <string name="business_vat">NIF</string>
+    <string name="business_email">E-mail</string>
+    <string name="business_save">Guardar</string>
+    <string name="business_delegates">Delegados</string>
+    <string name="business_no_delegates">Sem delegados autorizados.</string>
+    <string name="business_add_delegate">Adicionar delegado</string>
+    <string name="business_delegate_name">Nome do delegado</string>
+    <string name="business_delegate_phone">Telefone</string>
+    <string name="business_remove">Remover</string>
+    <string name="business_error">Não foi possível guardar o perfil empresarial.</string>
+
+    <!-- Aparência e idioma -->
+    <string name="appearance_title">Aparência e idioma</string>
+    <string name="appearance_intro">Escolha o idioma, o tema e o tamanho do texto.</string>
+    <string name="appearance_language">Idioma</string>
+    <string name="appearance_language_pt">Português</string>
+    <string name="appearance_language_en">English</string>
+    <string name="appearance_dark">Modo escuro</string>
+    <string name="appearance_simple">Modo simples</string>
+    <string name="appearance_simple_detail">Texto maior e menos opções no menu.</string>
+    <string name="appearance_accessibility">Abrir acessibilidade do sistema</string>
+    <string name="drive_navigate">Abrir navegação</string>
+    <string name="drive_google_maps">Google Maps</string>
+    <string name="drive_waze">Waze</string>
+    <string name="drive_stop_button">Concluir paragem %1$d de %2$d</string>
+    <string name="drive_record_start">Gravar áudio da viagem</string>
+    <string name="drive_record_stop">Parar gravação</string>
+    <string name="drive_record_on">A gravar áudio. O ficheiro fica associado à viagem.</string>
+    <string name="drive_record_saved">Gravação guardada.</string>
+    <string name="drive_record_error">Não foi possível iniciar a gravação. Verifique a permissão do microfone.</string>
+    <string name="drive_video_start">Gravar vídeo do ecrã</string>
+    <string name="drive_video_stop">Parar vídeo</string>
+    <string name="drive_video_error">Não foi possível iniciar o vídeo.</string>
+
+    <!-- Saldo e transferências -->
+    <string name="payouts_title">Saldo e transferências</string>
+    <string name="payouts_balance">Saldo disponível</string>
+    <string name="payouts_iban">Transferir para banco</string>
+    <string name="payouts_instant">Instant Pay</string>
+    <string name="payouts_confirm">Transferir %1$s para a conta registada?</string>
+    <string name="payouts_confirm_yes">Transferir</string>
+    <string name="payouts_cancel">Cancelar</string>
+    <string name="payouts_done">Transferência pedida.</string>
+    <string name="payouts_error">Não foi possível concluir. Verifique o saldo e tente novamente.</string>
+    <string name="payouts_history">Transferências</string>
+    <string name="payouts_history_empty">Ainda não há transferências.</string>
+    <string name="payouts_paid">Pago</string>
+    <string name="payouts_pending">Pendente</string>
+    <string name="payouts_statements">Extratos</string>
+    <string name="payouts_month">%1$s · %2$s · %3$d viagens</string>
+    <string name="payouts_adjust">Pedir ajuste</string>
+    <string name="payouts_invoices">Faturas</string>
+    <string name="payouts_tax">Impostos</string>
+    <string name="payouts_kind_tolls">Portagens</string>
+    <string name="payouts_kind_manual">Tarifa manual</string>
+    <string name="payouts_kind_other">Outro</string>
+    <string name="payouts_amount">Valor (EUR)</string>
+    <string name="payouts_note">Nota</string>
+    <string name="payouts_send">Enviar</string>
+    <string name="payouts_adjust_sent">Ajuste pedido.</string>
+    <string name="payouts_tax_year">Impostos %1$d</string>
+    <string name="payouts_tax_body">Bruto: %1$s\nLíquido: %2$s\nIVA estimado: %3$s</string>
+    <string name="earnings_receipt">Recibo da viagem</string>
+    <string name="map_report_reason_missing">Escolha um motivo.</string>
+    <string name="map_report_error">Não foi possível enviar. Tente novamente.</string>
+</resources>

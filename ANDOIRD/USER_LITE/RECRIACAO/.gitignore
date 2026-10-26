@@ -1,0 +1,7 @@
+# Recriacao Qolari Lite (Uber Lite). Nao versionar o APK nem chaves locais.
+.gradle/
+.kotlin/
+build/
+local.properties
+*.apk
+*.idsig

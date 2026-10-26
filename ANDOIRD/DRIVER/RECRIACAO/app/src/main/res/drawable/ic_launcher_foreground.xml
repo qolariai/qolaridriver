@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- "Q" genérica: anel branco + cauda (mesma ideia do rebrand do laboratório) -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,30c-13.25,0 -24,10.75 -24,24s10.75,24 24,24c5.9,0 11.3,-2.14 15.46,-5.68l6.54,6.54 6,-6 -6.54,-6.54C75.86,65.3 78,59.9 78,54 78,40.75 67.25,30 54,30zM54,42c6.63,0 12,5.37 12,12 0,2.3 -0.65,4.45 -1.77,6.28l-7.7,-7.7 -6,6 7.7,7.7c-1.83,1.12 -3.98,1.77 -6.28,1.77 -6.63,0 -12,-5.37 -12,-12s5.37,-12 12,-12z" />
+</vector>

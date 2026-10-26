@@ -1,0 +1,123 @@
+rider: 430 ficheiros de texto a alterar
+        7  USER/work_base/assets
+       40  USER/work_base/res
+       13  USER/work_base/smali_classes11
+        2  USER/work_base/smali_classes12
+       15  USER/work_base/smali_classes13
+       23  USER/work_base/smali_classes14
+       15  USER/work_base/smali_classes15
+       31  USER/work_base/smali_classes16
+       31  USER/work_base/smali_classes17
+       20  USER/work_base/smali_classes18
+        8  USER/work_base/smali_classes19
+       42  USER/work_base/smali_classes2
+       36  USER/work_base/smali_classes3
+        4  USER/work_base/smali_classes4
+       29  USER/work_base/smali_classes5
+       32  USER/work_base/smali_classes6
+       30  USER/work_base/smali_classes7
+       18  USER/work_base/smali_classes8
+        1  USER/work_base/smali_classes9
+        2  USER/work_splits/config.ar/res
+        1  USER/work_splits/config.de/res
+        3  USER/work_splits/config.en/res
+        9  USER/work_splits/config.es/res
+        2  USER/work_splits/config.fr/res
+        1  USER/work_splits/config.hi/res
+        2  USER/work_splits/config.in/res
+        1  USER/work_splits/config.it/res
+        1  USER/work_splits/config.ja/res
+        1  USER/work_splits/config.ko/res
+        1  USER/work_splits/config.my/res
+        2  USER/work_splits/config.pt/res
+        1  USER/work_splits/config.ru/res
+        1  USER/work_splits/config.th/res
+        1  USER/work_splits/config.tr/res
+        1  USER/work_splits/config.vi/res
+        3  USER/work_splits/config.zh/res
+ binary: 34
+     USER/work_splits/config.ar/build/resources.zip
+     USER/work_splits/config.ar/build/apk/resources.arsc
+     USER/work_splits/config.de/build/resources.zip
+     USER/work_splits/config.de/build/apk/resources.arsc
+     USER/work_splits/config.en/build/resources.zip
+     USER/work_splits/config.en/build/apk/resources.arsc
+     USER/work_splits/config.es/build/resources.zip
+     USER/work_splits/config.es/build/apk/resources.arsc
+     USER/work_splits/config.fr/build/resources.zip
+     USER/work_splits/config.fr/build/apk/resources.arsc
+     USER/work_splits/config.hi/build/resources.zip
+     USER/work_splits/config.hi/build/apk/resources.arsc
+     USER/work_splits/config.in/build/resources.zip
+     USER/work_splits/config.in/build/apk/resources.arsc
+     USER/work_splits/config.it/build/resources.zip
+     USER/work_splits/config.it/build/apk/resources.arsc
+     USER/work_splits/config.ja/build/resources.zip
+     USER/work_splits/config.ja/build/apk/resources.arsc
+     USER/work_splits/config.ko/build/resources.zip
+     USER/work_splits/config.ko/build/apk/resources.arsc
+     USER/work_splits/config.my/build/resources.zip
+     USER/work_splits/config.my/build/apk/resources.arsc
+     USER/work_splits/config.pt/build/resources.zip
+     USER/work_splits/config.pt/build/apk/resources.arsc
+     USER/work_splits/config.ru/build/resources.zip
+     USER/work_splits/config.ru/build/apk/resources.arsc
+     USER/work_splits/config.th/build/resources.zip
+     USER/work_splits/config.th/build/apk/resources.arsc
+     USER/work_splits/config.tr/build/resources.zip
+     USER/work_splits/config.tr/build/apk/resources.arsc
+ contextos mais comuns:
+      59  8090/legal/terms](http://192.168.1.204:8090/legal/
+      48  92.168.1.204:8090/help\">192.168.1.204:8090/help&l
+      46   "defaultValue": "http://192.168.1.204:8090/static
+      31  \n\n    const-string v2, "192.168.1.204:8090"\n\n  
+      24   "defaultValue": "http://192.168.1.204:8090", "isA
+      24  const-string v3, "http://192.168.1.204:8090/static
+      18   "defaultValue": "http://192.168.1.204:8090/legal/
+      16  ubtitle">Conoce más en [192.168.1.204:8090/legal/
+      16  os y condiciones](http://192.168.1.204:8090/legal/
+      16  sa tus credenciales de \"192.168.1.204:8090\" en P
+      16   const-string/jumbo v2, "192.168.1.204:8090"\n\n  
+      15  const-string v4, "http://192.168.1.204:8090"\n\n  
+      15  const-string v4, "http://192.168.1.204:8090/static
+      14   "defaultValue": "http://192.168.1.204:8090/prod/a
+      14  \n\n    const-string v1, "192.168.1.204:8090"\n\n  
+      13  const-string v2, "http://192.168.1.204:8090/static
+      13  \n\n    const-string v0, "192.168.1.204:8090"\n\n  
+      13  const-string v4, "http://192.168.1.204:8090/prod/a
+      12  :8090\n                 ,192.168.1.204:8090\n     
+      12  const-string v9, "http://192.168.1.204:8090/static
+      11  onst-string v14, "http://192.168.1.204:8090/static
+      10  e tu dispositivo. Visita 192.168.1.204:8090 para e
+      10  \n\n    const-string v3, "192.168.1.204:8090"\n\n  
+       9  :8090,192.168.1.204:8090,192.168.1.204:8090,192.16
+       9  header_image_url">http://192.168.1.204:8090/launch
+       9  onst-string v11, "http://192.168.1.204:8090/static
+       8   "defaultValue": "http://192.168.1.204:8090/privac
+       8   los &lt;a href=\"http://192.168.1.204:8090/androi
+       8  y la &lt;a href=\"http://192.168.1.204:8090/privac
+       8  const-string v4, "http://192.168.1.204:8090/emobil
+       8  const-string v3, "http://192.168.1.204:8090/legal/
+       7   "defaultValue": "http://192.168.1.204:8090/", "is
+       7  \n        "url": "http://192.168.1.204:8090"\n    
+       7  ":{"dayImageUrl":"http://192.168.1.204:8090/static
+       7  ,"nightImageUrl":"http://192.168.1.204:8090/static
+       7  const-string v6, "http://192.168.1.204:8090/static
+       7  \n\n    const-string v4, "192.168.1.204:8090"\n\n  
+       6  78d0c5208&helpURL=http://192.168.1.204:8090/drivin
+       6  r más detalles, visita 192.168.1.204:8090/cities
+       6  iminar la cuenta, visita 192.168.1.204:8090.</stri
+       6  tu equipo aún. Visita {192.168.1.204:8090} para 
+       6  para mostrarla. Visita {192.168.1.204:8090} para 
+       6  e en &lt;a href=\"http://192.168.1.204:8090/help\"
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\QOLARI\PROJETOS OFICIAIS\QOLARI DRIVER\BACKEND\tools\repoint_apks.py", line 93, in <module>
+    print(" contextos mais comuns:")
+    ^^
+  File "C:\xampp\htdocs\QOLARI\PROJETOS OFICIAIS\QOLARI DRIVER\BACKEND\tools\repoint_apks.py", line 89, in main
+    print(f" {k}: {len(report[k])}")
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miglo\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 10-18: character maps to <undefined>

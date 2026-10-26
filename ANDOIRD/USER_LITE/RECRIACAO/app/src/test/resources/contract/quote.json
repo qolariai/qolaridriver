@@ -1,0 +1,18 @@
+{
+  "pickup": { "lat": 38.753, "lng": -9.145, "address": "Casa, Lisboa" },
+  "dropoff": { "lat": 38.71391, "lng": -9.1394, "address": "Praça do Rossio, Lisboa" },
+  "products": [
+    {
+      "id": 1, "uuid": "p1", "name": "Qolari X", "description": "Viagem normal",
+      "capacity": 4, "etaMin": 3, "cents": 793, "price": "7,93 €", "currency": "EUR",
+      "distanceKm": 5.6, "durationMin": 18, "fastest": true
+    },
+    {
+      "id": 2, "uuid": "p2", "name": "Comfort", "description": "Carro maior",
+      "capacity": 4, "etaMin": 4, "cents": 1097, "price": "10,97 €", "currency": "EUR",
+      "distanceKm": 5.6, "durationMin": 18, "fastest": false
+    }
+  ],
+  "payment": { "id": "cash", "label": "Dinheiro", "detail": "Pague ao motorista no fim da viagem" },
+  "promo": { "code": "BEMVINDO", "description": "20% na primeira viagem" }
+}

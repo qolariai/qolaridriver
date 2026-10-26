@@ -1,0 +1,211 @@
+{
+ "data": {
+  "meta": {
+   "lastModifiedTimeMs": 1792803735172.858
+  },
+  "offers": [
+   {
+    "offerUUIDs": [
+     "33a83bba-75bf-4165-9b3e-e9d008d4a460"
+    ],
+    "driverOfferData": {
+     "type": "primaryOffer",
+     "primaryOffer": {
+      "offerUUID": "33a83bba-75bf-4165-9b3e-e9d008d4a460",
+      "offerUUIDV2": "33a83bba-75bf-4165-9b3e-e9d008d4a460",
+      "jobUUID": "e0421d9b-4a60-44f2-8b72-8170b01ca969",
+      "offerType": "JOB",
+      "offerStatus": "OPEN",
+      "sourceType": "PUSH",
+      "supportedActions": [
+       "ACCEPT",
+       "REJECT",
+       "EXPIRE"
+      ],
+      "metaData": {
+       "type": "jobOfferModel",
+       "jobOfferModel": {
+        "acceptWindow": 19.0,
+        "expiresAtEpochMS": 1792803754000.0,
+        "startLocationRef": "pickup",
+        "endLocationRef": "dropoff",
+        "locationMap": {
+         "pickup": {
+          "latitude": 38.7139,
+          "longitude": -9.1394,
+          "title": "Rossio",
+          "reference": "pickup"
+         },
+         "dropoff": {
+          "latitude": 38.7742,
+          "longitude": -9.1342,
+          "title": "Aeroporto",
+          "reference": "dropoff"
+         }
+        },
+        "etaToStartLocation": {
+         "valueInSeconds": 23,
+         "valueInMinutes": 1,
+         "shortString": "1 min",
+         "longString": "1 min (0,2 km)"
+        },
+        "marketplace": "PERSONAL_TRANSPORT",
+        "notificationTitle": "Qolari X · 9,27 €",
+        "expiryAction": "EXPIRE"
+       }
+      },
+      "offerView": {
+       "type": "jobOfferViewV3",
+       "jobOfferViewV3": {
+        "coreInfo": {
+         "type": "simpleView",
+         "simpleView": {
+          "clusters": [
+           {
+            "clusterAlignment": "LEADING",
+            "elements": [
+             {
+              "type": "label",
+              "label": {
+               "text": {
+                "text": "Qolari X",
+                "font": {
+                 "style": "LABEL_SMALL",
+                 "weight": "NORMAL"
+                },
+                "color": "CONTENT_SECONDARY"
+               },
+               "lineCount": "WRAP"
+              }
+             },
+             {
+              "type": "label",
+              "label": {
+               "text": {
+                "text": "9,27 €",
+                "font": {
+                 "style": "HEADING_LARGE",
+                 "weight": "BOLD"
+                },
+                "color": "CONTENT_PRIMARY"
+               },
+               "lineCount": "WRAP"
+              }
+             },
+             {
+              "type": "label",
+              "label": {
+               "text": {
+                "text": "Ana · ★ 5,00",
+                "font": {
+                 "style": "LABEL_SMALL",
+                 "weight": "NORMAL"
+                },
+                "color": "CONTENT_SECONDARY"
+               },
+               "lineCount": "WRAP"
+              }
+             },
+             {
+              "type": "label",
+              "label": {
+               "text": {
+                "text": "1 min (0,2 km) de distância",
+                "font": {
+                 "style": "LABEL_DEFAULT",
+                 "weight": "BOLD"
+                },
+                "color": "CONTENT_PRIMARY"
+               },
+               "lineCount": "WRAP"
+              }
+             },
+             {
+              "type": "label",
+              "label": {
+               "text": {
+                "text": "Rossio",
+                "font": {
+                 "style": "PARAGRAPH_SMALL",
+                 "weight": "NORMAL"
+                },
+                "color": "CONTENT_SECONDARY"
+               },
+               "lineCount": "WRAP"
+              }
+             },
+             {
+              "type": "label",
+              "label": {
+               "text": {
+                "text": "Viagem de 19 min (9,1 km)",
+                "font": {
+                 "style": "LABEL_DEFAULT",
+                 "weight": "BOLD"
+                },
+                "color": "CONTENT_PRIMARY"
+               },
+               "lineCount": "WRAP"
+              }
+             },
+             {
+              "type": "label",
+              "label": {
+               "text": {
+                "text": "Aeroporto",
+                "font": {
+                 "style": "PARAGRAPH_SMALL",
+                 "weight": "NORMAL"
+                },
+                "color": "CONTENT_SECONDARY"
+               },
+               "lineCount": "WRAP"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        },
+        "offerAcceptElement": {
+         "type": "acceptButton",
+         "acceptButton": {
+          "content": {
+           "type": "textContent",
+           "textContent": {
+            "textContent": {
+             "richTextElements": [
+              {
+               "type": "text",
+               "text": {
+                "text": {
+                 "text": "Aceitar",
+                 "font": {
+                  "style": "LABEL_DEFAULT",
+                  "weight": "BOLD"
+                 },
+                 "color": "CONTENT_PRIMARY"
+                }
+               }
+              }
+             ]
+            }
+           }
+          },
+          "style": {
+           "type": "definedStyle",
+           "definedStyle": "PRIMARY"
+          },
+          "buttonSize": "LARGE"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  ]
+ },
+ "etag": "33a83bba-75bf-4165-9b3e-e9d008d4a460",
+ "pollingInterval": 4000
+}

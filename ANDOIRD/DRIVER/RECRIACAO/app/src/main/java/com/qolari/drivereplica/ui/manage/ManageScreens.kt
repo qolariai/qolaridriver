@@ -1,0 +1,476 @@
+package com.qolari.drivereplica.ui.manage
+
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import android.text.InputType
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import androidx.lifecycle.viewModelScope
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.qolari.drivereplica.R
+import com.qolari.drivereplica.data.AppGraph
+import com.qolari.drivereplica.databinding.FragmentSimpleListBinding
+import com.qolari.drivereplica.databinding.ItemSimpleRowBinding
+import com.qolari.drivereplica.databinding.ItemSimpleSectionBinding
+import com.qolari.drivereplica.databinding.SheetSafetyBinding
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+
+/** Carrega uma lista do servidor: A carregar -> dados, ou falha ("Sem ligação de rede", como em Rendimentos, captura 122). */
+sealed interface LoadState<out T> {
+    data object Loading : LoadState<Nothing>
+    data class Data<T>(val value: T) : LoadState<T>
+    data object Failed : LoadState<Nothing>
+}
+
+class LoadViewModel<T>(private val loader: suspend () -> Result<T>) : ViewModel() {
+    private val _state = MutableStateFlow<LoadState<T>>(LoadState.Loading)
+    val state: StateFlow<LoadState<T>> = _state.asStateFlow()
+
+    init { reload() }
+
+    fun reload() {
+        viewModelScope.launch {
+            loader().onSuccess { _state.value = LoadState.Data(it) }.onFailure {
+                // Com dados já mostrados mantém-nos (como Rendimentos); sem dados mostra a falha.
+                if (_state.value !is LoadState.Data) _state.value = LoadState.Failed
+            }
+        }
+    }
+}
+
+fun <T> loadFactory(loader: suspend () -> Result<T>) = object : ViewModelProvider.Factory {
+    @Suppress("UNCHECKED_CAST")
+    override fun <V : ViewModel> create(modelClass: Class<V>): V = LoadViewModel(loader) as V
+}
+
+/** Base dos ecrãs de lista simples: seta, título, texto e linhas. */
+abstract class SimpleListFragment : Fragment() {
+    private var _b: FragmentSimpleListBinding? = null
+    protected val b get() = _b!!
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _b = FragmentSimpleListBinding.inflate(inflater, container, false)
+        b.listBack.setOnClickListener { findNavController().popBackStack() }
+        return b.root
+    }
+
+    protected fun row(title: String, subtitle: String? = null, status: String? = null, statusColor: Int? = null, onClick: (() -> Unit)? = null): View {
+        val r = ItemSimpleRowBinding.inflate(layoutInflater, b.listRows, false)
+        r.simpleRowTitle.text = title
+        r.simpleRowSubtitle.text = subtitle
+        r.simpleRowSubtitle.isVisible = !subtitle.isNullOrBlank()
+        r.simpleRowStatus.text = status
+        r.simpleRowStatus.isVisible = !status.isNullOrBlank()
+        statusColor?.let { r.simpleRowStatus.setTextColor(requireContext().getColor(it)) }
+        r.simpleRowChevron.isVisible = onClick != null
+        onClick?.let { r.simpleRowContent.setOnClickListener { _ -> it() } }
+        return r.root
+    }
+
+    protected fun section(text: String): View =
+        ItemSimpleSectionBinding.inflate(layoutInflater, b.listRows, false).also { (it.root as TextView).text = text }.root
+
+    protected fun openInfo(title: String, body: String) =
+        findNavController().navigate(R.id.infoFragment, bundleOf(InfoFragment.ARG_TITLE to title, InfoFragment.ARG_BODY to body))
+
+    override fun onDestroyView() {
+        _b = null
+        super.onDestroyView()
+    }
+}
+
+/** Página informativa de texto (Seguro, Pagamentos, Informações fiscais, detalhe de segurança). Conteúdo próprio (D7). */
+class InfoFragment : SimpleListFragment() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        b.listHeading.text = requireArguments().getString(ARG_TITLE)
+        b.listIntro.text = requireArguments().getString(ARG_BODY)
+        b.listIntro.isVisible = true
+    }
+
+    companion object {
+        const val ARG_TITLE = "title"
+        const val ARG_BODY = "body"
+    }
+}
+
+/** Veículo (captura 080) e "Os seus veículos" (captura 082), com dados do backend (`/rt/drivers/v2/vehicles`). */
+class VehiclesFragment : SimpleListFragment() {
+    private val vm: LoadViewModel<List<VehicleItem>> by viewModels { loadFactory { AppGraph.repository.vehicles() } }
+    private val manage get() = arguments?.getBoolean(ARG_MANAGE) == true
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        b.listBarTitle.text = if (manage) "" else getString(R.string.vehicles_title)
+        b.listHeading.text = if (manage) getString(R.string.vehicles_yours) else ""
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) { vm.state.collect(::render) }
+        }
+    }
+
+    private fun render(s: LoadState<List<VehicleItem>>) {
+        b.listRows.removeAllViews()
+        b.listState.isVisible = s !is LoadState.Data
+        b.listState.setText(if (s is LoadState.Failed) R.string.earnings_no_network else R.string.loading)
+        b.listButton.isVisible = false
+        val list = (s as? LoadState.Data)?.value ?: return
+        if (list.isEmpty()) {
+            b.listState.isVisible = true
+            b.listState.setText(R.string.vehicles_none)
+            return
+        }
+        if (manage) {
+            list.forEach { v -> b.listRows.addView(row(v.title, v.plate)) }
+        } else {
+            val v = list.firstOrNull { it.isDefault } ?: list.first()
+            b.listHeading.text = v.title
+            b.listIntro.text = v.plate
+            b.listIntro.isVisible = true
+            b.listButton.setText(R.string.vehicles_manage)
+            b.listButton.isVisible = true
+            b.listButton.setOnClickListener { findNavController().navigate(R.id.vehiclesManageFragment, bundleOf(ARG_MANAGE to true)) }
+        }
+    }
+
+    companion object { const val ARG_MANAGE = "manage" }
+}
+
+/** Documentos do motorista (captura 083): estado de cada um; o backend só indica os pendentes. */
+class DocumentsFragment : SimpleListFragment() {
+    private val vm: LoadViewModel<List<DocumentItem>> by viewModels { loadFactory { AppGraph.repository.documents() } }
+    private var pendingKind: String? = null
+    private var verifying = false
+
+    private val pickFile = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+        val kind = pendingKind
+        if (uri == null || kind == null) {
+            verifying = false
+            return@registerForActivityResult
+        }
+        val bytes = runCatching {
+            requireContext().contentResolver.openInputStream(uri)?.use { it.readBytes() }
+        }.getOrNull()
+        if (bytes == null) {
+            toast(R.string.docs_upload_error)
+            verifying = false
+            return@registerForActivityResult
+        }
+        if (bytes.size > 8 * 1024 * 1024) {
+            toast(R.string.docs_upload_error)
+            verifying = false
+            return@registerForActivityResult
+        }
+        val name = uri.lastPathSegment ?: "documento"
+        val b64 = android.util.Base64.encodeToString(bytes, android.util.Base64.NO_WRAP)
+        viewLifecycleOwner.lifecycleScope.launch {
+            val result = if (verifying) {
+                AppGraph.repository.verifyIdentity(name, b64)
+            } else {
+                AppGraph.repository.uploadDocument(kind, name, b64)
+            }
+            result.onSuccess {
+                toast(R.string.docs_upload_ok)
+                vm.reload()
+            }.onFailure { toast(R.string.docs_upload_error) }
+            verifying = false
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        b.listBarTitle.text = getString(R.string.menu_documents)
+        b.listHeading.setText(R.string.docs_requirements)
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) { vm.state.collect(::render) }
+        }
+    }
+
+    private fun render(s: LoadState<List<DocumentItem>>) {
+        b.listRows.removeAllViews()
+        b.listState.isVisible = s !is LoadState.Data
+        b.listState.setText(if (s is LoadState.Failed) R.string.earnings_no_network else R.string.loading)
+        val items = (s as? LoadState.Data)?.value ?: return
+        items.forEach { d ->
+            val (label, color) = when (d.status) {
+                DocStatus.APPROVED -> R.string.docs_done to R.color.qd_core_green600
+                DocStatus.PENDING -> R.string.docs_pending to R.color.qd_core_gray600
+                DocStatus.REJECTED -> R.string.docs_rejected to R.color.qd_core_red600
+            }
+            val expiry = ManageMapper.expiry(d.expiresOn)?.let { getString(R.string.docs_expires, it) }
+            val status = listOfNotNull(getString(label), expiry).joinToString(" · ")
+            val detail = when (d.status) {
+                DocStatus.APPROVED -> getString(R.string.docs_detail_done)
+                DocStatus.PENDING -> getString(R.string.docs_detail_pending)
+                DocStatus.REJECTED -> listOf(getString(R.string.docs_detail_rejected), d.note).filter { it.isNotBlank() }.joinToString("\n\n")
+            }
+            b.listRows.addView(row(d.title, status = status, statusColor = color) { openInfo(d.title, detail) })
+        }
+
+        b.listRows.addView(MaterialButton(requireContext()).apply {
+            setText(R.string.docs_upload)
+            setOnClickListener { chooseKind() }
+        })
+        b.listRows.addView(MaterialButton(requireContext()).apply {
+            setText(R.string.docs_verify_identity)
+            setOnClickListener {
+                verifying = true
+                pendingKind = "cartao_cidadao"
+                pickFile.launch("*/*")
+            }
+        })
+    }
+
+    private fun chooseKind() {
+        val kinds = listOf(
+            "carta_conducao" to R.string.doc_kind_license,
+            "cartao_cidadao" to R.string.doc_kind_cc,
+            "certificado_tvde" to R.string.doc_kind_tvde,
+            "registo_criminal" to R.string.doc_kind_criminal,
+            "atestado_medico" to R.string.doc_kind_medical,
+        )
+        val labels = kinds.map { getString(it.second) }.toTypedArray()
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.docs_upload)
+            .setItems(labels) { _, index ->
+                verifying = false
+                pendingKind = kinds[index].first
+                pickFile.launch("*/*")
+            }
+            .setNegativeButton(R.string.safety_cancel, null)
+            .show()
+    }
+
+    private fun toast(res: Int) = Toast.makeText(requireContext(), res, Toast.LENGTH_SHORT).show()
+}
+
+/** Centro de segurança (capturas 017, 018, 024): secções com texto e linhas. Conteúdo próprio (D7). */
+class SafetyCenterFragment : SimpleListFragment() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        b.listHeading.setText(R.string.safety_center_title)
+        b.listIntro.setText(R.string.safety_center_intro)
+        b.listIntro.isVisible = true
+
+        b.listRows.addView(section(getString(R.string.safety_contacts_title)))
+        val contactsBox = LinearLayout(requireContext()).apply { orientation = LinearLayout.VERTICAL }
+        b.listRows.addView(contactsBox)
+        val add = MaterialButton(requireContext()).apply {
+            setText(R.string.safety_add_contact)
+            setOnClickListener { addContact(contactsBox) }
+        }
+        b.listRows.addView(add)
+
+        b.listRows.addView(section(getString(R.string.safety_emergency_title)))
+        b.listRows.addView(row(getString(R.string.safety_sos), getString(R.string.safety_sos_detail)) { sos() })
+        b.listRows.addView(row(getString(R.string.safety_ride_check), getString(R.string.safety_ride_check_detail)) { rideCheck() })
+        b.listRows.addView(row(getString(R.string.safety_call_112), getString(R.string.safety_call_112_detail)) {
+            startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:112")))
+        })
+
+        b.listRows.addView(section(getString(R.string.safety_trip_title)))
+        b.listRows.addView(row(getString(R.string.safety_share), getString(R.string.safety_share_detail)) { shareTrip() })
+
+        SafetyContent.sections.forEach { (title, rows) ->
+            b.listRows.addView(section(title))
+            rows.forEach { r -> b.listRows.addView(row(r.title, r.subtitle) { openInfo(r.title, r.subtitle) }) }
+        }
+        refreshContacts(contactsBox)
+    }
+
+    private fun refreshContacts(container: LinearLayout) {
+        lifecycleScope.launch {
+            AppGraph.repository.safetyContacts()
+                .onSuccess { contacts ->
+                    container.removeAllViews()
+                    if (contacts.isEmpty()) {
+                        container.addView(TextView(requireContext()).apply {
+                            setText(R.string.safety_contacts_empty)
+                            setTextColor(requireContext().getColor(R.color.qd_core_gray600))
+                            textSize = 14f
+                            setPadding(0, 8, 0, 8)
+                        })
+                    }
+                    contacts.forEach { c ->
+                        val r = ItemSimpleRowBinding.inflate(layoutInflater, container, false)
+                        r.simpleRowTitle.text = c.name
+                        r.simpleRowSubtitle.text = c.phone
+                        r.simpleRowSubtitle.isVisible = true
+                        r.simpleRowChevron.isVisible = false
+                        r.simpleRowStatus.setText(R.string.safety_remove)
+                        r.simpleRowStatus.isVisible = true
+                        r.simpleRowContent.setOnClickListener { removeContact(c.uuid, container) }
+                        container.addView(r.root)
+                    }
+                }
+                .onFailure { toast(R.string.safety_error) }
+        }
+    }
+
+    private fun addContact(container: LinearLayout) {
+        val box = LinearLayout(requireContext()).apply {
+            orientation = LinearLayout.VERTICAL
+            val pad = (20 * resources.displayMetrics.density).toInt()
+            setPadding(pad, 4, pad, 0)
+        }
+        val name = EditText(requireContext()).apply {
+            hint = getString(R.string.safety_contact_name)
+            inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_CAP_WORDS
+        }
+        val phone = EditText(requireContext()).apply {
+            hint = getString(R.string.safety_contact_phone)
+            inputType = InputType.TYPE_CLASS_PHONE
+        }
+        box.addView(name)
+        box.addView(phone)
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.safety_add_contact)
+            .setView(box)
+            .setPositiveButton(R.string.safety_add) { _, _ ->
+                val n = name.text.toString().trim()
+                val p = phone.text.toString().trim()
+                if (n.isEmpty() || p.length < 6) return@setPositiveButton
+                lifecycleScope.launch {
+                    AppGraph.repository.addSafetyContact(n, p)
+                        .onSuccess { refreshContacts(container) }
+                        .onFailure { toast(R.string.safety_error) }
+                }
+            }
+            .setNegativeButton(R.string.safety_cancel, null)
+            .show()
+    }
+
+    private fun removeContact(uuid: String, container: LinearLayout) {
+        lifecycleScope.launch {
+            AppGraph.repository.deleteSafetyContact(uuid)
+                .onSuccess { refreshContacts(container) }
+                .onFailure { toast(R.string.safety_error) }
+        }
+    }
+
+    private fun sos() {
+        lifecycleScope.launch {
+            val trip = AppGraph.repository.tasks().getOrNull()
+            AppGraph.repository.safetySos(trip?.uuid, trip?.latitude, trip?.longitude)
+                .onSuccess {
+                    MaterialAlertDialogBuilder(requireContext())
+                        .setTitle(R.string.safety_sos)
+                        .setMessage(R.string.safety_sos_ok)
+                        .setPositiveButton(R.string.safety_call_112) { _, _ ->
+                            startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:112")))
+                        }
+                        .setNegativeButton(R.string.safety_close, null)
+                        .show()
+                }
+                .onFailure { toast(R.string.safety_error) }
+        }
+    }
+
+    private fun rideCheck() {
+        lifecycleScope.launch {
+            val trip = AppGraph.repository.tasks().getOrNull()
+            if (trip == null) {
+                toast(R.string.safety_no_trip)
+                return@launch
+            }
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.safety_ride_check)
+                .setMessage(R.string.safety_ride_check_question)
+                .setPositiveButton(R.string.safety_ride_ok) { _, _ -> sendRideCheck(trip.uuid, "ok") }
+                .setNegativeButton(R.string.safety_ride_help) { _, _ -> sendRideCheck(trip.uuid, "help") }
+                .show()
+        }
+    }
+
+    private fun sendRideCheck(uuid: String, status: String) {
+        lifecycleScope.launch {
+            AppGraph.repository.rideCheck(uuid, status)
+                .onSuccess {
+                    if (status == "help") {
+                        MaterialAlertDialogBuilder(requireContext())
+                            .setTitle(R.string.safety_ride_help)
+                            .setMessage(R.string.safety_ride_help_detail)
+                            .setPositiveButton(R.string.safety_call_112) { _, _ ->
+                                startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:112")))
+                            }
+                            .setNegativeButton(R.string.safety_close, null)
+                            .show()
+                    } else {
+                        toast(R.string.safety_ride_ok_sent)
+                    }
+                }
+                .onFailure { toast(R.string.safety_error) }
+        }
+    }
+
+    private fun shareTrip() {
+        lifecycleScope.launch {
+            val trip = AppGraph.repository.tasks().getOrNull()
+            if (trip == null) {
+                toast(R.string.safety_share_no_trip)
+                return@launch
+            }
+            AppGraph.repository.shareTrip(trip.uuid)
+                .onSuccess { s ->
+                    val intent = Intent(Intent.ACTION_SEND).apply {
+                        type = "text/plain"
+                        putExtra(Intent.EXTRA_TEXT, getString(R.string.safety_share_text, s.url))
+                    }
+                    startActivity(Intent.createChooser(intent, getString(R.string.safety_share)))
+                }
+                .onFailure { toast(R.string.safety_error) }
+        }
+    }
+
+    private fun toast(res: Int) = Toast.makeText(requireContext(), res, Toast.LENGTH_SHORT).show()
+}
+
+/** Conjunto de Ferramentas de Segurança em folha inferior (captura 014), aberto pelo escudo e pelo Menu. */
+class SafetySheet : BottomSheetDialogFragment() {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        val b = SheetSafetyBinding.inflate(inflater, container, false)
+        b.safetyClose.setOnClickListener { dismiss() }
+        val nav = NavHostFragment.findNavController(requireParentFragment())
+        SafetyContent.tools.forEach { t ->
+            val r = ItemSimpleRowBinding.inflate(inflater, b.safetyRows, false)
+            r.simpleRowTitle.text = t.title
+            r.simpleRowSubtitle.text = t.subtitle
+            r.simpleRowSubtitle.isVisible = true
+            r.simpleRowContent.setOnClickListener {
+                dismiss()
+                when {
+                    t.title.contains("112") ->
+                        startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:112")))
+                    t.title == "Centro de segurança" || t.title.startsWith("Acompanhar") ->
+                        nav.navigate(R.id.safetyCenterFragment)
+                    else ->
+                        nav.navigate(R.id.infoFragment, bundleOf(InfoFragment.ARG_TITLE to t.title, InfoFragment.ARG_BODY to t.subtitle))
+                }
+            }
+            b.safetyRows.addView(r.root)
+        }
+        return b.root
+    }
+
+    companion object {
+        fun show(fragment: Fragment) = SafetySheet().show(fragment.childFragmentManager, "safety")
+    }
+}

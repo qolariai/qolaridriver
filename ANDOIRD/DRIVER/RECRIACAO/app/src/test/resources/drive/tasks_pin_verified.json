@@ -1,0 +1,181 @@
+{
+ "driverTasks": {
+  "driverState": {
+   "online": true,
+   "available": true,
+   "dispatchable": true,
+   "awaitingRequesterConfirmation": false,
+   "preferencesState": {
+    "isEnabled": false,
+    "isSet": false
+   }
+  },
+  "taskScopes": [
+   {
+    "blockingTasks": [
+     {
+      "taskId": "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44-pin",
+      "isCompleted": true,
+      "driverTaskDataUnion": {
+       "type": "singleTaskData",
+       "singleTaskData": {
+        "taskDataUnion": {
+         "type": "pinVerificationTaskData",
+         "pinVerificationTaskData": {
+          "pin": "4821",
+          "maxAttemptCount": 3,
+          "featureIdString": "pickup_pin_verification",
+          "globalProductType": "UBER_X",
+          "failureAction": {
+           "type": "pinEntryFailureActionCancelTrip",
+           "pinEntryFailureActionCancelTrip": {}
+          },
+          "viewData": [
+           {
+            "type": "pinEntryViewTextRow",
+            "pinEntryViewTextRow": {
+             "text": "Peça o PIN a Ana",
+             "size": "H2",
+             "position": "LEADING",
+             "style": "PRIMARY"
+            }
+           },
+           {
+            "type": "pinEntryViewTextRow",
+            "pinEntryViewTextRow": {
+             "text": "O passageiro vê o PIN na app Qolari.",
+             "size": "P",
+             "position": "LEADING",
+             "style": "SECONDARY"
+            }
+           },
+           {
+            "type": "pinEntryViewPinRow",
+            "pinEntryViewPinRow": {
+             "pinDigitCount": 4,
+             "position": "CENTER"
+            }
+           },
+           {
+            "type": "pinEntryViewErrorTextRow",
+            "pinEntryViewErrorTextRow": {
+             "errorForAttempt": [
+              "PIN errado. Tente outra vez.",
+              "PIN errado. Última tentativa.",
+              "PIN errado."
+             ]
+            }
+           }
+          ]
+         }
+        },
+        "taskSourceKeyOption": {
+         "type": "taskSourceKey",
+         "taskSourceKey": {
+          "taskSource": "DEMAND_JOB",
+          "taskSourceUuid": "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44"
+         }
+        }
+       }
+      }
+     }
+    ],
+    "nonBlockingTasks": [
+     {
+      "taskId": "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44-wait",
+      "isCompleted": false,
+      "driverTaskDataUnion": {
+       "type": "singleTaskData",
+       "singleTaskData": {
+        "taskDataUnion": {
+         "type": "waitTimeTaskData",
+         "waitTimeTaskData": {
+          "startTimeSec": 1792803737.0
+         }
+        },
+        "taskSourceKeyOption": {
+         "type": "taskSourceKey",
+         "taskSourceKey": {
+          "taskSource": "DEMAND_JOB",
+          "taskSourceUuid": "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44"
+         }
+        }
+       }
+      }
+     },
+     {
+      "taskId": "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44-pickup-location",
+      "isCompleted": false,
+      "driverTaskDataUnion": {
+       "type": "singleTaskData",
+       "singleTaskData": {
+        "taskDataUnion": {
+         "type": "locationTaskData",
+         "locationTaskData": {
+          "latitude": 38.7139,
+          "longitude": -9.1394,
+          "title": "Rossio",
+          "subtitle": "Rossio"
+         }
+        },
+        "taskSourceKeyOption": {
+         "type": "taskSourceKey",
+         "taskSourceKey": {
+          "taskSource": "DEMAND_JOB",
+          "taskSourceUuid": "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44"
+         }
+        }
+       }
+      }
+     }
+    ],
+    "completionTask": {
+     "taskId": "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44-pickup",
+     "isCompleted": false,
+     "source": "DEMAND_JOB",
+     "taskDataType": "pickupTaskData",
+     "jobOrdering": [
+      "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44"
+     ],
+     "coalescedDataUnion": {
+      "type": "pickupCoalescedTaskData",
+      "pickupCoalescedTaskData": {
+       "product": {
+        "globalProductType": "UBER_X",
+        "name": "Qolari X"
+       },
+       "info": {
+        "title": "Recolher Ana",
+        "subtitle": "Rossio"
+       }
+      }
+     },
+     "taskDataMap": {
+      "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44": {
+       "type": "pickupTaskData",
+       "pickupTaskData": {
+        "entity": {
+         "firstName": "Ana",
+         "lastName": "P",
+         "rating": 5.0
+        },
+        "waypoint": {
+         "uuid": "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44-pickup"
+        },
+        "driverUpfrontFare": {
+         "amount": "9,27 €"
+        }
+       }
+      }
+     }
+    },
+    "taskScopeMetadata": {
+     "presentationFramework": "DRIVER_TASKS"
+    }
+   }
+  ],
+  "meta": {
+   "lastModifiedTimeMs": 1792803738263.8945
+  }
+ }
+}

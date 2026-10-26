@@ -1,0 +1,92 @@
+{
+ "driverTasks": {
+  "driverState": {
+   "online": true,
+   "available": true,
+   "dispatchable": true,
+   "awaitingRequesterConfirmation": false,
+   "preferencesState": {
+    "isEnabled": false,
+    "isSet": false
+   }
+  },
+  "taskScopes": [
+   {
+    "blockingTasks": [],
+    "nonBlockingTasks": [
+     {
+      "taskId": "e0421d9b-4a60-44f2-8b72-8170b01ca969-dropoff-location",
+      "isCompleted": false,
+      "driverTaskDataUnion": {
+       "type": "singleTaskData",
+       "singleTaskData": {
+        "taskDataUnion": {
+         "type": "locationTaskData",
+         "locationTaskData": {
+          "latitude": 38.7742,
+          "longitude": -9.1342,
+          "title": "Aeroporto",
+          "subtitle": "Aeroporto"
+         }
+        },
+        "taskSourceKeyOption": {
+         "type": "taskSourceKey",
+         "taskSourceKey": {
+          "taskSource": "DEMAND_JOB",
+          "taskSourceUuid": "e0421d9b-4a60-44f2-8b72-8170b01ca969"
+         }
+        }
+       }
+      }
+     }
+    ],
+    "completionTask": {
+     "taskId": "e0421d9b-4a60-44f2-8b72-8170b01ca969-dropoff",
+     "isCompleted": false,
+     "source": "DEMAND_JOB",
+     "taskDataType": "dropoffTaskData",
+     "jobOrdering": [
+      "e0421d9b-4a60-44f2-8b72-8170b01ca969"
+     ],
+     "coalescedDataUnion": {
+      "type": "dropoffCoalescedTaskData",
+      "dropoffCoalescedTaskData": {
+       "product": {
+        "globalProductType": "UBER_X",
+        "name": "Qolari X"
+       },
+       "info": {
+        "title": "Deixar Ana",
+        "subtitle": "Aeroporto"
+       }
+      }
+     },
+     "taskDataMap": {
+      "e0421d9b-4a60-44f2-8b72-8170b01ca969": {
+       "type": "dropoffTaskData",
+       "dropoffTaskData": {
+        "entity": {
+         "firstName": "Ana",
+         "lastName": "P",
+         "rating": 5.0
+        },
+        "waypoint": {
+         "uuid": "e0421d9b-4a60-44f2-8b72-8170b01ca969-dropoff"
+        },
+        "driverUpfrontFare": {
+         "amount": "9,27 €"
+        }
+       }
+      }
+     }
+    },
+    "taskScopeMetadata": {
+     "presentationFramework": "DRIVER_TASKS"
+    }
+   }
+  ],
+  "meta": {
+   "lastModifiedTimeMs": 1792803735880.1025
+  }
+ }
+}

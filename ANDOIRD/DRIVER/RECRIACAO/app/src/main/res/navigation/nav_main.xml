@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Os ids dos separadores coincidem com os do menu da barra (bottom_nav.xml). O Menu é um grafo aninhado:
+         os ecrãs de Menu, Definições e Ajuda ficam todos "dentro" do separador Menu, que continua ativo. -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.qolari.drivereplica.ui.home.HomeFragment"
+        android:label="@string/tab_home" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.qolari.drivereplica.ui.login.WelcomeFragment"
+        android:label="@string/welcome_continue" />
+    <fragment
+        android:id="@+id/loginPhoneFragment"
+        android:name="com.qolari.drivereplica.ui.login.LoginPhoneFragment"
+        android:label="@string/login_phone_title" />
+    <fragment
+        android:id="@+id/loginCodeFragment"
+        android:name="com.qolari.drivereplica.ui.login.LoginCodeFragment"
+        android:label="@string/login_code_title" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.qolari.drivereplica.ui.manage.InfoFragment" />
+    <fragment
+        android:id="@+id/safetyCenterFragment"
+        android:name="com.qolari.drivereplica.ui.manage.SafetyCenterFragment" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.qolari.drivereplica.ui.home.MapFragment"
+        android:label="@string/home_open_map" />
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.qolari.drivereplica.ui.discover.DiscoverFragment"
+        android:label="@string/tab_discover" />
+    <fragment
+        android:id="@+id/earningsFragment"
+        android:name="com.qolari.drivereplica.ui.earnings.EarningsFragment"
+        android:label="@string/tab_earnings" />
+    <fragment
+        android:id="@+id/payoutsFragment"
+        android:name="com.qolari.drivereplica.ui.earnings.PayoutsFragment"
+        android:label="@string/payouts_title" />
+    <fragment
+        android:id="@+id/incentivesFragment"
+        android:name="com.qolari.drivereplica.ui.earnings.IncentivesFragment"
+        android:label="@string/incentives_title" />
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="com.qolari.drivereplica.ui.inbox.InboxFragment"
+        android:label="@string/tab_inbox" />
+
+    <navigation
+        android:id="@+id/menuTab"
+        android:label="@string/tab_menu"
+        app:startDestination="@id/menuFragment">
+        <fragment
+            android:id="@+id/menuFragment"
+            android:name="com.qolari.drivereplica.ui.tabs.MenuFragment"
+            android:label="@string/tab_menu" />
+        <fragment
+            android:id="@+id/helpFragment"
+            android:name="com.qolari.drivereplica.ui.help.HelpFragment"
+            android:label="@string/help_title" />
+        <fragment
+            android:id="@+id/supportFragment"
+            android:name="com.qolari.drivereplica.ui.support.SupportFragment"
+            android:label="@string/support_title" />
+        <fragment
+            android:id="@+id/vehiclesFragment"
+            android:name="com.qolari.drivereplica.ui.manage.VehiclesFragment" />
+        <fragment
+            android:id="@+id/vehiclesManageFragment"
+            android:name="com.qolari.drivereplica.ui.manage.VehiclesFragment" />
+        <fragment
+            android:id="@+id/documentsFragment"
+            android:name="com.qolari.drivereplica.ui.manage.DocumentsFragment" />
+        <fragment
+            android:id="@+id/aboutFragment"
+            android:name="com.qolari.drivereplica.ui.settings.AboutFragment"
+            android:label="@string/about_title" />
+        <fragment
+            android:id="@+id/settingsFragment"
+            android:name="com.qolari.drivereplica.ui.settings.SettingsFragment"
+            android:label="@string/settings_title" />
+        <fragment
+            android:id="@+id/accessibilityFragment"
+            android:name="com.qolari.drivereplica.ui.settings.AccessibilityFragment"
+            android:label="@string/settings_accessibility" />
+        <fragment
+            android:id="@+id/hearingFragment"
+            android:name="com.qolari.drivereplica.ui.settings.HearingFragment"
+            android:label="@string/a11y_hearing" />
+        <fragment
+            android:id="@+id/communicationFragment"
+            android:name="com.qolari.drivereplica.ui.settings.CommunicationFragment"
+            android:label="@string/comm_title" />
+        <fragment
+            android:id="@+id/navigationSettingsFragment"
+            android:name="com.qolari.drivereplica.ui.settings.NavigationSettingsFragment"
+            android:label="@string/nav_title" />
+        <fragment
+            android:id="@+id/soundsFragment"
+            android:name="com.qolari.drivereplica.ui.settings.SoundsFragment"
+            android:label="@string/sounds_title" />
+        <fragment
+            android:id="@+id/drivingPrefsFragment"
+            android:name="com.qolari.drivereplica.ui.settings.DrivingPrefsFragment"
+            android:label="@string/prefs_title" />
+        <fragment
+            android:id="@+id/airportQueueFragment"
+            android:name="com.qolari.drivereplica.ui.manage.AirportQueueFragment"
+            android:label="@string/queue_title" />
+        <fragment
+            android:id="@+id/businessProfileFragment"
+            android:name="com.qolari.drivereplica.ui.manage.BusinessProfileFragment"
+            android:label="@string/business_title" />
+        <fragment
+            android:id="@+id/appearanceFragment"
+            android:name="com.qolari.drivereplica.ui.settings.AppearanceFragment"
+            android:label="@string/appearance_title" />
+    </navigation>
+</navigation>

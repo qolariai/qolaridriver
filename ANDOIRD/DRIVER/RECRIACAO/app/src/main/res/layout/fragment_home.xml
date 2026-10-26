@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qd_background">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="96dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Aviso de falha no arranque (captura 117): barra escura com "Tente novamente". -->
+                <LinearLayout
+                    android:id="@+id/errorBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_banner_dark"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_warning"
+                        app:tint="@color/qd_core_white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:text="@string/home_banner_error"
+                        android:textColor="@color/qd_core_white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/btnBannerRetry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:text="@string/home_error_retry"
+                        android:textColor="@color/qd_core_white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Atalhos do topo (capturas 000/060): escudo de segurança e preferências. -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp">
+
+                    <ImageButton
+                        android:id="@+id/btnSafety"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circle_light"
+                        android:contentDescription="@string/menu_safety"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_shield"
+                        app:tint="@color/qd_core_blue600" />
+
+                    <ImageButton
+                        android:id="@+id/btnPreferences"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_circle_light"
+                        android:contentDescription="@string/home_preferences"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_filter"
+                        app:tint="@color/qd_ink" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/qd_ink"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/home_ready"
+                    android:textColor="@color/qd_ink"
+                    android:textSize="16sp" />
+
+                <!-- Ações necessárias (captura 060): só aparece quando o servidor devolve bloqueios. -->
+                <LinearLayout
+                    android:id="@+id/blockersCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_card_blockers"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/blockersTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/qd_ink"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_minus"
+                            app:tint="@color/qd_ink" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/home_actions_subtitle"
+                        android:textColor="@color/qd_core_red600"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/blockersList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+                <!-- Mapa: espaço reservado desenhado (MapPlaceholderView). -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mapCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/qd_tile"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <com.qolari.shared.map.GoogleMapView
+                        android:id="@+id/mapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageButton
+                        android:id="@+id/btnExpand"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/bg_circle_white"
+                        android:contentDescription="@string/home_open_map"
+                        android:elevation="3dp"
+                        android:padding="13dp"
+                        android:src="@drawable/ic_expand"
+                        app:tint="@color/qd_ink" />
+
+                    <ImageButton
+                        android:id="@+id/btnSearch"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/bg_circle_white"
+                        android:contentDescription="@string/map_search"
+                        android:elevation="3dp"
+                        android:padding="13dp"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/qd_ink" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Estado de erro (capturas 117/120): sem resposta do servidor no arranque. -->
+                <LinearLayout
+                    android:id="@+id/errorState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingStart="24dp"
+                    android:paddingTop="24dp"
+                    android:paddingEnd="24dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_circle_error"
+                        android:gravity="center"
+                        android:text="!"
+                        android:textColor="@color/qd_core_white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/home_error_title"
+                        android:textColor="@color/qd_ink"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/home_error_body"
+                        android:textColor="@color/qd_core_gray600"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- Secções com scroll (capturas 060_s1..s3). Conteúdo de exemplo. -->
+                <LinearLayout
+                    android:id="@+id/sections"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Botão fixo "Ficar online" (go_online_button na original): por cima do conteúdo, por baixo da barra. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/qd_background"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoOnline"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/home_go_online"
+            android:textColor="@color/qd_core_white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/qd_core_blue600"
+            app:cornerRadius="28dp"
+            app:icon="@drawable/ic_steering"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"
+            app:iconTint="@color/qd_core_white" />
+    </FrameLayout>
+</FrameLayout>

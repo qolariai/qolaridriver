@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qolari Lite</string>
+    <string name="home_search">Where to?</string>
+    <string name="home_menu">Menu</string>
+    <string name="home_saved_place">Home</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_wallet">Wallet</string>
+    <string name="menu_activity">Activity</string>
+    <string name="menu_manage_account">Manage account</string>
+    <string name="menu_promotions">Promotions</string>
+    <string name="menu_legal">Legal</string>
+    <string name="menu_sign_out">Sign out</string>
+    <string name="menu_safety">Safety</string>
+    <string name="menu_saved">Saved places</string>
+    <string name="menu_support">Support</string>
+    <string name="menu_extras">Business, family and Uber One</string>
+    <string name="menu_appearance">Appearance and language</string>
+    <string name="support_title">Support</string>
+    <string name="support_send">Send</string>
+    <string name="support_attach">Attach</string>
+    <string name="support_call">Call support</string>
+    <string name="safety_title">Safety</string>
+    <string name="ride_request">Request %1$s</string>
+    <string name="saved_title">Saved places</string>
+    <string name="saved_add">Add place</string>
+    <string name="saved_save">Save</string>
+    <string name="saved_remove">Remove</string>
+    <string name="appearance_title">Appearance and language</string>
+    <string name="appearance_language">Language</string>
+    <string name="appearance_language_pt">Portuguese</string>
+    <string name="appearance_language_en">English</string>
+    <string name="appearance_dark">Dark mode</string>
+    <string name="appearance_simple">Simple mode</string>
+</resources>

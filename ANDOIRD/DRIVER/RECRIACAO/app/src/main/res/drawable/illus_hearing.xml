@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ilustração própria (formas planas) para o topo de "Audição": passageira a falar com o motorista junto ao carro.
+     Não reproduz a arte da original, só a composição (captura 049). 360 x 244dp. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="244dp"
+    android:viewportWidth="360"
+    android:viewportHeight="244">
+    <!-- céu -->
+    <path android:fillColor="#F2B35E" android:pathData="M0,0 H360 V244 H0 Z" />
+    <path android:fillColor="#F8D58F" android:pathData="M0,0 H360 V90 H0 Z" />
+    <path android:fillColor="#FCEBC4" android:pathData="M70,40 a28,20 0 1,1 56,0 a28,20 0 1,1 -56,0 Z" />
+    <!-- edifícios -->
+    <path android:fillColor="#8C4A3C" android:pathData="M0,0 H110 V150 H0 Z" />
+    <path android:fillColor="#5E2F28" android:pathData="M70,0 H110 V150 H70 Z" />
+    <path android:fillColor="#3A1D1A" android:pathData="M12,30 h14 v18 h-14 Z M12,62 h14 v18 h-14 Z M44,30 h14 v18 h-14 Z M44,62 h14 v18 h-14 Z" />
+    <path android:fillColor="#E88E45" android:pathData="M218,52 H282 V150 H218 Z" />
+    <path android:fillColor="#2B1B18" android:pathData="M262,52 H300 V150 H262 Z" />
+    <path android:fillColor="#FFE9B0" android:pathData="M226,64 h6 v70 h-6 Z M238,64 h6 v70 h-6 Z M250,64 h6 v70 h-6 Z" />
+    <path android:fillColor="#F4EAD2" android:pathData="M330,40 H360 V100 H330 Z" />
+    <path android:fillColor="#2B1B18" android:pathData="M336,48 h24 v6 h-24 Z M336,64 h24 v6 h-24 Z M336,80 h24 v6 h-24 Z" />
+    <!-- árvores -->
+    <path android:fillColor="#4F6B50" android:pathData="M20,150 a42,40 0 1,1 90,0 Z" />
+    <path android:fillColor="#3F5A42" android:pathData="M180,150 a34,32 0 1,1 70,0 Z" />
+    <!-- estrada -->
+    <path android:fillColor="#4A4C55" android:pathData="M0,170 H360 V244 H0 Z" />
+    <path android:fillColor="#2A2A30" android:pathData="M0,170 H120 V186 H0 Z" />
+    <!-- carro -->
+    <path android:fillColor="#E27E3A" android:pathData="M96,244 L110,170 Q150,110 250,104 L360,104 V244 Z" />
+    <path android:fillColor="#F4EAD2" android:pathData="M120,176 Q160,116 252,110 L360,110 V122 L256,122 Q168,128 132,186 Z" />
+    <path android:fillColor="#C9622C" android:pathData="M170,200 H360 V244 H170 Z" />
+    <path android:fillColor="#3A5546" android:pathData="M236,118 H360 V170 H236 Z" />
+    <path android:fillColor="#9BB9A0" android:pathData="M236,118 H300 V140 H236 Z" />
+    <path android:fillColor="#2B1B18" android:pathData="M96,244 a28,28 0 0,1 56,0 Z" />
+    <!-- motorista -->
+    <path android:fillColor="#232328" android:pathData="M300,118 a22,22 0 1,1 0.01,0 Z" />
+    <path android:fillColor="#B8764F" android:pathData="M302,134 a16,18 0 1,1 0.01,0 Z" />
+    <path android:fillColor="#F1C53B" android:pathData="M284,170 Q304,148 330,170 V176 H284 Z" />
+    <path android:fillColor="#232328" android:pathData="M262,158 a14,14 0 1,1 28,0 a14,14 0 1,1 -28,0 Z M268,158 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0 Z" />
+    <!-- passageira -->
+    <path android:fillColor="#4B5360" android:pathData="M106,90 L120,92 L134,206 L120,214 Z" />
+    <path android:fillColor="#1F1F24" android:pathData="M124,88 Q150,78 184,92 L196,176 L176,184 L132,176 Z" />
+    <path android:fillColor="#5F7A55" android:pathData="M132,176 L180,184 L184,244 H138 Z" />
+    <path android:fillColor="#C98A62" android:pathData="M184,100 Q206,108 212,92 L218,96 Q210,122 184,116 Z" />
+    <path android:fillColor="#C9453A" android:pathData="M208,84 l12,-6 l8,16 l-12,6 Z" />
+    <path android:fillColor="#C98A62" android:pathData="M150,48 a16,18 0 1,1 0.01,0 Z" />
+    <path android:fillColor="#8E3F2E" android:pathData="M132,40 a26,24 0 1,1 48,-4 L176,76 L136,80 Z" />
+    <path android:fillColor="#F1C53B" android:pathData="M176,58 a4,5 0 1,0 0.01,0 Z" />
+</vector>

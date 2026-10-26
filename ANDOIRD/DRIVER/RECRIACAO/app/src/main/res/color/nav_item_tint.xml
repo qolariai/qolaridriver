@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Separadores: ativo #111111 e inativo gray600 (#727272), medidos na barra da original (capturas 036/064). -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/qd_nav_active" android:state_checked="true" />
+    <item android:color="@color/qd_core_gray600" />
+</selector>

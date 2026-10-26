@@ -1,0 +1,3237 @@
+[
+ {
+  "http": "POST",
+  "path": "/ramen/events/v2/ack",
+  "service": "streamgate/api/StreamgateApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/activity-platform/get-activity-detail-page",
+  "service": "edge/services/co_presentation/thrift/COPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/activity-platform/get-server-driven-banners",
+  "service": "edge/services/co_presentation/thrift/COPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/activity-platform/get-support-banners",
+  "service": "edge/services/co_presentation/thrift/COPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/ads/v1/track-event",
+  "service": "edge/services/adsgateway/AdsGatewayProxyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/assistive-onboarding/trigger-event",
+  "service": "edge/services/assistiveonboarding/AssistiveOnboardingApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/bd-token",
+  "service": "go/botdefenseruleenginehttp/BotdefenseRuleEngineHttpApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/bug-reporting/confirm-attachments",
+  "service": "bugreporting/BugReportingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/bug-reporting/get-categories",
+  "service": "bugreporting/BugReportingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/bug-reporting/get-parameters-by-jiraid",
+  "service": "bugreporting/BugReportingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/bug-reporting/get-reports-by-user",
+  "service": "bugreporting/BugReportingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/bug-reporting/submit-bug-report",
+  "service": "bugreporting/BugReportingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/confirm-employee-by-profile",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/create-opt-in-employee",
+  "service": "rtapi/services/buffet/BusinessApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/create-opt-in-employees-via-find-my-org",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/delete-employees",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/find-my-org-get-opt-in-options",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/find-my-org-get-pending-employees",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/find-my-org-send-verify-email",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/business/get-employees",
+  "service": "rtapi/services/buffet/BusinessApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/business/get-linking-incentive",
+  "service": "rtapi/services/buffet/BusinessApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/business/get-linking-pin-metadata",
+  "service": "rtapi/services/buffet/BusinessApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/is-user-eligible-for-admin-ingress",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/link-employees-via-find-my-org",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/link-user-to-concur",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/redeem-employee-invite-v2",
+  "service": "edge/services/u4b/PresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/business/support/resolve-flagged-trip",
+  "service": "rtapi/services/buffet/BusinessApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/checkout/expose/action-models",
+  "service": "edge/services/money/ordercheckout/OrderCheckoutApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/checkout/get-async-checkout-status",
+  "service": "edge/services/money/checkout/CheckoutApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/checkout/get-pre-checkout-actions",
+  "service": "edge/services/money/checkout/CheckoutApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/checkout/test/place-order",
+  "service": "edge/services/money/ordercheckoutdemo/CheckoutTestApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/cmp/get-user-encoded-strings-and-preferences",
+  "service": "rtapi/services/cmp/CMPApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/create-thread-by-ref-id",
+  "service": "rtapi/services/ump/UmpApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/device-token/create",
+  "service": "edge/services/communications/pushnotifications/PushNotificationsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/device-token/delete",
+  "service": "edge/services/communications/pushnotifications/PushNotificationsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/get-localization-file",
+  "service": "rtapi/services/febreze/FebrezeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/get-unsubscriptions",
+  "service": "edge/services/messagetrafficcontrol/MessageTrafficControlApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/message",
+  "service": "rtapi/services/ump/UmpApi"
+ },
+ {
+  "http": "PUT",
+  "path": "/rt/communications/message",
+  "service": "rtapi/services/ump/UmpApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/message-status",
+  "service": "rtapi/services/ump/UmpApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/communications/messages/{threadId}/{fromSequenceNumber}",
+  "service": "rtapi/services/ump/UmpApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/communications/payload/{threadId}/{messageId}",
+  "service": "rtapi/services/ump/UmpApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/perform-action",
+  "service": "rtapi/services/ump/UmpApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/set-unsubscriptions",
+  "service": "edge/services/messagetrafficcontrol/MessageTrafficControlApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/communications/thread-activity",
+  "service": "rtapi/services/ump/UmpApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/consumer-messaging/v1/claim-offer",
+  "service": "edge/services/rider/presentation/v1/consumermessaging/ConsumerMessagingPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/consumer-messaging/v1/get-messaging-components",
+  "service": "edge/services/rider/presentation/v1/consumermessaging/ConsumerMessagingPresentationApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/contacts/user/{userID}/contacts",
+  "service": "rtapi/services/help/ContactsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/contacts/v2/messageCount",
+  "service": "rtapi/services/help/ContactsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/contacts/v3/close-eats-chat-contact",
+  "service": "rtapi/services/help/ContactsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/contacts/v3/get-contact",
+  "service": "rtapi/services/help/ContactsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/contacts/v3/submit-contact-csat",
+  "service": "rtapi/services/help/ContactsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/contacts/v3/update-contact",
+  "service": "rtapi/services/help/ContactsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/contacts/v4/submit-contact-csat-feedback",
+  "service": "rtapi/services/help/ContactsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/cancel-callback",
+  "service": "edge/services/phone_support/PhoneSupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/create-callback",
+  "service": "edge/services/phone_support/PhoneSupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/get-callback-cancellation-reasons",
+  "service": "edge/services/phone_support/PhoneSupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/get-chat-info",
+  "service": "edge/services/bliss_chat/BlissChatApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/get-helphome-phone-support-context",
+  "service": "edge/services/phone_support/PhoneSupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/get-session-interactions-for-playback",
+  "service": "edge/services/bliss_policy_engine/BlissPolicyEngineApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/get-triage-entry-points",
+  "service": "edge/services/customerobsession/triage_experiment/TriageExperimentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/get-video-banner",
+  "service": "edge/services/bliss_video/BlissVideoApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/get-video-call",
+  "service": "edge/services/bliss_video/BlissVideoApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/help-nodes-discover",
+  "service": "edge/services/content_discovery/HelpNodesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/help-voice-search",
+  "service": "edge/services/content_discovery/HelpNodesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/join-video-call",
+  "service": "edge/services/bliss_video/BlissVideoApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/customer-obsession/queue-video-call",
+  "service": "edge/services/bliss_video/BlissVideoApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/daff/init-session",
+  "service": "edge/services/daff/DaffAPIApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/delegatemanagement/delete-delegation",
+  "service": "edge/services/u4b/delegatemanagement/DelegateManagementServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/devices/error-handling",
+  "service": "rtapi/services/devices/DevicesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/devices/exemption",
+  "service": "rtapi/services/devices/DevicesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/devices/results",
+  "service": "rtapi/services/devices/DevicesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/devices/task",
+  "service": "rtapi/services/devices/DevicesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/devices/upsert",
+  "service": "rtapi/services/devices/DevicesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/devices/upsert-v2",
+  "service": "identity/qolaridevices/QolaridevicesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/driver-compliance/documents",
+  "service": "edge/services/bibliotek/BibliotekApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/fetch-driver-guides",
+  "service": "rtapi/services/learning/LearningApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/fetch-topic",
+  "service": "edge/services/learningv2/LearningV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/get-delivery-reservation-confirmation-screen",
+  "service": "edge/services/driver/presentation/driverapp/reservation/ReservationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/get-reservations",
+  "service": "edge/services/driver/presentation/driverapp/reservation/ReservationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/get-reserve-confirmation-screen",
+  "service": "edge/services/driver/presentation/driverapp/reservation/ReservationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/get-reserve-strike-warning-screen",
+  "service": "edge/services/driver/presentation/driverapp/reservation/ReservationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/learning/evaluate-assessment",
+  "service": "edge/services/learningv2/LearningV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/learning/fetch-content-submission",
+  "service": "edge/services/learningv2/LearningV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/learning/fetch-learning-center",
+  "service": "edge/services/learningv2/LearningV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/learning/fetch-mobile-alerts",
+  "service": "edge/services/learningv2/LearningV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/learning/fetch-quiz",
+  "service": "edge/services/learningv2/LearningV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/learning/get-feature-presentation",
+  "service": "edge/services/learningv2/LearningV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/learning/submit-content",
+  "service": "edge/services/learningv2/LearningV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/learning/submit-survey",
+  "service": "edge/services/learningv2/LearningV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/log-content-impression",
+  "service": "rtapi/services/learning/LearningApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/rtid-challenge-impression",
+  "service": "rtapi/services/safetydriver/DriverVerificationApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/drivers/share-session-status",
+  "service": "rtapi/services/safetydriver/DriverShareApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/start-share",
+  "service": "rtapi/services/safetydriver/DriverShareApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/stop-share",
+  "service": "rtapi/services/safetydriver/DriverShareApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/v2/emergency-end-trips",
+  "service": "rtapi/services/safetydriver/DriverEmergencyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/drivers/v3/verify-identity",
+  "service": "rtapi/services/safetydriver/DriverVerificationApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/earnings/v3/trip/{tripUUID}",
+  "service": "rtapi/services/earnings/TripsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v1/address-entry-form",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/eater-app-launch",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/eater-items",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/eater/cart",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/eater/ratings/submit",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v1/eater/subscription/view/confirmationModal",
+  "service": "edge/services/eats/presentation/eater/shared/subscription/SubscriptionApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v1/eater/{eaterUuid}/get-saved-delivery-locations",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/eater/{eaterUuid}/survey",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/eaters/orders/report-order-not-received",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/eaters/orders/report-order-received",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v1/eaters/orders/{workflowUUID}/get-delivery-time-confirmation-info",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/eaters/push-menu-actions",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/eaters/{eaterUuid}/push-orders",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/feed-items-update",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/get-marketing-feed",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v1/get-validations-for-location",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v1/pin-refinement-context",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v1/value-hub",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v2/chain-store/{name}",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v2/eater-store/{uuid}",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/eater/ratings/pending",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v2/eater/{eaterUuid}/promotions",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/eaters/fetch-geosurvey",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/eaters/orders/{uuid}/fulfillment-issues/ack",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/eaters/orders/{uuid}/resume",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/eaters/submit-geosurvey",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/eaters/{eaterUuid}/push-orders",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/marketplaces",
+  "service": "edge/services/eats/presentation/eater/shared/getmarketplace/GetMarketplaceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/order-estimates",
+  "service": "rtapi/services/eats/EatsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v2/ott/get-active-courier-account",
+  "service": "edge/services/overthetop/OTTEdgeApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/eats/v2/ott/get-courier-payment-details",
+  "service": "edge/services/overthetop/OTTEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/ott/set-cpp-fallback-payment-method",
+  "service": "edge/services/overthetop/OTTEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/eats/v2/ott/update-tokens-verification-state",
+  "service": "edge/services/overthetop/OTTEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/employee/resend-invites",
+  "service": "edge/services/u4b/EmployeeServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/employeelinking/get-join-account-sdui-content",
+  "service": "edge/services/employeelinking/EmployeeLinkingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/employeelinking/get-post-linking-sdui-content",
+  "service": "edge/services/employeelinking/EmployeeLinkingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/engagement/rider/eligible-for-premium-support",
+  "service": "rtapi/services/engagement_rider/EngagementRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/expensecodes/v2/get-expense-codes-metadata-for-user",
+  "service": "u4b/enigma/ExpenseCodesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/expensecodes/v2/search-expense-codes-for-user",
+  "service": "u4b/enigma/ExpenseCodesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/expensecodes/v2/validate-expense-codes",
+  "service": "u4b/enigma/ExpenseCodesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/external-rewards/create-link/",
+  "service": "edge/services/externalrewardsprograms/ExternalRewardsProgramsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/external-rewards/delete-link/",
+  "service": "edge/services/externalrewardsprograms/ExternalRewardsProgramsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/external-rewards/get-account-linking-screens/",
+  "service": "edge/services/externalrewardsprograms/ExternalRewardsProgramsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/external-rewards/get-celebration-screens/",
+  "service": "edge/services/externalrewardsprograms/ExternalRewardsProgramsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/external-rewards/get-program-details-screens/",
+  "service": "edge/services/externalrewardsprograms/ExternalRewardsProgramsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/external-rewards/get-programs/",
+  "service": "edge/services/externalrewardsprograms/ExternalRewardsProgramsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/external-rewards/update-earning-program-preference/",
+  "service": "edge/services/externalrewardsprograms/ExternalRewardsProgramsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/add-family-members",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/create-family-group",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/create-family-policy",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/decline-family-invite",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/decrypt-family-uuid",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/delete-family-group",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/delete-family-member",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/delete-family-policy",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/get-all-members-by-user-uuid",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/get-content",
+  "service": "edge/services/familyContent/GloriaApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/get-family-group",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/get-family-policies",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/get-member-details",
+  "service": "edge/services/familyMemberDetails/FamilyMemberDetailsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/invite-family-members",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/invite-family-organizer",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/invite/redeem",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/save-member-details-preference",
+  "service": "edge/services/familyMemberDetails/FamilyMemberDetailsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/submit-partner-consent",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/update-family-group",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/family/update-family-policy",
+  "service": "rtapi/services/family/FamilyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/finprod/finprod-rewards-eligibility/eligibility/client-rewards/rewards-popup",
+  "service": "edge/services/finprodrewardseligibility/ClientRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/finprod/finprod-rewards-eligibility/eligibility/eligibility-service/enroll-program",
+  "service": "edge/services/finprodrewardseligibility/EligibilityServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-aggregate-performance-metrics",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-campagin-view",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-driver-action-log-v2",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-driver-current-supply",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-driver-daily-earnings-with-trips",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-driver-statement",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-drivers-feedback-count",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-feedback-overview",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-fleet-drivers-v2",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-fleet-earnings-v2",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-is-authorized-fleet-partner-v2",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-partner-campaign-view",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-partner-info-v2",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-partner-promotion-view",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-partner-statement",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-partner-statement-history",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-pending-regulatory-documents-v2",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-survey-questions",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/get-trip-earnings",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/mobile-ack",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/save-survey-answers",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/fleet/sign-regulatory-documents",
+  "service": "rtapi/services/fleet/FleetApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/hcv/data",
+  "service": "edge/services/hcv/HcvV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/hcv/getHCVHomeData",
+  "service": "edge/services/hcv/HcvV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/hcv/getIdentityHubContent",
+  "service": "edge/services/hcv/HcvV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/hcv/getSupplyInfo",
+  "service": "edge/services/hcv/HcvV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/hcv/hcvLiveDeparturesTracker",
+  "service": "edge/services/hcv/HcvV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/hcv/riderEnterHCVMode",
+  "service": "edge/services/hcv/HcvV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/hcv/route-details",
+  "service": "edge/services/hcv/HcvV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/hcv/routes",
+  "service": "edge/services/hcv/HcvV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity-verification/get-mobile-verification-status",
+  "service": "edge/services/identityVerification/IdentityVerificationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity-verification/load-mobile-presentation",
+  "service": "edge/services/identityVerification/IdentityVerificationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity-verification/submit-mobile-step-data",
+  "service": "edge/services/identityVerification/IdentityVerificationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity/auth/issue-web-auth-cookies",
+  "service": "edge/services/authService/AuthServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity/oauth2/add-sso-id",
+  "service": "rtapi/services/identity/IdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity/oauth2/get-apps-not-in-device-session-group",
+  "service": "rtapi/services/identity/IdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity/oauth2/group-device-sessions",
+  "service": "rtapi/services/identity/IdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity/oauth2/invalidate-token",
+  "service": "rtapi/services/identity/IdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity/oauth2/revokesession",
+  "service": "rtapi/services/identity/IdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity/oauth2/sso-exchange-token",
+  "service": "rtapi/services/identity/IdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity/oauth2/token",
+  "service": "rtapi/services/identity/IdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/identity/oauth2/user-id-token",
+  "service": "rtapi/services/identity/IdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/incidents/feedback",
+  "service": "edge/services/trafficIncidentService/TrafficIncidentServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/incidents/ugcreport",
+  "service": "edge/services/trafficIncidentService/TrafficIncidentServiceApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/incidents/ugcreports/{agentUuid}",
+  "service": "edge/services/trafficIncidentService/TrafficIncidentServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/intercity-confirmation-screen/get-intercity-confirmation-screen",
+  "service": "edge/services/rider/product/intercity/IntercityConfirmationScreenApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/intercity-presentation/get-intercity-landing-screen",
+  "service": "edge/services/intercityPresentation/IntercityPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/intercity-presentation/get-intercity-nava-home",
+  "service": "edge/services/intercityPresentation/IntercityPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/intercity-presentation/get-intercity-where-to-info",
+  "service": "edge/services/intercityPresentation/IntercityPresentationApi"
+ },
+ {
+  "http": "DELETE",
+  "path": "/rt/invitations/helix/{userUUID}/contacts",
+  "service": "rtapi/services/polaris/PolarisApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/invitations/helix/{userUUID}/contacts",
+  "service": "rtapi/services/polaris/PolarisApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/invitations/helix/{userUUID}/nominees",
+  "service": "rtapi/services/polaris/PolarisApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/invitations/helix/{userUUID}/privacy",
+  "service": "rtapi/services/polaris/PolarisApi"
+ },
+ {
+  "http": "PUT",
+  "path": "/rt/invitations/helix/{userUUID}/privacy",
+  "service": "rtapi/services/polaris/PolarisApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/location-resolver/v1/getSemanticLocation",
+  "service": "edge/services/location_resolver/thrift/LocationResolverApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/locations/v1/categories/getCategories",
+  "service": "rtapi/services/location/LocationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/locations/v1/upload-driver-device-locations",
+  "service": "edge/services/locations/LocationsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/locations/v2/details",
+  "service": "rtapi/services/location/LocationApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/locations/v2/reversegeocode",
+  "service": "rtapi/services/location/LocationApi"
+ },
+ {
+  "http": "DELETE",
+  "path": "/rt/locations/v3/labeled",
+  "service": "rtapi/services/location/LocationApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/locations/v3/labeled",
+  "service": "rtapi/services/location/LocationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/locations/v3/labeled",
+  "service": "rtapi/services/location/LocationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/locations/v3/labeled/all",
+  "service": "rtapi/services/location/LocationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/locations/v4/reversegeocode",
+  "service": "rtapi/services/location/LocationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/accept-incentive",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/cancel-membership",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/claim-offer",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/evaluate-offer-eligibility",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/get-checkout-modal",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/get-membership-hub",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/get-membership-hub-by-program",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/get-membership-modal",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/get-membership-survey",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/pause-membership",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/resume-membership",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/submit-membership-survey",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/update-membership-metadata",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/membership/update-shared-membership",
+  "service": "edge/services/membership/MembershipEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/mobile-integration-test/{name}",
+  "service": "edge/services/proto/integrationTest/MobileIntegrationTestApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/mobile/action-execution-log",
+  "service": "edge/services/blackswanMitigator/BlackswanMitigatorApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/notifier/device-tokens",
+  "service": "rtapi/services/notifier/NotifierApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/onboarding/documents",
+  "service": "rtapi/services/onboarding/OnboardingApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/onboarding/get-onboarding-status",
+  "service": "rtapi/services/onboarding/OnboardingApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/onboarding/get-rider-to-driver-campaign",
+  "service": "rtapi/services/onboarding/OnboardingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/arrears/get",
+  "service": "edge/services/payment/arrears/ArrearsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/collection/orders/create",
+  "service": "rtapi/services/paymentcollection/PaymentCollectionApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/collection/orders/create-by-job-uuid",
+  "service": "rtapi/services/paymentcollection/PaymentCollectionApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/collection/orders/paid",
+  "service": "rtapi/services/paymentcollection/PaymentCollectionApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/collection/orders/pay",
+  "service": "rtapi/services/paymentcollection/PaymentCollectionApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/enrollProgram",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getAmexRewardsPopup",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getPartnerRewardEnrollmentStatus",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getPartnerRewards",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getPartnerRewardsDetailsPage",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getQolariBalances",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getQolariCashHub",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getQolariCashHubDetailsPage",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getQolariMoneyHub",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getRewardsPopup",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getTransactionDetails",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashrewards/getTransactionHistory",
+  "service": "edge/services/qolaricashrewards/QolariCashRewardsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/createfinancialaccount",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/get-account-limits-page",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/get-add-funds-page",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/get-award-celebration-details",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/get-information-page",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/get-notification-settings-page",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/get-points-conversion-options",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/get-statement",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/getfinancialaccountsinfo",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/list-statements",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/purchase",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/qolaricashv2/update-notification-settings",
+  "service": "edge/services/qolaricashv2/QolariCashV2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/spender-arrears/get-consolidated-arrears-v2",
+  "service": "edge/services/payment/arrears/ArrearsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/spender-arrears/get-spender-arrears-paywall-presentation",
+  "service": "edge/services/payment/arrears/ArrearsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/collect-bill",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/create-tip",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/create-tip-order",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/get-auth-url",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/payment/v3/get-unpaid-bills",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profile-finalize",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profiles",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "PUT",
+  "path": "/rt/payment/v3/payment-profiles",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/payment/v3/payment-profiles",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profiles/balance",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profiles/default",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profiles/get-user-consent-modal",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profiles/payment-profile-network-tokenize",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profiles/perform-2fa-authorization",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profiles/validate-with-code",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "DELETE",
+  "path": "/rt/payment/v3/payment-profiles/{id}",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/payment/v3/payment-profiles/{paymentProfileUUID}/backing-instruments",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profiles/{paymentProfileUUID}/deposit",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/v3/payment-profiles/{paymentProfileUUID}/send-validation-code",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/payment/v3/spender-arrears-payments",
+  "service": "rtapi/services/payments/PaymentApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/wallet/configV2",
+  "service": "rtapi/services/wallet/WalletApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/wallet/configV3",
+  "service": "rtapi/services/wallet/WalletApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/wallet/view",
+  "service": "rtapi/services/wallet/WalletApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payment/wallet/view/v2",
+  "service": "rtapi/services/wallet/WalletApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments-compliance/v1/oe/hydrate",
+  "service": "edge/services/mobileorchestrator/ComplianceMobileOrchestratorApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments-compliance/v1/uc/submit",
+  "service": "edge/services/mobileorchestrator/ComplianceMobileOrchestratorApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments-compliance/v1/uc/updateusertonextkyclevel",
+  "service": "edge/services/mobileorchestrator/ComplianceMobileOrchestratorApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments-compliance/v2/uc/fetchkycverificationstatus",
+  "service": "edge/services/mobileorchestrator/ComplianceMobileOrchestratorApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments-compliance/v2/uc/submit",
+  "service": "edge/services/mobileorchestrator/ComplianceMobileOrchestratorApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/cancel-earner-arrears-payment",
+  "service": "edge/services/earnerArrears/EarnerArrearsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/get-collection-orders",
+  "service": "edge/services/earnerArrears/EarnerArrearsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/get-earner-arrears-information",
+  "service": "edge/services/earnerArrears/EarnerArrearsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/onboarding/get-payment-onboarding-menu",
+  "service": "edge/services/paymentonboardingmenu/PaymentOnboardingMenuApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/onboarding/list-onboarding-flows-for-collection",
+  "service": "edge/services/listonboardingflows/ListOnboardingFlowsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/onboarding/list_onboarding_flows",
+  "service": "edge/services/paymentsonboarding_paymentsettings/PaymentSettingsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/payments/onboarding/list_onboarding_flows_by_use_case",
+  "service": "edge/services/paymentsonboarding_paymentsettings/PaymentSettingsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/onboarding/perform_step",
+  "service": "edge/services/paymentsonboarding_payment_method_lifecycle/PaymentMethodLifecycleWorkflowApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/selection/anyusecase",
+  "service": "edge/services/payment_selection_presentation/PaymentSelectionPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/selection/bar",
+  "service": "edge/services/payment_selection_presentation/PaymentSelectionPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/selection/optionchanged",
+  "service": "edge/services/payment_selection_presentation/PaymentSelectionPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/selection/switcher",
+  "service": "edge/services/payment_selection_presentation/PaymentSelectionPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/v3/paywall-is-applicable",
+  "service": "edge/services/paywall/PaywallApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/wallet/account-details",
+  "service": "edge/services/walletgateway/WalletGatewayProxyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/wallet/account-feed",
+  "service": "edge/services/walletgateway/WalletGatewayProxyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/wallet/home",
+  "service": "edge/services/walletgateway/WalletGatewayProxyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/wallet/sdui-feature",
+  "service": "edge/services/walletgateway/WalletGatewayProxyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/payments/wallet/transaction-details",
+  "service": "edge/services/walletgateway/WalletGatewayProxyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/plus/pass/execute-membership-transaction",
+  "service": "rtapi/services/multipass/PlusApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/plus/pass/get-subs-manage-view",
+  "service": "rtapi/services/multipass/PlusApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/plus/pass/post-feedback-log",
+  "service": "rtapi/services/multipass/PlusApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/plus/pass/post-purchase-pass-offer",
+  "service": "rtapi/services/multipass/PlusApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/plus/pass/refund",
+  "service": "rtapi/services/multipass/PlusApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/plus/pass/transition-membership",
+  "service": "rtapi/services/multipass/PlusApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/plus/pass/update-renew-status",
+  "service": "rtapi/services/multipass/PlusApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/preferredcurrency/getPCPProfileSelectionPage",
+  "service": "edge/services/preferredcurrency/PreferredCurrencyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/preferredcurrency/getPaySelTile",
+  "service": "edge/services/preferredcurrency/PreferredCurrencyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/preferredcurrency/getPreferredCurrencyDialogView",
+  "service": "edge/services/preferredcurrency/PreferredCurrencyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/preferredcurrency/getRequestBlockerDialogView",
+  "service": "edge/services/preferredcurrency/PreferredCurrencyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/privacypresentation/get-consents-to-display-v3",
+  "service": "edge/services/privacypresentation/PrivacyPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/privacypresentation/update-consent-v2",
+  "service": "edge/services/privacypresentation/PrivacyPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profile-provider/remove-delegatee-from-profile",
+  "service": "edge/services/u4b/ProfileProviderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/add-delegatee-to-profile",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/get-selected-profile",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/remove-delegatee-from-profile",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/select-profile",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/v1/self-serve-delete",
+  "service": "u4b/u4bpresentation/profile/ProfileServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/v2/create-profile",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/v2/delete-profile",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/v2/get-profiles",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/v2/patch-profile",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/v2/request-verification",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/profiles/validate-profile-is-delegatable",
+  "service": "edge/services/u4b/ProfilesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/referrals/bulk-invitation",
+  "service": "rtapi/services/referrals/ReferralsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/referrals/campaign",
+  "service": "rtapi/services/referrals/ReferralsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/referrals/create-directed-referral-code-links",
+  "service": "rtapi/services/referrals/ReferralsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/referrals/create-indirect-invite",
+  "service": "rtapi/services/referrals/ReferralsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/referrals/get-guarantee-tracker-cards",
+  "service": "rtapi/services/referrals/ReferralsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/referrals/get-guarantee-tracker-details-view",
+  "service": "rtapi/services/referrals/ReferralsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/referrals/get-referral-dashboard",
+  "service": "rtapi/services/referrals/ReferralsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/referrals/get-referral-dashboard-invites",
+  "service": "rtapi/services/referrals/ReferralsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/request-blockers/blocker-callback/",
+  "service": "edge/services/request_blockers/GetRequestBlockersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/request-blockers/get-batch-blockers/",
+  "service": "edge/services/request_blockers/GetRequestBlockersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/request-blockers/get-blockers/",
+  "service": "edge/services/request_blockers/GetRequestBlockersApi"
+ },
+ {
+  "http": "PUT",
+  "path": "/rt/reservation/batch-create",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/extend-check-in",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/get-airlines-by-airport",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/get-rapu-pickup-access-point",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/reservation/list",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "PUT",
+  "path": "/rt/reservation/new",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/plan",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/predict-reservation-time",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/query-flights-list",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/see_terms",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/send-communication-notification",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/settings",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/upsells",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/reservation/v2/feasibility",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/value_props",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "DELETE",
+  "path": "/rt/reservation/{reservationUUID}",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/reservation/{reservationUUID}",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/{reservationUUID}/cancellation-info",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/reservation/{reservationUUID}/review",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "PUT",
+  "path": "/rt/reservation/{reservationUUID}/update-reservation",
+  "service": "rtapi/services/scheduledrides/ScheduledRidesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/rider-app-orders/create/",
+  "service": "edge/services/orders/OrdersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/log-hub-user-interaction",
+  "service": "edge/services/hubuserinteraction/HubUserInteractionApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/map-change",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/notify-driver-spotlight",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/offer/accept",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/offer/ack",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/offer/expire",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/offer/reject",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/riders/pin-verification-requirement",
+  "service": "rtapi/services/safety/PinVerificationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/pin-verification-requirement",
+  "service": "rtapi/services/safety/PinVerificationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/pre-trip-map",
+  "service": "rtapi/services/helium/HeliumApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/safety-contacts",
+  "service": "rtapi/services/safety/ShareApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/riders/safety-contacts",
+  "service": "rtapi/services/safety/ShareApi"
+ },
+ {
+  "http": "PATCH",
+  "path": "/rt/riders/safety-contacts",
+  "service": "rtapi/services/safety/ShareApi"
+ },
+ {
+  "http": "DELETE",
+  "path": "/rt/riders/safety-contacts/{contactId}",
+  "service": "rtapi/services/safety/ShareApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/v2/{riderUUID}/select-payment-profile",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/accept-fare-split",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/add-expense-info",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/app-launch",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/client-status",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/create-draft-order",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/decline-fare-split",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/riders/{riderUUID}/dispatch-view",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/edit-pickup-location",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/fare-estimate",
+  "service": "rtapi/services/pricing/PricingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/invite-fare-split",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/pickup",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/resolve-location",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/select-payment-options",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/select-profile",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/select-voucher",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/status",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/uninvite-fare-split",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/update-pickup-location",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/upload-locations",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riders/{riderUUID}/v2/pickup",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/risk-presentation/collect-risk-nudge-event",
+  "service": "edge/services/riskpresentation/RiskPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/risk-presentation/get-card-selection-view",
+  "service": "edge/services/riskpresentation/RiskPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/risk-presentation/get-recovery-hub-view",
+  "service": "edge/services/riskpresentation/RiskPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/risk-presentation/get-risk-nudge-view",
+  "service": "edge/services/riskpresentation/RiskPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/risk-presentation/get-risk-presentation-view",
+  "service": "edge/services/riskpresentation/RiskPresentationApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/risk/verifyidentity",
+  "service": "edge/services/decide_verify_identity_risk/RiskApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riskchallenges/checkchallengeconditions",
+  "service": "edge/services/risk_challenges/RiskChallengesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riskchallenges/initiatechallenge",
+  "service": "edge/services/risk_challenges/RiskChallengesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/riskchallenges/verifychallenge",
+  "service": "edge/services/risk_challenges/RiskChallengesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/rosetta2/translate",
+  "service": "edge/services/rosetta2/Rosetta2Api"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/routing/fetch-routelines",
+  "service": "rtapi/services/routing/RoutingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/routing/predict-bulk",
+  "service": "rtapi/services/routing/RoutingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/close-live-stream-session",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/create-enrollment",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/create-live-stream-session",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/createcontact",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/get-enrollments",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/safety-media-platform/get-in-app-recording-settings-for-user",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/get-in-app-recording-settings-v2-for-user",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/safety-media-platform/get-live-stream-session",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/safety-media-platform/get-privacy-filtered-trip-video",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/safety-media-platform/get-public-key",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/safety-media-platform/get-record-my-ride-data-orders",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/safety-media-platform/get-report-flow-categories",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/safety-media-platform/is-audio-recording-enabled-for-user",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/safety-media-platform/is-audio-recording-experiment-enabled",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/save-trip-recording-session-data",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/save-user-device-features",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/set-audio-recording-enabled-for-user",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/set-in-app-recording-settings-for-user",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/set-in-app-recording-settings-v2-for-user",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/sign-media-fingerprint",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/update-enrollment",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/update-live-stream-readiness",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/validate-public-key",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-media-platform/verify-mandatory-recording-compliance",
+  "service": "edge/services/safetymediaplatform/internal/SafetyMediaPlatformInternalServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-ride-check/get-ride-check-metadata",
+  "service": "edge/services/safetyridecheck/SafetyRideCheckApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-ride-check/post-feedback",
+  "service": "edge/services/safetyridecheck/SafetyRideCheckApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety-ride-check/trigger",
+  "service": "edge/services/safetyridecheck/SafetyRideCheckApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/rider/womenpreference/get-women-preference-screen",
+  "service": "edge/services/safety/presentation/rider/womenpreference/WomenPreferenceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-rider-safety-hub",
+  "service": "edge/services/safety/presentation/shared/canvas/CanvasApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-rider-toolkit-data",
+  "service": "edge/services/safety/presentation/shared/canvas/CanvasApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-safety-canvas-list-view",
+  "service": "edge/services/safety/presentation/shared/canvas/CanvasApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-safety-hotpocket-data",
+  "service": "edge/services/safety/presentation/shared/canvas/CanvasApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-safety-hub-data",
+  "service": "edge/services/safety/presentation/shared/canvas/CanvasApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-safety-mode-toolkit-data",
+  "service": "edge/services/safety/presentation/shared/canvastoolkit/CanvasToolkitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-safety-toolbar-data",
+  "service": "edge/services/safety/presentation/shared/canvastoolbar/CanvasToolbarApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-safety-toolkit-data",
+  "service": "edge/services/safety/presentation/shared/canvastoolkit/CanvasToolkitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-safety-toolkit-passive-feature-data",
+  "service": "edge/services/safety/presentation/shared/canvastoolkit/CanvasToolkitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/get-sfc-course-data",
+  "service": "edge/services/safety/presentation/shared/canvas/CanvasApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/is-eligible-for-new-rider-safety-hub",
+  "service": "edge/services/safety/presentation/shared/canvas/CanvasApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/presentation/shared/canvas/update-safety-preferences",
+  "service": "edge/services/safety/presentation/shared/canvas/CanvasApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/safety-home-canvas/get-sfpush-payload-types-rider",
+  "service": "edge/services/safety/canvas/CanvasApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/safety-state-framework/get-conditionals",
+  "service": "edge/services/safety/safetystateframework/SafetyStateFrameworkApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/safety-state-framework/get-scoped-conditionals",
+  "service": "edge/services/safety/safetystateframework/SafetyStateFrameworkApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/safety-state-framework/publish-state",
+  "service": "edge/services/safety/safetystateframework/SafetyStateFrameworkApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/womenpreference/get-value-prop-screen",
+  "service": "edge/services/safety/womenpreferenceonboarding/WomenPreferenceOnboardingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/safety/womenpreference/update-onboarding-status-v2",
+  "service": "edge/services/safety/womenpreferenceonboarding/WomenPreferenceOnboardingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/scaled-offers/get-scaled-offers/",
+  "service": "edge/services/scaledoffers/v1/scaledoffers/ScaledOffersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/scaled-offers/scaled-offer-action/",
+  "service": "edge/services/scaledoffers/v1/scaledoffers/ScaledOffersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/sharetrip/fetch",
+  "service": "rtapi/services/safety/ShareApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/shopping-service/nearby_vehicles/",
+  "service": "edge/services/nearbyvehicles/NearbyVehiclesApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/silk-screen/confirm-login",
+  "service": "edge/services/silkscreen/SilkScreenApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/silk-screen/prepare-field",
+  "service": "rtapi/services/silkscreen/SilkScreenApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/silk-screen/submit-form",
+  "service": "rtapi/services/silkscreen/SilkScreenApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/subscriptions/activate-funded-offer",
+  "service": "edge/services/subscriptions/SubscriptionsEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/subscriptions/get-end-membership-screen",
+  "service": "edge/services/subscriptions/SubscriptionsEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/subscriptions/get-membership-management-menu",
+  "service": "edge/services/subscriptions/SubscriptionsEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/subscriptions/get-membership-partner-offer-info",
+  "service": "edge/services/subscriptions/SubscriptionsEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/subscriptions/get-offer-selection-screen",
+  "service": "edge/services/subscriptions/SubscriptionsEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/subscriptions/get-user-membership-status",
+  "service": "edge/services/subscriptions/SubscriptionsEdgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/cancel-appointment",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/check-in-appointment",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/create-direct-dial-phone-context",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/end-chat",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-appointment",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-booked-appointments",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-call-node-options",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-call-preference-options",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-embedded-csat-survey",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-feedback",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-predictive-entries",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-schedule-appointment-preview",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-site-details",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-site-details-summary",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-sites",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-support-nodes",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-trip",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-trip-history",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/get-trip-receipt",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/initiate-chat",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/schedule-appointment",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/submit-embedded-csat-survey",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/transition-workflow-state-v2",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/support/upload-ticket-image-v2",
+  "service": "rtapi/services/support/SupportApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/surge/batch",
+  "service": "edge/services/pricing/SurgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-allowed-payment-profiles",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-line-stop-arrivals",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-line-stop-headsign-arrivals",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-nearby-line-stops",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-nearby-stops",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-partner-auth-token",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-service-alert",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-stop-details",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-ticket-products",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-ticket-stations",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-transit-pass-wallet-info",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/get-trip-plan",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/purchase-tickets",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/refresh-stop-details",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/transit/update-saved-transit-objects",
+  "service": "rtapi/services/transit/TransitApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/tripcontext/regionId",
+  "service": "edge/services/tripcontext/TripContextRegionResolverApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/trips/rider-set-participant",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/trips/{tripUUID}/mid-trip-fare-estimate",
+  "service": "rtapi/services/pricing/PricingApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/trips/{tripUUID}/rider-cancel",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/trips/{tripUUID}/rider-redispatch-new-driver",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/trips/{tripUUID}/rider-set-info",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/trips/{tripUUID}/rider-set-interaction-types",
+  "service": "rtapi/services/marketplacerider/MarketplaceRiderApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/trips/{tripUUID}/share",
+  "service": "rtapi/services/safety/ShareApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/trips/{tripUUID}/share-yo-ride",
+  "service": "rtapi/services/safety/ShareApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/u4b-presentation/get-benefit-celebration-screen",
+  "service": "edge/services/u4bpresentation/benefits/BenefitsServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/u4b-presentation/get-find-my-org-verification-screen",
+  "service": "edge/services/u4bpresentation/findmyorg/FindMyOrgServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/ucards-provisioning/get-account-details",
+  "service": "edge/services/ucardsprovisioning/UCardsProvisioningApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/ucards-provisioning/get-encryptedcard-details",
+  "service": "edge/services/ucardsprovisioning/UCardsProvisioningApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unifiedlocation/uploadpositions",
+  "service": "edge/services/uploadLocation/UnifiedLocationApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/unused/mobile/data_bindings/pinner",
+  "service": "edge/models/mobile/databindings/PinnerServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/getFliprValues",
+  "service": "edge/services/rider/riderFoundations/fliprBridge/FliprBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/growth/earner-onboarding/bonjour/webview-bridge/dequeueSnackbar",
+  "service": "edge/services/growth/earner_onboarding/bonjour/webview_bridge/BonjourWebviewBridgeServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/growth/earner-onboarding/bonjour/webview-bridge/enqueueSnackbar",
+  "service": "edge/services/growth/earner_onboarding/bonjour/webview_bridge/BonjourWebviewBridgeServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/growth/earner-onboarding/bonjour/webview-bridge/launchNativeBottomSheet",
+  "service": "edge/services/growth/earner_onboarding/bonjour/webview_bridge/BonjourWebviewBridgeServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/growth/earner-onboarding/bonjour/webview-bridge/snackbarButtonAction",
+  "service": "edge/services/growth/earner_onboarding/bonjour/webview_bridge/BonjourWebviewBridgeServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/growth/earner-onboarding/bonjour/webview-bridge/snackbarDismissed",
+  "service": "edge/services/growth/earner_onboarding/bonjour/webview_bridge/BonjourWebviewBridgeServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/helpWebviewChatNotificationSuppression",
+  "service": "edge/services/help_webview_bridge/HelpWebviewBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/helpWebviewChatRendered",
+  "service": "edge/services/help_webview_bridge/HelpWebviewBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/helpWebviewHelpAction",
+  "service": "edge/services/help_webview_bridge/HelpWebviewBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/identityVerificationCompleted",
+  "service": "edge/services/uslWebBridge/USLWebBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/identityVerificationStart",
+  "service": "edge/services/uslWebBridge/USLWebBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/logSpan",
+  "service": "edge/services/uslWebBridge/USLWebBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/messageFromWeb",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/messageToWeb",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioUiStateChanged",
+  "service": "edge/services/rider/riderFoundations/sceneBridgeService/SceneBridgeServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebAnalyticsEventRequest",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebAppStateChanged",
+  "service": "edge/services/rider/riderFoundations/sceneBridgeService/SceneBridgeServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebNavigationTabActionTriggered",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebNavigationTabs",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebviewChild",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebviewDismiss",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebviewHandshake",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebviewLocationUpdateRequestV2",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebviewLocationUpdateV2",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebviewNavBar",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebviewNetworkTrace",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/presidioWebviewSplashScreen",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/redirectToSystemWebview",
+  "service": "edge/services/presidioweb/payload/core/PresidioWebviewCorePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/requestClientIntegrityToken",
+  "service": "edge/services/uslWebBridge/USLWebBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/requestDeviceData",
+  "service": "edge/services/uslWebBridge/USLWebBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/requestMobileState",
+  "service": "edge/services/uslWebBridge/USLWebBridgePayloadServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/riskActionStatus",
+  "service": "edge/services/risk_webview_bridge/RiskWebviewServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/riskSerialisedIntegration",
+  "service": "edge/services/risk_webview_bridge/RiskWebviewServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/riskWebviewLaunchRiskWebChallenge",
+  "service": "edge/services/risk_webview_bridge/RiskWebviewServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/riskWebviewRiskWebChallengeStatus",
+  "service": "edge/services/risk_webview_bridge/RiskWebviewServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/sendMessageToNative",
+  "service": "edge/services/earner_trip_flow/EarnerTripWebMessageBridgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/unused/non-production-endpoint/sendMessageToWeb",
+  "service": "edge/services/earner_trip_flow/EarnerTripWebMessageBridgeApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/upload/negotiate",
+  "service": "rtapi/services/upload/FileUploadApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/usercloudid/generate-user-cloud-id",
+  "service": "edge/services/usercloudid/UserCloudIDServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/arch-signin-token",
+  "service": "rtapi/services/webauth/WebAuthApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/att/update-user",
+  "service": "rtapi/services/userconsents/GatewayApiApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/contacts",
+  "service": "edge/services/safety/contacts/ContactsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/users/contacts",
+  "service": "edge/services/safety/contacts/ContactsApi"
+ },
+ {
+  "http": "DELETE",
+  "path": "/rt/users/contacts/{contactId}",
+  "service": "edge/services/safety/contacts/ContactsApi"
+ },
+ {
+  "http": "PUT",
+  "path": "/rt/users/contacts/{contactId}",
+  "service": "edge/services/safety/contacts/ContactsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/users/gender",
+  "service": "edge/services/safety/gendersettings/GenderSettingsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/gender",
+  "service": "edge/services/safety/gendersettings/GenderSettingsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/genderidentityscreen",
+  "service": "edge/services/safety/gendersettings/GenderSettingsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/users/get-compliance",
+  "service": "rtapi/services/userconsents/UserConsentsApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/users/get-compliance-and-copy-for-features",
+  "service": "rtapi/services/userconsents/UserConsentsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/get-security-settings",
+  "service": "rtapi/services/users_identity/UsersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/get-user-info",
+  "service": "rtapi/services/users_identity/UsersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/need-verification",
+  "service": "rtapi/services/safetyuser/UserIdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/request-user-info-verification",
+  "service": "rtapi/services/users_identity/UsersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/request-verification",
+  "service": "rtapi/services/safetyuser/UserIdentityApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/sync-compliance-and-copy-for-features",
+  "service": "rtapi/services/userconsents/UserConsentsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/tag-user-public",
+  "service": "rtapi/services/users/UsersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/update-compliance",
+  "service": "rtapi/services/userconsents/UserConsentsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/update-compliance-with-task",
+  "service": "rtapi/services/userconsents/UserConsentsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/update-populous-user-info",
+  "service": "rtapi/services/users/UsersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/update-user-identity",
+  "service": "rtapi/services/users_identity/UsersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/v2/add-password",
+  "service": "rtapi/services/users/UsersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/users/v3/verify-password",
+  "service": "rtapi/services/users_identity/UsersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/v1/i18n/rosettadynamic/getLocalizationUpdates",
+  "service": "edge/services/rosettadynamic/MobileDeviceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/v1/maps/report-provenance",
+  "service": "edge/services/mapsusagereporting/MapsUsageReportingApi"
+ },
+ {
+  "http": "GET",
+  "path": "/rt/v1/michelangelo/mobile/signed-model-url",
+  "service": "edge/services/michelangelomobile/MichelangeloMobileApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/driver-supply/get-driver-current-supply",
+  "service": "edge/services/vehicle_supplier/driver_supply/DriverSupplyApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/get-driver-events",
+  "service": "edge/services/vs_livemap/VSLivemapServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-communication/update-inbox-message",
+  "service": "edge/services/vehicle_supplier/vs_communication/VSCommunicationServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-compliancemanager/create-document",
+  "service": "edge/services/vehicle_supplier/vs_compliancemanager/VSComplianceManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-drivermanager/get-driver",
+  "service": "edge/services/vehicle_supplier/vs_drivermanager/VSDrivermanagerServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-drivermanager/get-drivers",
+  "service": "edge/services/vehicle_supplier/vs_drivermanager/VSDrivermanagerServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-drivermanager/search-drivers",
+  "service": "edge/services/vehicle_supplier/vs_drivermanager/VSDrivermanagerServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-earnings/get-driver-daily-earnings-with-trips",
+  "service": "edge/services/vehicle_supplier/vs_earnings/VSEarningsApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-incentive/get-incentive-progress",
+  "service": "edge/services/vehicle_supplier/vs_survey/VsIncentiveServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-incentive/get-incentive-vehicle-progress",
+  "service": "edge/services/vehicle_supplier/vs_survey/VsIncentiveServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-incentive/get-supplier-incentive",
+  "service": "edge/services/vehicle_supplier/vs_survey/VsIncentiveServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-membershipmanager/invite-user-to-org",
+  "service": "edge/services/vehicle_supplier/vs_membershipmanager/VSMembershipManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-membershipmanager/search-invites",
+  "service": "edge/services/vehicle_supplier/vs_membershipmanager/VSMembershipManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-supplier-context-manager/get-supplier-context",
+  "service": "edge/services/vehicle_supplier/vs_supplier_context/SupplierContextApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-supplier-management/drivers-performance-analytics",
+  "service": "edge/services/vs_supplier_management/VSSupplierManagementApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-supplier-management/get-user-organizations",
+  "service": "edge/services/vs_supplier_management/VSSupplierManagementApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-survey/get-csat-surveys",
+  "service": "edge/services/vehicle_supplier/vs_survey/VsSurveyServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-survey/submit-csat-survey",
+  "service": "edge/services/vehicle_supplier/vs_survey/VsSurveyServiceApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-vehiclemanager/assign-vehicle",
+  "service": "edge/services/vehicle_supplier/vs_vehiclemanager/VehicleManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-vehiclemanager/create-vehicle",
+  "service": "edge/services/vehicle_supplier/vs_vehiclemanager/VehicleManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-vehiclemanager/delete-vehicle",
+  "service": "edge/services/vehicle_supplier/vs_vehiclemanager/VehicleManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-vehiclemanager/get-vehicle",
+  "service": "edge/services/vehicle_supplier/vs_vehiclemanager/VehicleManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-vehiclemanager/get-vehicles-by-owner",
+  "service": "edge/services/vehicle_supplier/vs_vehiclemanager/VehicleManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-vehiclemanager/modify-vehicle-labels",
+  "service": "edge/services/vehicle_supplier/vs_vehiclemanager/VehicleManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-vehiclemanager/search-vehicles",
+  "service": "edge/services/vehicle_supplier/vs_vehiclemanager/VehicleManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vehicle-supplier/vs-vehiclemanager/unassign-vehicle",
+  "service": "edge/services/vehicle_supplier/vs_vehiclemanager/VehicleManagerApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/venue/get-venue",
+  "service": "rt/colosseum/ColosseumApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vouchers/cancel-campaign",
+  "service": "edge/services/voucher/VouchersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vouchers/get-inapp-voucher-data",
+  "service": "edge/services/voucher/VouchersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/vouchers/get-vouchers-sdui-feature",
+  "service": "edge/services/vouchers/VouchersApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/webauthn-api/get-auth-options",
+  "service": "edge/services/webauthn/WebAuthnAPIApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/webauthn-api/get-registration-options",
+  "service": "edge/services/webauthn/WebAuthnAPIApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/webauthn-api/register-public-key-credential",
+  "service": "edge/services/webauthn/WebAuthnAPIApi"
+ },
+ {
+  "http": "POST",
+  "path": "/rt/wisdom-autocapture/get-autocapture-rules",
+  "service": "apphealth/thrift/wisdomautocapture/WisdomAutocaptureApi"
+ }
+]

@@ -1,0 +1,81 @@
+driver: 420 ficheiros de texto a alterar
+        1  DRIVER/decoded/AndroidManifest.xml
+        2  DRIVER/decoded/assets
+       70  DRIVER/decoded/res
+        5  DRIVER/decoded/smali
+        6  DRIVER/decoded/smali_classes12
+       12  DRIVER/decoded/smali_classes13
+        9  DRIVER/decoded/smali_classes14
+       15  DRIVER/decoded/smali_classes15
+       18  DRIVER/decoded/smali_classes17
+        6  DRIVER/decoded/smali_classes18
+       19  DRIVER/decoded/smali_classes19
+       21  DRIVER/decoded/smali_classes2
+       21  DRIVER/decoded/smali_classes20
+       67  DRIVER/decoded/smali_classes21
+       13  DRIVER/decoded/smali_classes22
+        2  DRIVER/decoded/smali_classes25
+       29  DRIVER/decoded/smali_classes3
+        1  DRIVER/decoded/smali_classes4
+       16  DRIVER/decoded/smali_classes5
+       43  DRIVER/decoded/smali_classes6
+       13  DRIVER/decoded/smali_classes7
+       28  DRIVER/decoded/smali_classes8
+        2  DRIVER/decoded/smali_classes9
+        1  DRIVER/decoded/unknown
+ contextos mais comuns:
+      62  .com/legal/terms](http://192.168.1.204/legal/terms
+      52  a/lang/String; = "http://192.168.1.204/static/mobi
+      35   "defaultValue": "http://192.168.1.204/static/mobi
+      29  \n\n    const-string v2, "192.168.1.204"\n\n    con
+      22   "defaultValue": "http://192.168.1.204", "isAutoOn
+      22  .168.1.204,192.168.1.204,192.168.1.204,192.168.1.2
+      21  const-string v3, "http://192.168.1.204/static/mobi
+      20  1.204\n                 ,192.168.1.204\n          
+      14  a/lang/String; = "http://192.168.1.204"\n\n.field 
+      10  const-string v2, "http://192.168.1.204/static/mobi
+      10  const-string v9, "http://192.168.1.204/static/mobi
+      10  const-string v8, "http://192.168.1.204/static/mobi
+       9  a/lang/String; = "http://192.168.1.204/map?width=5
+       9  onst-string v14, "http://192.168.1.204/static/mobi
+       8       <data android:host="192.168.1.204"/>\n       
+       8  ://192.168.1.204/,http://192.168.1.204/,http://192
+       8  const-string v4, "http://192.168.1.204/static/mobi
+       8  const-string v1, "http://192.168.1.204/static/mobi
+       8  \n\n    const-string v2, "192.168.1.204"\n\n    inv
+       7   "defaultValue": "http://192.168.1.204/legal/docum
+       7  const-string v3, "http://192.168.1.204"\n\n    inv
+       7  \n\n    const-string v0, "192.168.1.204"\n\n    inv
+       7         \"url\": \"http://192.168.1.204/static/mobi
+       6  .168.1.204:192.168.1.204,192.168.1.204:192.168.1.2
+       6   "defaultValue": "http://192.168.1.204/legal/en/do
+       6  78d0c5208&helpURL=http://192.168.1.204/driving-and
+       6   "defaultValue": "http://192.168.1.204/embedded/{o
+       6   "defaultValue": "http://192.168.1.204/manager/men
+       6  Partner Portal.\n http://192.168.1.204/p3/tax-comp
+       6  a/lang/String; = "http://192.168.1.204/legal/en/do
+       6  \n\n    const-string v3, "192.168.1.204"\n\n    inv
+       6  const-string v9, "http://192.168.1.204"\n\n    inv
+       6  onst-string v11, "http://192.168.1.204/static/mobi
+       6  const-string v0, "http://192.168.1.204/p3/promotio
+       5   "defaultValue": "http://192.168.1.204/driving-and
+       5  e tu dispositivo. Visita 192.168.1.204 para enviar
+       5  const-string v5, "http://192.168.1.204/static/mobi
+       5  onst-string v15, "http://192.168.1.204/static/mobi
+       5  const-string v1, "http://192.168.1.204"\n\n    inv
+       5  a/lang/String; = "http://192.168.1.204/"\n\n.field
+       5   app session. See http://192.168.1.204/stackelemen
+       4  Partner Portal at http://192.168.1.204/ \n\nWe sug
+       4   los &lt;a href=\"http://192.168.1.204/android/per
+       4  portal del socio: http://192.168.1.204/p3/tax-comp
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\QOLARI\PROJETOS OFICIAIS\QOLARI DRIVER\BACKEND\tools\repoint_apks.py", line 93, in <module>
+    print(" contextos mais comuns:")
+    ^^
+  File "C:\xampp\htdocs\QOLARI\PROJETOS OFICIAIS\QOLARI DRIVER\BACKEND\tools\repoint_apks.py", line 89, in main
+    print(f" {k}: {len(report[k])}")
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miglo\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\ufffd' in position 10: character maps to <undefined>

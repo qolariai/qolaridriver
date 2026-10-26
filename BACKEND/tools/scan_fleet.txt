@@ -1,0 +1,54 @@
+fleet: 218 ficheiros de texto a alterar
+        1  FLEET/qolarifleet_src/assets
+       73  FLEET/qolarifleet_src/res
+        6  FLEET/qolarifleet_src/smali
+       50  FLEET/qolarifleet_src/smali_classes2
+       10  FLEET/qolarifleet_src/smali_classes3
+        1  FLEET/qolarifleet_src/smali_classes6
+       11  FLEET/qolarifleet_src/smali_classes7
+       46  FLEET/qolarifleet_src/smali_classes8
+       20  FLEET/qolarifleet_src/unknown
+ contextos mais comuns:
+      62  3000/legal/terms](http://192.168.1.204:3000/legal/
+      56  92.168.1.204:3000/help\">192.168.1.204:3000/help&l
+      27   const-string/jumbo v0, "192.168.1.204:3000/google
+      24  \n    const-string p0, "192.168.1.204:3000/google
+      20  IGURATION", "fileName": "192.168.1.204:3000mon_cor
+      17   "defaultValue": "http://192.168.1.204:3000/static
+      16  a/lang/String; = "http://192.168.1.204:3000/static
+      12   "defaultValue": "http://192.168.1.204:3000", "isA
+      12  :3000\n                 ,192.168.1.204:3000\n     
+      10  :3000,192.168.1.204:3000,192.168.1.204:3000,192.16
+       8  ubtitle">Conoce más en [192.168.1.204:3000/legal/
+       8   const-string/jumbo v1, "192.168.1.204:3000"\n\n  
+       8   const-string/jumbo v3, "192.168.1.204:3000"\n\n  
+       7   "defaultValue": "http://192.168.1.204:3000/legal/
+       7   const-string/jumbo v0, "192.168.1.204:3000"\n\n  
+       6  _requirements_subtitle">[192.168.1.204:3000/legal/
+       6  e.Please refer to http://192.168.1.204:3000/suppor
+       6  a/lang/String; = "http://192.168.1.204:3000"\n\n
+       6  tring/jumbo v12, "http://192.168.1.204:3000/static
+       6             parent_type: "192.168.1.204:3000/Projec
+       5  TURE_FLAG", "fileName": "192.168.1.204:3000mon_cor
+       5  e tu dispositivo. Visita 192.168.1.204:3000 para e
+       5  a/lang/String; = "http://192.168.1.204:3000"\n\n.f
+       5  string/jumbo v3, "http://192.168.1.204:3000"\n\n  
+       5  a/lang/String; = "http://192.168.1.204:3000/legal/
+       5   app session. See http://192.168.1.204:3000/stacke
+       5     - monitored_resource: 192.168.1.204:3000/branch
+       4  :3000:192.168.1.204:3000,192.168.1.204:3000:192.16
+       4   "defaultValue": "http://192.168.1.204:3000/privac
+       4   "BUG_FIX", "fileName": "192.168.1.204:3000mon_cor
+       4   los &lt;a href=\"http://192.168.1.204:3000/androi
+       4  y la &lt;a href=\"http://192.168.1.204:3000/privac
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\QOLARI\PROJETOS OFICIAIS\QOLARI DRIVER\BACKEND\tools\repoint_apks.py", line 93, in <module>
+    main()
+    ~~~~^^
+  File "C:\xampp\htdocs\QOLARI\PROJETOS OFICIAIS\QOLARI DRIVER\BACKEND\tools\repoint_apks.py", line 89, in main
+    print(f"   {n:5}  {c}")
+    ~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miglo\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\ufffd' in position 10: character maps to <undefined>

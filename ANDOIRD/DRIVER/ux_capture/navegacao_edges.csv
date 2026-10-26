@@ -1,0 +1,75 @@
+origem,gesto_ou_acao,destino
+Página inicial,"tap ""Descobrir""",010_descobrir
+Página inicial,"tap ""Rendimentos""",011_rendimentos
+Página inicial,"tap ""Caixa de entrada""",012_caixa_entrada
+Página inicial,"tap ""Menu""",013_menu
+Página inicial,tap botão escudo (safety toolkit),014_ferramentas_seguranca
+014_ferramentas_seguranca,"tap ""Verificação do PIN""",015_verificacao_pin
+014_ferramentas_seguranca,"tap ""Comprovativo do estado da viagem""",016_comprovativo_estado_viagem
+014_ferramentas_seguranca,"tap ""Centro de segurança""",017_centro_seguranca
+017_centro_seguranca,"tap acordeão ""Preferências e controlos"" (recolhe) / expande Detalhes da viagem",018_centro_seguranca_detalhes
+018_centro_seguranca_detalhes,"tap ""Alertas de limite de velocidade""",019_limite_velocidade
+019_limite_velocidade,"back; tap acordeão ""Preferências e controlos""",020_centro_seguranca_preferencias
+020_centro_seguranca_preferencias,"tap ""Verificação de PIN""",021_verificacao_pin_config
+020_centro_seguranca_preferencias,"tap ""Gravar a minha viagem""",022_gravacao_video
+020_centro_seguranca_preferencias,"tap ""Acompanhar a minha viagem""",023_acompanhar_viagem_contacto
+017_centro_seguranca,"tap acordeão ""Recursos"" + scroll",024_centro_seguranca_recursos
+024_centro_seguranca_recursos,"tap ""Sugestões de segurança do centro de aprendizagem""",025_informacoes_hub
+025_informacoes_hub,"tap ""Saiba mais"" (Welcome video)",026_video_boas_vindas
+025_informacoes_hub,"tap ""Próximos passos para o seu acesso ao Uber Comfort""",027_comfort_proximos_passos
+027_comfort_proximos_passos,"tap ""Proporcionar uma experiência Comfort de elevada qualidade""",028_comfort_licao_1
+028_comfort_licao_1,"tap ""Seguinte""",029_comfort_licao_2
+027_comfort_proximos_passos,"tap ""Aceite as Normas de Serviço""",030_comfort_normas_servico
+010_descobrir,"tap ""1-7 min""",100_lembretes
+100_lembretes,"tap ""1-7 min""",101_lembretes
+031_sem_sessao_arranque,"tap ""Utilizar outra conta""",032_login_outra_conta
+032_login_outra_conta,"tap ""Continuar com o e-mail""",033_login_email
+login concluído pelo utilizador,ecrã inicial autenticado,035_home_autenticada_acoes_necessarias
+035_home_autenticada_acoes_necessarias,tap separador Descobrir,036_descobrir_lembretes
+036_descobrir_lembretes,tap chip Promoções + Aeroportos (SÃO FILTROS),037_descobrir_promocoes / 038_descobrir_aeroportos
+038_descobrir_aeroportos,tap Promoções + Aeroportos (reposição autorizada),039_descobrir_filtros_repostos
+036_descobrir_lembretes,tap separador Rendimentos,011_rendimentos
+011_rendimentos,tap separador Menu,041_menu_autenticado
+041_menu_autenticado,tap Ajuda,042_menu_ajuda
+041_menu_autenticado,tap Definições,043_menu_definicoes
+043_menu_definicoes,tap Acessibilidade,044_def_acessibilidade
+043_menu_definicoes,tap Comunicação,045_def_comunicacao
+043_menu_definicoes,tap Navegação,046_def_navegacao
+043_menu_definicoes,tap Sons e voz,047_def_sons_voz
+043_menu_definicoes,tap Privacidade,048_def_privacidade
+044_def_acessibilidade,tap Audição (seta),049_acess_audicao
+044_def_acessibilidade,tap Definições de comunicação (seta),050_acess_def_comunicacao
+045_def_comunicacao,tap Notificações push (seta),051_comunicacao_push
+043_menu_definicoes,tap separador Descobrir (filtros desligados),037_descobrir_limpo
+064_menu,"tap ""Citro""",070_menu_veiculo
+064_menu,"tap ""Documentos""",071_menu_documentos
+064_menu,"tap ""Seguro""",072_menu_seguro
+064_menu,"tap ""Informações fiscais""",074_menu_info_fiscais
+064_menu,"tap ""Formas de pagamento""",075_menu_formas_pagamento
+064_menu,"tap ""Sobre""",077_menu_sobre
+064_menu,abrir 083_documentos,083_documentos
+083_documentos,"tap ""[Apenas para Motorista] > Carta de Cond""",084_doc_carta_conducao
+083_documentos,"tap ""[Apenas para Motorista] > Certificado de""",085_doc_tvde
+083_documentos,"tap ""[Apenas para Motorista] > Certificado de""",086_doc_registo_criminal
+083_documentos,"tap ""Cartão de cidad""",087_doc_cartao_cidadao
+083_documentos,"tap ""[Partner only] > DUA""",088_doc_dua
+083_documentos,"tap ""[Apenas Parceiro] > Seguro de veículo""",089_doc_seguro_carta_verde
+064_menu,abrir 090_ajuda_cat,090_ajuda_cat
+090_ajuda_cat,"tap ""Ajuda com uma viagem""",091_ajuda_00
+090_ajuda_cat,"tap ""Conta e aplicação""",091_ajuda_01
+090_ajuda_cat,"tap ""Rendimentos""",091_ajuda_02
+090_ajuda_cat,"tap ""VEs""",091_ajuda_03
+090_ajuda_cat,"tap ""Frota""",091_ajuda_04
+090_ajuda_cat,"tap ""Guias""",091_ajuda_05
+090_ajuda_cat,"tap ""Segurança""",091_ajuda_06
+090_ajuda_cat,"tap ""Acessibilidade""",091_ajuda_07
+090_ajuda_cat,"tap ""Informações legais""",091_ajuda_08
+090_ajuda_cat,"tap ""Privacidade""",091_ajuda_09
+090_ajuda_cat,"tap ""Problemas com o mapa""",091_ajuda_10
+offline,força paragem + abrir (arranque a frio),117_off_arranque_1..4
+offline; Driver no ecrã do mapa,estado offline do mapa,110_off_inicio
+offline,separador ini,120_off2_inicio
+offline,separador desc,121_off2_descobrir
+offline,separador rend,122_off2_rendimentos
+offline,separador caixa,123_off2_caixa
+offline,separador menu,124_off2_menu

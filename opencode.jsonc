@@ -1,0 +1,7 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // This project has ~13 GB of decompiled APK material (ANDOIRD/**/decoded,
+  // ANDOIRD/**/spec_src). Filesystem snapshots scan the whole worktree before
+  // every model step, which made sessions hang for a long time.
+  "snapshots": false
+}

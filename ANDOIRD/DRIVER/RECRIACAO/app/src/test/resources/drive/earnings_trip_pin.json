@@ -1,0 +1,56 @@
+{
+ "trip": {
+  "uuid": "a83b6974-ba3a-4a9a-8cdb-c6fbb9c39c44",
+  "pickupAddress": "Rossio",
+  "dropoffAddress": "Aeroporto",
+  "formattedTotal": "6,53 €",
+  "breakdown": [
+   {
+    "description": "tarifa",
+    "formattedAmount": "9,27 €"
+   },
+   {
+    "description": "comissao 20%",
+    "formattedAmount": "-1,85 €"
+   },
+   {
+    "description": "frota Frota Tejo, Lda.",
+    "formattedAmount": "-0,89 €"
+   },
+   {
+    "description": "recebido em dinheiro",
+    "formattedAmount": "-9,27 €"
+   }
+  ],
+  "fareBreakdown": {
+   "estimate": {
+    "distance_m": 9072,
+    "duration_s": 1166,
+    "base": 100,
+    "distance": 544,
+    "time": 233,
+    "minimum_applied": false,
+    "surge": 1.0,
+    "surge_amount": 0,
+    "booking_fee": 50,
+    "subtotal": 927,
+    "discount": 0,
+    "total": 927
+   },
+   "final": {
+    "distance_m": 9072,
+    "duration_s": 1166,
+    "base": 100,
+    "distance": 544,
+    "time": 233,
+    "minimum_applied": false,
+    "surge": 1.0,
+    "surge_amount": 0,
+    "booking_fee": 50,
+    "subtotal": 927,
+    "discount": 0,
+    "total": 927
+   }
+  }
+ }
+}

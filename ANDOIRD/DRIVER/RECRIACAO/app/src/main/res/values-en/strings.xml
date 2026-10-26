@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qolari Driver</string>
+    <string name="home_go_online">Go online</string>
+    <string name="home_go_offline">Go offline</string>
+    <string name="support_title">Support</string>
+    <string name="support_send">Send</string>
+    <string name="support_attach">Attach</string>
+    <string name="support_call">Call support</string>
+    <string name="menu_safety">Safety</string>
+    <string name="menu_documents">Documents</string>
+    <string name="menu_vehicles">Vehicles</string>
+    <string name="menu_settings">Settings</string>
+    <string name="queue_title">Airport queue</string>
+    <string name="incentives_title">Incentives</string>
+    <string name="business_title">Business profile</string>
+    <string name="payouts_title">Balance and payouts</string>
+    <string name="prefs_title">Driving preferences</string>
+    <string name="appearance_title">Appearance and language</string>
+    <string name="appearance_language">Language</string>
+    <string name="appearance_language_pt">Portuguese</string>
+    <string name="appearance_language_en">English</string>
+    <string name="appearance_dark">Dark mode</string>
+    <string name="appearance_simple">Simple mode</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "689648233552",
+    "project_id": "qolari-driver-prod",
+    "storage_bucket": "qolari-driver-prod.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689648233552:android:53c35978bb23b524f87555",
+        "android_client_info": {
+          "package_name": "com.qolari.drivereplica"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZBb6Y2kOpW97s1pDA8ltsHj-b4u_N4zo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

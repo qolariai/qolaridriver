@@ -1,0 +1,114 @@
+{
+ "driverTasks": {
+  "driverState": {
+   "online": true,
+   "available": true,
+   "dispatchable": true,
+   "awaitingRequesterConfirmation": false,
+   "preferencesState": {
+    "isEnabled": false,
+    "isSet": false
+   }
+  },
+  "taskScopes": [
+   {
+    "blockingTasks": [],
+    "nonBlockingTasks": [
+     {
+      "taskId": "e0421d9b-4a60-44f2-8b72-8170b01ca969-wait",
+      "isCompleted": false,
+      "driverTaskDataUnion": {
+       "type": "singleTaskData",
+       "singleTaskData": {
+        "taskDataUnion": {
+         "type": "waitTimeTaskData",
+         "waitTimeTaskData": {
+          "startTimeSec": 1792803735.0
+         }
+        },
+        "taskSourceKeyOption": {
+         "type": "taskSourceKey",
+         "taskSourceKey": {
+          "taskSource": "DEMAND_JOB",
+          "taskSourceUuid": "e0421d9b-4a60-44f2-8b72-8170b01ca969"
+         }
+        }
+       }
+      }
+     },
+     {
+      "taskId": "e0421d9b-4a60-44f2-8b72-8170b01ca969-pickup-location",
+      "isCompleted": false,
+      "driverTaskDataUnion": {
+       "type": "singleTaskData",
+       "singleTaskData": {
+        "taskDataUnion": {
+         "type": "locationTaskData",
+         "locationTaskData": {
+          "latitude": 38.7139,
+          "longitude": -9.1394,
+          "title": "Rossio",
+          "subtitle": "Rossio"
+         }
+        },
+        "taskSourceKeyOption": {
+         "type": "taskSourceKey",
+         "taskSourceKey": {
+          "taskSource": "DEMAND_JOB",
+          "taskSourceUuid": "e0421d9b-4a60-44f2-8b72-8170b01ca969"
+         }
+        }
+       }
+      }
+     }
+    ],
+    "completionTask": {
+     "taskId": "e0421d9b-4a60-44f2-8b72-8170b01ca969-pickup",
+     "isCompleted": false,
+     "source": "DEMAND_JOB",
+     "taskDataType": "pickupTaskData",
+     "jobOrdering": [
+      "e0421d9b-4a60-44f2-8b72-8170b01ca969"
+     ],
+     "coalescedDataUnion": {
+      "type": "pickupCoalescedTaskData",
+      "pickupCoalescedTaskData": {
+       "product": {
+        "globalProductType": "UBER_X",
+        "name": "Qolari X"
+       },
+       "info": {
+        "title": "Recolher Ana",
+        "subtitle": "Rossio"
+       }
+      }
+     },
+     "taskDataMap": {
+      "e0421d9b-4a60-44f2-8b72-8170b01ca969": {
+       "type": "pickupTaskData",
+       "pickupTaskData": {
+        "entity": {
+         "firstName": "Ana",
+         "lastName": "P",
+         "rating": 5.0
+        },
+        "waypoint": {
+         "uuid": "e0421d9b-4a60-44f2-8b72-8170b01ca969-pickup"
+        },
+        "driverUpfrontFare": {
+         "amount": "9,27 €"
+        }
+       }
+      }
+     }
+    },
+    "taskScopeMetadata": {
+     "presentationFramework": "DRIVER_TASKS"
+    }
+   }
+  ],
+  "meta": {
+   "lastModifiedTimeMs": 1792803735732.515
+  }
+ }
+}
