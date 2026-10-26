@@ -9,6 +9,17 @@ como produto.
 > renomeadas (`qolari-*.apk`) são instrumento de laboratório (`repack_suspect`), não
 > fazem parte do entregável.
 
+## Publicado
+
+| Endereço | O que serve |
+|---|---|
+| `https://admin-driver.qolari.com` | Backoffice (React + API) |
+| `https://driver.qolari.com` | API da app Driver; `/` abre a consola |
+| `https://rider.qolari.com` | API da app Rider |
+| `https://qolari.com/pt/marketplace/qolaridriver` | Página do marketplace e APKs |
+
+O estado do deploy, credenciais demo e backups estão em [`DEPLOY.md`](DEPLOY.md) §10.
+
 ## O que existe
 
 | Pasta | Conteúdo |
