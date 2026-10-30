@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_loading" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="1ab59513-3073"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/list_item_parent" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ProgressBar:" style="@style/Platform.TextStyle.Small.Normal" />
+            <ProgressBar android:layout_gravity="center_horizontal" android:layout_width="@dimen/ub__loading_indicator_progress_size" android:layout_height="@dimen/ub__loading_indicator_progress_size" android:layout_margin="@dimen/ui__spacing_unit_2x" android:indeterminate="true" android:indeterminateTint="?colorPrimary" android:indeterminateTintMode="src_in" style="@style/Widget.AppCompat.ProgressBar" />
+            <com.ubercab.ui.core.UTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BitLoadingIndicator:" style="@style/Platform.TextStyle.Small.Normal" />
+            <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/loading_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:bli_bitColor="?colorPrimary" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

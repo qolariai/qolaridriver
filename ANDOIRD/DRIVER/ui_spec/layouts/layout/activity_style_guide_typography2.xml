@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_typography2" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="typography2-style-guide"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/typography2_container" android:paddingBottom="@dimen/ui__spacing_unit_5x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

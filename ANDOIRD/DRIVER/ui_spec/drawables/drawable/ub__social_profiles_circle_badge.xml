@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:width="@dimen/ui__avatar_size_extra_tiny" />
+    <corners android:radius="@dimen/ub__social_profiles_circle_badge_corner_radius" />
+    <solid android:color="?brandBlack" />
+    <stroke android:width="@dimen/ui__avatar_border" android:color="?brandWhite" />
+    <padding android:left="@dimen/ui__spacing_unit_1x" android:top="@dimen/ub__social_profiles_spacing_unit_0.5x" android:right="@dimen/ui__spacing_unit_1x" android:bottom="@dimen/ub__social_profiles_spacing_unit_0.5x" />
+</shape>

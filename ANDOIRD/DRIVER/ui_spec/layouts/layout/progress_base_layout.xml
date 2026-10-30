@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub_base_progress_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:id="@id/ub_base_progress_rect" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:progress="30" style="@style/Platform.Progress.HorizontalDeterminate" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UTextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/ub_base_progress_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:maxLines="1" style="@style/Platform.TextStyle.LabelDefault" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_6x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/gender_footer_top_divider" android:background="?dividerColor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UTextView android:id="@id/security_gender_identity_footer" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="4cea729b-9c02" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toBottomOf="@id/security_gender_identity" style="@style/Platform.TextStyle.H6.News.Tertiary" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/gender_footer_bottom_divider" android:background="?dividerColor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/security_gender_identity_footer" />
+</com.ubercab.ui.core.UConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="?contentInset" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsEnabled="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UImageView android:gravity="center" android:id="@id/ub__voucher_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" android:importantForAccessibility="no" android:layout_marginEnd="?contentInset" app:srcCompat="@drawable/ic_voucher" />
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/ub__voucher_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.H5.News.Primary" />
+            <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/ub__voucher_item_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.H6.News.Tertiary" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.USwitchCompat android:gravity="center" android:id="@id/ub__voucher_toggle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.ULinearLayout>

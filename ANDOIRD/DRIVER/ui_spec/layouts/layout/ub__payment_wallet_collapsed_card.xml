@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.wallet_home.ui.view.WalletCollapsedCardView android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:id="@id/ub__wallet_collapsed_card_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" uber:cardCornerRadius="@dimen/ui__spacing_unit_2x" uber:cardElevation="@dimen/ub__wallet_card_no_elevation">
+        <com.ubercab.ui.core.URelativeLayout android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__wallet_collapsed_card_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" android:layout_toStartOf="@id/ub__wallet_collapsed_card_chevron" uber:analyticsId="30ff17c5-e7de" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__wallet_collapsed_card_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ub__wallet_collapsed_card_text" uber:analyticsId="37030e63-c077" style="@style/Platform.TextStyle.ParagraphDefault" />
+            <com.ubercab.ui.core.UImageView android:id="@id/ub__wallet_collapsed_card_chevron" android:layout_width="@dimen/ub__wallet_card_chevron_small_width" android:layout_height="@dimen/ub__wallet_card_chevron_small_height" android:layout_alignTop="@id/ub__wallet_collapsed_card_text" android:layout_alignBottom="@id/ub__wallet_collapsed_card_text" android:layout_alignParentEnd="true" uber:analyticsId="7ee2ecaf-0b34" uber:srcCompat="@drawable/ub__wallet_card_chevron" />
+        </com.ubercab.ui.core.URelativeLayout>
+    </com.ubercab.ui.core.UCardView>
+</com.ubercab.wallet_home.ui.view.WalletCollapsedCardView>

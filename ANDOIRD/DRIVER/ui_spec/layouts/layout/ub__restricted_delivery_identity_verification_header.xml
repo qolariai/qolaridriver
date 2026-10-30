@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.restricted_delivery_verification.RestrictedDeliveryIdentityVerificationHeaderView android:orientation="vertical" android:background="?backgroundAccent" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textColor="?contentInversePrimary" android:id="@id/ub__restricted_delivery_identity_verification_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="df4e9cef-b7bf" style="@style/Platform.TextStyle.HeadingXSmall" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2.5x">
+        <com.ubercab.ui.core.UImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?contentInversePrimary" android:layout_marginStart="@dimen/ui__spacing_unit_0x" android:layout_marginEnd="@dimen/ui__spacing_unit_1.5x" app:analyticsId="3c318b0e-8612" app:srcCompat="@drawable/ub_ic_alert" />
+        <com.ubercab.ui.core.UTextView android:textColor="?contentInversePrimary" android:id="@id/ub__restricted_delivery_identity_verification_header_link" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="wrap_content" android:layout_weight="1.0" app:analyticsId="48e7969d-db52" style="@style/Platform.TextStyle.LabelSmall" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.restricted_delivery_verification.RestrictedDeliveryIdentityVerificationHeaderView>

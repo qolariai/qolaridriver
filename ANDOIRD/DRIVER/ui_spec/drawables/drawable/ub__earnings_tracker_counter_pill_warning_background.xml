@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?colorWarning" />
+    <stroke android:width="@dimen/ub__tracker_stroke_width" android:color="?earningsPillBorderColor" />
+    <corners android:radius="@dimen/ub__earnings_tracker_counter_inner_radius" />
+    <size android:height="@dimen/ub__earnings_tracker_counter_inner_height" />
+</shape>

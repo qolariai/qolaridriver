@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.feature.bid.header.BidHeaderView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub_tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:includeFontPadding="false" app:analyticsId="12cd15c6-69e0" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub_tv_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" app:analyticsId="c571cb59-5c84" />
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center_vertical" android:id="@id/ub_tv_extra_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" app:analyticsId="2a648d22-ff24" />
+</com.uber.feature.bid.header.BidHeaderView>

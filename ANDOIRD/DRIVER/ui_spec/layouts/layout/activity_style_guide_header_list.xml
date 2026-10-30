@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_check_box" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="c185a230-3e64"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/button_header_collapsible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/collapsible_header" app:buttonType="secondary" app:shape="rect" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/button_header_fix_expanded" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/fixed_expanded_header" app:buttonType="secondary" app:shape="rect" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/button_header_fix_collapsed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/fixed_collapsed_header" app:buttonType="secondary" app:shape="rect" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UCoordinatorLayout>

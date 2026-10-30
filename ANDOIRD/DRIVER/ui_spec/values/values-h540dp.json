@@ -1,0 +1,7 @@
+{
+ "dimens": {
+  "item": {
+   "ub__onboarding_bottom_margin": "@dimen/ui__spacing_unit_3x"
+  }
+ }
+}

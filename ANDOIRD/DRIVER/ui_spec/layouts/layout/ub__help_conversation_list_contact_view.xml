@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/contact_layout_icon" android:layout_width="?avatarMicro" android:layout_height="?avatarMicro" android:layout_marginEnd="?contentInset" app:analyticsId="300c2b86-cd3c" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/contact_layout_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/contact_layout_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="?contentInset" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?android:textColorTertiary" android:id="@id/contact_layout_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Meta.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

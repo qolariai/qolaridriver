@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ub_ic_photo_landscape" android:id="@id/cover_photo_edit_action" android:visible="false" android:iconTint="?brandWhite" app:showAsAction="always" />
+</menu>

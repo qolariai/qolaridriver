@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:header_state="collapsing"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

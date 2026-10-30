@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__empty_state_sdui_header" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingSmall" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/empty_state_sdui_success" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__empty_state_sdui_button_success" app:buttonType="secondary" app:shape="rect" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/empty_state_sdui_failure" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__empty_state_sdui_button_failure" app:buttonType="secondary" app:shape="rect" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/empty_state_sdui_custom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__empty_state_sdui_button_custom" app:buttonType="secondary" app:shape="rect" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UScrollView>

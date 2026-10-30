@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__skip_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__flow_selector_skip_button" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:buttonType="secondary" app:shape="pill" app:size="small" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.ui.core.UFrameLayout>

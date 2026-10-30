@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/multi_select_question_taskbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.uber.taskbuildingblocks.views.TaskHeaderView android:id="@id/multi_select_question_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/multi_select_option_recycler_view" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <com.uber.taskbuildingblocks.views.TaskFooterView android:id="@id/multi_select_question_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

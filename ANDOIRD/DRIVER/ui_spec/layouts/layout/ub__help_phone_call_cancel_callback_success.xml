@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.ParagraphDefault" android:id="@id/cancel_success_message" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="683f1d2e-ce9f" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/done_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ui__spacing_unit_6x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:text="@string/done_button_text" app:analyticsId="e9c7871c-ad14" app:buttonType="primary" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

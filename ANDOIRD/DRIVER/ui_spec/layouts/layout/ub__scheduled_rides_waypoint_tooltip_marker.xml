@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.map_ui.tooltip.optional.ScheduledRidesTooltipView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/ub__tooltip_min_height">
+        <com.ubercab.ui.core.ULinearLayout android:theme="@style/Theme.Helix.Dark" android:gravity="center" android:background="?android:colorBackground" android:visibility="visible" android:layout_width="@dimen/ub__tooltip_eta_width" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/tooltip_icon_id" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" app:srcCompat="@drawable/ub__tooltip_schedule_car" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.UTextView android:ellipsize="end" android:gravity="start|center" android:layout_gravity="start|center" android:id="@id/ub__text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_weight="1.0" android:textAllCaps="false" android:layout_marginStart="@dimen/ub__tooltip_padding_extra" app:lineHeightHint="0.0dip" style="@style/Platform.TextStyle.H6.News" />
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/ic_caret_right_16" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.map_ui.tooltip.optional.ScheduledRidesTooltipView>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.point_of_interest_map_marker.label.HybridMapLabelView android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="?colorAccentInverse" android:lineSpacingExtra="@dimen/ui__spacing_unit_0x" android:lineSpacingMultiplier="0.5" app:analyticsId="b2e293b8-2c3d" style="@style/Platform.TextStyle.LabelXSmall"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

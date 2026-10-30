@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.map_ui.tooltip.optional.ConfirmationInlineLocationWaypointTooltipView android:background="?android:colorBackground" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:ellipsize="end" android:gravity="start|center" android:layout_gravity="start|center" android:id="@id/ub__tooltip_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" android:maxLines="1" android:includeFontPadding="false" android:textAllCaps="false" app:analyticsId="767bded3-f871" style="@style/Platform.TextStyle.H6.News" />
+</com.ubercab.map_ui.tooltip.optional.ConfirmationInlineLocationWaypointTooltipView>

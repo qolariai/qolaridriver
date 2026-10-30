@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/help_messages_content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/help_messages_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.commons.widget.BitLoadingIndicator android:layout_gravity="bottom" android:id="@id/help_messages_paging" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/help_messages_error" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="?gutterSize" android:paddingEnd="?gutterSize">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/help_messages_error_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ub__conversation_list_warning" />
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:textColor="?android:textColorPrimary" android:gravity="center_horizontal" android:id="@id/help_messages_error_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorSecondary" android:gravity="center_horizontal" android:id="@id/help_messages_error_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/help_messages_error_retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/help_conversation_list_error_retry" app:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/help_messages_loading" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</merge>

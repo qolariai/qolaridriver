@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/ub__base_slider_default_thumb_tint" />
+    <size android:height="@dimen/ub__slider_enabled_size" android:width="@dimen/ub__slider_enabled_size" />
+</shape>

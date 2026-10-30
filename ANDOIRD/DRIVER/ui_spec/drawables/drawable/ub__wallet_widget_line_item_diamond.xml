@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="@dimen/ui__spacing_unit_2x" android:width="@dimen/ui__spacing_unit_2x" android:left="@dimen/ui__spacing_unit_3x">
+        <rotate android:fromDegrees="45.0" android:toDegrees="45.0">
+            <shape android:shape="rectangle">
+                <solid android:color="?bgView" />
+            </shape>
+        </rotate>
+    </item>
+    <item android:top="@dimen/ui__spacing_unit_0.5x">
+        <shape android:shape="rectangle">
+            <solid android:color="?bgView" />
+        </shape>
+    </item>
+</layer-list>

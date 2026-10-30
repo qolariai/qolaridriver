@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.CircleButton android:layout_gravity="center" android:id="@id/compact_action_button" android:background="@drawable/ub__carbon_action_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="a72c44dc-20b9" app:size="medium" app:type="tertiary" style="@style/Platform.Button.Base.CircleSquareDynamic" />
+    <com.ubercab.carbon.core.ui.LoadingIndicatorOutline android:layout_gravity="center" android:id="@id/compact_action_button_outline" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" app:analyticsId="595fb9b2-f830" />
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/compact_action_button_icon" android:layout_width="@dimen/ui__spacing_unit_2.5x" android:layout_height="@dimen/ui__spacing_unit_2.5x" app:analyticsId="a0d7435f-763a" app:srcCompat="@drawable/ub_ic_hand_stop" app:tint="?brandWhite" />
+</merge>

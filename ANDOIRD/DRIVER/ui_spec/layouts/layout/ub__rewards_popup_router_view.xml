@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="false" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@dimen/ub__rewards_popup_min_module_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URecyclerView android:id="@id/rewards_popup_list" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_behavior="com.uber.rewards_popup.RewardsPopupBottomSheetBehavior" />
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/rewards_popup_loading" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:id="@id/rewards_popup_loading_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateTintMode="src_in" style="@style/ProgressBarStyle" />
+        <com.ubercab.ui.core.UTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rewards_popup_loading" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/rewards_popup_buttons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UPlainView android:background="@drawable/divider_horizontal_light" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/rewards_popup_footer_list" android:background="?backgroundPrimary" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/amex_join_program_loading" android:background="?backgroundPrimary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:id="@id/amex_join_program_loading_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateTintMode="src_in" style="@style/ProgressBarStyle" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/amex_join_program_loading_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/joining_program_loading" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UCoordinatorLayout>

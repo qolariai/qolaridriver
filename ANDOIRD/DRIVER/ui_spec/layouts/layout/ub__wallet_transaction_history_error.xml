@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_4x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphLarge" android:textColor="?textTertiary" android:gravity="center" android:id="@id/ub__transaction_history_error_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/wallet_transaction_feed_loading_error" uber:analyticsId="6f03cf8b-2486" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/try_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wallet_transaction_feed_try_again" android:singleLine="true" android:textAllCaps="false" uber:backgroundTint="?buttonSecondary" uber:cornerRadius="@dimen/ui__spacing_unit_13x" uber:rippleColor="?foregroundSelectorColor" style="@style/Platform.Button.Base.Tertiary.Small" />
+</com.ubercab.ui.core.ULinearLayout>

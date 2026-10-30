@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/image_fullscreen_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="@dimen/ui__spacing_unit_0x" app:navigationIcon="@drawable/ub_ic_x" style="@style/Widget.Platform.Toolbar">
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentOnColor" android:id="@id/image_fullscreen_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Title.Normal" />
+    </com.ubercab.ui.core.UToolbar>
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.uber.taskbuildingblocks.views.taskbanner.TaskBannerView android:layout_gravity="top" android:id="@id/item_metadata_consideration_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" />
+        <com.ubercab.common.ui.zoomingimageview.ZoomingImageView android:id="@id/image_fullscreen_image" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.payment.addon.bank_account.bankstatement_required.BankStatementRequiredView android:orientation="vertical" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.Platform.Light.Header" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.presidio.payment.provider.shared.payment_dialog.PaymentDialogView android:id="@id/ub__bank_account_payment_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.carbon.payment.addon.bank_account.bankstatement_required.BankStatementRequiredView>

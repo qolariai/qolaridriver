@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.wallet_home.ui.view.WalletSectionView android:orientation="vertical" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListHeadingView android:id="@id/ub__wallet_section_title_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="7c6a08fb-d54a" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__wallet_section_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:enabled="true" android:id="@id/ub__wallet_section_button" android:paddingTop="@dimen/ui__spacing_unit_1.5x" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" uber:buttonType="secondary" uber:shape="pill" uber:size="medium" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.wallet_home.ui.view.WalletSectionView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.wallet_transaction_history.widgets.TableWidgetDescriptionItemRowView android:orientation="vertical" android:id="@id/ub__wallet_table_widget_description_item_row" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__wallet_table_widget_description_item_first_row" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/ub__wallet_table_widget_description_item_row_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" uber:analyticsId="17c04f57-24cb" style="@style/Platform.TextStyle.ParagraphDefault" />
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ub__wallet_table_widget_description_item_row_icon" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:tint="?iconTertiary" android:layout_marginStart="@dimen/ui__spacing_unit_1x" uber:analyticsId="f31a70c4-3bdc" uber:srcCompat="@drawable/ub_ic_circle_i" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__wallet_table_widget_description_item_row_value" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="88d00f70-be17" style="@style/Platform.TextStyle.ParagraphDefault" />
+</com.ubercab.wallet_transaction_history.widgets.TableWidgetDescriptionItemRowView>

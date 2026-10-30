@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" android:paddingVertical="@dimen/ui__spacing_unit_1.5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textColor="?contentSecondary" android:id="@id/order_details_footer_item_quantity" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="ad319f43-dd0e" style="@style/Platform.TextStyle.ParagraphDefault" />
+    <com.ubercab.ui.core.UTextView android:textColor="?contentSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/order_details_footer_item_quanitity_modifier" android:paddingHorizontal="@dimen/ui__spacing_unit_0.5x" app:analyticsId="da8c563c-892c" style="@style/Platform.TextStyle.ParagraphDefault" />
+    <com.ubercab.ui.core.UTextView android:textColor="?contentSecondary" android:id="@id/order_details_footer_item_description" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="d9f1878d-0185" style="@style/Platform.TextStyle.ParagraphDefault" />
+</com.ubercab.ui.core.ULinearLayout>

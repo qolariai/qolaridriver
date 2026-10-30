@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/image_capture_view_image_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:analyticsId="2d8e3303-db10" app:contentInsetStartWithNavigation="@dimen/ui__spacing_unit_0x" app:navigationIcon="@drawable/ub_ic_x" style="@style/Widget.Platform.Toolbar">
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentOnColor" android:id="@id/image_capture_view_image_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="537dc4a5-34c0" style="@style/Platform.TextStyle.Title.Normal" />
+    </com.ubercab.ui.core.UToolbar>
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/image_capture_view_image_captured_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" app:analyticsId="275fceb1-a043" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentOnColor" android:id="@id/image_capture_view_image_description" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="4e9cbd35-4d85" style="@style/Platform.TextStyle.ParagraphSmall" />
+    <com.ubercab.ui.core.UFrameLayout android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="start|center" android:id="@id/image_capture_view_image_retake" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_capture_library_review_retake_button_title" app:analyticsId="c4093c7c-9718" app:buttonType="primary" app:icon="@drawable/ub_ic_arrow_counter_clockwise" app:shape="pill" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

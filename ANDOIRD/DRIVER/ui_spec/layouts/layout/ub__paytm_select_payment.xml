@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.paytm.operation.selectpayment.PaytmSelectPaymentView android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="616c48b3-4af0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_2x" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.URecyclerView android:id="@id/ub__select_payment_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.presidio.payment.paytm.operation.selectpayment.PaytmSelectPaymentView>

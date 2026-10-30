@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="a1b2c3d4-0003"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.presidio.styleguide.sections.SixChoicePicker android:id="@id/color_picker_six" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_1x" app:five="Blue" app:four="Green" app:one="Neutral" app:six="Gradient" app:three="Orange" app:two="Red" />
+            <com.ubercab.ui.core.URecyclerView android:id="@id/recycler_base2_xml_primitive" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

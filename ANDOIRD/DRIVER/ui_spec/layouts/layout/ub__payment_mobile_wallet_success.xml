@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.payment_mobile_wallet.operation.success.MobileWalletSuccessView android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="e3639189-89dc"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.Platform.Light.Header" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.presidio.payment.provider.shared.payment_dialog.PaymentDialogView android:id="@id/ub__mobile_wallet_success_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.payment_mobile_wallet.operation.success.MobileWalletSuccessView>

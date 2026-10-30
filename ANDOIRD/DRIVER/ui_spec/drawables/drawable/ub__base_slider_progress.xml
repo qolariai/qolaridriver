@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="?contentPrimary" />
+            <corners android:radius="@dimen/ub__base_slider_radius" />
+            <stroke android:width="@dimen/ub__base_slider_radius" android:color="?transparent" />
+            <size android:height="@dimen/ub__base_slider_progress_drawable_height" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="?contentPrimary" />
+                <corners android:radius="@dimen/ub__base_slider_radius" />
+                <stroke android:width="@dimen/ub__base_slider_radius" android:color="?transparent" />
+                <size android:height="@dimen/ub__base_slider_progress_drawable_height" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="?contentPrimary" />
+                <corners android:radius="@dimen/ub__base_slider_radius" />
+                <stroke android:width="@dimen/ub__base_slider_radius" android:color="?transparent" />
+                <size android:height="@dimen/ub__base_slider_progress_drawable_height" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

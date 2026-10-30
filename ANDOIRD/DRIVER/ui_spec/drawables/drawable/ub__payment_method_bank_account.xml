@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ub__payment_icon_size" android:width="@dimen/ub__payment_icon_size" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#ff5879da" android:pathData="M 7 13 L 73 13 Q 77 13 77 17 L 77 64 Q 77 68 73 68 L 7 68 Q 3 68 3 64 L 3 17 Q 3 13 7 13 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    <group android:translateX="20.0" android:translateY="23.0">
+        <path android:fillColor="?artWhite" android:pathData="M35,30 L39,30 C39.5522847,30 40,30.4477153 40,31 L40,32 C40,32.5522847 39.5522847,33 39,33 L1,33 C0.44771525,33 0.0000000000000000676353751,32.5522847 0,32 L0,31 C-0.0000000000000000676353751,30.4477153 0.44771525,30 1,30 L1,30 L5,30 L5,13 L8,13 L8,30 L14,30 L14,13 L17,13 L17,30 L23,30 L23,13 L26,13 L26,30 L32,30 L32,13 L35,13 L35,30 Z M1.2345679,13 C0.552734877,13 0,12.4179702 0,11.7 L0,10.2142857 C0,9.70316364 0.284433407,9.23947174 0.726889601,9.02928841 L19.4923217,0.115002696 C19.8151107,-0.038334232 20.1848893,-0.038334232 20.5076783,0.115002696 L39.2731104,9.02928841 C39.7155666,9.23947174 40,9.70316364 40,10.2142857 L40,11.7 C40,12.4179702 39.4472651,13 38.7654321,13 L1.2345679,13 Z M19.9971572,3 L3,10.995579 L37,11 L19.9971572,3 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    </group>
+</vector>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.preferences.ui.table_bottom_sheet.PreferencesTableBottomSheetView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.ubercab.presidio.behaviors.core.ExpandingBottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:background="?dividerColor" android:layout_width="fill_parent" android:layout_height="@dimen/ui__line_indicator_height" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/prefs_table_title_container" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="a19240e1-467e">
+        <com.ubercab.ui.core.UTextView android:textColor="?textColorAccent" android:id="@id/prefs_table_expanded_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="5cfb5227-e6bc" />
+        <com.ubercab.ui.core.UTextView android:textColor="?textColorAccent" android:id="@id/prefs_table_collapsed_title" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="fb157072-0130" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="@dimen/preferences_table_bottom_sheet_scroll_view_height" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.carbon.preferences.ui.PreferencesTableView android:id="@id/prefs_table" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="bfe616d4-9c37" />
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.carbon.preferences.ui.table_bottom_sheet.PreferencesTableBottomSheetView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.earnings_ui.EarningsDialogView android:orientation="vertical" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="center_horizontal" android:id="@id/earnings_dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Title.Normal" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:gravity="center_horizontal" android:id="@id/earnings_dialog_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Paragraph.Normal" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/earnings_dialog_button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:divider="@drawable/divider_space_1x" />
+</com.ubercab.earnings_ui.EarningsDialogView>

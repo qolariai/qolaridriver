@@ -1,17 +1,10 @@
 package com.qolari.drivereplica.ui.manage
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -25,8 +18,6 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.qolari.drivereplica.R
 import com.qolari.drivereplica.data.AppGraph
 import com.qolari.drivereplica.databinding.FragmentSimpleListBinding
@@ -159,43 +150,6 @@ class VehiclesFragment : SimpleListFragment() {
 /** Documentos do motorista (captura 083): estado de cada um; o backend só indica os pendentes. */
 class DocumentsFragment : SimpleListFragment() {
     private val vm: LoadViewModel<List<DocumentItem>> by viewModels { loadFactory { AppGraph.repository.documents() } }
-    private var pendingKind: String? = null
-    private var verifying = false
-
-    private val pickFile = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
-        val kind = pendingKind
-        if (uri == null || kind == null) {
-            verifying = false
-            return@registerForActivityResult
-        }
-        val bytes = runCatching {
-            requireContext().contentResolver.openInputStream(uri)?.use { it.readBytes() }
-        }.getOrNull()
-        if (bytes == null) {
-            toast(R.string.docs_upload_error)
-            verifying = false
-            return@registerForActivityResult
-        }
-        if (bytes.size > 8 * 1024 * 1024) {
-            toast(R.string.docs_upload_error)
-            verifying = false
-            return@registerForActivityResult
-        }
-        val name = uri.lastPathSegment ?: "documento"
-        val b64 = android.util.Base64.encodeToString(bytes, android.util.Base64.NO_WRAP)
-        viewLifecycleOwner.lifecycleScope.launch {
-            val result = if (verifying) {
-                AppGraph.repository.verifyIdentity(name, b64)
-            } else {
-                AppGraph.repository.uploadDocument(kind, name, b64)
-            }
-            result.onSuccess {
-                toast(R.string.docs_upload_ok)
-                vm.reload()
-            }.onFailure { toast(R.string.docs_upload_error) }
-            verifying = false
-        }
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         b.listBarTitle.text = getString(R.string.menu_documents)
@@ -225,222 +179,18 @@ class DocumentsFragment : SimpleListFragment() {
             }
             b.listRows.addView(row(d.title, status = status, statusColor = color) { openInfo(d.title, detail) })
         }
-
-        b.listRows.addView(MaterialButton(requireContext()).apply {
-            setText(R.string.docs_upload)
-            setOnClickListener { chooseKind() }
-        })
-        b.listRows.addView(MaterialButton(requireContext()).apply {
-            setText(R.string.docs_verify_identity)
-            setOnClickListener {
-                verifying = true
-                pendingKind = "cartao_cidadao"
-                pickFile.launch("*/*")
-            }
-        })
     }
-
-    private fun chooseKind() {
-        val kinds = listOf(
-            "carta_conducao" to R.string.doc_kind_license,
-            "cartao_cidadao" to R.string.doc_kind_cc,
-            "certificado_tvde" to R.string.doc_kind_tvde,
-            "registo_criminal" to R.string.doc_kind_criminal,
-            "atestado_medico" to R.string.doc_kind_medical,
-        )
-        val labels = kinds.map { getString(it.second) }.toTypedArray()
-        MaterialAlertDialogBuilder(requireContext())
-            .setTitle(R.string.docs_upload)
-            .setItems(labels) { _, index ->
-                verifying = false
-                pendingKind = kinds[index].first
-                pickFile.launch("*/*")
-            }
-            .setNegativeButton(R.string.safety_cancel, null)
-            .show()
-    }
-
-    private fun toast(res: Int) = Toast.makeText(requireContext(), res, Toast.LENGTH_SHORT).show()
 }
 
 /** Centro de segurança (capturas 017, 018, 024): secções com texto e linhas. Conteúdo próprio (D7). */
 class SafetyCenterFragment : SimpleListFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         b.listHeading.setText(R.string.safety_center_title)
-        b.listIntro.setText(R.string.safety_center_intro)
-        b.listIntro.isVisible = true
-
-        b.listRows.addView(section(getString(R.string.safety_contacts_title)))
-        val contactsBox = LinearLayout(requireContext()).apply { orientation = LinearLayout.VERTICAL }
-        b.listRows.addView(contactsBox)
-        val add = MaterialButton(requireContext()).apply {
-            setText(R.string.safety_add_contact)
-            setOnClickListener { addContact(contactsBox) }
-        }
-        b.listRows.addView(add)
-
-        b.listRows.addView(section(getString(R.string.safety_emergency_title)))
-        b.listRows.addView(row(getString(R.string.safety_sos), getString(R.string.safety_sos_detail)) { sos() })
-        b.listRows.addView(row(getString(R.string.safety_ride_check), getString(R.string.safety_ride_check_detail)) { rideCheck() })
-        b.listRows.addView(row(getString(R.string.safety_call_112), getString(R.string.safety_call_112_detail)) {
-            startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:112")))
-        })
-
-        b.listRows.addView(section(getString(R.string.safety_trip_title)))
-        b.listRows.addView(row(getString(R.string.safety_share), getString(R.string.safety_share_detail)) { shareTrip() })
-
         SafetyContent.sections.forEach { (title, rows) ->
             b.listRows.addView(section(title))
             rows.forEach { r -> b.listRows.addView(row(r.title, r.subtitle) { openInfo(r.title, r.subtitle) }) }
         }
-        refreshContacts(contactsBox)
     }
-
-    private fun refreshContacts(container: LinearLayout) {
-        lifecycleScope.launch {
-            AppGraph.repository.safetyContacts()
-                .onSuccess { contacts ->
-                    container.removeAllViews()
-                    if (contacts.isEmpty()) {
-                        container.addView(TextView(requireContext()).apply {
-                            setText(R.string.safety_contacts_empty)
-                            setTextColor(requireContext().getColor(R.color.qd_core_gray600))
-                            textSize = 14f
-                            setPadding(0, 8, 0, 8)
-                        })
-                    }
-                    contacts.forEach { c ->
-                        val r = ItemSimpleRowBinding.inflate(layoutInflater, container, false)
-                        r.simpleRowTitle.text = c.name
-                        r.simpleRowSubtitle.text = c.phone
-                        r.simpleRowSubtitle.isVisible = true
-                        r.simpleRowChevron.isVisible = false
-                        r.simpleRowStatus.setText(R.string.safety_remove)
-                        r.simpleRowStatus.isVisible = true
-                        r.simpleRowContent.setOnClickListener { removeContact(c.uuid, container) }
-                        container.addView(r.root)
-                    }
-                }
-                .onFailure { toast(R.string.safety_error) }
-        }
-    }
-
-    private fun addContact(container: LinearLayout) {
-        val box = LinearLayout(requireContext()).apply {
-            orientation = LinearLayout.VERTICAL
-            val pad = (20 * resources.displayMetrics.density).toInt()
-            setPadding(pad, 4, pad, 0)
-        }
-        val name = EditText(requireContext()).apply {
-            hint = getString(R.string.safety_contact_name)
-            inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_CAP_WORDS
-        }
-        val phone = EditText(requireContext()).apply {
-            hint = getString(R.string.safety_contact_phone)
-            inputType = InputType.TYPE_CLASS_PHONE
-        }
-        box.addView(name)
-        box.addView(phone)
-        MaterialAlertDialogBuilder(requireContext())
-            .setTitle(R.string.safety_add_contact)
-            .setView(box)
-            .setPositiveButton(R.string.safety_add) { _, _ ->
-                val n = name.text.toString().trim()
-                val p = phone.text.toString().trim()
-                if (n.isEmpty() || p.length < 6) return@setPositiveButton
-                lifecycleScope.launch {
-                    AppGraph.repository.addSafetyContact(n, p)
-                        .onSuccess { refreshContacts(container) }
-                        .onFailure { toast(R.string.safety_error) }
-                }
-            }
-            .setNegativeButton(R.string.safety_cancel, null)
-            .show()
-    }
-
-    private fun removeContact(uuid: String, container: LinearLayout) {
-        lifecycleScope.launch {
-            AppGraph.repository.deleteSafetyContact(uuid)
-                .onSuccess { refreshContacts(container) }
-                .onFailure { toast(R.string.safety_error) }
-        }
-    }
-
-    private fun sos() {
-        lifecycleScope.launch {
-            val trip = AppGraph.repository.tasks().getOrNull()
-            AppGraph.repository.safetySos(trip?.uuid, trip?.latitude, trip?.longitude)
-                .onSuccess {
-                    MaterialAlertDialogBuilder(requireContext())
-                        .setTitle(R.string.safety_sos)
-                        .setMessage(R.string.safety_sos_ok)
-                        .setPositiveButton(R.string.safety_call_112) { _, _ ->
-                            startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:112")))
-                        }
-                        .setNegativeButton(R.string.safety_close, null)
-                        .show()
-                }
-                .onFailure { toast(R.string.safety_error) }
-        }
-    }
-
-    private fun rideCheck() {
-        lifecycleScope.launch {
-            val trip = AppGraph.repository.tasks().getOrNull()
-            if (trip == null) {
-                toast(R.string.safety_no_trip)
-                return@launch
-            }
-            MaterialAlertDialogBuilder(requireContext())
-                .setTitle(R.string.safety_ride_check)
-                .setMessage(R.string.safety_ride_check_question)
-                .setPositiveButton(R.string.safety_ride_ok) { _, _ -> sendRideCheck(trip.uuid, "ok") }
-                .setNegativeButton(R.string.safety_ride_help) { _, _ -> sendRideCheck(trip.uuid, "help") }
-                .show()
-        }
-    }
-
-    private fun sendRideCheck(uuid: String, status: String) {
-        lifecycleScope.launch {
-            AppGraph.repository.rideCheck(uuid, status)
-                .onSuccess {
-                    if (status == "help") {
-                        MaterialAlertDialogBuilder(requireContext())
-                            .setTitle(R.string.safety_ride_help)
-                            .setMessage(R.string.safety_ride_help_detail)
-                            .setPositiveButton(R.string.safety_call_112) { _, _ ->
-                                startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:112")))
-                            }
-                            .setNegativeButton(R.string.safety_close, null)
-                            .show()
-                    } else {
-                        toast(R.string.safety_ride_ok_sent)
-                    }
-                }
-                .onFailure { toast(R.string.safety_error) }
-        }
-    }
-
-    private fun shareTrip() {
-        lifecycleScope.launch {
-            val trip = AppGraph.repository.tasks().getOrNull()
-            if (trip == null) {
-                toast(R.string.safety_share_no_trip)
-                return@launch
-            }
-            AppGraph.repository.shareTrip(trip.uuid)
-                .onSuccess { s ->
-                    val intent = Intent(Intent.ACTION_SEND).apply {
-                        type = "text/plain"
-                        putExtra(Intent.EXTRA_TEXT, getString(R.string.safety_share_text, s.url))
-                    }
-                    startActivity(Intent.createChooser(intent, getString(R.string.safety_share)))
-                }
-                .onFailure { toast(R.string.safety_error) }
-        }
-    }
-
-    private fun toast(res: Int) = Toast.makeText(requireContext(), res, Toast.LENGTH_SHORT).show()
 }
 
 /** Conjunto de Ferramentas de Segurança em folha inferior (captura 014), aberto pelo escudo e pelo Menu. */
@@ -456,14 +206,8 @@ class SafetySheet : BottomSheetDialogFragment() {
             r.simpleRowSubtitle.isVisible = true
             r.simpleRowContent.setOnClickListener {
                 dismiss()
-                when {
-                    t.title.contains("112") ->
-                        startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:112")))
-                    t.title == "Centro de segurança" || t.title.startsWith("Acompanhar") ->
-                        nav.navigate(R.id.safetyCenterFragment)
-                    else ->
-                        nav.navigate(R.id.infoFragment, bundleOf(InfoFragment.ARG_TITLE to t.title, InfoFragment.ARG_BODY to t.subtitle))
-                }
+                if (t.title == "Centro de segurança") nav.navigate(R.id.safetyCenterFragment)
+                else nav.navigate(R.id.infoFragment, bundleOf(InfoFragment.ARG_TITLE to t.title, InfoFragment.ARG_BODY to t.subtitle))
             }
             b.safetyRows.addView(r.root)
         }

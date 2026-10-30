@@ -14,7 +14,6 @@ import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.qolari.userlite.R
-import com.qolari.userlite.data.UiPrefs
 import com.qolari.userlite.databinding.FragmentMenuBinding
 import kotlinx.coroutines.launch
 
@@ -36,20 +35,10 @@ class MenuFragment : Fragment() {
         binding.walletTile.setOnClickListener { findNavController().navigate(R.id.action_menu_to_wallet) }
         binding.activityTile.setOnClickListener { findNavController().navigate(R.id.action_menu_to_activity) }
         binding.accountRow.setOnClickListener { findNavController().navigate(R.id.action_menu_to_account) }
-        binding.supportRow.setOnClickListener { findNavController().navigate(R.id.action_menu_to_support) }
-        binding.safetyRow.setOnClickListener { findNavController().navigate(R.id.action_menu_to_safety) }
-        binding.savedRow.setOnClickListener { findNavController().navigate(R.id.action_menu_to_saved) }
-        binding.extrasRow.setOnClickListener { findNavController().navigate(R.id.action_menu_to_extras) }
-        binding.appearanceRow.setOnClickListener { findNavController().navigate(R.id.action_menu_to_appearance) }
         binding.promotionsRow.setOnClickListener { findNavController().navigate(R.id.action_menu_to_promotions) }
         binding.legalRow.setOnClickListener { findNavController().navigate(R.id.action_menu_to_legal) }
         binding.cashRow.setOnClickListener { findNavController().navigate(R.id.action_menu_to_wallet) }
         binding.signOutButton.setOnClickListener { confirmSignOut() }
-        if (UiPrefs.simple(requireContext())) {
-            binding.extrasRow.isVisible = false
-            binding.savedRow.isVisible = false
-            binding.promotionsRow.isVisible = false
-        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {

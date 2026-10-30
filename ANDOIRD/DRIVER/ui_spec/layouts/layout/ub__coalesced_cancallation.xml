@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.coalesced_cancellation.CoalescedCancelView android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" uber:analyticsId="a9a3e31b-05d7"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize">
+        <com.ubercab.ui.core.UImageButton android:id="@id/close_button" android:background="?selectableItemBackgroundBorderless" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="5abfb7a6-5038" uber:srcCompat="@drawable/ub_ic_x" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H3.News" android:id="@id/coalesced_cancel_header" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" android:layout_marginTop="@dimen/ui__spacing_unit_4x" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/coalesced_cancel_recycler_view" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_10x" android:nestedScrollingEnabled="false" uber:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</com.ubercab.coalesced_cancellation.CoalescedCancelView>

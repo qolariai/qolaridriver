@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.dynamicform.v1.core.views.fields.DynamicFormCoreDatePicker android:orientation="vertical" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center_vertical" android:id="@id/ub__dynamic_form_core_date_picker_label" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.HeadingXSmall" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__dynamic_form_core_date_picker_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ub__dynamic_form_core_date_picker_label" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.commons.widget.PresidioTextInputLayout android:id="@id/ub__dynamic_form_core_date_picker_text_input_layout" android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:hintEnabled="false">
+        <com.ubercab.ui.core.input.BaseEditText android:layout_gravity="fill_horizontal|start|center" android:id="@id/ub__dynamic_form_core_date_picker_selection" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="none" uber:input_endEnhancer_drawable="@drawable/ub_ic_chevron_down_small" />
+    </com.ubercab.ui.commons.widget.PresidioTextInputLayout>
+</com.ubercab.dynamicform.v1.core.views.fields.DynamicFormCoreDatePicker>

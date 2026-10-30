@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.image.AspectRatioImageView android:id="@id/help_inperson_site_list_site_image" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.News" android:id="@id/help_inperson_site_list_site_primary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="21cf0b5a-6b89" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H6.News.Tertiary" android:id="@id/help_inperson_site_list_site_secondary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="81a83b2d-84aa" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H6.News.Tertiary" android:id="@id/help_inperson_site_list_site_tertiary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="6f05b38d-42d5" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H6.News.Tertiary" android:layout_gravity="center_vertical" android:id="@id/help_inperson_site_list_site_end_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:analyticsId="00ecc8ac-e02a" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

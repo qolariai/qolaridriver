@@ -1,7 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { AuthProvider, LiveProvider, useAuth } from './live'
 import { Account } from './pages/Account'
-import { Adjustments } from './pages/Adjustments'
 import { Dashboard } from './pages/Dashboard'
 import { Documents } from './pages/Documents'
 import { DriverPage } from './pages/DriverPage'
@@ -11,14 +10,11 @@ import { FleetPage } from './pages/FleetPage'
 import { Fleets } from './pages/Fleets'
 import { Integration, IntegrationApp } from './pages/Integration'
 import { Login } from './pages/Login'
-import { MapReports } from './pages/MapReports'
 import { Pricing } from './pages/Pricing'
 import { Promos } from './pages/Promos'
 import { RiderPage, Riders } from './pages/Riders'
-import { Safety } from './pages/Safety'
 import { Settings } from './pages/Settings'
 import { Simulator } from './pages/Simulator'
-import { Support } from './pages/Support'
 import { TripPage } from './pages/TripPage'
 import { Trips } from './pages/Trips'
 import { Vehicles } from './pages/Vehicles'
@@ -48,12 +44,8 @@ function Gate() {
           <Route path="tarifas" element={<Pricing />} />
           <Route path="promocoes" element={<Promos />} />
           <Route path="financas" element={<Finance />} />
-          <Route path="ajustes" element={<Adjustments />} />
           <Route path="integracao" element={<Integration />} />
           <Route path="integracao/:app" element={<IntegrationApp />} />
-          <Route path="mapa-problemas" element={<MapReports />} />
-          <Route path="suporte" element={<Support />} />
-          <Route path="seguranca" element={<Safety />} />
           <Route path="definicoes" element={<Settings />} />
           <Route path="conta" element={<Account />} />
           <Route path="*" element={<Navigate to="/" replace />} />

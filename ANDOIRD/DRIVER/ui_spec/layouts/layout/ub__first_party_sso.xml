@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="@drawable/ub__first_party_sso_modal_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/ub__sso_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sso_title_login_with_uber" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" android:paddingVertical="@dimen/ui__spacing_unit_2.5x" style="@style/Platform.TextStyle.LabelLarge" />
+        <com.ubercab.ui.core.UPlainView android:background="?dividerHorizontal" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+        <com.ubercab.ui.core.progress.BaseProgressIndicator android:id="@id/ub__indeterminate_horizontal_progress" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/ub__base_progress_horizontal_size_small" style="@style/HorizontalIndeterminate" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__sso_label" android:paddingTop="@dimen/ui__spacing_unit_2.5x" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sso_label" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/ub__sso_account_list" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

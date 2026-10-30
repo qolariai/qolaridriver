@@ -38,8 +38,8 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/home_brand"
                         android:textColor="@color/ql_black"
-                        android:textSize="34sp"
-                        android:letterSpacing="-0.02" />
+                        android:textSize="26sp"
+                        android:letterSpacing="-0.03" />
 
                     <ImageButton
                         android:id="@+id/menuButton"
@@ -52,35 +52,63 @@
                         app:tint="@color/ql_black" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/savedPlace"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     android:paddingStart="@dimen/ql_margin"
-                    android:paddingEnd="@dimen/ql_margin"
-                    android:textColor="@color/ql_gray_500"
-                    android:textSize="14sp" />
+                    android:paddingEnd="@dimen/ql_margin">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_pin_dot"
+                        app:tint="@color/ql_blue" />
+
+                    <TextView
+                        android:id="@+id/savedPlace"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/ql_black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="4dp"
+                        android:contentDescription="@null"
+                        android:rotation="90"
+                        android:src="@drawable/ic_chevron"
+                        app:tint="@color/ql_black" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/headline"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-medium"
                     android:letterSpacing="-0.02"
-                    android:lineSpacingMultiplier="1.12"
+                    android:lineSpacingMultiplier="0.92"
                     android:paddingStart="@dimen/ql_margin"
                     android:paddingEnd="@dimen/ql_margin"
                     android:text="@string/home_loading"
                     android:textColor="@color/ql_black"
-                    android:textSize="52sp" />
+                    android:textSize="40sp" />
 
                 <LinearLayout
                     android:id="@+id/searchBar"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/ql_search_height"
+                    android:layout_height="56dp"
                     android:layout_marginStart="@dimen/ql_margin"
-                    android:layout_marginTop="22dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="@dimen/ql_margin"
                     android:background="@drawable/bg_search"
                     android:clickable="true"
@@ -88,12 +116,12 @@
                     android:foreground="?attr/selectableItemBackground"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingStart="20dp"
+                    android:paddingStart="16dp"
                     android:paddingEnd="20dp">
 
                     <ImageView
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
                         android:contentDescription="@null"
                         android:src="@drawable/ic_search"
                         app:tint="@color/ql_gray_500" />
@@ -101,42 +129,73 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
+                        android:layout_marginStart="12dp"
                         android:text="@string/home_search"
                         android:textColor="@color/ql_gray_500"
-                        android:textSize="24sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
 
-                <FrameLayout
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/ql_map_height"
-                    android:layout_marginTop="18dp">
+                    android:layout_marginStart="@dimen/ql_margin"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/ql_margin"
+                    app:cardBackgroundColor="@color/ql_map_land"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
 
-                    <com.qolari.shared.map.GoogleMapView
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <com.qolari.userlite.ui.map.RealMapView
                         android:id="@+id/map"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
 
-                    <TextView
-                        android:id="@+id/mapSavedPlace"
+                    <!-- Etiqueta de recolha colada a esquerda, como na captura 030: "De <morada> ›". -->
+                    <LinearLayout
+                        android:id="@+id/mapSavedPlaceChip"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|start"
-                        android:layout_margin="18dp"
-                        android:background="@drawable/bg_map_control"
-                        android:paddingStart="16dp"
-                        android:paddingTop="10dp"
-                        android:paddingEnd="16dp"
-                        android:paddingBottom="10dp"
-                        android:textColor="@color/ql_black"
-                        android:textSize="15sp" />
+                        android:layout_height="36dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="120dp"
+                        android:background="@drawable/bg_map_chip"
+                        android:elevation="3dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="8dp">
 
+                        <TextView
+                            android:id="@+id/mapSavedPlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:maxWidth="190dp"
+                            android:textColor="@color/ql_black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="2dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_chevron"
+                            app:tint="@color/ql_black" />
+                    </LinearLayout>
+
+                    <!-- Localizar em cima do zoom +/-, como na Uber Lite real. -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|end"
-                        android:layout_marginEnd="18dp"
-                        android:layout_marginBottom="96dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:elevation="3dp"
                         android:orientation="vertical">
 
                         <ImageButton
@@ -145,44 +204,58 @@
                             android:layout_height="48dp"
                             android:background="@drawable/bg_map_control"
                             android:contentDescription="@string/home_locate"
-                            android:padding="12dp"
+                            android:padding="13dp"
                             android:src="@drawable/ic_crosshair"
                             app:tint="@color/ql_black" />
 
-                        <ImageButton
-                            android:id="@+id/zoomInButton"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                        <LinearLayout
+                            android:layout_width="44dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
                             android:layout_marginTop="8dp"
                             android:background="@drawable/bg_map_control"
-                            android:contentDescription="@string/home_zoom_in"
-                            android:padding="13dp"
-                            android:src="@drawable/ic_plus"
-                            app:tint="@color/ql_black" />
+                            android:orientation="vertical">
 
-                        <ImageButton
-                            android:id="@+id/zoomOutButton"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_marginTop="8dp"
-                            android:background="@drawable/bg_map_control"
-                            android:contentDescription="@string/home_zoom_out"
-                            android:padding="13dp"
-                            android:src="@drawable/ic_minus"
-                            app:tint="@color/ql_black" />
+                            <ImageButton
+                                android:id="@+id/zoomIn"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="@string/a11y_zoom_in"
+                                android:padding="13dp"
+                                android:src="@drawable/ic_plus"
+                                app:tint="@color/ql_black" />
+
+                            <View
+                                android:layout_width="26dp"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/ql_gray_200" />
+
+                            <ImageButton
+                                android:id="@+id/zoomOut"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="@string/a11y_zoom_out"
+                                android:padding="13dp"
+                                android:src="@drawable/ic_minus"
+                                app:tint="@color/ql_black" />
+                        </LinearLayout>
                     </LinearLayout>
-                </FrameLayout>
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="18dp"
                     android:fontFamily="sans-serif-medium"
                     android:paddingStart="@dimen/ql_margin"
                     android:paddingEnd="@dimen/ql_margin"
                     android:text="@string/home_suggestions"
                     android:textColor="@color/ql_black"
-                    android:textSize="32sp" />
+                    android:textSize="24sp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/suggestions"
@@ -256,3 +329,4 @@
     </FrameLayout>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.communicationpreferences.channel.CommsChannelDetailsView android:background="?backgroundSecondary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="34993cdb-633b"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__comms_preference_channel_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_state="collapse" />
+    <com.ubercab.ui.core.UScrollView android:layout_gravity="top" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_anchor="@id/ub__comms_preference_channel_header" app:layout_anchorGravity="bottom" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__comms_preference_channel_setting_container" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_1x" />
+            <com.ubercab.ui.core.text.BaseTextView android:background="?backgroundPrimary" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/preference_channel_details_screen" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingXSmall" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub_comms_preference_channel_categories_list" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.uber.communicationpreferences.channel.CommsChannelDetailsView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ui__spacing_unit_3x" android:width="@dimen/ui__spacing_unit_3x" android:viewportWidth="48.0" android:viewportHeight="48.0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@drawable/$ub__ic_hub_charging_map_marker_deselected__0" android:pathData="M10.829,43.2822C7.9467,40.2239 18.5965,38.2061 22.4932,37.6194c7.3856,1.7924 13.3395,1.7369 10.6503,5.9509C29.8066,48.8424 15.3281,48.0708 10.8192,43.2804z" android:fillAlpha="0.7" />
+    <path android:fillColor="?brandWhite" android:pathData="M37,18.94C37,27.2 22.5,41 22.5,41S8,27.2 8,18.94C8,10.7 14.5,4 22.5,4S37,10.69 37,18.94z" />
+    <path android:fillColor="?brandTransparent" android:pathData="M36,18.94c0,1.8 -0.8,4.04 -2.14,6.45a50.82,50.82 0,0 1,-4.89 7.05,92.08 92.08,0 0,1 -6.47,7.16 89.06,89.06 0,0 1,-6.47 -7.16,50.81 50.81,0 0,1 -4.89,-7.05C9.81,22.98 9,20.75 9,18.94 9,11.21 15.07,5 22.5,5S36,11.21 36,18.94z" android:strokeColor="?iconColor" android:strokeWidth="2.0" />
+    <path android:fillColor="?iconColor" android:pathData="M22.28,10.47l-5.46,9.73c-0.1,0.19 0.04,0.43 0.24,0.43h5.3c0.17,0 0.3,0.18 0.25,0.35L20.17,28c-0.08,0.3 0.3,0.51 0.47,0.24l6.65,-10.12c0.11,-0.19 0,-0.44 -0.22,-0.44h-5.62c-0.17,0 -0.28,-0.16 -0.25,-0.33l1.54,-6.7c0.05,-0.32 -0.33,-0.47 -0.46,-0.18z" />
+</vector>

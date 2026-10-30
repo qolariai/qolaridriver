@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/webview_root_layout" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@id/stub_appbar" android:layout="@layout/ub__webview_header_v1" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/webview_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.USwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.airbnb.lottie.LottieAnimationView android:id="@id/webview_loading_animation" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:lottie_autoPlay="false" app:lottie_fileName="webview-animation.json" app:lottie_loop="true" />
+        <ViewStub android:gravity="center" android:layout_gravity="center" android:id="@id/stub_empty_state_view" android:visibility="gone" android:layout="@layout/ub__empty_state" android:inflatedId="@id/empty_state_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_4.5x" app:empty_state_add_bottom_padding="false" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.ui.core.UCoordinatorLayout>

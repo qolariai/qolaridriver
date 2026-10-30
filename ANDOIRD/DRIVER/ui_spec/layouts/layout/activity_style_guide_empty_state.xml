@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:padding="@dimen/ub__card_border_width" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.emptystate.EmptyStateView android:layout_gravity="center" android:id="@id/ub__empty_state_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:empty_state_type="success" />
+</com.ubercab.ui.core.UFrameLayout>

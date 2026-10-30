@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_text_styles" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="69d3b6d3-d35d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:id="@id/text_view_display" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_5x" android:layout_marginBottom="@dimen/ui__spacing_unit_5x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.bottomsheet.ui.DefaultBottomSheetView android:orientation="vertical" android:id="@id/bottom_sheet_view" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.ubercab.ui.bottomsheet.AnchoredBottomSheetBehavior" />
+</com.ubercab.ui.core.UCoordinatorLayout>

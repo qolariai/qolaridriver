@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:id="@id/base_tooltip_container" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/base_tooltip_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/base_tooltip_content_container" android:background="@drawable/ub__base_tooltip_content_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:weightSum="1.0">
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentInversePrimary" android:ellipsize="end" android:id="@id/base_tooltip_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" android:layout_weight="1.0" android:layout_marginStart="@dimen/ub__base_tooltip_padding" android:layout_marginVertical="@dimen/ub__base_tooltip_padding" style="@style/Platform.TextStyle.LabelSmall" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/base_tooltip_button_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__base_tooltip_button_margin" android:layout_weight="0.0" app:buttonType="tertiary" app:icon="@drawable/ub_ic_x" app:shape="circle" app:size="small" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UFrameLayout>

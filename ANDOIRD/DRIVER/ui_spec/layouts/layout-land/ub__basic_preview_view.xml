@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.photo_flow.step.preview_basic.BasicPreviewView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UImageView android:id="@id/ub__basic_preview_image" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="fill_parent" android:scaleType="fitXY" android:layout_weight="5.0" app:analyticsId="8b86e701-baa6" />
+        <com.ubercab.ui.core.UPlainView android:id="@id/ub__basic_preview_shoot_spacing" android:visibility="invisible" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="@dimen/ui__spacing_unit_0x" />
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.ubercab.ui.core.UImageView android:id="@id/ub__basic_preview_accept" android:visibility="visible" android:clickable="false" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:scaleType="fitCenter" android:layout_weight="1.0" android:contentDescription="@string/photo_flow_next" app:analyticsId="1fbc2156-e6e6" />
+            <com.ubercab.ui.core.UImageView android:id="@id/ub__basic_preview_retry" android:visibility="visible" android:clickable="false" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:scaleType="fitCenter" android:layout_weight="1.0" android:contentDescription="@string/photo_flow_retake" app:analyticsId="f5bfd49a-8bd1" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.photo_flow.step.preview_basic.BasicPreviewView>

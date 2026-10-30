@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.infinite_scrolling_carousel.InfiniteScrollingCarouselView android:background="?android:colorBackground" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="84a13f6b-e041"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URecyclerView android:id="@id/carousel_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+    <com.uber.infinite_scrolling_carousel.PageIndicatorView android:id="@id/carousel_page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/carousel_recycler_view" />
+</com.uber.infinite_scrolling_carousel.InfiniteScrollingCarouselView>

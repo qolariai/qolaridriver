@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.trip_details.TripDetailsView android:orientation="vertical" android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="1fa6bca5-6fce"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/help_fixed_header" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/trip_details_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.trip_details.TripDetailsView>

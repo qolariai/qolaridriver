@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.core.root.RootView android:id="@id/rootView" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/rootSplashBackground" android:background="?splashScreenBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub__carbon_app_icon" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.carbon.core.root.RootView>

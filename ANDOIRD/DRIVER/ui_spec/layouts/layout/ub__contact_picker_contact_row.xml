@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="top" android:background="?selectableItemBackground" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.CircleImageView android:id="@id/ub__contact_picker_profile_picture" android:visibility="gone" android:layout_width="?avatarTiny" android:layout_height="?avatarTiny" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="a31f46fa-2cab" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UTextView android:textColor="@color/ub__contact_picker_display_name_text_color" android:gravity="start|center" android:id="@id/ub__contact_display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.H5.News.Primary" />
+        <com.ubercab.ui.core.UTextView android:id="@id/ub__contact_detail_row" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.H6.News.Tertiary" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:gravity="center_vertical" android:id="@id/ub__contact_checkmark" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" app:analyticsId="d3b30d72-0105" app:srcCompat="@drawable/ic_check" />
+</com.ubercab.ui.core.ULinearLayout>

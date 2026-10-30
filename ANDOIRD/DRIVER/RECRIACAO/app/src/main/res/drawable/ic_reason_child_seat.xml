@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cadeira de bebé (sem cadeira auto). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- encosto -->
+    <path
+        android:fillColor="#FF111111"
+        android:pathData="M8,3 h2.4 v7 H8 Z" />
+    <!-- assento -->
+    <path
+        android:fillColor="#FF111111"
+        android:pathData="M8,10 h8 a2,2 0 0 1 2,2 v2 h-2 v-2 H8 Z" />
+    <!-- pernas + rodas -->
+    <path
+        android:fillColor="#FF111111"
+        android:pathData="M9.5,15 h2 v2 h-2 Z M15,15 h2 v2 h-2 Z" />
+    <path
+        android:fillColor="#FF111111"
+        android:pathData="M7,19.4 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0 Z M14.2,19.4 a1.6,1.6 0 1,0 3.2,0 a1.6,1.6 0 1,0 -3.2,0 Z" />
+</vector>

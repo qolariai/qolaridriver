@@ -32,7 +32,6 @@ data class Promo(val title: String, val subtitle: String)
 
 /** Linhas da lista (a ordem é a do ecrã). */
 sealed interface DiscoverRow {
-    data object Chips : DiscoverRow
     data class Promos(val promos: List<Promo>) : DiscoverRow
     data class DayHeader(val date: LocalDate) : DiscoverRow
     data class Item(val item: DiscoverItem, val saved: Boolean) : DiscoverRow

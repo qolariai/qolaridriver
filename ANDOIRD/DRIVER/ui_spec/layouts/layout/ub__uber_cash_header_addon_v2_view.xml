@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.credits.ubercash_header_addon_v2.UberCashHeaderAddonV2View android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__uber_cash_header_addon_v2_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__uber_cash_header_addon_v2_item_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/ub__menu_item_divider_horizontal" android:showDividers="middle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__uber_cash_header_addon_v2_header" />
+    <include layout="@layout/ub__uber_cash_header_addon_v2_placeholder" />
+</com.ubercab.credits.ubercash_header_addon_v2.UberCashHeaderAddonV2View>

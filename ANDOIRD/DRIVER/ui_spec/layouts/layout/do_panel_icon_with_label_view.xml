@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.DoPanelIconWithLabelView android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/icon" android:background="@drawable/ub__carbon_icon_circle_large" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Secondary" android:ellipsize="end" android:gravity="center|top" android:id="@id/label" android:visibility="gone" android:layout_width="@dimen/ui__header_height" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:maxLines="2" />
+</com.ubercab.DoPanelIconWithLabelView>

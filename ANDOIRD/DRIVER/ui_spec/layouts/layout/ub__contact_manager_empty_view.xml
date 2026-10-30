@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/ui__spacing_unit_4x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__error_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" android:layout_marginVertical="@dimen/ui__spacing_unit_2x" app:analyticsId="9596a308-1ad8" />
+    <com.ubercab.ui.core.UTextView android:gravity="center_horizontal" android:id="@id/ub__error_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="80cd457d-d643" style="@style/Platform.TextStyle.HeadingXSmall" />
+    <com.ubercab.ui.core.UTextView android:gravity="center_horizontal" android:id="@id/ub__error_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginVertical="@dimen/ui__spacing_unit_2x" app:analyticsId="b81ec989-7f5d" style="@style/Platform.TextStyle.Paragraph.Medium" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__error_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonType="secondary" app:shape="pill" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.ui.core.ULinearLayout>

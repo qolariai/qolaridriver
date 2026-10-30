@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.accept_reservation.AcceptReservationView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="344939dc-05a9-4f7c-b055-67405f34c7d6"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/ub__error_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:id="@id/ub__progress_bar" android:layout_width="@dimen/ub__loading_indicator_progress_size" android:layout_height="@dimen/ub__loading_indicator_progress_size" android:indeterminate="true" app:size="large" style="@style/Platform.Progress.CircleIndeterminate" />
+</com.ubercab.accept_reservation.AcceptReservationView>

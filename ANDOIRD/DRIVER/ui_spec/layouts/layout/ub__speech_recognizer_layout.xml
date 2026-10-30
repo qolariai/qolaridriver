@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/ub__speech_recognizer_header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:minLines="2" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.UFrameLayout android:gravity="center" android:id="@id/ub__speech_recognizer_mic_image_container" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_14x" android:layout_height="@dimen/ui__spacing_unit_14x" android:layout_marginTop="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/ub__speech_recognizer_mic_animation_image" android:background="@drawable/ub__speech_recognizer_ripple_effect_drawable" android:layout_width="@dimen/ui__spacing_unit_14x" android:layout_height="@dimen/ui__spacing_unit_14x" />
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:id="@id/ub__speech_recognizer_mic_image_background_container" android:background="@drawable/ub__speech_recognizer_mic_image_background" android:layout_width="@dimen/ui__spacing_unit_10x" android:layout_height="@dimen/ui__spacing_unit_10x">
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/ub__speech_recognizer_mic_image" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:scaleType="centerCrop" android:tint="?backgroundPrimary" app:srcCompat="@drawable/ub_ic_microphone" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__speech_recognizer_check_image_container" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_14x" android:layout_height="@dimen/ui__spacing_unit_14x" android:layout_marginTop="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:id="@id/ub__speech_recognizer_check_image_background" android:background="@drawable/ub__speech_recognizer_check_image_background" android:layout_width="@dimen/ui__spacing_unit_10x" android:layout_height="@dimen/ui__spacing_unit_10x" />
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/ub__speech_recognizer_check_image" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:scaleType="centerCrop" android:tint="?backgroundPrimary" app:srcCompat="@drawable/ub_ic_checkmark" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/ub__speech_recognizer_footer_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.LabelDefault" />
+</merge>

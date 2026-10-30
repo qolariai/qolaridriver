@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.planning_hub_libs.boost_detail_info.BoostDetailInfoView android:orientation="vertical" android:background="@drawable/rectangle_top_corners_rounded" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.ubercab.presidio.behaviors.core.ExpandingBottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/boost_detail_card" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UPlainView android:layout_gravity="center" android:background="?brandGrey60" android:layout_width="@dimen/ui__spacing_unit_7x" android:layout_height="@dimen/ui__divider_width" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" />
+        <com.ubercab.ui.core.UPlainView android:layout_gravity="center" android:background="?brandGrey60" android:layout_width="@dimen/ui__spacing_unit_7x" android:layout_height="@dimen/ui__divider_width" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" />
+        <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.UTextView android:textSize="@dimen/ui__text_size_large" android:textColor="?android:textColorPrimary" android:id="@id/boost_detail_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/boost_icon" android:layout_alignParentStart="true" style="@style/Platform.TextStyle.Headline.Normal" />
+            <com.ubercab.ui.core.UImageView android:id="@id/boost_icon" android:layout_width="@dimen/ui__avatar_size_medium" android:layout_height="@dimen/ui__avatar_size_medium" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ic_boost_details" />
+        </com.ubercab.ui.core.URelativeLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/boost_detail_time_start" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Normal" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/boost_detail_time_middle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Normal" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/boost_detail_time_end" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Normal" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/boost_detail_requirements" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Small.Normal" />
+        <com.ubercab.ui.core.UPlainView android:background="?brandGrey40" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/boost_detail_disclaimer_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="start" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/boost_detail_disclaimer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="textStart" style="@style/Platform.TextStyle.Small.Normal" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.planning_hub_libs.boost_detail_info.BoostDetailInfoView>

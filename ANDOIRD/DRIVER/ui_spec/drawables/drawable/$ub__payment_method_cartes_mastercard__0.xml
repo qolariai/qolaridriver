@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gradient android:angle="0.0" android:type="linear" android:startX="22.936" android:startY="10.806" android:endX="5.341" android:endY="22.59"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:color="@color/ub__payment_cartes_card_1" android:offset="0.018" />
+    <item android:color="@color/ub__payment_cartes_card_2" android:offset="0.382" />
+    <item android:color="@color/ub__payment_cartes_card_3" android:offset="0.629" />
+    <item android:color="@color/ub__payment_cartes_card_4" android:offset="1.0" />
+</gradient>

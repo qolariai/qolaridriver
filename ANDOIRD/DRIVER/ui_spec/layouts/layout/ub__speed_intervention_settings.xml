@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.speedintervention.settings_menu.SpeedInterventionSettingsView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:fadingEdgeLength="@dimen/ub__speed_intervention_settings_fading_edge_length" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:requiresFadingEdge="vertical">
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__speed_intervention_on_off_switch_layout" android:background="@drawable/ub__selectable_item_background" android:padding="@dimen/ui__spacing_unit_2x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.News" android:gravity="start|center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__speed_intervention_setting_show_limit" android:layout_weight="1.0" />
+                <com.ubercab.ui.core.USwitchCompat android:theme="@style/Platform.Button.Primary.ThemeOverlay" android:id="@id/ub__speed_intervention_on_off_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__speed_intervention_audible_alert_on_off_switch_layout" android:background="@drawable/ub__selectable_item_background" android:padding="@dimen/ui__spacing_unit_2x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_8x">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.News" android:gravity="start|center" android:layout_width="0.0dip" android:layout_height="@dimen/ui__icon_medium" android:text="@string/ub__speed_intervention_setting_audible_alert" android:layout_weight="1.0" />
+                <com.ubercab.ui.core.USwitchCompat android:id="@id/ub__speed_intervention_audible_alert_on_off_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__speed_intervention_excessive_speed_settings_layout" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.News" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__speed_intervention_setting_excessive_speed_title" />
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H5.News" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__speed_intervention_setting_excessive_speed_sub_title" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__speed_intervention_excessive_speed_settings_range_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.speedintervention.settings_menu.SpeedInterventionSettingsView>

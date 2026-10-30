@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+        <com.uber.ui_compose_view.core.BaseSearchFieldView android:id="@id/help_home_card_search_bar_v2_search_field" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:inputSize="medium" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/help_home_card_search_bar_v2_mic_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_1x" app:buttonType="secondary" app:icon="@drawable/ub_ic_microphone" app:shape="circle" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="32.0dip" android:width="32.0dip" android:viewportWidth="32.0" android:viewportHeight="32.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/oxxo_icon_yellow" android:pathData="M30 5H2C0.895431 5 0 5.89543 0 7V25C0 26.1046 0.895431 27 2 27H30C31.1046 27 32 26.1046 32 25V7C32 5.89543 31.1046 5 30 5Z" />
+    <path android:fillColor="?artWhite" android:pathData="M32 10H0V22H32V10Z" />
+    <path android:fillColor="@color/oxxo_icon_red" android:pathData="M26.46 13.25C25.05 13.25 23.9 14.4 23.9 15.81C23.9 17.22 25.05 18.37 26.46 18.37C27.87 18.37 29.02 17.22 29.02 15.81C29.02 14.4 27.87 13.25 26.46 13.25Z" android:fillType="evenOdd" />
+    <path android:fillColor="@color/oxxo_icon_red" android:pathData="M5.37 13.25C3.96 13.25 2.81 14.4 2.81 15.81C2.81 17.22 3.96 18.37 5.37 18.37C6.78 18.37 7.93 17.22 7.93 15.81C7.93 14.4 6.78 13.25 5.37 13.25Z" android:fillType="evenOdd" />
+    <path android:fillColor="@color/oxxo_icon_red" android:pathData="M26.26 11C23.89 10.95 22.78 12.46 21.16 14.34L19.64 16.11L22.05 19C22.63 19.89 21.53 20.77 20.85 19.96L18.62 17.3L16.44 19.82C15.75 20.62 14.66 19.73 15.25 18.85L17.61 16.1L16.06 14.25L17.06 13.02L18.63 14.91L19.99 13.33C20.66 12.56 21.33 11.53 22.21 11H0V20.99H5.46C7.83 20.99 8.9 19.57 10.48 17.66L11.96 15.86L9.48 13.03C8.88 12.16 9.96 11.25 10.66 12.05L12.95 14.66L15.07 12.09C15.74 11.27 16.85 12.14 16.28 13.04L13.98 15.84L15.57 17.65L14.57 18.84L12.99 17.06L11.67 18.67C11.02 19.46 10.37 20.46 9.5 21.01H32V11.03L26.26 11ZM9.41 15.81C9.41 18.04 7.59 19.85 5.37 19.85C3.14 19.85 1.33 18.03 1.33 15.81C1.33 13.58 3.15 11.77 5.37 11.77C7.59 11.77 9.41 13.59 9.41 15.81ZM26.46 19.86C24.23 19.86 22.42 18.04 22.42 15.82C22.42 13.59 24.24 11.78 26.46 11.78C28.69 11.78 30.5 13.6 30.5 15.82C30.5 18.04 28.68 19.86 26.46 19.86Z" android:fillType="evenOdd" />
+</vector>

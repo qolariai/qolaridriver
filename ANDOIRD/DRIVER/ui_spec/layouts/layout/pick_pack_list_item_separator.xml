@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/pick_pack_list_item_separator_top_divider" android:background="?dividerColor" android:layout_width="fill_parent" android:layout_height="@dimen/pick_pack_summary_border_size" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" android:paddingVertical="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/pick_pack_list_item_separator_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="7d5b3f0a-1c92" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/pick_pack_list_item_separator_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" app:analyticsId="4a8e6b23-af17" style="@style/Platform.TextStyle.ParagraphSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/pick_pack_list_item_separator_image" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:scaleType="fitCenter" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:id="@id/pick_pack_list_item_separator_bottom_divider" android:background="?dividerColor" android:layout_width="fill_parent" android:layout_height="@dimen/pick_pack_summary_border_size" />
+</merge>

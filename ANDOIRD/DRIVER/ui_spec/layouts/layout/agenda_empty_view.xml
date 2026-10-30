@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:id="@id/agenda_empty_view" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_8x" android:layout_marginTop="@dimen/ui__spacing_unit_4x" app:srcCompat="@drawable/ub__ic_agenda_empty" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:text="@string/agenda_empty_override_header_text" style="@style/Platform.TextStyle.Subtitle.Normal" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_4x" android:text="@string/agenda_empty_override_info_text" style="@style/Platform.TextStyle.Small.Normal" />
+</merge>

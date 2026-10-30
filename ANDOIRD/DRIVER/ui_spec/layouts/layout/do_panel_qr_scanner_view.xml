@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.qr_scanner.do_panel.QRScannerRowView android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="b1f039bc-ee54"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scan_tickets" app:layout_constraintBottom_toBottomOf="@id/ub_scan_icon" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.HeadingSmall" />
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub_scan_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ub_ic_scanner" />
+    <com.ubercab.ui.core.UPlainView android:background="?dividerHorizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginTop="@dimen/ui__spacing_unit_3x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub_scan_icon" />
+</com.ubercab.qr_scanner.do_panel.QRScannerRowView>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.voip.v2.call.screen.VoipCallScreenView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="f2396095-4a87"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__voip_screen_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/Theme.Platform.Header" android:gravity="top" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="@style/Widget.Platform.Toolbar">
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?backgroundInversePrimary" android:scaleX="0.8" android:scaleY="0.8" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" uber:srcCompat="@drawable/ub__uber_notify_logo" />
+        </com.ubercab.ui.core.UToolbar>
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center|top" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_15x">
+            <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center" android:id="@id/ub__voip_textview_receiver_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__voip_uber" style="@style/Platform.TextStyle.DisplayXSmall" />
+            <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center" android:id="@id/ub__voip_textview_call_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" style="@style/Platform.TextStyle.ParagraphLarge" />
+            <Chronometer android:layout_gravity="center" android:id="@id/ub__voip_call_duration_chronometer" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphLarge" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:layout_gravity="center|bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__voip_container_mute" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/ub__voip_button_mute" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checkable="true" android:contentDescription="@string/ub__voip_mute" uber:analyticsId="a7b761c5-c696" uber:buttonType="secondary" uber:icon="@drawable/ub_ic_microphone" uber:shape="circle" uber:size="large" />
+                    <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ub__voip_mute" style="@style/Platform.TextStyle.LabelXSmall" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <Space android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__voip_container_speaker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/ub__voip_button_speaker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checkable="true" android:contentDescription="@string/ub__voip_speaker" uber:analyticsId="30725a1b-da25" uber:buttonType="secondary" uber:icon="@drawable/ub_ic_megaphone" uber:shape="circle" uber:size="large" />
+                    <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ub__voip_speaker" style="@style/Platform.TextStyle.LabelXSmall" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+            <Space android:layout_width="wrap_content" android:layout_height="@dimen/ui__spacing_unit_5x" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_8x" android:layoutDirection="locale">
+                <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__voip_button_end_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/ub__voip_end_call" uber:analyticsId="5454010c-e621" uber:buttonType="destructivePrimary" uber:icon="@drawable/ub_ic_x" uber:shape="circle" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+                    <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center" android:id="@id/ub__voip_button_end_call_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/ub__voip_end_call" style="@style/Platform.TextStyle.LabelXSmall" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__voip_container_accept_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:layout_gravity="center" android:id="@id/ub__voip_button_accept_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/ub__voip_accept_call" android:backgroundTint="?colorPositive" uber:analyticsId="21303848-cf2a" uber:buttonType="destructivePrimary" uber:icon="@drawable/ub_ic_checkmark" uber:shape="circle" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+                    <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/ub__voip_accept_call" style="@style/Platform.TextStyle.LabelXSmall" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.voip.v2.call.screen.VoipCallScreenView>

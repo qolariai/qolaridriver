@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__predictive_help_card_container" android:background="@drawable/ub__predictive_help_card_background" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="@dimen/predictive_help_card_width" android:layout_height="@dimen/predictive_help_card_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:ellipsize="end" android:id="@id/ub__predictive_help_card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphXSmall" android:ellipsize="end" android:id="@id/ub__predictive_help_card_body" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:maxLines="3" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?contentAccent" android:ellipsize="end" android:id="@id/ub__predictive_help_card_cta" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:elegantTextHeight="true" />
+</com.ubercab.ui.core.ULinearLayout>

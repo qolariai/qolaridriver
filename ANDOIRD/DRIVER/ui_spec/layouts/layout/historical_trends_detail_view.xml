@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFloatingActionButton android:layout_gravity="start|top" android:id="@id/close_detail" android:padding="@dimen/ui__spacing_unit_0.5x" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:analyticsId="f16f7719-ac06" app:backgroundTint="?backgroundPrimary" app:rippleColor="?backgroundTertiary" app:srcCompat="@drawable/ub_ic_x" app:tint="?contentPrimary" style="@style/Platform.FloatingActionButton" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/carousel_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.uber.earnings_historical_trends.detail.DotIndicatorView android:layout_gravity="center" android:id="@id/dot_indicator_view" android:layout_width="wrap_content" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" app:tabBackground="@drawable/tab_dot_selector" app:tabGravity="center" app:tabIndicatorHeight="@dimen/ui__spacing_unit_0x" app:tabMaxWidth="@dimen/ui__spacing_unit_2x" app:tabRippleColor="@null" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UCoordinatorLayout>

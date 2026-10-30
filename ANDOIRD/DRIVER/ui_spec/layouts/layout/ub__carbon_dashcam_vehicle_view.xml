@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ub__carbon_dashcam_vehicle_view_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.FramedCircleImageView android:id="@id/ub__carbon_dashcam_vehicle_image" android:layout_width="?avatarSmall" android:layout_height="?avatarSmall" app:circleImageBorderColor="?ruleColor" app:circleImageBorderWidth="@dimen/ui__avatar_border" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:id="@id/ub__carbon_dashcam_vehicle_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="9e48e98e-992b" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.UTextView android:id="@id/ub__carbon_dashcam_vehicle_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="41336e56-6c9e" style="@style/Platform.TextStyle.ParagraphSmall" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

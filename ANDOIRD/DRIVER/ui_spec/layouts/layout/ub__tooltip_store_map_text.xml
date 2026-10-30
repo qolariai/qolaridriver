@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.map_ui.tooltip.optional.StoreMapTextTooltipView android:paddingTop="@dimen/ui__spacing_unit_0.5x" android:paddingBottom="@dimen/ui__spacing_unit_0.5x" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:id="@id/text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:paddingStart="@dimen/ub__tooltip_padding_extra" android:paddingEnd="@dimen/ub__tooltip_padding_extra" app:analyticsId="20aaab44-bc1e" style="@style/Platform.TextStyle.LabelSmall" />
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.map_ui.tooltip.optional.StoreMapTextTooltipView>

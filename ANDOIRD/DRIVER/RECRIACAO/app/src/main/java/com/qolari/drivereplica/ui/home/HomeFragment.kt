@@ -44,27 +44,14 @@ class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding!!.mapCard.clipToOutline = true
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val nav = findNavController()
         binding.btnExpand.setOnClickListener { nav.navigate(R.id.mapFragment) }
-        binding.btnPreferences.setOnClickListener {
-            // Definições vive no grafo aninhado do Menu: entrar pelo grafo e depois no ecrã.
-            nav.navigate(R.id.menuTab)
-            nav.navigate(
-                R.id.settingsFragment,
-                androidx.core.os.bundleOf(
-                    com.qolari.drivereplica.ui.settings.SettingsFragment.ARG_BACK_TO to R.id.homeFragment,
-                ),
-            )
-        }
-        binding.btnSearch.setOnClickListener {
-            com.qolari.drivereplica.ui.map.PlaceSearchSheet.show(childFragmentManager) { name, lat, lng ->
-                binding.mapView.focus(lat, lng, name)
-            }
-        }
+        binding.mapView.setOnClickListener { nav.navigate(R.id.mapFragment) }
         binding.btnGoOnline.setOnClickListener {
             if (viewModel.state.value.online || AppGraph.location.hasPermission) toggleAndOpenMap()
             else locationPermission.launch(Manifest.permission.ACCESS_FINE_LOCATION)
@@ -113,7 +100,8 @@ class HomeFragment : Fragment() {
         val coldFailure = s.failed && !s.loaded
         binding.errorBanner.isVisible = coldFailure
         // Com a falha no arranque o mapa encolhe para o texto de erro caber acima do botão (captura 117).
-        binding.mapCard.updateLayoutParams { height = (resources.displayMetrics.density * if (coldFailure) 180 else 260).toInt() }
+        binding.mapCard.updateLayoutParams { height = (resources.displayMetrics.density * if (coldFailure) 160 else 320).toInt() }
+        binding.mapView.deviceLocation = AppGraph.location.lastKnown()
         binding.errorState.isVisible = coldFailure
         binding.sections.isVisible = !coldFailure
         binding.btnGoOnline.setText(if (s.online) R.string.home_go_offline else R.string.home_go_online)
@@ -131,16 +119,10 @@ class HomeFragment : Fragment() {
                 R.string.home_opp_1_title to R.string.home_opp_1_sub,
                 R.string.home_opp_2_title to R.string.home_opp_2_sub,
                 R.string.home_opp_3_title to R.string.home_opp_3_sub,
-            ).forEachIndexed { index, (t, st) ->
+            ).forEach { (t, st) ->
                 val item = ItemOpportunityBinding.inflate(layoutInflater, sec.sectionItems, false)
                 item.oppTitle.setText(t)
                 item.oppSubtitle.setText(st)
-                item.oppThumb.showDemand = false
-                item.oppThumb.center = listOf(
-                    38.7570 to -9.2233,
-                    38.7223 to -9.1393,
-                    38.7742 to -9.1342,
-                )[index % 3]
                 sec.sectionItems.addView(item.root)
             }
             container.addView(sec.root)
@@ -169,21 +151,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        _binding?.let {
-            it.mapView.onResume()
-            if (AppGraph.location.hasPermission) it.mapView.userLocation = AppGraph.location.lastKnown()
-        }
-    }
-
-    override fun onPause() {
-        _binding?.mapView?.onPause()
-        super.onPause()
-    }
-
     override fun onDestroyView() {
-        _binding?.mapView?.onDestroy()
         _binding = null
         super.onDestroyView()
     }

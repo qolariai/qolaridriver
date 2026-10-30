@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+    <com.ubercab.ui.core.UToolbar android:id="@id/ub__toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:navigationIcon="@drawable/ub_ic_arrow_left" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?colorAccent" />
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__title" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" app:analyticsId="dc9cfb73-d255" style="@style/Platform.TextStyle.DisplayXSmall" />
+    <ViewFlipper android:id="@id/ub__error_flipper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__search_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__detail_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <include layout="@layout/ub__contact_manager_empty_view" />
+    </ViewFlipper>
+</merge>

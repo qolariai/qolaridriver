@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Caixa de entrada da original (captura 063): tabuleiro com seta para baixo, contorno de 2dp. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M5,4 L19,4 A1,1 0 0 1 20,5 L20,8 A1,1 0 0 1 19,9 L5,9 A1,1 0 0 1 4,8 L4,5 A1,1 0 0 1 5,4 Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#000000"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2" />
+    <path
+        android:pathData="M5,9 L5,14 A5,5 0 0 0 10,19 L14,19 A5,5 0 0 0 19,14 L19,9"
+        android:fillColor="#00000000"
+        android:strokeColor="#000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2" />
+    <path
+        android:pathData="M12,10.5 L12,15.5 M9.8,13.3 L12,15.5 L14.2,13.3"
+        android:fillColor="#00000000"
+        android:strokeColor="#000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2" />
+</vector>

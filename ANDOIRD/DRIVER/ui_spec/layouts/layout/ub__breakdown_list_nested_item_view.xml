@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="6af4d5cc-e645" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ub__value" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.ParagraphDefault" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_3.5x" app:analyticsId="a2957892-ff71" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.ParagraphDefault" />
+</com.ubercab.ui.core.UConstraintLayout>

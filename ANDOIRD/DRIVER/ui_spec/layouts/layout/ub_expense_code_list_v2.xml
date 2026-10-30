@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.expense_code.expense_code_list.ExpenseCodeListView android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="8646b3d2-bdf3"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__expense_code_list_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__expense_code_list_loading_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__expense_code_list_loading_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?contentPrimary" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.profiles.expense_code.views.ExpenseCodeClearableEditText android:id="@id/ub__expense_code_list_search_edit_text" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" style="@style/U4b.TextStyle.ExpenseCode.EditText" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__expense_code_list_no_results_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="?contentInset">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/ub__expense_code_list_no_results_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/expense_code_search_no_results" style="@style/Platform.TextStyle.Paragraph.Normal" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?textSecondary" android:id="@id/ub__expense_code_list_no_results_details" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/expense_code_search_no_results_details" style="@style/Platform.TextStyle.Small.Normal" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.URecyclerView android:id="@id/ub__expense_code_search_list_recycler_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.profiles.expense_code.expense_code_list.ExpenseCodeListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.bug_reporter.ui.view_selector.ViewSelectorView android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="41c24887-eaeb"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:theme="?toolbarTheme" android:id="@id/appbar" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStartWithNavigation="0.0dip" app:elevation="@dimen/ui__header_elevation">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.ToolbarFont" android:id="@id/toolbar" android:background="?brandBlack" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:menu="@menu/menu_view_selector" app:navigationIcon="@drawable/navigation_icon_back" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:title="@string/bug_reporter_select_view_toolbar_title" app:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Widget.Platform.Toolbar" />
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/screenshot_view" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" app:analyticsId="4da1e633-894e" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.bug_reporter.ui.view_selector.ViewSelectorView>

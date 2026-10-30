@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety.identity.verification.flow.docscan.uscan_mask.USnapCameraControlOverlayView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <include layout="@layout/ub__identity_verification_usnap_camera_mask_v2" />
+            <include layout="@layout/ub__identity_verification_usnap_camera_frame" />
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center" android:id="@id/ub__identity_verification_usnap_camera_instruction" android:background="@drawable/ic_rectangle_orange" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/identity_verification_usnap_camera_view_instruction" android:layout_marginStart="@dimen/ui__spacing_unit_4x" android:layout_marginEnd="@dimen/ui__spacing_unit_4x" app:analyticsId="5a49fff4-edd8" style="@style/Platform.TextStyle.LabelDefault" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?brandBlack" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:alpha="0.8">
+            <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="false">
+                <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x">
+                    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center" android:id="@id/ub__identity_verification_camera_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" app:lottie_autoPlay="true" app:lottie_fileName="front_center.json" app:lottie_loop="true" />
+                </com.ubercab.ui.core.UFrameLayout>
+            </com.ubercab.ui.core.UScrollView>
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:background="?brandBlack" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_11x">
+                <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/btn_shoot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/identity_verification_usnap_camera_button_text" app:analyticsId="515bda80-b9e0" app:srcCompat="@drawable/ic_shutter" />
+                    <ProgressBar android:layout_gravity="center" android:id="@id/ub__progress_bar" android:layout_width="@dimen/ui__spacing_unit_10x" android:layout_height="@dimen/ui__spacing_unit_10x" android:indeterminate="true" android:indeterminateTint="?accentPrimary" android:indeterminateTintMode="src_in" style="@style/Widget.AppCompat.ProgressBar" />
+                </com.ubercab.ui.core.UFrameLayout>
+                <com.ubercab.ui.core.UImageView android:layout_gravity="end|center" android:id="@id/ub__flash" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:contentDescription="@string/identity_verification_usnap_camera_flash_button_text" android:paddingStart="0.0dip" android:paddingEnd="@dimen/ui__spacing_unit_5x" app:analyticsId="e93496ae-5d31" app:srcCompat="@drawable/ub__ic_camera_flash_off" />
+            </com.ubercab.ui.core.UFrameLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.safety.identity.verification.flow.docscan.uscan_mask.USnapCameraControlOverlayView>

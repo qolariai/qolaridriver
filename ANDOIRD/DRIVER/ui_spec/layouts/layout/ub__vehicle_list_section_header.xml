@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_3x" android:paddingEnd="@dimen/ui__spacing_unit_0.5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" uber:analyticsId="0d8e11dc-d80e" style="@style/Platform.TextStyle.HeadingDefault" />
+    <com.ubercab.ui.core.UTextView android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__vehicle_details_stats_vertical_spacing" android:maxLines="1" uber:analyticsId="1a2c5f82-6357" style="@style/Platform.TextStyle.ParagraphDefault" />
+</com.ubercab.ui.core.ULinearLayout>

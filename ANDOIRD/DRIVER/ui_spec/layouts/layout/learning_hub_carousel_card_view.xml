@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.learning_hub.card.LearningHubCarouselCardView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="dedce1ed-b90a"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UCardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_0.5x" android:layout_marginRight="@dimen/ui__spacing_unit_0.5x" uber:cardCornerRadius="@dimen/ui__spacing_unit_1x" uber:cardElevation="@dimen/ui__elevation_high">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:paddingLeft="@dimen/ui__spacing_unit_3x" android:paddingRight="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:id="@id/driver_guide_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" uber:analyticsId="03d0892e-a1d2" style="@style/TextAppearance.DriverGuideCard.Title" />
+            <com.ubercab.ui.core.UTextView android:id="@id/driver_guide_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" uber:analyticsId="b7a3e56a-fde7" style="@style/TextAppearance.DriverGuideCard.Description" />
+            <com.ubercab.ui.core.UPlainView android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_1x" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/driver_guide_progress_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" uber:analyticsId="0ea7fb56-906c" style="@style/Platform.TextStyle.Meta.Normal" />
+            <com.ubercab.learning_hub.progress_bar.LearningHubProgressBarView android:layout_gravity="center_vertical" android:id="@id/learning_hub_progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/learning_hub_progress_bar_height" android:layout_marginTop="@dimen/ui__spacing_unit_1x" />
+            <com.ubercab.ui.core.UTextView android:textColor="?textColorAccent" android:gravity="center" android:id="@id/driver_guide_cta" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAllCaps="true" uber:analyticsId="c0b98728-a2f2" style="@style/Platform.TextStyle.Button.Bold" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCardView>
+</com.ubercab.learning_hub.card.LearningHubCarouselCardView>

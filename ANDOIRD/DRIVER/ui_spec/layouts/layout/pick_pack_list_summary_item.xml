@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:background="?dividerColor" android:layout_width="fill_parent" android:layout_height="@dimen/pick_pack_summary_border_size" android:layout_marginBottom="@dimen/ui__spacing_unit_1.5x" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.text.BaseTextView android:gravity="start" android:id="@id/pick_pack_list_summary_label" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="@dimen/ui__spacing_unit_0x" android:paddingEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="d9e402fc-acf0" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.text.BaseTextView android:gravity="end" android:id="@id/pick_pack_list_summary_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_0x" app:analyticsId="1de8c595-5ee6" style="@style/Platform.TextStyle.LabelDefault" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?dividerColor" android:layout_width="fill_parent" android:layout_height="@dimen/pick_pack_summary_border_size" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" />
+</merge>

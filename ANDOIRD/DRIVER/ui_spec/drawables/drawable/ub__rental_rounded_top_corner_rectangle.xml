@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?backgroundPrimary" />
+    <corners android:radius="@dimen/ui__divider_width" android:topLeftRadius="@dimen/ub__emobi_background_top_radius" android:topRightRadius="@dimen/ub__emobi_background_top_radius" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+</shape>

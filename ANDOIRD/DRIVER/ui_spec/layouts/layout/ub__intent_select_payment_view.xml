@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.profileselection.intent_payment_selector.IntentSelectPaymentView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="c82b1a9f-4a84"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+    <com.ubercab.ui.core.UHorizontalScrollView android:id="@id/ub__intent_select_payment_button_container_base" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:overScrollMode="never">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:paddingStart="?contentInset" android:paddingEnd="?contentInset">
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__intent_select_payment_personal_button_base" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/personal" uber:analyticsId="d0473b2b-7f5a" uber:icon="@drawable/ub_ic_person" style="@style/U4BIntentPaymentButtonBase" />
+            <Space android:layout_width="@dimen/ui__spacing_unit_1x" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__intent_select_payment_business_button_base" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/business" uber:analyticsId="554fa111-190d" uber:icon="@drawable/ic_business" style="@style/U4BIntentPaymentButtonBase" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UHorizontalScrollView>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__intent_select_payment_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</com.uber.profileselection.intent_payment_selector.IntentSelectPaymentView>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.face_verification.modal.HelmetVerificationErrorView android:orientation="horizontal" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="260387b1-b0ac"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__identity_verification_mask_detection_error_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_3x" android:text="@string/ub__helmet_verification_helmet_detection_error_body" app:analyticsId="6e49be63-7dba" app:drawableEndCompat="@drawable/ub__helmet_verification_helmet_detection_error_illustration" style="@style/Platform.TextStyle.Paragraph.Medium" />
+</com.uber.face_verification.modal.HelmetVerificationErrorView>

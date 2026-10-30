@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:theme="@style/Theme.Carbon.DayNight" android:background="@drawable/widget_layout_background" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/widget_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:contentDescription="@null" />
+    <ImageView android:layout_gravity="end|top" android:id="@id/widget_logo" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_7x" android:scaleType="fitCenter" android:contentDescription="@null" />
+</FrameLayout>

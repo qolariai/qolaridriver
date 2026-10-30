@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="8cf2518c-28f4"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__selfie_photo_quality_help_row_item_one" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__selfie_photo_quality_help_row_item_two" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__selfie_photo_quality_help_row_item_three" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__selfie_photo_quality_help_row_item_four" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ubercab.ui.core.ULinearLayout>

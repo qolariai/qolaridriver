@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__emobi_modal_row_underline" android:background="@drawable/ub__border" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="?dividerWidth" android:layout_alignBaseline="@id/ub__emobi_modal_row_left_text" />
+    <com.ubercab.ui.core.text.BaseTextView android:textStyle="bold" android:id="@id/ub__emobi_modal_row_left_text" android:background="?backgroundPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true" app:analyticsEnabled="false" app:analyticsId="1f0db500-05bd" style="@style/Platform.TextStyle.H6.News" />
+    <com.ubercab.ui.core.text.BaseTextView android:textStyle="bold" android:id="@id/ub__emobi_modal_row_right_text" android:background="?backgroundPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" app:analyticsEnabled="false" app:analyticsId="759109d7-2dfe" style="@style/Platform.TextStyle.H6.News" />
+</merge>

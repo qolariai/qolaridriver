@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.scheduler.landing.SchedulerLandingView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/scheduler_offline_overlay_dismiss" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?brandBlack" app:analyticsId="a76d4736-0274" app:srcCompat="@drawable/ub_ic_x" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/scheduler_landing_bit_loading_indicator" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:bli_bitColor="?colorAccent" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/scheduler_landing_scrolling_view_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.UTextView android:id="@id/scheduler_offline_overlay_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" app:analyticsId="5110eb05-64d2" style="@style/Platform.TextStyle.DisplayLarge.Medium" />
+            <com.ubercab.ui.core.UTextView android:id="@id/scheduler_offline_overlay_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="25f4f7b9-ae35" style="@style/Platform.TextStyle.Paragraph.Normal" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/landing_list_item_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.scheduler.landing.SchedulerLandingView>

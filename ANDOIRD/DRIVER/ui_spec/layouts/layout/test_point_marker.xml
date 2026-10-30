@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.map_marker_management.marker.TestPointMarkerView android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="6ff8ef40-4a45"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/point_marker" />
+</com.ubercab.map_marker_management.marker.TestPointMarkerView>

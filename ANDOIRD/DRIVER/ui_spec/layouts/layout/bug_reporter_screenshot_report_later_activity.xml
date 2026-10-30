@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/presidio_appfeedback_screenshot_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:tint="@color/ub__themeless_dark_scrim" android:tintMode="src_over" app:analyticsId="4306cc12-9014" />
+    <com.ubercab.ui.core.UImageView android:id="@id/presidio_appfeedback_screenshot_imageview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/ui__spacing_unit_2x" android:scaleType="fitCenter" android:layout_above="@id/bug_reporter_report_buttons" android:layout_alignParentTop="true" android:contentDescription="@string/presidio_appfeedback_description" app:analyticsId="54bde946-1a77" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/bug_reporter_report_buttons" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H2.Book" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/presidio_appfeedback_issue_captured" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.Book" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/presidio_appfeedback_would_report_issue" />
+        <com.ubercab.ui.core.UButton android:id="@id/presidio_appfeedback_report_to_phabricator_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/presidio_appfeedback_report_now" style="?platformButtonPrimary" />
+        <com.ubercab.ui.core.UButton android:id="@id/presidio_appfeedback_later_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/presidio_appfeedback_report_later" style="?platformButtonSecondary" />
+        <com.ubercab.ui.core.UButton android:id="@id/presidio_appfeedback_cancel_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/presidio_appfeedback_cancel" style="?platformButtonSecondary" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.URelativeLayout>

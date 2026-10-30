@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.image.annotation.ui.ImageAnnotationView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:theme="?toolbarTheme" android:id="@id/appbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/header_elevation" uber:contentInsetStartWithNavigation="0.0dip">
+        <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:background="?brandBlack" android:layout_width="fill_parent" android:layout_height="?actionBarSize" uber:contentInsetStartWithNavigation="0.0dip" uber:layout_collapseMode="pin" uber:titleTextAppearance="@style/Platform.TextStyle.H3.Book" style="@style/Widget.Platform.Toolbar" />
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.image.annotation.library.impl.ImageEditorView android:id="@id/imageEditorView" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</com.ubercab.image.annotation.ui.ImageAnnotationView>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.ui_compose_view.core.BaseTextFieldView android:layout_gravity="center" android:id="@id/base_input" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" app:inputSize="medium"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

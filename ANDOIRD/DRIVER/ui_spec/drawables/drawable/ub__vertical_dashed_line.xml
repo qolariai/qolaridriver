@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/ui__spacing_unit_0x" android:top="@dimen/dashed_line_padding" android:right="@dimen/dashed_line_padding" android:bottom="@dimen/dashed_line_padding">
+        <shape android:shape="rectangle">
+            <solid android:color="?transparent" />
+            <stroke android:width="@dimen/dash_width" android:color="?iconTertiary" android:dashWidth="@dimen/dash_width" android:dashGap="@dimen/dash_gap" />
+        </shape>
+    </item>
+</layer-list>

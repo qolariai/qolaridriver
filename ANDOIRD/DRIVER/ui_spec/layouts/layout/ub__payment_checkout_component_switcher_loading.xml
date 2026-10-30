@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="@dimen/ub__payment_switcher_loading_placeholder_width1" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ui__spacing_unit_3x" app:placeholder_corner_radius="@dimen/ui__spacing_unit_0.5x" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" layout="@layout/ub__payment_checkout_component_switcher_loading_block" />
+    <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="@dimen/ub__payment_switcher_loading_placeholder_width1" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ui__spacing_unit_4x" app:placeholder_corner_radius="@dimen/ui__spacing_unit_0.5x" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" layout="@layout/ub__payment_checkout_component_switcher_loading_block" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" layout="@layout/ub__payment_checkout_component_switcher_loading_block" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" layout="@layout/ub__payment_checkout_component_switcher_loading_block" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x">
+        <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" />
+        <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_gravity="center_vertical" android:layout_width="@dimen/ub__payment_switcher_loading_placeholder_width2" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:placeholder_corner_radius="@dimen/ui__spacing_unit_0.5x" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.ULinearLayout>

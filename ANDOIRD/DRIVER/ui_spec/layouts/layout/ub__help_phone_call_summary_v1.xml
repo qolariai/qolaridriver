@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:header_state="expand" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/help_phone_call_summary_bit_loading_indicator" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?contentPrimary" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/help_phone_call_summary_scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/help_phone_call_summary_details" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UCardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?backgroundSecondary">
+                <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/help_phone_call_summary_topic" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.UCardView>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/help_phone_call_summary_job_picker_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/ub__help_phone_job_holder" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UCardView android:id="@id/help_phone_number_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?backgroundSecondary" app:cardCornerRadius="@dimen/ui__corner_radius" app:cardElevation="@dimen/ui__elevation_low" app:cardUseCompatPadding="true">
+                <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_vertical" android:id="@id/help_phone_number_editable_view_container" android:paddingLeft="@dimen/ui__spacing_unit_1x" android:paddingRight="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/help_phone_number_non_editable_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" />
+            </com.ubercab.ui.core.UCardView>
+            <com.ubercab.ui.core.UCardView android:id="@id/timeslot_selection_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?backgroundSecondary" app:cardCornerRadius="@dimen/ui__corner_radius" app:cardElevation="@dimen/ui__elevation_low" app:cardUseCompatPadding="true">
+                <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/timeslot_selection_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.UCardView>
+            <com.ubercab.ui.core.UCardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?backgroundSecondary" app:cardCornerRadius="@dimen/ui__corner_radius" app:cardElevation="@dimen/ui__elevation_low" app:cardUseCompatPadding="true">
+                <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/help_phone_call_summary_language" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.UCardView>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/action_buttons_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="@dimen/ui__spacing_unit_2x" android:divider="@drawable/divider_space_1x" android:layout_weight="1.0" android:showDividers="middle" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="bottom" android:id="@id/call_us_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_4x" android:text="@string/help_phone_call_us_button_title" app:analyticsId="a3a45983-8d1e" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/help_phone_call_summary_error" android:paddingLeft="?gutterSize" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingRight="?gutterSize" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/help_phone_call_summary_error_retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/help_phone_call_error_retry" app:analyticsId="9c65ed5f-be80" app:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.image.BaseImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" app:analyticsId="0b9ed848-cf1d" app:srcCompat="@drawable/ub__phone_call_warning" />
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?contentSecondary" android:gravity="center_horizontal" android:id="@id/help_phone_call_error_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_phone_call_error_subtitle" app:analyticsId="6e606ccc-2391" />
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?contentPrimary" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_phone_call_error_title" app:analyticsId="645caf8f-510f" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/phone_cancel_schedule_callback_frame_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</merge>

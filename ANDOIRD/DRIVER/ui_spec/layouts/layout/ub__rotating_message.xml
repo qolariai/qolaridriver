@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/rotating_message_view" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x" uber:analyticsId="8ac3bcca-8c19"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/rotating_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" uber:analyticsId="f70af93a-28f1" style="@style/Platform.TextStyle.Small.Normal" />
+    <com.ubercab.ui.core.UImageView android:id="@id/rotating_message_icon" android:visibility="gone" android:layout_width="@dimen/ui__icon_small" android:layout_height="@dimen/ui__icon_small" android:layout_marginStart="@dimen/ui__spacing_unit_1x" uber:analyticsId="f8d6513d-50af" uber:srcCompat="@drawable/ub_ic_circle_i" />
+</com.ubercab.ui.core.ULinearLayout>

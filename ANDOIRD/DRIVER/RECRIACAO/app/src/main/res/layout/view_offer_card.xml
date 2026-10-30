@@ -1,131 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  Cartão da proposta (vídeo 2026-10-29, 16:15; frames em ux_capture/videos/2026-10-29_pedido).
+  Medidas na referência a 3,5 px/dp: cartão 334dp com contorno preto de 2dp e raio 16dp, margem 16dp,
+  chip 32dp, preço 52sp, botão 56dp. O divisor é de bordo a bordo (por isso o padding vive nos blocos).
+  Sem barra de contagem: a original não mostra o tempo.
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
-    android:layout_margin="12dp"
-    android:background="@drawable/bg_card_drive"
-    android:elevation="8dp"
+    android:layout_margin="16dp"
+    android:background="@drawable/bg_offer_card"
     android:orientation="vertical"
-    android:padding="16dp"
     android:visibility="gone">
-
-    <View
-        android:id="@+id/offerTimer"
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/bg_timer_bar" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_chip_product"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="14dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_person_filled"
+                    app:tint="@color/qd_core_white" />
+
+                <TextView
+                    android:id="@+id/offerProduct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/qd_core_white"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <!-- Etiqueta do tipo de pedido: "Exclusivo" (azul) ou "Radar" (vídeo 2026-10-29). -->
+            <TextView
+                android:id="@+id/offerKind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/qd_offer_kind"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/offerClose"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_close_offer"
+                android:contentDescription="@string/drive_decline"
+                android:padding="17dp"
+                android:src="@drawable/ic_close"
+                app:tint="@color/qd_ink" />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/offerProduct"
+            android:id="@+id/offerPrice"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:background="@drawable/bg_chip_product"
-            android:drawablePadding="8dp"
-            android:gravity="center_vertical"
-            android:paddingStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/qd_ink"
+            android:textSize="52sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/offerTotals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/qd_offer_secondary"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_pill_service"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
             android:paddingEnd="12dp"
-            android:textColor="@color/qd_core_white"
-            android:textSize="16sp"
-            app:drawableStartCompat="@drawable/ic_person"
-            app:drawableTint="@color/qd_core_white" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:id="@+id/offerClose"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/bg_close_square"
-            android:contentDescription="@string/drive_decline"
-            android:padding="14dp"
-            android:src="@drawable/ic_close"
-            app:tint="@color/qd_ink" />
+            android:paddingBottom="6dp"
+            android:text="@string/drive_after_fee"
+            android:textColor="@color/qd_ink"
+            android:textSize="16sp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/offerPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/qd_ink"
-        android:textSize="40sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/bg_pill_gray_soft"
-        android:paddingStart="12dp"
-        android:paddingTop="6dp"
-        android:paddingEnd="12dp"
-        android:paddingBottom="6dp"
-        android:text="@string/drive_after_fee"
-        android:textColor="@color/qd_ink"
-        android:textSize="14sp" />
-
+    <!-- Divisor de bordo a bordo, como na referência. -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="14dp"
-        android:background="@color/qd_line" />
+        android:background="@color/qd_offer_divider" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
 
-        <TextView
-            android:id="@+id/offerPickupLine"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/qd_ink"
-            android:textSize="16sp" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/offerPickupAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/qd_core_gray600"
-            android:textSize="16sp" />
+            <com.qolari.drivereplica.drive.OfferRailView
+                android:id="@+id/offerRail"
+                android:layout_width="14dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="12dp" />
 
-        <TextView
-            android:id="@+id/offerTripLine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/qd_ink"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/offerDropoffAddress"
+                <TextView
+                    android:id="@+id/offerPickupLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/qd_ink"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerPickupAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/qd_offer_secondary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/offerTripLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:textColor="@color/qd_ink"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offerDropoffAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/qd_offer_secondary"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/offerAccept"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/qd_core_gray600"
-            android:textSize="16sp" />
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/drive_accept"
+            android:textColor="@color/qd_core_white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/qd_ink"
+            app:cornerRadius="8dp"
+            app:elevation="0dp" />
     </LinearLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/offerAccept"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/drive_accept"
-        android:textColor="@color/qd_core_white"
-        android:textSize="18sp"
-        app:backgroundTint="@color/qd_core_blue600"
-        app:cornerRadius="8dp" />
 </LinearLayout>

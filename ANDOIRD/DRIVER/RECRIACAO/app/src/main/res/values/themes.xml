@@ -18,6 +18,28 @@
     <color name="qd_error">@color/qd_core_red600</color>
     <color name="qd_success">@color/qd_core_green600</color>
 
+    <!-- Cartão da proposta, medido no vídeo de 2026-10-29 (frames em ux_capture/videos/2026-10-29_pedido). -->
+    <color name="qd_offer_secondary">#525252</color>
+    <color name="qd_offer_pill">#ececec</color>
+    <color name="qd_offer_divider">#d9d9d9</color>
+    <color name="qd_offer_close_bg">#f6f6f6</color>
+    <!-- Etiqueta "Exclusivo"/"Radar" no cartão da proposta (azul da marca). -->
+    <color name="qd_offer_kind">#276ef1</color>
+    <!-- Radar: cartão apagado enquanto "A verificar se é a melhor correspondência". -->
+    <color name="qd_offer_dim">#99ffffff</color>
+    <!-- Painel de navegação (vídeo 2026-10-29): preto opaco. -->
+    <color name="qd_maneuver_bg">#111111</color>
+    <!-- Paragens no painel de navegação (vídeo 2026-10-30): verde na recolha, vermelho no destino. -->
+    <color name="qd_stop_pickup">#0e8345</color>
+    <color name="qd_stop_dropoff">#de1135</color>
+    <!-- Botão OFFLINE/ONLINE do "Recomendado para si" (print 2026-10-30). -->
+    <color name="qd_offline_bg">#D9D9D9</color>
+    <color name="qd_offline_ring">#F2F2F2</color>
+    <color name="qd_offline_gray">#8C8C8C</color>
+    <!-- Traço: aproximação a preto, percurso a vermelho (vídeo 2026-10-30). -->
+    <color name="qd_route_leg">#111111</color>
+    <color name="qd_route_trip">#e01e37</color>
+
     <!-- A original tem "Modo noturno: Sempre desligado" por omissão (captura 043): tema só claro. -->
     <style name="Theme.QolariDriver" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/qd_primary</item>
@@ -32,6 +54,10 @@
         <item name="colorError">@color/qd_error</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">true</item>
+        <!-- A original tem a barra de gestos branca com a pílula cinzenta (captura 064). -->
+        <item name="android:navigationBarColor">@color/qd_background</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
         <item name="bottomNavigationStyle">@style/Widget.QolariDriver.BottomNav</item>
     </style>
 
@@ -42,10 +68,11 @@
         <item name="itemIconTint">@color/nav_item_tint</item>
         <item name="itemActiveIndicatorStyle">@style/Widget.QolariDriver.BottomNav.NoIndicator</item>
         <item name="labelVisibilityMode">labeled</item>
+        <item name="itemIconSize">24dp</item>
         <item name="android:elevation">0dp</item>
-        <item name="android:minHeight">64dp</item>
+        <item name="android:minHeight">68dp</item>
         <item name="itemPaddingTop">10dp</item>
-        <item name="itemPaddingBottom">10dp</item>
+        <item name="itemPaddingBottom">12dp</item>
         <item name="itemTextAppearanceActive">@style/TextAppearance.QolariDriver.NavLabel.Active</item>
         <item name="itemTextAppearanceInactive">@style/TextAppearance.QolariDriver.NavLabel</item>
     </style>
@@ -55,10 +82,13 @@
 
     <!-- Rotulos da barra: mais pequenos que o padrao do Material 3 (a original trunca menos), ativo a negrito. -->
     <style name="TextAppearance.QolariDriver.NavLabel" parent="TextAppearance.Material3.LabelMedium">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">10sp</item>
         <item name="android:letterSpacing">0</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
     </style>
-    <style name="TextAppearance.QolariDriver.NavLabel.Active">
+    <!-- Tem de herdar do rótulo normal: sem parent ficava nos 14sp e as etiquetas sobrepunham-se (captura 064). -->
+    <style name="TextAppearance.QolariDriver.NavLabel.Active" parent="TextAppearance.QolariDriver.NavLabel">
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -74,6 +104,6 @@
         <item name="android:paddingStart">14dp</item>
         <item name="android:paddingEnd">16dp</item>
         <item name="android:textColor">@color/chip_text</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">15sp</item>
     </style>
 </resources>

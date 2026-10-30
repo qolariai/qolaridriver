@@ -34,6 +34,29 @@ Session = sessionmaker(bind=engine, expire_on_commit=False)
 def init_db():
     from domain import models  # noqa: F401  regista as tabelas
     Base.metadata.create_all(engine)
+    _migrate()
+
+
+def _migrate():
+    """Colunas novas em tabelas ja existentes (create_all nao altera tabelas).
+
+    Mantem-se simples de proposito: so ADD COLUMN com valor por omissao.
+    """
+    wanted = {
+        "offers": [
+            ("kind", "VARCHAR(10) DEFAULT 'exclusive'"),
+            ("claimed_at", "INTEGER"),
+        ],
+    }
+    with engine.begin() as conn:
+        for table, columns in wanted.items():
+            rows = conn.exec_driver_sql(f"PRAGMA table_info({table})").fetchall()
+            if not rows:
+                continue
+            have = {r[1] for r in rows}
+            for name, decl in columns:
+                if name not in have:
+                    conn.exec_driver_sql(f"ALTER TABLE {table} ADD COLUMN {name} {decl}")
 
 
 def touch(db, *topics: str):

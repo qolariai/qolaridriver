@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingBottom="@dimen/ub__card_content_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="Options" android:layout_marginStart="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingLarge" />
+        <com.ubercab.presidio.styleguide.sections.FiveChoicePicker android:id="@id/ub__base_snackbar_type" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_0x" app:five="Custom" app:four="Loading" app:one="Success" app:three="Warning" app:two="Failure" />
+        <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__base_snackbar_option_message" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.presidio.styleguide.sections.ThreeChoicePicker android:id="@id/ub__base_snackbar_option_trailing_action" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_0x" app:one="No Action" app:three="Long Action Text" app:two="Short Action Text" />
+        <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__base_snackbar_option_vector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Position Override" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_2x" />
+            <com.ubercab.ui.core.USpinner android:id="@id/ub__base_snackbar_option_position" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UScrollView>

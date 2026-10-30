@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="64.0dip" android:width="64.0dip" android:viewportWidth="64.0" android:viewportHeight="64.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?emobi_scooter_red" android:pathData="M48.7,28.5h-35L10.2,19 6.7,9.5 3.3,0h35l3.5,9.5 3.5,9.5 3.4,9.5z" />
+    <path android:fillColor="?artGray400" android:pathData="M64,38s-30.6,0.2 -30.6,0c0,-0.3 -3.7,-9.5 -3.7,-9.5h19L45.3,19l-3.5,-9.5h12.3l-0.7,9.5 -0.3,4.7 3.6,4.8L64,38z" />
+    <path android:fillColor="?artBlack" android:pathData="M29.7,28.5h19L33.4,38l-3.7,-9.5zM3.3,0H0l23.4,64h3.2L3.3,0z" />
+    <path android:fillColor="?artWhite" android:pathData="M23.7,22.2l-5.2,-6.4 2.2,-1.9 2.7,3.3 7.3,-11.5L33,7.2l-9.4,15z" />
+</vector>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/meter_signal_status" style="@style/Platform.TextStyle.Small.Bold" />
+    <com.ubercab.ui.core.URelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:id="@id/ub__meter_connection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/meter_connection" android:layout_alignParentTop="true" style="@style/Platform.TextStyle.Paragraph.Normal" />
+        <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/meter_connection_subtitle" android:layout_below="@id/ub__meter_connection" style="@style/Platform.TextStyle.Small.Secondary" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/ub__meter_connection_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/meter_connecting" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Platform.TextStyle.Paragraph.Normal" />
+    </com.ubercab.ui.core.URelativeLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?dividerHorizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+    <com.ubercab.ui.core.URelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:id="@id/ub__bluetooth_signal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bluetooth_signal" android:layout_alignParentTop="true" style="@style/Platform.TextStyle.Paragraph.Normal" />
+        <com.ubercab.ui.core.UTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bluetooth_signal_subtitle" android:layout_below="@id/ub__bluetooth_signal" style="@style/Platform.TextStyle.Small.Secondary" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/ub__bluetooth_signal_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/meter_connecting" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/Platform.TextStyle.Paragraph.Normal" />
+    </com.ubercab.ui.core.URelativeLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?dividerHorizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+</com.ubercab.ui.core.ULinearLayout>

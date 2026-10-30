@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="84968760-683b"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/doc_selector_header" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/docscan_landing_title" android:layout_marginStart="@dimen/ui__spacing_unit_3x" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" app:analyticsId="7a52d7c4-9bd1" style="@style/Platform.TextStyle.HeadingDefault" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="db48c8d4-6c60">
+        <com.ubercab.ui.core.UTextView android:id="@id/doc_selector_subheader" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/docscan_landing_description" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_3x" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" app:analyticsId="1fa7525b-c3f8" style="@style/Platform.TextStyle.ParagraphDefault" />
+        <com.ubercab.ui.core.UImageView android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" app:analyticsId="410822bb-a316" app:srcCompat="@drawable/ub__id_card_docscan" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.ULinearLayout>

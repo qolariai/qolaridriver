@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="36.0dip" android:width="36.0dip" android:autoMirrored="true" android:viewportWidth="36.0" android:viewportHeight="36.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/ub__ec_phone_border" android:pathData="M13.3875,12.0933C14.2313,11.3058 14.7938,10.2933 15.0188,9.2245L10.125,2.3058C9.0563,2.1933 7.9313,2.362 6.8625,2.8683L13.3875,12.0933Z" />
+    <path android:fillColor="@color/ub__ec_phone_border" android:pathData="M24.075,22.8373C24.8625,21.9936 25.875,21.4311 26.9437,21.2061L33.9187,26.0436C34.0312,27.1123 33.8625,28.2373 33.3562,29.3061L24.075,22.8373Z" />
+    <path android:fillColor="@color/ub__ec_phone_body" android:pathData="M24.075,22.8369L22.5,24.4119C21.6,25.3119 20.1938,25.3119 19.2937,24.4119L11.8125,16.8744C10.9125,15.9744 10.9125,14.5682 11.8125,13.6682L13.3875,12.0932L6.8625,2.8682C4.8938,4.0494 3.4313,5.9619 2.8125,8.2119L2.25,10.2932L2.3063,10.3494C6.975,20.8119 15.4125,29.2494 25.9312,33.9182L28.0125,33.3557C30.2625,32.7369 32.175,31.2744 33.3562,29.3057L24.075,22.8369Z" />
+    <path android:fillColor="@color/ub__ec_phone_asterisk" android:pathData="M28.35,11.7562L28.4063,16.1438H25.425L25.4813,11.7562L21.6,14.175L20.0813,11.5875L24.1875,9.1687L20.1375,6.6937L21.6563,4.1625L25.5375,6.5813L25.425,2.25H28.4063L28.35,6.5813L32.2313,4.1625L33.75,6.6937L29.6438,9.1687L33.75,11.5875L32.175,14.175L28.35,11.7562Z" />
+</vector>

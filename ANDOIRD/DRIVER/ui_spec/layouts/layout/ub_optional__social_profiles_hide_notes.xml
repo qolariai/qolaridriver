@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Medium" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/ub__social_profiles_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/social_profiles_hide_notes_title" app:analyticsId="722df57a-f067" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/confirmation_modal_profile_image" android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+</com.ubercab.ui.core.ULinearLayout>

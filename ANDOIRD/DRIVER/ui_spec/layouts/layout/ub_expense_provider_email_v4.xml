@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.features.settings.expense_provider_email_v3.ExpenseProviderEmailView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsEnabled="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingLeft="?contentInset" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/ub_profile_editor_expense_provider_email_header" />
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__profile_editor_expense_provider_email_title" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.HeadingXSmall" />
+                <com.ubercab.ui.core.UTextInputLayout android:textColor="?contentSecondary" android:layout_gravity="center_vertical" android:id="@id/text_input_layout" android:paddingTop="@dimen/ui__spacing_unit_4x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:hintEnabled="true" app:hintTextAppearance="@style/Platform.TextStyle.ParagraphXSmall">
+                    <com.ubercab.ui.commons.widget.ClearableEditText android:id="@id/ub__profile_editor_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textCapWords" android:imeOptions="actionDone" style="@style/Platform.TextStyle.HeadingXSmall" />
+                </com.ubercab.ui.core.UTextInputLayout>
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:id="@id/ub__profile_editor_text_subtext" android:paddingTop="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphXSmall" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="?contentInset">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__profile_editor_text_primary_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/save" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__profile_editor_text_secondary_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/feature_profile_editor_text_disconnect" app:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.profiles.features.settings.expense_provider_email_v3.ExpenseProviderEmailView>

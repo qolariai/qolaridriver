@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.tracker.bulletin.generic.GenericBulletinCardView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:id="@id/bulletin_card_view" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:cardBackgroundColor="?android:colorBackground" uber:cardCornerRadius="@dimen/carbon_ui__radius_container">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/bulletin_card_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_6x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" />
+    </com.ubercab.ui.core.UCardView>
+    <com.ubercab.ui.core.UPlainView android:id="@id/dismiss_tap_target" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</com.ubercab.tracker.bulletin.generic.GenericBulletinCardView>

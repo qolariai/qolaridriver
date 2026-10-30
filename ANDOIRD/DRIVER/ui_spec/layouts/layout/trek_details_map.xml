@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.rx_map.core.RxMapView android:id="@id/ub__trek_details_rxmap" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.rx_map.core.UntouchableMapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.rx_map.core.MapBackgroundView android:id="@id/loading_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="noHideDescendants" />
+    <com.ubercab.ui.core.UConstraintLayout android:id="@id/annotations" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+</com.ubercab.rx_map.core.RxMapView>

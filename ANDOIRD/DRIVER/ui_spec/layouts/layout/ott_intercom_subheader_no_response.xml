@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ott_intercom.subheader.OttIntercomNoResponseView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="8768669e-0b94"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_6x">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="center_vertical" android:layout_gravity="start|center" android:id="@id/banner_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/ui__spacing_unit_1.5x" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_0x" app:analyticsId="4177705c-c00b" app:drawableStartCompat="@drawable/ub_ic_person_cross" style="@style/Platform.TextStyle.LabelSmall" />
+        <com.ubercab.ui.core.UImageView android:gravity="center_vertical" android:layout_gravity="end|center" android:id="@id/action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_0x" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="08332e3d-69a0" app:srcCompat="@drawable/ub_ic_chevron_right_small" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+</com.ubercab.ott_intercom.subheader.OttIntercomNoResponseView>

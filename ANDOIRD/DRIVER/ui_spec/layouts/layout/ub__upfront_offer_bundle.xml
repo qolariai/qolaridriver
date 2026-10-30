@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.upfront_driver_assignment_offer_card.bundled_offer.BundledOfferView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:cardCornerRadius="@dimen/uda_details_bundled_offer_corner_radius"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__upfront_offer_bundle_static_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="0bb9df4f-0f16" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__upfront_offer_bundle_collapsed_container" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__upfront_offer_bundle_static_container" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__upfront_offer_bundle_expanded_container" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__upfront_offer_bundle_static_container" />
+    </com.ubercab.ui.core.UConstraintLayout>
+</com.uber.upfront_driver_assignment_offer_card.bundled_offer.BundledOfferView>

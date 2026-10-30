@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_extra_information_taskbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.uber.taskbuildingblocks.views.taskbutton.TaskActionableListView android:id="@id/pick_pack_extra_information_task_actionable_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.uber.taskbuildingblocks.views.taskbutton.TaskActionableListView2 android:id="@id/pick_pack_extra_information_task_actionable_list_v2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.URecyclerView android:id="@id/pick_pack_extra_information_image_grid_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/ui__spacing_unit_1x" />
+            <com.uber.pickpack.views.listitems.image.PickPackListImageItemView android:id="@id/pick_pack_extra_information_single_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</merge>

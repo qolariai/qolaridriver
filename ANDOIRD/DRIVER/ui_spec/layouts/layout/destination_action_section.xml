@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.core.agenda_integration.section.BottomSectionButton android:layout_gravity="center_vertical" android:id="@id/destination_action_section" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/destination_search_title" uber:analyticsId="87566810-11a3" uber:icon="@drawable/ub_ic_search" uber:platformIcon="SEARCH"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" />

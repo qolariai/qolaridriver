@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/area_marker_clustered_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/area_marker_layout" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="@dimen/area_marker_height_medium">
+        <com.ubercab.ui.commons.widget.AutoHideTextView android:textColor="?android:textColorPrimaryInverse" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/marker_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textAlignment="center" style="@style/mapMarkerPrimary" />
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/marker_icon" android:layout_width="@dimen/ui__avatar_size_extra_tiny" android:layout_height="@dimen/ui__avatar_size_extra_tiny" app:srcCompat="@drawable/ub_ic_surge" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/area_marker_clustered_icon" android:visibility="gone" android:tint="?iconColorInverse" android:layout_marginEnd="@dimen/ui__spacing_unit_0.5x" app:srcCompat="@drawable/ub_ic_chevron_right_small" style="@style/mapMarkerClusteredIconStyle" />
+</com.ubercab.ui.core.ULinearLayout>

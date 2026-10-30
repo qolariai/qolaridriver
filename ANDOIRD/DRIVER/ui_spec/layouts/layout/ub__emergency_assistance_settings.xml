@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.emergency_assistance.carbon.settings.EmergencyAssistanceSettingsView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="ef52e6e7-177a"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__emergency_assistance_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.DisplayLarge.Normal" />
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ub__speed_intervention_on_off_switch_layout" android:background="@drawable/ub__selectable_item_background" android:padding="@dimen/ui__spacing_unit_2x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:id="@id/ub__emergency_assistance_switch_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__emergency_assistance_settings_title" android:layout_weight="1.0" />
+            <com.ubercab.ui.core.USwitchCompat android:id="@id/ub__emergency_assistance_location_share_on_off_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Secondary" android:id="@id/ub__emergency_assistance_integration_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginRight="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.emergency_assistance.carbon.settings.EmergencyAssistanceSettingsView>

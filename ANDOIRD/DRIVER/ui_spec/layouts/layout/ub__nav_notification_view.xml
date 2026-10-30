@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ub__nav_notification_icon" android:visibility="gone" android:layout_width="@dimen/ub__nav_maneuver_icon_size" android:layout_height="@dimen/ub__nav_maneuver_icon_size" android:scaleType="centerInside" android:layout_centerVertical="true" android:layout_marginStart="@dimen/ub__nav_perimeter_margin" app:srcCompat="@drawable/ub__nav_no_signal" />
+    <TextView android:gravity="center" android:id="@id/ub__nav_notification_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/ub__nav_perimeter_margin" android:layout_marginEnd="@dimen/ub__nav_perimeter_margin" android:layout_toEndOf="@id/ub__nav_notification_icon" />
+    <com.ubercab.android.nav.BitLoadingIndicator android:id="@id/ub__nav_notification_loading" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_loading_bit_size" android:layout_alignParentBottom="true" app:ub__nav_bitColor="@color/ub__nav_uber_blue_7" app:ub__nav_bitSize="@dimen/ub__nav_loading_bit_size" />
+</merge>

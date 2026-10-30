@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.blue_button.bluehub.BlueButtonBlueHubView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?brandBlack" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/ub__blue_button_blue_hub_image" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub__blue_button_blue_hub" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x">
+                    <com.ubercab.ui.core.ULinearLayout android:gravity="start" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.ubercab.ui.core.UImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ub__blue_button_blue_hub_rectangle" />
+                        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimaryInverse" android:layout_gravity="center" android:id="@id/ub__blue_button_device_serial_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__safety_blue_button_device_options_serial_id" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Small.Bold" />
+                    </com.ubercab.ui.core.ULinearLayout>
+                    <com.ubercab.ui.core.ULinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.ubercab.ui.core.UImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ub__blue_button_blue_hub_bt_symbol" />
+                        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimaryInverse" android:layout_gravity="center" android:id="@id/ub__blue_button_device_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__safety_blue_button_device_options_ble_button_state_disconnected" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Small.Normal" />
+                    </com.ubercab.ui.core.ULinearLayout>
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="start" android:id="@id/ub__blue_button_device_options" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__safety_blue_button_device_options" style="@style/Platform.TextStyle.Small.Normal" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="start" android:id="@id/ub__blue_button_device_options_long_press" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__safety_blue_button_device_options_long_press" android:layout_weight="1.0" style="@style/Platform.TextStyle.Small.Bold" />
+                    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="end" android:id="@id/ub__blue_button_device_options_long_press_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__safety_blue_button_device_options_long_press_action" style="@style/Platform.TextStyle.Small.Normal" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="start" android:id="@id/ub__blue_button_device_options_single_press" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__safety_blue_button_device_options_single_press" android:layout_weight="1.0" style="@style/Platform.TextStyle.Small.Bold" />
+                    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="end" android:id="@id/ub__blue_button_device_options_single_press_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__safety_blue_button_device_options_single_press_action" style="@style/Platform.TextStyle.Small.Normal" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UTextView android:textColor="?colorNegative" android:id="@id/ub__blue_button_remove_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__safety_blue_button_device_options_remove_device" style="@style/Platform.TextStyle.Small.Normal" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.blue_button.bluehub.BlueButtonBlueHubView>

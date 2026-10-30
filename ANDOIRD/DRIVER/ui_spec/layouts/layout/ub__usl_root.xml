@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.identity.api.uauth.internal.rib.RootView android:background="?backgroundPrimary" android:fitsSystemWindows="@bool/use_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="982709c3-82fd"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/usl_scene_root" android:fitsSystemWindows="@bool/use_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.uber.identity.api.uauth.internal.rib.RootView>

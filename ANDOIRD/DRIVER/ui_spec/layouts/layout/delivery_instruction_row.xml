@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="db4f753a-1b96"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.ParagraphDefault" android:textColor="?contentPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bullet_point" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="424a225c-a4ff" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.ParagraphDefault" android:textColor="?contentPrimary" android:ellipsize="end" android:gravity="start|center" android:id="@id/delivery_instruction_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" app:analyticsId="9f33be52-2496" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.ParagraphDefault" android:textColor="?contentAccent" android:gravity="center" android:id="@id/delivery_instruction_see_more" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/do_panel_see_more" app:analyticsId="dfe40d4e-9245" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_barcode_manual_input_taskbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/pick_pack_barcode_manual_input_scroll_container" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.uber.rib.core.compose.root.UberComposeView android:id="@id/pick_pack_body_widgets_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.uber.taskbuildingblocks.views.TaskHeaderView android:id="@id/pick_pack_barcode_manual_input_task_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.uber.pickpack.views.itemstate.PickPackItemStateView android:id="@id/pick_pack_item_state" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.uber.taskbuildingblocks.views.taskinput.TaskInputView android:id="@id/pick_pack_task_barcode_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" app:input_size="large" />
+            <com.uber.taskbuildingblocks.views.taskbutton.TaskButtonView android:gravity="start" android:id="@id/pick_pack_cant_enter_barcode_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.uber.taskbuildingblocks.views.taskbutton.TaskFooterView android:id="@id/pick_pack_barcode_manual_input_task_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

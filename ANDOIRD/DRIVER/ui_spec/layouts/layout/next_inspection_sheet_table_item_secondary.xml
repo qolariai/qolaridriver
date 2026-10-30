@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/inspection_sheet_table_item_secondary" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/ub__inspection_sheet_primary_item_height" android:maxLines="1" uber:analyticsId="a19cfdc8-1af6" style="@style/Platform.TextStyle.H5.News.Secondary"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" />

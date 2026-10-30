@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.features.settings.sections.preferences.rows.make_default_profile.ProfileSettingsRowMakeDefaultView android:orientation="vertical" android:id="@id/ub_profile_name_section" android:background="?android:selectableItemBackground" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="fd8dc8bc-4b90"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub_profile_settings_section_name_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="3ab76ad5-a666" />
+</com.ubercab.profiles.features.settings.sections.preferences.rows.make_default_profile.ProfileSettingsRowMakeDefaultView>

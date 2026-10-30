@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/footer_primary_cta" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="517733e3-3146" app:buttonType="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/footer_secondary_cta" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="9a83a7d8-378a" app:buttonType="tertiary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.ui.core.ULinearLayout>

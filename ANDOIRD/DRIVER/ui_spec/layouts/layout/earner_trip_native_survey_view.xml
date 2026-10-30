@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="10e1e51d-fb26"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/ub__native_survey_toolbar" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:minHeight="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:navigationIcon="@drawable/ub_ic_arrow_left" app:titleTextAppearance="@style/Platform.TextStyle.LabelLarge" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__native_survey_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__native_survey_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__native_survey_recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/ub__native_survey_scrollview" android:focusableInTouchMode="true" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:isScrollContainer="true" android:overScrollMode="never">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__native_survey_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__native_survey_submit_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" />
+</com.ubercab.ui.core.ULinearLayout>

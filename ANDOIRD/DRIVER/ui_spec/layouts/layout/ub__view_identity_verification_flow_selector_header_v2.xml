@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListHeadingView android:id="@id/ub__flow_selector_heading_title" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="ba7ed51f-2982" />
+    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center" android:id="@id/ub__flow_selector_animation" android:layout_width="@dimen/ub__identity_verification_flow_selector_header_animation_width" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" app:lottie_loop="true" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__flow_selector_list_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="c1b1d8d8-f2e8" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__flow_selector_help_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" app:analyticsId="f92bac09-0c3d" app:buttonType="secondary" app:shape="pill" app:size="small" style="@style/Platform.Button.BaseDynamic" />
+</merge>

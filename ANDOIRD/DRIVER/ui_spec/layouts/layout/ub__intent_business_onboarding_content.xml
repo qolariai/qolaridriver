@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.profileselection.intent_payment_selector.business_content.onboarding.BusinessOnboardingContentView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/business_onboarding_value_prop_container" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x">
+            <com.uber.profileselection.intent_payment_selector.view.IntentValuePropHeaderView android:id="@id/business_onboarding_title_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.uber.profileselection.intent_payment_selector.view.IntentValuePropListItemView android:id="@id/business_onboarding_expense_value_prop_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:icon="@drawable/ub__intent_payment_value_prop_check" />
+            <com.uber.profileselection.intent_payment_selector.view.IntentValuePropListItemView android:id="@id/business_onboarding_receipt_value_prop_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:icon="@drawable/ub__intent_payment_value_prop_check" />
+            <com.uber.profileselection.intent_payment_selector.view.IntentValuePropListItemView android:id="@id/business_onboarding_report_value_prop_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:icon="@drawable/ub__intent_payment_value_prop_check" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/business_onboarding_content_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="@string/intent_business_onboarding_button" style="@style/Platform.Button.BaseDynamic" />
+</com.uber.profileselection.intent_payment_selector.business_content.onboarding.BusinessOnboardingContentView>

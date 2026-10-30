@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?backgroundColorWarning" />
+    <stroke android:width="?dividerWidth" android:color="?borderWarning" />
+    <corners android:radius="@dimen/carbon_ui__radius_container" />
+    <padding android:right="?dividerWidth" />
+</shape>

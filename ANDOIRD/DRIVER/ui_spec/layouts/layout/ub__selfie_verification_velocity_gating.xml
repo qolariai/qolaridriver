@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.selfie_verification_ui.velocity_gating.SelfieVerificationVelocityGatingView android:gravity="center" android:orientation="vertical" android:id="@id/ub__velocity_gating_container" android:background="?android:colorBackground" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" app:srcCompat="@drawable/ub__velocity_gating_image" />
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:text="@string/ub__selfie_verification_velocity_gating_message" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingDefault" />
+</com.uber.selfie_verification_ui.velocity_gating.SelfieVerificationVelocityGatingView>

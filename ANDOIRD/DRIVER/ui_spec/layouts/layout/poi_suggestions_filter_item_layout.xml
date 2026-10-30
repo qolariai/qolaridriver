@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="ed99b5a3-8ca6"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/poi_suggestion_filter_icon" android:background="@drawable/poi_suggestions_filter_item_backgroud" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x" android:scaleType="center" />
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/poi_suggestion_filter_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" style="@style/Platform.TextStyle.LabelXSmall" />
+</com.ubercab.ui.core.ULinearLayout>

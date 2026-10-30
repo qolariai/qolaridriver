@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_screenstack" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="3c4a8f58-ce22"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scroll_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/sceneRoot" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/controls_layout">
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Nothing Here! Click the buttons below to try it!" style="@style/Platform.TextStyle.H2.Book" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/controls_layout" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" app:layout_anchor="@id/scroll_container" app:layout_anchorGravity="bottom">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/pop_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pop" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.USpinner android:id="@id/transitions_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/push_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Push" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UCoordinatorLayout>

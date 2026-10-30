@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.bankcard.kcp.BankCardAddExtrasKoreaView android:background="?backgroundPrimary" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UScrollView android:id="@id/ub__payment_bank_card_extras_korea_form_scrolling_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/ub__payment_bank_card_extras_korea_next_button" android:overScrollMode="never" />
+        <com.ubercab.ui.commons.widget.KeyboardButton android:theme="@style/Platform.Button.Primary" android:layout_gravity="center|bottom" android:id="@id/ub__payment_bank_card_extras_korea_next_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/next" android:layout_alignParentBottom="true" />
+    </com.ubercab.ui.core.URelativeLayout>
+</com.ubercab.presidio.payment.bankcard.kcp.BankCardAddExtrasKoreaView>

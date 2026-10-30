@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_tabs" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="3e740dad-8af2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:theme="?toolbarTheme" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.ToolbarFont" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_collapseMode="pin" app:layout_scrollFlags="scroll|enterAlways" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/Widget.Platform.Toolbar" />
+        <com.ubercab.ui.core.UTabLayout android:layout_gravity="bottom" android:id="@id/tab_layout" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:elevation="@dimen/ui__header_elevation" app:tabMode="fixed" style="@style/Platform.TabLayout" />
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.UViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.ubercab.ui.core.UCoordinatorLayout>

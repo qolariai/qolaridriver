@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/pick_pack_replacements_hub_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/pick_pack_replacements_hub_header_widgets" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/pick_pack_replacements_hub_body_widgets" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

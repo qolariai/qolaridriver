@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/consent_button_defer" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+    <Space android:id="@id/consent_modal_button_space" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/consent_button_accept" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+</com.ubercab.ui.core.ULinearLayout>

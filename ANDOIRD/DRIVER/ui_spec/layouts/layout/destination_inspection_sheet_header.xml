@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.destination.destination_inspection_sheet.DestinationInspectionSheetHeaderView android:orientation="vertical" android:id="@id/destination_inspection_sheet_container" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="eb44442d-ceb5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/destination_inspection_sheet_header_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:id="@id/destination_inspection_sheet_title" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Headline.Normal" />
+        <com.ubercab.ui.core.UTextView android:textColor="?textColorAccent" android:id="@id/destination_inspection_sheet_description" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Paragraph.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/destination_inspection_sheet_bitloader" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ubercab.destination.destination_inspection_sheet.DestinationInspectionSheetHeaderView>

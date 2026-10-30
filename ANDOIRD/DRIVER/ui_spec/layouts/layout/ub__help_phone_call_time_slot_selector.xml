@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/dates_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/time_slots_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

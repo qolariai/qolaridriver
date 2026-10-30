@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="@dimen/horizontal_section_item_width" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/ui__spacing_unit_1x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:id="@id/imageContainer" android:layout_width="@dimen/horizontal_section_image_width" android:layout_height="@dimen/horizontal_section_image_height" app:cardCornerRadius="@dimen/ui__spacing_unit_1.5x">
+        <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.image.BaseImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" app:analyticsId="a4bfb15d-bdd6" />
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:id="@id/seenBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:tint="?green400" android:layout_alignTop="@id/image" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" android:layout_alignEnd="@id/image" app:analyticsId="5f374183-952d" app:srcCompat="@drawable/ub_ic_checkmark" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?white" android:id="@id/duration" android:background="@drawable/pill" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:layout_alignBottom="@id/image" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" android:layout_alignEnd="@id/image" android:backgroundTint="@color/ub__black" app:analyticsId="d02f4045-5749" style="@style/Platform.TextStyle.LabelSmall" />
+        </com.ubercab.ui.core.URelativeLayout>
+    </com.ubercab.ui.core.UCardView>
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" app:analyticsId="b4085702-aac8" style="@style/Platform.TextStyle.LabelLarge" />
+</com.ubercab.ui.core.ULinearLayout>

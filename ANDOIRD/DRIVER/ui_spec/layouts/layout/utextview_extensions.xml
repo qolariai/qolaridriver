@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_buttons" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UEditText android:id="@id/demo_edittext" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/utextview_demo_text" />
+        <com.ubercab.ui.core.UTextView android:layout_gravity="center" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autohide_title" />
+        <com.ubercab.ui.commons.widget.AutoHideTextView android:textColor="?contentSecondary" android:gravity="center" android:id="@id/autohide_preview" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UCoordinatorLayout>

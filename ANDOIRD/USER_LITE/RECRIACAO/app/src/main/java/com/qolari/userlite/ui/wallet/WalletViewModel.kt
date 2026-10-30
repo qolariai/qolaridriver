@@ -43,12 +43,4 @@ class WalletViewModel @JvmOverloads constructor(
                 .onFailure { _state.value = _state.value.copy(error = com.qolari.userlite.net.ApiClient.errorMessage(it)) }
         }
     }
-
-    fun topUp(amountCents: Int) {
-        viewModelScope.launch {
-            repository.topUp(amountCents)
-                .onSuccess { load() }
-                .onFailure { _state.value = _state.value.copy(error = com.qolari.userlite.net.ApiClient.errorMessage(it)) }
-        }
-    }
 }

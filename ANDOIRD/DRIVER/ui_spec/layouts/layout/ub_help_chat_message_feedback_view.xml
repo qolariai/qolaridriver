@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.URadioGroup android:gravity="center" android:orientation="horizontal" android:background="?backgroundPrimary" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.URadioButton android:id="@id/ub__message_feedback_thumbs_down_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ub__help_csat_embedded_thumbs_down" />
+        <com.ubercab.ui.core.UPlainView android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.URadioButton android:id="@id/ub__message_feedback_thumbs_up_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ub__help_csat_embedded_thumbs_up" />
+    </com.ubercab.ui.core.URadioGroup>
+</merge>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:id="@id/ub__date_picker_shimmer_appbar" android:background="?backgroundPrimary" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStartWithNavigation="0.0dip" app:elevation="@dimen/ui__header_elevation" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.ToolbarFont" android:id="@id/ub__date_picker_shimmer_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:navigationIcon="@drawable/ub_ic_arrow_left" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Platform.Toolbar" />
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/ub__shimmer_view" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:shimmer_auto_start="false">
+        <com.ubercab.ui.core.UPlainView android:layout_width="@dimen/ui__spacing_unit_13x" android:layout_height="@dimen/ui__spacing_unit_2x" style="@style/PerfHubShimmerView" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

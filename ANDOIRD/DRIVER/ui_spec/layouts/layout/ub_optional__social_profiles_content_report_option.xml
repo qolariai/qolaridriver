@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H5.News.Primary" android:id="@id/ub__social_profiles_content_report_text" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_3x" android:paddingEnd="@dimen/ui__spacing_unit_3x" />
+    <include layout="@layout/ub_optional__social_profiles_divider_view" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/help_workflow_component_csat_modal_input_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="cd77b524-072a" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/help_workflow_component_base_csat_modal_input_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="0442d2b1-9ea3" app:buttonType="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H6.News" android:textColor="?textColorError" android:id="@id/help_workflow_component_csat_modal_input_error" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" app:analyticsId="5ed19f20-4172" />
+</merge>

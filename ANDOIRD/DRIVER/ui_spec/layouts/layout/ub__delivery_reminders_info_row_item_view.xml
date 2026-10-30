@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__do_panel_info_delivery_reminders_container" android:background="?backgroundLightAccent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="top" android:id="@id/ub__do_panel_info_delivery_reminders_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2.5x" android:layout_marginVertical="@dimen/ui__spacing_unit_4x" app:analyticsId="68f2580b-be79" />
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_1.5x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" android:layout_marginVertical="@dimen/ui__spacing_unit_3x">
+            <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:id="@id/ub__do_panel_info_delivery_reminders_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" app:analyticsId="fe219ac1-1894" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__do_panel_info_delivery_reminders_description_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="b3bb38d8-e528" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__do_panel_info_delivery_reminders_divider" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0.5x" />
+</com.ubercab.ui.core.ULinearLayout>

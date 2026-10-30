@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:id="@id/ub__date_picker_appbar" android:background="?backgroundPrimary" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStartWithNavigation="0.0dip" app:elevation="@dimen/ui__header_elevation" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.ToolbarFont" android:id="@id/ub__date_picker_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:navigationIcon="@drawable/ub_ic_arrow_left" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Platform.Toolbar">
+            <include layout="@layout/ub__help_collapsed_button" />
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="end" android:id="@id/ub__date_picker_help_button" android:padding="?contentInset" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" app:srcCompat="@drawable/ic_carbon_help" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ub__date_picker_group" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__date_picker_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" app:analyticsId="a7bd29eb-16a7" style="@style/Platform.TextStyle.LabelDefault" />
+                <com.ubercab.ui.core.image.BaseImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_1.5x" app:analyticsId="15260506-b2ae" app:srcCompat="@drawable/ub_ic_chevron_down_small" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UToolbar>
+    </com.ubercab.ui.core.UAppBarLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

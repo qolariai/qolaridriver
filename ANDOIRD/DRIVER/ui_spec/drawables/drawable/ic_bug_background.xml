@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/ui__bug_reporter_border" android:color="?colorPrimary" />
+    <solid android:color="?bgContainer" />
+    <size android:height="@dimen/ui__bug_reporter_size" android:width="@dimen/ui__bug_reporter_size" />
+</shape>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.identity_config.optional.security_settings.SecuritySettingsHomeView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="533fc40d-131f"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" android:stateListAnimator="@animator/header_elevation" uber:layout_constraintLeft_toLeftOf="parent" uber:layout_constraintRight_toRightOf="parent" uber:layout_constraintTop_toTopOf="parent" />
+        <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/collapsing_header_loading" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" uber:bli_bitColor="?contentPrimary" uber:layout_constraintLeft_toLeftOf="parent" uber:layout_constraintRight_toRightOf="parent" uber:layout_constraintTop_toBottomOf="@id/appbar" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/security_settings_recycler_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_6x" uber:layout_constraintLeft_toLeftOf="parent" uber:layout_constraintRight_toRightOf="parent" uber:layout_constraintTop_toBottomOf="@id/appbar" />
+    </com.ubercab.ui.core.UConstraintLayout>
+</com.ubercab.presidio.identity_config.optional.security_settings.SecuritySettingsHomeView>

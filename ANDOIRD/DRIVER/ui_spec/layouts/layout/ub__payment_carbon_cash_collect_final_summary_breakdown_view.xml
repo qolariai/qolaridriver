@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.payment_carbon_cash_collect.operation.summary.ui.CollectCashFinalSummaryBreakdownItemView android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" android:layout_marginVertical="@dimen/ui__spacing_unit_1.5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__collect_cash_final_summary_breakdown_description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ub__collect_cash_final_summary_breakdown_value" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.audit.views.UAuditableTextView android:id="@id/ub__collect_cash_final_summary_breakdown_value" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</com.ubercab.payment_carbon_cash_collect.operation.summary.ui.CollectCashFinalSummaryBreakdownItemView>

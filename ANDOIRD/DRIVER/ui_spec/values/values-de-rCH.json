@@ -1,0 +1,9 @@
+{
+ "strings": {
+  "string": {
+   "helix_phone_country_picker_description": "Die Ländervorwahl lautet %1$s",
+   "helix_phone_enter_your_mobile_number": "Gib deine Handynummer ein",
+   "helix_phone_mobile_number": "Mobilfunknummer"
+  }
+ }
+}

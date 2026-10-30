@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety.identity.verification.flow.docscan.uscan_intro.IdentityVerificationUsnapGuideView android:orientation="vertical" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="65cd60b8-2e90"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" uber:header_state="collapse" />
+    <include layout="@layout/identity_verification_usnap_help_content_view" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center|bottom" android:id="@id/ub__identity_verification_usnap_guide_take_photo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/identity_verification_usnap_guide_take_photo" android:layout_weight="0.0" android:textAllCaps="false" android:layout_marginStart="@dimen/ui__spacing_unit_3x" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" uber:analyticsId="0daca51e-eff1" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+</com.uber.safety.identity.verification.flow.docscan.uscan_intro.IdentityVerificationUsnapGuideView>

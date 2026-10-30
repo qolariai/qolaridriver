@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="12.0dip" android:width="8.0dip" android:autoMirrored="true" android:viewportWidth="8.0" android:viewportHeight="12.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateX="-35493.0" android:translateY="-1991.0">
+        <path android:fillColor="?iconTertiary" android:pathData="M35493 1991l8 0 0 12 -8 0z" />
+        <group android:translateX="27890.0" android:translateY="-3081.0">
+            <path android:fillColor="?iconTertiary" android:pathData="M0 0l8353 0 0 6564L0 6564 0 0Z" />
+        </group>
+        <group>
+            <clip-path android:pathData="M35197 1918l328 0 0 128 -328 0 0 -128z" />
+            <group android:translateX="35197.0" android:translateY="1918.0">
+                <path android:fillColor="?android:colorBackground" android:pathData="M0 6C0 2.68629 2.68629 0 6 0l316 0c3.314 0 6 2.68629 6 6L328 128 0 128 0 6Z" />
+            </group>
+            <group android:translateX="35485.0" android:translateY="1985.0">
+                <path android:fillColor="?iconTertiary" android:pathData="M9.98438 6L15.9844 12 9.98438 18 8.57812 16.5938 13.1719 12 8.57812 7.40625 9.98438 6Z" />
+            </group>
+        </group>
+    </group>
+</vector>

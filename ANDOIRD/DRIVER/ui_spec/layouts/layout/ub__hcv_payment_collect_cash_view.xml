@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UImageView android:id="@id/ub__collect_cash_icon" android:layout_width="@dimen/ui__spacing_unit_7x" android:layout_height="@dimen/ui__spacing_unit_7x" android:scaleType="fitCenter" app:analyticsId="ec885351-b151"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

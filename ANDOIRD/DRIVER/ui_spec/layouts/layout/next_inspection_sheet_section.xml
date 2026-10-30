@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.next_inspection_sheet.objects.section.NextMarkerInspectionSheetSectionView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" uber:analyticsId="55d9ce5a-308b"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URecyclerView android:id="@id/inspection_sheet_section_recyclerview" android:paddingTop="@dimen/ui__spacing_unit_2x" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ubercab.next_inspection_sheet.objects.section.NextMarkerInspectionSheetSectionView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:id="@id/card_view" android:layout_width="fill_parent" android:layout_height="@dimen/map_section_height" android:layout_margin="@dimen/ui__spacing_unit_2x" app:analyticsId="679f9b73-13ce" app:analyticsImpressionId="98dd6c65-7326" app:cardCornerRadius="@dimen/ui__spacing_unit_2x" app:cardElevation="0.0dip">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/map_container_root" android:background="?backgroundSecondary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UCoordinatorLayout android:id="@id/map_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.uber.dashboard_map.GestureInterceptorOverlayView android:id="@id/map_view_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.UCardView>
+</com.ubercab.ui.core.UFrameLayout>

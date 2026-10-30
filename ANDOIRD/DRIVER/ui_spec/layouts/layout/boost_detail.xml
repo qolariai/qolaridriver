@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.planning_hub_libs.boost_detail.BoostDetailView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UCoordinatorLayout android:id="@id/boost_bottom_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+</com.ubercab.planning_hub_libs.boost_detail.BoostDetailView>

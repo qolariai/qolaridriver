@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__end_chat_loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/ub__end_chat_confirmation_title" android:paddingTop="?contentInset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_chat_end_chat_title" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" app:analyticsId="807ee2dc-078f" style="@style/Platform.TextStyle.Display.Normal" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/ub__end_chat_confirmation_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/help_chat_end_chat_confirmation_body" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" app:analyticsId="e2b5c53b-0378" style="@style/Platform.TextStyle.Paragraph.Normal" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__end_chat_confirmation_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/help_chat_cancel_button" app:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__end_chat_confirmation_confirm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/help_chat_end_chat_button" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

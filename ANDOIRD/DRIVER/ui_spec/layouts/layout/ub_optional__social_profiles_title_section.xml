@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:id="@id/ub__social_profiles_compliments_title_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__social_profiles_title_section_title" android:paddingTop="@dimen/ui__spacing_unit_3x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="0.0dip" style="@style/Platform.TextStyle.Headline.Normal" />
+    <com.ubercab.ui.core.UPlainView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UTextView android:textColor="?accentPrimary" android:id="@id/ub__social_profiles_title_section_cta" android:paddingTop="@dimen/ui__spacing_unit_3x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBaseline="@id/ub__social_profiles_title_section_title" android:paddingStart="0.0dip" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Paragraph.Medium" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -13,33 +13,16 @@ aceite e um TaskScope (trip_scope) no DriverTasks, que tambem vai por push_drive
 campo `type` e o nome do campo (ex.: "singleTaskData", "pickupTaskData"); ver tools/enum_names.py.
 Validado no telemovel em 12-10: proposta no ecra e accept-offers.
 """
-import base64
-import binascii
-import datetime as dt
 import time
 import uuid
-from pathlib import Path
 
-import config
-from apps import common, geocode, present
+from apps import common, present
 from apps.rtapi import Call, RtError, handles
 from domain import finance, trips
-from domain.finance import FinanceError
-from domain.models import (AdjustmentRequest, AirportQueue, Document, DriverPreference, LedgerEntry,
-                           MapReport, Notification, Offer, Payout, Quest, QuestClaim, Referral,
-                           Setting, Trip, Vehicle, jget, jset, now)
-from domain.seed import PLACES
+from domain.models import Document, LedgerEntry, Notification, Offer, Trip, Vehicle, jget, now
 from domain.trips import TripError
 
 APP = "driver"
-
-# Motivos canonicos do problema de mapa (a app envia o codigo; a consola mostra o rotulo).
-MAP_REPORT_REASONS = {
-    "address": "Rua ou morada errada",
-    "closed": "Local fechado ou inexistente",
-    "outdated": "Mapa desatualizado",
-    "other": "Outro problema",
-}
 
 
 def _err(e: TripError) -> RtError:
@@ -81,15 +64,22 @@ def driver_offer(o: Offer) -> dict:
                                 "title": t.dropoff_address or "", "reference": "dropoff"}
     eta = {"valueInSeconds": o.pickup_eta_s, "valueInMinutes": max(1, round(o.pickup_eta_s / 60)),
            "shortString": _min(o.pickup_eta_s), "longString": f"{_min(o.pickup_eta_s)} ({_km(o.pickup_distance_m)})"}
+    # Linha do cartao a seguir ao preco ("34 min • 13,4 km"): recolha + viagem, como na Uber.
+    # Vai no jobOfferModel para nao se confundir com as etiquetas da vista (viewTexts).
+    totals = {"durationS": o.pickup_eta_s + t.est_duration_s,
+              "distanceM": o.pickup_distance_m + t.est_distance_m}
+    totals["shortString"] = f"{_min(totals['durationS'])} • {_km(totals['distanceM'])}"
     job_model = {"acceptWindow": float(secs), "expiresAtEpochMS": float(o.expires_at * 1000),
                  "startLocationRef": "pickup", "endLocationRef": "dropoff" if "dropoff" in locations else None,
                  "locationMap": locations, "etaToStartLocation": eta, "marketplace": "PERSONAL_TRANSPORT",
+                 "tripTotals": totals,
+                 # Dois tipos de pedido da Uber Driver: exclusive (so este motorista) ou radar
+                 # (varios ao mesmo tempo; tocar nao garante a viagem - "a verificar correspondencia").
+                 "offerKind": getattr(o, "kind", "exclusive"),
                  "notificationTitle": f"{t.product.name} · {present.money(t.est_fare, t.city.currency)}",
                  "expiryAction": "EXPIRE"}
     rows = [_label(t.product.name, style="LABEL_SMALL", color="CONTENT_SECONDARY"),
             _label(present.money(t.est_fare, t.city.currency), style="HEADING_LARGE", weight="BOLD"),
-            _label(f"{t.rider.first_name} · ★ {(t.rider.rating or 5):.2f}".replace(".", ","), style="LABEL_SMALL",
-                   color="CONTENT_SECONDARY"),
             _label(f"{_min(o.pickup_eta_s)} ({_km(o.pickup_distance_m)}) de distância", weight="BOLD"),
             _label(t.pickup_address or "Local de recolha", style="PARAGRAPH_SMALL", color="CONTENT_SECONDARY")]
     if t.dropoff_lat is not None:
@@ -150,24 +140,16 @@ def trip_scope(t: Trip, pin_ok: bool = False) -> dict:
     cur = t.city.currency
     r = t.rider
     entity = {"firstName": r.first_name, "lastName": (r.last_name or "")[:1], "rating": float(r.rating or 5)}
-    stops = jget(t.stops, [])
-    next_stop = next((i for i, s in enumerate(stops) if not s.get("done")), None)
     if t.state in ("accepted", "arrived"):
         kind, coalesced, wp = "pickupTaskData", "pickupCoalescedTaskData", "pickup"
         lat, lng, address = t.pickup_lat, t.pickup_lng, t.pickup_address
         title = f"Recolher {r.first_name}"
-    elif next_stop is not None:
-        s = stops[next_stop]
-        kind, coalesced, wp = "dropoffTaskData", "dropoffCoalescedTaskData", f"stop{next_stop}"
-        lat, lng, address = s.get("lat"), s.get("lng"), s.get("address", "")
-        title = f"Paragem {next_stop + 1} de {len(stops)}"
     else:
         kind, coalesced, wp = "dropoffTaskData", "dropoffCoalescedTaskData", "dropoff"
         lat, lng, address = t.dropoff_lat, t.dropoff_lng, t.dropoff_address
         title = f"Deixar {r.first_name}"
     data = {"entity": entity, "waypoint": {"uuid": f"{t.uuid}-{wp}"},
-            "driverUpfrontFare": {"amount": present.money(t.est_fare, cur)},
-            "stops": stops, "nextStopIndex": next_stop}
+            "driverUpfrontFare": {"amount": present.money(t.est_fare, cur)}}
     blocking, non_blocking = [], []
     if t.state == "arrived" and t.pin:
         # So depois de chegar (com a tarefa ja em "accepted" o painel ficava em "A carregar..." sem cartao, 12-10).
@@ -198,7 +180,22 @@ def trip_scope(t: Trip, pin_ok: bool = False) -> dict:
     completion = {"taskId": f"{t.uuid}-{wp}", "isCompleted": False, "source": "DEMAND_JOB", "taskDataType": kind,
                   "jobOrdering": [t.uuid],
                   "coalescedDataUnion": {"type": coalesced, coalesced: {
-                      "product": _product(t), "info": {"title": title, "subtitle": address or ""}}},
+                      "product": _product(t), "info": {"title": title, "subtitle": address or ""},
+                      # Dados da viagem que o painel de navegacao mostra (video 2026-10-30):
+                      # 2.a seccao (recolha/entrega com cidade) e o nome do produto no botao.
+                      "tripInfo": {
+                          "pickupAddress": t.pickup_address or "",
+                          "dropoffAddress": t.dropoff_address or "",
+                          "pickupLat": t.pickup_lat,
+                          "pickupLng": t.pickup_lng,
+                          "dropoffLat": t.dropoff_lat,
+                          "dropoffLng": t.dropoff_lng,
+                          "city": t.city.name if t.city else "",
+                          "productName": t.product.name,
+                          "riderName": r.first_name,
+                          "riderUUID": r.uuid,
+                          "riderPhone": r.phone or "",
+                      }}},
                   "taskDataMap": {t.uuid: {"type": kind, kind: data}}}
     return {"blockingTasks": blocking, "nonBlockingTasks": non_blocking, "completionTask": completion,
             "taskScopeMetadata": {"presentationFramework": "DRIVER_TASKS"}}
@@ -215,6 +212,9 @@ def driver_tasks(db, d) -> dict:
         "driverState": {"online": online, "available": online,
                         "dispatchable": online and d.status == "approved",
                         "awaitingRequesterConfirmation": False,
+                        # Posicao do motorista: a app usa-a como origem da navegacao quando o
+                        # telemovel esta sem fix de GPS (dentro de casa, GPS desligado).
+                        "location": ({"latitude": d.lat, "longitude": d.lng} if d.lat is not None else None),
                         "preferencesState": {"isEnabled": False, "isSet": False}},
         "taskScopes": [trip_scope(trip, trips.pin_verified(db, trip))] if trip else [],
         "meta": {"lastModifiedTimeMs": float(time.time() * 1000)}}}
@@ -368,13 +368,18 @@ def _offer(call: Call, d) -> Offer:
 
 @handles(APP, "POST", "/rt/drivers/accept-offers", "/rt/drivers/v2/pin-accept")
 def accept(call: Call):
-    d = call.subject()
+    """Aceitar. No Radar o toque nao garante a viagem: devolve `radarPending` e o ecra mostra
+    "A verificar se e a melhor correspondencia" ate o servidor fechar a janela."""
+    db, d = call.db, call.subject()
+    offer = _offer(call, d)
     try:
-        trips.accept_offer(call.db, _offer(call, d))
+        trips.accept_offer(db, offer)
     except TripError as e:
         raise _err(e)
-    return driver_tasks(call.db, d)
-
+    if offer.kind == "radar" and offer.state == "pending":
+        return {"driverTasks": driver_tasks(db, d)["driverTasks"],
+                "radarPending": True, "offerUUID": offer.uuid}
+    return driver_tasks(db, d)
 
 @handles(APP, "POST", "/rt/drivers/reject-offers", "/rt/drivers/expire-offers")
 def reject(call: Call):
@@ -455,17 +460,6 @@ def begin(call: Call):
     return driver_tasks(call.db, d)
 
 
-@handles(APP, "POST", "/rt/trips/v2/complete-stop")
-def complete_stop(call: Call):
-    d = call.subject()
-    t = _trip(call, d)
-    try:
-        trips.complete_stop(call.db, t)
-    except TripError as e:
-        raise _err(e)
-    return driver_tasks(call.db, d)
-
-
 @handles(APP, "POST", "/rt/trips/v2/end", "/rt/drivers/end-trip", "/rt/trips/v2/complete-stops")
 def end(call: Call):
     d = call.subject()
@@ -480,7 +474,7 @@ def end(call: Call):
     return driver_tasks(call.db, d)
 
 
-@handles(APP, "POST", "/rt/trips/v2/driver-cancel")
+@handles(APP, "POST", "/rt/trips/v2/driver-cancel", "/rt/trips/driver-cancel")
 def driver_cancel(call: Call):
     d = call.subject()
     t = _trip(call, d)
@@ -492,15 +486,32 @@ def driver_cancel(call: Call):
     return driver_tasks(call.db, d)
 
 
+@handles(APP, "POST", "/rt/trips/message")
+def trip_message(call: Call):
+    """Chat da viagem (vídeo 2026-10-30): o condutor escreve e o passageiro vê na app dele.
+
+    Guardado como TripEvent `message` com o autor (`driver`/`rider`), que a app do passageiro
+    recebe no polling do estado da viagem.
+    """
+    d = call.subject()
+    t = _trip(call, d)
+    text = str(call.get("message", "text", default="") or "").strip()
+    sender = str(call.get("sender", default="driver") or "driver")
+    if not text:
+        return {"ok": False}
+    trips.add_message(call.db, t, sender, text)
+    return {"ok": True, "message": {"text": text, "sender": sender, "createdAt": now()}}
+
+
 @handles(APP, "POST", "/rt/trips/v2/driver-rate")
 def driver_rate(call: Call):
     d = call.subject()
     b = call.body
-    rating = b.get("rating") or (b.get("params") or {}).get("rating")
+    rating = b.get("rating") if b.get("rating") is not None else (b.get("params") or {}).get("rating")
     uuid = b.get("uuid") or b.get("tripUUID")
     t = call.db.query(Trip).filter_by(uuid=str(uuid), driver_id=d.id).first() if uuid else \
         call.db.query(Trip).filter(Trip.driver_id == d.id, Trip.state == "completed").order_by(Trip.id.desc()).first()
-    if t and rating:
+    if t and rating is not None:
         try:
             trips.rate(call.db, t, "driver", int(rating))
         except (TripError, ValueError):
@@ -531,12 +542,10 @@ def earnings_period(db, d, start: int, end: int) -> dict:
     s = finance.summary(db, "driver", d.id, start, end)["by_kind"]
     rows = (db.query(Trip).filter(Trip.driver_id == d.id, Trip.completed_at >= start, Trip.completed_at < end)
             .order_by(Trip.completed_at.desc()).all())
-    net = (s.get("fare", 0) + s.get("cancel_fee", 0) + s.get("commission", 0)
-           + s.get("fleet_fee", 0) + s.get("tip", 0))
+    net = s.get("fare", 0) + s.get("cancel_fee", 0) + s.get("commission", 0) + s.get("fleet_fee", 0)
     return {"startAt": present.ms(start), "endAt": present.ms(end), "currencyCode": "EUR",
             "total": present.amount(net), "formattedTotal": present.money(net),
             "tripEarning": present.amount(s.get("fare", 0)), "formattedTripEarning": present.money(s.get("fare", 0)),
-            "tips": present.amount(s.get("tip", 0)), "formattedTips": present.money(s.get("tip", 0)),
             "formattedCommission": present.money(s.get("commission", 0)),
             "formattedFleetFee": present.money(s.get("fleet_fee", 0)),
             "cashCollected": present.amount(-s.get("cash_collected", 0)),
@@ -571,77 +580,6 @@ def balance(call: Call):
     bal = finance.balance(call.db, "driver", d.id)
     return {"balance": present.money(bal), "balanceAmount": present.amount(bal), "currencyCode": "EUR",
             "cashOutEnabled": False}
-
-
-def _payout_json(p: Payout) -> dict:
-    return {"uuid": p.uuid, "amount": present.money(p.amount), "amountCents": p.amount,
-            "status": p.status, "reference": p.reference, "createdAt": present.ms(p.created_at),
-            "paidAt": present.ms(p.paid_at) if p.paid_at else None}
-
-
-@handles(APP, "POST", "/rt/earnings/get-payout-methods")
-def payout_methods(call: Call):
-    d = call.subject()
-    bal = finance.balance(call.db, "driver", d.id)
-    return {"balance": present.money(bal), "balanceAmount": present.amount(bal), "currencyCode": "EUR",
-            "methods": [
-                {"id": "iban", "label": "Transferência bancária", "detail": "1 a 2 dias úteis", "instant": False},
-                {"id": "instant", "label": "Instant Pay", "detail": "Imediato, taxa 0,00 €", "instant": True},
-            ]}
-
-
-@handles(APP, "POST", "/rt/earnings/request-payout", "/rt/earnings/instant-pay")
-def request_payout(call: Call):
-    db, d = call.db, call.subject()
-    amount = call.get("amountCents", "amount")
-    try:
-        payout = finance.create_payout(db, "driver", d.id, int(amount) if amount is not None else None)
-        if call.path.endswith("instant-pay") or str(call.get("method", default="")) == "instant":
-            finance.mark_paid(db, payout, "instant-pay")
-        db.flush()
-    except (FinanceError, ValueError) as e:
-        raise RtError(400, "payout_failed", str(e))
-    bal = finance.balance(db, "driver", d.id)
-    return {"payout": _payout_json(payout), "balance": present.money(bal),
-            "balanceAmount": present.amount(bal)}
-
-
-@handles(APP, "POST", "/rt/earnings/get-payout-history")
-def payout_history(call: Call):
-    db, d = call.db, call.subject()
-    rows = (db.query(Payout).filter_by(party="driver", party_id=d.id)
-            .order_by(Payout.id.desc()).limit(24).all())
-    return {"payouts": [_payout_json(p) for p in rows]}
-
-
-def _month_bounds(year: int, month: int) -> tuple[int, int]:
-    start = dt.datetime(year, month, 1).timestamp()
-    end = dt.datetime(year + (month == 12), 1 if month == 12 else month + 1, 1).timestamp()
-    return int(start), int(end)
-
-
-@handles(APP, "POST", "/rt/earnings/get-statements")
-def statements(call: Call):
-    """Extrato dos ultimos 6 meses (bruto, comissao, frota e liquido)."""
-    db, d = call.db, call.subject()
-    today = dt.date.today()
-    year, month = today.year, today.month
-    out = []
-    for _ in range(6):
-        start, end = _month_bounds(year, month)
-        s = finance.summary(db, "driver", d.id, start, end)["by_kind"]
-        gross = s.get("fare", 0) + s.get("cancel_fee", 0)
-        net = gross + s.get("commission", 0) + s.get("fleet_fee", 0)
-        count = db.query(Trip).filter(Trip.driver_id == d.id, Trip.completed_at >= start,
-                                      Trip.completed_at < end).count()
-        out.append({"month": f"{year:04d}-{month:02d}", "gross": present.money(gross),
-                    "grossCents": gross, "commission": present.money(-s.get("commission", 0)),
-                    "fleetFee": present.money(-s.get("fleet_fee", 0)), "net": present.money(net),
-                    "netCents": net, "trips": count})
-        month -= 1
-        if month == 0:
-            month, year = 12, year - 1
-    return {"statements": out, "currencyCode": "EUR"}
 
 
 @handles(APP, "POST", "/rt/earnings/get-activity-feed-v3")
@@ -683,81 +621,6 @@ def earnings_trip(call: Call):
                      "fareBreakdown": jget(t.fare_breakdown, {})}}
 
 
-ADJ_KINDS = {"tolls", "manual_fare", "other"}
-
-
-def _adj_json(a: AdjustmentRequest) -> dict:
-    return {"uuid": a.uuid, "tripUuid": a.trip_uuid, "kind": a.kind,
-            "amount": present.money(a.amount_cents), "amountCents": a.amount_cents,
-            "note": a.note, "status": a.status, "createdAt": present.ms(a.created_at),
-            "reviewedAt": present.ms(a.reviewed_at) if a.reviewed_at else None}
-
-
-@handles(APP, "POST", "/rt/earnings/request-adjustment")
-def request_adjustment(call: Call):
-    db, d = call.db, call.subject()
-    kind = str(call.body.get("kind") or "other").strip()
-    if kind not in ADJ_KINDS:
-        raise RtError(400, "invalid_kind", "tipo de ajuste invalido")
-    amount = int(call.body.get("amountCents") or 0)
-    if amount <= 0 or amount > 50000:
-        raise RtError(400, "invalid_amount", "valor entre 0.01 e 500 EUR")
-    trip_uuid = str(call.body.get("tripUuid") or "")[:36]
-    if trip_uuid:
-        t = db.query(Trip).filter_by(uuid=trip_uuid, driver_id=d.id).first()
-        if not t:
-            raise RtError(404, "trip_not_found", "viagem inexistente")
-    a = AdjustmentRequest(driver_id=d.id, trip_uuid=trip_uuid, kind=kind, amount_cents=amount,
-                          note=str(call.body.get("note") or "")[:300])
-    db.add(a)
-    db.flush()
-    return {"adjustment": _adj_json(a)}
-
-
-@handles(APP, "GET", "/rt/earnings/adjustments")
-def adjustments(call: Call):
-    rows = (call.db.query(AdjustmentRequest)
-            .filter_by(driver_id=call.subject().id)
-            .order_by(AdjustmentRequest.id.desc()).limit(30).all())
-    return {"adjustments": [_adj_json(a) for a in rows]}
-
-
-@handles(APP, "POST", "/rt/earnings/get-invoices")
-def invoices(call: Call):
-    """Faturas mensais (12 meses) com total e IVA estimado."""
-    db, d = call.db, call.subject()
-    today = dt.date.today()
-    year, month = today.year, today.month
-    out = []
-    for _ in range(12):
-        start, end = _month_bounds(year, month)
-        s = finance.summary(db, "driver", d.id, start, end)["by_kind"]
-        gross = s.get("fare", 0) + s.get("cancel_fee", 0) + s.get("tip", 0)
-        net = gross + s.get("commission", 0) + s.get("fleet_fee", 0)
-        out.append({"month": f"{year:04d}-{month:02d}", "total": present.money(gross),
-                    "totalCents": gross, "net": present.money(net),
-                    "tax": present.money(int(round(gross * 0.23 / 1.23))),
-                    "status": "paid"})
-        month -= 1
-        if month == 0:
-            month, year = 12, year - 1
-    return {"invoices": out, "currencyCode": "EUR"}
-
-
-@handles(APP, "POST", "/rt/earnings/get-tax-info")
-def tax_info(call: Call):
-    db, d = call.db, call.subject()
-    start = int(dt.datetime(dt.date.today().year, 1, 1).timestamp())
-    end = int(dt.datetime(dt.date.today().year + 1, 1, 1).timestamp())
-    s = finance.summary(db, "driver", d.id, start, end)["by_kind"]
-    gross = s.get("fare", 0) + s.get("cancel_fee", 0) + s.get("tip", 0)
-    net = gross + s.get("commission", 0) + s.get("fleet_fee", 0)
-    return {"year": dt.date.today().year, "gross": present.money(gross),
-            "grossCents": gross, "net": present.money(net), "netCents": net,
-            "tax": present.money(int(round(gross * 0.23 / 1.23))),
-            "note": "IVA estimado a 23%; valores do laboratorio."}
-
-
 # ---- perfil ----------------------------------------------------------------------------------
 @handles(APP, "POST", "/rt/earner-profile/get-profile-hub", "/rt/earner-profile/get-profile-detail-screen")
 def profile_hub(call: Call):
@@ -778,8 +641,8 @@ def empty_lists(call: Call):
     return {"items": [], "cards": [], "opportunities": []}
 
 
-@handles(APP, "POST", "/rt/earner/preferences", "/rt/earner/preferences/views")
-def earner_preferences_placeholder(call: Call):
+@handles(APP, "POST", "/rt/earner/preferences", "/rt/drivers/v2/preferences", "/rt/earner/preferences/views")
+def preferences(call: Call):
     return {"preferences": []}
 
 
@@ -826,13 +689,33 @@ def transparent_fare_breakdown(call: Call):
 
 @handles(APP, "GET|POST", "/rt/navigation/v3/route")                             # 10; sem rota (a app trata a ausencia)
 def navigation_route(call: Call):
-    """Rota entre dois pontos (polilinha, distancia e duracao). Sem coordenadas devolve {} como antes."""
+    """Rota entre dois pontos (polilinha, distancia, duracao, manobras e limite estimado).
+
+    As manobras alimentam o painel de navegacao do ecra de recolha (seta, distancia e rua seguinte).
+    Sem coordenadas devolve {} como antes.
+    """
     from apps import routing
     b = call.body or {}
     pts = routing.points_from(b, call.query if hasattr(call, "query") else {})
     if not pts:
         return {}
-    return routing.route(*pts)
+    out = routing.route(*pts)
+    steps = out.get("steps") or []
+    if steps:
+        # Limite da via onde o motorista esta: usa o inicio da rota (posicao atual) e o rumo do
+        # 1.o passo. Decisao do cliente (2026-10-29): o selo "LIMITE" SO aparece quando o limite
+        # vem do OSM (dado real da via). Nas vias sem maxspeed no OSM nao se inventa um numero:
+        # devolve-se None e a app esconde o selo.
+        lat, lon = pts[0]
+        heading = None
+        first = (steps[0].get("polyline") or [])
+        if len(first) >= 2:
+            heading = routing._bearing(first[0]["latitude"], first[0]["longitude"],
+                                       first[1]["latitude"], first[1]["longitude"])
+        source = routing.speed_source(steps[0], lat, lon, heading)
+        out["speedLimitSource"] = source
+        out["speedLimitKmh"] = routing.speed_limit(steps[0], lat, lon, heading) if source == "osm" else None
+    return out
 
 
 @handles(APP, "POST", "/rt/v1/driverretention/mentorship/getmentorshipstate")    # 10; role *
@@ -878,11 +761,7 @@ def onboarding_status_response(call: Call):
 # ---- documentos, notificacoes e rota (pedidos depois do lote 5) --------------------------------------
 DOC_TITLES = {"carta_conducao": "Carta de condução", "certificado_tvde": "Certificado de motorista TVDE",
               "registo_criminal": "Certificado de registo criminal", "cartao_cidadao": "Cartão de cidadão",
-              "atestado_medico": "Atestado médico",
               "dua": "DUA", "seguro": "Seguro", "inspecao": "Inspeção"}
-
-DRIVER_DOC_KINDS = {"carta_conducao", "cartao_cidadao", "certificado_tvde",
-                    "registo_criminal", "atestado_medico"}
 
 
 def _doc_json(doc: Document) -> dict:
@@ -900,310 +779,6 @@ def documents(call: Call):
     if d.vehicle_id:
         vehicle = db.query(Document).filter(Document.owner_type == "vehicle", Document.owner_id == d.vehicle_id).order_by(Document.id).all()
     return {"driverDocuments": [_doc_json(x) for x in mine], "vehicleDocuments": [_doc_json(x) for x in vehicle]}
-
-
-def _prefs_json(p) -> dict:
-    return {
-        "destinationMode": bool(p.destination_mode),
-        "destinationAddress": p.destination_address or "",
-        "destinationLat": p.destination_lat,
-        "destinationLng": p.destination_lng,
-        "areaMode": bool(p.area_mode),
-        "areaLabel": p.area_label or "",
-        "areaLat": p.area_lat,
-        "areaLng": p.area_lng,
-        "areaRadiusKm": p.area_radius_km,
-        "autoAccept": bool(p.auto_accept),
-        "breakUntil": p.break_until,
-        "breakActive": bool(p.break_until and p.break_until > now()),
-    }
-
-
-def _prefs(db, driver_id: int):
-    p = db.query(DriverPreference).filter_by(driver_id=driver_id).first()
-    if not p:
-        p = DriverPreference(driver_id=driver_id)
-        db.add(p)
-        db.flush()
-    return p
-
-
-@handles(APP, "GET|POST", "/rt/drivers/v2/preferences")
-def preferences(call: Call):
-    """Modo destino, area, aceitacao automatica e pausa."""
-    d = call.subject()
-    p = _prefs(call.db, d.id)
-    if call.method == "POST":
-        b = call.body
-        for src, dst in (("destinationMode", "destination_mode"), ("areaMode", "area_mode"),
-                         ("autoAccept", "auto_accept")):
-            if src in b:
-                setattr(p, dst, bool(b[src]))
-        for src, dst in (("destinationAddress", "destination_address"), ("areaLabel", "area_label")):
-            if src in b:
-                setattr(p, dst, str(b[src] or "")[:200])
-        for src, dst in (("destinationLat", "destination_lat"), ("destinationLng", "destination_lng"),
-                         ("areaLat", "area_lat"), ("areaLng", "area_lng")):
-            if src in b:
-                setattr(p, dst, b[src])
-        if "areaRadiusKm" in b:
-            try:
-                p.area_radius_km = max(1.0, min(float(b["areaRadiusKm"] or 5), 50.0))
-            except (TypeError, ValueError):
-                raise RtError(400, "invalid_radius", "raio invalido")
-        p.updated_at = now()
-    return {"preferences": _prefs_json(p)}
-
-
-@handles(APP, "POST", "/rt/drivers/v2/break")
-def set_break(call: Call):
-    d = call.subject()
-    p = _prefs(call.db, d.id)
-    resume = bool(call.get("resume", "off", default=False))
-    try:
-        minutes = max(1, min(int(call.get("minutes", default=15) or 15), 120))
-    except (TypeError, ValueError):
-        raise RtError(400, "invalid_minutes", "minutos invalidos")
-    p.break_until = None if resume else now() + minutes * 60
-    p.updated_at = now()
-    return {"preferences": _prefs_json(p)}
-
-
-DOC_EXT = {".jpg", ".jpeg", ".png", ".webp", ".pdf"}
-
-
-def _doc_ext(raw: bytes, filename: str) -> str | None:
-    suffix = Path(filename or "").suffix.lower()
-    if suffix in DOC_EXT:
-        return ".jpg" if suffix == ".jpeg" else suffix
-    if raw.startswith(b"\xff\xd8\xff"):
-        return ".jpg"
-    if raw.startswith(b"\x89PNG\r\n\x1a\n"):
-        return ".png"
-    if raw[:4] == b"RIFF" and raw[8:12] == b"WEBP":
-        return ".webp"
-    if raw.startswith(b"%PDF"):
-        return ".pdf"
-    return None
-
-
-def _save_document(call: Call, kind: str, number: str, expires: str | None,
-                   content: str, filename: str) -> Document:
-    """Cria/atualiza o documento do motorista e guarda o ficheiro no disco."""
-    db, d = call.db, call.subject()
-    data = (content or "").strip()
-    if "," in data and data.split(",", 1)[0].startswith("data:"):
-        data = data.split(",", 1)[1]
-    try:
-        raw = base64.b64decode(data, validate=True)
-    except (binascii.Error, ValueError):
-        raise RtError(400, "invalid_file", "ficheiro invalido")
-    if not raw:
-        raise RtError(400, "empty_file", "ficheiro vazio")
-    if len(raw) > config.UPLOAD_MAX_BYTES:
-        raise RtError(413, "file_too_large", "maximo de 8 MB")
-    ext = _doc_ext(raw, filename)
-    if not ext:
-        raise RtError(415, "unsupported_file", "so JPG, PNG, WEBP ou PDF")
-    doc = (db.query(Document)
-           .filter(Document.owner_type == "driver", Document.owner_id == d.id, Document.kind == kind)
-           .first())
-    if not doc:
-        doc = Document(owner_type="driver", owner_id=d.id, kind=kind)
-        db.add(doc)
-        db.flush()
-    config.UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
-    name = f"doc-{doc.uuid}{ext}"
-    (config.UPLOAD_DIR / name).write_bytes(raw)
-    doc.number = (number or doc.number or "")[:60]
-    doc.expires_on = expires or doc.expires_on
-    doc.file_name = name
-    doc.status = "pending"
-    doc.notes = ""
-    return doc
-
-
-@handles(APP, "GET|POST", "/rt/drivers/v2/business-profile")
-def business_profile(call: Call):
-    """Perfil empresarial do motorista e delegados autorizados."""
-    db, d = call.db, call.subject()
-    row = db.get(Setting, f"driver_business:{d.id}")
-    default = {"active": False, "companyName": "", "vat": "", "email": "", "delegates": []}
-    data = jget(row.value, default) if row else default
-    if call.method == "POST":
-        action = str(call.body.get("action") or "save")
-        if action == "remove_delegate":
-            phone = str(call.body.get("delegatePhone") or "")
-            data["delegates"] = [x for x in data.get("delegates", []) if x.get("phone") != phone]
-        elif action == "add_delegate":
-            name = str(call.body.get("delegateName") or "").strip()[:80]
-            phone = str(call.body.get("delegatePhone") or "").strip()[:30]
-            if name and len(phone) >= 6 and len(data.get("delegates", [])) < 5:
-                data.setdefault("delegates", []).append({"name": name, "phone": phone, "role": "delegate"})
-        else:
-            data["active"] = bool(call.body.get("active", True))
-            data["companyName"] = str(call.body.get("companyName") or "")[:120]
-            data["vat"] = str(call.body.get("vat") or "")[:30]
-            data["email"] = str(call.body.get("email") or "")[:120]
-        if row:
-            row.value = jset(data)
-        else:
-            db.add(Setting(key=f"driver_business:{d.id}", value=jset(data)))
-        db.flush()
-    return {"business": data}
-
-
-@handles(APP, "GET|POST", "/rt/drivers/v2/incentives")
-def incentives(call: Call):
-    """Missoes, pontos/Pro e referral."""
-    db, d = call.db, call.subject()
-    if db.query(Quest).count() == 0:
-        start = now() - 30 * 86400
-        end = now() + 30 * 86400
-        db.add_all([
-            Quest(title="3 viagens esta semana", description="Complete 3 viagens para ganhar 5 EUR.",
-                  target_trips=3, reward_cents=500, starts_at=start, ends_at=end),
-            Quest(title="10 viagens esta semana", description="Complete 10 viagens para ganhar 20 EUR.",
-                  target_trips=10, reward_cents=2000, starts_at=start, ends_at=end),
-        ])
-        db.flush()
-    return _incentives(db, d)
-
-
-def _incentives(db, d) -> dict:
-    completed = db.query(Trip).filter(Trip.driver_id == d.id, Trip.state == "completed").count()
-    points = completed * 10 + int(float(d.rating or 5.0) * 10)
-    if points >= 300:
-        tier, next_points = "Platinum", None
-    elif points >= 100:
-        tier, next_points = "Gold", 300
-    else:
-        tier, next_points = "Blue", 100
-    quests = []
-    for q in db.query(Quest).filter_by(active=True).order_by(Quest.id).all():
-        progress = (db.query(Trip)
-                    .filter(Trip.driver_id == d.id, Trip.state == "completed",
-                            Trip.completed_at >= q.starts_at)
-                    .count())
-        claimed = db.query(QuestClaim).filter_by(quest_id=q.id, driver_id=d.id).first() is not None
-        quests.append({
-            "uuid": q.uuid, "title": q.title, "description": q.description,
-            "target": q.target_trips, "progress": min(progress, q.target_trips),
-            "reward": present.money(q.reward_cents), "rewardCents": q.reward_cents,
-            "claimed": claimed, "canClaim": progress >= q.target_trips and not claimed,
-        })
-    code = f"QOL-{d.uuid[:6].upper()}"
-    refs = db.query(Referral).filter_by(owner_driver_id=d.id).all()
-    return {
-        "points": points, "tier": tier, "nextTierPoints": next_points,
-        "trips": completed,
-        "quests": quests,
-        "referral": {"code": code, "invited": len(refs),
-                     "pending": sum(1 for r in refs if r.status == "pending"),
-                     "reward": "10,00 EUR por motorista aprovado"},
-    }
-
-
-@handles(APP, "POST", "/rt/drivers/v2/quests/{questUUID}/claim")
-def claim_quest(call: Call):
-    db, d = call.db, call.subject()
-    q = db.query(Quest).filter_by(uuid=call.vars["questUUID"], active=True).first()
-    if not q:
-        raise RtError(404, "quest_not_found", "missao inexistente")
-    if db.query(QuestClaim).filter_by(quest_id=q.id, driver_id=d.id).first():
-        raise RtError(409, "already_claimed", "recompensa ja recebida")
-    progress = (db.query(Trip)
-                .filter(Trip.driver_id == d.id, Trip.state == "completed",
-                        Trip.completed_at >= q.starts_at)
-                .count())
-    if progress < q.target_trips:
-        raise RtError(400, "quest_incomplete", "missao ainda nao concluida")
-    db.add(QuestClaim(quest_id=q.id, driver_id=d.id))
-    try:
-        finance.adjust(db, "driver", d.id, q.reward_cents, f"Missao: {q.title}")
-    except FinanceError as e:
-        raise RtError(400, "reward_failed", str(e))
-    return _incentives(db, d)
-
-
-@handles(APP, "POST", "/rt/drivers/v2/referrals")
-def create_referral(call: Call):
-    db, d = call.db, call.subject()
-    phone = str(call.body.get("phone") or "").strip()[:30]
-    if len(phone) < 6:
-        raise RtError(400, "invalid_phone", "telefone invalido")
-    if phone == d.phone:
-        raise RtError(400, "own_phone", "nao pode convidar a propria conta")
-    code = f"QOL-{d.uuid[:6].upper()}"
-    if not db.query(Referral).filter_by(owner_driver_id=d.id, invited_phone=phone).first():
-        db.add(Referral(code=code, owner_driver_id=d.id, invited_phone=phone))
-    return _incentives(db, d)
-
-
-@handles(APP, "GET|POST", "/rt/drivers/v2/airport-queue")
-def airport_queue(call: Call):
-    """Fila do aeroporto: entrar, sair e ver a posicao."""
-    db, d = call.db, call.subject()
-    if call.method == "POST":
-        action = str(call.body.get("action") or "join").strip().lower()
-        row = db.query(AirportQueue).filter_by(driver_id=d.id).first()
-        if action == "leave":
-            if row:
-                db.delete(row)
-        else:
-            if not d.vehicle or d.vehicle.status != "active":
-                raise RtError(400, "no_vehicle", "veiculo ativo necessario")
-            if d.availability != "online":
-                raise RtError(400, "offline", "fique online para entrar na fila")
-            if not row:
-                row = AirportQueue(driver_id=d.id, city_id=d.city_id)
-                db.add(row)
-                db.flush()
-    q = db.query(AirportQueue).filter(AirportQueue.status == "waiting")
-    if d.city_id:
-        q = q.filter(AirportQueue.city_id == d.city_id)
-    rows = q.order_by(AirportQueue.joined_at, AirportQueue.id).all()
-    position = next((i for i, x in enumerate(rows, 1) if x.driver_id == d.id), None)
-    mine = next((x for x in rows if x.driver_id == d.id), None)
-    return {
-        "joined": position is not None,
-        "position": position,
-        "waiting": len(rows),
-        "joinedAt": mine.joined_at if mine else None,
-        "airport": "Aeroporto de Lisboa",
-    }
-
-
-@handles(APP, "POST", "/rt/drivers/v2/documents/upload")
-def upload_document(call: Call):
-    kind = str(call.get("kind", "documentKind") or "").strip()
-    if kind not in DRIVER_DOC_KINDS:
-        raise RtError(400, "invalid_kind", "tipo de documento invalido")
-    doc = _save_document(
-        call, kind,
-        str(call.get("number", "documentNumber") or ""),
-        call.get("expiresOn", "expires_on"),
-        str(call.get("contentBase64", "content", "data") or ""),
-        str(call.get("fileName", "filename") or ""),
-    )
-    call.db.flush()
-    return {"document": _doc_json(doc)}
-
-
-@handles(APP, "POST", "/rt/drivers/v2/verify-identity")
-def verify_identity(call: Call):
-    """Verificacao de identidade: Cartao de Cidadao + dados; fica pendente de revisao."""
-    number = str(call.get("documentNumber", "number") or "")
-    expires = call.get("expiresOn", "expires_on")
-    content = str(call.get("contentBase64", "content", "data") or "")
-    doc = _save_document(call, "cartao_cidadao", number, expires, content,
-                         str(call.get("fileName", "filename") or ""))
-    call.db.flush()
-    return {
-        "status": "pending",
-        "message": "Documentos recebidos. A verificacao fica em analise.",
-        "document": _doc_json(doc),
-    }
 
 
 @handles(APP, "GET|POST", "/rt/inbox/notifications")
@@ -1226,53 +801,3 @@ def inbox_mark_read(call: Call):
         if not ids or n.uuid in ids:
             n.read = True
     return {}
-
-
-@handles(APP, "GET|POST", "/rt/location/search")
-def location_search(call: Call):
-    """Pesquisa de locais para o mapa (Google Geocoding; fallback nos pontos do seed)."""
-    q = str(call.get("q", "query", "searchTerm", default="") or "").strip()
-    lat = call.get("lat", "latitude")
-    lng = call.get("lng", "longitude")
-    near = (float(lat), float(lng)) if lat is not None and lng is not None else (None, None)
-    rows = geocode.places_search(q, near[0], near[1]) if q else []
-    if not rows and q:
-        rows = geocode.forward(q, near[0], near[1])
-    if not rows:
-        needle = q.lower()
-        rows = [
-            {"id": f"seed:{i}", "name": name, "line1": name, "line2": "Lisboa",
-             "full": f"{name}, Lisboa", "lat": la, "lng": lo, "provider": "qolari"}
-            for i, (name, la, lo) in enumerate(PLACES)
-            if not needle or needle in name.lower()
-        ]
-    return {"places": rows[:8]}
-
-
-@handles(APP, "POST", "/rt/support/map-report")
-def map_report(call: Call):
-    """Problema de mapa comunicado pelo motorista; fica para o suporte no backoffice."""
-    d = call.subject()
-    b = call.body or {}
-    raw = str(b.get("reason") or "").strip()
-    reason = raw if raw in MAP_REPORT_REASONS else next(
-        (code for code, label in MAP_REPORT_REASONS.items() if label.lower() == raw.lower()), "")
-    if not reason:
-        raise RtError(400, "missing_reason", "indique o motivo")
-    note = str(b.get("note") or "").strip()[:500]
-    def coord(key: str) -> float | None:
-        value = b.get(key)
-        try:
-            return float(value) if value is not None else None
-        except (TypeError, ValueError):
-            return None
-    r = MapReport(
-        driver_id=d.id,
-        reason=reason[:80],
-        note=note,
-        latitude=coord("latitude"),
-        longitude=coord("longitude"),
-    )
-    call.db.add(r)
-    call.db.flush()
-    return {"ok": True, "reportUUID": r.uuid}

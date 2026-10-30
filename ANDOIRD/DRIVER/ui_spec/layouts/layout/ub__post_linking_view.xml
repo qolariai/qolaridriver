@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.profilelinking.post_linking.sdui.PostLinkingView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__post_linking_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/ub__post_linking_back_button" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_4.5x" android:layout_height="@dimen/ui__spacing_unit_4.5x" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:contentDescription="@string/post_linking_content_back" android:layout_marginStart="@dimen/ui__spacing_unit_1.5x" android:elevation="@dimen/ui__spacing_unit_0.5x" android:backgroundTint="?backgroundPrimary" app:analyticsId="957507ca-b2f2" app:buttonType="protection" app:icon="@drawable/ub_ic_x" app:iconSize="@dimen/ui__spacing_unit_3x" app:shape="circle" app:size="medium" app:srcCompat="@drawable/navigation_icon_back" style="@style/Platform.Button.BaseDynamic" />
+    <include layout="@layout/ub__post_linking_profile_switching_view" />
+    <com.ubercab.ui.core.progress.BaseProgressBar android:gravity="center" android:id="@id/ub__post_linking_progress_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:baseprogress_type="circle_indeterminate" app:progress_size="large" />
+</com.uber.profilelinking.post_linking.sdui.PostLinkingView>

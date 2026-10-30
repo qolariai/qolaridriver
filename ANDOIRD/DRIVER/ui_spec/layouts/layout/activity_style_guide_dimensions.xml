@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_dimensions" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="f69d4bcd-f748"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <com.ubercab.ui.core.UPlainView android:id="@id/ub__dynamic_view" android:background="?positive" android:layout_width="fill_parent" android:layout_height="500.0dip" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_weight="8.0" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="2.0">
+                <com.ubercab.ui.core.USeekBar android:id="@id/ub__seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" android:max="18" />
+                <com.ubercab.ui.core.UTextView android:id="@id/ub__text_attribute_values" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/Platform.TextStyle.Title.Medium" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

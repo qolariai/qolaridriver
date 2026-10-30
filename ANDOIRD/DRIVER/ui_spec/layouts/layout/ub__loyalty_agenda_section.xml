@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.driver_loyalty.agenda.section.LoyaltyAgendaSectionView android:orientation="horizontal" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="b0bdd9fa-6d1e"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_vertical" android:id="@id/icon_background" android:background="@drawable/ub__carbon_icon_circle_small" android:layout_width="@dimen/ui__icon_large" android:layout_height="@dimen/ui__icon_large">
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/icon" android:layout_width="@dimen/ui__icon_small" android:layout_height="@dimen/ui__icon_small" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/Platform.TextStyle.ParagraphDefault" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="2" style="@style/Platform.TextStyle.LabelDefault" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:id="@id/cta" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" uber:analyticsId="ab6d1ea7-19ba" uber:srcCompat="@drawable/ub_ic_x" />
+</com.ubercab.driver_loyalty.agenda.section.LoyaltyAgendaSectionView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.URelativeLayout android:gravity="center" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/ub__earner_tab_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:ellipsize="end" android:id="@id/ub__tab_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerInParent="true" style="@style/Platform.TextStyle.LabelSmall" />
+    <com.ubercab.ui.core.badge.NotificationBaseBadge android:id="@id/ub__badge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_marginStart="@dimen/ui__spacing_unit_1x" android:layout_toEndOf="@id/ub__tab_label" app:notification_color="accent" />
+</com.ubercab.ui.core.URelativeLayout>

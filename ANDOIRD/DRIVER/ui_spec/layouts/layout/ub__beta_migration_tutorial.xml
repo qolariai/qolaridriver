@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.beta.migration.tutorial.TutorialView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/container" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__tutorial_loading_bar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" uber:bli_bitColor="?contentAccent" />
+            <WebView android:id="@id/ub__tutorial_web_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.uber.beta.migration.tutorial.TutorialView>

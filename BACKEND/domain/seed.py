@@ -17,6 +17,7 @@ from domain.models import (Notification, AdminUser, City, Document, Driver, Flee
 
 # pontos conhecidos de Lisboa (tambem usados pelo simulador da consola)
 PLACES = [
+    ("Rua Augusta 24, Lisboa", 38.7107, -9.1367),
     ("Aeroporto Humberto Delgado", 38.7742, -9.1342),
     ("Rossio", 38.7139, -9.1394),
     ("Marquês de Pombal", 38.7253, -9.1500),

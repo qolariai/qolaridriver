@@ -91,6 +91,10 @@ class SearchFragment : Fragment() {
                     binding.savedLabel.text = place?.let {
                         "${getString(R.string.search_saved)} · ${it.name}"
                     } ?: getString(R.string.search_saved)
+                    if (place != null && ride.pickup.value.address == ride.homePickup.address) {
+                        ride.setPickup(RoutePoint(place.lat, place.lng, place.address))
+                        binding.pickupText.text = place.address
+                    }
                 }
             }
         }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon_preferences_shared.area_preference.AreaPreferenceView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="935607b3-3cd3"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/area_preference_top_bar" android:background="?colorHeaderBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageButton android:id="@id/area_preference_back" android:background="@null" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?android:textColorPrimaryInverse" uber:srcCompat="@drawable/ub_ic_arrow_left" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimaryInverse" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/area_preference_page_title" android:layout_weight="1.0" style="@style/Platform.TextStyle.Title.Normal" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:textAppearance="@style/Platform.TextStyle.Paragraph.Medium" android:textColor="?android:textColorPrimaryInverse" android:id="@id/area_preference_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/area_preference_save" uber:buttonType="tertiary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/area_preference_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.carbon_preferences_shared.context_message_widget.ContextMessageWidgetView android:id="@id/area_preference_common_widget" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.carbon.core.ui.ProgressFrameLayout android:id="@id/area_preference_loading_view" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.5" />
+        <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/area_preference_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</com.ubercab.carbon_preferences_shared.area_preference.AreaPreferenceView>

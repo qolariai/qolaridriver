@@ -1,13 +1,9 @@
 package com.qolari.drivereplica
 
-import android.Manifest
-import android.content.Context
-import android.content.pm.PackageManager
-import android.content.res.Configuration
-import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import androidx.core.view.doOnLayout
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -18,7 +14,6 @@ import androidx.activity.viewModels
 import com.qolari.drivereplica.databinding.ActivityMainBinding
 import com.qolari.drivereplica.drive.DriveStage
 import com.qolari.drivereplica.drive.DriveViewModel
-import com.qolari.drivereplica.push.PushRegistrar
 import com.qolari.drivereplica.ui.home.HomeViewModel
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -34,26 +29,10 @@ class MainActivity : AppCompatActivity() {
     /** Destinos de ecrã inteiro, sem a barra de separadores (modo mapa, captura 110; boas-vindas e login, 031-033). */
     private val fullScreenDestinations = setOf(R.id.mapFragment, R.id.welcomeFragment, R.id.loginPhoneFragment, R.id.loginCodeFragment)
 
-    override fun attachBaseContext(newBase: Context) {
-        val prefs = newBase.getSharedPreferences("qolari_ui", Context.MODE_PRIVATE)
-        if (prefs.getBoolean("simple", false)) {
-            val config = Configuration(newBase.resources.configuration)
-            config.fontScale = 1.15f
-            super.attachBaseContext(newBase.createConfigurationContext(config))
-        } else {
-            super.attachBaseContext(newBase)
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        if (Build.VERSION.SDK_INT >= 33 &&
-            checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED
-        ) {
-            requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 101)
-        }
 
         val navHost = supportFragmentManager.findFragmentById(R.id.navHost) as NavHostFragment
         val nav = navHost.navController
@@ -64,13 +43,6 @@ class MainActivity : AppCompatActivity() {
             nav.graph = graph
         }
         binding.bottomNav.setupWithNavController(nav)
-        // O grafo do Menu é aninhado; em alguns estados o NavigationUI resolvia o separador
-        // "Página inicial" para o Menu. O listener explícito garante que cada separador navega
-        // para o seu destino de topo.
-        binding.bottomNav.setOnItemSelectedListener { item ->
-            runCatching { nav.navigate(item.itemId) }
-            true
-        }
         // Contador na Caixa de entrada e ponto no Menu (capturas 000/060). O ponto do Menu continua de exemplo.
         val inboxBadge = binding.bottomNav.getOrCreateBadge(R.id.inboxFragment).apply {
             backgroundColor = getColor(R.color.qd_core_blue600)
@@ -85,11 +57,20 @@ class MainActivity : AppCompatActivity() {
                 if (n > 0) inboxBadge.number = n
             }
         }
-        binding.bottomNav.getOrCreateBadge(R.id.menuTab).backgroundColor = getColor(R.color.qd_core_blue600)
+        // Os rótulos têm de caber em 1/5 da largura e acabar em "…" (captura 064: "Página inici…", "Caixa de en…").
+        // A original limita cada etiqueta a ~60dp; sem isto "Página inicial" e "Rendimentos" cabiam inteiros.
+        binding.bottomNav.doOnLayout {
+            val limit = (60 * resources.displayMetrics.density).toInt()
+            for (i in 0 until binding.bottomNav.menu.size()) {
+                val item = binding.bottomNav.menu.getItem(i)
+                binding.bottomNav.findViewById<android.view.View>(item.itemId)?.let { clampLabels(it, limit) }
+            }
+        }
         nav.addOnDestinationChangedListener { _, destination, _ ->
             val tabs = destination.id !in fullScreenDestinations
             binding.bottomNav.isVisible = tabs
             binding.bottomNavDivider.isVisible = tabs
+            // A original não mostra ponto no separador Menu (capturas 061-064): só o contador da Caixa de entrada.
         }
 
         // Estar online liga a sondagem de propostas e viagens; uma proposta ou viagem leva sempre ao modo mapa.
@@ -110,10 +91,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        lifecycleScope.launch {
-            if (AppGraph.repository.hasSession()) PushRegistrar.register()
+    /** Põe as etiquetas da barra em 1 linha, 12sp e com "…" dentro da largura de cada separador. */
+    private fun clampLabels(view: android.view.View, maxWidth: Int) {
+        if (view is android.widget.TextView) {
+            view.maxLines = 1
+            view.ellipsize = android.text.TextUtils.TruncateAt.END
+            view.maxWidth = maxWidth
+        } else if (view is android.view.ViewGroup) {
+            for (i in 0 until view.childCount) clampLabels(view.getChildAt(i), maxWidth)
         }
     }
 }

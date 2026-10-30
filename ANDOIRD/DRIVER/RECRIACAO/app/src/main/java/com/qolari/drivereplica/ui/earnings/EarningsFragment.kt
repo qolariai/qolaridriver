@@ -56,6 +56,10 @@ class EarningsFragment : Fragment() {
         binding.weekPeriod.text = w.periodLabel
         binding.weekTotal.text = w.formattedTotal
         binding.weekChart.values = w.dayTotals
+        // Gráfico da semana igual à captura 062: barras largas (~20dp) encostadas à direita, altura máxima 48dp.
+        binding.weekChart.barWidthDp = 20f
+        binding.weekChart.gapDp = 5f
+        binding.weekChart.maxBarHeightDp = 48f
         binding.weekChart.highlight = w.todayIndex
         binding.weekChart.barColor = requireContext().getColor(R.color.qd_core_blue600)
         binding.weekChart.highlightColor = requireContext().getColor(R.color.qd_core_blue600)
@@ -63,11 +67,10 @@ class EarningsFragment : Fragment() {
         binding.statRows.removeAllViews()
         w.onlineLabel?.let { addStat(getString(R.string.menu_online_hours), it) }
         addStat(getString(R.string.earnings_trips), w.tripCount.toString())
+        // "Pontos" existe na original (captura 062); derivamos 2 pontos por viagem concluída, como no programa Uber Pro.
+        addStat(getString(R.string.earnings_points), (w.tripCount * 2).toString())
         binding.balanceRow.isVisible = w.balance != null
         binding.balanceValue.text = w.balance.orEmpty()
-        binding.balanceRow.setOnClickListener {
-            androidx.navigation.fragment.NavHostFragment.findNavController(this).navigate(R.id.payoutsFragment)
-        }
 
         binding.recentList.removeAllViews()
         w.recent.forEach { t ->
@@ -75,35 +78,27 @@ class EarningsFragment : Fragment() {
             row.tripRoute.text = t.route
             row.tripTotal.text = t.total
             row.tripWhen.text = t.whenLabel
-            row.root.setOnClickListener { showReceipt(t.uuid) }
             binding.recentList.addView(row.root)
         }
         binding.recentEmpty.isVisible = w.recent.isEmpty()
     }
 
     private fun addStat(label: String, value: String) {
+        if (binding.statRows.childCount > 0) {
+            binding.statRows.addView(
+                View(requireContext()).apply {
+                    layoutParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        (2 * resources.displayMetrics.density).toInt(),
+                    )
+                    setBackgroundResource(R.drawable.qd_dashed_divider)
+                },
+            )
+        }
         val row = ItemStatRowBinding.inflate(layoutInflater, binding.statRows, false)
         row.statLabel.text = label
         row.statValue.text = value
         binding.statRows.addView(row.root)
-    }
-
-    private fun showReceipt(uuid: String) {
-        viewLifecycleOwner.lifecycleScope.launch {
-            com.qolari.drivereplica.data.AppGraph.repository.summary(uuid)
-                .onSuccess { s ->
-                    val body = s.lines.joinToString("\n") { "${it.first}: ${it.second}" } +
-                        "\n\nTotal: ${s.total}"
-                    com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
-                        .setTitle(R.string.earnings_receipt)
-                        .setMessage(body)
-                        .setPositiveButton(android.R.string.ok, null)
-                        .show()
-                }
-                .onFailure {
-                    android.widget.Toast.makeText(requireContext(), R.string.earnings_no_network, android.widget.Toast.LENGTH_SHORT).show()
-                }
-        }
     }
 
     private fun buildDayLabels() {
@@ -111,9 +106,12 @@ class EarningsFragment : Fragment() {
             binding.weekDayLabels.addView(
                 TextView(requireContext()).apply {
                     text = d.take(3)
-                    textSize = 9f
+                    textSize = 11f
+                    maxLines = 1
+                    setSingleLine(true)
+                    includeFontPadding = false
                     gravity = android.view.Gravity.CENTER
-                    setTextColor(requireContext().getColor(R.color.qd_ink))
+                    setTextColor(requireContext().getColor(R.color.qd_core_gray600))
                     layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
                 }
             )
@@ -157,7 +155,7 @@ class EarningsFragment : Fragment() {
         })
         c.addView(title(R.string.menu_section_earn_more))
         listOf(
-            Triple(R.drawable.ic_compass, R.string.menu_discover_opportunities, R.string.earnings_row_discover_sub),
+            Triple(R.drawable.ic_navigate_ne, R.string.menu_discover_opportunities, R.string.earnings_row_discover_sub),
             Triple(R.drawable.ic_gift, R.string.earnings_row_refer, R.string.earnings_row_refer_sub),
         ).forEach { (icon, t, sub) ->
             val row = ItemMenuRowBinding.inflate(layoutInflater, c, false)

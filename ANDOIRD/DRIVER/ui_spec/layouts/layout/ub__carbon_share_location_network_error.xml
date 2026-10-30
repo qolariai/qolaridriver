@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.banner.BaseBanner android:id="@id/follow_my_ride_network_error_banner" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:action_button_type="secondary" app:banner_background_color="?red50" app:banner_hierarchy="low" />
+</com.ubercab.ui.core.ULinearLayout>

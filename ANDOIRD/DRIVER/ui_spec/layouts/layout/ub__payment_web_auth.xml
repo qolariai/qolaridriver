@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.base.web.PaymentWebAuthView android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <WebView android:id="@id/ub__payment_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/ub__payment_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.presidio.payment.base.web.PaymentWebAuthView>

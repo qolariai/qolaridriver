@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__shimmer_label" android:layout_width="0.0dip" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_12x" app:layout_constraintEnd_toStartOf="@id/ub__shimmer_value" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/ub__shimmer_value" style="@style/PerfHubShimmerView" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__shimmer_value" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ui__spacing_unit_2.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_3.5x" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/PerfHubShimmerView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

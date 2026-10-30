@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.safety_toolkit.action.CarbonSafetyToolkitActionView android:orientation="horizontal" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ub__carbon_safety_toolkit_action_icon" android:focusable="false" android:clickable="false" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:layout_marginStart="@dimen/ui__spacing_unit_3x" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" uber:analyticsId="8f8b9dd4-3464" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_0x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:id="@id/ub__carbon_safety_toolkit_action_title" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="766aac6d-8133" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:id="@id/ub__carbon_safety_toolkit_action_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="8e685ea8-90ed" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.safety_toolkit.action.CarbonSafetyToolkitActionView>

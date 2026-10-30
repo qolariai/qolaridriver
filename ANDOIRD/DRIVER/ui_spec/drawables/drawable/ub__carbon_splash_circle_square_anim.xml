@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$ub__carbon_splash_circle_square_anim__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="circleSubGroup" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__1" />
+    <target android:name="circleGroup" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__2" />
+    <target android:name="squareSubGroup" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__3" />
+    <target android:name="squareGroup" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__4" />
+    <target android:name="uberLogoGroup_R" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__5" />
+    <target android:name="uberLogoGroup_E" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__6" />
+    <target android:name="uberLogoGroup_b" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__7" />
+    <target android:name="uberLogoGroup" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__8" />
+    <target android:name="arrow_path" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__9" />
+    <target android:name="arrow" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__10" />
+    <target android:name="squareGroupScale" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__11" />
+    <target android:name="squareGroupScale_path" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__12" />
+    <target android:name="squareGroupLoop" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__13" />
+    <target android:name="squareGroupLoop_path" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__14" />
+    <target android:name="circleGroupScale" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__15" />
+    <target android:name="circleGroupScale_path" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__16" />
+    <target android:name="circleGroupLoop" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__17" />
+    <target android:name="circleGroupLoop_path" android:animation="@drawable/$ub__carbon_splash_circle_square_anim__18" />
+</animated-vector>

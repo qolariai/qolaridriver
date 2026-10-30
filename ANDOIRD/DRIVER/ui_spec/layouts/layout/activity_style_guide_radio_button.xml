@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/style_guide_screen_radio_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="1d6d64b8-8dfc"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URadioButton android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:layout_gravity="center" android:id="@id/ub_radio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginTop="@dimen/ui__spacing_unit_4.5x" android:layout_marginRight="?contentInset" android:checked="true" android:minHeight="@dimen/min_form_widget_height" android:text="Radio Button On" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" />
+</com.ubercab.ui.core.ULinearLayout>

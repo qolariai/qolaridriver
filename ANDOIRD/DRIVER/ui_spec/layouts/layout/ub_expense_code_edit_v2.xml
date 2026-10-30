@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.expense_code.expense_code_edit.ExpenseCodeEditView android:orientation="vertical" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="5824644e-fbc2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.profiles.expense_code.views.ExpenseCodeClearableEditText android:id="@id/ub__expense_code_free_form_edit_text" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="?contentInset" android:hint="@string/expense_code_edit_entry_hint" app:drawableStartCompat="@drawable/ub_expense_code_icon" style="@style/U4b.TextStyle.ExpenseCode.EditText" />
+                <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ub__expense_code_selected_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__expense_code_selected_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <com.ubercab.ui.core.text.BaseTextView android:textColor="?textAccent" android:id="@id/ub__expense_code_change_button" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feature_profiles_expense_info_change" android:layout_marginEnd="?contentInset" app:analyticsId="03fe908b-6fd0" style="@style/Platform.TextStyle.Small.Normal" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.profiles.expense_code.views.ExpenseCodeClearableEditText android:id="@id/ub__expense_code_memo_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/expense_code_memo_hint" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" style="@style/U4b.TextStyle.ExpenseCode.EditText" />
+                <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset">
+                    <com.ubercab.ui.core.text.BaseTextView android:textColor="?textTertiary" android:id="@id/ub__expense_code_memo_subtext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/expense_code_memo_subtext_optional" android:layout_alignParentStart="true" style="@style/Platform.TextStyle.Meta.Normal" />
+                    <com.ubercab.ui.core.text.BaseTextView android:textColor="?textTertiary" android:id="@id/ub__expense_code_memo_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" style="@style/Platform.TextStyle.Meta.Normal" />
+                </com.ubercab.ui.core.URelativeLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:enabled="false" android:id="@id/ub__expense_code_done_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="?contentInset" android:text="@string/feature_profile_text_done" app:analyticsId="3a397359-3805" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.profiles.expense_code.expense_code_edit.ExpenseCodeEditView>

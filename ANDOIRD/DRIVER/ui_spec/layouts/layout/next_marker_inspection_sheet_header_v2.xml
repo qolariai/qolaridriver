@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.next_inspection_sheet.objects.header.NextMarkerInspectionSheetHeaderView android:orientation="vertical" android:background="?backgroundPrimary" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/inspection_sheet_header_icon" android:layout_alignParentStart="true">
+        <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/inspection_sheet_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" app:autoSizeTextType="uniform" style="@style/Platform.TextStyle.HeadingSmall" />
+        <com.ubercab.ui.core.ULinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/inspection_sheet_header_description" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.Paragraph.Normal" />
+            <com.ubercab.ui.core.UTextView android:id="@id/inspection_sheet_header_dot" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/description_distance_seperator_dot" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" android:layout_marginEnd="@dimen/ui__spacing_unit_0.5x" style="@style/Platform.TextStyle.Paragraph.Normal" />
+            <com.ubercab.ui.core.UTextView android:id="@id/inspection_sheet_header_distance" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.Paragraph.Normal" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center|top" android:id="@id/inspection_sheet_header_icon" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:tint="?contentPrimary" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_alignParentEnd="true" app:analyticsId="fdb3b8d9-999a" />
+</com.ubercab.next_inspection_sheet.objects.header.NextMarkerInspectionSheetHeaderView>

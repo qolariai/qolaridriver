@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.venue_experience_tab_header.VenueExperienceTabHeaderView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.buttongroup.BaseButtonGroup android:id="@id/venue_experience_tabs_button_group" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/venue_experience_tab_content" android:background="@drawable/ub__tab_content_border_rect" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+</com.uber.venue_experience_tab_header.VenueExperienceTabHeaderView>

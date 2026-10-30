@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/test_container" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:background="?backgroundAccent" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageView android:id="@id/image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="No needed" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.ui.core.ULinearLayout>

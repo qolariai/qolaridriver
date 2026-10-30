@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.session_summary.web.SessionSummaryWebView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/session_summary_web_header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_1x" app:elevation="0.0dip" app:header_state="collapse" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/session_summary_web_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</com.uber.session_summary.web.SessionSummaryWebView>

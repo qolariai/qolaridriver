@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.dispatch.DispatchView android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/primary_touch_area" android:background="@drawable/event_card__linear_gradient" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" android:translationZ="@dimen/ui__elevation_high" />
+    <com.ubercab.core.event_card.PulseView android:id="@id/pulse_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/secondary_touch_area" android:paddingTop="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" android:layout_alignParentEnd="true" android:translationZ="@dimen/ui__elevation_high">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/decline_button_container" android:background="@drawable/event_card__pill_card" android:padding="@dimen/carbon_ui__spacing_unit_1.5x" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/dispatch_decline_button" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:scaleType="centerInside" android:cropToPadding="true" app:srcCompat="@drawable/ub_ic_x" app:tint="?contentPrimary" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.dispatch.DispatchView>

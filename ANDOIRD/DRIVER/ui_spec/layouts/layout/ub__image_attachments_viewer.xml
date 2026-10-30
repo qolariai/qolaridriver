@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__image_attachments_viewer_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip" app:header_state="collapse" />
+    <com.ubercab.common.ui.zoomingimageview.ZoomingImageView android:id="@id/ub__image_attachments_viewer_image" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="matrix" android:contentDescription="@string/image_attachments_widget_image_content_desc" app:analyticsId="a2430207-67c3" />
+</merge>

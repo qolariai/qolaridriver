@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/help_workflow_component_csat_inline_input_embedded_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:layout_gravity="center" android:id="@id/help_workflow_component_csat_inline_input_acknowledge" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" app:analyticsId="683e5ab9-a833" style="@style/Platform.TextStyle.HeadingXSmall" />
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?textColorError" android:id="@id/help_workflow_component_csat_inline_input_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_below="@id/help_workflow_component_csat_inline_input_embedded_container" android:layout_alignParentBottom="true" android:textAlignment="viewStart" app:analyticsId="ebe7e2ae-2833" style="@style/Platform.TextStyle.ParagraphSmall" />
+</merge>

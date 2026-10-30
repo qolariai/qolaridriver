@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.planning_hub_libs.promo_hub.PromoHubView android:orientation="vertical" android:id="@id/promo_hub_view" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="26a61ce9-0bd6"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/promo_hub_loading_indicator" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UCardView android:layout_width="fill_parent" android:layout_height="wrap_content" uber:cardBackgroundColor="?android:colorBackground" uber:elevation="@dimen/ui__elevation_medium">
+        <com.ubercab.ui.core.URecyclerView android:layout_gravity="center_horizontal" android:id="@id/promo_hub_section_recycler_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UCardView>
+    <com.ubercab.ui.core.URecyclerView android:id="@id/promo_hub_items_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/promo_hub_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/promo_hub_empty_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/promo_hub_empty_state_title_top_margin" android:text="@string/promo_hub_empty_title" android:textAlignment="center" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Headline.Normal" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/promo_hub_empty_description" android:textAlignment="center" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Subtitle.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.planning_hub_libs.promo_hub.PromoHubView>

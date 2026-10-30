@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety.identity.verification.barcodeutils.help.BarcodeScanHelpView android:layout_gravity="center_vertical" android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/ub__barcode_help_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" uber:contentInsetStartWithNavigation="0.0dip" uber:layout_collapseMode="pin" uber:navigationIcon="@drawable/ic_close" uber:popupTheme="@style/ThemeOverlay.AppCompat.Light" uber:titleTextAppearance="@style/Platform.TextStyle.ParagraphLarge" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__barcode_help_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.DisplayXSmall" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__barcode_help_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_4.5x" style="@style/Platform.TextStyle.ParagraphDefault" />
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__barcode_help_illustration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1.5x" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__barcode_illustration_help_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.LabelDefault" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.safety.identity.verification.barcodeutils.help.BarcodeScanHelpView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="17.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="17.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?brandGrey60" android:pathData="M1.5,0L22.5,0A1.5,1.5 0,0 1,24 1.5L24,15.5A1.5,1.5 0,0 1,22.5 17L1.5,17A1.5,1.5 0,0 1,0 15.5L0,1.5A1.5,1.5 0,0 1,1.5 0z" android:strokeColor="?brandTransparent" android:strokeWidth="1.0" />
+    <path android:fillColor="?brandWhite" android:pathData="M2,2.752C2,2.337 2.341,2 2.752,2L5.248,2C5.663,2 6,2.341 6,2.752L6,5.248C6,5.663 5.659,6 5.248,6L2.752,6C2.337,6 2,5.659 2,5.248L2,2.752Z" android:strokeColor="?brandTransparent" android:strokeWidth="1.0" />
+    <path android:fillColor="?brandWhite" android:pathData="M2,10h20v2h-20z" android:strokeColor="?brandTransparent" android:strokeWidth="1.0" />
+    <path android:fillColor="?brandWhite" android:pathData="M2,13h8v1h-8z" android:strokeColor="?brandTransparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/paytm_credit_card_light_blue_color" android:pathData="M16,2h3v4h-3z" android:strokeColor="?brandTransparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/paytm_credit_card_dark_blue_color" android:pathData="M19,2h3v4h-3z" android:strokeColor="?brandTransparent" android:strokeWidth="1.0" />
+</vector>

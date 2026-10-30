@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/callout_marker_tip_height" android:width="@dimen/callout_marker_tip_width" android:viewportWidth="12.0" android:viewportHeight="10.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:name="triangleGroup">
+        <path android:name="triangle" android:fillColor="?mapCalloutBackground" android:pathData="M0,0 L12,0 0,10 z" />
+    </group>
+</vector>

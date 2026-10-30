@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:id="@id/ub__image_capture_shelf_guide_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/ub__image_capture_shelf_guide_overlay_top_guide" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__image_capture_shelf_guide_overlay_top_guide_frame" android:background="@drawable/ub__bg_image_capture_shelf_guide_top_wireframe" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x" />
+        <com.uber.ui_compose_view.core.tag.BaseTag android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/ub__image_capture_shelf_guide_overlay_top_guide_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__image_capture_shelf_guide_overlay_top_guide_label" app:tag_color="yellow" app:tag_hierarchy="primary" app:tag_size="xSmall" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ub__image_capture_shelf_guide_overlay_bottom_guide" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.uber.ui_compose_view.core.tag.BaseTag android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/ub__image_capture_shelf_guide_overlay_bottom_guide_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__image_capture_shelf_guide_overlay_bottom_guide_label" app:tag_color="yellow" app:tag_hierarchy="primary" app:tag_size="xSmall" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__image_capture_shelf_guide_overlay_bottom_guide_frame" android:background="@drawable/ub__bg_image_capture_shelf_guide_bottom_wireframe" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UFrameLayout>

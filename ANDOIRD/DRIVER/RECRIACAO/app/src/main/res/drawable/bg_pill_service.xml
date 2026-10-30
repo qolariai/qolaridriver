@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pill "Após dedução de taxa de serviço": cinza #ECECEC, raio 8dp (vídeo 2026-10-29). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/qd_offer_pill" />
+    <corners android:radius="8dp" />
+</shape>

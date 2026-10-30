@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.safety_media_ui.onboarding.templates.audio.AudioRecordingOnboardingScreenCustomViewTemplate android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="a659bc54-ede6"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/audio_recording_setup_template2_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_5x" android:textDirection="locale" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="7ce0a015-d541" style="@style/Platform.TextStyle.ParagraphDefault" />
+</com.ubercab.safety_media_ui.onboarding.templates.audio.AudioRecordingOnboardingScreenCustomViewTemplate>

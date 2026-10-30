@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.nativewaittimetimerpill.EarnerTripNativeWaitTimeTimerPillView android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="1ab82c9e-12c3"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/earner_trip_native_timer_status_overlay_view" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" layout="@layout/timer_status_overlay" />
+</com.uber.nativewaittimetimerpill.EarnerTripNativeWaitTimeTimerPillView>

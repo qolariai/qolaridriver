@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.beta.migration.trigger.TriggerView android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="bottom" android:orientation="vertical" android:background="?backgroundOverlayDark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UScrollView android:fadingEdgeLength="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:requiresFadingEdge="vertical">
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:id="@id/interstitial_trigger_title" android:background="?backgroundSecondary" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="e1c500eb-7934" style="@style/Platform.TextStyle.HeadingXSmall" />
+            <com.ubercab.ui.core.UTextView android:id="@id/interstitial_trigger_message" android:background="?backgroundPrimary" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="8510a2c8-ec7e" style="@style/Platform.TextStyle.Paragraph.Medium" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UButton android:id="@id/trigger_secondary_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0" uber:analyticsId="de2fa4ac-f8c2" style="?platformButtonSecondary" />
+        <com.ubercab.ui.core.UButton android:id="@id/trigger_primary_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0" uber:analyticsId="5b2b8dd2-ab3f" style="?platformButtonPrimary" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.beta.migration.trigger.TriggerView>

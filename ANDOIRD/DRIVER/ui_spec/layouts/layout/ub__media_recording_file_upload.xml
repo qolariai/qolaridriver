@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.safety_media_recording_help_workflow_extension.media_recording_upload.MediaRecordingReportExtensionComponentFileUploadView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="DF785981-9B4C"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/upload_state_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_vertical" android:id="@id/upload_state_frame_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/upload_state_image_view" android:layout_width="@dimen/siar_media_upload_upload_state_badge_size" android:layout_height="@dimen/siar_media_upload_upload_state_badge_size" />
+            <com.ubercab.ui.core.progress.BaseProgressBar android:layout_gravity="center" android:id="@id/upload_state_circle_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" app:baseprogress_type="circle_indeterminate" app:progress_size="xlarge" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center_vertical" android:id="@id/upload_state_title_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:textAlignment="center" style="@style/Platform.TextStyle.HeadingXSmall" />
+        <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center_vertical" android:id="@id/upload_state_description_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:textAlignment="center" android:layout_marginHorizontal="@dimen/ui__spacing_unit_4x" style="@style/Platform.TextStyle.ParagraphLarge" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.progress.BaseProgressIndicator android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/HorizontalIndeterminate" />
+</com.ubercab.safety_media_recording_help_workflow_extension.media_recording_upload.MediaRecordingReportExtensionComponentFileUploadView>

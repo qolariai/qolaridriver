@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="?borderOpaque"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="?backgroundSecondary" />
+            <corners android:radius="@dimen/ui__spacing_unit_4.5x" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ub__background_engagement_pill" />
+</ripple>

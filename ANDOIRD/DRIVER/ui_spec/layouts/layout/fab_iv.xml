@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/online_button_provided_iv" android:layout_width="@dimen/ui__spacing_unit_10x" android:layout_height="@dimen/ui__spacing_unit_10x" android:layout_margin="@dimen/ui__spacing_unit_1x" android:tint="?buttonPrimaryTint" app:analyticsId="eef92a64-9532" app:analyticsImpressionId="396fb265-d22f" app:srcCompat="@drawable/fab_ripple_bg"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

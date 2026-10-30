@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.payment.common.addfunds.customamount.PaymentProfileAddFundsCustomAmountView android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.input.BaseEditText android:layout_gravity="top" android:id="@id/ub__add_funds_custom_base_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:maxLines="1" android:maxLength="5" android:inputType="number" app:analyticsId="169797ab-dcd5" app:input_placeholderHint="0" app:input_size="xxlarge" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center|bottom" android:id="@id/ub__add_funds_custom_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__payment_provider_add_funds_custom_continue_button_text" app:analyticsId="e6162dff-fbf3" app:buttonType="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.uber.payment.common.addfunds.customamount.PaymentProfileAddFundsCustomAmountView>

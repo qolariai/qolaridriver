@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.dynamicform.v1.core.views.fields.DynamicFormCoreToggleView android:orientation="horizontal" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.widget.PresidioTextInputLayout android:orientation="vertical" android:id="@id/ub__dynamic_form_core_checkbox_text_input_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:hintEnabled="false">
+        <com.ubercab.ui.core.UCheckBox android:id="@id/ub__dynamic_form_core_checkbox" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.LabelLarge" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__dynamic_form_core_checkbox_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ub__dynamic_form_core_checkbox_text_input_layout" android:layout_marginStart="@dimen/ui__spacing_unit_4x" style="@style/Platform.TextStyle.LabelDefault" />
+    </com.ubercab.ui.commons.widget.PresidioTextInputLayout>
+</com.ubercab.dynamicform.v1.core.views.fields.DynamicFormCoreToggleView>

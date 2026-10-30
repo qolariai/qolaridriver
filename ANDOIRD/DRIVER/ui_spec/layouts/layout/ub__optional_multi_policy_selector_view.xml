@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.multi_policy.selector.PolicySelectorView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="af1e7dc2-66ef"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <include android:id="@id/ub__policy_collapsing_header" layout="@layout/collapsing_header" />
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__policy_header_collapsed" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:header_state="collapse" />
+        <com.ubercab.ui.core.UScrollView android:id="@id/ub__policy_list_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__policy_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.DisplayXSmall" />
+                <com.ubercab.ui.core.URecyclerView android:id="@id/ub__policy_list" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+    <com.ubercab.ui.core.UFrameLayout android:orientation="vertical" android:id="@id/ub__policy_footer_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ubercab.profiles.multi_policy.selector.PolicySelectorView>

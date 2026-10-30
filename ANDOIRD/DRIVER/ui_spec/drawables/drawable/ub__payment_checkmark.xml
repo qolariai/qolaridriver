@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ub__payment_checkmark_size" android:width="@dimen/ub__payment_checkmark_size" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateX="4.0" android:translateY="4.0">
+        <path android:fillColor="?brandSecondary" android:pathData="M66.534545 66.731564l-61.6254541 0 0 -61.6254549 45.2184541 0 2.834182 -4.90909092 -52.961727 0 0 71.44445482 71.443636 0 0 -64.6020003 -4.909091 8.5295453z" />
+        <path android:fillColor="?colorPrimary" android:pathData="M33.618273 40.247673l7.462636 12.987818 30.637637 -53.23581827273 -14.86391 0z" />
+        <path android:fillColor="?brandPrimary" android:pathData="M28.769645 31.850509l-14.961272 0 12.346363 21.384818 14.961273 0z" />
+    </group>
+</vector>

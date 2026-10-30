@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Selo de limite de velocidade: branco com contorno (vídeo 2026-10-29, "50 LIMITE"). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/qd_background" />
+    <corners android:radius="8dp" />
+</shape>

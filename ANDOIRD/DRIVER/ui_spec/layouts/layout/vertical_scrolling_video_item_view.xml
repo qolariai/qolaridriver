@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:id="@id/vs_video_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/vs_video_container" android:layout_width="fill_parent" android:layout_height="@dimen/vs_video_height" />
+</com.ubercab.ui.core.UFrameLayout>

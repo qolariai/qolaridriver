@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.uber.ucamerax.UCameraXView android:id="@id/camerax_view" android:layout_width="0.0dip" android:layout_height="0.0dip" android:keepScreenOn="true" app:cxLensFacing="back" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/lens_cover" android:background="?backgroundAlwaysDark" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/camerax_view" app:layout_constraintEnd_toEndOf="@id/camerax_view" app:layout_constraintStart_toStartOf="@id/camerax_view" app:layout_constraintTop_toTopOf="@id/camerax_view" />
+    <com.ubercab.ui.core.UToolbar android:theme="?toolbarTheme" android:id="@id/toolbar" android:background="?backgroundAlwaysDark" android:layout_width="0.0dip" android:layout_height="?actionBarSize" app:contentInsetEnd="?contentInset" app:contentInsetStartWithNavigation="@dimen/ui__spacing_unit_0x" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:navigationIcon="@drawable/ub_ic_x" app:titleTextAppearance="@style/Platform.TextStyle.LabelLarge" app:titleTextColor="?contentOnColor" style="@style/Widget.Platform.Toolbar">
+        <com.ubercab.ui.core.ULinearLayout android:enabled="false" android:layout_gravity="end|center" android:orientation="horizontal" android:id="@id/toolbar_end_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="8abac047-ff96">
+            <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:layout_gravity="center" android:id="@id/toolbar_end_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="df5f0a13-358d" />
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/toolbar_end_button_image" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="086b937e-2b47" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UToolbar>
+</merge>

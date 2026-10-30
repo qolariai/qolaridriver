@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.systembanner.BaseSystemBannerView android:id="@id/system_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/banner_container_v2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/button_show" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="@string/ub__system_banner_show_banner_button" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:buttonType="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/button_hide" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="@string/ub__system_banner_hide_banner_button" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:buttonType="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/stepper_item_view_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <include android:id="@id/date_picker" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="4.0" layout="@layout/date_picker" />
+        <include android:id="@id/hour_picker" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/date_picker" />
+        <include android:id="@id/minute_picker" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/date_picker" />
+        <include android:id="@id/am_time_picker" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0" layout="@layout/date_picker" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UConstraintLayout>

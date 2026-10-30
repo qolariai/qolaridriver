@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.features.settings.row.ProfileSettingsRowView android:gravity="center_vertical" android:orientation="vertical" android:background="?android:selectableItemBackground" android:focusable="true" android:visibility="invisible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsEnabled="true" uber:analyticsId="26fa3b72-f22d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__profile_settings_row_top_divider" android:background="?dividerHorizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginStart="@dimen/ui__spacing_unit_8x" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub_profile_settings_row_item" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="64d42176-38ed" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__profile_settings_row_bottom_divider" android:background="?dividerHorizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginStart="@dimen/ui__spacing_unit_8x" />
+</com.ubercab.profiles.features.settings.row.ProfileSettingsRowView>

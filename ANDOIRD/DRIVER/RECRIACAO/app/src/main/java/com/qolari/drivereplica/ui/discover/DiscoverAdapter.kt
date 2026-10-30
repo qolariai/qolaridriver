@@ -8,24 +8,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.qolari.drivereplica.R
-import com.qolari.drivereplica.databinding.ItemDiscoverChipsBinding
 import com.qolari.drivereplica.databinding.ItemDiscoverDayBinding
 import com.qolari.drivereplica.databinding.ItemDiscoverEventBinding
 import com.qolari.drivereplica.databinding.ItemDiscoverPromosBinding
 import com.qolari.drivereplica.databinding.ItemPromoCardBinding
 
-/** Lista de Descobrir: filtros, cartões de promoções (com pontos), cabeçalhos de dia e eventos. */
+/** Lista de Descobrir: cartões de promoções (com pontos), cabeçalhos de dia e eventos. Os filtros são fixos no cabeçalho. */
 class DiscoverAdapter(
-    private val onFilter: (DiscoverFilter) -> Unit,
     private val onSave: (String) -> Unit,
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var rows: List<DiscoverRow> = emptyList()
-    private var filters: Set<DiscoverFilter> = emptySet()
 
-    fun submit(newRows: List<DiscoverRow>, activeFilters: Set<DiscoverFilter>) {
+    fun submit(newRows: List<DiscoverRow>) {
         rows = newRows
-        filters = activeFilters
         notifyDataSetChanged()
     }
 
@@ -43,41 +39,25 @@ class DiscoverAdapter(
     override fun getItemCount() = rows.size
 
     override fun getItemViewType(position: Int) = when (rows[position]) {
-        DiscoverRow.Chips -> 0
-        is DiscoverRow.Promos -> 1
-        is DiscoverRow.DayHeader -> 2
-        is DiscoverRow.Item -> 3
+        is DiscoverRow.Promos -> 0
+        is DiscoverRow.DayHeader -> 1
+        is DiscoverRow.Item -> 2
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         return when (viewType) {
-            0 -> ChipsHolder(ItemDiscoverChipsBinding.inflate(inflater, parent, false))
-            1 -> PromosHolder(ItemDiscoverPromosBinding.inflate(inflater, parent, false))
-            2 -> DayHolder(ItemDiscoverDayBinding.inflate(inflater, parent, false))
+            0 -> PromosHolder(ItemDiscoverPromosBinding.inflate(inflater, parent, false))
+            1 -> DayHolder(ItemDiscoverDayBinding.inflate(inflater, parent, false))
             else -> EventHolder(ItemDiscoverEventBinding.inflate(inflater, parent, false))
         }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (val row = rows[position]) {
-            DiscoverRow.Chips -> (holder as ChipsHolder).bind()
             is DiscoverRow.Promos -> (holder as PromosHolder).bind(row.promos)
             is DiscoverRow.DayHeader -> (holder as DayHolder).b.dayHeaderText.text = PtDates.header(row.date)
             is DiscoverRow.Item -> (holder as EventHolder).bind(row)
-        }
-    }
-
-    private inner class ChipsHolder(val b: ItemDiscoverChipsBinding) : RecyclerView.ViewHolder(b.root) {
-        fun bind() {
-            mapOf(
-                b.chipReminders to DiscoverFilter.REMINDERS,
-                b.chipPromos to DiscoverFilter.PROMOS,
-                b.chipAirports to DiscoverFilter.AIRPORTS,
-            ).forEach { (chip, f) ->
-                chip.isSelected = f in filters
-                chip.setOnClickListener { onFilter(f) }
-            }
         }
     }
 
@@ -105,12 +85,6 @@ class DiscoverAdapter(
                 override fun onBindViewHolder(h: PromoHolder, i: Int) {
                     h.b.promoTitle.text = promos[i].title
                     h.b.promoSubtitle.text = promos[i].subtitle
-                    h.b.promoThumb.showDemand = false
-                    h.b.promoThumb.center = listOf(
-                        38.7223 to -9.1393,
-                        38.7570 to -9.2233,
-                        38.7742 to -9.1342,
-                    )[i % 3]
                 }
             }
         }
@@ -131,13 +105,6 @@ class DiscoverAdapter(
             val airport = i.kind == DiscoverKind.AIRPORT
             b.eventThumbCard.isVisible = !airport
             b.eventPlane.isVisible = airport
-            b.eventThumb.showDemand = false
-            b.eventThumb.center = listOf(
-                38.7223 to -9.1393,
-                38.7570 to -9.2233,
-                38.7139 to -9.1394,
-                38.7742 to -9.1342,
-            )[i.id.hashCode().let { if (it < 0) -it else it } % 4]
             b.eventSave.setText(if (row.saved) R.string.discover_saved else R.string.discover_save)
             b.eventSave.isSelected = row.saved
             b.eventSave.setOnClickListener { onSave(i.id) }

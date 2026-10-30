@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.overflow_service_animals.OverflowServiceAnimalsView android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/ui__spacing_unit_2x" app:analyticsId="2d6763f9-a4d8"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/service_animal_icon" android:layout_width="@dimen/ui__spacing_unit_2.5x" android:layout_height="@dimen/ui__spacing_unit_2.5x" android:scaleType="centerInside" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:tint="?iconSecondary" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/service_animal_row" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:textColor="?contentPrimary" android:id="@id/service_animal_label_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__overflow_service_animal_subheader_title" android:maxLines="2" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+            <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?contentPrimary" android:ellipsize="end" android:id="@id/service_animal_label_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginStart="@dimen/ui__spacing_unit_4.5x" />
+</com.uber.overflow_service_animals.OverflowServiceAnimalsView>

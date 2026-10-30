@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.identity_config.info.v2.IdentityInfoV2View android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="?toolbarTheme" android:id="@id/appbar" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" android:stateListAnimator="@animator/header_elevation" app:contentInsetStartWithNavigation="0.0dip" />
+    <com.ubercab.ui.core.UScrollView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.commons.widget.BitLoadingIndicator android:layout_gravity="top" android:id="@id/collapsing_header_loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:bli_bitColor="?colorPrimary" />
+            <com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.CircleImageView android:id="@id/account_info_photo" android:focusable="true" android:clickable="true" android:layout_width="?avatarExtraLarge" android:layout_height="?avatarExtraLarge" android:layout_margin="?contentInset" android:foreground="?selectableItemBackgroundBorderless" android:scaleType="centerCrop" android:contentDescription="@string/identity_account_edit_picture" app:srcCompat="?iconColor" />
+                <com.ubercab.ui.core.UImageView android:layout_gravity="start|bottom" android:id="@id/account_info_photo_edit_icon" android:layout_width="@dimen/account_info_profile_edit_icon_width" android:layout_height="@dimen/account_info_profile_edit_icon_height" android:layout_marginBottom="?contentInset" android:layout_marginStart="?contentInset" />
+            </com.ubercab.ui.core.UFrameLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?dividerColor" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_margin="@dimen/ui__spacing_unit_1x" />
+            <com.ubercab.ui.core.URecyclerView android:id="@id/ub__identity_info_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.presidio.identity_config.info.v2.IdentityInfoV2View>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Silhueta de pessoa preenchida (chip do produto no cartão da proposta, vídeo 2026-10-29). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M12,4 m-3.6,0 a3.6,3.6 0 1,0 7.2,0 a3.6,3.6 0 1,0 -7.2,0" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M12,12.6 c-3.6,0 -6.5,1.9 -6.5,4.3 v1.1 h13 v-1.1 c0,-2.4 -2.9,-4.3 -6.5,-4.3 Z" />
+</vector>

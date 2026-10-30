@@ -1,0 +1,51 @@
+{
+ "dimens": {
+  "dimen": {
+   "abc_config_prefDialogWidth": "440.0dip"
+  },
+  "item": {
+   "abc_dialog_fixed_height_major": "60.000004%",
+   "abc_dialog_fixed_height_minor": "90.0%",
+   "abc_dialog_fixed_width_major": "60.000004%",
+   "abc_dialog_fixed_width_minor": "90.0%",
+   "abc_dialog_min_width_major": "55.000008%",
+   "abc_dialog_min_width_minor": "79.99999%"
+  }
+ },
+ "styles": {
+  "styles": {
+   "Base.Theme.AppCompat.DialogWhenLarge": {
+    "parent": "@style/Base.Theme.AppCompat.Dialog.FixedSize",
+    "items": {}
+   },
+   "Base.Theme.AppCompat.Light.DialogWhenLarge": {
+    "parent": "@style/Base.Theme.AppCompat.Light.Dialog.FixedSize",
+    "items": {}
+   },
+   "Base.Theme.Material3.Dark.DialogWhenLarge": {
+    "parent": "@style/Base.Theme.Material3.Dark.Dialog.FixedSize",
+    "items": {}
+   },
+   "Base.Theme.Material3.Light.DialogWhenLarge": {
+    "parent": "@style/Base.Theme.Material3.Light.Dialog.FixedSize",
+    "items": {}
+   },
+   "Base.Theme.Material3Expressive.Dark.DialogWhenLarge": {
+    "parent": "@style/Base.Theme.Material3Expressive.Dark.Dialog.FixedSize",
+    "items": {}
+   },
+   "Base.Theme.Material3Expressive.Light.DialogWhenLarge": {
+    "parent": "@style/Base.Theme.Material3Expressive.Light.Dialog.FixedSize",
+    "items": {}
+   },
+   "Base.Theme.MaterialComponents.DialogWhenLarge": {
+    "parent": "@style/Base.Theme.MaterialComponents.Dialog.FixedSize",
+    "items": {}
+   },
+   "Base.Theme.MaterialComponents.Light.DialogWhenLarge": {
+    "parent": "@style/Base.Theme.MaterialComponents.Light.Dialog.FixedSize",
+    "items": {}
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.face_verification.dialog.HelmetPhotoGuideViewV2 android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:orientation="horizontal" android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.image.BaseImageView android:id="@id/helmet_verification_error_dialog_icon" android:visibility="gone" android:layout_width="@dimen/ui__avatar_size_large" android:layout_height="@dimen/ui__avatar_size_large" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/empty_state_badge_warning" />
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/helmet_verification_error_dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingDefault" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="end" android:id="@id/close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:buttonType="tertiary" style="@style/Platform.Button.Base.Circle.Tertiary" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/helmet_verification_error_dialog_reminder" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1.5x" android:text="@string/ub__helmet_verification_error_dialog_reminder_message" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/helmet_verification_error_dialog_make_sure" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" android:text="@string/ub__helmet_verification_make_sure_title" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/photo_tip_list" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.uber.face_verification.dialog.HelmetPhotoGuideViewV2>

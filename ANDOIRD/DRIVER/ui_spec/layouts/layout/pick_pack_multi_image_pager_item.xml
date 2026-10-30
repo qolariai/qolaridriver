@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.common.ui.zoomingimageview.ZoomingImageView android:id="@id/pager_item_zooming_image_view" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+    <com.uber.pickpack.imageviewer.PickPackItemImageEmptyState android:id="@id/pager_item_empty_state" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:empty_state_action_title="@string/ub__pickandpack_imagedetails_retry_action" app:empty_state_headline_text="@string/ub__pickandpack_imagedetails_retry_title" app:empty_state_type="custom" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.placeholder.PlaceholderView android:id="@id/pager_item_image_loading" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="@dimen/ui__spacing_unit_0x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholder_is_animated="true" />
+</merge>

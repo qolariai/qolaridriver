@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:gravity="center_horizontal" android:id="@id/header_text" android:paddingTop="@dimen/ui__spacing_unit_2.5x" android:paddingBottom="@dimen/ui__spacing_unit_2.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/loading_modal_header" app:analyticsId="df5f6cc1-496c" style="@style/Platform.TextStyle.HeadingXSmall" />
+    <com.ubercab.ui.commons.progress.multi_progress_indicator.MultiProgressIndicator android:id="@id/ub__risk_loading_modal_progress_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/risk_loading_modal_progress_indictor_height" app:indicatorType="pulse" app:pulseColor="?blue400" />
+    <com.ubercab.ui.core.UTextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/loading_modal_content" app:analyticsId="7cf0f865-4c88" style="@style/Platform.TextStyle.LabelDefault" />
+    <Space android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__risk_loading_modal_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/loading_modal_cancel" app:buttonType="tertiary" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.ui.core.ULinearLayout>

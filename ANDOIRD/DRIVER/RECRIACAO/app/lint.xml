@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<lint>
-    <!-- Tradução EN é incremental: as chaves em falta caem para PT. -->
-    <issue id="MissingTranslation" severity="ignore" />
-</lint>

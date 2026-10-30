@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.CircleImageView android:id="@id/image_circular" android:duplicateParentState="false" android:layout_width="@dimen/ui__list_item_image_bounds" android:layout_height="@dimen/ui__list_item_image_bounds" app:analyticsId="6bc8f5c4-5a06" app:circleImageBorderColor="?transparent" app:circleImageBorderWidth="@dimen/ui__list_item_circular_image_padding" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</merge>

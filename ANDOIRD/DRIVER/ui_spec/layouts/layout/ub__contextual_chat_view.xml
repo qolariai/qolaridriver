@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.tooltip.BaseTooltipView android:layout_gravity="center_vertical" android:id="@id/ub__contextual_chat_tooltip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toStartOf="@id/ub__contextual_chat_button" app:arrowAlignment="center" app:endButtonEnabled="false" app:tooltipAlignment="left" />
+    <com.ubercab.ui.core.UFrameLayout android:padding="@dimen/ui__spacing_unit_1x" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__contextual_chat_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:elevation="@dimen/ui__spacing_unit_1x" app:buttonType="primary" app:shape="circle" app:size="large" style="@style/Platform.Button.Base.CircleSquareDynamic" />
+        <com.ubercab.ui.core.badge.NotificationBaseBadge android:id="@id/ub__contextual_chat_badge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_5x" android:elevation="@dimen/ui__spacing_unit_1x" app:notification_color="accent" app:notification_type="icon" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.usnap.camera.USnapCameraViewX android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="7595035b-fc19"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/appbar" android:background="?brandBlack" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/header_elevation" app:contentInsetStartWithNavigation="0.0dip">
+        <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:layout_collapseMode="pin" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:titleTextAppearance="@style/Platform.TextStyle.HeadingXSmall" style="@style/Widget.Platform.Toolbar">
+            <com.ubercab.ui.core.UTextView android:textColor="?contentOnColor" android:layout_gravity="end|center" android:id="@id/ub_usnap_camera_skip" android:padding="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__usnap_camera_skip" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="f01fa928-6744" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_gravity="end|center" android:orientation="horizontal" android:id="@id/ub__usnap_toolbar_custom_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.UToolbar>
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__floating_title_content" android:background="?brandBlack" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:layout_gravity="center" android:id="@id/ub__floating_title" android:background="@drawable/ub__oval_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:paddingStart="@dimen/ui__spacing_unit_1.5x" android:paddingEnd="@dimen/ui__spacing_unit_1.5x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="4d81c45b-958f" style="@style/Platform.TextStyle.LabelLarge" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__carbon_facecamera_root_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UPlainView android:id="@id/toolbar_sized_space" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" />
+            <include layout="@layout/ub__camera_view" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.usnap.camera.USnapCameraViewX>

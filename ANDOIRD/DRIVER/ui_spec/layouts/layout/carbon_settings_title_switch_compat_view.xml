@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:textColor="?android:textColorPrimary" android:layout_gravity="center_vertical" android:id="@id/ub__carbon_switch_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.USwitchCompat android:theme="@style/Carbon.Button.Checkbox.Primary" android:layout_gravity="center_vertical" android:id="@id/ub__carbon_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+</merge>

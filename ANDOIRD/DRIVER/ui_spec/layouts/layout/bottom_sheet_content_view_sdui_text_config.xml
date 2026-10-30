@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.USwitchCompat android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:gravity="center_vertical" android:id="@id/switch_apply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="LabelViewModel Apply" android:paddingStart="@dimen/ui__spacing_unit_4x" android:paddingEnd="@dimen/ui__spacing_unit_4x" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UScrollView>

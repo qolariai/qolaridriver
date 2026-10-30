@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.paytm.operation.connect.PaytmConnectView android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="528173a6-d973"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" uber:srcCompat="@drawable/ub__paytm_interstitial" />
+                <com.ubercab.ui.core.text.BaseTextView android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__gutter_size" android:text="@string/connect_title" style="@style/Platform.TextStyle.ParagraphLarge" />
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__connect_description" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/connect_description" style="@style/Platform.TextStyle.ParagraphDefault" />
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__connect_phone_number" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.LabelSmall" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__connect_continue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?contentInset" android:layout_marginBottom="?contentInset" android:text="@string/next" uber:analyticsId="771e84e7-19cb" uber:analyticsImpressionId="329e8fe6-4d60" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.presidio.payment.paytm.operation.connect.PaytmConnectView>

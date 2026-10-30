@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:header_state="collapse" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/help_conversation_details_content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="?dividerHorizontal" android:showDividers="middle" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/help_conversation_details_banner_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/help_conversation_details_recycler" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <com.ubercab.help.feature.conversation_details.HelpConversationDetailsComposerView android:layout_gravity="bottom" android:id="@id/help_conversation_details_composer" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="bottom" android:id="@id/help_conversation_details_csat_v2_container" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="bottom" android:id="@id/help_conversation_details_solved_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.help.feature.conversation_details.HelpConversationDetailsCsatV3View android:layout_gravity="center" android:id="@id/help_conversation_details_csat_v3_embedded_and_thank_you_view" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.help.feature.conversation_details.HelpConversationDetailsShowMoreHelpView android:layout_gravity="center" android:id="@id/help_conversation_details_show_more_help_view" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/help_conversation_details_error" android:background="?android:colorBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelLarge" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="?contentInset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_conversation_details_error" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/help_conversation_details_loading" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</merge>

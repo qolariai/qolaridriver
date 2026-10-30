@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/ui__corner_radius" />
+    <solid android:color="?brandTransparent" />
+    <stroke android:width="@dimen/ub__tag_selection_item_stroke_width" android:color="?android:textColorPrimaryInverse" />
+</shape>

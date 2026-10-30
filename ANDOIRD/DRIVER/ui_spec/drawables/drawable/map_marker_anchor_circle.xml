@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/map_marker_anchor_circle_background">
+        <shape android:shape="oval">
+            <size android:height="@dimen/map_marker_anchor_height" android:width="@dimen/map_marker_anchor_width" />
+        </shape>
+    </item>
+    <item android:id="@id/map_marker_anchor_circle_fill">
+        <shape android:shape="oval">
+            <stroke android:height="@dimen/ui__spacing_unit_1.5x" android:width="@dimen/ui__spacing_unit_1.5x" android:color="?transparent" />
+            <size android:height="@dimen/ui__spacing_unit_0.5x" android:width="@dimen/ui__spacing_unit_0.5x" />
+        </shape>
+    </item>
+</layer-list>

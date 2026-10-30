@@ -21,7 +21,6 @@ from starlette.concurrency import run_in_threadpool
 import config
 from apps import catalog
 from core.db import session_scope
-from core.ratelimit import allow as rate_allow
 from core.security import verify
 from domain.models import AuthSession, Driver, EndpointStat, FleetUser, Rider, jset, now
 
@@ -271,15 +270,6 @@ async def dispatch(request: Request, app: str) -> Response:
     handler = route.name if route else ("sink" if sink else "")
     call = Call(app, method, path, vars_, query, body, headers,
                 request.client.host if request.client else "")
-    if config.RATE_LIMIT:
-        ip = request.client.host if request.client else "?"
-        limit = 10 if template == "/rt/identity/oauth2/token" else \
-            5 if template == "/rt/support/map-report" else 300
-        if not rate_allow(f"{app}:{method}:{template}:{ip}", limit):
-            out = {"code": "rtapi.rate_limited", "message": "Demasiados pedidos; tente mais tarde"}
-            await run_in_threadpool(_record, app, method, path, template, handler, 429, 0, call,
-                                    out, len(raw), ctype)
-            return JSONResponse(out, status_code=429)
     status = 200
     try:
         out = await run_in_threadpool(_run, route, call)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.ubercab.ui.core.UImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:scaleType="centerInside" app:analyticsId="1750738b-2660" app:srcCompat="@drawable/ub__carbon_ic_warning_triangle" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Display.Normal" android:textColor="?android:textColorPrimaryInverse" android:id="@id/beacon_pairing_failed_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:text="@string/beacon_pairing_turn_bluetooth_on_tip" app:analyticsId="2a14dae0-1e17" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/beacon_pairing_failed_action_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:analyticsId="52e27281-ee34" style="@style/Beacon.Settings.Button" />
+</com.ubercab.ui.core.URelativeLayout>

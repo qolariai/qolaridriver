@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.trip_details.WaybillView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="ac52ad0d-631b"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/bit_loading_indicator" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" />
+    <WebView android:id="@id/waybill_browser" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="1cdab524-dba2" />
+</com.ubercab.trip_details.WaybillView>

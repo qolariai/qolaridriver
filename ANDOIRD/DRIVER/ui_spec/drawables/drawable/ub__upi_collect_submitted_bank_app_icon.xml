@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M4 52.9554H76V16.9268H4V52.9554Z" />
+    <path android:fillColor="@color/ub__upi_collect_turquoise_4" android:pathData="M4 16.4072V52.9562H60.3801L64.8228 16.4072H4Z" />
+    <path android:fillColor="@color/ub__upi_collect_turquoise_4" android:pathData="M60.3799 31.8486V52.9553C66.2086 52.9553 70.9328 48.2303 70.9328 42.4024C70.9328 36.5736 66.2086 31.8486 60.3799 31.8486Z" />
+    <path android:fillColor="?artWhite" android:pathData="M54.9144 34.6814C54.9144 42.918 48.2372 49.596 39.9998 49.596C31.7639 49.596 25.0859 42.918 25.0859 34.6814C25.0859 26.4448 31.7639 19.7676 39.9998 19.7676C48.2372 19.7676 54.9144 26.4448 54.9144 34.6814Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M30.8899 48.7572C26.1504 45.6812 23.2316 40.4313 23.2316 34.6814C23.2316 28.9314 26.1505 23.6816 30.8898 20.6065C31.7252 20.0644 31.3414 18.7676 30.3455 18.7676H10.7206C10.1683 18.7676 9.72062 19.2153 9.72062 19.7676C9.72062 21.0709 8.6637 22.1279 7.36035 22.1279C6.80807 22.1279 6.36035 22.5756 6.36035 23.1279V46.2358C6.36035 46.788 6.80807 47.2358 7.36035 47.2358C8.66402 47.2358 9.72062 48.2922 9.72062 49.596C9.72062 50.1483 10.1683 50.596 10.7206 50.596H30.3455C31.3413 50.596 31.7252 49.2993 30.8899 48.7572ZM27.4086 20.7676C23.5339 24.2716 21.2316 29.2802 21.2316 34.6814C21.2316 40.0827 23.534 45.0915 27.409 48.596H11.6054C11.2288 46.9908 9.96545 45.7275 8.36035 45.3509V24.0126C9.96527 23.6359 11.2287 22.3725 11.6054 20.7676H27.4086Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M17.407 34.6821C17.407 35.974 16.3598 37.0205 15.0687 37.0205C13.7768 37.0205 12.7295 35.974 12.7295 34.6821C12.7295 33.3902 13.7768 32.3438 15.0687 32.3438C16.3598 32.3438 17.407 33.3902 17.407 34.6821Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M10.918 30.4814H19.2192V28.4814H10.918V30.4814Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M10.918 40.8828H19.2192V38.8828H10.918V40.8828Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M58.7689 34.6814C58.7689 29.2801 56.4665 24.2715 52.5914 20.7676H69.2791C69.8314 20.7676 70.2791 20.3199 70.2791 19.7676C70.2791 19.2153 69.8314 18.7676 69.2791 18.7676H49.6542C48.6583 18.7676 48.2744 20.0645 49.1099 20.6065C53.8499 23.6815 56.7689 28.9313 56.7689 34.6814C56.7689 40.4314 53.8499 45.6813 49.1098 48.7572C48.2745 49.2992 48.6583 50.596 49.6542 50.596H60.3797C60.932 50.596 61.3797 50.1483 61.3797 49.596C61.3797 49.0437 60.932 48.596 60.3797 48.596H52.591C56.4664 45.0916 58.7689 40.0828 58.7689 34.6814Z" />
+    <path android:fillColor="?artBlack" android:pathData="M70.9335 43.1428V42.4023C70.9335 42.647 70.9138 42.8859 70.8975 43.1264L70.9335 43.1428Z" />
+    <path android:fillColor="@color/ub__upi_collect_navy_13" android:pathData="M60.3799 1V31.8487C66.2086 31.8487 70.9328 36.5737 70.9328 42.4025V11.5529C70.9328 5.725 66.2086 1 60.3799 1Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M60.3799 50.596C67.0898 50.596 72.5292 45.1565 72.5292 38.4466V37.0205C72.5292 36.4682 72.0815 36.0205 71.5292 36.0205C70.977 36.0205 70.5292 36.4682 70.5292 37.0205V38.4466C70.5292 44.052 65.9852 48.596 60.3799 48.596C59.8276 48.596 59.3799 49.0437 59.3799 49.596C59.3799 50.1482 59.8276 50.596 60.3799 50.596Z" />
+    <path android:fillColor="@color/ub__upi_collect_turquoise_4" android:pathData="M60.3799 39.5775V31.8486C65.2295 31.8486 69.3154 35.1205 70.5505 39.5775H60.3799Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M60.3799 40.5774C67.0898 40.5774 72.5292 35.138 72.5292 28.428V27.002C72.5292 26.4497 72.0815 26.002 71.5292 26.002C70.977 26.002 70.5292 26.4497 70.5292 27.002V28.428C70.5292 34.0334 65.9852 38.5774 60.3799 38.5774C59.8276 38.5774 59.3799 39.0251 59.3799 39.5774C59.3799 40.1297 59.8276 40.5774 60.3799 40.5774Z" />
+    <path android:fillColor="@color/ub__upi_collect_navy_13" android:pathData="M4 72.9997H76V52.9551H4V72.9997Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M4 70.9092H76V68.9092H4V70.9092Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M4 66.458H76V64.458H4V66.458Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M4 62.0078H76V60.0078H4V62.0078Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M4 57.5566H76V55.5566H4V57.5566Z" />
+    <path android:fillColor="@color/ub__upi_collect_grey_4" android:pathData="M30.0781 52.9554H49.9231V16.9268H30.0781V52.9554Z" />
+    <path android:fillColor="@color/ub__upi_collect_teal_6" android:pathData="M30.0781 72.9997H49.9231V52.9551H30.0781V72.9997Z" />
+    <path android:pathData="M34.7158 16.9268V52.9562" android:strokeColor="@color/ub__upi_collect_grey_6" android:strokeWidth="2.0" />
+    <path android:fillColor="@color/ub__upi_collect_navy_13" android:pathData="M33.7158 52.9561V72.9999H35.7158V52.9561H33.7158Z" />
+    <path android:pathData="M45.2842 16.9268V52.9562" android:strokeColor="@color/ub__upi_collect_grey_6" android:strokeWidth="2.0" />
+    <path android:fillColor="@color/ub__upi_collect_navy_13" android:pathData="M44.2842 52.9561V72.9999H46.2842V52.9561H44.2842Z" />
+</vector>

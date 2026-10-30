@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.inspection_sheet.core.InspectionSheetView android:orientation="vertical" android:id="@id/inspection_sheet_container" android:background="@drawable/ub__rectangle_top_corners_rounded" android:paddingTop="@dimen/ui__spacing_unit_0.5x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/inspection_sheet_container_view" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UConstraintLayout android:id="@id/top_slider_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x">
+            <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline_3_of_7" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:layout_constraintGuide_percent="0.4285" />
+            <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline_4_of_7" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:layout_constraintGuide_percent="0.5714" />
+            <com.ubercab.ui.core.UPlainView android:id="@id/ub_primary_divider_standard_view_top" android:background="?dividerColor" android:layout_width="0.0dip" android:layout_height="?dividerWidth" uber:layout_constraintLeft_toRightOf="@id/guideline_3_of_7" uber:layout_constraintRight_toLeftOf="@id/guideline_4_of_7" uber:layout_constraintTop_toTopOf="parent" />
+            <com.ubercab.ui.core.UPlainView android:id="@id/ub_primary_divider_standard_view_bottom" android:background="?dividerColor" android:layout_width="0.0dip" android:layout_height="?dividerWidth" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" uber:layout_constraintLeft_toRightOf="@id/guideline_3_of_7" uber:layout_constraintRight_toLeftOf="@id/guideline_4_of_7" uber:layout_constraintTop_toBottomOf="@id/ub_primary_divider_standard_view_top" />
+        </com.ubercab.ui.core.UConstraintLayout>
+        <com.ubercab.ui.core.ULinearLayout android:id="@id/inspection_sheet_standard_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.UPlainView android:id="@id/ub_primary_divider_standard_view" android:background="?dividerColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UPlainView android:layout_gravity="top" android:id="@id/inspection_content_shadow" android:background="@drawable/ub__scroll_fade_gradient_top" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_alignParentTop="true" android:elevation="@dimen/inspection_sheet_shadow_elevation" />
+        <com.ubercab.ui.core.UScrollView android:id="@id/inspection_scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/inspection_sheet_primary_layout_container" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/inspection_sheet_primary_view_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/inspection_sheet_primary_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </com.ubercab.ui.core.ULinearLayout>
+                    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/inspection_sheet_action_base_material_button" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="65bdbcef-2f60" uber:buttonType="primary" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.UPlainView android:id="@id/ub_inspection_sheet_container_divider" android:background="?dividerColor" android:layout_width="wrap_content" android:layout_height="?dividerWidth" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/inspection_sheet_secondary_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.URelativeLayout>
+</com.ubercab.inspection_sheet.core.InspectionSheetView>

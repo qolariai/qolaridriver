@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/ub__location_pin_circle_stroke_width" android:color="?borderSelected" />
+    <solid android:color="?backgroundPrimary" />
+    <padding android:left="@dimen/ub__location_pin_text_padding" android:top="@dimen/ub__location_pin_text_padding" android:right="@dimen/ub__location_pin_text_padding" android:bottom="@dimen/ub__location_pin_text_padding" />
+    <corners android:radius="@dimen/ub__location_pin_text_rounded_corner_radius" />
+</shape>

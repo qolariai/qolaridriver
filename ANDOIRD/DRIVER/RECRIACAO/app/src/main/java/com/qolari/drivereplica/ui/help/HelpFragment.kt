@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,38 +14,33 @@ import androidx.recyclerview.widget.RecyclerView
 import com.qolari.drivereplica.R
 import com.qolari.drivereplica.databinding.FragmentHelpBinding
 import com.qolari.drivereplica.databinding.ItemHelpCategoryBinding
-import com.qolari.drivereplica.ui.manage.InfoFragment
 
 /**
  * Ajuda (Views; capturas 042 e 090): cabeçalho com título grande e grelha de 3 colunas com as categorias.
- * Cada categoria abre uma página de conteúdo próprio (D7: não é o conteúdo web do original).
+ * Os artigos de cada categoria são páginas web da original (D7: fora do âmbito); tocar não faz nada neste lote.
  */
 class HelpFragment : Fragment() {
 
     private var _binding: FragmentHelpBinding? = null
     private val binding get() = _binding!!
 
-    private data class Category(
-        @DrawableRes val icon: Int,
-        @StringRes val label: Int,
-        @StringRes val body: Int,
-    )
+    private data class Category(@DrawableRes val icon: Int, @StringRes val label: Int)
 
     private val categories = listOf(
-        Category(R.drawable.ic_route, R.string.help_cat_trip, R.string.help_body_trip),
-        Category(R.drawable.ic_person, R.string.help_cat_account, R.string.help_body_account),
-        Category(R.drawable.ic_wallet, R.string.help_cat_earnings, R.string.help_body_earnings),
-        Category(R.drawable.ic_car, R.string.help_cat_evs, R.string.help_body_evs),
-        Category(R.drawable.ic_fleet, R.string.help_cat_fleet, R.string.help_body_fleet),
-        Category(R.drawable.ic_book, R.string.help_cat_guides, R.string.help_body_guides),
-        Category(R.drawable.ic_box, R.string.help_cat_delivery, R.string.help_body_delivery),
-        Category(R.drawable.ic_shield, R.string.help_cat_safety, R.string.help_body_safety),
-        Category(R.drawable.ic_calendar, R.string.help_cat_appointment, R.string.help_body_appointment),
-        Category(R.drawable.ic_accessibility, R.string.help_cat_accessibility, R.string.help_body_accessibility),
-        Category(R.drawable.ic_document, R.string.help_cat_legal, R.string.help_body_legal),
-        Category(R.drawable.ic_lock, R.string.help_cat_privacy, R.string.help_body_privacy),
-        Category(R.drawable.ic_folder, R.string.help_cat_diagnostics, R.string.help_body_diagnostics),
-        Category(R.drawable.ic_pin_plus, R.string.help_cat_map, R.string.help_body_map),
+        Category(R.drawable.ic_route, R.string.help_cat_trip),
+        Category(R.drawable.ic_person, R.string.help_cat_account),
+        Category(R.drawable.ic_wallet, R.string.help_cat_earnings),
+        Category(R.drawable.ic_car, R.string.help_cat_evs),
+        Category(R.drawable.ic_fleet, R.string.help_cat_fleet),
+        Category(R.drawable.ic_book, R.string.help_cat_guides),
+        Category(R.drawable.ic_box, R.string.help_cat_delivery),
+        Category(R.drawable.ic_shield, R.string.help_cat_safety),
+        Category(R.drawable.ic_calendar, R.string.help_cat_appointment),
+        Category(R.drawable.ic_accessibility, R.string.help_cat_accessibility),
+        Category(R.drawable.ic_document, R.string.help_cat_legal),
+        Category(R.drawable.ic_lock, R.string.help_cat_privacy),
+        Category(R.drawable.ic_folder, R.string.help_cat_diagnostics),
+        Category(R.drawable.ic_pin_plus, R.string.help_cat_map),
     )
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -86,15 +80,6 @@ class HelpFragment : Fragment() {
                 val c = categories[position - HEADERS]
                 holder.b.catIcon.setImageResource(c.icon)
                 holder.b.catLabel.setText(c.label)
-                holder.b.root.setOnClickListener {
-                    findNavController().navigate(
-                        R.id.infoFragment,
-                        bundleOf(
-                            InfoFragment.ARG_TITLE to getString(c.label),
-                            InfoFragment.ARG_BODY to getString(c.body),
-                        ),
-                    )
-                }
             } else {
                 val tv = holder.itemView as TextView
                 if (position == 0) {

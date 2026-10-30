@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.USwipeRefreshLayout android:enabled="false" android:id="@id/discover_web_shell_swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.UToolbar android:id="@id/discover_web_shell_toolbar" android:background="?backgroundPrimary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:elevation="@dimen/ui__spacing_unit_0.5x" app:contentInsetStartWithNavigation="0.0dip" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/discover_web_shell_loading" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:indeterminate="true" android:indeterminateTint="?borderSelected" android:indeterminateTintMode="src_atop" style="@style/ProgressBarStyle" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/discover_web_shell_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

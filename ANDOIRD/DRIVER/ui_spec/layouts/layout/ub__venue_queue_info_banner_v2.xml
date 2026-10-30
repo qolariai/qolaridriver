@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/queue_position_info_banner_container" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="cdd8f997-5c8d">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/queue_position_info_banner_icon" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:scaleType="centerInside" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="c952de4e-a3ad" app:srcCompat="@drawable/ub_ic_circle_i" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/queue_position_info_banner_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" style="@style/Platform.TextStyle.LabelSmall" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/queue_position_info_banner_message" android:paddingTop="@dimen/ui__spacing_unit_0.25x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="4" app:analyticsId="8401ffeb-1bc5" style="@style/Platform.TextStyle.ParagraphSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/queue_position_info_banner_link_icon" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:scaleType="centerInside" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:analyticsId="3571f703-a201" app:srcCompat="@drawable/ub_ic_chevron_right_small" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

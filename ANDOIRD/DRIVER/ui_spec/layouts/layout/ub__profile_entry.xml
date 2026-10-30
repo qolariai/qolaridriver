@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profile_entry.core.ProfileEntryView android:id="@id/profile_entry" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="073d03b9-8265"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFloatingActionButton android:id="@id/profile_entry_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" app:analyticsId="ca42fc54-ebd5" app:backgroundTint="?android:colorBackground" app:borderWidth="0.0dip" app:elevation="@dimen/ub__profile_entry_fab_elevation" app:fabCustomSize="@dimen/ui__avatar_size_medium" app:hideMotionSpec="@null" app:showMotionSpec="@null" app:srcCompat="@drawable/ub_ic_person" />
+    <com.ubercab.ui.CircleImageView android:id="@id/profile_entry_photo" android:layout_width="@dimen/ui__avatar_size_medium" android:layout_height="@dimen/ui__avatar_size_medium" app:circleImageBorderColor="?android:colorBackground" app:circleImageBorderWidth="@dimen/ub__profile_entry_border_size" />
+</com.ubercab.profile_entry.core.ProfileEntryView>

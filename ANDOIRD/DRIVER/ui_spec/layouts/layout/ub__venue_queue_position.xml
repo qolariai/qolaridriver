@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.venues.queue_position.QueuePositionView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_0x" android:paddingEnd="@dimen/ui__spacing_unit_0x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/queue_position_info_banner_section" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/queue_position_heading_section" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/queue_position_heading" layout="@layout/ub__venue_queue_heading" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/queue_position_product_info_section" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ubercab.venues.queue_position.QueuePositionView>

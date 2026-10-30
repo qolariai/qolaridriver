@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_6x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:background="?backgroundPrimary" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/ui__elevation_medium">
+        <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" app:analyticsId="62e5cb57-f5b6" app:srcCompat="@drawable/ub_ic_clock" />
+        <com.ubercab.ui.core.UTextView android:id="@id/eats_intercom_banner_description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="4d76ab88-4d48" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.UTextView android:id="@id/eats_intercom_banner_remaining_time" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="9a598209-7874" style="@style/Platform.TextStyle.LabelDefault" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

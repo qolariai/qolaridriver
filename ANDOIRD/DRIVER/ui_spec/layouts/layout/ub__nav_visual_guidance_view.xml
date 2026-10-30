@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__nav_visual_guidance_image_view" android:layout_width="@dimen/ub__nav_visual_guidance_image_width" android:layout_height="@dimen/ub__nav_visual_guidance_image_height" android:scaleType="fitCenter" />
+</merge>

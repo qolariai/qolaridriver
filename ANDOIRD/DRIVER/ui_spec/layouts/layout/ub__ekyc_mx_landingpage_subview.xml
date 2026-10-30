@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.UCheckBox android:gravity="top" android:layout_gravity="top" android:id="@id/ub__ekyc_mx_consent_checkbox" android:layout_width="wrap_content" android:layout_height="fill_parent" app:analyticsId="89f22cfb-d839" />
+        <com.ubercab.ui.core.UTextView android:id="@id/ub__ekyc_mx_consent_textview" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="12150371-3e05" style="@style/Platform.TextStyle.ParagraphDefault" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x">
+        <com.ubercab.ui.core.UCheckBox android:gravity="top" android:layout_gravity="top" android:id="@id/ub__ekyc_mx_own_funds_checkbox" android:layout_width="wrap_content" android:layout_height="fill_parent" app:analyticsId="66a20d85-100a" />
+        <com.ubercab.ui.core.UTextView android:id="@id/ub__ekyc_mx_own_funds_textview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/ekyc_mx_landing_checkbox2" app:analyticsId="908f9188-5ef8" style="@style/Platform.TextStyle.ParagraphDefault" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

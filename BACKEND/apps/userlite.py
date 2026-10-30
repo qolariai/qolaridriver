@@ -10,19 +10,19 @@ Autenticacao: a mesma das outras apps (`POST /rt/identity/oauth2/token`, grant_t
 codigo fixo do laboratorio). O sujeito e um Rider.
 """
 from datetime import datetime
-import uuid
 
-from apps import geocode, present, routing
+from apps import present
 from apps.rtapi import Call, RtError, handles
 from domain import geo, pricing, settings, trips
-from domain.models import (City, Driver, LedgerEntry, Product, Promo, RiderPromo, Setting,
-                           SupportMessage, SupportThread, Trip, jget, jset, now)
+from domain.models import City, Driver, Product, Promo, RiderPromo, Setting, Trip, jget, jset, now
 from domain.trips import TripError
 
 APP = "rider"
 
 # Moradas de exemplo (Lisboa). A morada real do utilizador nunca entra na spec nem na app.
 PLACES = [
+    {"id": "augusta", "name": "Rua Augusta 24", "line1": "Rua Augusta 24", "line2": "Lisboa",
+     "lat": 38.71070, "lng": -9.13670},
     {"id": "pombal", "name": "Praça Marquês de Pombal", "line1": "Praça Marquês de Pombal", "line2": "Lisboa",
      "lat": 38.72553, "lng": -9.14997},
     {"id": "rossio", "name": "Praça do Rossio", "line1": "Praça do Rossio", "line2": "Lisboa",
@@ -124,7 +124,6 @@ def _driver_json(t: Trip) -> dict | None:
         "phone": d.phone,
         "lat": d.lat,
         "lng": d.lng,
-        "heading": d.heading or 0.0,
         "vehicle": None if not v else {
             "make": v.make, "model": v.model, "color": v.color, "colorHex": v.color_hex,
             "plate": v.plate, "label": f"{v.make} {v.model}",
@@ -156,21 +155,14 @@ def trip_json(db, t: Trip) -> dict:
         "uuid": t.uuid,
         "state": t.state,
         "createdAt": t.requested_at,
-        "scheduledAt": present.ms(t.scheduled_at) if t.scheduled_at else None,
         "product": {"id": t.product.id, "name": t.product.name},
         "pickup": {"lat": t.pickup_lat, "lng": t.pickup_lng, "address": t.pickup_address},
-        "stops": [{"lat": s.get("lat"), "lng": s.get("lng"), "address": s.get("address", ""),
-                   "done": bool(s.get("done"))} for s in jget(t.stops, [])],
-        "nextStopIndex": next((i for i, s in enumerate(jget(t.stops, [])) if not s.get("done")), None),
         "dropoff": {"lat": t.dropoff_lat, "lng": t.dropoff_lng, "address": t.dropoff_address},
         "pin": t.pin or None,
         "driver": _driver_json(t),
         "driverEtaMin": eta,
         "tripEtaMin": trip_eta,
         "fare": _fare_json(t),
-        "tipCents": t.tip_cents or 0,
-        "totalCents": (t.fare if t.fare is not None else t.est_fare) + (t.tip_cents or 0),
-        "canTip": t.state == "completed" and not t.tip_cents,
         "payment": t.payment_method,
         "canCancel": t.state in ("requested", "accepted", "arrived"),
         "canRate": t.state == "completed" and t.rider_to_driver_rating is None,
@@ -278,166 +270,6 @@ def location(call: Call):
 
 
 # ---- inicio e lugares ------------------------------------------------------------------------
-def _acct_get(db, rider, key: str, default):
-    row = db.get(Setting, f"rider_{key}:{rider.id}")
-    return jget(row.value, default) if row else default
-
-
-def _acct_set(db, rider, key: str, value):
-    row = db.get(Setting, f"rider_{key}:{rider.id}")
-    if row:
-        row.value = jset(value)
-    else:
-        db.add(Setting(key=f"rider_{key}:{rider.id}", value=jset(value)))
-    db.flush()
-
-
-def _uber_one_active(db, rider) -> dict:
-    data = _acct_get(db, rider, "uber_one", {"active": False, "until": None})
-    if data.get("until") and data["until"] < now():
-        data["active"] = False
-    return data
-
-
-def _ensure_uber_one_promo(db, rider):
-    """Membros Uber One recebem 5% na proxima viagem (promo renovada a cada viagem)."""
-    if not _uber_one_active(db, rider).get("active"):
-        return
-    promo = db.query(Promo).filter_by(code="UBERONE").first()
-    if not promo:
-        promo = Promo(code="UBERONE", description="Uber One: 5% na viagem",
-                      kind="percent", value=5, max_discount=200, per_rider=999)
-        db.add(promo)
-        db.flush()
-    has = (db.query(RiderPromo)
-           .filter(RiderPromo.rider_id == rider.id, RiderPromo.promo_id == promo.id,
-                   RiderPromo.used_trip_id.is_(None))
-           .first())
-    if not has:
-        db.add(RiderPromo(rider_id=rider.id, promo_id=promo.id))
-        db.flush()
-
-
-@handles(APP, "GET", "/rt/lite/account/extras")
-def account_extras(call: Call):
-    rider = call.subject()
-    return {
-        "business": _acct_get(call.db, rider, "business", {"active": False}),
-        "family": _acct_get(call.db, rider, "family", {"members": [], "code": f"FAM-{rider.id:04d}"}),
-        "uberOne": _uber_one_active(call.db, rider),
-    }
-
-
-@handles(APP, "POST", "/rt/lite/account/business")
-def save_business(call: Call):
-    rider = call.subject()
-    active = bool(call.body.get("active", True))
-    data = {
-        "active": active,
-        "companyName": str(call.body.get("companyName") or "")[:120],
-        "vat": str(call.body.get("vat") or "")[:30],
-        "email": str(call.body.get("email") or "")[:120],
-        "costCenter": str(call.body.get("costCenter") or "")[:60],
-    }
-    _acct_set(call.db, rider, "business", data)
-    return {"business": data}
-
-
-@handles(APP, "POST", "/rt/lite/account/family")
-def save_family(call: Call):
-    rider = call.subject()
-    data = _acct_get(call.db, rider, "family", {"members": [], "code": f"FAM-{rider.id:04d}"})
-    action = str(call.body.get("action") or "add")
-    phone = str(call.body.get("phone") or "").strip()[:30]
-    if action == "remove":
-        data["members"] = [m for m in data["members"] if m.get("phone") != phone]
-    else:
-        name = str(call.body.get("name") or "").strip()[:80]
-        if len(phone) < 6 or not name:
-            raise RtError(400, "invalid_member", "indique nome e telefone")
-        if len(data["members"]) >= 5:
-            raise RtError(409, "family_limit", "maximo de 5 membros")
-        if not any(m.get("phone") == phone for m in data["members"]):
-            data["members"].append({"name": name, "phone": phone,
-                                    "teen": bool(call.body.get("teen"))})
-    _acct_set(call.db, rider, "family", data)
-    return {"family": data}
-
-
-@handles(APP, "POST", "/rt/lite/account/uber-one")
-def uber_one(call: Call):
-    rider = call.subject()
-    action = str(call.body.get("action") or "subscribe")
-    if action == "cancel":
-        data = {"active": False, "until": None}
-        promo = call.db.query(Promo).filter_by(code="UBERONE").first()
-        if promo:
-            call.db.query(RiderPromo).filter(RiderPromo.rider_id == rider.id,
-                                             RiderPromo.promo_id == promo.id,
-                                             RiderPromo.used_trip_id.is_(None)).delete()
-    else:
-        data = {"active": True, "until": now() + 30 * 86400, "plan": "Uber One mensal"}
-    _acct_set(call.db, rider, "uber_one", data)
-    return {"uberOne": data}
-
-
-@handles(APP, "GET", "/rt/lite/places/saved")
-def saved_places(call: Call):
-    rider = call.subject()
-    row = call.db.get(Setting, f"rider_saved:{rider.id}")
-    rows = jget(row.value, []) if row else []
-    return {"places": [_place(p, rider.lat, rider.lng) for p in rows]}
-
-
-@handles(APP, "POST", "/rt/lite/places/saved")
-def add_saved_place(call: Call):
-    db, rider = call.db, call.subject()
-    label = str(call.body.get("label") or "").strip()[:60]
-    address = str(call.body.get("address") or "").strip()[:200]
-    place_id = str(call.body.get("placeId") or "").strip()
-    row = db.get(Setting, f"rider_saved:{rider.id}")
-    rows = jget(row.value, []) if row else []
-    if len(rows) >= 8:
-        raise RtError(409, "saved_limit", "maximo de 8 locais guardados")
-    place = None
-    if place_id:
-        place = next((p for p in PLACES if p["id"] == place_id), None)
-        if place is None and place_id == HOME_PLACE["id"]:
-            place = HOME_PLACE
-    if place is None:
-        lat, lng = call.body.get("lat"), call.body.get("lng")
-        if lat is not None and lng is not None:
-            place = {"id": "", "name": label or address, "line1": address, "line2": "",
-                     "lat": float(lat), "lng": float(lng)}
-        else:
-            found = geocode.places_search(address or label, rider.lat, rider.lng)
-            if not found:
-                raise RtError(404, "place_not_found", "morada nao encontrada")
-            place = found
-    item = {"id": uuid.uuid4().hex[:12], "name": label or place.get("name") or address,
-            "line1": address or place.get("line1", ""), "line2": place.get("line2", ""),
-            "lat": place["lat"], "lng": place["lng"]}
-    rows.append(item)
-    if row:
-        row.value = jset(rows)
-    else:
-        db.add(Setting(key=f"rider_saved:{rider.id}", value=jset(rows)))
-    db.flush()
-    return {"savedPlace": _place(item, rider.lat, rider.lng)}
-
-
-@handles(APP, "DELETE", "/rt/lite/places/saved/{placeId}")
-def delete_saved_place(call: Call):
-    db, rider = call.db, call.subject()
-    row = db.get(Setting, f"rider_saved:{rider.id}")
-    rows = jget(row.value, []) if row else []
-    rows = [p for p in rows if p.get("id") != call.vars["placeId"]]
-    if row:
-        row.value = jset(rows)
-    db.flush()
-    return {"ok": True}
-
-
 @handles(APP, "GET", "/rt/lite/home")
 def home(call: Call):
     db, rider = call.db, call.subject()
@@ -472,13 +304,6 @@ def places(call: Call):
     rider = call.subject()
     q = str(call.query.get("q", "") or "").strip().lower()
     lat, lng = rider.lat, rider.lng
-    if q:
-        real = geocode.places_search(q, lat, lng) or geocode.forward(q, lat, lng)
-        if real:
-            out = [_place(p, lat, lng) for p in real]
-            if q in "casa home":
-                out.insert(0, _place(HOME_PLACE, lat, lng))
-            return {"places": out[:10]}
     rows = [p for p in PLACES if not q or q in p["name"].lower() or q in p["line1"].lower()
             or q in p["line2"].lower()]
     if lat is not None and lng is not None:
@@ -490,21 +315,9 @@ def places(call: Call):
 
 
 # ---- estimativa e pedido ---------------------------------------------------------------------
-@handles(APP, "POST", "/rt/lite/route")
-def route(call: Call):
-    """Rota por estrada para o mapa da Rider (designed; OSRM com fallback em linha reta)."""
-    pts = routing.points_from(call.body or {})
-    if not pts:
-        return {"polyline": []}
-    r = routing.route(*pts)
-    return {"polyline": r["polyline"], "distanceMeters": r["distanceMeters"],
-            "durationSeconds": r["durationSeconds"], "source": r["source"]}
-
-
 @handles(APP, "POST", "/rt/lite/quote")
 def quote(call: Call):
     db, rider = call.db, call.subject()
-    _ensure_uber_one_promo(db, rider)
     pickup = _point(call.body.get("pickup")) or (
         (rider.lat, rider.lng) if rider.lat is not None else (HOME_PLACE["lat"], HOME_PLACE["lng"]))
     dropoff = _point(call.body.get("dropoff"))
@@ -557,7 +370,6 @@ def _apply_code(db, rider, code: str):
 @handles(APP, "POST", "/rt/lite/request")
 def request(call: Call):
     db, rider = call.db, call.subject()
-    _ensure_uber_one_promo(db, rider)
     pickup = _point(call.body.get("pickup"))
     dropoff = _point(call.body.get("dropoff"))
     if not pickup or not dropoff:
@@ -573,25 +385,10 @@ def request(call: Call):
         _apply_code(db, rider, str(code))
     payment = str(call.body.get("payment") or rider.default_payment)
     rider.default_payment = "cash" if payment == "cash" else "card"
-    sched = call.body.get("scheduledAt") or call.body.get("scheduled_at")
-    scheduled_at = None
-    if sched:
-        raw = int(sched)
-        scheduled_at = raw // 1000 if raw > 10 ** 11 else raw
-        if scheduled_at < now() + 300:
-            raise RtError(400, "invalid_schedule", "agende com pelo menos 5 minutos")
-        if scheduled_at > now() + 30 * 86400:
-            raise RtError(400, "invalid_schedule", "maximo de 30 dias")
     address = lambda o: str((o or {}).get("address") or "")
-    stops = []
-    for raw in (call.body.get("stops") or [])[:3]:
-        p = _point(raw)
-        if p:
-            stops.append({"lat": p[0], "lng": p[1], "address": address(raw)})
     try:
         t = trips.request_trip(db, rider, product, pickup, dropoff, address(call.body.get("pickup")),
-                               address(call.body.get("dropoff")), rider.default_payment, pin_required=True,
-                               scheduled_at=scheduled_at, stops=stops)
+                               address(call.body.get("dropoff")), rider.default_payment, pin_required=True)
     except TripError as e:
         raise _err(e)
     return {"trip": trip_json(db, t)}
@@ -629,67 +426,6 @@ def rate(call: Call):
     return {"trip": trip_json(call.db, t)}
 
 
-@handles(APP, "POST", "/rt/lite/trips/{tripUUID}/tip")
-def tip(call: Call):
-    rider = call.subject()
-    t = _trip_for(call, call.vars["tripUUID"])
-    if t.state != "completed":
-        raise RtError(400, "trip_not_completed", "so viagens concluidas")
-    amount = int(call.body.get("amountCents") or 0)
-    if amount < 0 or amount > 5000:
-        raise RtError(400, "invalid_tip", "gorjeta entre 0 e 50 EUR")
-    if t.tip_cents:
-        raise RtError(409, "tip_already_set", "gorjeta ja atribuida")
-    t.tip_cents = amount
-    if amount:
-        call.db.add(LedgerEntry(party="driver", party_id=t.driver_id, kind="tip", amount=amount,
-                                trip_id=t.id, note="Gorjeta"))
-        call.db.add(LedgerEntry(party="rider", party_id=rider.id, kind="tip", amount=-amount,
-                                trip_id=t.id, note="Gorjeta"))
-    return {"trip": trip_json(call.db, t)}
-
-
-@handles(APP, "GET", "/rt/lite/trips/{tripUUID}/receipt")
-def receipt(call: Call):
-    t = _trip_for(call, call.vars["tripUUID"])
-    if t.state != "completed":
-        raise RtError(400, "trip_not_completed", "recibo so depois do fim")
-    base = t.fare if t.fare is not None else t.est_fare
-    tip = t.tip_cents or 0
-    lines = [{"label": "Viagem", "amountCents": base}]
-    if t.discount:
-        lines.append({"label": "Desconto aplicado", "amountCents": -t.discount})
-    if tip:
-        lines.append({"label": "Gorjeta", "amountCents": tip})
-    return {"receipt": {
-        "uuid": t.uuid,
-        "date": datetime.fromtimestamp(t.completed_at or t.requested_at).strftime("%d/%m/%Y %H:%M"),
-        "pickup": t.pickup_address, "dropoff": t.dropoff_address,
-        "product": t.product.name, "payment": t.payment_method,
-        "driverName": t.driver.name if t.driver else "",
-        "distanceKm": round((t.distance_m or 0) / 1000, 1),
-        "durationMin": round((t.duration_s or 0) / 60),
-        "lines": lines, "totalCents": base + tip, "total": present.money(base + tip),
-        "tipCents": tip,
-    }}
-
-
-@handles(APP, "POST", "/rt/lite/trips/{tripUUID}/dispute")
-def dispute(call: Call):
-    rider = call.subject()
-    t = _trip_for(call, call.vars["tripUUID"])
-    reason = str(call.body.get("reason") or "").strip()[:1000]
-    if not reason:
-        raise RtError(400, "missing_reason", "descreva o problema")
-    th = SupportThread(app="rider", subject_uuid=rider.uuid, subject_name=rider.name,
-                       subject_phone=rider.phone, category="pagamento")
-    call.db.add(th)
-    call.db.flush()
-    call.db.add(SupportMessage(thread_id=th.id, sender="user",
-                               body=f"Contestação da viagem {t.uuid}: {reason}"))
-    return {"thread": {"uuid": th.uuid, "status": th.status}}
-
-
 # ---- historico -------------------------------------------------------------------------------
 @handles(APP, "GET", "/rt/lite/history")
 def history(call: Call):
@@ -712,22 +448,9 @@ def history(call: Call):
 def wallet(call: Call):
     rider = call.subject()
     profiles = list(PAYMENTS.values())
-    cash = rider.wallet_cents or 0
-    return {"cash": {"cents": cash, "label": present.money(cash), "currency": "EUR"},
+    return {"cash": {"cents": 0, "label": "0,00 €", "currency": "EUR"},
             "payment": PAYMENTS.get(rider.default_payment, PAYMENTS["cash"]),
             "profiles": profiles}
-
-
-@handles(APP, "POST", "/rt/lite/wallet/topup")
-def topup(call: Call):
-    """Carregamento simulado do Qolari Cash (cartao de laboratorio)."""
-    rider = call.subject()
-    amount = int(call.body.get("amountCents") or 0)
-    if amount <= 0 or amount > 20000:
-        raise RtError(400, "invalid_amount", "valor entre 1 e 200 EUR")
-    rider.wallet_cents = (rider.wallet_cents or 0) + amount
-    return {"cash": {"cents": rider.wallet_cents, "label": present.money(rider.wallet_cents),
-                     "currency": "EUR"}}
 
 
 @handles(APP, "POST", "/rt/lite/payments/select")

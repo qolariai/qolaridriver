@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFloatingActionButton android:id="@id/category_search_button" android:layout_width="@dimen/ui__avatar_size_medium" android:layout_height="@dimen/ui__avatar_size_medium" android:layout_margin="@dimen/ui__spacing_unit_2x" android:scaleType="center" uber:analyticsId="d3471d26-061d" uber:backgroundTint="?android:colorBackground" uber:borderWidth="0.0dip" uber:elevation="@dimen/ui__spacing_unit_1x" />
+</com.ubercab.ui.core.UFrameLayout>

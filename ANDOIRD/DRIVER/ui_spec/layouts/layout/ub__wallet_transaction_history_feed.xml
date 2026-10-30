@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.wallet_transaction_history.feed.TransactionFeedView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="4a53aa8c-0d9c"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/ub__transaction_history_error_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/ub__wallet_transaction_history_error" />
+    <include android:id="@id/ub__transaction_history_loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/ub__wallet_transaction_history_loading" />
+    <com.ubercab.ui.core.USwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/recycler_view_transactions" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.USwipeRefreshLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" uber:contentInsetStartWithNavigation="0.0dip" uber:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/Widget.Platform.Toolbar" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.wallet_transaction_history.feed.TransactionFeedView>

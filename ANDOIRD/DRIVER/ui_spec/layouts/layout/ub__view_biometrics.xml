@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety.identity.verification.biometrics.BiometricsView android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight">
+        <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__biometrics_loading" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:bli_bitColor="?colorAccent" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.uber.safety.identity.verification.biometrics.BiometricsView>

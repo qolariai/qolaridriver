@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/order_verify_taskbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.uber.taskbuildingblocks.views.TaskHeaderView android:id="@id/order_verify_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/order_verify_container" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" />
+    <com.uber.taskbuildingblocks.views.TaskFooterView android:id="@id/order_verify_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.uber.taskbuildingblocks.views.statefultaskbutton.StatefulTaskFooterView android:id="@id/order_verify_stateful_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

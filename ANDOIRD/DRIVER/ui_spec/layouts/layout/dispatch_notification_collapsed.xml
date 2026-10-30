@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/Theme.Carbon.DayNight" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/dispatch_notification_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitStart" android:contentDescription="@string/carbon_disaptch_notification" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/dispatch_notification_action_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_space_2x" android:showDividers="middle" />
+</LinearLayout>

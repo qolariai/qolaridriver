@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCardView android:id="@id/carousel_card" android:background="?android:colorBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:cardCornerRadius="@dimen/ub__carousel_item_card_radius" uber:cardPreventCornerOverlap="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:background="?borderPrimary" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.ubercab.ui.commons.image.AspectRatioImageView android:id="@id/carousel_image_view" android:background="?android:colorBackground" android:layout_width="@dimen/ub__carousel_item_width" android:layout_height="fill_parent" />
+        <com.ubercab.planning_hub_libs.promo_hub_default_item.carousel.CarouselMarkerView android:layout_gravity="center" android:id="@id/carousel_marker" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/carousel_image_error_view" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:tint="?iconTertiary" uber:analyticsId="1fdc5428-c2f9" uber:srcCompat="@drawable/ub_ic_alert" />
+        <com.airbnb.lottie.LottieAnimationView android:id="@id/carousel_loading_animation" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.ui.core.UCardView>

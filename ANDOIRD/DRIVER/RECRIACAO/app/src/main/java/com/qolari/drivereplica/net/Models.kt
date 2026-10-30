@@ -22,7 +22,7 @@ data class TokenResponse(
 }
 
 // ---- DriverTasks ----
-data class DriverTasksResponse(@SerializedName("driverTasks") val driverTasks: DriverTasks?)
+data class DriverTasksResponse(@SerializedName("driverTasks") val driverTasks: DriverTasks?, val radarPending: Boolean? = null)
 
 data class DriverTasks(
     val driverState: DriverState?,
@@ -34,6 +34,8 @@ data class DriverState(
     val online: Boolean?,
     val available: Boolean?,
     val dispatchable: Boolean?,
+    /** Posição que o servidor conhece do motorista (origem da navegação sem GPS). */
+    val location: RoutePoint? = null,
 )
 
 data class Meta(val lastModifiedTimeMs: Double?)
@@ -238,220 +240,36 @@ data class NotificationsResponse(val notifications: List<NotificationDto>?, val 
 
 data class RoutePoint(val latitude: Double?, val longitude: Double?)
 
-data class RouteResponse(val source: String?, val distanceMeters: Double?, val durationSeconds: Double?, val polyline: List<RoutePoint>?)
-
-/** Resultado da pesquisa de locais (Google Geocoding ou seed). */
-data class PlaceResult(
-    val id: String = "",
-    val name: String = "",
-    val line1: String = "",
-    val line2: String = "",
-    val full: String = "",
-    val lat: Double = 0.0,
-    val lng: Double = 0.0,
-    val provider: String = "",
+/** Uma manobra da rota (painel de navegação do ecrã de recolha). */
+data class RouteStep(
+    /** Tipo do Google: turn-left, turn-right, roundabout, straight, merge... */
+    val maneuver: String?,
+    /** Rua da manobra (curta) e a instrução completa em português. */
+    val road: String?,
+    val instruction: String?,
+    /** Instrução curta para o painel ("Vire à direita", "Na rotunda, 2.ª saída"). */
+    val instructionShort: String? = null,
+    val distanceMeters: Double?,
+    /** Duração da manobra (segundos). */
+    val durationSeconds: Double?,
+    /** Fim da manobra (onde vira). */
+    val lat: Double?,
+    val lng: Double?,
+    val polyline: List<RoutePoint>?,
 )
 
-data class PlacesResponse(val places: List<PlaceResult> = emptyList())
-
-data class SupportThreadDto(
-    val uuid: String = "",
-    val category: String = "",
-    val status: String = "open",
-    val lastMessage: String = "",
-    val unread: Int = 0,
-    val updatedAt: Long = 0,
-)
-
-data class SupportMessageDto(
-    val id: Int = 0,
-    val sender: String = "user",
-    val body: String = "",
-    val createdAt: Long = 0,
-    val fileName: String = "",
-    val hasFile: Boolean = false,
-)
-
-data class SupportThreadsResponse(val threads: List<SupportThreadDto> = emptyList())
-
-data class SupportThreadResponse(
-    val thread: SupportThreadDto? = null,
-    val messages: List<SupportMessageDto> = emptyList(),
-)
-
-data class SafetyContact(
-    val uuid: String = "",
-    val name: String = "",
-    val phone: String = "",
-    val createdAt: Long = 0,
-)
-
-data class SafetyContactsResponse(
-    val contacts: List<SafetyContact> = emptyList(),
-    val limit: Int = 10,
-)
-
-data class SafetyContactResponse(val contact: SafetyContact? = null)
-
-data class SafetyShareResponse(
-    val token: String = "",
-    val path: String = "",
-    val url: String = "",
-    val expiresAt: Long = 0,
-)
-
-data class DriverPreferences(
-    val destinationMode: Boolean = false,
-    val destinationAddress: String = "",
-    val destinationLat: Double? = null,
-    val destinationLng: Double? = null,
-    val areaMode: Boolean = false,
-    val areaLabel: String = "",
-    val areaLat: Double? = null,
-    val areaLng: Double? = null,
-    val areaRadiusKm: Double = 5.0,
-    val autoAccept: Boolean = false,
-    val breakUntil: Long? = null,
-    val breakActive: Boolean = false,
-)
-
-data class PreferencesResponse(val preferences: DriverPreferences = DriverPreferences())
-
-data class AirportQueueResponse(
-    val joined: Boolean = false,
-    val position: Int? = null,
-    val waiting: Int = 0,
-    val joinedAt: Long? = null,
-    val airport: String = "",
-)
-
-data class QuestDto(
-    val uuid: String = "",
-    val title: String = "",
-    val description: String = "",
-    val target: Int = 0,
-    val progress: Int = 0,
-    val reward: String = "",
-    val rewardCents: Int = 0,
-    val claimed: Boolean = false,
-    val canClaim: Boolean = false,
-)
-
-data class ReferralInfo(
-    val code: String = "",
-    val invited: Int = 0,
-    val pending: Int = 0,
-    val reward: String = "",
-)
-
-data class IncentivesResponse(
-    val points: Int = 0,
-    val tier: String = "Blue",
-    val nextTierPoints: Int? = null,
-    val trips: Int = 0,
-    val quests: List<QuestDto> = emptyList(),
-    val referral: ReferralInfo = ReferralInfo(),
-)
-
-data class InvoiceRow(
-    val month: String = "",
-    val total: String = "",
-    val totalCents: Int = 0,
-    val net: String = "",
-    val tax: String = "",
-    val status: String = "",
-)
-
-data class InvoicesResponse(val invoices: List<InvoiceRow> = emptyList(), val currencyCode: String = "EUR")
-
-data class TaxInfo(
-    val year: Int = 0,
-    val gross: String = "",
-    val grossCents: Int = 0,
-    val net: String = "",
-    val netCents: Int = 0,
-    val tax: String = "",
-    val note: String = "",
-)
-
-data class DriverDelegate(val name: String = "", val phone: String = "", val role: String = "")
-
-data class DriverBusiness(
-    val active: Boolean = false,
-    val companyName: String = "",
-    val vat: String = "",
-    val email: String = "",
-    val delegates: List<DriverDelegate> = emptyList(),
-)
-
-data class DriverBusinessResponse(val business: DriverBusiness = DriverBusiness())
-
-data class ScreenShareDto(
-    val uuid: String = "",
-    val active: Boolean = false,
-    val frameAt: Long? = null,
-    val hasFrame: Boolean = false,
-    val createdAt: Long = 0,
-)
-
-data class ScreenShareResponse(val share: ScreenShareDto? = null)
-
-data class RecordingDto(
-    val uuid: String = "",
-    val tripUuid: String = "",
-    val kind: String = "audio",
-    val startedAt: Long = 0,
-    val endedAt: Long? = null,
-    val durationS: Int = 0,
-    val hasFile: Boolean = false,
-)
-
-data class RecordingResponse(val recording: RecordingDto? = null)
-
-data class PayoutMethod(
-    val id: String = "",
-    val label: String = "",
-    val detail: String = "",
-    val instant: Boolean = false,
-)
-
-data class PayoutMethodsResponse(
-    val balance: String = "",
-    val balanceAmount: String = "0.00",
-    val currencyCode: String = "EUR",
-    val methods: List<PayoutMethod> = emptyList(),
-)
-
-data class PayoutDto(
-    val uuid: String = "",
-    val amount: String = "",
-    val amountCents: Int = 0,
-    val status: String = "",
-    val reference: String = "",
-    val createdAt: Long = 0,
-    val paidAt: Long? = null,
-)
-
-data class PayoutResponse(
-    val payout: PayoutDto? = null,
-    val balance: String = "",
-    val balanceAmount: String = "",
-)
-
-data class PayoutHistoryResponse(val payouts: List<PayoutDto> = emptyList())
-
-data class StatementRow(
-    val month: String = "",
-    val gross: String = "",
-    val grossCents: Int = 0,
-    val commission: String = "",
-    val fleetFee: String = "",
-    val net: String = "",
-    val netCents: Int = 0,
-    val trips: Int = 0,
-)
-
-data class StatementsResponse(
-    val statements: List<StatementRow> = emptyList(),
-    val currencyCode: String = "EUR",
+data class RouteResponse(
+    val source: String?,
+    val distanceMeters: Double?,
+    val durationSeconds: Double?,
+    val polyline: List<RoutePoint>?,
+    /** Manobras da perna (a app escolhe a atual pela posição). */
+    val steps: List<RouteStep>?,
+    /**
+     * Limite de velocidade (km/h) da via. **Nulo quando não é dado real da via** (o servidor só
+     * envia quando o OSM tem `maxspeed`); nesse caso a app esconde o selo "LIMITE".
+     */
+    val speedLimitKmh: Int?,
+    /** "osm" (dado da via), "osm_class" (estimativa) ou "heuristic". */
+    val speedLimitSource: String? = null,
 )

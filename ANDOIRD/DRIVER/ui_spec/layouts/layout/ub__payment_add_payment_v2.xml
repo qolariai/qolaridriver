@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ViewStub android:id="@id/ub__payment_add_payment_header_description_view_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.ui.core.URecyclerView android:id="@id/ub__payment_add_payment_recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                <com.ubercab.ui.core.ULinearLayout android:gravity="bottom" android:id="@id/ub__payment_add_addons_layout" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:layout_weight="1.0" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</merge>

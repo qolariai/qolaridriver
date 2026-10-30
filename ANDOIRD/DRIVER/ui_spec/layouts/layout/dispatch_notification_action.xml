@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button android:id="@id/dispatch_notification_action" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/Widget.Material.Button.Borderless.Small"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

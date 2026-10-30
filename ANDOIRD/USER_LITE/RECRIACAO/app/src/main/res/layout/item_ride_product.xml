@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
     android:layout_width="match_parent"
-    android:layout_height="94dp"
+    android:layout_height="106dp"
     android:background="@drawable/bg_ride_product"
     android:gravity="center_vertical"
     android:orientation="horizontal"
@@ -57,35 +57,32 @@
                 android:textSize="15sp" />
         </LinearLayout>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:textColor="@color/ql_black"
+            android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/ql_black"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/fastest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/bg_badge_blue"
-                android:paddingStart="7dp"
-                android:paddingTop="2dp"
-                android:paddingEnd="7dp"
-                android:paddingBottom="2dp"
-                android:text="@string/ride_fastest"
-                android:textColor="@color/ql_white"
-                android:textSize="13sp"
-                android:visibility="gone" />
-        </LinearLayout>
+        <!-- Selo numa linha própria, como na captura 032 real. -->
+        <TextView
+            android:id="@+id/fastest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_badge_blue"
+            android:drawablePadding="3dp"
+            android:paddingStart="7dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="3dp"
+            android:text="@string/ride_fastest"
+            android:textColor="@color/ql_white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_bolt"
+            app:drawableTint="@color/ql_white" />
     </LinearLayout>
 
     <TextView

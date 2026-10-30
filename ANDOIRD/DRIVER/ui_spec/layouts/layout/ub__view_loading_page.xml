@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.ekyc.pages.loading.LoadingPageView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip" app:header_state="collapse" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__ekyc_page_loading_page_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.DisplayXSmall" />
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__ekyc_page_loading_page_content" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__ekyc_page_loading_page_title" style="@style/Platform.TextStyle.ParagraphDefault" />
+            <com.ubercab.ui.core.UProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" android:indeterminateTint="?borderAccent" android:indeterminateTintMode="src_in" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__ekyc_page_loading_page_content" style="@style/ProgressBarStyle" />
+        </com.ubercab.ui.core.UConstraintLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.uber.ekyc.pages.loading.LoadingPageView>

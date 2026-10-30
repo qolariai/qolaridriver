@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="end|top" android:id="@id/calloutDrawableTip" android:drawable="@drawable/left_top_tip" android:left="0.0dip" />
+    <item android:id="@id/calloutDrawable" android:left="@dimen/callout_marker_text_margin" android:right="@dimen/callout_marker_text_margin">
+        <shape android:shape="rectangle">
+            <corners android:topRightRadius="@dimen/ui__spacing_unit_1x" android:bottomLeftRadius="@dimen/ui__spacing_unit_1x" android:bottomRightRadius="@dimen/ui__spacing_unit_1x" />
+        </shape>
+    </item>
+</layer-list>

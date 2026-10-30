@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/help_conversation_details_composer_attach_photo" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/help_conversation_details_composer_image_content_description" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="198882c7-4d96" uber:srcCompat="@drawable/ub__optional_help_camera" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UEditText android:id="@id/help_conversation_details_composer_text_field" android:background="?brandTransparent" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/help_conversation_details_composer_text_field_hint" android:maxLines="5" />
+        <com.ubercab.ui.core.UPlainView android:id="@id/help_conversation_details_composer_photo_container_divider" android:background="?dividerHorizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" />
+        <com.ubercab.ui.core.UHorizontalScrollView android:id="@id/help_conversation_details_composer_photo_container_scroll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/help_conversation_details_composer_photo_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/divider_space_1x" android:showDividers="middle" />
+        </com.ubercab.ui.core.UHorizontalScrollView>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H6.News" android:textColor="?accentCta" android:id="@id/help_conversation_details_composer_send" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_conversation_details_composer_send_button" android:layout_marginStart="@dimen/ui__spacing_unit_2x" uber:analyticsId="ac897dcc-a804" />
+</merge>

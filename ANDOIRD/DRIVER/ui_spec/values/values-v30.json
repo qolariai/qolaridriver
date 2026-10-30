@@ -1,0 +1,20 @@
+{
+ "integers": {
+  "integer": {
+   "m3c_window_layout_in_display_cutout_mode": "3"
+  }
+ },
+ "styles": {
+  "styles": {
+   "Base.Theme.SplashScreen": {
+    "parent": "@android:style/Theme.DeviceDefault.DayNight",
+    "items": {
+     "android:windowLayoutInDisplayCutoutMode": "always",
+     "android:enforceStatusBarContrast": "false",
+     "android:enforceNavigationBarContrast": "false",
+     "isLightTheme": "?android:isLightTheme"
+    }
+   }
+  }
+ }
+}

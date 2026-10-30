@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:id="@id/ub__opportunity_center_app_bar_layout" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <com.ubercab.ui.core.UCollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:expandedTitleGravity="start" app:expandedTitleMarginBottom="@dimen/ui__spacing_unit_8x" app:expandedTitleMarginStart="@dimen/ui__spacing_unit_2x" app:expandedTitleMarginTop="@dimen/ui__spacing_unit_8x" app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlways|snap" app:titleEnabled="true">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/pill_filter_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_marginTop="@dimen/ui__spacing_unit_12x" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" />
+            <com.ubercab.ui.core.URecyclerView android:layout_gravity="center_horizontal" android:id="@id/filters" android:layout_width="wrap_content" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_marginTop="@dimen/ui__spacing_unit_11x" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+            <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:analyticsId="c5836628-db51" app:contentInsetStartWithNavigation="0.0dip" app:layout_collapseMode="pin" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/Widget.Platform.Toolbar" />
+        </com.ubercab.ui.core.UCollapsingToolbarLayout>
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.USwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UFrameLayout android:background="?backgroundTertiary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/date_and_filter" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.URecyclerView android:layout_gravity="top" android:id="@id/calendar_recycler_view" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <include layout="@layout/empty_opportunities_view" />
+                <com.ubercab.ui.core.UFrameLayout android:id="@id/carousel_view_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.ui.core.URecyclerView android:id="@id/driven_ui_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/oc_bit_loading_indicator" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:bli_bitColor="?contentPrimary" />
+            <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/carbon_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/circular_progress_bar" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:indeterminate="true" android:indeterminateTint="?borderSelected" android:indeterminateTintMode="src_atop" style="@style/ProgressBarStyle" />
+            </com.ubercab.ui.core.UFrameLayout>
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.USwipeRefreshLayout>
+</merge>

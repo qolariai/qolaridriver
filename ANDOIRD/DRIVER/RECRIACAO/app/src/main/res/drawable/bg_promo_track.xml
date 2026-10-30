@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra de progresso vazia do cartão de promoção (captura 061). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#EBEBEB" />
+    <corners android:radius="3dp" />
+</shape>

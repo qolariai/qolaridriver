@@ -10,9 +10,6 @@ const GROUPS: { title: string; items: Nav[] }[] = [
     { to: '/', label: 'Painel', icon: 'grid', end: true },
     { to: '/viagens', label: 'Viagens', icon: 'route', badge: 'searching' },
     { to: '/simulador', label: 'Simulador', icon: 'play' },
-    { to: '/mapa-problemas', label: 'Problemas de mapa', icon: 'pin' },
-    { to: '/suporte', label: 'Suporte', icon: 'chat' },
-    { to: '/seguranca', label: 'Segurança', icon: 'shield' },
   ] },
   { title: 'Rede', items: [
     { to: '/motoristas', label: 'Motoristas', icon: 'steering' },
@@ -25,7 +22,6 @@ const GROUPS: { title: string; items: Nav[] }[] = [
     { to: '/tarifas', label: 'Categorias e tarifas', icon: 'sliders' },
     { to: '/promocoes', label: 'Promoções', icon: 'tag' },
     { to: '/financas', label: 'Finanças', icon: 'euro' },
-    { to: '/ajustes', label: 'Ajustes', icon: 'sliders' },
   ] },
   { title: 'Sistema', items: [
     { to: '/integracao', label: 'Integração das apps', icon: 'plug' },

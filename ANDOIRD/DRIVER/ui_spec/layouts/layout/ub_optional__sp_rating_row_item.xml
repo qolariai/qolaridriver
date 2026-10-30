@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ub__social_profiles_rating_start_icon" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ub__social_profiles_rating_start_margin_start" android:layout_marginEnd="@dimen/ub__social_profiles_spacing_unit_0.5x" />
+        <com.ubercab.ui.core.UTextView android:layout_gravity="center_vertical" android:id="@id/ub__social_profiles_rating_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ub__social_profiles_rating_middle_icon" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" />
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ub__social_profiles_rating_end_icon" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/ub__social_profiles_rating_bottom_icon" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" />
+</merge>

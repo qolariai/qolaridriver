@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ub__payment_icon_size" android:width="@dimen/ub__payment_icon_size" android:viewportWidth="32.0" android:viewportHeight="32.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateY="5.0">
+        <path android:fillColor="#ff5879da" android:pathData="M30,22 L2,22 C0.895,22 0,21.105 0,20 L0,2 C0,0.895 0.895,0 2,0 L30,0 C31.105,0 32,0.895 32,2 L32,20 C32,21.105 31.105,22 30,22" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    </group>
+    <path android:fillColor="?artWhite" android:pathData="M12,20 L14,20 L14,14 L15,14 L15,20 L17,20 L17,14 L18,14 L18,20 L20,20 L20,14 L21,14 L21,20 L22.6265,20 C22.8327784,20 23,20.1672216 23,20.3735 L23,20.6265 C23,20.8327784 22.8327784,21 22.6265,21 L9.3735,21 C9.16722165,21 9,20.8327784 9,20.6265 L9,20.3735 C9,20.1672216 9.16722165,20 9.3735,20 L9.3735,20 L11,20 L11,14 L12,14 L12,20 Z M9.46666667,14 C9.20893378,14 9,13.7701667 9,13.486653 L9,12.9190378 C9,12.7206856 9.10388083,12.5400816 9.26682645,12.4551414 L15.8001598,9.0494506 C15.926645,8.98351647 16.073355,8.98351647 16.1998402,9.0494506 L22.7331735,12.4551414 C22.8961192,12.5400816 23,12.7206856 23,12.9190378 L23,13.486653 C23,13.7701667 22.7910662,14 22.5333333,14 L9.46666667,14 Z M16.0034401,10 L10.5,13 L21.5,13 L16.0034401,10 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+</vector>

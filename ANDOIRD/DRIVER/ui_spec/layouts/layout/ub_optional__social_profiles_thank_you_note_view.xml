@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.socialprofiles.profile.ui.ThankYouNoteView android:layout_width="@dimen/ub__social_profiles_thank_you_card_layout_width" android:layout_height="@dimen/ub__social_profiles_thank_you_card_layout_height" uber:analyticsId="f467e701-1ec6" uber:cardBackgroundColor="?android:colorBackground" uber:cardCornerRadius="@dimen/ui__spacing_unit_1x" uber:cardElevation="@dimen/ui__spacing_unit_1x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:circleImageView="http://schemas.android.com/apk/res-auto" xmlns:card_view="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@id/social_profile_thank_you_note_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" style="@style/Platform.TextStyle.Paragraph.Normal" />
+        <com.ubercab.ui.core.UPlainView android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="start|bottom" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/ui__spacing_unit_4x">
+            <com.ubercab.ui.CircleImageView android:layout_gravity="center_vertical" android:id="@id/social_profile_thank_you_note_image" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:circleImageBorderWidth="@dimen/ub__social_profiles_circle_image_border_width" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorTertiary" android:layout_gravity="center_vertical" android:id="@id/social_profile_thank_you_note_date" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H5.News" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.socialprofiles.profile.ui.ThankYouNoteView>

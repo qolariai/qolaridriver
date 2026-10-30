@@ -25,7 +25,7 @@ class DiscoverViewModel(
     private val promos: List<Promo> = DiscoverFixtures.promos,
 ) : ViewModel() {
 
-    private val days = (0 until 14).map { today.plusDays(it.toLong()) }
+    private val days = (-4 until 10).map { today.plusDays(it.toLong()) }
     private val _state = MutableStateFlow(build(DiscoverUiState(days, today)))
     val state: StateFlow<DiscoverUiState> = _state.asStateFlow()
 
@@ -46,7 +46,7 @@ class DiscoverViewModel(
     }
 
     private fun build(s: DiscoverUiState): DiscoverUiState {
-        val rows = mutableListOf<DiscoverRow>(DiscoverRow.Chips)
+        val rows = mutableListOf<DiscoverRow>()
         if (s.filters.isEmpty() || DiscoverFilter.PROMOS in s.filters) rows += DiscoverRow.Promos(promos)
         items.filter { visible(s, it) }.groupBy { it.date }.toSortedMap().forEach { (date, list) ->
             rows += DiscoverRow.DayHeader(date)

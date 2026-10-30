@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.drivenui.ui.DrivenCardView android:id="@id/driven_card_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" app:cardBackgroundColor="?android:colorBackground" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.uber.drivenui.ui.DrivenStackView android:orientation="vertical" android:id="@id/driven_content_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.uber.drivenui.ui.DrivenCardView>

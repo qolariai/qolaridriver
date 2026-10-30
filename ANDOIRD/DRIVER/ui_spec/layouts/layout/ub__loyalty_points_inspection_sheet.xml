@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.driver_loyalty.next_inspection_sheet.LoyaltyNextMarkerInspectionSheetMappedTableView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__inspection_sheet_mapped_table_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__inspection_sheet_mapped_table_header_container" android:paddingTop="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.driver_loyalty.home.ui.AutoHiddenTextView android:textColor="?contentPrimary" android:id="@id/ub__inspection_sheet_mapped_table_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.driver_loyalty.home.ui.AutoHiddenTextView android:textColor="?contentPrimary" android:id="@id/ub__inspection_sheet_mapped_table_header_description" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphDefault" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__inspection_sheet_mapped_table_rows" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__inspection_sheet_mapped_table_footer" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" />
+</com.ubercab.driver_loyalty.next_inspection_sheet.LoyaltyNextMarkerInspectionSheetMappedTableView>

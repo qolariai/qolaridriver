@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.upi.operation.chargeconfirm.UPIChargeConfirmView android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="@string/ub__upi_charge_confirm_impression_id"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" uber:header_state="collapse" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.image.BaseImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" uber:srcCompat="@drawable/ub__upi_charge_confirm_interstitial" />
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__upi_charge_confirm_title" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__upi_charge_confirm_title_add_flow" style="@style/Platform.TextStyle.HeadingXSmall" />
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__upi_charge_confirm_description" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ub__upi_charge_confirm_description" style="@style/Platform.TextStyle.ParagraphDefault" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__upi_charge_confirm_close" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?contentInset" android:layout_marginBottom="?contentInset" android:text="@string/ub__upi_close" uber:analyticsId="@string/ub__upi_charge_confirm_close_button_id" style="?platformButtonPrimary" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.presidio.payment.upi.operation.chargeconfirm.UPIChargeConfirmView>

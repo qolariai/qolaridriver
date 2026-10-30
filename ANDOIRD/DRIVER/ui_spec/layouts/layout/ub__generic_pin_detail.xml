@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.feature.pin.detail.GenericPinDetailView android:id="@id/ub__pin_detail_item_recycler_view" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

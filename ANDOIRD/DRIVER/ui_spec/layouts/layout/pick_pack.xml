@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_verify_mode_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_taskbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_in_store_maps_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="end|bottom" android:id="@id/pick_pick_in_store_maps_hide_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" android:elevation="@dimen/ui__elevation_medium" app:buttonType="alwaysLight" app:icon="@drawable/ub_ic_chevron_up" app:shape="circle" app:size="small" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.uber.taskbuildingblocks.views.TaskHeaderView android:id="@id/pick_pack_header" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.ULinearLayout android:id="@id/pick_pack_control_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x">
+        <com.uber.ui_compose_view.core.BaseSegmentedControlView android:id="@id/pick_pack_segmented_control" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_order_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_1x" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_container" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" />
+    <com.uber.taskbuildingblocks.views.taskbutton.TaskFooterView android:id="@id/pick_pack_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

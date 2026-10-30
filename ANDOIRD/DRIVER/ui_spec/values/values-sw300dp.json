@@ -1,0 +1,10 @@
+{
+ "styles": {
+  "styles": {
+   "OtpText": {
+    "parent": "@style/Platform.TextStyle.H4.News",
+    "items": {}
+   }
+  }
+ }
+}

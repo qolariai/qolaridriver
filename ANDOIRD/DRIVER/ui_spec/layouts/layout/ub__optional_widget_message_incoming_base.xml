@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ub__intercom_space_between_messages" android:layout_marginRight="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__chat_message_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_toEndOf="@id/ub__bubble_avatar">
+            <com.ubercab.ui.core.UFrameLayout android:layout_gravity="start" android:id="@id/ub__chat_bubble_content_frame" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__bubble_widget_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="0fe5f162-9b8f" />
+            </com.ubercab.ui.core.UFrameLayout>
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__chat_send_state" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:analyticsId="8c3d4a67-c4f3" style="@style/Intercom.System.Message.Timestamp.TextView" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.FramedCircleImageView android:id="@id/ub__bubble_avatar" android:layout_width="?avatarTiny" android:layout_height="?avatarTiny" android:layout_alignBottom="@id/ub__chat_message_container" android:layout_alignParentBottom="false" android:foregroundGravity="bottom" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" android:layout_alignParentStart="true" />
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__bubble_avatar_base" android:visibility="gone" android:layout_width="?avatarTiny" android:layout_height="?avatarTiny" android:layout_alignBottom="@id/ub__chat_message_container" android:layout_alignParentBottom="false" android:foregroundGravity="bottom" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" android:layout_alignParentStart="true" />
+    </com.ubercab.ui.core.URelativeLayout>
+    <androidx.legacy.widget.Space android:id="@id/group_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__intercom_space_between_groups" />
+</com.ubercab.ui.core.ULinearLayout>

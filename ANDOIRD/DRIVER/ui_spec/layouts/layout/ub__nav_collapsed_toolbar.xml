@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="start" android:id="@id/ub__nav_collapsed_back" android:background="?selectableItemBackgroundBorderless" android:focusable="true" android:clickable="true" android:layout_width="@dimen/ub__nav_guidance_menu_size_collapsed" android:layout_height="@dimen/ub__nav_guidance_primary_collapsed_height" android:scaleType="centerInside" android:paddingStart="0.0dip" android:paddingEnd="@dimen/ub__nav_spacing_unit_1x" app:srcCompat="@drawable/ub__nav_arrow_back" />
+    <TextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/ub__nav_collapsed_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__nav_guidance_primary_collapsed_height" android:layout_marginRight="@dimen/ub__nav_guidance_primary_collapsed_height" />
+</merge>

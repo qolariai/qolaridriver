@@ -8,15 +8,15 @@
     <string name="welcome_start">Começar</string>
 
     <!-- Login -->
-    <string name="login_title">Qual é o seu número de telefone ou e-mail?</string>
+    <string name="login_title">Qual é o seu número de telefone?</string>
     <string name="login_phone_hint">9XXXXXXXX</string>
     <string name="login_or">ou</string>
     <string name="login_find_account">Encontrar a minha conta</string>
-    <string name="login_legal">Aceita receber um código de verificação por mensagem de texto ou por WhatsApp. Poderão ser aplicadas taxas de dados e de mensagens.</string>
+    <string name="login_legal">No laboratório não é enviado SMS nem WhatsApp: o código de verificação é fixo e está indicado no ecrã seguinte.</string>
     <string name="login_next">Seguinte</string>
-    <string name="login_recaptcha">Este site está protegido por reCAPTCHA e sujeito à Política de Privacidade e aos Termos de Serviço da Google.</string>
+    <string name="login_recaptcha">Ao continuar, aceita os Termos e a Política de Privacidade da Qolari. Este ecrã é uma recriação de laboratório; não usa reCAPTCHA.</string>
     <string name="login_code_title">Introduza o código</string>
-    <string name="login_code_subtitle">Enviámos um código de 4 dígitos para %1$s.</string>
+    <string name="login_code_subtitle">Introduza o código de 4 dígitos da conta %1$s.</string>
     <string name="login_code_hint">Código de 4 dígitos</string>
     <string name="login_code_verify">Verificar</string>
     <string name="login_code_hint_lab">No laboratório o código é 0000.</string>
@@ -36,6 +36,7 @@
     <string name="home_brand">Qolari</string>
     <string name="home_menu">Menu</string>
     <string name="home_saved_place">Casa</string>
+    <string name="home_current_location">Localização atual</string>
     <string name="home_search">Para onde?</string>
     <string name="home_suggestions">Sugestões</string>
     <string name="home_locate">Mostrar a sua localização</string>
@@ -46,11 +47,12 @@
     <string name="home_offline">Sem conexão de rede</string>
     <string name="home_loading">A carregar…</string>
     <string name="home_error">Não foi possível carregar o início.</string>
-    <string name="home_pending_sent">Pedido pendente enviado.</string>
     <string name="home_retry">Tentar novamente</string>
     <string name="home_cash">Qolari Cash</string>
 
     <!-- Pesquisa -->
+    <string name="search_when">Recolher agora</string>
+    <string name="search_for">Para mim</string>
     <string name="search_title">Planeie a sua viagem</string>
     <string name="search_now">Recolher agora</string>
     <string name="search_for_me">Para mim</string>
@@ -70,37 +72,6 @@
     <string name="ride_payment_add">Adicionar forma de pagamento</string>
     <string name="ride_payment">Pagamento: %1$s</string>
     <string name="ride_request">Pedir %1$s</string>
-    <string name="ride_schedule_now">Recolher agora</string>
-    <string name="ride_schedule_for">Agendada para %1$s</string>
-    <string name="ride_schedule_too_soon">Escolha uma hora com pelo menos 5 minutos de antecedência.</string>
-    <string name="ride_add_stop">Adicionar paragem</string>
-    <string name="ride_stop_hint">Morada da paragem</string>
-    <string name="ride_stop_add">Adicionar</string>
-    <string name="ride_stop_not_found">Paragem não encontrada.</string>
-    <string name="ride_stops_limit">Máximo de 3 paragens.</string>
-    <string name="ride_stop_row">Paragem %1$d: %2$s</string>
-    <string name="trip_scheduled">Viagem agendada</string>
-    <string name="trip_scheduled_detail">Vamos procurar motorista perto da hora marcada: %1$s.</string>
-    <string name="trip_stop_line">Paragem %1$d: %2$s</string>
-    <string name="trip_tip_title">Adicionar gorjeta</string>
-    <string name="trip_ride_check">Ride check</string>
-    <string name="trip_ride_check_question">Está tudo bem nesta viagem?</string>
-    <string name="trip_ride_ok">Está tudo bem</string>
-    <string name="trip_ride_help">Preciso de ajuda</string>
-    <string name="trip_ride_help_detail">A operação foi avisada. Em perigo imediato, ligue 112.</string>
-    <string name="trip_ride_ok_sent">Obrigado. Check-in registado.</string>
-    <string name="trip_ride_error">Não foi possível registar o check-in.</string>    <string name="trip_tip_1">1 €</string>
-    <string name="trip_tip_2">2 €</string>
-    <string name="trip_tip_5">5 €</string>
-    <string name="trip_tip_0">Sem gorjeta</string>
-    <string name="trip_tip_error">Não foi possível guardar a gorjeta.</string>
-    <string name="trip_receipt">Ver recibo</string>
-    <string name="trip_receipt_error">Recibo indisponível.</string>
-    <string name="trip_dispute">Contestar</string>
-    <string name="trip_dispute_hint">Descreva o problema com esta viagem</string>
-    <string name="trip_dispute_send">Enviar</string>
-    <string name="trip_dispute_ok">Contestação enviada. O apoio vai responder.</string>
-    <string name="trip_dispute_error">Não foi possível enviar a contestação.</string>
     <string name="ride_loading">A calcular preços…</string>
     <string name="ride_error">Não foi possível calcular a viagem.</string>
     <string name="ride_no_products">Sem categorias disponíveis nesta cidade.</string>
@@ -155,7 +126,6 @@
     <string name="menu_activity">Atividade</string>
     <string name="menu_cash">Qolari Cash</string>
     <string name="menu_manage_account">Gerir conta</string>
-    <string name="menu_support">Apoio</string>
     <string name="menu_promotions">Promoções</string>
     <string name="menu_legal">Legal</string>
     <string name="menu_sign_out">Encerrar sessão</string>
@@ -167,9 +137,12 @@
 
     <!-- Wallet -->
     <string name="wallet_title">Wallet</string>
+    <string name="wallet_balance">Saldo</string>
+    <string name="wallet_scheduled">Pagamento agendado: %1$s</string>
+    <string name="wallet_withdraw">Levantamentos</string>
+    <string name="wallet_withdraw_unavailable">Os levantamentos estão indisponíveis nesta demonstração.</string>
+
     <string name="wallet_cash">Qolari Cash</string>
-    <string name="wallet_topup">Carregar saldo</string>
-    <string name="wallet_topup_amount">Carregar %1$d €</string>
     <string name="wallet_payments">Formas de pagamento</string>
     <string name="wallet_add">Escolher forma de pagamento</string>
     <string name="wallet_default">Predefinida</string>
@@ -204,96 +177,6 @@
     <string name="help_messages">Mensagens de apoio</string>
     <string name="help_article_placeholder">Esta página de ajuda é conteúdo próprio do laboratório. A Uber não é afiliada e o texto original não é copiado.</string>
     <string name="help_error">Não foi possível carregar a ajuda.</string>
-
-    <!-- Apoio in-app -->
-    <string name="support_title">Apoio</string>
-    <string name="support_hint">Escreva uma mensagem…</string>
-    <string name="support_send">Enviar</string>
-    <string name="support_attach">Anexar</string>
-    <string name="support_call">Ligar apoio</string>
-    <string name="support_category">Assunto: Outro</string>
-    <string name="support_attached">Anexo: %1$s</string>
-    <string name="support_attach_error">Não foi possível anexar. Use JPG, PNG, WEBP ou PDF até 8 MB.</string>
-    <string name="support_phone">+351210000000</string>
-    <string name="support_share">Partilhar ecrã</string>
-    <string name="support_share_stop">Parar partilha</string>
-    <string name="support_share_on">A partilhar o ecrã do dispositivo com o apoio…</string>
-    <string name="support_share_denied">Sem permissão para partilhar o ecrã.</string>
-    <string name="support_cat_trip">Viagem</string>
-    <string name="support_cat_account">Conta</string>
-    <string name="support_cat_payment">Pagamento</string>
-    <string name="support_cat_safety">Segurança</string>
-    <string name="support_cat_bug">Problema na app</string>
-    <string name="support_cat_other">Outro</string>
-    <string name="support_cancel">Cancelar</string>
-    <string name="support_empty">Ainda não há mensagens. Escreva a primeira para falar com o apoio.</string>
-    <string name="support_error">Não foi possível carregar a conversa. Tente novamente.</string>
-
-    <!-- Segurança -->
-    <string name="menu_safety">Segurança</string>
-    <string name="menu_saved">Locais guardados</string>
-    <string name="menu_extras">Empresa, família e Uber One</string>
-    <string name="menu_appearance">Aparência e idioma</string>
-    <string name="appearance_title">Aparência e idioma</string>
-    <string name="appearance_intro">Escolha o idioma, o tema e o tamanho do texto.</string>
-    <string name="appearance_language">Idioma</string>
-    <string name="appearance_language_pt">Português</string>
-    <string name="appearance_language_en">English</string>
-    <string name="appearance_dark">Modo escuro</string>
-    <string name="appearance_simple">Modo simples</string>
-    <string name="appearance_simple_detail">Texto maior e menos opções no menu.</string>
-    <string name="appearance_accessibility">Abrir acessibilidade do sistema</string>
-    <string name="extras_title">Empresa, família e Uber One</string>
-    <string name="extras_business">Perfil empresarial</string>
-    <string name="extras_business_off">Sem perfil empresarial ativo.</string>
-    <string name="extras_business_on">%1$s · NIF %2$s</string>
-    <string name="extras_business_edit">Configurar empresa</string>
-    <string name="extras_company">Nome da empresa</string>
-    <string name="extras_vat">NIF</string>
-    <string name="extras_email">E-mail de faturação</string>
-    <string name="extras_family">Família e teens</string>
-    <string name="extras_family_code">Código de convite: %1$s</string>
-    <string name="extras_family_empty">Sem membros na família.</string>
-    <string name="extras_family_add">Adicionar membro</string>
-    <string name="extras_family_name">Nome</string>
-    <string name="extras_family_phone">Telefone</string>
-    <string name="extras_family_teen">Conta teen</string>
-    <string name="extras_uber_one">Uber One</string>
-    <string name="extras_uber_one_off">Sem subscrição. Ative para 5% de desconto em viagens.</string>
-    <string name="extras_uber_one_on">Subscrição ativa · 5% de desconto em viagens.</string>
-    <string name="extras_uber_one_subscribe">Ativar Uber One</string>
-    <string name="extras_uber_one_cancel">Cancelar Uber One</string>
-    <string name="extras_error">Não foi possível atualizar. Tente novamente.</string>
-    <string name="saved_title">Locais guardados</string>
-    <string name="saved_intro">Guarde moradas para pedir viagens mais depressa.</string>
-    <string name="saved_add">Adicionar local</string>
-    <string name="saved_label">Nome (ex.: Trabalho)</string>
-    <string name="saved_address">Morada</string>
-    <string name="saved_save">Guardar</string>
-    <string name="saved_remove">Remover</string>
-    <string name="saved_empty">Ainda não tem locais guardados.</string>
-    <string name="saved_error">Não foi possível guardar. Verifique a morada.</string>
-    <string name="safety_title">Segurança</string>
-    <string name="safety_intro">Adicione contactos de confiança, peça ajuda e partilhe a viagem em curso.</string>
-    <string name="safety_contacts_title">Contactos de confiança</string>
-    <string name="safety_contacts_detail">Recebem o alerta e podem acompanhar a viagem.</string>
-    <string name="safety_contacts_empty">Ainda não tem contactos. Adicione alguém de confiança.</string>
-    <string name="safety_add_contact">Adicionar contacto</string>
-    <string name="safety_contact_name">Nome</string>
-    <string name="safety_contact_phone">Telefone</string>
-    <string name="safety_add">Adicionar</string>
-    <string name="safety_remove">Remover</string>
-    <string name="safety_emergency_title">Emergência</string>
-    <string name="safety_sos">Pedir ajuda (SOS)</string>
-    <string name="safety_sos_ok">Alerta registado. A operação foi notificada.\n\nEm perigo imediato, ligue 112.</string>
-    <string name="safety_call_112">Ligar 112</string>
-    <string name="safety_trip_title">Viagem</string>
-    <string name="safety_share">Partilhar viagem</string>
-    <string name="safety_share_text">Estou numa viagem Qolari. Acompanhe aqui: %1$s</string>
-    <string name="safety_share_no_trip">Não há viagem ativa para partilhar.</string>
-    <string name="safety_error">Não foi possível concluir. Tente novamente.</string>
-    <string name="safety_close">Fechar</string>
-    <string name="safety_cancel">Cancelar</string>
 
     <!-- Promocoes -->
     <string name="promotions_title">Promoções</string>
@@ -368,4 +251,14 @@
     <string name="search_saved_empty">Ainda não tem uma morada guardada. Defina-a em Gerir conta.</string>
     <string name="login_code_resend">Usar o código do laboratório</string>
     <string name="login_code_lab_value">0000</string>
+    <string name="ride_from">De %1$s</string>
+    <string name="ride_to">Para %1$s</string>
+    <string name="a11y_zoom_in">Aumentar zoom</string>
+    <string name="a11y_zoom_out">Reduzir zoom</string>
+    <string name="account_suggestions">Sugestões</string>
+    <string name="account_verify_title">Conclua a verificação da sua conta</string>
+    <string name="account_verify_body_short">Conclua a verificação da sua conta para que a Qolari trabalhe melhor para si e para garantir a sua segurança.</string>
+    <string name="account_verify_start">Começar a verificação</string>
+    <string name="account_edit">Editar informações</string>
+    <string name="account_sign_out_confirm">Ao terminar sessão, os dados locais desta app são apagados. Pretende continuar?</string>
 </resources>

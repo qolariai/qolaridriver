@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="2.0dip" android:width="279.0dip" android:viewportWidth="279.0" android:viewportHeight="2.0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?artBlack" android:pathData="M0,1h279" android:strokeColor="@drawable/$ub__jump_starter_confirmation_dialog_divider__0" android:strokeWidth="1.0" />
+</vector>

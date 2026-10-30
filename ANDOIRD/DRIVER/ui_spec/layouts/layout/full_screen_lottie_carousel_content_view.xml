@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:id="@id/learning_carousel_video_holder" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:id="@id/lottie_loading_spinner" android:layout_width="@dimen/ub__loading_indicator_progress_size" android:layout_height="@dimen/ub__loading_indicator_progress_size" android:layout_margin="@dimen/ui__spacing_unit_2x" android:indeterminate="true" android:indeterminateTint="?colorPrimary" android:indeterminateTintMode="src_in" style="@style/Widget.AppCompat.ProgressBar" />
+    <com.ubercab.ui.core.emptystate.EmptyStateView android:id="@id/ub__error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center_horizontal" android:id="@id/learning_full_screen_lottie_view" android:layout_width="fill_parent" android:layout_height="@dimen/video_window_size" android:scaleType="centerInside" android:elevation="0.0dip" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/learning_hub_replay" android:background="@color/ub__themeless_dark_scrim" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:layout_width="@dimen/ui__avatar_size_medium" android:layout_height="@dimen/ui__avatar_size_medium" android:tint="?iconColorInverse" app:analyticsId="2ad03472-a359" app:srcCompat="@drawable/ub__ic_reset" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.ui.core.UFrameLayout>

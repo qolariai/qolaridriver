@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.core.do_panel.DoPanelProgressButtonView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/carbon_trip_button" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.Medium" android:textColor="?buttonPrimaryTextColor" android:layout_gravity="center_horizontal" android:id="@id/carbon_trip_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?buttonPrimaryTextColor" android:layout_gravity="center_horizontal" android:id="@id/carbon_trip_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.core.do_panel.DoPanelProgressButtonView>

@@ -1,0 +1,8 @@
+{
+ "drawables": {
+  "item": {
+   "material_ic_keyboard_arrow_next_black_24dp": "@drawable/material_ic_keyboard_arrow_left_black_24dp",
+   "material_ic_keyboard_arrow_previous_black_24dp": "@drawable/material_ic_keyboard_arrow_right_black_24dp"
+  }
+ }
+}

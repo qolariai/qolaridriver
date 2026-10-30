@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.learning_hub.LearningHubView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/bit_loading_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/carousel_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UViewPager android:id="@id/background_image_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.UViewPager android:id="@id/carousel_cards_view_pager" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_5x" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.UTabLayout android:layout_gravity="bottom" android:id="@id/page_indicator" android:layout_width="fill_parent" android:layout_height="@dimen/learning_hub_page_indicator_height" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" app:analyticsId="773f8f6c-d2e0" app:tabBackground="@drawable/tab_selector" app:tabGravity="center" app:tabIndicatorHeight="@dimen/ui__spacing_unit_0x" app:tabPaddingEnd="@dimen/ui__spacing_unit_1x" app:tabPaddingStart="@dimen/ui__spacing_unit_1x" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.emptystate.EmptyStateView android:id="@id/ub__error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.learning_hub.LearningHubView>

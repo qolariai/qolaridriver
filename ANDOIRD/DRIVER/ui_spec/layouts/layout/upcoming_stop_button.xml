@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.stop_future_request.upcoming_integration.UpcomingStopButtonView android:orientation="horizontal" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_9x" android:foreground="?selectableItemBackground" android:hapticFeedbackEnabled="true" uber:analyticsId="af09f42b-89ae"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_8x" android:layout_margin="@dimen/ui__spacing_unit_0.5x">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/upcoming_stop_icon_background" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:scaleType="centerInside" android:tint="?colorNegative" uber:srcCompat="@drawable/ub__carbon_icon_circle_small" />
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/upcoming_stop_icon" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:scaleType="centerInside" android:tint="?iconColorInverse" uber:srcCompat="@drawable/ub_ic_hand_stop" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Medium" android:textColor="?android:textColorPrimary" android:layout_gravity="center_vertical" android:id="@id/upcoming_stop_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/upcoming_button_text" android:lines="1" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_8x" android:layout_margin="@dimen/ui__spacing_unit_0.5x">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/upcoming_stop_close" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:scaleType="center" android:tint="?iconColor" uber:srcCompat="@drawable/ub_ic_x" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.stop_future_request.upcoming_integration.UpcomingStopButtonView>

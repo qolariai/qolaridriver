@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:background="?green600" android:paddingTop="@dimen/ui__spacing_unit_0.5x" android:paddingBottom="@dimen/ui__spacing_unit_0.5x" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="189c49a1-1428">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub_ic_checkmark_small" />
+        <com.ubercab.ui.core.text.BaseTextView android:textSize="@dimen/ui__text_size_small" android:textColor="?contentOnColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__checked_in" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UFrameLayout>

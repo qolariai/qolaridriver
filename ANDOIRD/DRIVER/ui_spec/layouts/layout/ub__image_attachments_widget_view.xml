@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__image_attachments_widget_content_container" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" app:analyticsId="7ce5325c-3f49">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__image_attachments_widget_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" android:contentDescription="@string/image_attachments_widget_image_content_desc" app:analyticsId="c3aaa9b4-7d4b" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/ub__image_attachments_widget_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="@style/Widget.AppCompat.ProgressBar" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UTextView android:textColor="?textNegative" android:id="@id/ub__image_attachments_widget_error_text" android:paddingTop="@dimen/ui__spacing_unit_0.5x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_attachments_widget_download_error" app:analyticsId="90023162-7577" style="@style/Platform.TextStyle.H6.News.Tertiary" />
+</merge>

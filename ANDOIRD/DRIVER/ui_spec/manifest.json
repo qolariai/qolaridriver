@@ -1,0 +1,2811 @@
+{
+ "package": "com.ubercab.driver",
+ "permissions": [
+  "android.permission.FOREGROUND_SERVICE_CAMERA",
+  "android.permission.CAMERA",
+  "android.permission.FOREGROUND_SERVICE",
+  "android.permission.FOREGROUND_SERVICE_LOCATION",
+  "android.permission.ACCESS_COARSE_LOCATION",
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.SYSTEM_ALERT_WINDOW",
+  "android.permission.INTERNET",
+  "com.ubercab.driver.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+  "android.permission.ACCESS_NETWORK_STATE",
+  "android.permission.READ_BASIC_PHONE_STATE",
+  "com.google.android.gms.permission.AD_ID",
+  "android.permission.WAKE_LOCK",
+  "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+  "android.permission.ACCESS_ADSERVICES_AD_ID",
+  "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+  "android.permission.RECEIVE_BOOT_COMPLETED",
+  "android.permission.ACCESS_WIFI_STATE",
+  "android.permission.READ_PHONE_STATE",
+  "android.permission.BLUETOOTH",
+  "android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS",
+  "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+  "android.permission.USE_BIOMETRIC",
+  "android.permission.USE_FINGERPRINT",
+  "android.permission.READ_CONTACTS",
+  "android.permission.HIDE_OVERLAY_WINDOWS",
+  "android.permission.POST_NOTIFICATIONS",
+  "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+  "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+  "android.permission.USE_FULL_SCREEN_INTENT",
+  "android.permission.MODIFY_AUDIO_SETTINGS",
+  "android.permission.VIBRATE",
+  "android.permission.BLUETOOTH_ADMIN",
+  "android.permission.READ_EXTERNAL_STORAGE",
+  "android.permission.DETECT_SCREEN_CAPTURE",
+  "android.permission.BLUETOOTH_SCAN",
+  "android.permission.BLUETOOTH_CONNECT",
+  "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+  "android.permission.WRITE_EXTERNAL_STORAGE",
+  "android.permission.CALL_PHONE",
+  "android.permission.BLUETOOTH_ADVERTISE",
+  "com.google.android.c2dm.permission.RECEIVE",
+  "android.permission.NFC",
+  "androidx.car.app.NAVIGATION_TEMPLATES",
+  "androidx.car.app.ACCESS_SURFACE",
+  "android.permission.GET_ACCOUNTS",
+  "android.permission.CHANGE_NETWORK_STATE"
+ ],
+ "uses_features": [
+  {
+   "name": "android.hardware.telephony",
+   "required": "false"
+  },
+  {
+   "name": "android.hardware.sensor.stepcounter",
+   "required": "false"
+  },
+  {
+   "name": "android.hardware.sensor.stepdetector",
+   "required": "false"
+  },
+  {
+   "name": null,
+   "required": "true"
+  },
+  {
+   "name": "android.hardware.camera",
+   "required": "true"
+  },
+  {
+   "name": "android.hardware.sensor.accelerometer",
+   "required": "false"
+  },
+  {
+   "name": "android.hardware.sensor.gyroscope",
+   "required": "false"
+  },
+  {
+   "name": "android.hardware.sensor.barometer",
+   "required": "false"
+  },
+  {
+   "name": "android.hardware.microphone",
+   "required": "false"
+  }
+ ],
+ "activities": [
+  {
+   "name": "com.ubercab.carbon.core.CarbonActivity",
+   "exported": "true",
+   "launchMode": "singleTask",
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "uberdriver"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "http"
+      },
+      {
+       "scheme": "https"
+      },
+      {
+       "host": "accounts.uber.com"
+      },
+      {
+       "pathPattern": "/communication"
+      },
+      {
+       "pathPattern": "/communication/driver"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.MAIN"
+     ],
+     "categories": [
+      "android.intent.category.LAUNCHER"
+     ],
+     "data": []
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "https"
+      },
+      {
+       "host": "partners.uber.com"
+      },
+      {
+       "pathPrefix": "/open-mobile-app"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "https"
+      },
+      {
+       "host": "auth3.uber.com"
+      },
+      {
+       "pathPrefix": "/autologin/driver"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "earn.sng.link",
+       "scheme": "https"
+      },
+      {
+       "pathPrefix": "/A"
+      },
+      {
+       "pathPrefix": "/B"
+      },
+      {
+       "pathPrefix": "/E"
+      },
+      {
+       "pathPrefix": "/F"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "https"
+      },
+      {
+       "host": "www.uber.com"
+      },
+      {
+       "pathPattern": "/s/d/kochab"
+      },
+      {
+       "pathPattern": "/../../s/d/kochab"
+      },
+      {
+       "pathPattern": "/s/c/deliver-kochab"
+      },
+      {
+       "pathPattern": "/a/join-kochab"
+      },
+      {
+       "pathPattern": "/a/join-new"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/sso_third_party_host",
+       "pathPrefix": "@string/sso_third_party_path_pattern",
+       "scheme": "@string/sso_third_party_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/sso_third_party_host",
+       "pathPrefix": "@string/sso_driver_path_pattern",
+       "scheme": "@string/sso_third_party_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.nfc.action.NDEF_DISCOVERED"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT"
+     ],
+     "data": [
+      {
+       "host": "www.ubereats.com",
+       "pathPrefix": "/tag-at-store",
+       "scheme": "https"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "www.ubereats.com",
+       "pathPrefix": "/tag-at-store",
+       "scheme": "https"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.nfc.action.NDEF_DISCOVERED"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT"
+     ],
+     "data": [
+      {
+       "host": "nfc",
+       "scheme": "uber-eats"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "nfc",
+       "scheme": "uber-eats"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "https"
+      },
+      {
+       "host": "account.uber.com"
+      },
+      {
+       "pathPattern": "/gsu"
+      },
+      {
+       "pathPattern": "/gsu/driver"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.carbon_style_guide.CarbonStyleGuideActivity",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.APP_STYLE_GUIDE"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.google.android.gms.common.api.GoogleApiActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.compose.ui.tooling.PreviewActivity",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.android.play.core.common.PlayCoreDialogWrapperActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.external_web_view.core.WebViewActivity",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.jakewharton.processphoenix.ProcessPhoenix",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.car.app.CarAppPermissionActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.internal.SignInHubActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.video_call.base.VideoCallActivity",
+   "exported": "true",
+   "launchMode": "singleTask",
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.credentials.playservices.controllers.identityauth.HiddenActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.credentials.playservices.controllers.identitycredentials.IdentityCredentialApiHiddenActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "exported": "true",
+   "launchMode": "singleTask",
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host",
+       "pathPrefix": "@string/uauth_redirectUrl",
+       "scheme": "@string/uauth_dl_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host_new",
+       "pathPrefix": "@string/uauth_passkeys_get",
+       "scheme": "@string/uauth_dl_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host",
+       "pathPrefix": "@string/uauth_redirectUrl",
+       "scheme": "https"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host_new",
+       "pathPrefix": "@string/uauth_google_web_flow_path",
+       "scheme": "@string/uauth_applink_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host",
+       "pathPrefix": "@string/uauth_socialPath",
+       "scheme": "@string/uauth_dl_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host",
+       "pathPrefix": "@string/uauth_magicLink",
+       "scheme": "@string/uauth_dl_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host_new",
+       "pathPrefix": "@string/uauth_redirectUrl_v2",
+       "scheme": "@string/uauth_dl_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host_new",
+       "pathPrefix": "@string/uauth_redirectUrl_v2",
+       "scheme": "https"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host_new",
+       "pathPrefix": "@string/uauth_socialPath_v2",
+       "scheme": "@string/uauth_dl_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host_new",
+       "pathPrefix": "@string/uauth_magicLink_v2",
+       "scheme": "@string/uauth_dl_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host",
+       "pathPrefix": "@string/ub__usl_session_revival_path",
+       "scheme": "https"
+      },
+      {
+       "host": "@string/uauth_host_new",
+       "pathPrefix": "@string/ub__usl_session_revival_path",
+       "scheme": "https"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_grab_redirect_host",
+       "pathPrefix": "@string/ub__identity_oauth_gateway_redirect_path",
+       "scheme": "@string/uauth_grab_redirect_scheme"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "com.whatsapp.otp.OTP_RETRIEVED"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT"
+     ],
+     "data": []
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "@string/uauth_host_new",
+       "pathPrefix": "@string/ub__usl_verify_path",
+       "scheme": "@string/uauth_dl_scheme"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.uber.identity.api.uauth.internal.helper.USLActivity",
+   "exported": null,
+   "launchMode": "singleTask",
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.voip.v2.call.screen.activity.VoipV2CallActivity",
+   "exported": null,
+   "launchMode": "singleInstance",
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.dragon_crawl_receiver.DragonCrawlActivity",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "capture",
+       "scheme": "uber-dragon-crawl-e2e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.uber.auto_trigger_elements.deeplink.AutoBugReporterActivity",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "capture_bug_report",
+       "scheme": "uber-wisdom-bugreport"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.feedback.optional.phabs.activity.ScreenshotNotificationActivity",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.feedback.optional.phabs.activity.FeedbackActivity",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.bug_reporter.ui.activity.BugReporterActivity",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.payment.provider.common.custom_tab_switcher.CustomTabSwitchListenerActivity",
+   "exported": "true",
+   "launchMode": "singleTask",
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "com.ubercab.driver.payment.provider.callback"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "https"
+      },
+      {
+       "host": "payment-providers.uber.com"
+      },
+      {
+       "pathPrefix": "/client_redirect/com.ubercab.driver.payment.provider.callback/unified_onboarding"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "com.ubercab.driver.payment.provider.callback"
+      },
+      {
+       "host": "payment"
+      },
+      {
+       "pathPrefix": "/checkout"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.uber.payment.provider.common.custom_tab_switcher.CustomTabSwitchManagerActivity",
+   "exported": "false",
+   "launchMode": "singleTask",
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.adyen.threeds2.internal.ui.activity.ChallengeActivity",
+   "exported": "true",
+   "launchMode": "singleTask",
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "com.ubercab.driver",
+       "scheme": "adyen3ds2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.uber.payment.thirdparty.paypalclient.connect.PaypalConnectActivity",
+   "exported": "true",
+   "launchMode": "singleTask",
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "braintree-paypal-connect.com.ubercab.driver"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "braintree-paypal-connect-fallback.com.ubercab.driver"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "https"
+      },
+      {
+       "host": "payment-providers.uber.com"
+      },
+      {
+       "pathPrefix": "/client_redirect/braintree-paypal-connect.com.ubercab.driver/paypal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.presidio.payment.uberpay.operation.authorization.UberPayWebAuthorizationActivity",
+   "exported": "true",
+   "launchMode": "singleTask",
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "host": "authorization",
+       "scheme": "com.ubercab.driver.uberpay"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.uber.payment.thirdparty.venmoclient.connect.VenmoConnectActivity",
+   "exported": "true",
+   "launchMode": "singleTask",
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": []
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "braintree-venmo-connect.com.ubercab.driver"
+      }
+     ]
+    },
+    {
+     "actions": [
+      "android.intent.action.VIEW"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT",
+      "android.intent.category.BROWSABLE"
+     ],
+     "data": [
+      {
+       "scheme": "https"
+      },
+      {
+       "host": "payment-providers.uber.com"
+      },
+      {
+       "pathPrefix": "/client_redirect/braintree-venmo-connect.com.ubercab.driver/venmo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.healthline.alternate.launch.core.AlternateLaunchWebActivity",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.healthline.core.actions.ShowWebViewAction$WebViewActivity",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.healthline.core.actions.AlertAction$AlertActivity",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.android.play.agesignals.AgeSharingConsentWrapperActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.partnersignup.webview.PartnerSignupActivity",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.accountsecurity.activity.AccountSecurityActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.carbon_style_guide.sections.CarbonButtonsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.carbon_style_guide.sections.CarbonToolbarActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.app.v2.StyleGuideLauncherActivityV2",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.v2.MainActivityV2",
+   "exported": "true",
+   "launchMode": "singleTop",
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.ubercab.presidio.STYLE_GUIDE"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT"
+     ],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ActivityTransitionActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.AnimationActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.AttrResolverActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.BaseBannerActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.BaseMessageCardActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ListHeadingActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ButtonsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.TimedProgressButtonsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.OvalTextViewActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.CardsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ChipsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ActionSheetModalActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.DialogActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ConfirmationModalsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ColorsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.EditTextActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.EmptyStateActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.PlaceholderActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.MaterialDatePickerActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.MaterialTimePickerActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.DividerActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ElevationActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.FontMetricsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.RadioButtonActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.GravityImageActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ButtonDockActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.IconsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ListItemActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.LoadingActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.OTPActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.RealtimeResolverActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SandboxActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ScreenStackActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SDUIButtonActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SDUIEmptyStateActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.input.SDUIInputActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SDUISnackbarActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SDUITagActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SDUITextViewActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SearchActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SnackbarsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.StepperActivity",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.TabsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.TagActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.BaseTileActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.BaseTooltipActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.TypographyActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.Typography2Activity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SDUIFontStylesActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ThirdPartyActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.TooltipActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.SnackbarActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.MaterialButtons",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SlidingButtonActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.DimensionsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.VerticalPickerActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.UTextViewExtensionActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ColorTokensActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.Base2XmlPrimitiveColorsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.Base2XmlSemanticColorsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.BottomSheetActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SliderActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.CheckboxActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.HeaderListActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.HeaderCollapsibleActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.HeaderCollapsedActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.HeaderExpandedActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SwitchActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ProgressActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.TimePickerActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ViewUtilsActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.InsetsSourceActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ViewSwitcherActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.BaseCardActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.CalendarViewActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.input.BaseInputActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ButtonGroupActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.RichIllustrationActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.RichTextActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.BaseBadgeActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.TabRowActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SegmentedControlActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.RatingActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.SystemBannerActivityV2",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.ViewModelPlaygroundActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.styleguide.sections.BasePopoverActivity",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": "portrait",
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.app.ComposeStyleGuideActivity",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.ubercab.presidio.COMPOSE_STYLE_GUIDE"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT"
+     ],
+     "data": []
+    }
+   ]
+  }
+ ],
+ "services": [
+  {
+   "name": "androidx.work.impl.foreground.SystemForegroundService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.firebase.components.ComponentDiscoveryService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementJobService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.SystemAlarmService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.work.impl.background.systemjob.SystemJobService",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.room.MultiInstanceInvalidationService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.browser.customtabs.PostMessageService",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.camera.core.impl.MetadataHolderService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.android.gms.auth.api.signin.RevocationBoundService",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.credentials.playservices.CredentialProviderMetadataHolder",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.voip.v2.service.VoipKeepAliveService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "io.livekit.android.room.track.screencapture.ScreenCaptureService",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.meter_ota.MeterDfuService",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.firebase.messaging.FirebaseMessagingService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.google.firebase.MESSAGING_EVENT"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.carbon_auto.core.CarbonCarAppService",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "androidx.car.app.CarAppService"
+     ],
+     "categories": [
+      "androidx.car.app.category.NAVIGATION"
+     ],
+     "data": []
+    },
+    {
+     "actions": [
+      "androidx.car.app.action.NAVIGATE"
+     ],
+     "categories": [
+      "android.intent.category.DEFAULT"
+     ],
+     "data": [
+      {
+       "scheme": "geo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.push.UberFirebaseMessagingService",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.google.firebase.MESSAGING_EVENT"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  }
+ ],
+ "receivers": [
+  {
+   "name": "androidx.profileinstaller.ProfileInstallReceiver",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "androidx.profileinstaller.action.INSTALL_PROFILE"
+     ],
+     "categories": [],
+     "data": []
+    },
+    {
+     "actions": [
+      "androidx.profileinstaller.action.SKIP_FILE"
+     ],
+     "categories": [],
+     "data": []
+    },
+    {
+     "actions": [
+      "androidx.profileinstaller.action.SAVE_PROFILE"
+     ],
+     "categories": [],
+     "data": []
+    },
+    {
+     "actions": [
+      "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.google.android.gms.measurement.AppMeasurementReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.ACTION_POWER_CONNECTED",
+      "android.intent.action.ACTION_POWER_DISCONNECTED"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.BATTERY_OKAY",
+      "android.intent.action.BATTERY_LOW"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.DEVICE_STORAGE_LOW",
+      "android.intent.action.DEVICE_STORAGE_OK"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.net.conn.CONNECTIVITY_CHANGE"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.RescheduleReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.BOOT_COMPLETED",
+      "android.intent.action.TIME_SET",
+      "android.intent.action.TIMEZONE_CHANGED"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "androidx.work.impl.background.systemalarm.UpdateProxies"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "androidx.work.impl.diagnostics.DiagnosticsReceiver",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "androidx.car.app.notification.CarAppNotificationBroadcastReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.presidio.pushnotifier.core.PushReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.ubercab.push.UBER_MESSAGE"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.presidio.pushnotifier.core.PushRegistrationNewTokenReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.ubercab.push.UBER_NEW_TOKEN"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.notification.optional.PushNotificationActionReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.ubercab.presidio.PUSH_NOTIFICATION_ACTION_CLICK",
+      "com.ubercab.presidio.PUSH_NOTIFICATION_ACTION_DELETE"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.notification.optional.NotificationBlockStateReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.app.action.APP_BLOCK_STATE_CHANGED",
+      "android.app.action.NOTIFICATION_CHANNEL_BLOCK_STATE_CHANGED",
+      "android.app.action.NOTIFICATION_CHANNEL_GROUP_BLOCK_STATE_CHANGED"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.notification.core.actions.intercom.IntercomDirectReplyReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.ubercab.notification.core.actions.intercom.IntercomDirectReplyReceiver"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.uber.identity.api.uauth.internal.helper.whatsapp.WhatsAppOtpCodeReceiver",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.whatsapp.otp.OTP_RETRIEVED"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.uber.identity.api.uauth.internal.helper.whatsapp.WhatsAppOtpCodeReceiver",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.whatsapp.otp.OTP_RETRIEVED"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.voip.v2.notification.VoipNotificationBroadcastReceiver",
+   "exported": null,
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.time.ntp.NtpBootCompletedReceiver",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.intent.action.BOOT_COMPLETED"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.dispatch.DispatchReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.ubercab.dispatch.REJECT_OFFER",
+      "com.ubercab.dispatch.ACCEPT_OFFER"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.uber.mobilestudio.force_crash.broadcastReceiver.SlowBroadcastReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.firebase.iid.FirebaseInstanceIdReceiver",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.google.android.c2dm.intent.RECEIVE"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.quest_widget.QuestWidgetProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.appwidget.action.APPWIDGET_UPDATE"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.uber.quest_widget.QuestWidgetProviderV2",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "android.appwidget.action.APPWIDGET_UPDATE"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.ubercab.healthline.direct_command.push.core.receiver.DirectCommandPushReceiver",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.ubercab.push.UBER_MESSAGE"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  },
+  {
+   "name": "com.uber.parameters.override_broadcast.ParametersOverrideRequestBroadcastReceiver",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": null,
+   "intent_filters": [
+    {
+     "actions": [
+      "com.uber.parameters.cli"
+     ],
+     "categories": [],
+     "data": []
+    }
+   ]
+  }
+ ],
+ "providers": [
+  {
+   "name": "androidx.startup.InitializationProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.androidx-startup",
+   "intent_filters": []
+  },
+  {
+   "name": "com.google.firebase.provider.FirebaseInitProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.firebaseinitprovider",
+   "intent_filters": []
+  },
+  {
+   "name": "com.squareup.picasso.PicassoProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.com.squareup.picasso",
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.external_web_view.core.WebviewFileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.external_web_view.core.fileprovider",
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.help.util.HelpUtilFileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.help.util.FileProvider",
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.privacy.privacy_center.file_manager.PrivacyWebFileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.privacy.web.fileprovider",
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.safety.identity.verification.docscan.native_camera.NativeCameraFileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.docScan.native.camera.FileProvider",
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.identity.api.uauth.internal.customtabs.TwaFileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.usl.twa.splash.fileprovider",
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.chatui.conversation.composer.mode.text.mediaSelection.ChatComposerFileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.chatui.composer.FileProvider",
+   "intent_filters": []
+  },
+  {
+   "name": "leakcanary.internal.MainProcessAppWatcherInstaller",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.leakcanary-installer",
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.tax_and_compliance.document.TaxDocumentsFileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.tax.document.fileprovider",
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.uber_bank.statements.common.StatementsFileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.uber_bank.statements.common.FileProvider",
+   "intent_filters": []
+  },
+  {
+   "name": "androidx.core.content.FileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.driver_qr.fileprovider",
+   "intent_filters": []
+  },
+  {
+   "name": "com.ubercab.apk_download.AppDownloadFileProvider",
+   "exported": "false",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.apk_download.FileProvider",
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.identity.devicesessions.contentprovider.DeviceSessionsContentProvider",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.provider.ds",
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.firstpartysso.provider.SSOContentProvider",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.provider.sso",
+   "intent_filters": []
+  },
+  {
+   "name": "com.uber.firstpartysso.provider.SSOEligibilityContentProvider",
+   "exported": "true",
+   "launchMode": null,
+   "screenOrientation": null,
+   "authorities": "com.ubercab.driver.provider.sso.eligibility",
+   "intent_filters": []
+  }
+ ],
+ "deeplinks": [
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "scheme": "uberdriver"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "scheme": "http"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "scheme": "https"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "accounts.uber.com"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "scheme": "https"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "partners.uber.com"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "scheme": "https"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "auth3.uber.com"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "earn.sng.link",
+   "scheme": "https"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "scheme": "https"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "www.uber.com"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "@string/sso_third_party_host",
+   "pathPrefix": "@string/sso_third_party_path_pattern",
+   "scheme": "@string/sso_third_party_scheme"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "@string/sso_third_party_host",
+   "pathPrefix": "@string/sso_driver_path_pattern",
+   "scheme": "@string/sso_third_party_scheme"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "www.ubereats.com",
+   "pathPrefix": "/tag-at-store",
+   "scheme": "https"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "www.ubereats.com",
+   "pathPrefix": "/tag-at-store",
+   "scheme": "https"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "nfc",
+   "scheme": "uber-eats"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "nfc",
+   "scheme": "uber-eats"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "scheme": "https"
+  },
+  {
+   "component": "com.ubercab.carbon.core.CarbonActivity",
+   "host": "account.uber.com"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host",
+   "pathPrefix": "@string/uauth_redirectUrl",
+   "scheme": "@string/uauth_dl_scheme"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host_new",
+   "pathPrefix": "@string/uauth_passkeys_get",
+   "scheme": "@string/uauth_dl_scheme"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host",
+   "pathPrefix": "@string/uauth_redirectUrl",
+   "scheme": "https"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host_new",
+   "pathPrefix": "@string/uauth_google_web_flow_path",
+   "scheme": "@string/uauth_applink_scheme"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host",
+   "pathPrefix": "@string/uauth_socialPath",
+   "scheme": "@string/uauth_dl_scheme"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host",
+   "pathPrefix": "@string/uauth_magicLink",
+   "scheme": "@string/uauth_dl_scheme"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host_new",
+   "pathPrefix": "@string/uauth_redirectUrl_v2",
+   "scheme": "@string/uauth_dl_scheme"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host_new",
+   "pathPrefix": "@string/uauth_redirectUrl_v2",
+   "scheme": "https"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host_new",
+   "pathPrefix": "@string/uauth_socialPath_v2",
+   "scheme": "@string/uauth_dl_scheme"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host_new",
+   "pathPrefix": "@string/uauth_magicLink_v2",
+   "scheme": "@string/uauth_dl_scheme"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host",
+   "pathPrefix": "@string/ub__usl_session_revival_path",
+   "scheme": "https"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host_new",
+   "pathPrefix": "@string/ub__usl_session_revival_path",
+   "scheme": "https"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_grab_redirect_host",
+   "pathPrefix": "@string/ub__identity_oauth_gateway_redirect_path",
+   "scheme": "@string/uauth_grab_redirect_scheme"
+  },
+  {
+   "component": "com.uber.identity.api.uauth.internal.helper.AppLinkActivity",
+   "host": "@string/uauth_host_new",
+   "pathPrefix": "@string/ub__usl_verify_path",
+   "scheme": "@string/uauth_dl_scheme"
+  },
+  {
+   "component": "com.uber.dragon_crawl_receiver.DragonCrawlActivity",
+   "host": "capture",
+   "scheme": "uber-dragon-crawl-e2e"
+  },
+  {
+   "component": "com.uber.auto_trigger_elements.deeplink.AutoBugReporterActivity",
+   "host": "capture_bug_report",
+   "scheme": "uber-wisdom-bugreport"
+  },
+  {
+   "component": "com.uber.payment.provider.common.custom_tab_switcher.CustomTabSwitchListenerActivity",
+   "scheme": "com.ubercab.driver.payment.provider.callback"
+  },
+  {
+   "component": "com.uber.payment.provider.common.custom_tab_switcher.CustomTabSwitchListenerActivity",
+   "scheme": "https"
+  },
+  {
+   "component": "com.uber.payment.provider.common.custom_tab_switcher.CustomTabSwitchListenerActivity",
+   "host": "payment-providers.uber.com"
+  },
+  {
+   "component": "com.uber.payment.provider.common.custom_tab_switcher.CustomTabSwitchListenerActivity",
+   "scheme": "com.ubercab.driver.payment.provider.callback"
+  },
+  {
+   "component": "com.uber.payment.provider.common.custom_tab_switcher.CustomTabSwitchListenerActivity",
+   "host": "payment"
+  },
+  {
+   "component": "com.adyen.threeds2.internal.ui.activity.ChallengeActivity",
+   "host": "com.ubercab.driver",
+   "scheme": "adyen3ds2"
+  },
+  {
+   "component": "com.uber.payment.thirdparty.paypalclient.connect.PaypalConnectActivity",
+   "scheme": "braintree-paypal-connect.com.ubercab.driver"
+  },
+  {
+   "component": "com.uber.payment.thirdparty.paypalclient.connect.PaypalConnectActivity",
+   "scheme": "braintree-paypal-connect-fallback.com.ubercab.driver"
+  },
+  {
+   "component": "com.uber.payment.thirdparty.paypalclient.connect.PaypalConnectActivity",
+   "scheme": "https"
+  },
+  {
+   "component": "com.uber.payment.thirdparty.paypalclient.connect.PaypalConnectActivity",
+   "host": "payment-providers.uber.com"
+  },
+  {
+   "component": "com.ubercab.presidio.payment.uberpay.operation.authorization.UberPayWebAuthorizationActivity",
+   "host": "authorization",
+   "scheme": "com.ubercab.driver.uberpay"
+  },
+  {
+   "component": "com.uber.payment.thirdparty.venmoclient.connect.VenmoConnectActivity",
+   "scheme": "braintree-venmo-connect.com.ubercab.driver"
+  },
+  {
+   "component": "com.uber.payment.thirdparty.venmoclient.connect.VenmoConnectActivity",
+   "scheme": "https"
+  },
+  {
+   "component": "com.uber.payment.thirdparty.venmoclient.connect.VenmoConnectActivity",
+   "host": "payment-providers.uber.com"
+  },
+  {
+   "component": "com.uber.carbon_auto.core.CarbonCarAppService",
+   "scheme": "geo"
+  }
+ ],
+ "application_name": "com.ubercab.carbon.core.CarbonSingleBinaryApplication"
+}

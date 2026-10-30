@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__payment_spender_arrears_details_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?gutterSize" android:contentDescription="@string/ub__payment_close" app:analyticsId="b9451734-91c2" app:srcCompat="@drawable/ic_close" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/ub__payment_spender_arrears_details_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__payment_spender_arrears_loading_indicator" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UPlainView android:background="?black" android:fitsSystemWindows="@bool/use_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:alpha="0.8" android:importantForAccessibility="no" app:analyticsEnabled="false" />
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center" android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:layout_width="@dimen/ub__loading_indicator_progress_size" android:layout_height="@dimen/ub__loading_indicator_progress_size" android:indeterminate="true" android:indeterminateTint="?white" android:indeterminateTintMode="src_in" app:size="large" style="@style/Platform.Progress.CircleIndeterminate" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?white" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ub__spender_arrears_list_processing_payment" android:lineSpacingMultiplier="1.5" style="@style/Platform.TextStyle.LabelSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

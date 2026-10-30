@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/ub__action" android:layout_width="wrap_content" android:layout_height="@dimen/ub__sys_message_widget_action_height" android:layout_marginStart="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" uber:buttonType="secondary" uber:layout_constraintEnd_toEndOf="parent" uber:layout_constraintStart_toStartOf="parent" uber:shape="pill" uber:size="medium" style="@style/Platform.Button.BaseDynamic" />
+</merge>

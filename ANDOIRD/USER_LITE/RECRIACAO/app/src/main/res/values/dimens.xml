@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="ql_margin">18dp</dimen>
+    <dimen name="ql_margin">16dp</dimen>
     <dimen name="ql_gutter">12dp</dimen>
     <dimen name="ql_gap">16dp</dimen>
     <dimen name="ql_touch">48dp</dimen>
@@ -8,7 +8,7 @@
     <dimen name="ql_corner_large">16dp</dimen>
     <dimen name="ql_search_height">60dp</dimen>
     <dimen name="ql_button_height">56dp</dimen>
-    <dimen name="ql_map_height">420dp</dimen>
+    <dimen name="ql_map_height">388dp</dimen>
     <dimen name="ql_avatar">56dp</dimen>
     <dimen name="ql_tile_height">98dp</dimen>
 </resources>

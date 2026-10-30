@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/point_marker_clustered_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center|top" android:id="@id/marker_background_icon" android:layout_width="@dimen/circle_background_size_medium" android:layout_height="@dimen/circle_background_size_medium" android:scaleType="centerInside" android:tint="?mapPrimary" app:srcCompat="@drawable/ic_circle" />
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center|top" android:id="@id/marker_icon" android:layout_width="@dimen/marker_icon_size_small" android:layout_height="@dimen/marker_icon_size_small" android:layout_marginTop="@dimen/margin_top_icon_size_small_circle_medium" android:scaleType="centerInside" android:tint="?android:textColorPrimaryInverse" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/point_marker_clustered_icon" android:visibility="gone" android:tint="?iconColorInverse" android:layout_marginEnd="@dimen/ui__spacing_unit_0.5x" app:srcCompat="@drawable/ic_chevron_right" style="@style/mapMarkerClusteredIconStyle" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.map_marker_management.view.OutlineTextView android:textColor="?mapPrimary" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/marker_title" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" android:textAlignment="center" app:outlineTextView_strokeAlpha="0.5" app:outlineTextView_strokeColor="?colorSecondary" app:outlineTextView_strokeWidth="@dimen/marker_title_stroke_width" style="@style/mapMarkerTertiary" />
+    <com.ubercab.map_marker_management.view.OutlineTextView android:textColor="?mapPrimary" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/marker_subtitle" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" android:textAlignment="center" app:outlineTextView_strokeAlpha="0.5" app:outlineTextView_strokeColor="?colorSecondary" app:outlineTextView_strokeWidth="@dimen/marker_title_stroke_width" style="@style/mapMarkerQuaternary" />
+</merge>

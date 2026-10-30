@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.risk.challenges.cpf_verification.CPFVerificationView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="eb5bf316-1331"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_6x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cpf_verification_title" app:analyticsId="875e4176-ebdc" style="@style/Platform.TextStyle.DisplayXSmall" />
+        <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.UImageView android:id="@id/cpf_verification_icon" android:padding="@dimen/ub__abc_button_padding_horizontal_material" android:layout_width="@dimen/ub__blocking_alert_image_size" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:contentDescription="@string/ssn_verification_icon_desc" android:layout_alignParentEnd="true" app:analyticsId="3f4dc1b7-37bc" app:srcCompat="@drawable/ub__ssn_card" />
+            <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cpf_verification_description" android:layout_marginEnd="@dimen/ui__spacing_unit_4x" android:layout_toStartOf="@id/cpf_verification_icon" app:analyticsId="b623fd97-cb48" style="@style/Platform.TextStyle.ParagraphDefault" />
+        </com.ubercab.ui.core.URelativeLayout>
+        <include android:id="@id/cpf_verification_layout" layout="@layout/ub__cpf_verification_layout" />
+        <com.ubercab.ui.core.UTextView android:textColor="?colorNegative" android:id="@id/cpf_not_match_warning_tv" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/cpf_not_match_message" app:analyticsId="5570ffa8-dc6d" style="@style/Platform.TextStyle.H5" />
+        <com.ubercab.ui.core.ULinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="bottom" android:id="@id/ub__cpf_submit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/submit" app:analyticsId="aaf1c90c-c2ae" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" style="@style/Widget.Platform.Toolbar" />
+</com.ubercab.risk.challenges.cpf_verification.CPFVerificationView>

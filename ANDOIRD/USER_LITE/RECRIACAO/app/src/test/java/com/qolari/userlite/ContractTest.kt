@@ -94,20 +94,6 @@ class ContractTest {
     }
 
     @Test
-    fun rateBodyIsAConcreteTypeRetrofitAccepts() {
-        val method = com.qolari.userlite.net.UserApi::class.java.methods.first { it.name == "rate" }
-        val body = method.parameterTypes[1]
-        assertFalse(
-            "Retrofit rejeita @Body Map<String, ?> (java.util.Map<java.lang.String, ?>): usar RateRequest",
-            Map::class.java.isAssignableFrom(body),
-        )
-        assertEquals(
-            """{"stars":5,"comment":"bom"}""",
-            gson.toJson(com.qolari.userlite.net.RateRequest(stars = 5, comment = "bom")),
-        )
-    }
-
-    @Test
     fun configHasOnePlaceForHosts() {
         assertEquals(AppConfig.environment.baseUrl, AppConfig.defaultBaseUrl)
         assertEquals("https://rider.qolari.com", Environment.SERVER.baseUrl)

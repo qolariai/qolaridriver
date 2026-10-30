@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?bgScrimDark" />
+    <corners android:topLeftRadius="@dimen/learning_hub_topic_thumbnail_corner_radius" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="@dimen/learning_hub_topic_thumbnail_corner_radius" />
+</shape>

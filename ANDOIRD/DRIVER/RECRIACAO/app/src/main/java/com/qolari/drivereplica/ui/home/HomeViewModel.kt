@@ -29,6 +29,10 @@ data class HomeUiState(
     /** Já houve uma resposta do servidor. Sem ela e com falha, o ecrã mostra "Ocorreu um erro" (capturas 117/120). */
     val loaded: Boolean = false,
     val failed: Boolean = false,
+    /** Horas de condução nas últimas 24 h ("3 h 12 min"), para o "Ver o tempo de condução". */
+    val driveTime24h: String = "",
+    /** Itinerário da última viagem concluída, em texto (nulo se não houver). */
+    val lastTripItinerary: String? = null,
 ) {
     val blocked: Boolean get() = blockers.isNotEmpty()
 }

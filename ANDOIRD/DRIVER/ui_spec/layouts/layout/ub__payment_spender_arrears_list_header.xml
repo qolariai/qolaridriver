@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__payment_spender_arrears_details_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_4x" android:text="@string/ub__spender_arrears_list_title" style="@style/Platform.TextStyle.DisplaySmall"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

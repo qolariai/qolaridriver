@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="96.0dip" android:width="96.0dip" android:viewportWidth="96.0" android:viewportHeight="96.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/ub__business_amex_offwhite" android:pathData="M88.3,75.35H55.58L29.37,27.63,24,17.93l64.29,0a5.17,5.17,0,0,1,5.29,5v4.66l0,42.66A5.17,5.17,0,0,1,88.3,75.35Z" />
+    <path android:fillColor="@color/ub__business_amex_dark_green" android:pathData="M14.32,75.32H8.6c-3.32,0-6-2.26-6-5L2.61,23c0-2.79,2.69-5,6-5h21l6.06,9.7L65.51,75.35Z" />
+    <path android:fillColor="?artWhite" android:pathData="M 50.68 31.75 C 57.6608792379 31.75 63.32 38.9806012902 63.32 47.9 C 63.32 56.8193987098 57.6608792379 64.05 50.68 64.05 C 43.6991207621 64.05 38.04 56.8193987098 38.04 47.9 C 38.04 38.9806012902 43.6991207621 31.75 50.68 31.75 Z" />
+    <path android:fillColor="@color/ub__business_amex_green" android:pathData="M 50.69 31.72 C 57.6543106954 31.72 63.3 38.9640327477 63.3 47.9 C 63.3 56.8359672523 57.6543106954 64.08 50.69 64.08 C 43.7256893046 64.08 38.08 56.8359672523 38.08 47.9 C 38.08 38.9640327477 43.7256893046 31.72 50.69 31.72 Z" />
+    <path android:fillColor="@color/ub__business_amex_offwhite_two" android:pathData="M10.48,42.75V39a2,2,0,0,1,2.08-2H20.3a2,2,0,0,1,2.07,2v3.75Z" />
+    <path android:fillColor="?artWhite" android:pathData="M22.37,46.52V42.77H20.6a2.05,2.05,0,0,1-2.07-2V37H14.32v3.76a2,2,0,0,1-2.08,2H10.47v3.75a2.06,2.06,0,0,0,2.09,2H20.3A2,2,0,0,0,22.37,46.52Z" />
+    <path android:fillColor="@color/ub__business_amex_offwhite_two" android:pathData="M18.53,44.06H14.32a1.46,1.46,0,0,0-1.48,1.43v3H20v-3A1.46,1.46,0,0,0,18.53,44.06Z" />
+</vector>

@@ -43,7 +43,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/bg_input_box"
         android:gravity="center"
-        android:hint="@string/login_code_hint"
+        android:hint="@string/login_code_lab_value"
         android:inputType="number"
         android:letterSpacing="0.35"
         android:maxLength="4"

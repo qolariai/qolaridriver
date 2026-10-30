@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__payment_checkout_actions_collect_submitted_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?gutterSize" android:contentDescription="@string/ub__checkout_action_operation_close" app:analyticsId="90c9480c-7713" app:srcCompat="@drawable/ic_close" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.emptystate.EmptyStateView android:layout_gravity="center" android:id="@id/ub__payment_checkout_actions_collect_submitted_empty_state_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:empty_state_add_bottom_padding="false" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</merge>

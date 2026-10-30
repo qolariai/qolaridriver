@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.do_panel_delivery_contact.options.DeliveryContactOptionsView android:orientation="vertical" android:background="@drawable/ub__bottomsheet_background" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/contact_option_call" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x">
+        <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" app:analyticsId="42ef80da-b501" app:srcCompat="@drawable/ub_ic_phone" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Headline.Normal" android:textColor="?android:textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/delivery_contact_option_call" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_3x" app:analyticsId="4389e983-aea8" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/contact_option_sms" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x">
+        <com.ubercab.ui.core.UImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="79808ef2-9116" app:srcCompat="@drawable/ub_ic_speech_bubble" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Headline.Normal" android:textColor="?android:textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/delivery_contact_option_sms" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_3x" app:analyticsId="2d6d6572-d9de" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/contact_options_close" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x">
+        <com.ubercab.ui.core.UImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="443b8e0c-0308" app:srcCompat="@drawable/ub_ic_x" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Headline.Normal" android:textColor="?android:textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/delivery_contact_option_close" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_3x" app:analyticsId="05a80d97-7fac" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.do_panel_delivery_contact.options.DeliveryContactOptionsView>

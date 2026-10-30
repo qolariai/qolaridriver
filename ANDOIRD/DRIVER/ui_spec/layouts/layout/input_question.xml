@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/input_question_taskbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:fillViewport="true" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.uber.taskbuildingblocks.views.TaskHeaderView android:id="@id/input_question_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.input.BaseEditText android:id="@id/input_question_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="?contentInset" app:analyticsId="8d367474-3de3" app:input_clearButtonEnabled="true" app:input_size="large" />
+            <com.uber.taskbuildingblocks.views.taskinput.TaskInputView android:id="@id/input_question_task_input" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="?contentInset" app:input_clearButtonEnabled="true" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.uber.taskbuildingblocks.views.TaskFooterView android:id="@id/input_question_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

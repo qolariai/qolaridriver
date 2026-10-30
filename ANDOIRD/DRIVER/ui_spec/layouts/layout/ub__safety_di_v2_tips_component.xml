@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety_driving_insights_v2.components.sditips.SDITipsComponentView android:background="?backgroundSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URecyclerView android:orientation="horizontal" android:id="@id/ub__safety_di_v2_tips_list" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_3.5x" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</com.uber.safety_driving_insights_v2.components.sditips.SDITipsComponentView>

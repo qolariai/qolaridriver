@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/common_widget_view_total_container" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="top" android:id="@id/widget_start_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/widget_view_text_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/widget_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" style="@style/Platform.TextStyle.Small.Medium" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/widget_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:layout_gravity="top" android:id="@id/widget_end_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.carbon.core.ui.ProgressCircleLayout android:layout_gravity="center_vertical" android:id="@id/widget_end_progress_circle" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" uber:progressCircleColor="?colorNegative">
+        <com.ubercab.ui.core.UTextView android:textColor="?colorNegative" android:layout_gravity="center" android:id="@id/widget_end_progress_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Medium" />
+    </com.ubercab.carbon.core.ui.ProgressCircleLayout>
+</com.ubercab.ui.core.ULinearLayout>

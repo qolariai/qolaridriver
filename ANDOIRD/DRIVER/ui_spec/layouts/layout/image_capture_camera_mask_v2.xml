@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.ubercab.usnap.camera.USnapCameraMask android:id="@id/image_capture_mask" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cameraMaskColor="?backgroundAlwaysDark" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/image_capture_camera_overlay_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundAlwaysDark" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentOnColor" android:gravity="center" android:id="@id/image_capture_camera_description" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.ParagraphSmall" />
+            <com.ubercab.ui.core.UFrameLayout android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="start|center" android:id="@id/image_capture_camera_help_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_5x" app:srcCompat="@drawable/image_capture_camera_help" />
+                <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/image_capture_camera_shoot_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonType="secondary" app:icon="@drawable/ub_ic_camera" app:shape="circle" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+                <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="end|center" android:id="@id/image_capture_camera_flash_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_5x" />
+            </com.ubercab.ui.core.UFrameLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

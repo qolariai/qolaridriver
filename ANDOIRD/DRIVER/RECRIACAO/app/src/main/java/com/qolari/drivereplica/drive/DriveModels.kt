@@ -5,12 +5,16 @@ import com.qolari.drivereplica.net.DriverOffer
 import com.qolari.drivereplica.net.DriverTasks
 import com.qolari.drivereplica.net.UnifiedOffersResponse
 
-/** Cartão da proposta (captura 100_online_*): produto, preço, recolha, viagem e tempo para aceitar. */
+/** Tipo de pedido: exclusivo (so este motorista) ou Radar (varios ao mesmo tempo). */
+enum class OfferKind { EXCLUSIVE, RADAR }
+
+/** Cartão da proposta (vídeo 2026-10-29): produto, preço, totais, recolha, viagem e tempo para aceitar. */
 data class OfferCard(
     val uuid: String,
     val product: String,
     val price: String,
-    val rider: String?,
+    /** "34 min • 13,4 km": recolha + viagem somadas, como na referência. Nulo se o servidor não as enviar. */
+    val totals: String?,
     val pickupLine: String,
     val pickupAddress: String,
     val tripLine: String?,
@@ -19,6 +23,8 @@ data class OfferCard(
     val expiresAtMs: Long,
     val pickup: Pair<Double, Double>? = null,
     val dropoff: Pair<Double, Double>? = null,
+    /** Exclusivo ou Radar (etiqueta "Exclusivo"/"Radar" no cartão). */
+    val kind: OfferKind = OfferKind.EXCLUSIVE,
 )
 
 enum class TripPhase { TO_PICKUP, AT_PICKUP, ON_TRIP }
@@ -34,13 +40,6 @@ data class PinTask(
     val verified: Boolean,
 )
 
-data class TripStop(
-    val address: String = "",
-    val done: Boolean = false,
-    val latitude: Double? = null,
-    val longitude: Double? = null,
-)
-
 data class ActiveTrip(
     val uuid: String,
     val phase: TripPhase,
@@ -52,8 +51,17 @@ data class ActiveTrip(
     val fare: String?,
     val waitStartSec: Long?,
     val pin: PinTask?,
-    val stops: List<TripStop> = emptyList(),
-    val nextStopIndex: Int? = null,
+    /** Morada da recolha (2.ª secção do painel enquanto se vai buscar o passageiro). */
+    val pickupAddress: String? = null,
+    /** Cidade da paragem ("Lisboa"), como no painel do vídeo de 2026-10-30. */
+    val city: String? = null,
+    /** Nome do produto ("UberX Priority"), para o botão "Começar/Concluir <produto>". */
+    val product: String? = null,
+    /** Destino final, para desenhar o 2.º leg do percurso (vermelho) na ida à recolha. */
+    val dropoffLat: Double? = null,
+    val dropoffLng: Double? = null,
+    /** Telefone do passageiro, para o botão de chamada do ecrã de espera. */
+    val riderPhone: String? = null,
 )
 
 /** Resumo no fim da viagem (ganhos: captura 011/062 mostra o total da semana; o da viagem vem de earnings/get-trip). */
@@ -86,7 +94,7 @@ object DriveParser {
             uuid = uuid,
             product = texts.firstOrNull() ?: notification.firstOrNull().orEmpty(),
             price = price,
-            rider = texts.firstOrNull { it.contains("★") },
+            totals = model?.getAsJsonObject("tripTotals")?.str("shortString"),
             pickupLine = pickupLine,
             pickupAddress = title("pickup").orEmpty(),
             tripLine = texts.firstOrNull { it.startsWith("Viagem de") },
@@ -95,6 +103,7 @@ object DriveParser {
             expiresAtMs = expires,
             pickup = coord("pickup"),
             dropoff = coord("dropoff"),
+            kind = if (model?.str("offerKind") == "radar") OfferKind.RADAR else OfferKind.EXCLUSIVE,
         )
     }
 
@@ -126,21 +135,15 @@ object DriveParser {
             val (type, body) = taskData(t.driverTaskDataUnion)
             if (type == "pinVerificationTaskData" && body != null) pinTask(body, t.isCompleted == true) else null
         }
+        // tripInfo: morada da recolha, cidade e produto (2.ª secção do painel, vídeo 2026-10-30).
+        val tripInfo = completion.coalescedDataUnion?.let { c ->
+            c.getAsJsonObject(c.str("type").orEmpty())?.getAsJsonObject("tripInfo")
+        }
         val phase = when {
             kind == "dropoffTaskData" -> TripPhase.ON_TRIP
             waitStart != null -> TripPhase.AT_PICKUP
             else -> TripPhase.TO_PICKUP
         }
-        val stops = data.getAsJsonArray("stops")?.mapNotNull { e ->
-            val o = e.takeIf { it.isJsonObject }?.asJsonObject ?: return@mapNotNull null
-            TripStop(
-                address = o.str("address").orEmpty(),
-                done = o.get("done")?.takeIf { it.isJsonPrimitive }?.asBoolean ?: false,
-                latitude = o.get("lat")?.takeIf { it.isJsonPrimitive }?.asDouble,
-                longitude = o.get("lng")?.takeIf { it.isJsonPrimitive }?.asDouble,
-            )
-        }.orEmpty()
-        val nextStop = data.get("nextStopIndex")?.takeIf { it.isJsonPrimitive }?.asInt
         return ActiveTrip(
             uuid = uuid,
             phase = phase,
@@ -152,8 +155,12 @@ object DriveParser {
             fare = data.getAsJsonObject("driverUpfrontFare")?.str("amount"),
             waitStartSec = waitStart,
             pin = pin,
-            stops = stops,
-            nextStopIndex = nextStop,
+            pickupAddress = tripInfo?.str("pickupAddress"),
+            city = tripInfo?.str("city"),
+            product = tripInfo?.str("productName"),
+            dropoffLat = tripInfo?.get("dropoffLat")?.takeIf { it.isJsonPrimitive }?.asDouble,
+            dropoffLng = tripInfo?.get("dropoffLng")?.takeIf { it.isJsonPrimitive }?.asDouble,
+            riderPhone = tripInfo?.str("riderPhone"),
         )
     }
 

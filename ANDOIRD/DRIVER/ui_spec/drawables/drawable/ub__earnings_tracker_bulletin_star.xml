@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/icon_background">
+        <shape android:shape="oval">
+            <solid android:color="?brandSecondary" />
+            <stroke android:width="@dimen/ub__tracker_stroke_width" android:color="?earningsPillBorderColor" />
+            <size android:height="@dimen/ui__spacing_unit_6x" android:width="@dimen/ui__spacing_unit_6x" />
+        </shape>
+    </item>
+</layer-list>

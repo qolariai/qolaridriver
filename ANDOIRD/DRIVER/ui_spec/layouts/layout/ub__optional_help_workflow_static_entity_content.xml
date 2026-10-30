@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/help_workflow_static_entity_content_platformlistitemview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/help_workflow_static_entity_content_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" app:analyticsId="8479040c-2b0b" />
+</merge>

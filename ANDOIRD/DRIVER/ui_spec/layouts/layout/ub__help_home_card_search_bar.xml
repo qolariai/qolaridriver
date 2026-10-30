@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.input.BaseEditText android:id="@id/help_home_card_search_bar" android:padding="@dimen/ui__spacing_unit_2x" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:input_clearButtonEnabled="true" app:input_placeholderHint="@string/help_search_bar_search_hint" app:input_startEnhancer_drawable="@drawable/ub_ic_search" />
+</merge>

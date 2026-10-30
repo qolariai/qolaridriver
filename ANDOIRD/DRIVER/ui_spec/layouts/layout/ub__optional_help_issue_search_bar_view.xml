@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/help_issue_search_header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:header_state="collapse" />
+            <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/help_issue_loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?contentPrimary" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:id="@id/help_issue_search_title" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_issue_search_title" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="9f9cf4ee-6b17" />
+            <com.ubercab.ui.core.input.BaseEditText android:id="@id/help_issue_search_bar" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:input_clearButtonEnabled="true" app:input_placeholderHint="@string/help_issue_search_hint" app:input_startEnhancer_drawable="@drawable/ub_ic_search" />
+            <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:id="@id/help_issue_content_title" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="836b93ae-b38a" />
+            <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:id="@id/help_issue_no_content_text" android:paddingTop="0.0dip" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_issue_search_no_content_text" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="3639d505-f772" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/help_issue_search_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</merge>

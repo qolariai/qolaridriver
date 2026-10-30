@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingBottom="@dimen/ub__card_content_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__placeholder_shape_header" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingSmall" />
+        <com.ubercab.presidio.styleguide.sections.ThreeChoicePicker android:id="@id/placeholder_shape_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:one="@string/ub__placeholder_shape_rect" app:three="@string/ub__placeholder_shape_rows" app:two="@string/ub__placeholder_shape_circle" />
+        <com.ubercab.ui.core.USwitchCompat android:textAppearance="@style/Platform.TextStyle.ParagraphDefault" android:gravity="center_vertical" android:id="@id/placeholder_animation_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:checked="true" android:text="@string/ub__placeholder_animation_switch" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UScrollView>

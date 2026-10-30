@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:background="?android:colorBackground" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/consent_loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:bli_bitColor="?colorAccent" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.commons.widget.GravityImageView android:gravity="top" android:id="@id/consent_illustration" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:importantForAccessibility="no" app:imageGravity="center_horizontal" app:imageScaleMode="inside" />
+        <com.ubercab.ui.core.UTextView android:id="@id/consent_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H2.Book" />
+        <com.ubercab.ui.core.UTextView android:id="@id/consent_legal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.P" />
+        <include layout="@layout/ub__consent_buttons" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UFrameLayout>

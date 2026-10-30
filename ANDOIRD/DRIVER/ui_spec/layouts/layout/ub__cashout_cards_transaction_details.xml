@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/ui__spacing_unit_1.5x" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?android:textColorPrimary" android:gravity="center_horizontal" android:id="@id/ub__cashout_you_receive" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/ui__spacing_unit_1.5x" uber:analyticsId="8a28232d-d8f2" style="@style/Platform.TextStyle.Paragraph.Medium" />
+        <com.ubercab.ui.core.UPlainView android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?android:textColorPrimary" android:gravity="center_horizontal" android:id="@id/ub__cashout_you_receive_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="c1caa4e7-350c" style="@style/Platform.TextStyle.MonoHeadingXSmall" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

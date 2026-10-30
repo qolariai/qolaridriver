@@ -1,0 +1,21 @@
+{
+ "dimens": {
+  "item": {
+   "m3_control_ripple_color_selector_default_alpha": "0.45",
+   "m3_control_ripple_color_selector_focused_alpha": "0.16",
+   "m3_control_ripple_color_selector_hovered_alpha": "0.3",
+   "m3_control_ripple_color_selector_pressed_alpha": "0.36"
+  }
+ },
+ "styles": {
+  "styles": {
+   "Base.Theme.SplashScreen.DayNight": {
+    "parent": "@style/Base.Theme.SplashScreen",
+    "items": {
+     "android:windowLightNavigationBar": "true",
+     "android:enforceNavigationBarContrast": "true"
+    }
+   }
+  }
+ }
+}

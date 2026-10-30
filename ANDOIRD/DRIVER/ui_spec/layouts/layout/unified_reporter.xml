@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.unifiedreporter.UnifiedReporterView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <GridLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="2" style="@style/MobileStudio.Plugin">
+        <com.ubercab.ui.core.UTextView android:layout_gravity="fill_horizontal|start" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_reporter_header" android:layout_columnSpan="2" app:analyticsId="5aba3084-4214" style="@style/MobileStudio.Plugin.Header" />
+        <com.ubercab.ui.core.UTextView android:layout_gravity="start|center" android:text="@string/ub__mobilestudio_reporter_enable" app:analyticsId="e05763b5-d502" style="@style/MobileStudio.Plugin.RowTitle" />
+        <com.ubercab.ui.core.USwitchCompat android:layout_gravity="start|center" android:id="@id/mobilestudio_enable_logging" style="@style/MobileStudio.Plugin.RowWidget" />
+        <com.ubercab.ui.core.UTextView android:layout_gravity="start|center" android:id="@id/mobilestudio_message_type_title" android:text="@string/ub__mobilestudio_reporter_message_type" app:analyticsId="91812d0c-8c4b" style="@style/MobileStudio.Plugin.RowTitle" />
+        <com.ubercab.ui.core.USpinner android:layout_gravity="fill_horizontal|start|center" android:id="@id/mobilestudio_message_type_spinner" android:layout_width="0.0dip" />
+        <com.ubercab.ui.core.UTextView android:layout_gravity="start|center" android:id="@id/mobilestudio_filter_title" android:text="@string/ub__mobilestudio_reporter_message_id" app:analyticsId="775f7abd-754e" style="@style/MobileStudio.Plugin.RowTitle" />
+        <com.ubercab.ui.core.UEditText android:layout_gravity="start|center" android:id="@id/mobilestudio_filter_input" android:layout_width="fill_parent" android:hint="@string/ub__mobilestudio_reporter_filter_hint" android:lines="1" />
+    </GridLayout>
+</com.uber.mobilestudio.unifiedreporter.UnifiedReporterView>

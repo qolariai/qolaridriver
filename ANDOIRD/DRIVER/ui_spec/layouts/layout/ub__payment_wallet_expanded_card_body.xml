@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_3x" android:paddingEnd="@dimen/ui__spacing_unit_3x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/ub__payment_wallet_expanded_card_balance" />
+    <include layout="@layout/ub__payment_wallet_expanded_card_text_body" />
+    <include layout="@layout/ub__payment_wallet_expand_card_textlist" />
+    <include layout="@layout/ub__payment_wallet_expand_card_progress_bar" />
+    <com.ubercab.ui.core.UButtonMdc android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:gravity="center" android:id="@id/ub__wallet_expanded_card_primary_action" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" uber:cornerRadius="@dimen/ui__spacing_unit_6x" uber:rippleColor="?foregroundSelectorColor" />
+</com.ubercab.ui.core.ULinearLayout>

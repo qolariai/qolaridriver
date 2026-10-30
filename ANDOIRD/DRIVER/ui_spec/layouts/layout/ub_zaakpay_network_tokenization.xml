@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.zaakpay.operation.networktokenization.ZaakpayNetworkTokenizationView android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.emptystate.EmptyStateView android:layout_gravity="center" android:id="@id/ub__empty_state_view_network_tokenization" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.presidio.payment.zaakpay.operation.networktokenization.ZaakpayNetworkTokenizationView>

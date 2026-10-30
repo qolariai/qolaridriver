@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.finprod.common.ui.details_page.FinProdCommonDetailsPageView android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__finprod_common_details_page_recycler_view" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/ub__finprod_common_details_page_button_list" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ub__finprod_common_details_page_button_list" android:background="?backgroundPrimary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" android:elevation="@dimen/ui__spacing_unit_4.5x" app:layout_constraintBottom_toBottomOf="parent" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__finprod_common_details_page_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:backgroundTint="?backgroundPrimary" app:buttonType="secondary" app:icon="@drawable/ic_carbon_close" app:shape="circle" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.uber.finprod.common.ui.details_page.FinProdCommonDetailsPageView>

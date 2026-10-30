@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.favorite_locations.FavoriteLocationsView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UFrameLayout android:orientation="vertical" android:id="@id/ub__favorite_locations_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="f112f75a-3cac">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/ub__favorite_locations_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__favorite_locations_empty_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_8x" app:analyticsId="ad08a196-575e">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/ub__favorite_locations_empty_icon" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_8x" android:scaleType="center" android:adjustViewBounds="true" app:analyticsId="96966f18-9b83" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:gravity="center" android:id="@id/ub__favorite_locations_empty_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/ub__favorite_locations_empty_text" android:layout_marginStart="@dimen/ui__spacing_unit_4x" android:layout_marginEnd="@dimen/ui__spacing_unit_4x" app:analyticsId="e61606f7-970b" style="@style/Platform.TextStyle.Paragraph.Normal" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.carbon.core.ui.ProgressFrameLayout android:layout_gravity="center" android:id="@id/ub__favorite_locations_outline" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.favorite_locations.FavoriteLocationsView>

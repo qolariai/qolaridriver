@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="97e2a9cb-788a"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFloatingActionButton android:layout_gravity="center" android:id="@id/map_control_earnings_trends" android:clickable="false" android:saveEnabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" android:scaleType="center" android:contentDescription="@string/earnings_trends_entry_content_description" app:analyticsId="35ddb5bc-38cb" app:backgroundTint="?android:colorBackground" app:borderWidth="0.0dip" app:fabCustomSize="@dimen/ui__spacing_unit_6x" app:rippleColor="?lightSelectorColor" app:srcCompat="@drawable/ub_ic_chart_bar" app:tint="?contentPrimary" style="@style/Platform.FloatingActionButton" />
+</com.ubercab.ui.core.UFrameLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Ecrã de espera na recolha (print de 2026-10-30 11:34):
+    À espera do utilizador            1:23   ›
+    ▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  ─────────────────────────────────────────────────
+    [telefone]            annalisa            [pessoa]
+  ─────────────────────────────────────────────────
+    [→]  Começar UberX Priority
+
+  A ordem é a do print: o contador vem PRIMEIRO e o contacto (telefone/nome/pessoa)
+  por baixo, não ao contrário. Chegou ao ponto: a chegada é automática (GPS).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/waitCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/qd_background"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp"
+    android:visibility="gone">
+
+    <!-- Contador de espera com barra de progresso (1.º bloco, como no print de 2026-10-30) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_wait_panel"
+        android:orientation="vertical"
+        android:paddingStart="14dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/wait_for_user"
+                android:textColor="@color/qd_ink"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/waitTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/qd_ink"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_chevron"
+                app:tint="@color/qd_ink" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/waitProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="@color/qd_core_blue600"
+            android:progressBackgroundTint="@color/qd_line" />
+    </LinearLayout>
+
+    <!-- Linha com contacto, nome e perfil (2.º bloco: telefone — nome — pessoa) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/waitCall"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_circle_soft"
+            android:contentDescription="@string/wait_call"
+            android:padding="14dp"
+            android:src="@drawable/ic_phone"
+            app:tint="@color/qd_ink" />
+
+        <TextView
+            android:id="@+id/waitName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/qd_ink"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/waitProfile"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_circle_soft"
+            android:contentDescription="@string/wait_profile"
+            android:padding="14dp"
+            android:src="@drawable/ic_person"
+            app:tint="@color/qd_ink" />
+    </LinearLayout>
+
+    <!-- Botão "Começar <produto>" -->
+    <LinearLayout
+        android:id="@+id/waitStart"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_start_trip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_start_arrow" />
+
+        <TextView
+            android:id="@+id/waitStartLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/qd_ink"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

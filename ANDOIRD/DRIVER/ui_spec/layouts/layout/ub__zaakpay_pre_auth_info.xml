@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.zaakpay.operation.preauthinfo.ZaakpayPreAuthInfoView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="2da509a7-ce9c"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="@style/PaymentZaakpayLightHeader" android:id="@id/appbar" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/header_elevation" app:contentInsetStartWithNavigation="0.0dip" app:elevation="0.0dip" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/ub__zaakpay_pre_auth_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" app:analyticsId="5bdefd3e-554c" style="@style/Platform.TextStyle.DisplayXSmall" />
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/ub__zaakpay_pre_auth_header_subtitle" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="eeb3430a-c07f" style="@style/Platform.TextStyle.ParagraphDefault" />
+                <com.ubercab.ui.core.URecyclerView android:id="@id/ub__zaakpay_pre_auth_info_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center|bottom" android:id="@id/ub__zaakpay_pre_auth_info_continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/zaakpay_pre_auth_info_cta_button_text" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="0e41cc05-73b6" app:buttonType="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.presidio.payment.zaakpay.operation.preauthinfo.ZaakpayPreAuthInfoView>

@@ -1,0 +1,577 @@
+{
+ "colors": {
+  "color": {
+   "backgroundButtonAccent": "@color/ub__ui_core_v3_dark_blue300",
+   "backgroundButtonAccentBase2Bold": "#26ffffff",
+   "backgroundButtonAccentBase2Subtle": "#b3033a74",
+   "backgroundButtonBackgroundAlwaysDark": "@color/ub__ui_core_v3_dark_gray200",
+   "backgroundButtonBackgroundAlwaysLight": "@color/ub__ui_core_v3_dark_gray800",
+   "backgroundButtonBackgroundInverseSecondary": "@color/ub__ui_core_v3_dark_gray600",
+   "backgroundButtonBackgroundTertiary": "@color/ub__ui_core_v3_dark_gray300",
+   "backgroundButtonLightAccent": "@color/ub__ui_core_v3_dark_blue200",
+   "backgroundButtonLightNegative": "@color/ub__ui_core_v3_dark_red200",
+   "backgroundButtonLightPositive": "@color/ub__ui_core_v3_dark_green200",
+   "backgroundButtonLightWarning": "@color/ub__ui_core_v3_dark_yellow200",
+   "backgroundButtonNegative": "@color/ub__ui_core_v3_dark_red300",
+   "backgroundButtonNegativeBase2Bold": "#26ffffff",
+   "backgroundButtonNegativeBase2Subtle": "#b3720d00",
+   "backgroundButtonPositive": "@color/ub__ui_core_v3_dark_green300",
+   "backgroundButtonPositiveBase2Bold": "#4dffffff",
+   "backgroundButtonPositiveBase2Subtle": "#b3095627",
+   "backgroundButtonWarning": "@color/ub__ui_core_v3_dark_yellow500",
+   "backgroundButtonWarningBase2Subtle": "#b36e3202",
+   "bannerContentOnBoldAccent": "#ffececec",
+   "bannerContentOnBoldError": "#fffffcfb",
+   "bannerContentOnBoldSuccess": "#ff000f01",
+   "bannerContentOnBoldWarning": "#ff180400",
+   "carColorBlue": "#ff3674e0",
+   "carColorGreen": "#ff448b47",
+   "carColorRed": "#ffc5221f",
+   "carColorYellow": "#ffd5792d",
+   "disable_ubernav_takeover_icon_background": "?blue600",
+   "microphone_stand": "@color/ub__ui_core_v3_gray200",
+   "safety_emergency_connect_animation": "@color/ub__white",
+   "safety_emergency_connect_icon": "@color/ub__white",
+   "safety_emergency_rapid_sos_icon_text": "@color/ub__white",
+   "safety_emergency_uber_icon_text": "@color/ub__white",
+   "tapandpay_sdk_default_color_background": "#ff202124",
+   "tapandpay_sdk_default_color_primary_variant": "#ff669df6",
+   "tapandpay_sdk_default_color_secondary": "#ff394557",
+   "task_green": "#ff267e63",
+   "task_red": "#ffb83535",
+   "tertiary_route_line": "#ffafafaf",
+   "ub__ec_phone_body": "@color/ub__ui_core_v3_white",
+   "ub__ec_phone_border": "@color/ub__ui_core_v3_blue300",
+   "ub__nav_low_gps_puck_2d_circle_color": "@color/ub__ui_core_v3_gray900",
+   "ub__nav_low_gps_puck_3d_circle_color": "#b3141414",
+   "ub__nav_low_gps_puck_arrow_color": "@color/ub__ui_core_v3_gray600",
+   "ub__nav_low_gps_puck_arrow_wall_color": "@color/ub__ui_core_v3_gray800",
+   "ub__ui_base_migration_carbon_color_start_inverse": "#ff156a36",
+   "ub__ui_base_migration_carbon_incident_accident": "#ffab5727",
+   "ub__ui_base_migration_carbon_incident_closure": "#ffc33840",
+   "ub__ui_base_migration_carbon_incident_high": "#ffab1300",
+   "ub__ui_base_migration_carbon_incident_low": "#ffbc8b2c",
+   "ub__ui_base_migration_carbon_incident_medium": "#ffc14f29",
+   "ub__ui_base_migration_carbon_incident_traffic": "#ff9a6418",
+   "ub__ui_base_migration_carbon_l100m_ugc_entrance_icon": "#ffbdc7db",
+   "ub__ui_base_migration_carbon_puck_chevron": "#ff9fbff8",
+   "ub__ui_base_migration_carbon_puck_chevron_height": "#ff5a90f4",
+   "ub__ui_base_migration_carbon_puck_circle": "#b3174291",
+   "ub__ui_base_migration_carbon_puck_low_chevron": "#ffe2e2e2",
+   "ub__ui_base_migration_carbon_puck_low_chevron_height": "#ffafafaf",
+   "ub__ui_base_migration_carbon_puck_low_circle": "#b3757575",
+   "ub__ui_carbon_task_green": "#ff267e63",
+   "ub__ui_carbon_task_red": "#ffb83535"
+  }
+ },
+ "styles": {
+  "styles": {
+   "AITheme": {
+    "parent": "@style/AIThemeDark",
+    "items": {}
+   },
+   "AmberBaseTheme": {
+    "parent": "@style/AmberThemeDark",
+    "items": {}
+   },
+   "Base.Theme.SplashScreen.DayNight": {
+    "parent": "@style/Base.Theme.SplashScreen",
+    "items": {
+     "isLightTheme": "false"
+    }
+   },
+   "BlueBaseTheme": {
+    "parent": "@style/BlueThemeDark",
+    "items": {}
+   },
+   "GrayBaseTheme": {
+    "parent": "@style/GrayThemeDark",
+    "items": {}
+   },
+   "GreenBaseTheme": {
+    "parent": "@style/GreenThemeDark",
+    "items": {}
+   },
+   "LimeBaseTheme": {
+    "parent": "@style/LimeThemeDark",
+    "items": {}
+   },
+   "MagentaBaseTheme": {
+    "parent": "@style/MagentaThemeDark",
+    "items": {}
+   },
+   "MembershipBoostTheme": {
+    "parent": "@style/MembershipBoostThemeDark",
+    "items": {}
+   },
+   "MembershipGoldTheme": {
+    "parent": "@style/MembershipGoldThemeDark",
+    "items": {}
+   },
+   "MembershipGoldenWhisperTheme": {
+    "parent": "@style/MembershipGoldenWhisperThemeDark",
+    "items": {}
+   },
+   "MembershipLimeGreenTheme": {
+    "parent": "@style/MembershipLimeGreenThemeDark",
+    "items": {}
+   },
+   "MembershipMagentaTheme": {
+    "parent": "@style/MembershipMagentaThemeDark",
+    "items": {}
+   },
+   "MembershipRedTheme": {
+    "parent": "@style/MembershipRedThemeDark",
+    "items": {}
+   },
+   "MembershipSplashTheme": {
+    "parent": "@style/MembershipSplashThemeDark",
+    "items": {}
+   },
+   "OrangeBaseTheme": {
+    "parent": "@style/OrangeThemeDark",
+    "items": {}
+   },
+   "PeriwinkleBaseTheme": {
+    "parent": "@style/PeriwinkleThemeDark",
+    "items": {}
+   },
+   "PurpleBaseTheme": {
+    "parent": "@style/PurpleThemeDark",
+    "items": {}
+   },
+   "RedBaseTheme": {
+    "parent": "@style/RedThemeDark",
+    "items": {}
+   },
+   "Style.MapMarker.Default": {
+    "parent": "",
+    "items": {
+     "mapPoiPrimaryColor": "@color/map_poi_pale_blue",
+     "mapPoiSecondaryBorderColor": "@color/map_poi_secondary_border_dark",
+     "mapPoiSecondaryIconColor": "@color/map_poi_light_gray"
+    }
+   },
+   "StyleGuideAttrResolverTheme": {
+    "parent": "@style/StyleGuideAttrResolverThemeDark",
+    "items": {}
+   },
+   "TapAndPayTheme": {
+    "parent": null,
+    "items": {
+     "android:windowNoTitle": "true",
+     "android:windowActionBar": "false",
+     "android:windowTranslucentStatus": "false",
+     "android:windowDrawsSystemBarBackgrounds": "true",
+     "android:statusBarColor": "@color/tapandpay_sdk_default_color_background",
+     "android:windowLightStatusBar": "false",
+     "backgroundColor": "@color/tapandpay_sdk_default_color_background",
+     "colorPrimaryVariantGoogle": "@color/tapandpay_sdk_default_color_primary_variant",
+     "colorSecondary": "@color/tapandpay_sdk_default_color_secondary"
+    }
+   },
+   "TealBaseTheme": {
+    "parent": "@style/TealThemeDark",
+    "items": {}
+   },
+   "Theme.AppCompat.DayNight": {
+    "parent": "@style/Theme.AppCompat",
+    "items": {}
+   },
+   "Theme.AppCompat.DayNight.DarkActionBar": {
+    "parent": "@style/Theme.AppCompat",
+    "items": {}
+   },
+   "Theme.AppCompat.DayNight.Dialog": {
+    "parent": "@style/Theme.AppCompat.Dialog",
+    "items": {}
+   },
+   "Theme.AppCompat.DayNight.Dialog.Alert": {
+    "parent": "@style/Theme.AppCompat.Dialog.Alert",
+    "items": {}
+   },
+   "Theme.AppCompat.DayNight.Dialog.MinWidth": {
+    "parent": "@style/Theme.AppCompat.Dialog.MinWidth",
+    "items": {}
+   },
+   "Theme.AppCompat.DayNight.DialogWhenLarge": {
+    "parent": "@style/Theme.AppCompat.DialogWhenLarge",
+    "items": {}
+   },
+   "Theme.AppCompat.DayNight.NoActionBar": {
+    "parent": "@style/Theme.AppCompat.NoActionBar",
+    "items": {}
+   },
+   "Theme.Base2Color.DayNight": {
+    "parent": "@style/Theme.Base2Color.Dark",
+    "items": {}
+   },
+   "Theme.Base2SemanticColorMapping.DayNight": {
+    "parent": "",
+    "items": {
+     "backgroundAlwaysDark": "@color/ub__base2_dark_background_always_dark",
+     "backgroundAlwaysLight": "@color/ub__base2_dark_background_always_light",
+     "backgroundInversePrimary": "@color/ub__base2_dark_background_inverse_primary",
+     "backgroundInverseSecondary": "@color/ub__base2_dark_background_inverse_secondary",
+     "backgroundLightNegative": "@color/ub__base2_dark_error_background_subtle",
+     "backgroundLightPositive": "@color/ub__base2_dark_success_background_subtle",
+     "backgroundLightWarning": "@color/ub__base2_dark_warning_background_subtle",
+     "backgroundNegative": "@color/ub__base2_dark_error_background_bold",
+     "backgroundOverlayArt": "@color/ub__base2_dark_background_overlay_art",
+     "backgroundOverlayDark": "@color/ub__base2_dark_background_scrim",
+     "backgroundOverlayElevation": "@color/ub__base2_dark_background_scrim",
+     "backgroundOverlayLight": "@color/ub__base2_dark_background_overlay_art",
+     "backgroundPositive": "@color/ub__base2_dark_success_background_bold",
+     "backgroundPrimary": "@color/ub__base2_dark_background_primary",
+     "backgroundSecondary": "@color/ub__base2_dark_background_secondary",
+     "backgroundStateDisabled": "@color/ub__base2_dark_background_disabled",
+     "backgroundTertiary": "@color/ub__base2_dark_background_tertiary",
+     "backgroundWarning": "@color/ub__base2_dark_warning_background_bold",
+     "borderAccessible": "@color/ub__base2_dark_border_accessible",
+     "borderInverseOpaque": "@color/ub__base2_dark_border_inverse_accessible",
+     "borderInverseSelected": "@color/ub__base2_dark_border_inverse_bold",
+     "borderInverseTransparent": "@color/ub__base2_dark_border_inverse_subtle",
+     "borderNegative": "@color/ub__base2_dark_error_border_accessible",
+     "borderNegativeLight": "@color/ub__base2_dark_error_border_subtle",
+     "borderOpaque": "@color/ub__base2_dark_border_subtle",
+     "borderPositive": "@color/ub__base2_dark_success_border_accessible",
+     "borderPositiveLight": "@color/ub__base2_dark_success_border_subtle",
+     "borderSelected": "@color/ub__base2_dark_border_bold",
+     "borderStateDisabled": "@color/ub__base2_dark_border_subtle",
+     "borderTransparent": "@color/ub__base2_dark_border_subtle",
+     "borderWarning": "@color/ub__base2_dark_warning_border_accessible",
+     "borderWarningLight": "@color/ub__base2_dark_warning_border_subtle",
+     "brandBackgroundDisabled": "@color/ub__base2_dark_accent_background_primary_disabled",
+     "brandBackgroundPrimary": "@color/ub__base2_dark_accent_background_primary_bold",
+     "brandBackgroundSecondary": "@color/ub__base2_dark_accent_background_primary_subtle",
+     "brandBackgroundTertiary": "@color/ub__base2_dark_accent_background_primary_subtle",
+     "brandBorderAccessible": "@color/ub__base2_dark_accent_border_primary_accessible",
+     "brandBorderSubtle": "@color/ub__base2_dark_accent_border_primary_subtle",
+     "brandContentDisabled": "@color/ub__base2_dark_accent_content_primary_disabled",
+     "brandContentOnPrimary": "@color/ub__base2_dark_accent_content_primary_onbold",
+     "brandContentOnSecondary": "@color/ub__base2_dark_accent_content_primary_onsubtle",
+     "brandContentOnTertiary": "@color/ub__base2_dark_accent_content_primary_onsubtle",
+     "brandContentPrimary": "@color/ub__base2_dark_accent_content_primary",
+     "contentInversePrimary": "@color/ub__base2_dark_content_inverse_primary",
+     "contentInverseSecondary": "@color/ub__base2_dark_content_inverse_secondary",
+     "contentInverseTertiary": "@color/ub__base2_dark_content_inverse_tertiary",
+     "contentNegative": "@color/ub__base2_dark_error_content_primary",
+     "contentOnColor": "@color/ub__base2_dark_content_always_light",
+     "contentOnColorInverse": "@color/ub__base2_dark_content_always_dark",
+     "contentPositive": "@color/ub__base2_dark_success_content_primary",
+     "contentPrimary": "@color/ub__base2_dark_content_primary",
+     "contentSecondary": "@color/ub__base2_dark_content_secondary",
+     "contentStateDisabled": "@color/ub__base2_dark_content_disabled",
+     "contentTertiary": "@color/ub__base2_dark_content_tertiary",
+     "contentWarning": "@color/ub__base2_dark_warning_content_primary"
+    }
+   },
+   "Theme.Carbon.DayNight": {
+    "parent": "@style/Theme.Carbon.Dark",
+    "items": {}
+   },
+   "Theme.EatsOrders.DayNight": {
+    "parent": "@style/Theme.EatsOrders.Base",
+    "items": {
+     "colorControlActivated": "@color/ub__ui_core_white",
+     "colorControlNormal": "@color/ub__ui_core_white",
+     "colorOutline": "@color/ub__ui_core_grey_60_alpha_30",
+     "foregroundSelectorColor": "?lightSelectorColor",
+     "foregroundSelectorColorInverse": "?darkSelectorColor",
+     "selectableItemBackground": "@drawable/selectable_item_background_light",
+     "selectableItemBackgroundBorderless": "@drawable/selectable_item_background_borderless_light",
+     "selectableItemBackgroundInverse": "@drawable/selectable_item_background_dark",
+     "selectableItemBackgroundInverseBorderless": "@drawable/selectable_item_background_borderless_dark"
+    }
+   },
+   "Theme.Material3.DayNight": {
+    "parent": "@style/Theme.Material3.Dark",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.BottomSheetDialog": {
+    "parent": "@style/Theme.Material3.Dark.BottomSheetDialog",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.Dialog": {
+    "parent": "@style/Theme.Material3.Dark.Dialog",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.Dialog.Alert": {
+    "parent": "@style/Theme.Material3.Dark.Dialog.Alert",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.Dialog.Alert.FocusRings": {
+    "parent": "@style/Theme.Material3.Dark.Dialog.Alert.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.Dialog.FocusRings": {
+    "parent": "@style/Theme.Material3.Dark.Dialog.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.Dialog.MinWidth": {
+    "parent": "@style/Theme.Material3.Dark.Dialog.MinWidth",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.Dialog.MinWidth.FocusRings": {
+    "parent": "@style/Theme.Material3.Dark.Dialog.MinWidth.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.DialogWhenLarge": {
+    "parent": "@style/Theme.Material3.Dark.DialogWhenLarge",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.FocusRings": {
+    "parent": "@style/Theme.Material3.Dark.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.NoActionBar": {
+    "parent": "@style/Theme.Material3.Dark.NoActionBar",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.NoActionBar.FocusRings": {
+    "parent": "@style/Theme.Material3.Dark.NoActionBar.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3.DayNight.SideSheetDialog": {
+    "parent": "@style/Theme.Material3.Dark.SideSheetDialog",
+    "items": {}
+   },
+   "Theme.Material3.DynamicColors.DayNight": {
+    "parent": "@style/Theme.Material3.DynamicColors.Dark",
+    "items": {}
+   },
+   "Theme.Material3.DynamicColors.DayNight.FocusRings": {
+    "parent": "@style/Theme.Material3.DynamicColors.Dark.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3.DynamicColors.DayNight.NoActionBar": {
+    "parent": "@style/Theme.Material3.DynamicColors.Dark.NoActionBar",
+    "items": {}
+   },
+   "Theme.Material3.DynamicColors.DayNight.NoActionBar.FocusRings": {
+    "parent": "@style/Theme.Material3.DynamicColors.Dark.NoActionBar.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight": {
+    "parent": "@style/Theme.Material3Expressive.Dark",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.Dialog": {
+    "parent": "@style/Theme.Material3Expressive.Dark.Dialog",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.Dialog.Alert": {
+    "parent": "@style/Theme.Material3Expressive.Dark.Dialog.Alert",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.Dialog.Alert.FocusRings": {
+    "parent": "@style/Theme.Material3Expressive.Dark.Dialog.Alert.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.Dialog.FocusRings": {
+    "parent": "@style/Theme.Material3Expressive.Dark.Dialog.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.Dialog.MinWidth": {
+    "parent": "@style/Theme.Material3Expressive.Dark.Dialog.MinWidth",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.Dialog.MinWidth.FocusRings": {
+    "parent": "@style/Theme.Material3Expressive.Dark.Dialog.MinWidth.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.DialogWhenLarge": {
+    "parent": "@style/Theme.Material3Expressive.Dark.DialogWhenLarge",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.FocusRings": {
+    "parent": "@style/Theme.Material3Expressive.Dark.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.NoActionBar": {
+    "parent": "@style/Theme.Material3Expressive.Dark.NoActionBar",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DayNight.NoActionBar.FocusRings": {
+    "parent": "@style/Theme.Material3Expressive.Dark.NoActionBar.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DynamicColors.DayNight": {
+    "parent": "@style/Theme.Material3Expressive.DynamicColors.Dark",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DynamicColors.DayNight.FocusRings": {
+    "parent": "@style/Theme.Material3Expressive.DynamicColors.Dark.FocusRings",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DynamicColors.DayNight.NoActionBar": {
+    "parent": "@style/Theme.Material3Expressive.DynamicColors.Dark.NoActionBar",
+    "items": {}
+   },
+   "Theme.Material3Expressive.DynamicColors.DayNight.NoActionBar.FocusRings": {
+    "parent": "@style/Theme.Material3Expressive.DynamicColors.Dark.NoActionBar.FocusRings",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight": {
+    "parent": "@style/Theme.MaterialComponents",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.BottomSheetDialog": {
+    "parent": "@style/Theme.MaterialComponents.BottomSheetDialog",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Bridge": {
+    "parent": "@style/Theme.MaterialComponents.Bridge",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.DarkActionBar": {
+    "parent": "@style/Theme.MaterialComponents",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.DarkActionBar.Bridge": {
+    "parent": "@style/Theme.MaterialComponents.Bridge",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.DarkActionBar.FocusRings": {
+    "parent": "@style/Theme.MaterialComponents.FocusRings",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog": {
+    "parent": "@style/Theme.MaterialComponents.Dialog",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.Alert": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.Alert",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.Alert.Bridge": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.Alert.Bridge",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.Alert.FocusRings": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.Alert.FocusRings",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.Bridge": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.Bridge",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.FixedSize": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.FixedSize",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.FixedSize.Bridge": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.FixedSize.Bridge",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.FixedSize.FocusRings": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.FixedSize.FocusRings",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.FocusRings": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.FocusRings",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.MinWidth": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.MinWidth",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.MinWidth.Bridge": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.MinWidth.Bridge",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.Dialog.MinWidth.FocusRings": {
+    "parent": "@style/Theme.MaterialComponents.Dialog.MinWidth.FocusRings",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.DialogWhenLarge": {
+    "parent": "@style/Theme.MaterialComponents.DialogWhenLarge",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.FocusRings": {
+    "parent": "@style/Theme.MaterialComponents.FocusRings",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.NoActionBar": {
+    "parent": "@style/Theme.MaterialComponents.NoActionBar",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.NoActionBar.Bridge": {
+    "parent": "@style/Theme.MaterialComponents.NoActionBar.Bridge",
+    "items": {}
+   },
+   "Theme.MaterialComponents.DayNight.NoActionBar.FocusRings": {
+    "parent": "@style/Theme.MaterialComponents.NoActionBar.FocusRings",
+    "items": {}
+   },
+   "Theme.UberColorTokens.DayNight": {
+    "parent": "@style/Theme.UberColorTokens.Dark",
+    "items": {}
+   },
+   "Theme.UberColorTokens.DayNight.Light.Bridge": {
+    "parent": "@style/Theme.UberColorTokens.Dark.Bridge",
+    "items": {}
+   },
+   "ThemeHelixDayNight": {
+    "parent": "@style/Theme.Helix.Dark",
+    "items": {}
+   },
+   "ThemeOverlay.AppCompat.DayNight": {
+    "parent": "@style/ThemeOverlay.AppCompat.Dark",
+    "items": {}
+   },
+   "ThemeOverlay.Material3.DynamicColors.DayNight": {
+    "parent": "@style/ThemeOverlay.Material3.DynamicColors.Dark",
+    "items": {}
+   },
+   "ThemeOverlay.Material3Expressive.DynamicColors.DayNight": {
+    "parent": "@style/ThemeOverlay.Material3Expressive.DynamicColors.Dark",
+    "items": {}
+   },
+   "ThemePlatformDayNight": {
+    "parent": "@style/Theme.Platform.Dark",
+    "items": {}
+   },
+   "Widget.MaterialComponents.ActionBar.PrimarySurface": {
+    "parent": "@style/Widget.MaterialComponents.ActionBar.Surface",
+    "items": {}
+   },
+   "Widget.MaterialComponents.AppBarLayout.PrimarySurface": {
+    "parent": "@style/Widget.MaterialComponents.AppBarLayout.Surface",
+    "items": {}
+   },
+   "Widget.MaterialComponents.BottomAppBar.PrimarySurface": {
+    "parent": "@style/Widget.MaterialComponents.BottomAppBar",
+    "items": {}
+   },
+   "Widget.MaterialComponents.BottomNavigationView.PrimarySurface": {
+    "parent": "@style/Widget.MaterialComponents.BottomNavigationView",
+    "items": {}
+   },
+   "Widget.MaterialComponents.NavigationRailView.PrimarySurface": {
+    "parent": "@style/Widget.MaterialComponents.NavigationRailView",
+    "items": {}
+   },
+   "Widget.MaterialComponents.TabLayout.PrimarySurface": {
+    "parent": "@style/Widget.MaterialComponents.TabLayout",
+    "items": {}
+   },
+   "Widget.MaterialComponents.Toolbar.PrimarySurface": {
+    "parent": "@style/Widget.MaterialComponents.Toolbar.Surface",
+    "items": {}
+   },
+   "YellowBaseTheme": {
+    "parent": "@style/YellowThemeDark",
+    "items": {}
+   },
+   "Theme.UberColorTokens.Dark": {
+    "parent": "@style/Theme.UberBaseColorToken.Dark",
+    "items": {}
+   },
+   "Theme.UberColorTokens.Dark.Bridge": {
+    "parent": "@style/Theme.UberBaseColorTokens.Dark.Bridge",
+    "items": {}
+   }
+  }
+ }
+}

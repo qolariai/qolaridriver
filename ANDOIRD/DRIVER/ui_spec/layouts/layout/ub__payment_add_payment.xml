@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.feature.optional.add.AddPaymentView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.Platform.Light.Header" android:id="@id/white_toolbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.UCoordinatorLayout android:orientation="vertical" android:id="@id/ub__payment_add_payment_coordinator_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/ub__payment_add_payment_collapsing_header" layout="@layout/collapsing_header" />
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__payment_add_payment_multiline_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.DisplayXSmall" />
+                <ViewStub android:id="@id/ub__payment_add_payment_header_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ViewStub android:id="@id/ub__payment_add_payment_header_description_view_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.ui.core.URecyclerView android:id="@id/ub__payment_add_payment_recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_5x" uber:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                <com.ubercab.ui.core.ULinearLayout android:gravity="bottom" android:id="@id/ub__payment_add_addons_layout" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:layout_weight="1.0" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</com.ubercab.presidio.payment.feature.optional.add.AddPaymentView>

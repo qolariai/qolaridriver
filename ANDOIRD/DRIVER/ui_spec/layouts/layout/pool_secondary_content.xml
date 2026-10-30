@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.overflow_secondary_content_pool.OverflowSecondaryPoolContentView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__address_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__button_container" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="64c63e85-7f45">
+        <com.ubercab.core.do_panel.DoPanelButtonView android:id="@id/ub__end_trip_early_button" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/end_trip_early_button_label" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.overflow_secondary_content_pool.OverflowSecondaryPoolContentView>

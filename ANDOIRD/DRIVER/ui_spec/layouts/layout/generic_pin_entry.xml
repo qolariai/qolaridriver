@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.carbon.features.generic_pin_input.GenericPinEntryView android:orientation="vertical" android:id="@id/pickup_verification_pin_entry" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:theme="?toolbarTheme" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:contentInsetStartWithNavigation="0.0dip" uber:elevation="@dimen/ui__header_elevation">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.ToolbarFont" android:id="@id/pin_entry_toolbar" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="?actionBarSize" uber:contentInsetStartWithNavigation="0.0dip" uber:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/Widget.Platform.Toolbar">
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_gravity="end|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" android:layout_alignParentEnd="true">
+                <com.ubercab.ui.core.UImageView android:id="@id/intercom_contact_icon_small" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="04c74b05-f773" uber:srcCompat="@drawable/ub_ic_phone_speech_bubble" uber:tint="?brandBlack" />
+                <com.ubercab.ui.core.UImageView android:id="@id/pin_entry_help" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="045489a4-e462" uber:srcCompat="@drawable/ub_ic_circle_question_mark" uber:tint="?brandBlack" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UToolbar>
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.URecyclerView android:id="@id/pin_entry_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" />
+</com.uber.carbon.features.generic_pin_input.GenericPinEntryView>

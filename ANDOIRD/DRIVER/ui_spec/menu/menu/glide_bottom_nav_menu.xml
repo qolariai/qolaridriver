@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/glide_bottom_nav_home_selector" android:enabled="true" android:id="@id/glide_bottom_nav_home" android:title="@string/carbon_tab_title_home" />
+    <item android:icon="@drawable/glide_bottom_nav_opportunities_selector" android:enabled="true" android:id="@id/glide_bottom_nav_opportunities" android:visible="false" android:title="@string/carbon_tab_title_opportunities" />
+    <item android:icon="@drawable/glide_bottom_nav_earnings_selector" android:enabled="true" android:id="@id/glide_bottom_nav_earnings" android:title="@string/carbon_tab_title_earnings" />
+    <item android:icon="@drawable/glide_bottom_nav_inbox_selector" android:enabled="true" android:id="@id/glide_bottom_nav_inbox" android:title="@string/carbon_tab_title_inbox" />
+    <item android:icon="@drawable/glide_bottom_nav_menu_selector" android:enabled="true" android:id="@id/glide_bottom_nav_menu" android:title="@string/carbon_tab_title_menu" />
+</menu>

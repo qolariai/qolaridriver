@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.earnings_tab.core.EarningsTabView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/tab_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="Earnings" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.LabelLarge" />
+</com.uber.earnings_tab.core.EarningsTabView>

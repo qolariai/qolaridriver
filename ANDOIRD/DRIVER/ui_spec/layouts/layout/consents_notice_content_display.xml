@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.consentsnotice.source.consentsnoticecontentdisplay.ConsentsNoticeContentDisplayView android:orientation="vertical" android:background="?backgroundTransparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/consents_notice_content_container" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.placeholder.PlaceholderView android:id="@id/consents_notice_content_loader" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/consents_notice_child_container" android:background="?backgroundTransparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.uber.consentsnotice.source.consentsnoticecontentdisplay.ConsentsNoticeContentDisplayView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/glide_go_online_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/go_online_button" android:padding="@dimen/ui__spacing_unit_0.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/glide_go_online_button_text" android:textAlignment="center" app:analyticsId="ebff630b-aa9f" app:analyticsImpressionId="51a087b7-e39d" app:buttonType="primary" app:shape="pill" app:size="large" style="@style/Platform.TextStyle.HeadingDefault" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/schedule_button" android:padding="@dimen/ui__spacing_unit_0.5x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/glide_schedule_button_text" android:textAlignment="center" app:analyticsId="0c60fc96-e84e" app:analyticsImpressionId="53686405-589b" app:buttonType="primary" app:icon="@drawable/ic_base_calendar_filled" app:shape="pill" app:size="large" style="@style/Platform.TextStyle.HeadingDefault" />
+</merge>

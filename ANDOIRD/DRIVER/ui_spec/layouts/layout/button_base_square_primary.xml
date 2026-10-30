@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.button.BaseMaterialButton android:layout_width="wrap_content" android:layout_height="wrap_content" app:shape="square" app:size="large" app:type="primary" style="@style/Platform.Button.Base.CircleSquareDynamic"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

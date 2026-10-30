@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ub__emergency_contacts_value_prop_view" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

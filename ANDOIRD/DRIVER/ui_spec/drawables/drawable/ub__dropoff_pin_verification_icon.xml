@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center" android:id="@id/background">
+        <shape android:shape="oval">
+            <solid android:color="?accent" />
+            <size android:height="@dimen/ui__spacing_unit_3x" android:width="@dimen/ui__spacing_unit_3x" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:id="@id/id_icon" android:height="@dimen/ui__spacing_unit_1.5x" android:width="@dimen/ui__spacing_unit_1.5x" android:drawable="@drawable/ub_ic_pin_entry" android:top="@dimen/ub__dropoff_pin_margin" />
+</layer-list>

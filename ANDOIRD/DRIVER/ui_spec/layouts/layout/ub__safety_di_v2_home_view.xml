@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety_driving_insights_v2.home.SafetyDIV2HomeView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__safety_di_v2_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" app:elevation="0.0dip" app:header_state="collapse" />
+        <com.ubercab.ui.core.progress.BaseProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/ub__safety_di_v2_loading_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.emptystate.EmptyStateView android:gravity="center" android:layout_gravity="center" android:id="@id/ub__safety_di_v2_error_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:empty_state_headline_text="@string/safety_driving_insights_v2_error_title" app:empty_state_paragraph_text="@string/safety_driving_insights_v2_generic_try_again_description" app:empty_state_type="warning" />
+        <com.ubercab.ui.core.UScrollView android:id="@id/ub__safety_di_v2_scroll_view" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__safety_di_v2_sections_container" android:background="?backgroundSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/ub__safety_di_v2_home_title" android:background="?backgroundPrimary" android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.DisplayXSmall" />
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:id="@id/ub__safety_di_v2_home_subtitle" android:background="?backgroundPrimary" android:paddingTop="@dimen/ui__spacing_unit_0.5x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.ParagraphSmall" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</com.uber.safety_driving_insights_v2.home.SafetyDIV2HomeView>

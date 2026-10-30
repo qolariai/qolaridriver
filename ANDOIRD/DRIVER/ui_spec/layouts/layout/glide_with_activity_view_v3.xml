@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.glide.core.withactivity.GlideWithActivityView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/system_banner_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/glide_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="1eb019bc-4bf6" app:analyticsImpressionId="ece6547b-3eed">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/glide_background_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/glide_screen_stack_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.UFrameLayout android:id="@id/glide_tabs_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <include layout="@layout/glide_inbox_screen_stack_container_layout" />
+                    <include layout="@layout/glide_menu_screen_stack_container_layout" />
+                    <include layout="@layout/glide_home_screen_stack_container_layout" />
+                    <include layout="@layout/glide_earnings_screen_stack_container_layout" />
+                    <include layout="@layout/glide_opportunities_screen_stack_container_layout" />
+                    <com.uber.glide.core.GlideLinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/bottom_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="end" android:id="@id/glide_go_online_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/ui__spacing_unit_1x" android:paddingVertical="@dimen/ui__spacing_unit_0.5x" app:analyticsId="523e1ef9-94b0" />
+                        <com.ubercab.ui.core.UPlainView android:background="?borderOpaque" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+                        <com.uber.glide.core.view.GlideBottomNavigationView android:id="@id/glide_bottom_navigation_view_v2" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="0.0dip" app:itemBackground="@drawable/glide_bottom_nav_ripple" app:itemIconSize="@dimen/tabs_icon_size" app:itemIconTint="@drawable/glide_bottom_nav_item_tint" app:itemTextAppearanceActive="@style/BottomNavActiveStyle" app:itemTextAppearanceInactive="@style/BottomNavInActiveStyle" app:labelVisibilityMode="labeled" app:menu="@menu/glide_bottom_nav_menu" />
+                    </com.uber.glide.core.GlideLinearLayout>
+                </com.ubercab.ui.core.UFrameLayout>
+                <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:id="@id/glide_active_view_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="471194e3-0170" app:analyticsImpressionId="7cade577-74aa" />
+            </com.ubercab.ui.core.UFrameLayout>
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/online_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/voice_input_pill_container" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsImpressionId="fa0ff92e-7564" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.uber.glide.core.withactivity.GlideWithActivityView>

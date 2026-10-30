@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.venues.next_inspection_sheet.summary_card.ArcProgressView android:id="@id/arc_progress_view" android:layout_width="@dimen/ui__spacing_unit_9x" android:layout_height="@dimen/ui__spacing_unit_4.5x" />
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center|bottom" android:id="@id/arc_progress_image_view" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:scaleType="fitCenter" />
+</merge>

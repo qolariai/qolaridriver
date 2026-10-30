@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginVertical="@dimen/ui__spacing_unit_2x" app:dividersize="module" app:dividerstyle="primary"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.bankcard.ui.confirmcvv.ConfirmCvvView android:orientation="vertical" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__payment_confirm_cvv_card_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="d4b0cf26-5054" />
+                <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center_vertical" android:id="@id/ub__payment_confirm_cvv_card_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" uber:analyticsId="8c047874-b67f" style="@style/Platform.TextStyle.P" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.image.BaseImageView android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="462c4409-2939" uber:srcCompat="?dividerHorizontal" />
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__payment_confirm_cvv_instruction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?contentInset" uber:analyticsId="6845efd5-63db" style="@style/Platform.TextStyle.H4" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?contentInset">
+                <com.ubercab.ui.core.UEditText android:layout_gravity="center_vertical" android:id="@id/ub__payment_confirm_cvv_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="number" uber:analyticsId="c3e597c1-9874" style="@style/Platform.TextStyle.H2">
+                    <requestFocus />
+                </com.ubercab.ui.core.UEditText>
+                <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:id="@id/ub__payment_confirm_cvv_tooltip" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="dbf34b74-1791" uber:srcCompat="@drawable/ub__payment_bank_card_info" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__payment_confirm_cvv_help" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset">
+                <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__payment_confirm_cvv_help_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_0x" android:paddingEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="b0147c96-2e3a" uber:srcCompat="@drawable/ub__payment_bank_card_cvv_info" />
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?textSecondary" android:layout_gravity="center_vertical" android:id="@id/ub__payment_confirm_cvv_help_text" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="1b20afa0-af34" style="@style/Platform.TextStyle.Small.Normal" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.button.BaseMaterialButton android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="f4ed5d7a-cde7" style="?platformButtonPrimary" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.commons.widget.KeyboardButton android:theme="@style/Platform.Button.Primary" android:layout_gravity="bottom" android:id="@id/ub__payment_confirm_cvv_next_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/payments_bankcard_next" />
+</com.uber.bankcard.ui.confirmcvv.ConfirmCvvView>

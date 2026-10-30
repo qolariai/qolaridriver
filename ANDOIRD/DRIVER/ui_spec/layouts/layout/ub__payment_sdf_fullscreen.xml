@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.paymentsdf.fullscreen.PaymentSDFFullscreenView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__payment_sdf_base_header" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:elevation="0.0dip" uber:header_state="collapse" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <include android:id="@id/ub__payment_sdf_progress_bar" layout="@layout/ub__payment_sdf_progress_bar" />
+        <com.uber.paymentsdf.PaymentSDFReactiveErrorView android:id="@id/ub__payment_sdf_reactive_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.uber.paymentsdf.PaymentSDFStaticErrorView android:id="@id/ub__payment_sdf_static_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__payment_sdf_not_scrollable_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.USwipeRefreshLayout android:id="@id/ub__payment_sdf_swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.UScrollView android:id="@id/ub__payment_sdf_scroll_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" uber:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </com.ubercab.ui.core.USwipeRefreshLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+</com.uber.paymentsdf.fullscreen.PaymentSDFFullscreenView>

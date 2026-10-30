@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.URelativeLayout android:background="?backgroundAlwaysDark" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/style_guide_v2_splash_textView">
+        <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__spacing_unit_12x" android:layout_height="@dimen/ui__spacing_unit_12x" android:scaleType="fitXY" android:layout_centerInParent="true" app:analyticsId="f536fe6a-6772" app:srcCompat="@drawable/style_guide_splash" />
+    </com.ubercab.ui.core.URelativeLayout>
+    <com.ubercab.ui.core.UTextView android:textColor="?contentOnColor" android:gravity="center" android:id="@id/style_guide_v2_splash_textView" android:paddingTop="@dimen/ui__spacing_unit_4.5x" android:paddingBottom="@dimen/ui__spacing_unit_9x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_v2_splash_text" android:layout_alignParentBottom="true" app:analyticsId="70a36748-b29f" style="@style/Platform.TextStyle.DisplayXSmall" />
+</com.ubercab.ui.core.URelativeLayout>

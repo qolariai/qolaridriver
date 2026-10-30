@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="9720e7c9-3c66" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.URecyclerView android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/route_cards_recycler_view" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:overScrollMode="never" />
+</com.ubercab.ui.core.UFrameLayout>

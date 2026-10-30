@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:background="?backgroundPrimary" android:padding="@dimen/ui__spacing_unit_12x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/base_tooltip_target" android:layout_width="wrap_content" android:layout_height="wrap_content" app:buttonType="primary" app:icon="@drawable/ic_close_inverse" app:shape="circle" app:size="large" style="@style/Platform.Button.Base.CircleSquareDynamic" />
+</com.ubercab.ui.core.UFrameLayout>

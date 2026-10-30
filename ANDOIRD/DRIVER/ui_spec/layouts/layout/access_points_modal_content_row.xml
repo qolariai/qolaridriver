@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.accesspoints.modal.AccessPointsModalContentRowView android:gravity="center_vertical" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/access_points_modal_row_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="e7e7b49d-8902" />
+    <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:id="@id/access_points_modal_row_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_0x" app:analyticsId="525cc9bf-76fb" style="@style/Platform.TextStyle.ParagraphDefault" />
+</com.ubercab.accesspoints.modal.AccessPointsModalContentRowView>

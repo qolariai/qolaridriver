@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.directed_dispatch.DirectedDispatchNextCardView android:orientation="vertical" android:id="@id/directed_dispatch_view" android:background="?backgroundColorUnread" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/extended_directed_dispatch_next_card_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/ub__extended_directed_dispatch" />
+    <com.ubercab.ui.core.URelativeLayout android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="de12f26c-f1fc">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/directed_dispatch_primary_icon_background" android:background="@drawable/next_card_primary_icon_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentStart="true">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/directed_dispatch_next_card_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_toEndOf="@id/directed_dispatch_primary_icon_background">
+            <com.ubercab.ui.core.UTextView android:textColor="?textColorAccent" android:id="@id/directed_dispatch_next_card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Subtitle.Medium" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/directed_dispatch_next_card_description" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Subtitle.Medium" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.URelativeLayout>
+</com.ubercab.directed_dispatch.DirectedDispatchNextCardView>

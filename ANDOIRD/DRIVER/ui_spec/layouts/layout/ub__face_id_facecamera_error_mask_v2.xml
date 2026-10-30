@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/constraintLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="112d8d11-fb6a"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/ub__identity_verification_error_image" android:background="?colorAccentInverse" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="fitCenter" app:analyticsId="1118c542-a144" app:layout_constraintDimensionRatio="4:3" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.facecamera.camera.FaceCameraPreviewMaskV2 android:id="@id/ub__identity_verification_facecamera_mask" android:layout_width="fill_parent" android:layout_height="0.0dip" app:faceMaskColor="?android:windowBackground" app:layout_constraintDimensionRatio="4:3" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

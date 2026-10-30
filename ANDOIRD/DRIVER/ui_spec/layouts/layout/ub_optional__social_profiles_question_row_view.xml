@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.socialprofiles.profile.ui.SocialProfilesQuestionRowView android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/question_row_image" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="center_vertical" android:id="@id/question_row_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_1x" style="@style/Platform.TextStyle.H5.News.Secondary" />
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/question_row__trailing_image" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:paddingStart="0.0dip" android:paddingEnd="@dimen/ui__spacing_unit_1x" />
+</com.ubercab.socialprofiles.profile.ui.SocialProfilesQuestionRowView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.guarantee_incentive.GuaranteeDetailsView android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="4251eb76-49d4"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_layout" android:fitsSystemWindows="false" android:layout_width="0.0dip" android:layout_height="?actionBarSize" uber:layout_constraintEnd_toEndOf="parent" uber:layout_constraintStart_toStartOf="parent" uber:layout_constraintTop_toTopOf="parent" layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/guarantee_details_scrollview" android:layout_width="0.0dip" android:layout_height="0.0dip" uber:layout_behavior="@string/appbar_scrolling_view_behavior" uber:layout_constraintBottom_toBottomOf="parent" uber:layout_constraintEnd_toEndOf="parent" uber:layout_constraintStart_toStartOf="parent" uber:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/guarantee_details_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ub__guarantee_details_header" />
+            <include layout="@layout/ub__guarantee_details_card" />
+            <include layout="@layout/ub__how_guarantees_work_container" />
+            <include layout="@layout/ub__guarantee_details_terms_footer" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <ProgressBar android:layout_gravity="center" android:id="@id/guarantee_details_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="8adcbe18-90ed" uber:layout_constraintBottom_toBottomOf="parent" uber:layout_constraintEnd_toEndOf="parent" uber:layout_constraintStart_toStartOf="parent" uber:layout_constraintTop_toBottomOf="@id/toolbar_layout" />
+    <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/guarantee_details_error_view" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" uber:analyticsId="bdafe9e1-f41f" uber:layout_constraintBottom_toBottomOf="parent" uber:layout_constraintEnd_toEndOf="parent" uber:layout_constraintStart_toStartOf="parent" uber:layout_constraintTop_toBottomOf="@id/toolbar_layout" />
+</com.ubercab.guarantee_incentive.GuaranteeDetailsView>

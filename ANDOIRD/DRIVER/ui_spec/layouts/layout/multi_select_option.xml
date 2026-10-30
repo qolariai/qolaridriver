@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.taskbuildingblocks.question.multiselect.item.MultiSelectItemView android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="?contentInset" android:paddingVertical="@dimen/ui__spacing_unit_1x"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

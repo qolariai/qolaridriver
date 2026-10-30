@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.ui_compose_view.core.BaseAvatarView android:id="@id/ub__profile_avatar" android:layout_width="?avatarTiny" android:layout_height="?avatarTiny" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

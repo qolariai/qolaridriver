@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.trip_issues.TripIssueLineItemView android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:gravity="center" android:id="@id/trip_issue_icon" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:scaleType="centerInside" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/trip_issue_label" app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:textColor="?contentPrimary" android:gravity="start|center" android:id="@id/trip_issue_label" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/trip_issue_icon" app:layout_constraintTop_toTopOf="parent" />
+</com.ubercab.trip_issues.TripIssueLineItemView>

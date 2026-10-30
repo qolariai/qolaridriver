@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.navigation.guidance.SwipeGuidanceView android:id="@id/ub__fallback_nav_guidance_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginRight="@dimen/ui__spacing_unit_1x" android:layout_marginStart="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__nav_guidance_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="@dimen/ui__elevation_low" />
+</com.ubercab.ui.core.UFrameLayout>

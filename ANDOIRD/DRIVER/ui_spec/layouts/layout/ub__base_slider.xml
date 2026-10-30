@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__slider_icon_start" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:scaleType="center" android:tint="@color/ub__base_slider_icons" />
+        <com.ubercab.ui.core.slider.UBaseSliderInternal android:id="@id/ub__base_slider_internal" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="wrap_content" android:max="10" android:progressDrawable="@drawable/ub__base_slider_progress" android:minHeight="@dimen/ui__spacing_unit_6x" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__slider_icon_end" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:scaleType="center" android:tint="@color/ub__base_slider_icons" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

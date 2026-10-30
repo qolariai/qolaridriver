@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/video_call_waiting" android:paddingLeft="?gutterSize" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingRight="?gutterSize" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/video_call_waiting_video_mirror" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingXSmall" android:textColor="?textInverse" android:gravity="center" android:id="@id/video_call_waiting_status" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="8db8ef9a-7e2c" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.bottomsheet.ui.DefaultBottomSheetView android:orientation="vertical" android:id="@id/video_call_legal_bottom_sheet" android:background="?backgroundPrimary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.ubercab.ui.bottomsheet.AnchoredBottomSheetBehavior" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="bottom" android:id="@id/video_call_join_container" android:background="?backgroundPrimary" android:paddingLeft="?gutterSize" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="?gutterSize" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/ub__video_call_join_container_elevation">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:enabled="false" android:id="@id/video_call_join" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/video_call_legal_waiting" app:analyticsId="237abcc7-9941" app:buttonType="primary" app:shape="rect" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

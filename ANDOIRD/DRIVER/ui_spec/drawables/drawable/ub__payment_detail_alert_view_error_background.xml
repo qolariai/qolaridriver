@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/ub__payment_detail_alert_view_corner_radius" />
+    <solid android:color="@color/ub__negative_pale" />
+    <stroke android:width="?dividerWidth" android:color="?colorNegative" />
+</shape>

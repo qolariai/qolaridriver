@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gradient android:angle="0.0" android:type="linear" android:startX="8.03" android:startY="12.93" android:endX="19.01" android:endY="8.86"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:color="@color/ub__payment_bancontact_card_5" android:offset="0.0" />
+    <item android:color="@color/ub__payment_bancontact_card_6" android:offset="1.0" />
+</gradient>

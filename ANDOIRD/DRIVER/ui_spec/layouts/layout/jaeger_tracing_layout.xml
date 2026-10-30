@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.jaegertracing.JaegerTracingView android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="2" style="@style/MobileStudio.Plugin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:layout_gravity="fill_horizontal|start" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_backend_tracing" android:layout_columnSpan="2" app:analyticsId="5aba3084-4214" style="@style/MobileStudio.Plugin.Header" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="start|center" android:text="@string/ub__mobilestudio_jaeger_tracing" app:analyticsId="e05763b5-d502" style="@style/MobileStudio.Plugin.RowTitle" />
+    <com.ubercab.ui.core.USwitchCompat android:layout_gravity="start|center" android:id="@id/mobilestudio_enable_jaeger_trace_logging" style="@style/MobileStudio.Plugin.RowWidget" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="start|center" android:id="@id/mobilestudio_jaeger_tracing_id" android:text="@string/ub__mobilestudio_jaeger_trace_id" app:analyticsId="9d7806b1-50be" style="@style/MobileStudio.Plugin.RowTitle" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="fill_horizontal|start|center" android:id="@id/mobilestudio_jaeger_tracing_id_value" app:analyticsId="e7b20f71-ad6e" style="@style/MobileStudio.Plugin.RowTitle" />
+</com.uber.mobilestudio.jaegertracing.JaegerTracingView>

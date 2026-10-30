@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__tax_document_info_base_header" android:layout_width="0.0dip" android:layout_height="wrap_content" app:header_state="collapse" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UScrollView android:padding="?contentInset" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__tax_document_info_base_header">
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphDefault" android:textColorLink="?accentLink" android:autoLink="web" android:linksClickable="true" android:id="@id/ub__tax_document_info_text" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="f30d85d5-1fb7" />
+    </com.ubercab.ui.core.UScrollView>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__payment_indicator_icon" android:layout_width="@dimen/ui__icon_small" android:layout_height="@dimen/ui__icon_small" app:analyticsId="e277637f-e68d" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UTextView android:gravity="center_vertical" android:id="@id/ub__payment_indicator_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__line_indicator_height" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" app:analyticsId="427a6319-9cd4" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/ub__payment_indicator_icon" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.Small.Medium" />
+</merge>

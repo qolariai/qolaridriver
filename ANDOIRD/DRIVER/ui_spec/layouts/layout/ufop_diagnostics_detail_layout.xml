@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.unresponsive_force_offline_prevention.screen.diagnostic_detail.UfopDiagnosticsDetailView android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="cf4f13dd-e492"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__diagnostic_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="3968069b-039f" app:elevation="0.0dip" app:header_state="collapse" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UScrollView android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/ufop_diagnostics_header" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__diagnostic_tips_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/diagnostic_detail_screen_tips_title" style="@style/Platform.TextStyle.LabelDefault" />
+                    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__diagnostic_tips_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.ParagraphDefault" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/ub__diagnostic_cta_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/diagnostics_screen_cta_text" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.unresponsive_force_offline_prevention.screen.diagnostic_detail.UfopDiagnosticsDetailView>

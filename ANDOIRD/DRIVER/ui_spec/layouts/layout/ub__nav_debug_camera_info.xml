@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/ub__nav_debug_map_zoom" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_debug_row_height_small" style="@style/NavView.Widget.Debug.CameraInfo" />
+    <TextView android:id="@id/ub__nav_debug_map_altitude" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_debug_row_height_small" style="@style/NavView.Widget.Debug.CameraInfo" />
+    <TextView android:id="@id/ub__nav_debug_map_bearing" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_debug_row_height_small" style="@style/NavView.Widget.Debug.CameraInfo" />
+    <TextView android:id="@id/ub__nav_debug_map_tilt" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_debug_row_height_small" style="@style/NavView.Widget.Debug.CameraInfo" />
+    <TextView android:id="@id/ub__nav_debug_map_lat" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_debug_row_height_small" style="@style/NavView.Widget.Debug.CameraInfo" />
+    <TextView android:id="@id/ub__nav_debug_map_long" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_debug_row_height_small" style="@style/NavView.Widget.Debug.CameraInfo" />
+</merge>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/ub__navigation_offset" android:top="@dimen/ub__navigation_offset" android:right="@dimen/ub__navigation_offset">
+        <shape>
+            <solid android:color="?backgroundInverseSecondary" />
+            <stroke android:width="@dimen/ub__navigation_divider_width" android:color="?borderInverseOpaque" />
+        </shape>
+    </item>
+</layer-list>

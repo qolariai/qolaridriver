@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.News" android:gravity="center_horizontal" android:id="@id/help_inperson_error_message" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="31a7c0fa-9006" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/help_inperson_error_retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/help_inperson_error_retry" app:analyticsId="b0af5b34-5485" app:buttonType="tertiary" style="@style/Platform.Button.BaseDynamic" />
+</merge>

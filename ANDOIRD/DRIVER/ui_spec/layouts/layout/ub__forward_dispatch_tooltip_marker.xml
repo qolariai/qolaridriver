@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.map_ui.tooltip.optional.ForwardDispatchTooltipView android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/ub__tooltip_forward_dispatch_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/ub__tooltip_forward_dispatch_padding" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingRight="@dimen/ub__tooltip_forward_dispatch_padding" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UTextView android:layout_gravity="center_vertical" android:id="@id/ub__label" android:layout_width="wrap_content" android:layout_height="fill_parent" app:computeLineHeight="false" style="@style/Platform.TextStyle.H6.News.Secondary" />
+        <com.ubercab.ui.core.UTextView android:layout_gravity="center_vertical" android:id="@id/ub__text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" app:computeLineHeight="false" style="@style/Platform.TextStyle.H6.News.Secondary" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.map_ui.tooltip.optional.ForwardDispatchTooltipView>

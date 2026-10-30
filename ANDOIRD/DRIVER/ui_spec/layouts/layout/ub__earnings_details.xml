@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.USwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/bit_loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?colorAccent" />
+            <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/full_screen_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.ubercab.ui.core.URecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.USwipeRefreshLayout>
+    <com.ubercab.earnings_ui.error.EarningsErrorSnackbar android:layout_gravity="bottom" android:id="@id/error_snackbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

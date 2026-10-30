@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:topLeftRadius="@dimen/ub__mobilestudio_plugin_border" android:topRightRadius="@dimen/ub__mobilestudio_plugin_border" />
+    <solid android:color="?ms_colorPluginHeaderBackground" />
+    <stroke android:width="@dimen/ub__mobilestudio_divider_size" android:color="?ms_colorPluginDivider" />
+</shape>

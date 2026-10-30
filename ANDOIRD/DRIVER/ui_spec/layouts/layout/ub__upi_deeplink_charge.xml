@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.upi.operation.chargedeeplink.UPIDeeplinkChargeOperationView android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="af2cfbf4-d44e"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="@style/PaymentUPILightHeader" android:id="@id/ub__header_appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:contentInsetStartWithNavigation="0.0dip" uber:elevation="0.0dip" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__upi_deeplink_charge_recyclerview" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.ubercab.presidio.payment.upi.operation.chargedeeplink.UPIDeeplinkChargeOperationView>

@@ -1,0 +1,12 @@
+{
+ "styles": {
+  "styles": {
+   "Base.Theme.SplashScreen.DayNight": {
+    "parent": "@style/Base.Theme.SplashScreen",
+    "items": {
+     "android:windowLightNavigationBar": "false"
+    }
+   }
+  }
+ }
+}

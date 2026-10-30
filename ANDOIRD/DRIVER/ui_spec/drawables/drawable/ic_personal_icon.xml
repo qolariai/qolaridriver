@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="40.0dip" android:width="40.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/ub__ui_core_brand_primary" android:pathData="M0,0h48v48h-48z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_white" android:pathData="M10,39l14,0l0,-20l-14,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_senary" android:pathData="M24,7l-17,12l17,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_tertiary" android:pathData="M24,7l17,12l-17,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_grey_40" android:pathData="M24,39l14,0l0,-20l-14,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_primary" android:pathData="M14,25h6v14h-6z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_tertiary" android:pathData="M28,23h6v7h-6z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_senary" android:pathData="M24,48L48,48C48,48 48,42.74 48,41C48,37.13 37.25,34 24,34C10.75,34 0,37.13 0,41L0,48L24,48Z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+</vector>

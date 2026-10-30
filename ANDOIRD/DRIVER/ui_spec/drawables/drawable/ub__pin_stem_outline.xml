@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/ub__location_pin_circle_stroke_width" android:color="?borderInverseSelected" />
+    <solid android:color="?backgroundInversePrimary" />
+</shape>

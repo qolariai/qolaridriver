@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/learning_carousel_content_holder" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/learning_title_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?contentInset" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" app:analyticsId="28ec6fef-3eb0" style="@style/Platform.TextStyle.Title.Normal" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/learning_body_text_view" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginRight="?contentInset" app:analyticsId="7f5a28ec-51dd" style="@style/Platform.TextStyle.Paragraph.Normal" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/learning_footnote_text_view" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginRight="?contentInset" app:analyticsId="c9c4c368-a627" style="@style/Platform.TextStyle.ParagraphSmall" />
+    <Space android:layout_width="0.0dip" android:layout_height="@dimen/ui__spacing_unit_1x" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_oval_text_view" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="9d9da3e7-b2ea"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.commons.widget.OvalTextView android:textSize="@dimen/ub__text_size_micro" android:textColor="?artYellow50" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_margin="@dimen/ui__spacing_unit_3x" android:text="3" />
+            <com.ubercab.ui.commons.widget.OvalTextView android:textColor="?iconInverse" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:layout_margin="@dimen/ui__spacing_unit_3x" android:text="99" app:ovalFillColor="?artBlue600" style="@style/Platform.TextStyle.H4.Book" />
+            <com.ubercab.ui.commons.widget.OvalTextView android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_margin="@dimen/ui__spacing_unit_3x" android:text="100" app:ovalFillColor="?artRed500" style="@style/Platform.TextStyle.H5.Book" />
+            <com.ubercab.ui.commons.widget.OvalTextView android:textColor="?textInverse" android:layout_width="@dimen/ui__spacing_unit_11x" android:layout_height="@dimen/ui__spacing_unit_11x" android:layout_margin="@dimen/ui__spacing_unit_3x" android:text="Uber" app:ovalFillColor="?iconColor" style="@style/Platform.TextStyle.H2.Book" />
+            <com.ubercab.ui.commons.widget.OvalTextView android:layout_width="@dimen/ui__spacing_unit_11x" android:layout_height="@dimen/ui__spacing_unit_11x" android:layout_margin="@dimen/ui__spacing_unit_3x" android:text="11x11" app:ovalFillColor="?emotionYellow" style="@style/Platform.TextStyle.H1.Book" />
+            <com.ubercab.ui.commons.widget.OvalTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_3x" android:text="Wrap content" app:ovalFillColor="?iconColor" style="@style/Platform.TextStyle.H3.Book.Primary.Inverse" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

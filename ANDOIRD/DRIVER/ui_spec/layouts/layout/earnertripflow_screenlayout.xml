@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/earnertripflow_screenlayout_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/earnertripflow_screenlayout_body" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/earnertripflow_screenlayout_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

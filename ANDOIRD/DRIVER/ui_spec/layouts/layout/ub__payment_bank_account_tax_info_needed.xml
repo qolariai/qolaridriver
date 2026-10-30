@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.bankaccount.operation.tax_info_needed.BankAccountTaxInfoNeededView android:orientation="vertical" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="0efca7bc-adbf"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.Platform.Light.Header" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.presidio.payment.provider.shared.payment_dialog.PaymentDialogView android:id="@id/ub__bank_account_success_payment_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.presidio.payment.bankaccount.operation.tax_info_needed.BankAccountTaxInfoNeededView>

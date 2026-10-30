@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textColor="?white" android:id="@id/visual_safety_checklist_tooltip_text" android:background="@drawable/bike_safety_tooltip_container" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="3fa31fd8-78be" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.LabelSmall" />
+    <com.ubercab.ui.core.UImageView android:id="@id/visual_safety_checklist_tooltip_pointer" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="88539b17-9fd3" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/visual_safety_checklist_tooltip_text" app:srcCompat="@drawable/bike_safety_tooltip_pointer" />
+</merge>

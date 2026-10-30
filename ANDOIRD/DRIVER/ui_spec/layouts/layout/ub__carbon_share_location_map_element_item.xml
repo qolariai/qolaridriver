@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_1x"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:id="@id/ub__carbon_share_location_button_container" android:background="@drawable/ub__carbon_share_location_circle_button" android:clickable="false" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/ub__carbon_share_location_on_map_sent_indicator_check" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ic_check" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UTextView android:ellipsize="end" android:layout_gravity="center" android:id="@id/ub__contact_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_1x" style="@style/Platform.TextStyle.H4.News" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.ULinearLayout>

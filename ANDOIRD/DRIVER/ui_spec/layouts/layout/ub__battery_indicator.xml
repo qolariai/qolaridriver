@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/image_battery" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="d5c7c50e-c950" app:layout_constraintBottom_toBottomOf="@id/text_battery_percent" app:layout_constraintTop_toTopOf="@id/text_battery_percent" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/text_battery_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__emobi_spacing_unit_0.75x" app:analyticsId="f9a3e4f4-973a" app:computeLineHeight="false" app:layout_constraintStart_toEndOf="@id/image_battery" style="@style/Platform.TextStyle.ParagraphLarge" />
+</merge>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="26.0dip" android:width="25.0dip" android:viewportWidth="25.0" android:viewportHeight="26.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0.085,0h24v26h-24z" />
+        <path android:fillColor="@color/ub__payment_visa_card_1" android:pathData="M0.75,2.903h16.5V9H4.085v5.903H0.75v-12Z" android:fillType="evenOdd" />
+        <path android:fillColor="@color/ub__payment_cartes_card_fillcolor" android:pathData="m6.138,9 l0.953,-2.274L6.01,6.726L5.109,9h1.03ZM8.077,9h-1.03l0.487,-2.274h1.03L8.076,9ZM11.273,9L9.64,9c-0.372,-0.195 -0.802,-0.508 -0.796,-1.03 0.006,-0.775 0.723,-1.317 1.741,-1.317 0.397,0 0.716,0.087 0.964,0.177l-0.181,0.844a1.944,1.944 0,0 0,-1.016 -0.178c-0.298,0.039 -0.434,0.19 -0.437,0.334 -0.004,0.188 0.229,0.31 0.509,0.457 0.313,0.165 0.684,0.36 0.849,0.713ZM14.643,9 L14.169,6.726h-0.88a0.469,0.469 0,0 0,-0.438 0.292L12.02,9h0.985l0.434,-1.198L13.69,9h0.954ZM4.085,9.748L3.512,7.53c-0.05,-0.195 -0.094,-0.267 -0.245,-0.35 -0.248,-0.134 -0.657,-0.26 -1.017,-0.338l0.025,-0.116h1.753a0.48,0.48 0,0 1,0.475 0.406L4.855,9h-0.77v0.748Z" android:fillType="evenOdd" />
+        <path android:fillColor="@color/ub__payment_bancontact_card_1" android:pathData="M6.278,11H23.31v12H6.278z" />
+        <path android:fillColor="@color/ub__payment_bancontact_card_2" android:pathData="M20.852,15.632h-4.796l-0.49,0.534 -1.58,1.726 -0.49,0.534H8.767l0.478,-0.54 0.227,-0.255 0.478,-0.54H7.775c-0.399,0 -0.722,0.327 -0.722,0.718v1.52a0.72,0.72 0,0 0,0.722 0.717h8.342c0.399,0 0.944,-0.237 1.207,-0.534l1.262,-1.388 2.266,-2.492Z" />
+        <path android:fillColor="@color/ub__payment_bancontact_card_3" android:pathData="M21.814,14.012c0.4,0 0.723,0.326 0.723,0.718v1.513a0.72,0.72 0,0 1,-0.723 0.718h-2.168l0.484,-0.534 0.24,-0.267 0.483,-0.534h-4.797l-2.554,2.789H8.743l3.412,-3.738 0.129,-0.143c0.27,-0.29 0.814,-0.534 1.212,-0.534h8.318v0.012Z" />
+    </group>
+</vector>

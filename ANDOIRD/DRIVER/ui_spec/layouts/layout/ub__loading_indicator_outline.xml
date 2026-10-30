@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/indicator_outline" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" />
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/indicator_loading" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" />
+</merge>

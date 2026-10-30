@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.navigation.debug.DebugNavigationView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MobileStudio.Plugin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_debug_navigation" app:analyticsId="1eb5c467-3dd0" style="@style/MobileStudio.Plugin.Header" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.USwitchCompat android:id="@id/maneuverDots" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_debug_navigation_maneuver_dots" style="@style/MobileStudio.Plugin.RowWidget" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.mobilestudio.navigation.debug.DebugNavigationView>

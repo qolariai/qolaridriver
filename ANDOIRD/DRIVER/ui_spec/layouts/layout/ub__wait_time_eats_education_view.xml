@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.waittime.eats.education.EatsWaitTimeEducationView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="ced2f6f5-64f8"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:theme="?toolbarTheme" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStartWithNavigation="0.0dip" app:elevation="@dimen/ui__header_elevation">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.ToolbarFont" android:id="@id/eats_wait_time_education_toolbar" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/Widget.Platform.Toolbar" />
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/eats__wait_time_education_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/eats_wait_time_education_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="?contentInset" android:text="@string/close" app:analyticsId="74137422-7ce5" style="@style/Platform.Button.BaseDynamic" />
+</com.uber.waittime.eats.education.EatsWaitTimeEducationView>

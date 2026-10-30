@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="913d4f2b-a27a">
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:gravity="center" android:id="@id/cashout_select_speed_title" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" uber:analyticsId="89e5433c-4711" style="@style/Platform.TextStyle.LabelLarge" />
+        <com.ubercab.ui.core.UPlainView android:background="@drawable/ub__payment_list_item_divider" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/cashout_recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/cashout_bottom_sheet_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1.5x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="0a3f1001-bccd" uber:buttonType="primary" uber:shape="rect" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.bkash.operation.connect.BKashConnectOperationView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="@string/ub__bkash_connect_impression_analytics_key"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <include layout="@layout/fixed_header" />
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:background="?backgroundLightNegative" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.image.BaseImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_10x" android:layout_marginBottom="@dimen/ui__spacing_unit_9x" uber:srcCompat="@drawable/ub__bkash_connect_interstitial" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.UTextView android:textStyle="bold" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3.5x" android:text="@string/ub__payment_bkash_connect_title" style="@style/Platform.TextStyle.H3.Book" />
+                <com.ubercab.ui.core.UTextView android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/ub__payment_bkash_connect_description" style="@style/Platform.TextStyle.P" />
+                <com.ubercab.ui.core.UTextView android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_8x" android:text="@string/ub__payment_bkash_account_create_description" style="@style/Platform.TextStyle.P.Book" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+    <com.ubercab.ui.core.UFrameLayout android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__connect_continue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__payment_bkash_continue_button_title" uber:analyticsId="@string/ub__bkash_connect_continue_button_analytics_key" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:id="@id/ub__connect_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateTint="?borderAccent" android:indeterminateTintMode="src_in" style="@style/ProgressBarStyle" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.presidio.payment.bkash.operation.connect.BKashConnectOperationView>

@@ -1,0 +1,10 @@
+{
+ "dimens": {
+  "item": {
+   "country_picker_marginTop": "@dimen/ui__spacing_unit_4x",
+   "country_picker_paddingBottom": "@dimen/ui__spacing_unit_5x",
+   "country_picker_paddingTop": "@dimen/ui__spacing_unit_4x",
+   "header_marginTop": "@dimen/ui__spacing_unit_4x"
+  }
+ }
+}

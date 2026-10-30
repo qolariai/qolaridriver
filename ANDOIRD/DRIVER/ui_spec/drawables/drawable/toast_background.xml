@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="false" android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/carbon_ui__intercom_alert_toast_view_radius" />
+            <solid android:color="?iconColor" />
+        </shape>
+    </item>
+</selector>

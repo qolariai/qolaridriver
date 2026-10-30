@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="c4aa935f-273c"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ekyc_more_info_title_1" app:analyticsId="6eea1bc3-07ad" style="@style/Platform.TextStyle.Move.H7.Bold" />
+    <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ekyc_more_info_body_1" app:analyticsId="09089555-80ee" style="@style/Platform.TextStyle.ParagraphDefault" />
+    <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:text="@string/ekyc_more_info_title_2" app:analyticsId="21b5d1a5-dd17" style="@style/Platform.TextStyle.Move.H7.Bold" />
+    <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ekyc_more_info_body_2" app:analyticsId="d1016e6e-9b6e" style="@style/Platform.TextStyle.ParagraphDefault" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,9 @@
+{
+ "strings": {
+  "string": {
+   "helix_phone_country_picker_description": "Landcode is %1$s",
+   "helix_phone_enter_your_mobile_number": "Voer je mobiele telefoonnummer in",
+   "helix_phone_mobile_number": "Mobiel nummer"
+  }
+ }
+}

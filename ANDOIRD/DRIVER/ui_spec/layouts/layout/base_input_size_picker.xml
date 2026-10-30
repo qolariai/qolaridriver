@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.styleguide.sections.FiveChoicePicker android:id="@id/input_size_picker" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_0x" app:five="@string/ub__input_size_xxlarge" app:four="@string/ub__input_size_xlarge" app:one="@string/ub__input_size_small" app:three="@string/ub__input_size_large" app:two="@string/ub__input_size_medium"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout android:id="@id/ub__shimmer_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:shimmer_auto_start="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UPlainView android:id="@id/icon" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/PerfHubShimmerView" />
+        <com.ubercab.ui.core.UPlainView android:id="@id/title" android:layout_width="@dimen/ui__spacing_unit_12x" android:layout_height="@dimen/ui__spacing_unit_3x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:layout_constraintStart_toEndOf="@id/icon" app:layout_constraintTop_toTopOf="parent" style="@style/PerfHubShimmerView" />
+        <com.ubercab.ui.core.UPlainView android:layout_width="@dimen/ui__spacing_unit_23x" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" app:layout_constraintStart_toStartOf="@id/title" app:layout_constraintTop_toBottomOf="@id/title" style="@style/PerfHubShimmerView" />
+        <com.ubercab.ui.core.UPlainView android:id="@id/tertiary_title" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_2x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/PerfHubShimmerView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

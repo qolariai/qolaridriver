@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:gravity="center" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.wallet_transaction_history.widgets.TableWidgetView android:orientation="vertical" android:id="@id/ub__transaction_feed_table_widget" android:paddingLeft="?gutterSize" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="?gutterSize" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ubercab.ui.core.UFrameLayout>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.core.ui.KotlinLoadingIndicatorOutline android:id="@id/online_button_outline" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="@dimen/ub__go_online_text_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

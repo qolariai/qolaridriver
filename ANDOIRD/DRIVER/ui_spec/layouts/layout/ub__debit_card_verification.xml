@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URelativeLayout android:orientation="vertical" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.Platform.Light.Header" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" app:title="@string/ub__bank_account_add_bank_account" style="@style/Widget.Platform.Toolbar" />
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_above="@id/ub__debit_card_verification_primary_button" android:layout_below="@id/toolbar" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.URelativeLayout android:id="@id/ub__debit_card_verification_header_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.image.BaseImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:srcCompat="@drawable/ub__payment_debit_card_verification_money_image" />
+                </com.ubercab.ui.core.URelativeLayout>
+                <com.ubercab.ui.core.URecyclerView android:id="@id/ub__debit_card_verification_steps_recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ub__debit_card_verification_header_container" android:overScrollMode="never" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__debit_card_verification_primary_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__debit_card_verification_primary_button_label" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.Button.Base.Primary.Large" />
+    </com.ubercab.ui.core.URelativeLayout>
+</merge>

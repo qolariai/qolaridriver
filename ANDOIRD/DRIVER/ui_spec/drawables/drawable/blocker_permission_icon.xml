@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <group>
+            <path android:pathData="M 0 0 H 80 V 80 H 0 V 0 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+            <group>
+                <group>
+                    <group android:translateX="9.0" android:translateY="4.0">
+                        <path android:fillColor="?accentTertiary" android:pathData="M26.2526936,-0.000163636364 L59.7473064,-0.000163636364 C61.5436064,-0.000163636364 63,1.4652 63,3.27256364 L63,68.7271091 C63,70.5344727 61.5436064,71.9998364 59.7473064,71.9998364 L26.2526936,71.9998364 C24.4563936,71.9998364 23,70.5344727 23,68.7271091 L23,3.27256364 C23,1.4652 24.4563936,-0.000163636364 26.2526936,-0.000163636364" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                        <path android:fillColor="?brandPrimary" android:pathData="M 0 62 L 29 62 L 29 10 L 0 10 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                        <path android:fillColor="?accentPrimary" android:pathData="M22.2524639,-0.000163636364 L55.7472089,-0.000163636364 C57.5434724,-0.000163636364 58.9998364,1.4652 58.9998364,3.27256364 L58.9998364,68.7271091 C58.9998364,70.5344727 57.5434724,71.9998364 55.7472089,71.9998364 L22.2524639,71.9998364 C20.4562003,71.9998364 18.9998364,70.5344727 18.9998364,68.7271091 L18.9998364,3.27256364 C18.9998364,1.4652 20.4562003,-0.000163636364 22.2524639,-0.000163636364" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                        <path android:fillColor="?accentTertiary" android:pathData="M 37.75 65 L 40.25 65 Q 41 65 41 65.75 L 41 68.25 Q 41 69 40.25 69 L 37.75 69 Q 37 69 37 68.25 L 37 65.75 Q 37 65 37.75 65 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                        <path android:fillColor="?backgroundColorInputDefault" android:pathData="M 22 62 L 56 62 L 56 10 L 22 10 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                        <path android:fillColor="?brandPrimary" android:pathData="M 22 62 L 39 62 L 39 10 L 22 10 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                        <path android:fillColor="?accentTertiary" android:pathData="M16,45 L16,26 L32,26 L32,45 L16,45 Z M2,35.5 L16,22 L16,49 L2,35.5 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                        <path android:fillColor="?accentTertiary" android:pathData="M 36.5 5 L 41.5 5 Q 42 5 42 5.5 L 42 5.5 Q 42 6 41.5 6 L 36.5 6 Q 36 6 36 5.5 L 36 5.5 Q 36 5 36.5 5 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                    </group>
+                </group>
+            </group>
+        </group>
+    </group>
+</vector>

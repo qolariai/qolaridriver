@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/help_csat_embedded_thumbs_size" android:width="@dimen/help_csat_embedded_thumbs_size" android:viewportWidth="40.0" android:viewportHeight="40.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?ruleColor" android:pathData="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20z" />
+    <group>
+        <path android:fillColor="?iconColor" android:pathData="M11.666 11.667h2.5v10h-2.5v-10zm4.167 0h8.833c1 0 1.834 0.583 2.25 1.416l2.25 4.834v2.5a2.063 2.063 0 0 1-2.083 2.083H22.5v5c0 1.417-1.084 2.5-2.5 2.5h-0.417l-3.75-8.333v-10z" android:fillType="evenOdd" />
+    </group>
+</vector>

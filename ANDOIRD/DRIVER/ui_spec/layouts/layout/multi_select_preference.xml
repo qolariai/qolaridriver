@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.preferences.preference.multiselect.MultiSelectPreferenceView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:padding="?contentInset" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/driver_preferences_multiselect_zero_state" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="6c2da937-5f47">
+            <com.ubercab.ui.core.UImageView android:gravity="top" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:srcCompat="@drawable/ub_ic_circle_i" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/driver_preferences_zero_state_text" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Normal" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.URecyclerView android:id="@id/driver_preferences_list" android:paddingBottom="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.carbon.preferences.preference.multiselect.MultiSelectPreferenceView>

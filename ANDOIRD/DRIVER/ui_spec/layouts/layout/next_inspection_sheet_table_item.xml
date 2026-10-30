@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/next_inspection_table_item_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.LabelLarge" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/next_inspection_table_item_title_text" app:layout_constraintTop_toTopOf="parent">
+        <com.ubercab.ui.core.text.BaseTextView android:gravity="end" android:id="@id/next_inspection_table_item_primary_text" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphDefault" />
+        <com.ubercab.ui.core.text.BaseTextView android:gravity="end" android:id="@id/next_inspection_table_item_secondary_text" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphSmall" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?dividerColor" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</com.ubercab.ui.core.UConstraintLayout>

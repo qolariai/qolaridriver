@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/ub__nav_warning_view_background_sk" android:layout_width="@dimen/ub__nav_warning_width" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ub__nav_warning_padding_horizontal" android:paddingVertical="@dimen/ub__nav_warning_padding_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_horizontal" android:id="@id/icon" android:layout_width="@dimen/ub__nav_warning_icon_size" android:layout_height="@dimen/ub__nav_warning_icon_size" />
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/NavView.TextAppearance.Warning" android:gravity="center_horizontal" android:id="@id/message" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/average_speed_camera_zone_korean" android:lines="2" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/ui__spacing_unit_0x" app:computeLineHeight="false" />
+</LinearLayout>

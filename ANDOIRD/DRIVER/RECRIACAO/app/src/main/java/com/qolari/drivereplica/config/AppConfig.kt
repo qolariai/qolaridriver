@@ -40,9 +40,6 @@ object AppConfig {
 
     const val SESSION_STORE_NAME = "qolari_session"
 
-    /** Base do Google Static Maps para as miniaturas dos cartões. */
-    const val MAPS_STATIC_URL = "https://maps.googleapis.com/maps/api/staticmap"
-
     /** URL efetivo: o guardado pelo utilizador (ecrã de definições do lote 2) ou o do ambiente. */
     fun resolveBaseUrl(saved: String?): String =
         saved?.trim()?.trimEnd('/')?.takeIf { it.isNotEmpty() } ?: defaultBaseUrl

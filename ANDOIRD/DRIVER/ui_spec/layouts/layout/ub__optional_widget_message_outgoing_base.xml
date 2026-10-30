@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ub__intercom_space_between_messages" android:layout_marginRight="@dimen/ui__spacing_unit_2x" app:analyticsId="956d83a5-8151"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="?avatarMedium">
+        <androidx.legacy.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__chat_message_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__chat_bubble_content_frame" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UFrameLayout android:layout_gravity="end" android:id="@id/ub__bubble_widget_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="e7d4a368-f9d2" />
+            </com.ubercab.ui.core.UFrameLayout>
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentTertiary" android:layout_gravity="end" android:id="@id/ub__chat_send_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" app:analyticsId="cf6edd82-91f3" style="@style/Platform.TextStyle.LabelXSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <androidx.legacy.widget.Space android:id="@id/group_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__intercom_space_between_groups" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -13,4 +13,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "qolari-driver-recriacao"
 include(":app")
-

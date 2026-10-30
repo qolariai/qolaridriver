@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.profileselection.intent_payment_selector.business_content.settings.BusinessSettingSectionViewV2 android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="c1cc5bac-7967"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListHeadingView android:id="@id/ub__intent_business_settings_title" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="1542ac9c-bbcc" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__intent_select_settings_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="9a2ac4bc-cf78" />
+</com.uber.profileselection.intent_payment_selector.business_content.settings.BusinessSettingSectionViewV2>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_item_state_view_parent_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset">
+        <com.ubercab.ui.core.UMaterialCardView android:id="@id/pick_pack_item_state_view_card" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:cardBackgroundColor="@android:color/transparent" uber:cardCornerRadius="@dimen/ui__spacing_unit_1x" uber:cardElevation="0.0dip" uber:strokeColor="?borderOpaque" uber:strokeWidth="@dimen/task_corner_radius">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/pick_pack_item_state_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.uber.taskbuildingblocks.views.TaskIconAndTextView android:id="@id/pick_pack_item_state_eyebrow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UMaterialCardView>
+        <com.uber.ui_compose_view.core.tag.BaseTag android:layout_gravity="start|top" android:id="@id/pick_pack_list_image_item_identifier_tag" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

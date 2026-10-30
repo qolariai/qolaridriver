@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.upi.deeplinkadapter.UPIDeeplinkListItemView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__upi_deeplink_connect_row_top_divider" android:background="?borderPrimary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginStart="@dimen/ui__spacing_unit_8x" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__upi_deeplink_connect_row_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__upi_deeplink_connect_bottom_divider" android:background="?borderPrimary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginStart="@dimen/ui__spacing_unit_8x" />
+</com.ubercab.presidio.payment.upi.deeplinkadapter.UPIDeeplinkListItemView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.trip_alert_intercom.message.IntercomMessageAlertView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.CircleImageView android:layout_gravity="start|top" android:id="@id/alertAvatar" android:layout_width="?avatarSmall" android:layout_height="?avatarSmall" android:layout_margin="@dimen/ui__spacing_unit_1x" uber:srcCompat="@drawable/ub__chat_default_avatar" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center" android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.ubercab.ui.core.UTextView android:id="@id/alertTitleText" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="7d20ce1c-e1f4" style="@style/Platform.TextStyle.Paragraph.Normal" />
+                <androidx.legacy.widget.Space android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_1x" />
+                <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/alertMessageText" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" uber:analyticsId="4ac562a3-349e" style="@style/Platform.TextStyle.Subtitle.Medium" />
+                <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/alertMessageTranslationLabel" android:paddingTop="@dimen/ui__spacing_unit_0.5x" android:paddingBottom="@dimen/ui__divider_width" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:paddingStart="@dimen/ui__spacing_unit_1.5x" android:paddingEnd="@dimen/ui__spacing_unit_1.5x" uber:analyticsId="5908d8dc-48c6" style="@style/Platform.TextStyle.Meta.Normal" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="end" android:orientation="vertical" android:id="@id/touch_area" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.UImageView android:layout_gravity="end|center" android:id="@id/chevron_right" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" uber:analyticsId="ce98ca1f-9918" uber:srcCompat="@drawable/chevron_right" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UPlainView android:id="@id/divider" android:background="?brandGrey40" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:layout_marginStart="@dimen/carbon_ui__intercom_alert_divider_left_margin" />
+        <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/alertButtonsContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+            <com.ubercab.ui.core.UPlainView android:id="@id/left_shadow" android:background="@drawable/linear_gradient_left" android:visibility="gone" android:layout_width="@dimen/carbon_ui__intercom_alert_precanned_shadow_left_width" android:layout_height="@dimen/carbon_ui__intercom_alert_precanned_shadow_height" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+            <com.ubercab.ui.core.UPlainView android:id="@id/right_shadow" android:background="@drawable/linear_gradient_right" android:visibility="gone" android:layout_width="@dimen/carbon_ui__intercom_alert_precanned_shadow_right_width" android:layout_height="@dimen/carbon_ui__intercom_alert_precanned_shadow_height" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </com.ubercab.ui.core.URelativeLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.trip_alert_intercom.message.IntercomMessageAlertView>

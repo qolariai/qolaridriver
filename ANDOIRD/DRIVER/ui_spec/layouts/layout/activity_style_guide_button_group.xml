@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_buttons" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="3aa74711-b02d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/collapsing_header" />
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/preview_section" android:layout_width="fill_parent" android:layout_height="@dimen/style_guide_preview_height" android:elevation="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.buttongroup.BaseButtonGroup android:id="@id/button_group" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.presidio.styleguide.sections.ThreeChoicePicker android:id="@id/type_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:paddingStart="?contentInset" android:paddingEnd="0.0dip" app:one="Single select" app:three="Trigger action" app:two="Multi select" />
+                    <com.ubercab.presidio.styleguide.sections.FourChoicePicker android:id="@id/shape_picker" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" app:four="Square" app:one="Pill" app:three="Rectangular" app:two="Circle" />
+                    <com.ubercab.presidio.styleguide.sections.ThreeChoicePicker android:id="@id/size_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:paddingStart="?contentInset" android:paddingEnd="0.0dip" app:one="Small" app:three="Large" app:two="Medium" />
+                    <com.ubercab.presidio.styleguide.sections.TwoChoicePicker android:id="@id/behaviour_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:paddingStart="?contentInset" android:paddingEnd="0.0dip" app:one="H-scroll" app:two="Clustered" />
+                    <com.ubercab.presidio.styleguide.sections.ThreeChoicePicker android:id="@id/button_gravity_picker" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:paddingStart="?contentInset" android:paddingEnd="0.0dip" app:one="Left" app:three="Right" app:two="Center" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.UScrollView>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UCoordinatorLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety_driving_insights_v2.components.sditips.SDITipsCardItemView android:id="@id/ub__safety_di_v2_tips_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:cardCornerRadius="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x">
+        <com.uber.ui_compose_view.core.tag.BaseTag android:id="@id/ub__safety_di_v2_tips_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__safety_di_v2_tips_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__safety_di_v2_tips_tag" style="@style/Platform.TextStyle.HeadingXSmall" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__safety_di_v2_tips_subtitle" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__safety_di_v2_tips_title" style="@style/Platform.TextStyle.ParagraphSmall" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.uber.safety_driving_insights_v2.components.sditips.SDITipsCardItemView>

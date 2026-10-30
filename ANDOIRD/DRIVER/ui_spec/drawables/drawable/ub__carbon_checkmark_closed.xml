@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ui__spacing_unit_4x" android:width="@dimen/ui__spacing_unit_4x" android:viewportWidth="32.0" android:viewportHeight="32.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateX="-1508.0" android:translateY="3695.0">
+        <group android:translateX="1508.0" android:translateY="-3695.0">
+            <path android:fillColor="?contentPrimary" android:pathData="M0 4C0 1.79086 1.79086 0 4 0l24 0c2.2091 0 4 1.79086 4 4l0 24c0 2.2091 -1.7909 4 -4 4L4 32C1.79086 32 0 30.2091 0 28L0 4Z" />
+        </group>
+        <group android:translateX="1511.0" android:translateY="-3692.0">
+            <path android:fillColor="?contentInversePrimary" android:pathData="M9.75 17.5195L21.2266 6.04297 22.75 7.56641 9.75 20.5664 3.70703 14.5234 5.23047 13 9.75 17.5195Z" />
+        </group>
+        <group android:translateX="1511.0" android:translateY="-3692.0">
+            <path android:fillColor="?contentInversePrimary" android:pathData="M9.75 17.5195l-0.35355 0.3536c0.19526 0.1952 0.51184 0.1952 0.70715 0L9.75 17.5195ZM21.2266 6.04297L21.5801 5.68942c-0.1952 -0.19527 -0.5118 -0.19527 -0.7071 0l0.3536 0.35355zm1.5234 1.52344l0.3536 0.35355c0.1952 -0.19526 0.1952 -0.51184 0 -0.70711L22.75 7.56641ZM9.75 20.5664L9.39645 20.92c0.19526 0.1952 0.51184 0.1952 0.70715 0L9.75 20.5664ZM3.70703 14.5234L3.35348 14.1699c-0.19526 0.1952 -0.19526 0.5118 0 0.7071L3.70703 14.5234ZM5.23047 13L5.58402 12.6464c-0.19526 -0.1952 -0.51184 -0.1952 -0.7071 0L5.23047 13ZM10.1036 17.8731L21.5801 6.39652 20.873 5.68942 9.39645 17.166 10.1036 17.8731ZM20.873 6.39652L22.3964 7.91996 23.1036 7.21285 21.5801 5.68942 20.873 6.39652ZM22.3964 7.21285L9.39645 20.2129 10.1036 20.92 23.1036 7.91996 22.3964 7.21285ZM10.1036 20.2129L4.06058 14.1699 3.35348 14.877 9.39645 20.92 10.1036 20.2129ZM4.06058 14.877L5.58402 13.3536 4.87692 12.6464 3.35348 14.1699 4.06058 14.877Zm0.81634 -1.5234l4.51953 4.5195 0.70715 -0.7071 -4.51958 -4.5196 -0.7071 0.7072z" />
+        </group>
+    </group>
+</vector>

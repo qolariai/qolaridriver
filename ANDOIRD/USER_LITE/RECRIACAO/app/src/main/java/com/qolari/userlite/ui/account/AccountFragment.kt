@@ -24,7 +24,10 @@ import com.qolari.userlite.net.SessionResponse
 import com.qolari.userlite.ui.info.InfoFragment
 import kotlinx.coroutines.launch
 
-/** Gerir conta: casa, dados pessoais, seguranca, privacidade e verificacao. */
+/**
+ * Gerir conta (captura 041): separadores Casa / Informações pessoais / Segurança /
+ * Privacidade e Dados. Em Casa aparece o perfil, os três atalhos e as sugestões.
+ */
 class AccountFragment : Fragment() {
 
     private var _binding: FragmentAccountBinding? = null
@@ -43,12 +46,16 @@ class AccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.backButton.setOnClickListener { findNavController().navigateUp() }
         binding.homeRow.setOnClickListener { chooseHome() }
-        binding.personalRow.setOnClickListener { editPersonal() }
-        binding.securityRow.setOnClickListener { showSecurity() }
-        binding.privacyRow.setOnClickListener {
-            openInfo(getString(R.string.account_privacy), getString(R.string.account_privacy_body))
-        }
-        binding.verifyRow.setOnClickListener {
+        binding.personalCard.setOnClickListener { selectTab(1) }
+        binding.securityCard.setOnClickListener { selectTab(2) }
+        binding.privacyCard.setOnClickListener { selectTab(3) }
+        binding.tabHome.setOnClickListener { selectTab(0) }
+        binding.tabPersonal.setOnClickListener { selectTab(1) }
+        binding.tabSecurity.setOnClickListener { selectTab(2) }
+        binding.tabPrivacy.setOnClickListener { selectTab(3) }
+        binding.editButton.setOnClickListener { editPersonal() }
+        binding.signOutButton.setOnClickListener { confirmSignOut() }
+        binding.verifyButton.setOnClickListener {
             openInfo(getString(R.string.account_verify), buildString {
                 append(getString(R.string.account_verify_body))
                 append("\n\n")
@@ -57,6 +64,7 @@ class AccountFragment : Fragment() {
                 append(session?.phone.orEmpty())
             })
         }
+        selectTab(0)
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -64,8 +72,16 @@ class AccountFragment : Fragment() {
                     state.session?.let { s ->
                         session = s
                         binding.avatar.text = s.firstName.take(1).uppercase().ifBlank { "Q" }
-                        binding.name.text = s.name
-                        binding.detail.text = String.format("★ %.1f · %s", s.rating, s.phone)
+                        binding.name.text = s.name.uppercase()
+                        binding.detail.text = s.email
+                        binding.personalName.text = s.name
+                        binding.personalEmail.text = s.email
+                        binding.personalPhone.text = s.phone
+                        binding.securityBody.text = getString(
+                            R.string.account_security_body,
+                            s.phone,
+                            s.name,
+                        )
                     }
                     state.home?.let { h ->
                         home = h
@@ -81,6 +97,19 @@ class AccountFragment : Fragment() {
                     }
                 }
             }
+        }
+    }
+
+    /** Mostra o separador pedido e desliza a barra preta por baixo do título escolhido. */
+    private fun selectTab(index: Int) {
+        val tabs = listOf(binding.tabHome, binding.tabPersonal, binding.tabSecurity, binding.tabPrivacy)
+        val contents = listOf(binding.homeContent, binding.personalContent, binding.securityContent, binding.privacyContent)
+        contents.forEachIndexed { i, content -> content.isVisible = i == index }
+        tabs.forEachIndexed { i, tab -> tab.alpha = if (i == index) 1f else 0.8f }
+        binding.tabIndicator.post {
+            val tab = tabs[index]
+            binding.tabIndicator.layoutParams = binding.tabIndicator.layoutParams.apply { width = tab.width }
+            binding.tabIndicator.translationX = tab.left.toFloat()
         }
     }
 
@@ -159,15 +188,12 @@ class AccountFragment : Fragment() {
         dialog.show()
     }
 
-    private fun showSecurity() {
-        val s = session ?: return
+    private fun confirmSignOut() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(R.string.account_security)
-            .setMessage(
-                getString(R.string.account_security_body, s.phone, s.name)
-            )
+            .setMessage(R.string.account_sign_out_confirm)
             .setPositiveButton(R.string.account_sign_out) { _, _ -> viewModel.signOut() }
-            .setNegativeButton(R.string.account_close, null)
+            .setNegativeButton(R.string.error_cancel, null)
             .show()
     }
 

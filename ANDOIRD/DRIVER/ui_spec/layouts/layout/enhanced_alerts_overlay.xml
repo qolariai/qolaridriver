@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.dispatch.EnhancedAlerts.EnhancedAlertsOverlay android:id="@id/ub__enhanced_alerts_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SurfaceView android:id="@id/ub__camera_surface_view" android:layout_width="@dimen/carbon_ui__enhanced_alerts_camera_dim" android:layout_height="@dimen/carbon_ui__enhanced_alerts_camera_dim" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__accessibility_flash_layer" android:background="?brandGrey20" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.dispatch.EnhancedAlerts.EnhancedAlertsOverlay>

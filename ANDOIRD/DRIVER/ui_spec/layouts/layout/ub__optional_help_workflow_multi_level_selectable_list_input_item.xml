@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_vertical" android:layout_width="@dimen/ub__optional_help_workflow_multi_level_selectable_list_input_checkbox_dimension" android:layout_height="@dimen/ub__optional_help_workflow_multi_level_selectable_list_input_checkbox_dimension">
+            <com.ubercab.ui.core.UCheckBox android:layout_gravity="center" android:id="@id/check_box" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/checkbox_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:ellipsize="end" android:id="@id/label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:textAlignment="viewStart" style="@style/Platform.TextStyle.LabelDefault" />
+                    <com.ubercab.ui.core.UTextView android:textColor="?contentSecondary" android:id="@id/sublabel" android:paddingTop="@dimen/ub__optional_help_workflow_multi_level_selectable_list_input_inter_text_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/Platform.TextStyle.ParagraphSmall" />
+                    <com.ubercab.ui.core.UTextView android:textColor="?contentNegative" android:id="@id/error" android:paddingTop="@dimen/ub__optional_help_workflow_multi_level_selectable_list_input_inter_text_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/Platform.TextStyle.ParagraphSmall" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.UImageButton android:layout_gravity="center_vertical" android:id="@id/expand_collapse_button" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_margin="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ub_ic_plus" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/expand_collapse_overlay" android:background="?transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:id="@id/child_divider" android:background="?gray200" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginStart="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/child_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" android:layout_marginStart="@dimen/ui__spacing_unit_2.5x" />
+</com.ubercab.ui.core.ULinearLayout>

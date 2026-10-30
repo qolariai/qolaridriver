@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/file_attachment_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/bug_reporter_issue_details_screenshot_thumbnail_height">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/bug_report_add_file_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:contentDescription="@string/bug_reporter_add_more_files_button" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="303d4eb9-3312" uber:buttonType="secondary" uber:icon="@drawable/ub_ic_plus" uber:shape="square" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/bug_reporter_file_upload_list" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphXSmall" android:textColor="?colorNegative" android:id="@id/bug_reporter_max_file_error_msg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphXSmall" android:textColor="?colorNegative" android:id="@id/bug_reporter_max_file_size_error_msg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</com.ubercab.ui.core.ULinearLayout>

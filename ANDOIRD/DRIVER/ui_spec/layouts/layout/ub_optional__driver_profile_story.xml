@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.social_profiles.story.DriverProfileStoryView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/story_background" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_5x" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:paddingStart="@dimen/ui__gutter_size" android:paddingEnd="@dimen/ui__gutter_size">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimaryInverse" android:id="@id/story_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.7" style="@style/Platform.TextStyle.Title.Normal" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimaryInverse" android:id="@id/story_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" style="@style/Platform.TextStyle.DisplayLarge.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.social_profiles.story.DriverProfileStoryView>

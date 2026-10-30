@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.milestones.MilestonesView android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="795f9ab0-c89d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_layout" android:layout_width="fill_parent" android:layout_height="?actionBarSize" layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UCoordinatorLayout android:background="?android:colorBackground" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UAppBarLayout android:orientation="vertical" android:id="@id/app_bar_layout" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UCollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+                <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center_horizontal" android:id="@id/milestones_background_animation" android:layout_width="fill_parent" android:layout_height="@dimen/ub__milestones_backdrop_image_height" android:scaleType="centerCrop" android:elevation="0.0dip" uber:layout_collapseMode="parallax" uber:lottie_autoPlay="true" uber:lottie_loop="true" />
+                <com.ubercab.ui.core.UImageView android:id="@id/milestones_background_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__milestones_backdrop_image_height" android:scaleType="centerCrop" uber:layout_collapseMode="parallax" />
+                <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/milestones_foreground_image" android:visibility="gone" android:layout_width="@dimen/ub__milestones_foreground_image_size" android:layout_height="@dimen/ub__milestones_foreground_image_size" android:scaleType="centerCrop" android:elevation="@dimen/ub__milestones_elevation" uber:layout_collapseMode="parallax" />
+            </com.ubercab.ui.core.UCollapsingToolbarLayout>
+            <com.ubercab.ui.core.UPlainView android:id="@id/rounded_corners_view" android:background="@drawable/ub__milestones_rounded_corner_background" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_1x" uber:layout_scrollFlags="scroll|enterAlwaysCollapsed" />
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/milestones_badge" android:layout_width="@dimen/ub__milestones_badge_size" android:layout_height="@dimen/ub__milestones_badge_size" android:scaleType="centerCrop" android:elevation="@dimen/ub__milestones_elevation" uber:layout_scrollFlags="scroll|enterAlwaysCollapsed" />
+        </com.ubercab.ui.core.UAppBarLayout>
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="@dimen/ub__milestones_elevation" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</com.ubercab.milestones.MilestonesView>

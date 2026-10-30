@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="32.0dip" android:width="32.0dip" android:viewportWidth="32.0" android:viewportHeight="32.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/ub__payment_paypay_logo_background" android:pathData="M0,6.5C0,5.6716 0.6716,5 1.5,5H30.5C31.3284,5 32,5.6716 32,6.5V25.5C32,26.3284 31.3284,27 30.5,27H1.5C0.6716,27 0,26.3284 0,25.5V6.5Z" />
+    <path android:fillColor="@color/ub__payment_paypay_brand_text" android:pathData="M6,9C6,7.3432 7.3432,6 9,6H23C24.6569,6 26,7.3432 26,9V23C26,24.6569 24.6569,26 23,26H9C7.3432,26 6,24.6569 6,23V9Z" />
+    <path android:fillColor="@color/ub__payment_paypay_brand_background" android:pathData="M23.043,6H8.9575C7.3843,6 6.0918,7.2456 6.0079,8.7988C17.8007,8.4656 23.537,12.5687 22.6364,16.6588C21.8254,20.3417 18.0839,21.7537 12.004,22.2174L11.0947,25.9997H23.043C24.6694,25.9997 26,24.6691 26,23.0428V8.9572C26,7.3309 24.6694,6 23.043,6ZM21.9239,16.6769C22.3927,14.7665 19.3129,12.9993 14.3803,12.332L12.5897,19.7812C16.7236,19.9769 21.4196,18.7324 21.9239,16.6769ZM9.8951,26H8.9572C7.3309,26 6,24.6691 6,23.0428V12.2589C8.6539,11.9906 11.1291,11.996 13.2999,12.2072L9.8951,26Z" />
+</vector>

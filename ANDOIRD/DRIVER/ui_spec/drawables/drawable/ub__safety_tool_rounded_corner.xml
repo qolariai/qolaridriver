@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="?backgroundTertiary" />
+            <corners android:radius="@dimen/ui__spacing_unit_1.5x" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="?backgroundSecondary" />
+            <corners android:radius="@dimen/ui__spacing_unit_1.5x" />
+        </shape>
+    </item>
+</selector>

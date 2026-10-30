@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__navigation_error_recovery_container" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/ub__navigation_error_compass_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:scaleType="centerInside" app:analyticsId="3882259c-f8d7" app:srcCompat="@drawable/ub_ic_navigate_compass" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4" android:textColor="?contentPrimary" android:gravity="center_horizontal" android:id="@id/ub__navigation_error_recovery_content_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" app:analyticsId="099b2913-17f2" />
+</com.ubercab.ui.core.ULinearLayout>

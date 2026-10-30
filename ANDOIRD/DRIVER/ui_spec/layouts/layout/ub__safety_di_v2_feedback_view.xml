@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety_driving_insights_v2.feedback.DIV2FeedbackView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__safety_di_v2_feedback_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" android:layout_alignParentTop="true" />
+        <com.ubercab.ui.core.progress.BaseProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/ub__safety_di_v2_feedback_loading_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.UScrollView android:id="@id/ub__safety_di_v2_feedback_scroll_view" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__safety_di_v2_feedback_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/ub__safety_di_v2_feedback_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Paragraph.Normal" />
+                <com.uber.safety_driving_insights_shared.feedback.FeedbackSectionView android:orientation="vertical" android:id="@id/ub__safety_di_v2_feedback_sections" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.dockedbutton.ButtonDock android:id="@id/ub__safety_di_v2_feedback_sections_done_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_anchor="@id/ub__safety_di_v2_feedback_scroll_view" app:layout_anchorGravity="bottom">
+            <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/ub__safety_di_v2_feedback_done_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/safety_driving_insights_v2_feedback_done_button_text" app:buttonType="primary" app:itemPriority="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.dockedbutton.ButtonDock>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</com.uber.safety_driving_insights_v2.feedback.DIV2FeedbackView>

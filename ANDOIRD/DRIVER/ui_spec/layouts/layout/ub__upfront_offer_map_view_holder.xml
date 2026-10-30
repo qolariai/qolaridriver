@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__upfront_offer_map" android:layout_width="fill_parent" android:layout_height="@dimen/uda_details_map_waypoint_banner_height" app:analyticsId="eab43d8c-e75f" />
+</com.ubercab.ui.core.ULinearLayout>

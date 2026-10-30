@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/scrim" android:background="@color/ub__ui_core_black" android:fitsSystemWindows="@bool/use_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:alpha="0.8" android:importantForAccessibility="no" app:analyticsEnabled="false" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center" android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/loading_indicator" android:layout_width="@dimen/ub__loading_indicator_progress_size" android:layout_height="@dimen/ub__loading_indicator_progress_size" android:indeterminate="true" android:indeterminateTint="@color/ub__ui_core_white" android:indeterminateTintMode="src_in" style="@style/Widget.AppCompat.ProgressBar" />
+        <com.ubercab.ui.core.UTextView android:textColor="@color/ub__ui_core_white" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/loading_indicator_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:lineSpacingMultiplier="1.5" style="@style/Platform.TextStyle.P" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UFrameLayout>

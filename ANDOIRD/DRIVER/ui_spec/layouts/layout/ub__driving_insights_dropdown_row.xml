@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.USpinner android:id="@id/ub__driving_insights_inights_spinner" android:background="@drawable/spinner_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_1x" android:paddingVertical="@dimen/ui__spacing_unit_1.5x" />
+    <com.ubercab.ui.core.USpinner android:id="@id/ub__driving_insights_groupby_spinner" android:background="@drawable/spinner_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" android:paddingHorizontal="@dimen/ui__spacing_unit_1x" android:paddingVertical="@dimen/ui__spacing_unit_1.5x" />
+</com.ubercab.ui.core.ULinearLayout>

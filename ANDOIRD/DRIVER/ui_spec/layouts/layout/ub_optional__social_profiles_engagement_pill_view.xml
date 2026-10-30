@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__courier_profile_pill_view" android:background="@drawable/ub__background_selectable_pill" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="fill_parent" android:elevation="@dimen/ui__spacing_unit_0.5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ub__courier_pill_image" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:layout_marginStart="@dimen/ui__spacing_unit_1.5x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="fb058999-ed72" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="center_vertical" android:id="@id/ub__courier_pill_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="3f4bcae3-ec58" style="@style/Platform.TextStyle.Paragraph.Medium" />
+</com.ubercab.ui.core.ULinearLayout>

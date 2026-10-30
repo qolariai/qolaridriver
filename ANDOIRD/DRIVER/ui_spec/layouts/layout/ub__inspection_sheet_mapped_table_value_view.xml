@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:id="@id/ub__inspection_sheet_mapped_table_value_icon" android:layout_width="@dimen/ub__loyalty_inspection_sheet_mapped_table_icon_width" android:layout_height="@dimen/ub__loyalty_inspection_sheet_mapped_table_icon_width" />
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:layout_gravity="center_vertical" android:id="@id/ub__inspection_sheet_mapped_table_value_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphDefault" />
+</merge>

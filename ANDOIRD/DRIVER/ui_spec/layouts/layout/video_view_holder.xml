@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/video_view_holder_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/shrink_video" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub__ic_shrink_video" />
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/expand_video" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub__ic_expand_video" />
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/video_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/play_video" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub__ic_play_video" />
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/replay_video" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub__ic_replay_video" />
+</com.ubercab.ui.core.UFrameLayout>

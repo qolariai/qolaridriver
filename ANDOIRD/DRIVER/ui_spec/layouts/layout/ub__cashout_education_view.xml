@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="ae1065dc-987a">
+        <include layout="@layout/ub__cashout_fixed_appbar" />
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:gravity="start" android:id="@id/cashout_education_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="afc1603d-d7dc" style="@style/Platform.TextStyle.DisplayXSmall" />
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:gravity="start" android:id="@id/cashout_education_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="1f92a01e-19ee" style="@style/Platform.TextStyle.Paragraph.Medium" />
+                <com.ubercab.ui.commons.image.IllustrationView android:gravity="center" android:id="@id/cashout_education_illustration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:gravity="start" android:id="@id/cashout_education_section_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="55b60207-a1e9" style="@style/Platform.TextStyle.HeadingSmall" />
+                <com.ubercab.ui.core.URecyclerView android:id="@id/education_item_recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/ui__elevation_high">
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__cashout_education_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_1.5x" android:text="@string/ub__cashout_education_button_text" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="c8da870b-370a" app:buttonType="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

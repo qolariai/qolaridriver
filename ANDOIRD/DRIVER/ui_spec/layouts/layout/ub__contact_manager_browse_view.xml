@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/ub__browse_mode_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:navigationIcon="@drawable/ub_ic_arrow_left" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__browse_mode_loading" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?colorAccent" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/contact_manager_browse_mode_add_contact_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.divider.DividerView android:id="@id/add_contact_list_item_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__contact_manager_browse_title" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:textAlignment="viewStart" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" app:analyticsId="7f086d11-b5d4" app:autoSizeTextType="uniform" style="@style/Platform.TextStyle.HeadingSmall" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__contact_manager_browse_list_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

@@ -1,0 +1,13 @@
+{
+ "bools": {
+  "bool": {
+   "isTablet": "true"
+  }
+ },
+ "integers": {
+  "integer": {
+   "m3expressive_bottom_nav_icon_gravity": "1",
+   "m3expressive_bottom_nav_item_gravity": "17"
+  }
+ }
+}

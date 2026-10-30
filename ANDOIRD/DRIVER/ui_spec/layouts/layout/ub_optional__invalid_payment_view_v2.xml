@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.payment_selector.invalid_payment.InvalidPaymentView android:orientation="vertical" android:background="?android:colorBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.widget.HeaderTextView android:id="@id/ub__invalid_payment_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="2db43c07-6317" style="@style/Platform.TextStyle.ListHeader" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__invalid_payment_recyclerview" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__invalid_payment_footer_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginRight="?contentInset" uber:analyticsId="a5fbe771-6d9a" style="@style/Platform.TextStyle.H6.News.Tertiary" />
+</com.ubercab.profiles.payment_selector.invalid_payment.InvalidPaymentView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.upfront_driver_assignment_offer_card.trailing.UpfrontOfferInfoItemTrailingContentView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:gravity="center_vertical" android:id="@id/ub__upfront_offer_trailing_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="f79875a7-a6f6" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ub__upfront_offer_trailing_image" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__upfront_offer_trailing_image" android:layout_width="0.0dip" android:layout_height="wrap_content" app:analyticsId="6d5c7402-bda3" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</com.uber.upfront_driver_assignment_offer_card.trailing.UpfrontOfferInfoItemTrailingContentView>

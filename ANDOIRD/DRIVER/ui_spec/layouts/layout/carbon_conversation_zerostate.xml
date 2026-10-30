@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.libraries.intercom.zero_state.CarbonConversationZeroStateView android:gravity="center" android:orientation="vertical" android:id="@id/ub__intercom_conversation_zero_state" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_width="fill_parent" android:layout_height="wrap_content" app:srcCompat="@drawable/empty_state_icon" />
+    <androidx.legacy.widget.Space android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/intercom_zero_state_text" style="@style/Platform.TextStyle.H5.News.Tertiary" />
+</com.ubercab.carbon.libraries.intercom.zero_state.CarbonConversationZeroStateView>

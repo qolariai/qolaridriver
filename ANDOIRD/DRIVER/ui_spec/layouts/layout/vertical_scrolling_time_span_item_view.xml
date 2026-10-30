@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1.5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/ts_label" android:layout_width="0.0dip" android:layout_height="wrap_content" app:analyticsId="1859786f-1f8b" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="0.5" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ts_span_container" android:paddingTop="@dimen/ui__spacing_unit_0.5x" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toRightOf="@id/ts_label" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="0.5" />
+</com.ubercab.ui.core.UConstraintLayout>

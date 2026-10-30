@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/help_workflow_initial_error" android:background="?android:colorBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphDefault" android:gravity="center_horizontal" android:layout_gravity="center" android:padding="?contentInset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_workflow_error" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UFrameLayout android:orientation="vertical" android:id="@id/help_workflow_initial_loading_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/help_workflow_initial_loading" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</merge>

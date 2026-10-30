@@ -10,11 +10,13 @@ os.environ["DB_URL"] = f"sqlite:///{Path(_tmp, 'test.db').as_posix()}"
 os.environ["LOG_DIR"] = str(Path(_tmp, "logs"))
 os.environ["DATA_DIR"] = _tmp
 os.environ["RUN_TICKER"] = "0"
-os.environ["RATE_LIMIT"] = "0"
 os.environ["DRIVER_PORT"] = "18080"     # TestClient usa a porta 80 no scope
 os.environ["EXTRA_APP_PORTS"] = ""      # idem (por omissao a 80 e a Driver iOS)
 os.environ["POLL_HOLD_S"] = "0.2"
 os.environ["GOOGLE_MAPS_KEY"] = ""          # geocodificacao inversa sem rede (apps/geocode.py)
+# Indice OSM local desligado por omissao nos testes: o DATA_DIR e temporario e nao tem base.
+# Os testes do indice (test_osmgeo.py) apontam OSM_DB para um ficheiro sintetico.
+os.environ["OSM_DB"] = str(Path(_tmp, "sem_osm.sqlite"))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from fastapi.testclient import TestClient  # noqa: E402

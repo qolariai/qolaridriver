@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="40.0dip" android:width="40.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/ub__ui_core_brand_primary" android:pathData="M0,0h48v48h-48z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_grey_40" android:pathData="M27,22l9,0l0,-7l-9,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_white" android:pathData="M9,21L26,21A1,1 0,0 1,27 22L27,47A1,1 0,0 1,26 48L9,48A1,1 0,0 1,8 47L8,22A1,1 0,0 1,9 21z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_grey_40" android:pathData="M39,21L28,21A1,1 0,0 0,27 22L27,47A1,1 0,0 0,28 48L39,48A1,1 0,0 0,40 47L40,22A1,1 0,0 0,39 21z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_secondary" android:pathData="M23,48l1,0l0,-24l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_secondary" android:pathData="M20,48l1,0l0,-24l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_secondary" android:pathData="M17,48l1,0l0,-24l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_secondary" android:pathData="M14,48l1,0l0,-24l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_secondary" android:pathData="M11,48l1,0l0,-24l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_tertiary" android:pathData="M30,48l1,0l0,-24l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_tertiary" android:pathData="M33,48l1,0l0,-24l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_tertiary" android:pathData="M36,48l1,0l0,-24l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_white" android:pathData="M12,23l15,0l0,-8l-15,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_secondary" android:pathData="M23,21l1,0l0,-4l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_tertiary" android:pathData="M30,21l1,0l0,-4l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_tertiary" android:pathData="M33,21l1,0l0,-4l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_secondary" android:pathData="M20,21l1,0l0,-4l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_secondary" android:pathData="M17,21l1,0l0,-4l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_secondary" android:pathData="M14,21l1,0l0,-4l-1,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_senary" android:pathData="M12,15l5,-6l10,0l0,6z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_tertiary" android:pathData="M36,15l-5,-6l-4,0l0,6z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_white" android:pathData="M17,9l10,0l0,-2l-10,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+    <path android:fillColor="@color/ub__ui_core_brand_grey_40" android:pathData="M27,9l4,0l0,-2l-4,0z" android:strokeColor="@color/ub__ui_core_brand_transparent" android:strokeWidth="1.0" />
+</vector>

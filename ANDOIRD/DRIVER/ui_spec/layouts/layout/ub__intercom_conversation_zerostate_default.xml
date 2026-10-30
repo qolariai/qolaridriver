@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.chatui.defaults.DefaultConversationZeroStateView android:orientation="vertical" android:id="@id/ub__intercom_conversation_zero_state" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.widget.GravityImageView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:analyticsId="9e105d4b-6c6e" app:imageGravity="bottom|center_horizontal" app:imageScaleMode="crop" app:srcCompat="@drawable/ub__chat_conversation_zero_state_background_top" />
+    <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/chat_ui_intercom_zero_state_title" app:analyticsId="f17b0eb7-332f" style="@style/Platform.TextStyle.H5.News.Tertiary" />
+    <com.ubercab.ui.commons.widget.GravityImageView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" android:layout_weight="1.0" app:analyticsId="1a9bd6a5-0a9d" app:imageGravity="top|center_horizontal" app:imageScaleMode="crop" app:srcCompat="@drawable/ub__chat_conversation_zero_state_background_bottom" />
+</com.ubercab.chatui.defaults.DefaultConversationZeroStateView>

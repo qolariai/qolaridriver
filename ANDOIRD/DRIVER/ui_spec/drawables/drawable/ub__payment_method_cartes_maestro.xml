@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="26.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="26.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <clip-path android:pathData="M0,0h24v26H0z" />
+        <path android:fillColor="@color/ub__payment_maestro_card_1" android:pathData="M0.774,3h17.033v6H4v6H0.774V3Z" android:fillType="evenOdd" />
+        <path android:fillColor="@color/ub__payment_maestro_card_2" android:pathData="M4,11.408V9h6.839c0,-2.071 -1.733,-3.75 -3.871,-3.75S3.097,6.929 3.097,9c0,0.917 0.34,1.756 0.903,2.408Z" android:fillType="evenOdd" />
+        <path android:fillColor="@color/ub__payment_maestro_card_3" android:pathData="M8.532,6.75a3.902,3.902 0,0 1,3.081 -1.5c2.137,0 3.856,1.68 3.856,3.75H7.734h3.097c0,-0.255 -0.023,-0.51 -0.077,-0.75H7.812c0.054,-0.263 0.14,-0.51 0.248,-0.75h2.446a3.954,3.954 0,0 0,-0.465 -0.75h-1.51Z" android:fillType="evenOdd" />
+        <group>
+            <clip-path android:pathData="M5.903,10.806h17.032v11.776H5.903z" />
+            <path android:fillColor="@drawable/$ub__payment_method_cartes_maestro__0" android:pathData="M22.936,10.806H5.903v12.388h17.033V10.806Z" />
+            <path android:fillColor="@color/ub__payment_cartes_card_fillcolor" android:pathData="M14.747,16.595v0.003,-0.003ZM11.188,13.51c2.121,0 3.47,1.21 3.559,3.085H11.3v0.387h3.446c-0.085,1.877 -1.42,3.094 -3.559,3.094 -2.136,0 -3.563,-1.232 -3.563,-3.283 0,-1.987 1.373,-3.283 3.563,-3.283ZM21.214,15.147a1.51,1.51 0,0 0,-0.113 -0.572,1.364 1.364,0 0,0 -0.325,-0.471 1.351,1.351 0,0 0,-0.518 -0.318c-0.189,-0.06 -0.445,-0.09 -0.768,-0.09h-4.352v2.902h4.35c0.322,0 0.579,-0.03 0.767,-0.09 0.189,-0.059 0.36,-0.165 0.519,-0.315 0.143,-0.137 0.252,-0.295 0.325,-0.471 0.077,-0.191 0.115,-0.382 0.115,-0.575ZM21.214,18.437c0,-0.195 -0.038,-0.386 -0.113,-0.575a1.373,1.373 0,0 0,-0.325 -0.473,1.351 1.351,0 0,0 -0.518,-0.318c-0.189,-0.061 -0.445,-0.09 -0.768,-0.09h-4.352v2.907h4.35c0.322,0 0.579,-0.03 0.767,-0.09 0.189,-0.06 0.36,-0.164 0.519,-0.318a1.45,1.45 0,0 0,0.44 -1.043Z" />
+        </group>
+    </group>
+</vector>

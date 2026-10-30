@@ -8,7 +8,7 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
 /** Viagem recente para a lista "As suas sessões recentes" (captura 062). */
-data class RecentTrip(val uuid: String, val route: String, val total: String, val whenLabel: String)
+data class RecentTrip(val route: String, val total: String, val whenLabel: String)
 
 /**
  * Resumo semanal do separador Rendimentos (capturas 011/062). O servidor devolve o total e as viagens da semana;
@@ -51,7 +51,6 @@ object EarningsMapper {
             val idx = java.time.temporal.ChronoUnit.DAYS.between(start, at.toLocalDate()).toInt()
             if (idx in 0..6) perDay[idx] += parseMoney(t.formattedTotal)
             RecentTrip(
-                uuid = t.uuid.orEmpty(),
                 route = listOfNotNull(t.pickupAddress, t.dropoffAddress).joinToString(" → "),
                 total = t.formattedTotal.orEmpty(),
                 whenLabel = at.format(whenFmt),

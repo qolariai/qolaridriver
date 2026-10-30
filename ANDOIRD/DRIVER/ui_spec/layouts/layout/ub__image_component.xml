@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UImageView android:id="@id/ub__image" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_12x" app:analyticsId="0c1f5abf-02d0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

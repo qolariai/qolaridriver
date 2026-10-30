@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/ub__ui_core_brand_black" />
+    <item>
+        <bitmap android:gravity="center" android:src="@null" />
+    </item>
+</layer-list>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.core.agenda.AgendaView android:background="@drawable/ub__rectangle_top_corners_rounded" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="69d3413b-132a" app:layout_behavior="@string/agenda_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.carbon.core.agenda.status_assistant.StatusAssistantView android:layout_gravity="center" android:id="@id/status_assistant" android:layout_width="fill_parent" android:layout_height="@dimen/status_assistant_peeking_height" app:analyticsId="03bb6bb2-e97a" />
+        <com.ubercab.ui.core.UPlainView android:background="@drawable/ub__carbon_divider_horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.ubercab.carbon.core.agenda.AgendaContentView android:id="@id/agenda_content_view" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.ubercab.carbon.core.agenda.AgendaFeedContentView android:id="@id/agenda_feed_content_view" android:background="?android:windowBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.ubercab.ui.core.UPlainView android:layout_gravity="top" android:id="@id/agenda_content_shadow" android:background="@drawable/ub__agenda_scroll_fade_gradient_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UPlainView android:background="@drawable/ub__carbon_divider_horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+        <com.ubercab.carbon.core.agenda.AgendaBottomOverlayContainer android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/agenda_overlay_button_frame" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/carbon_ui__spacing_unit_1.5x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_3x" android:paddingEnd="@dimen/ui__spacing_unit_3x" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:id="@id/status_overlay" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.0" app:layout_anchor="@id/status_assistant" app:layout_anchorGravity="center|bottom" />
+</com.ubercab.carbon.core.agenda.AgendaView>

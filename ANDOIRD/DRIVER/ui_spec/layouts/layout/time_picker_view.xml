@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.destination.util.DestinationArrivalTimePickerView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="0b951e59-1802"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:layout_width="fill_parent" android:layout_height="wrap_content" uber:cardElevation="@dimen/ui__elevation_low">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_8x">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:layout_gravity="center_vertical" android:id="@id/destination_time_picker_headline" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/time_picker_headline" android:layout_weight="1.0" style="@style/Platform.TextStyle.H4.News" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:textAppearance="@style/Platform.TextStyle.Button.Bold" android:textColor="?accentCta" android:layout_gravity="center_vertical" android:id="@id/destination_time_picker_remove" android:background="@null" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/arrival_time_remove" uber:buttonType="tertiary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCardView>
+    <NumberPicker android:id="@id/destination_time_picker_numberpicker" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="@dimen/destination_arrival_time_picker_height" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center|bottom" android:layout_width="fill_parent" android:layout_height="@dimen/destination_arrival_time_picker_message_and_action_button_container_height">
+        <com.ubercab.ui.core.UCardView android:layout_gravity="center|bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:cardElevation="@dimen/ui__elevation_high">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H5.News.Secondary" android:layout_gravity="center_horizontal" android:id="@id/destination_time_picker_label" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/destination_time_picker_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/time_picker_cancel" android:layout_weight="0.5" uber:analyticsId="9eb8a0d4-90b0" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+                    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/destination_time_picker_confirm" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/time_picker_confirm" android:layout_weight="0.5" android:layout_marginStart="@dimen/carbon_ui__spacing_unit_1.5x" uber:analyticsId="d3d89bfa-1f9b" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UCardView>
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.destination.util.DestinationArrivalTimePickerView>

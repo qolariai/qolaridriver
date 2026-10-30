@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.core.tasks_overflow.OverflowView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/scrim" android:background="?backgroundInversePrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.6" />
+    <com.ubercab.core.tasks_overflow.OverflowContentView android:id="@id/overflow_content_view" android:background="@drawable/overflow_content_rounded_background" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/bottom_sheet_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UImageView android:id="@id/overflow_close_button" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub_ic_x" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/overflow_header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UScrollView android:id="@id/overflow_content_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/job_task_overflow_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.ubercab.ui.core.UScrollView>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.core.tasks_overflow.OverflowContentView>
+</com.ubercab.core.tasks_overflow.OverflowView>

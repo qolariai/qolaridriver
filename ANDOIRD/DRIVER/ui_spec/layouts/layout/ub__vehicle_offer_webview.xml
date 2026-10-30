@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="54575fd4-e868"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.external_web_view.core.AutoAuthWebView android:id="@id/vehicle_offer_browser" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.ui.core.ULinearLayout>

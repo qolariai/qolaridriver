@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.core.event_card.CircularProgressBarView android:id="@id/circular_progress_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:progressDrawable="@drawable/circular_progress_bar" style="?android:progressBarStyleHorizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

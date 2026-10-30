@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/style_guide_typography2_item" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.text.BaseTextView android:textSize="12.0sp" android:textColor="?android:textColorSecondary" android:id="@id/typography2_label" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/typography2_sample" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+</com.ubercab.ui.core.ULinearLayout>

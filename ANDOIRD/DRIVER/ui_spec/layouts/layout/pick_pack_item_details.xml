@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_item_details_taskbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.uber.taskbuildingblocks.views.taskbanner.TaskBannerView android:id="@id/pick_pack_item_details_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/pick_pack_item_details_recycler_view" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <com.uber.taskbuildingblocks.views.taskbutton.TaskFooterView android:id="@id/pick_pack_item_details_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

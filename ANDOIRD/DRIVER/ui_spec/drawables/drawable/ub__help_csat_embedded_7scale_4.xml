@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/help_csat_embedded_7scale_size" android:width="@dimen/help_csat_embedded_7scale_size" android:viewportWidth="30.0" android:viewportHeight="30.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?ruleColor" android:pathData="M15 30a15 15 0 1 0 0 -30 15 15 0 0 0 0 30z" />
+    <path android:fillColor="?iconColor" android:pathData="M15.97 17.4H11v-1.34L15.44 10h2.35v5.8h1.19v1.6h-1.19v2.4h-1.82v-2.4zm0 -1.6v-3.94L13.1 15.8h2.87z" />
+</vector>

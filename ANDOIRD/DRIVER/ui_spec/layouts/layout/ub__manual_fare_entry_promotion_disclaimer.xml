@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__icon_small" android:layout_height="@dimen/ui__icon_small" app:analyticsId="45d9ceb8-df90" app:srcCompat="@drawable/ub_ic_circle_i" />
+        <com.ubercab.ui.core.UTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__fare_entry_promotion_disclaimer_title" android:layout_marginStart="@dimen/ui__spacing_unit_1x" app:analyticsId="ad4773d9-d9b0" style="@style/Platform.TextStyle.Small.Medium" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__promotion_disclaimer_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" app:analyticsId="5d42e890-7d04" style="@style/Platform.TextStyle.Small.Normal" />
+</merge>

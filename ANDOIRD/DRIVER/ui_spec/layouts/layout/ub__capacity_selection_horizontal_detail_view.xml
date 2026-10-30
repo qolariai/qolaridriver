@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/ub__capacity_selection_modal_background" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="start" android:id="@id/ub__capacity_close_button" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub_ic_x" />
+    <com.ubercab.ui.core.UTextView android:gravity="center_horizontal" android:id="@id/ub__capacity_selection_title_text" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/capacity_selection_riders_title" app:computeLineHeight="false" style="@style/Platform.TextStyle.H3.News" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/ub__ring_image_view" android:layout_width="@dimen/ub__capacity_pager_ring_size" android:layout_height="@dimen/ub__capacity_pager_ring_size" android:importantForAccessibility="no" />
+        <com.ubercab.ui.core.UViewPager android:layout_gravity="center" android:id="@id/ub__view_pager" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/ub__capacity_pager_ring_size" android:overScrollMode="never" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.ui.core.ULinearLayout>

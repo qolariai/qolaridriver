@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.map_ui.tooltip.optional.RiderLocationTooltipView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.CircleImageView android:id="@id/ub__circle_image" android:layout_width="@dimen/ui__avatar_size_large" android:layout_height="@dimen/ui__avatar_size_large" app:analyticsId="6b7cf12e-63bd" app:srcCompat="@drawable/avatar_blank" />
+</com.ubercab.map_ui.tooltip.optional.RiderLocationTooltipView>

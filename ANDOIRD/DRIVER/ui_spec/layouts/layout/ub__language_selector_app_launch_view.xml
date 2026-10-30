@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.language_selector.app_launch.LanguageSelectorAppLaunchView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Title.Normal" android:paddingLeft="?gutterSize" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingRight="?gutterSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__language_selector_app_launch_title" uber:analyticsId="087d684f-769c" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:textColor="?android:textColorSecondary" android:paddingLeft="?gutterSize" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="?gutterSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__language_selector_app_launch_subtitle" uber:analyticsId="733cd331-1cdf" />
+    <com.ubercab.ui.core.UImageView android:paddingTop="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="e3229062-38cb" uber:srcCompat="?dividerHorizontal" />
+    <include layout="@layout/ub__language_selector_list" />
+    <com.ubercab.ui.core.UCardView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:cardBackgroundColor="?android:colorBackground" uber:cardElevation="@dimen/ui__elevation_high">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__language_selector_app_launch_continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__language_selector_app_launch_button_continue" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+    </com.ubercab.ui.core.UCardView>
+</com.ubercab.language_selector.app_launch.LanguageSelectorAppLaunchView>

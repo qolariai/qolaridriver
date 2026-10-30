@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.phonenumber.core.PhoneNumberView android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="top" android:id="@id/mobile_country_container" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:id="@id/mobile_country_and_dropdown" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:id="@id/mobile_country_picker" android:background="?android:colorBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:elevation="@dimen/flag_elevation" />
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?android:textColorTertiary" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_1x" app:srcCompat="@drawable/ic_dropdown_arrow" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UTextView android:id="@id/mobile_country_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.H3.News" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.commons.widget.PresidioTextInputLayout android:id="@id/text_input_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="0.0dip" app:hintEnabled="false">
+        <com.ubercab.ui.core.input.BaseEditText android:id="@id/mobile_base_text_field" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="phone" android:imeOptions="actionNext" android:contentDescription="@string/helix_phone_enter_your_mobile_number" />
+    </com.ubercab.ui.commons.widget.PresidioTextInputLayout>
+</com.ubercab.presidio.phonenumber.core.PhoneNumberView>

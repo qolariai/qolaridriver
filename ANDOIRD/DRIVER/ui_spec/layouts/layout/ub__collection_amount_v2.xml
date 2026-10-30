@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/ub__collection_amount_main_content_scroll" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__collection_amount_main_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.UCardView android:id="@id/bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:cardBackgroundColor="?android:colorBackground" uber:cardElevation="@dimen/ui__elevation_high">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__collection_amount_footer_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__collection_amount_footer_area" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:size="large">
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__collection_amount_confirm_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/collection_amount_start_page_make_payment" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+                <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:id="@id/ub__collection_amount_loading" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" style="@style/Platform.Progress.CircleIndeterminate" />
+            </com.ubercab.ui.core.UFrameLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCardView>
+</merge>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:id="@id/bottom_section_button_icon" android:background="?selectableItemBackground" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_8x" />
+</merge>

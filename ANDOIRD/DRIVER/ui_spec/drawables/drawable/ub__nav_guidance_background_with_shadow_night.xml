@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="@dimen/ub__nav_shadow_height">
+        <shape>
+            <solid android:color="@color/ub__nav_uber_blue_22" />
+        </shape>
+    </item>
+    <item android:left="@dimen/ub__nav_shadow_height_negative" android:top="@dimen/ub__nav_shadow_height_negative" android:right="@dimen/ub__nav_shadow_height_negative" android:bottom="0.0dip">
+        <shape>
+            <stroke android:width="@dimen/ub__nav_shadow_height" android:color="@color/ub__nav_shadow" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</layer-list>

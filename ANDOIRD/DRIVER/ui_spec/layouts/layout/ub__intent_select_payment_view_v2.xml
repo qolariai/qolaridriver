@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.profileselection.intent_payment_selector.IntentSelectPaymentViewV2 android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="c82b1a9f-4a84"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:elevation="0.0dip" app:header_state="expand" />
+    <com.uber.ui_compose_view.core.BaseSegmentedControlView android:id="@id/ub__intent_select_payment_segmented_control_view" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__intent_select_payment_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.dockedbutton.ButtonDock android:id="@id/ub__intent_select_payment_save_button_dock" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:addTopPadding="true">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__intent_select_payment_save_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__intent_select_payment_save_button_title" app:buttonType="primary" app:itemPriority="primary" app:shape="rect" app:size="large" />
+    </com.ubercab.ui.core.dockedbutton.ButtonDock>
+</com.uber.profileselection.intent_payment_selector.IntentSelectPaymentViewV2>

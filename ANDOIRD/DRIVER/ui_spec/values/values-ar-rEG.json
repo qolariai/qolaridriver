@@ -1,0 +1,9 @@
+{
+ "strings": {
+  "string": {
+   "helix_phone_country_picker_description": "رمز البلد هو %1$s",
+   "helix_phone_enter_your_mobile_number": "أدخل رقم هاتفك المتحرك",
+   "helix_phone_mobile_number": "رقم الهاتف المتحرك"
+  }
+ }
+}

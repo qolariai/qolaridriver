@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/pick_pack_item_attribute_label" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="9ec3bdba-11d7" style="@style/Platform.TextStyle.ParagraphSmall" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/pick_pack_item_attribute_value" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="bb7a8b5c-9ed2" style="@style/Platform.TextStyle.LabelDefault" />
+</merge>

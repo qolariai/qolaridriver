@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.next_plugin_bar_chart.NextMarkerInspectionSheetBarChartView android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_3x" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__limit_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.LabelSmall" />
+    <com.uber.drivenui.ui.DrivenInteractiveChartView android:id="@id/ub__driven_chart_view" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.uber.next_plugin_bar_chart.NextMarkerInspectionSheetBarChartView>

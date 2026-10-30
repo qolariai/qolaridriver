@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.profileselection.profile_selector.profile_details.IntentManagedBusinessProfileDetailsView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="a2ae8989-778b"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="@style/U4BLightHeader" android:id="@id/appbar" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/header_elevation" uber:contentInsetStartWithNavigation="0.0dip" uber:elevation="0.0dip" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__profile_select_details_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" uber:analyticsId="a554000e-decc" style="@style/U4BBaseHeaderMedium" />
+            <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_5x" android:text="@string/profile_selector_edit_profile_primary_payment_title" android:layout_marginStart="@dimen/ui__spacing_unit_2x" uber:analyticsId="48e6cd33-7888" style="@style/Platform.TextStyle.LabelLarge" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x">
+                <com.uber.ui_compose_view.core.BaseAvatarView android:id="@id/ub__profile_item_avatar" android:layout_width="?avatarSmall" android:layout_height="?avatarSmall" android:layout_marginTop="@dimen/ui__spacing_unit_2.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_2.5x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" />
+                <com.ubercab.ui.core.UTextView android:layout_gravity="center_vertical" android:id="@id/ub__profile_billing_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_billed_to_business" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="f1ac6b22-34af" style="@style/Platform.TextStyle.LabelDefault" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?borderPrimary" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__profile_select_uber_cash" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__profile_select_details_secondary_payment_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_5x" android:text="@string/profile_selector_edit_profile_secondary_payment_title" android:layout_marginStart="@dimen/ui__spacing_unit_2x" uber:analyticsId="4055924c-3be8" style="@style/Platform.TextStyle.LabelLarge" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__profile_select_details_payment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.uber.profileselection.profile_selector.profile_details.IntentManagedBusinessProfileDetailsView>

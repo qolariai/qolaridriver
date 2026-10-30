@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:textColor="?contentWarning" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/carbon_style_guide_buttons_warning_title" style="@style/Platform.TextStyle.DisplayDefault" />
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/carbon_style_guide_buttons_deprecation_notice" style="@style/Platform.TextStyle.HeadingSmall" />
+            <com.ubercab.ui.core.UButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="Primary Small" style="@style/Carbon.Button.Primary.Small" />
+            <com.ubercab.ui.core.UButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="Secondary Small" style="@style/Carbon.Button.Secondary.Small" />
+            <com.ubercab.ui.core.UButton android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="Start" style="@style/Carbon.Button.Start" />
+            <com.ubercab.ui.core.UButton android:enabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="Start Disabled" style="@style/Carbon.Button.Start" />
+            <com.ubercab.ui.core.UButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="Start Small" style="@style/Carbon.Button.Start.Small" />
+            <com.ubercab.ui.core.UButton android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="End" style="@style/Carbon.Button.End" />
+            <com.ubercab.ui.core.UButton android:enabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="End Disabled" style="@style/Carbon.Button.End" />
+            <com.ubercab.ui.core.UButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="End Small" style="@style/Carbon.Button.End.Small" />
+            <com.ubercab.carbon.core.ui.ProgressButtonLayout android:id="@id/progress_button_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset">
+                <com.ubercab.ui.core.UButton android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="ProgressButtonLayout" style="@style/Platform.Button.Primary" />
+            </com.ubercab.carbon.core.ui.ProgressButtonLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/help_csat_survey_emoji_size" android:width="@dimen/help_csat_survey_emoji_size" android:viewportWidth="144.0" android:viewportHeight="144.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?ruleColor" android:pathData="M72,72m-72,0a72,72 0,1 1,144 0a72,72 0,1 1,-144 0" />
+    <path android:fillColor="?iconColor" android:pathData="M51,54m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+    <path android:fillColor="?iconColor" android:pathData="M94.97,53.63m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0" />
+    <path android:pathData="M72,86c-19.48,0 -30,21 -30,21h60S91.48,86 72,86z" android:strokeColor="?iconColor" android:strokeWidth="6.0" android:strokeLineCap="round" android:strokeLineJoin="round" />
+</vector>

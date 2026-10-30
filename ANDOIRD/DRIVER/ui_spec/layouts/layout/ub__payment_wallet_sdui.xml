@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.wallet_sdui.sdui.WalletSDUIView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="1e6887ff-6be6"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__payment_wallet_sdui_appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:elevation="0.0dip" uber:header_state="collapse" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ProgressBar android:layout_gravity="center" android:id="@id/ub__payment_wallet_sdui_loadingbar" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_7x" android:layout_height="@dimen/ui__spacing_unit_7x" android:indeterminate="true" android:indeterminateTint="?accentPrimary" android:indeterminateTintMode="src_in" style="@style/ProgressBarStyle" />
+        <com.ubercab.wallet_common.view.WalletFullscreenErrorView android:id="@id/ub__payment_wallet_sdui_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.USwipeRefreshLayout android:id="@id/ub__payment_wallet_sdui_swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.UScrollView android:id="@id/ub__payment_wallet_sdui_scrollcontent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" uber:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </com.ubercab.ui.core.USwipeRefreshLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+</com.uber.wallet_sdui.sdui.WalletSDUIView>

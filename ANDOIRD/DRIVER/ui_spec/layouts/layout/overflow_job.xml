@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.core.tasks_overflow_job.OverflowJobView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/overflow_primary_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:divider="@drawable/divider_space_1x" android:showDividers="middle" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/overflow_header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1.5x" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/overflow_secondary_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.core.tasks_overflow_job.OverflowJobView>

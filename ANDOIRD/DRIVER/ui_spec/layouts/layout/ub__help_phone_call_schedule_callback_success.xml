@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UTextView android:id="@id/title_text" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="c650a995-960b" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.ParagraphDefault" android:textColor="?contentSecondary" android:id="@id/description_text" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="db4b2de3-edf7" />
+            <com.ubercab.ui.core.UCardView android:id="@id/phone_info_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?android:windowBackground" app:cardCornerRadius="@dimen/ui__corner_radius" app:cardElevation="@dimen/ui__elevation_low" app:cardUseCompatPadding="true">
+                <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/phone_info_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.UCardView>
+            <com.ubercab.ui.core.UCardView android:id="@id/date_time_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?android:windowBackground" app:cardCornerRadius="@dimen/ui__corner_radius" app:cardElevation="@dimen/ui__elevation_low" app:cardUseCompatPadding="true">
+                <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/date_time_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.UCardView>
+            <com.ubercab.ui.core.UCardView android:id="@id/language_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?android:windowBackground" app:cardCornerRadius="@dimen/ui__corner_radius" app:cardElevation="@dimen/ui__elevation_low" app:cardUseCompatPadding="true">
+                <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/language_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.UCardView>
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/done_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginTop="@dimen/ui__spacing_unit_4x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:text="@string/done_button_text" app:analyticsId="0a7f5a27-cd12" app:buttonType="primary" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/cancel_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/cancel_cllback_button_text" app:analyticsId="63793cd4-e380" app:buttonType="secondary" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</merge>

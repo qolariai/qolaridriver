@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.webtoolkit.WebToolkitView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="cf53cdf3-db0d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__appbar_container" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:header_state="collapse" />
+        <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UFrameLayout android:theme="@style/Theme.Platform.Light" android:id="@id/ub__content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.external_web_view.core.AutoAuthWebView android:id="@id/ub__auto_auth_web_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.uber.webtoolkit.WebToolkitView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.preferences.rib.DriverPreferencesView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="f8465326-6654"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:id="@id/appbar" android:background="?brandTransparent" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:contentInsetStartWithNavigation="0.0dip" uber:elevation="0.0dip">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.ToolbarFont" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" uber:contentInsetStartWithNavigation="0.0dip" uber:navigationIcon="@drawable/ub_ic_arrow_left" uber:popupTheme="@style/ThemeOverlay.AppCompat.Light" uber:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Widget.Platform.Toolbar" />
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.carbon.preferences.feedback.DriverPreferencesFeedbackViewV2 android:id="@id/driver_preferences_feedback" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UScrollView android:id="@id/scrollView" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/driver_preferences_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/ub__preferences_section_separator" android:showDividers="middle" />
+                    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/driver_preferences_buttons_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/driver_preferences_reset_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_7x" android:text="@string/preferences_reset" uber:analyticsId="ed3c6af9-def1" uber:buttonType="secondary" uber:shape="pill" uber:size="medium" style="@style/Platform.Button.BaseDynamic" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.UScrollView>
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/preferences_loading_view" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UPlainView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.5" />
+            <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateTint="?iconColor" android:indeterminateTintMode="src_in" style="@style/Widget.AppCompat.ProgressBar" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/preferences_no_vehicle_view" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.text.BaseTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/preferences_no_vehicle_available" style="@style/Platform.TextStyle.Paragraph.Normal" />
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/preferences_select_vehicle" android:layout_width="wrap_content" android:layout_height="@dimen/ui__spacing_unit_7x" android:text="@string/preferences_select_vehicle" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelLarge" android:gravity="center" android:id="@id/preferences_no_preferences_text" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="7fcf96e5-66c9" />
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</com.ubercab.carbon.preferences.rib.DriverPreferencesView>

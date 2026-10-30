@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.driver_loyalty.profile_joule.LoyaltyProfileJouleView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__loyalty_profile_joule_margin_top" android:layout_marginEnd="@dimen/ub__loyalty_profile_joule_margin_end"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/loyalty_profile_joule_outer" android:layout_width="@dimen/ub__loyalty_profile_joule_outer_size" android:layout_height="@dimen/ub__loyalty_profile_joule_outer_size" android:tint="@color/ub__white" app:analyticsId="33ee184a-baf9" app:srcCompat="@drawable/ub_ic_diamond" />
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/loyalty_profile_joule_inner" android:layout_width="@dimen/ub__loyalty_profile_joule_inner_size" android:layout_height="@dimen/ub__loyalty_profile_joule_inner_size" app:analyticsId="440e1a02-a75e" app:srcCompat="@drawable/ub_ic_diamond" />
+</com.ubercab.driver_loyalty.profile_joule.LoyaltyProfileJouleView>

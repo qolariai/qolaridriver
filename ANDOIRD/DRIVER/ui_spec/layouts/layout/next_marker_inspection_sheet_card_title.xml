@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.next_inspection_sheet.objects.card_title.NextMarkerInspectionSheetCardTitleView android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="start|center" android:id="@id/rich_text_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.2">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="end|center" android:id="@id/trailing_action_icon" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.next_inspection_sheet.objects.card_title.NextMarkerInspectionSheetCardTitleView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/style_guide_screen_tag" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="cc1c4e53-06f5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.uber.ui_compose_view.core.tag.BaseTag android:id="@id/ub_tag_sample" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="@string/ub__tag_text_basetag" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" app:tag_color="black" app:tag_dismissable="true" app:tag_identifier="tag_id_1" app:tag_leading_icon="@null" app:tag_size="large" app:tag_state="inactive" app:tag_toggleable="false" />
+    <com.uber.ui_compose_view.core.tag.BaseTag android:theme="@style/OffersStyle" android:id="@id/base_tag_2_xml" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" android:text="Offer Style Set in XML" app:tag_color="brand" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/scrim" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_4.5x" android:soundEffectsEnabled="false" android:importantForAccessibility="no" app:analyticsEnabled="false" />
+    <include layout="@layout/ub__optional_help_workflow_view" />
+</merge>

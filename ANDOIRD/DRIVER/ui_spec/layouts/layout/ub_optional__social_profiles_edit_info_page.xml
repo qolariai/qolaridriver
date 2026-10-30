@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.social_profiles_driver.profile.edit.SocialProfilesEditFlowView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="f9d95b9a-312a"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:circleImageView="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UScrollView android:id="@id/ub__social_profiles_edit_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/ub__social_profiles_cover_photo_height_no_actionbar">
+                <com.ubercab.ui.core.UImageView android:id="@id/ub__social_profiles_edit_cover_photo_view" android:layout_width="fill_parent" android:layout_height="@dimen/ub__social_profiles_cover_photo_height_no_actionbar" android:scaleType="centerCrop" />
+                <com.ubercab.ui.CircleImageView android:layout_gravity="center_horizontal" android:id="@id/ub__social_profile_edit_photo_image_view" android:layout_width="@dimen/ui__spacing_unit_10x" android:layout_height="@dimen/ui__spacing_unit_10x" android:layout_marginTop="@dimen/ui__spacing_unit_8x" uber:analyticsId="7159ac6a-67fe" uber:circleImageBorderWidth="@dimen/ub__social_profiles_circle_image_border_width" uber:srcCompat="@drawable/avatar_blank" />
+                <com.ubercab.ui.core.UPlainView android:background="?brandBlack" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.3" />
+                <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/ub__social_profiles_edit_profile_photo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_12x" android:tint="?brandWhite" uber:srcCompat="@drawable/ub_ic_camera" />
+                <com.ubercab.ui.core.UTextView android:textColor="?brandWhite" android:layout_gravity="center_horizontal" android:id="@id/ub__social_profile_edit_name_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__social_profiles_edit_screen_name_margin_top" android:maxLines="1" style="@style/Platform.TextStyle.H2.News.Primary.Inverse" />
+            </com.ubercab.ui.core.UFrameLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__social_profiles_question_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <include layout="@layout/ub_optional__social_profiles_transparent_header" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/screen_stack" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.social_profiles_driver.profile.edit.SocialProfilesEditFlowView>

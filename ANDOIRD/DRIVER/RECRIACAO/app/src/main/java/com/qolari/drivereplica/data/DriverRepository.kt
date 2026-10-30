@@ -2,6 +2,7 @@ package com.qolari.drivereplica.data
 
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
+import com.qolari.drivereplica.drive.AcceptResult
 import com.qolari.drivereplica.drive.ActiveTrip
 import com.qolari.drivereplica.drive.DriveParser
 import com.qolari.drivereplica.drive.DriveSource
@@ -9,22 +10,7 @@ import com.qolari.drivereplica.drive.OfferCard
 import com.qolari.drivereplica.drive.TripSummary
 import com.qolari.drivereplica.net.ApiClient
 import com.qolari.drivereplica.net.DriverApi
-import com.qolari.drivereplica.net.PlaceResult
-import com.qolari.drivereplica.net.SupportThreadDto
-import com.qolari.drivereplica.net.SupportThreadResponse
-import com.qolari.drivereplica.net.AirportQueueResponse
-import com.qolari.drivereplica.net.IncentivesResponse
-import com.qolari.drivereplica.net.InvoiceRow
-import com.qolari.drivereplica.net.SafetyContact
-import com.qolari.drivereplica.net.TaxInfo
-import com.qolari.drivereplica.net.SafetyShareResponse
-import com.qolari.drivereplica.net.ScreenShareDto
-import com.qolari.drivereplica.net.DriverBusiness
-import com.qolari.drivereplica.net.DriverPreferences
-import com.qolari.drivereplica.net.PayoutDto
-import com.qolari.drivereplica.net.PayoutMethodsResponse
-import com.qolari.drivereplica.net.PayoutResponse
-import com.qolari.drivereplica.net.StatementRow
+import com.qolari.drivereplica.net.RouteResponse
 import com.qolari.drivereplica.ui.earnings.EarningsMapper
 import com.qolari.drivereplica.ui.earnings.EarningsSource
 import com.qolari.drivereplica.ui.earnings.WeeklyEarnings
@@ -98,8 +84,10 @@ class DriverRepository(private val session: SessionStore) : HomeSource, Earnings
         pin?.let { addProperty("pin", it) }
     }
 
-    override suspend fun accept(offerUuid: String): Result<ActiveTrip?> =
-        runCatching { DriveParser.trip(api().acceptOffers(uuids(offerUuid)).driverTasks) }
+    override suspend fun accept(offerUuid: String): Result<AcceptResult> = runCatching {
+        val r = api().acceptOffers(uuids(offerUuid))
+        AcceptResult(DriveParser.trip(r.driverTasks), radarPending = r.radarPending == true)
+    }
 
     override suspend fun reject(offerUuid: String, expired: Boolean): Result<Unit> = runCatching {
         if (expired) api().expireOffers(uuids(offerUuid)) else api().rejectOffers(uuids(offerUuid))
@@ -113,9 +101,6 @@ class DriverRepository(private val session: SessionStore) : HomeSource, Earnings
 
     override suspend fun begin(tripUuid: String, pin: String?): Result<ActiveTrip?> =
         runCatching { DriveParser.trip(api().beginTrip(tripBody(tripUuid, pin)).driverTasks) }
-
-    override suspend fun completeStop(tripUuid: String): Result<ActiveTrip?> =
-        runCatching { DriveParser.trip(api().completeStop(tripBody(tripUuid)).driverTasks) }
 
     override suspend fun end(tripUuid: String): Result<Unit> = runCatching { api().endTrip(tripBody(tripUuid)); Unit }
 
@@ -135,6 +120,25 @@ class DriverRepository(private val session: SessionStore) : HomeSource, Earnings
         Unit
     }
 
+    /** Chat da viagem: entra como mensagem do condutor (TripEvent no servidor). */
+    override suspend fun sendMessage(tripUuid: String, text: String): Result<Unit> = runCatching {
+        api().tripMessage(JsonObject().apply {
+            addProperty("uuid", tripUuid)
+            addProperty("message", text)
+            addProperty("sender", "driver")
+        })
+        Unit
+    }
+
+    /** Cancelamento do condutor com o motivo escolhido na lista. */
+    override suspend fun cancel(tripUuid: String, reason: String): Result<Unit> = runCatching {
+        api().driverCancelTrip(JsonObject().apply {
+            addProperty("uuid", tripUuid)
+            addProperty("reason", reason)
+        })
+        Unit
+    }
+
     // ---- Veículos e Documentos (lote 5) ----
 
     suspend fun vehicles(): Result<List<com.qolari.drivereplica.ui.manage.VehicleItem>> =
@@ -142,93 +146,6 @@ class DriverRepository(private val session: SessionStore) : HomeSource, Earnings
 
     suspend fun documents(): Result<List<com.qolari.drivereplica.ui.manage.DocumentItem>> =
         runCatching { com.qolari.drivereplica.ui.manage.ManageMapper.documents(api().documents()) }
-
-    suspend fun uploadDocument(kind: String, fileName: String, contentBase64: String): Result<Unit> = runCatching {
-        api().uploadDocument(JsonObject().apply {
-            addProperty("kind", kind)
-            addProperty("fileName", fileName)
-            addProperty("contentBase64", contentBase64)
-        })
-        Unit
-    }
-
-    suspend fun verifyIdentity(fileName: String, contentBase64: String): Result<Unit> = runCatching {
-        api().verifyIdentity(JsonObject().apply {
-            addProperty("fileName", fileName)
-            addProperty("contentBase64", contentBase64)
-        })
-        Unit
-    }
-
-    suspend fun preferences(): Result<DriverPreferences> = runCatching {
-        api().preferences().preferences
-    }
-
-    suspend fun savePreferences(body: JsonObject): Result<DriverPreferences> = runCatching {
-        api().savePreferences(body).preferences
-    }
-
-    suspend fun setBreak(minutes: Int, resume: Boolean): Result<DriverPreferences> = runCatching {
-        api().setBreak(JsonObject().apply {
-            addProperty("minutes", minutes)
-            addProperty("resume", resume)
-        }).preferences
-    }
-
-    suspend fun airportQueue(): Result<AirportQueueResponse> = runCatching {
-        api().airportQueue()
-    }
-
-    suspend fun airportQueueAction(action: String): Result<AirportQueueResponse> = runCatching {
-        api().airportQueueAction(JsonObject().apply { addProperty("action", action) })
-    }
-
-    suspend fun incentives(): Result<IncentivesResponse> = runCatching { api().incentives() }
-
-    suspend fun claimQuest(uuid: String): Result<IncentivesResponse> = runCatching {
-        api().claimQuest(uuid)
-    }
-
-    suspend fun inviteDriver(phone: String): Result<IncentivesResponse> = runCatching {
-        api().invite(JsonObject().apply { addProperty("phone", phone) })
-    }
-
-    suspend fun requestAdjustment(kind: String, amountCents: Int, note: String): Result<Unit> = runCatching {
-        api().requestAdjustment(JsonObject().apply {
-            addProperty("kind", kind)
-            addProperty("amountCents", amountCents)
-            addProperty("note", note)
-        })
-        Unit
-    }
-
-    suspend fun invoices(): Result<List<InvoiceRow>> = runCatching { api().invoices().invoices }
-
-    suspend fun taxSummary(): Result<TaxInfo> = runCatching { api().taxSummary() }
-
-    suspend fun businessProfile(): Result<DriverBusiness> = runCatching {
-        api().businessProfile().business
-    }
-
-    suspend fun saveBusinessProfile(body: JsonObject): Result<DriverBusiness> = runCatching {
-        api().saveBusinessProfile(body).business
-    }
-
-    suspend fun payoutMethods(): Result<PayoutMethodsResponse> = runCatching {
-        api().payoutMethods()
-    }
-
-    suspend fun requestPayout(instant: Boolean): Result<PayoutResponse> = runCatching {
-        if (instant) api().instantPay() else api().requestPayout()
-    }
-
-    suspend fun payoutHistory(): Result<List<PayoutDto>> = runCatching {
-        api().payoutHistory().payouts
-    }
-
-    suspend fun statements(): Result<List<StatementRow>> = runCatching {
-        api().statements().statements
-    }
 
     suspend fun profile(): Result<com.qolari.drivereplica.ui.manage.ProfileSummary?> =
         runCatching { com.qolari.drivereplica.ui.manage.ManageMapper.profile(api().profileHub()) }
@@ -245,129 +162,31 @@ class DriverRepository(private val session: SessionStore) : HomeSource, Earnings
     suspend fun markNotificationsRead(): Result<Unit> = runCatching { api().markRead(); unread.value = 0; Unit }
 
     override suspend fun route(fromLat: Double, fromLng: Double, toLat: Double, toLng: Double): Result<List<Pair<Double, Double>>> = runCatching {
+        api().route(body(fromLat, fromLng, toLat, toLng)).polyline.orEmpty().mapNotNull { p ->
+            if (p.latitude != null && p.longitude != null) p.latitude to p.longitude else null
+        }
+    }
+
+    override suspend fun routeWithSteps(
+        fromLat: Double, fromLng: Double, toLat: Double, toLng: Double,
+    ): Result<RouteResponse?> = runCatching { api().route(body(fromLat, fromLng, toLat, toLng)) }
+
+    /**
+     * Última posição do motorista conhecida pelo servidor (`driverState.location`).
+     * Serve para a navegação arrancar quando o telemóvel está sem fix de GPS.
+     */
+    override suspend fun lastPosition(): Pair<Double, Double>? = runCatching {
+        val loc = api().available().driverTasks?.driverState?.location
+        val lat = loc?.latitude
+        val lng = loc?.longitude
+        if (lat != null && lng != null) lat to lng else null
+    }.getOrNull()
+
+    private fun body(fromLat: Double, fromLng: Double, toLat: Double, toLng: Double) = JsonObject().apply {
         fun pt(lat: Double, lng: Double) = JsonObject().apply { addProperty("latitude", lat); addProperty("longitude", lng) }
-        val body = JsonObject().apply { add("origin", pt(fromLat, fromLng)); add("destination", pt(toLat, toLng)) }
-        api().route(body).polyline.orEmpty().mapNotNull { p -> if (p.latitude != null && p.longitude != null) p.latitude to p.longitude else null }
+        add("origin", pt(fromLat, fromLng))
+        add("destination", pt(toLat, toLng))
     }
 
     suspend fun signOut() = session.clear()
-
-    /** Pesquisa de locais (Google Geocoding no backend; fallback no seed). */
-    suspend fun searchPlaces(query: String, lat: Double?, lng: Double?): Result<List<PlaceResult>> =
-        runCatching { api().searchPlaces(query, lat, lng).places }
-
-    suspend fun registerPushToken(token: String): Result<Unit> = runCatching {
-        api().pushToken(JsonObject().apply { addProperty("token", token) })
-        Unit
-    }
-
-    suspend fun supportThreads(): Result<List<SupportThreadDto>> =
-        runCatching { api().supportThreads().threads }
-
-    suspend fun supportThread(uuid: String): Result<SupportThreadResponse> =
-        runCatching { api().supportThread(uuid) }
-
-    suspend fun createSupportThread(
-        message: String,
-        category: String = "outro",
-        fileName: String? = null,
-        contentBase64: String? = null,
-    ): Result<SupportThreadResponse> = runCatching {
-        api().createSupportThread(JsonObject().apply {
-            addProperty("category", category)
-            addProperty("message", message)
-            fileName?.let { addProperty("fileName", it) }
-            contentBase64?.let { addProperty("contentBase64", it) }
-        })
-    }
-
-    suspend fun sendSupportMessage(
-        uuid: String,
-        message: String,
-        fileName: String? = null,
-        contentBase64: String? = null,
-    ): Result<Unit> = runCatching {
-        api().supportMessage(uuid, JsonObject().apply {
-            addProperty("message", message)
-            fileName?.let { addProperty("fileName", it) }
-            contentBase64?.let { addProperty("contentBase64", it) }
-        })
-        Unit
-    }
-
-    suspend fun startScreenShare(threadUuid: String): Result<ScreenShareDto?> = runCatching {
-        api().startScreenShare(threadUuid).share
-    }
-
-    suspend fun sendScreenFrame(threadUuid: String, shareUuid: String, base64: String): Result<Unit> = runCatching {
-        api().sendScreenFrame(threadUuid, shareUuid, JsonObject().apply {
-            addProperty("contentBase64", base64)
-        })
-        Unit
-    }
-
-    suspend fun stopScreenShare(threadUuid: String, shareUuid: String): Result<Unit> = runCatching {
-        api().stopScreenShare(threadUuid, shareUuid)
-        Unit
-    }
-    /** Problema de mapa (botão "Comunicar um problema com o mapa"). */
-    suspend fun mapReport(reason: String, note: String, latitude: Double?, longitude: Double?): Result<Unit> = runCatching {
-        val body = JsonObject().apply {
-            addProperty("reason", reason)
-            addProperty("note", note)
-            latitude?.let { addProperty("latitude", it) }
-            longitude?.let { addProperty("longitude", it) }
-        }
-        api().mapReport(body)
-        Unit
-    }
-
-    suspend fun safetyContacts(): Result<List<SafetyContact>> =
-        runCatching { api().safetyContacts().contacts }
-
-    suspend fun addSafetyContact(name: String, phone: String): Result<SafetyContact> = runCatching {
-        api().addSafetyContact(JsonObject().apply {
-            addProperty("name", name)
-            addProperty("phone", phone)
-        }).contact ?: error("Resposta sem contacto")
-    }
-
-    suspend fun deleteSafetyContact(uuid: String): Result<Unit> = runCatching {
-        api().deleteSafetyContact(uuid); Unit
-    }
-
-    suspend fun safetySos(tripUuid: String?, latitude: Double?, longitude: Double?): Result<Unit> = runCatching {
-        api().safetySos(JsonObject().apply {
-            tripUuid?.let { addProperty("tripUuid", it) }
-            latitude?.let { addProperty("latitude", it) }
-            longitude?.let { addProperty("longitude", it) }
-        })
-        Unit
-    }
-
-    suspend fun shareTrip(tripUuid: String): Result<SafetyShareResponse> = runCatching {
-        api().safetyShare(JsonObject().apply { addProperty("tripUuid", tripUuid) })
-    }
-
-    suspend fun rideCheck(tripUuid: String, status: String): Result<Unit> = runCatching {
-        api().rideCheck(JsonObject().apply {
-            addProperty("tripUuid", tripUuid)
-            addProperty("status", status)
-        })
-        Unit
-    }
-
-    suspend fun startRecording(tripUuid: String, kind: String = "audio"): Result<String?> = runCatching {
-        api().startRecording(JsonObject().apply {
-            addProperty("tripUuid", tripUuid)
-            addProperty("kind", kind)
-        }).recording?.uuid
-    }
-
-    suspend fun stopRecording(uuid: String, contentBase64: String?): Result<Unit> = runCatching {
-        api().stopRecording(uuid, JsonObject().apply {
-            contentBase64?.let { addProperty("contentBase64", it) }
-        })
-        Unit
-    }
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.presidio.payment.feature.checkoutcomponents.paymentselection.paymentswitcher.PaymentSwitcherView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="a76de3c0-dcf6"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__payment_switcher_save_button_wrapper" android:visibility="gone" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__payment_switcher_sdf_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.dockedbutton.ButtonDock android:id="@id/ub__payment_switcher_save_button_dock" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:addTopPadding="true">
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__payment_switcher_save_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__payment_checkout_components_payment_switcher_save_button_title" app:buttonType="primary" app:itemPriority="primary" app:shape="rect" app:size="large" />
+        </com.ubercab.ui.core.dockedbutton.ButtonDock>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.presidio.payment.feature.checkoutcomponents.paymentselection.paymentswitcher.PaymentSwitcherView>

@@ -12,8 +12,6 @@ object AppGraph {
         app = application
     }
 
-    val context: Application get() = app
-
     val session by lazy { SessionStore(app) }
     val network by lazy { NetworkMonitor(app) }
     val repository by lazy { UserRepository(session) }

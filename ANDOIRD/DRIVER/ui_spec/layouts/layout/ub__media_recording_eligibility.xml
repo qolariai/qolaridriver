@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.safety_media_recording_help_workflow_extension.media_recording_eligibility.MediaRecordingReportExtensionComponentUploadEligibilityView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="8602518A-5E16"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.progress.BaseProgressIndicator android:id="@id/progress_bar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/HorizontalIndeterminate" />
+</com.ubercab.safety_media_recording_help_workflow_extension.media_recording_eligibility.MediaRecordingReportExtensionComponentUploadEligibilityView>

@@ -3,7 +3,7 @@ import { useAuth } from '../live'
 
 export function Login() {
   const { login } = useAuth()
-  const [email, setEmail] = useState('admin@qolari.com')
+  const [email, setEmail] = useState('admin@qolari.local')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
@@ -37,7 +37,7 @@ export function Login() {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" required autoFocus />
         </label>
         <button className="btn primary block" disabled={busy}>{busy ? 'A entrar…' : 'Entrar'}</button>
-        <p className="hint">Demo: <code>admin@qolari.com</code> / <code>QolariDriver@2026</code> — muda em Conta.</p>
+        <p className="hint">Primeiro acesso: <code>admin@qolari.local</code> / <code>admin</code> — muda em Conta.</p>
       </form>
     </div>
   )

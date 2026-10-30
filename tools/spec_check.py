@@ -26,6 +26,9 @@ REQUIRED = [
     "device_apk/README.md",
     "ADAPTACAO_PROMPTS.md",
     "VALIDACAO_MEGA.md",
+    "capabilities.md",
+    "backlog.md",
+    "RELATORIO_FINAL.md",
 ]
 
 STATE_MACHINE = ["requested", "accepted", "arrived", "in_progress", "completed",
@@ -60,6 +63,19 @@ def read(path):
 def check_files():
     for name in REQUIRED:
         ok(f"artefacto {name}", (ROOT / name).is_file(), "em falta")
+
+
+def check_closure():
+    backlog = read("backlog.md")
+    ok("backlog.md declara zero gaps abertos", "Nenhum para `funcional`" in backlog,
+       "gaps abertos para o alvo")
+    report = read("RELATORIO_FINAL.md")
+    ok("RELATORIO_FINAL.md tem veredicto", "Veredicto" in report and "pronto para `funcional`" in report,
+       "veredicto ausente")
+    caps = read("capabilities.md")
+    ok("capabilities.md tem matriz", "| Status |" in caps and "| ok |" in caps,
+       "matriz ausente")
+    ok("capabilities.md fecha o alvo", "Zero `gap`" in caps, "gaps por declarar")
 
 
 def check_plan():
@@ -155,6 +171,7 @@ def main():
     check_topology()
     check_endpoints()
     check_captures()
+    check_closure()
     check_secrets()
 
     for name, passed, detail in checks:

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.sharelocation.mapbutton.options.ShareLocationOptionsView android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="cd8184a0-573a"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/scrim" android:background="?backgroundColorScrimDark" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__online_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__online_title_layout" android:background="@drawable/ub__carbon_share_location_map_modal_background" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/ui__spacing_unit_0.5x">
+                <com.ubercab.ui.core.UTextView android:gravity="start" android:id="@id/ub__dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__carbon_share_location_map_options" android:layout_marginStart="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Title.Normal" />
+                <com.ubercab.ui.core.ULinearLayout android:gravity="end|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UImageView android:id="@id/ub__third_party_share_icon" android:paddingTop="@dimen/ui__spacing_unit_0.5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ic_share" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.URecyclerView android:id="@id/ub__driver_share_contact_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__share_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__carbon_share_location_map_options_stop_sharing_button" app:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.sharelocation.mapbutton.options.ShareLocationOptionsView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.photo_flow.step.preview.FacePhotoPreviewView android:background="?android:colorBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="84e4342e-ea50"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.CircleImageView android:layout_gravity="center_horizontal" android:id="@id/ub__preview_photo" android:layout_width="@dimen/ub__face_camera_mask_diameter" android:layout_height="@dimen/ub__face_camera_mask_diameter" android:layout_marginTop="?actionBarSize" uber:circleImageBorderWidth="0.0dip" />
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/ub__preview_document" android:visibility="gone" android:layout_width="@dimen/ub__document_camera_mask_width" android:layout_height="@dimen/ub__document_camera_mask_height" android:layout_marginTop="?actionBarSize" android:scaleType="centerInside" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ub__preview_title" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Title.Normal" />
+            <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/ub__preview_body" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Small.Normal" />
+            </com.ubercab.ui.core.UScrollView>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__preview_secondary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" uber:analyticsId="37729b7f-108d" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__preview_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="7087bb84-2474" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UToolbar android:id="@id/ub__toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" uber:contentInsetStartWithNavigation="0.0dip" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__preview_loading" android:background="?android:colorBackground" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.75">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="false" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.photo_flow.step.preview.FacePhotoPreviewView>

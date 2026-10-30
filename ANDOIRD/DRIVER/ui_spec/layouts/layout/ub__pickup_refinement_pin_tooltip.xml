@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="start|center" android:layout_gravity="start|center" android:orientation="vertical" android:id="@id/ub__map_pin_tooltip" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__pickup_refinement_pin_tooltip_shadow_offset" app:analyticsId="b6d3d5b1-5e28"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:ellipsize="end" android:id="@id/ub__map_pin_tooltip_primary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:analyticsId="bcc58af0-f36e" style="@style/Platform.TextStyle.ParagraphSmall" />
+    <com.ubercab.ui.core.text.BaseTextView android:ellipsize="end" android:id="@id/ub__map_pin_tooltip_secondary_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:analyticsId="65dbe150-e8a6" style="@style/Platform.TextStyle.ParagraphXSmall" />
+</com.ubercab.ui.core.ULinearLayout>

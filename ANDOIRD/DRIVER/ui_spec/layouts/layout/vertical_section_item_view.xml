@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.learningcenter.section.vertical.VerticalSectionItemView android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:id="@id/image" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" android:scaleType="centerCrop" android:adjustViewBounds="true" uber:analyticsId="5a2a56da-188d" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="?contentInset">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="326b575d-4a56" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="71c0a70e-08c0" style="@style/Platform.TextStyle.ParagraphSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?brandGrey60" android:paddingStart="0.0dip" android:paddingEnd="@dimen/ui__spacing_unit_3x" uber:analyticsId="96628f62-e70c" uber:srcCompat="@drawable/ub_ic_chevron_right_small" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_3x" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/divider" android:background="?dividerHorizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginStart="@dimen/ui__spacing_unit_7x" />
+</com.uber.learningcenter.section.vertical.VerticalSectionItemView>

@@ -5,6 +5,14 @@ from domain.models import Setting, jget, jset
 DEFAULTS = {
     "platform_commission_pct": 20.0,   # % da tarifa bruta que fica para a plataforma
     "offer_timeout_s": 20,             # tempo do motorista para aceitar uma proposta
+    # ---- Radar de viagens (Trip Radar) ----
+    "radar_enabled": True,             # liga o despacho em lote (varios motoristas ao mesmo tempo)
+    "radar_batch_size": 6,             # motoristas que recebem a mesma viagem no Radar
+    "radar_window_s": 20,              # tempo que o pedido fica visivel no Radar (para tocar)
+    "radar_match_s": 4,                # tempo de emparelhamento depois do 1.o toque (melhor ETA ganha)
+    "radar_max_rejections": 2,         # rondas de Radar falhadas antes de a viagem voltar a Exclusiva
+    "radar_min_pickup_km": 2.0,        # recolha mais longe que isto -> candidata a Radar
+    "radar_share_pct": 0,              # % extra de viagens curtas ao Radar (0 = so as dificeis)
     "dispatch_radius_km": 8.0,         # so motoristas a menos disto da recolha
     "arrive_radius_m": 80,             # motorista a menos disto da recolha -> "chegou" (a Driver nao avisa)
     "search_timeout_s": 90,            # sem motorista ao fim disto -> no_drivers
@@ -21,6 +29,13 @@ DEFAULTS = {
 LABELS = {
     "platform_commission_pct": "Comissão da plataforma (%)",
     "offer_timeout_s": "Tempo para aceitar proposta (s)",
+    "radar_enabled": "Radar de viagens (despacho em lote)",
+    "radar_batch_size": "Motoristas por leilão no Radar",
+    "radar_window_s": "Tempo do pedido no Radar (s)",
+    "radar_match_s": "Emparelhamento após 1.º toque (s)",
+    "radar_max_rejections": "Recusas no Radar até voltar a Exclusiva",
+    "radar_min_pickup_km": "Radar: recolha mínima para entrar no Radar (km)",
+    "radar_share_pct": "Radar: % de viagens curtas enviadas ao Radar",
     "dispatch_radius_km": "Raio de despacho (km)",
     "arrive_radius_m": "Chegada automática à recolha (m)",
     "search_timeout_s": "Procura máxima por motorista (s)",

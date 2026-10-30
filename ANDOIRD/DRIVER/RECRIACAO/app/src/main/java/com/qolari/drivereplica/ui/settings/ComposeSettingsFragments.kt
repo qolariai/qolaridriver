@@ -38,7 +38,6 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.qolari.drivereplica.BuildConfig
@@ -54,7 +53,6 @@ import com.qolari.drivereplica.ui.compose.SectionTitle
 import com.qolari.drivereplica.ui.compose.SettingsRow
 import com.qolari.drivereplica.ui.compose.TestPillButton
 import com.qolari.drivereplica.ui.compose.TopBar
-import com.qolari.drivereplica.ui.manage.InfoFragment
 
 /** Ecrãs de Definições que a original faz em Compose (ux_capture/toolkit_por_ecra.csv): 043, 044, 047, 049 e 077. */
 
@@ -62,25 +60,13 @@ class SettingsFragment : ComposeFragment() {
     @Composable
     override fun Content() {
         val nav = findNavController()
-        val privacyTitle = stringResource(R.string.settings_privacy)
-        val privacyBody = stringResource(R.string.help_body_privacy)
-        val backTo = arguments?.getInt(ARG_BACK_TO, 0) ?: 0
         Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
-            TopBar(stringResource(R.string.settings_title)) {
-                if (backTo != 0) nav.popBackStack(backTo, false) else nav.popBackStack()
-            }
+            TopBar(stringResource(R.string.settings_title)) { nav.popBackStack() }
             SectionTitle(stringResource(R.string.settings_section_account))
-            // "Gerir conta" leva ao Menu (é lá que a conta e a sessão são geridas). "Editar endereço"
-            // não tem equivalente no âmbito funcional: a entrada foi removida, não ficou inerte.
-            SettingsRow(stringResource(R.string.settings_manage_account), iconRes = R.drawable.ic_person) {
-                nav.navigate(R.id.menuTab)
-            }
-            SettingsRow(privacyTitle, iconRes = R.drawable.ic_lock) {
-                nav.navigate(
-                    R.id.infoFragment,
-                    bundleOf(InfoFragment.ARG_TITLE to privacyTitle, InfoFragment.ARG_BODY to privacyBody),
-                )
-            }
+            // "Gerir conta", "Privacidade" e "Editar endereço" abrem páginas web/fluxos de conta: fora do âmbito (D7).
+            SettingsRow(stringResource(R.string.settings_manage_account), iconRes = R.drawable.ic_person)
+            SettingsRow(stringResource(R.string.settings_privacy), iconRes = R.drawable.ic_lock)
+            SettingsRow(stringResource(R.string.settings_edit_address), iconRes = R.drawable.ic_pencil)
             SectionTitle(stringResource(R.string.settings_section_general))
             SettingsRow(stringResource(R.string.settings_accessibility), iconRes = R.drawable.ic_accessibility) {
                 nav.navigate(R.id.accessibilityFragment)
@@ -94,11 +80,11 @@ class SettingsFragment : ComposeFragment() {
             SettingsRow(stringResource(R.string.settings_sounds), iconRes = R.drawable.ic_speaker) {
                 nav.navigate(R.id.soundsFragment)
             }
+            SettingsRow(
+                stringResource(R.string.settings_night_mode), iconRes = R.drawable.ic_moon,
+                subtitle = stringResource(R.string.settings_night_mode_off),
+            )
         }
-    }
-
-    companion object {
-        const val ARG_BACK_TO = "backTo"
     }
 }
 

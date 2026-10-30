@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_chips" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="946203e3-4c1b"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/chip_parent" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UChip android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="@string/style_guide_chips_entry" style="@style/Platform.Chip.Entry" />
+            <com.ubercab.ui.core.UChip android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="@string/style_guide_chips_filter" app:chipIcon="@drawable/ic_checkmark" style="@style/Platform.Chip.Filter" />
+            <com.ubercab.ui.core.UChip android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="@string/style_guide_chips_choice" style="@style/Platform.Chip.Choice" />
+            <com.ubercab.ui.core.UChip android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="@string/style_guide_chips_action" app:chipIcon="@drawable/ic_checkmark" style="@style/Platform.Chip.Action" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

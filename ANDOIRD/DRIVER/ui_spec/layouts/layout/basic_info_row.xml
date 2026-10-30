@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.core.event_card.CardBasicInfoView android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/basic_info_center_image_container" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_8x" android:layout_marginLeft="?gutterSize" android:layout_marginRight="?gutterSize" android:layout_centerHorizontal="true" android:layout_marginStart="?gutterSize" android:layout_marginEnd="?gutterSize">
+        <com.ubercab.core.event_card.CardImageView android:layout_gravity="center" android:id="@id/basic_info_center_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.ULinearLayout android:id="@id/basic_info_left_label_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/basic_info_center_image_container" />
+    <com.ubercab.ui.core.ULinearLayout android:id="@id/basic_info_right_label_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@id/basic_info_center_image_container" />
+</com.ubercab.core.event_card.CardBasicInfoView>

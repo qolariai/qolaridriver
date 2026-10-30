@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.next_inspection_sheet.objects.action.NextMarkerInspectionSheetActionView android:gravity="center" android:orientation="horizontal" android:padding="@dimen/ui__spacing_unit_0x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_0x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/next_inspection_sheet_action_base_material_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="b10dd9e6-3051" app:buttonType="primary" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.progress.BaseProgressBar android:layout_gravity="center" android:id="@id/ub_circle_progress_indeterminate" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:baseprogress_type="circle_indeterminate" app:progress_size="small" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.next_inspection_sheet.objects.action.NextMarkerInspectionSheetActionView>

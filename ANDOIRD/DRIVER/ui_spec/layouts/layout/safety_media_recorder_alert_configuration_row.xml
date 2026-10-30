@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?colorAccent" android:ellipsize="end" android:layout_gravity="center" android:id="@id/mobilestudio_safety_media_recording_alerts_configuration_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/MobileStudio.Plugin.RowText" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="1.0">
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/mobilestudio_safety_media_recording_alerts_configuration_method_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/mobilestudio_safety_media_recording_alerts_configuration_method_title" android:layout_weight="0.15" />
+        <com.ubercab.ui.core.USpinner android:layout_gravity="end" android:id="@id/mobilestudio_safety_media_recording_alerts_configuration_method_spinner" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.85" android:textAlignment="viewEnd" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__mobilestudio_padding_2x" android:weightSum="1.0">
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/mobilestudio_safety_media_recording_alerts_configuration_frequency_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/mobilestudio_safety_media_recording_alerts_configuration_frequency_title" android:layout_weight="0.15" />
+        <com.ubercab.ui.core.USpinner android:layout_gravity="end" android:id="@id/mobilestudio_safety_media_recording_alerts_configuration_frequency_spinner" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.85" android:textAlignment="viewEnd" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

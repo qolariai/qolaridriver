@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.planning_hub_libs.incentive_details.IncentiveDetailsView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UCoordinatorLayout android:id="@id/incentive_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/appbar" app:bli_bitColor="?colorAccent" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/empty_view_container" android:background="?backgroundPrimary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <com.ubercab.ui.core.emptystate.EmptyStateView android:layout_gravity="center" android:id="@id/empty_state_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar" app:empty_state_type="success" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.planning_hub_libs.incentive_details.IncentiveDetailsView>

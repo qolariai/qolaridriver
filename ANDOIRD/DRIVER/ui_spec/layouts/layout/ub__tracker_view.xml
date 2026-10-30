@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.core.tracker.TrackerView android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="d3fb10f2-72a8"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/scrim" android:background="?backgroundColorScrimLight" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/summary_tracker_pager" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UViewPager android:id="@id/summary_tracker_view_pager" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_1x" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <com.ubercab.ui.core.UTabLayout android:id="@id/summary_tracker_page_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="ltr" app:tabBackground="@drawable/ub__page_indicator_selector" app:tabGravity="center" app:tabIndicatorHeight="0.0dip" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_horizontal" android:id="@id/browse_tracker_counter_border_container" android:visibility="gone" android:clipChildren="true" android:layout_width="wrap_content" android:layout_height="@dimen/ub__browse_tracker_counter_outer_height" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:elevation="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.UCardView android:layout_gravity="center" android:id="@id/browse_tracker_counter_mask_container" android:layout_width="wrap_content" android:layout_height="@dimen/ub__browse_tracker_counter_inner_height" android:layout_margin="@dimen/ub__tracker_stroke_width" app:cardBackgroundColor="?brandBlack" app:cardCornerRadius="@dimen/ub__browse_tracker_counter_inner_radius" app:cardPreventCornerOverlap="false">
+            <com.ubercab.carbon.core.browse.BrowseTrackerCounterSlideView android:layout_gravity="center" android:id="@id/tracker_slide_view_text_v2" android:layout_width="wrap_content" android:layout_height="@dimen/ub__browse_tracker_counter_inner_height" />
+        </com.ubercab.ui.core.UCardView>
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.ULinearLayout android:id="@id/bulletin_tracker_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_horizontal" android:id="@id/bulletin_tracker_star" android:background="@drawable/ub__earnings_tracker_bulletin_star" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/bulletin_tracker_icon" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:tint="?brandWhite" app:srcCompat="@drawable/ub_ic_star" />
+        <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center" android:id="@id/bulletin_tracker_spannable_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Headline.Medium" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.carbon.core.tracker.TrackerView>

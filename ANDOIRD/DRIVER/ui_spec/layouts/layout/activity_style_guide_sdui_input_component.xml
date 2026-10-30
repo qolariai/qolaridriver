@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:id="@id/style_guide_screen_input" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="cfff2ed4-7b73"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.input.BaseEditText android:id="@id/input_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" app:input_heading="@string/ub__input_default_heading" app:input_placeholderHint="@string/ub__input_default_placeholder" />
+</com.ubercab.ui.core.UFrameLayout>

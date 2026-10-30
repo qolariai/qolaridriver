@@ -23,6 +23,7 @@ out/
 tmp/
 backups/
 *.apk
+*.xapk
 *.aab
 *.ipa
 *.exe
@@ -46,12 +47,6 @@ nul
 Thumbs.db
 .claude/settings.local.json
 
-# --- credenciais locais (não versionar) ---
-local.properties
-google_maps_api_key.txt
-BACKEND/data/firebase-service-account.json
-*service-account*.json
-
 # --- opencode: skip huge generated/decompiled trees ---
 ANDOIRD/**/decoded/
 ANDOIRD/**/decoded_*/
@@ -61,23 +56,19 @@ ANDOIRD/**/smali*/
 ANDOIRD/**/qolarifleet_src/
 ANDOIRD/**/.gradle/
 
-# --- artefactos originais/decompilados e evidencias brutas (nao publicar) ---
-ANDOIRD/DRIVER/TESTE/
-ANDOIRD/DRIVER/backup_pre_firebase/
-ANDOIRD/FLEET/backup_pre_firebase/
-ANDOIRD/**/ui_spec/
-ANDOIRD/**/ux_capture/*.png
-ANDOIRD/**/ux_capture/*.jpg
-ANDOIRD/**/ux_capture/*.jpeg
-ANDOIRD/**/ux_capture/*.mp4
-ANDOIRD/**/ux_capture/**/*.png
-ANDOIRD/**/ux_capture/**/*.jpg
-ANDOIRD/**/ux_capture/**/*.jpeg
-ANDOIRD/**/ux_capture/**/*.mp4
-*.xapk
-*.apks
-*.idsig
-launch_log.txt
-BACKEND/data/
-BACKEND/logs/
+# --- chaves e segredos locais (nunca versionar) ---
+google_maps_api_key.txt
+*.keystore
+*.jks
+local.properties
+
+# --- pastas de trabalho/capturas (não são código do projeto) ---
+.clone/
+.commandcode/
+.qolari/
+untitled-project/
+TESTE PARALELO/
+BACKEND BACKOOFICE CLONADO/
+ANDOIRD/**/TESTE/
+ANDOIRD/**/build/
 

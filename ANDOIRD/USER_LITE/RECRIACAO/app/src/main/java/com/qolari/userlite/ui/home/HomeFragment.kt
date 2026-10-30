@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -16,12 +17,13 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.qolari.userlite.R
-import com.qolari.userlite.data.AppGraph
 import com.qolari.userlite.data.LocationSource
-import com.qolari.userlite.data.PendingTripStore
 import com.qolari.userlite.databinding.FragmentHomeBinding
 import com.qolari.userlite.net.PromoCard
+import com.qolari.userlite.net.RoutePoint
 import com.qolari.userlite.net.Suggestion
+import com.qolari.userlite.ui.map.GeocodeClient
+import com.qolari.userlite.ui.ride.RideViewModel
 import kotlinx.coroutines.launch
 
 /** Início (captura 010): título, pesquisa, mapa e sugestões; scroll vertical + carrosséis horizontais. */
@@ -30,6 +32,8 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val viewModel: HomeViewModel by viewModels()
+    private val ride: RideViewModel by activityViewModels()
+    private var lastPickupFix: Pair<Double, Double>? = null
     private lateinit var suggestionAdapter: SuggestionAdapter
     private lateinit var promoAdapter: PromoAdapter
     private lateinit var locationSource: LocationSource
@@ -65,12 +69,12 @@ class HomeFragment : Fragment() {
         }
         binding.retryButton.setOnClickListener { viewModel.load() }
         binding.refresh.setOnRefreshListener { viewModel.load(quiet = true) }
+        binding.zoomIn.setOnClickListener { binding.map.zoomIn() }
+        binding.zoomOut.setOnClickListener { binding.map.zoomOut() }
         binding.locateButton.setOnClickListener {
             if (locationSource.hasPermission) locate()
             else locationPermission.launch(Manifest.permission.ACCESS_FINE_LOCATION)
         }
-        binding.zoomInButton.setOnClickListener { binding.map.zoomIn() }
-        binding.zoomOutButton.setOnClickListener { binding.map.zoomOut() }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -81,7 +85,14 @@ class HomeFragment : Fragment() {
                     binding.errorText.text = state.error ?: getString(R.string.home_error)
                     binding.scroll.isVisible = state.home != null
                     state.home?.let { render(it) }
-                    if (state.activeTrip != null && !navigatedToTrip) {
+                    // Só reabre viagens em curso. Uma viagem concluída/cancelada deixa o Início livre
+                    // e evita navegar a partir de outro destino (menu, conta, ...), que fechava a app.
+                    val active = state.activeTrip
+                    val ongoing = active != null &&
+                        active.state !in setOf("completed", "cancelled", "no_drivers")
+                    if (ongoing && !navigatedToTrip &&
+                        findNavController().currentDestination?.id == R.id.homeFragment
+                    ) {
                         navigatedToTrip = true
                         findNavController().navigate(R.id.action_home_to_active)
                     }
@@ -92,10 +103,6 @@ class HomeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        _binding?.let { b ->
-            b.map.onResume()
-            if (locationSource.hasPermission) locationSource.lastKnown()?.let { b.map.userLocation = it }
-        }
         if (firstLoad) {
             firstLoad = false
             viewModel.load()
@@ -103,35 +110,45 @@ class HomeFragment : Fragment() {
             navigatedToTrip = false
             viewModel.load(quiet = true)
         }
-        retryPending()
-    }
-
-    private fun retryPending() {
-        val pending = PendingTripStore.load(requireContext()) ?: return
-        viewLifecycleOwner.lifecycleScope.launch {
-            AppGraph.repository.request(
-                pending.pickup, pending.dropoff, pending.productId,
-                pending.payment, pending.promoCode, pending.scheduledAt, pending.stops,
-            ).onSuccess {
-                PendingTripStore.clear(requireContext())
-                Snackbar.make(binding.root, R.string.home_pending_sent, Snackbar.LENGTH_LONG).show()
-                findNavController().navigate(R.id.action_home_to_active)
-            }
-        }
-    }
-
-    override fun onPause() {
-        _binding?.map?.onPause()
-        super.onPause()
+        applyCurrentPickup()
     }
 
     private fun render(home: com.qolari.userlite.net.HomeResponse) {
         binding.headline.text = home.headline
-        binding.savedPlace.text = listOf(home.savedPlace.name, home.savedPlace.line2)
-            .filter { it.isNotBlank() }.joinToString(" · ")
-        binding.mapSavedPlace.text = getString(R.string.trip_pickup) + ": " + home.savedPlace.name
+        binding.savedPlace.text = home.savedPlace.name
+        binding.mapSavedPlace.text = "De " + home.savedPlace.name
+        // O mapa da pagina inicial mostra os carros a volta da recolha, como na captura 030.
+        binding.map.userLocation = home.savedPlace.lat to home.savedPlace.lng
+        binding.map.showCars = true
+        binding.map.recenter()
         suggestionAdapter.submit(home.suggestions)
         promoAdapter.submit(home.promos)
+        applyCurrentPickup(force = true)
+    }
+
+    /**
+     * O pickup passa a ser a localização real do telemóvel (GPS), com o endereço obtido por
+     * reverse geocoding. Sem permissão/fix, mantém-se o local guardado do servidor.
+     */
+    private fun applyCurrentPickup(force: Boolean = false) {
+        if (!locationSource.hasPermission) return
+        val fix = locationSource.lastKnown() ?: return
+        if (!force && fix == lastPickupFix) return
+        lastPickupFix = fix
+        val label = getString(R.string.home_current_location)
+        ride.setPickup(RoutePoint(fix.first, fix.second, label))
+        binding.map.userLocation = fix
+        binding.map.showCars = true
+        binding.map.recenter()
+        binding.savedPlace.text = label
+        binding.mapSavedPlace.text = "De $label"
+        GeocodeClient.reverse(requireContext(), fix.first, fix.second) { address ->
+            if (_binding != null && lastPickupFix == fix) {
+                ride.setPickup(RoutePoint(fix.first, fix.second, address))
+                binding.savedPlace.text = address
+                binding.mapSavedPlace.text = "De $address"
+            }
+        }
     }
 
     private fun onSuggestion(item: Suggestion) {
@@ -152,11 +169,12 @@ class HomeFragment : Fragment() {
         binding.map.userLocation = fix
         binding.map.recenter()
         viewModel.updateLocation(fix.first, fix.second)
+        lastPickupFix = null
+        applyCurrentPickup(force = true)
         Snackbar.make(binding.root, R.string.home_location_updated, Snackbar.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {
-        _binding?.map?.onDestroy()
         super.onDestroyView()
         _binding = null
     }

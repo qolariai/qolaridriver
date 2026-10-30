@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.widget.HeaderAppBarLayout android:theme="?toolbarTheme" android:id="@id/appbar" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" android:stateListAnimator="@animator/header_elevation" app:contentInsetStartWithNavigation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header_content" />
+</com.ubercab.ui.core.widget.HeaderAppBarLayout>

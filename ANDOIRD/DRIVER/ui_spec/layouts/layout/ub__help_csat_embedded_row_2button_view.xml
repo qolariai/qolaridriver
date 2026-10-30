@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/help_csat_base_button_1" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="97db0a1c-3ebf" uber:buttonType="secondary" uber:shape="rect" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/help_csat_base_button_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" uber:analyticsId="1ab71d5c-a8c9" uber:buttonType="secondary" uber:shape="rect" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.credits.UberCashHeaderAddonViewV2 android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__uber_cash_header_addon_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__uber_cash_header_addon_list_item">
+        <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__uber_cash_header_addon_uber_cash_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__uber_cash_header_addon_uber_money_list_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.credits.UberCashHeaderAddonViewV2>

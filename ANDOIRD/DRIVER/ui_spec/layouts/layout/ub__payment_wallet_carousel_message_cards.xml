@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.wallet_home.ui.view.WalletCarouselMessageCardsView android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/ub__wallet_carousel_message_cards_viewpager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/ub__wallet_message_card_max_height" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UTabLayout android:id="@id/ub__wallet_carousel_message_cards_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/ub__wallet_carousel_message_cards_viewpager" app:tabBackground="@drawable/wallet_carousel_message_cards_indicator_background" app:tabGravity="center" app:tabIndicatorHeight="0.0dip" app:tabSelectedTextColor="?backgroundTransparent" app:tabTextColor="?backgroundTransparent" style="@style/Platform.TabLayout" />
+</com.ubercab.wallet_home.ui.view.WalletCarouselMessageCardsView>

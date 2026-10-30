@@ -30,15 +30,18 @@ class RideProductAdapter(
 
     override fun getItemCount() = items.size
 
-    override fun onBindViewHolder(holder: Holder, position: Int) = holder.bind(items[position])
+    override fun onBindViewHolder(holder: Holder, position: Int) = holder.bind(items[position], position)
 
     inner class Holder(private val binding: ItemRideProductBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: QuoteProduct) {
+        fun bind(item: QuoteProduct, position: Int) {
             binding.name.text = item.name
             binding.capacity.text = binding.root.context.getString(R.string.ride_seats, item.capacity)
-            binding.time.text = binding.root.context.getString(R.string.ride_eta, item.etaMin)
+            val pickupAt = java.time.LocalTime.now()
+                .plusMinutes(item.etaMin.toLong())
+                .format(java.time.format.DateTimeFormatter.ofPattern("HH:mm"))
+            binding.time.text = "$pickupAt · " + binding.root.context.getString(R.string.ride_eta, item.etaMin)
             binding.price.text = item.price
-            binding.fastest.isVisible = item.fastest
+            binding.fastest.isVisible = item.fastest || position == 0
             binding.leaf.isVisible = item.name.contains("Electric", ignoreCase = true)
             binding.icon.setImageResource(
                 if (item.capacity >= 6 || item.name.contains("XL", ignoreCase = true)) R.drawable.ic_van else R.drawable.ic_car

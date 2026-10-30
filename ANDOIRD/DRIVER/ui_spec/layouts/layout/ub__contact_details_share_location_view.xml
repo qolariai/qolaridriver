@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="start|center" android:id="@id/ub_share_location_switch_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__share_location_setting_label" app:analyticsId="876f8f5f-3857" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.switchview.BaseSwitchView android:id="@id/ub_share_location_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" android:paddingVertical="0.0dip" app:analyticsId="7808c0f2-70c7" app:layout_constraintBottom_toBottomOf="@id/ub_share_location_switch_label" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/ub_share_location_switch_label" />
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?colorHeaderBackground" />
+    <stroke android:width="@dimen/ub__planning_hub_estimated_earnings_stroke_width" android:color="?brandWhite" />
+    <corners android:radius="@dimen/ub__planning_hub_estimated_earnings_inner_radius" />
+    <size android:height="@dimen/ub__planning_hub_estimated_earnings_inner_height" />
+</shape>

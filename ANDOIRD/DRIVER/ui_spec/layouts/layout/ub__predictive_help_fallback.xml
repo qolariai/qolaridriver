@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__predictive_help_fallback_container" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="wrap_content" android:layout_height="@dimen/predictive_help_card_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFloatingActionButton android:id="@id/ub__predictive_help_fallback_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:tint="?iconColor" android:contentDescription="@string/past_trips_predictive_help_other_title_v2" uber:analyticsId="d8b5b924-7f5f" uber:backgroundTint="?android:colorBackground" uber:elevation="@dimen/ui__elevation_medium" uber:srcCompat="@drawable/ic_search" style="?platformButtonPrimary" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:id="@id/ub__predictive_help_fallback_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/past_trips_predictive_help_other_title_v2" android:maxLines="1" android:elegantTextHeight="true" />
+</com.ubercab.ui.core.ULinearLayout>

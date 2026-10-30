@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__carbon_avsettings_custom_item_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="b8145dae-3727" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ub__carbon_avsettings_custom_item_action_icon" app:layout_constraintStart_toEndOf="@id/ub__carbon_avsettings_custom_item_icon" app:layout_constraintTop_toTopOf="parent">
+        <com.ubercab.ui.core.UTextView android:id="@id/ub__carbon_avsettings_custom_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="23a4be1b-d063" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.UTextView android:id="@id/ub__carbon_avsettings_custom_item_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="86d9dba0-f85a" style="@style/Platform.TextStyle.ParagraphSmall" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__carbon_avsettings_custom_item_action_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?contentStateDisabled" app:analyticsId="d083a760-2df6" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</com.ubercab.ui.core.UConstraintLayout>

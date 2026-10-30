@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.learning_hub_topic.vertical_scrolling_view.VideoViewWrapper android:id="@id/vs_video_wrapper_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/vs_shrink_video_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="8d4edbf0-16d4" app:srcCompat="@drawable/ub__ic_shrink_video" />
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/vs_expand_video_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="15f145ec-44bc" app:srcCompat="@drawable/ub__ic_expand_video" />
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/vs_video_preview_image" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" app:analyticsId="6167cca7-2768" />
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/vs_play_video_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="d89bc186-b83e" app:srcCompat="@drawable/ub__ic_play_video" />
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/vs_replay_video_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="4398e291-1812" app:srcCompat="@drawable/ub__ic_replay_video" />
+</com.ubercab.learning_hub_topic.vertical_scrolling_view.VideoViewWrapper>

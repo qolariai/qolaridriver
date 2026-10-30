@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/ui__spacing_unit_1x" android:width="@dimen/ui__spacing_unit_0.5x" />
+    <stroke android:width="?dividerWidth" android:color="?contentInversePrimary" />
+    <solid android:color="?contentInversePrimary" />
+</shape>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="start" android:id="@id/ub__cashout_disclaimer_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:analyticsId="6bfc502d-7a8a" style="@style/Platform.TextStyle.ParagraphSmall" />
+</merge>

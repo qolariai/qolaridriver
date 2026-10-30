@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.payment_carbon_cash_collect.operation.summary.CollectCashSummaryView android:orientation="vertical" android:background="?panelBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__collect_cash_summary_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/ui__spacing_unit_0x" app:header_state="collapse" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__collect_cash_summary_recycler_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never" />
+    <com.ubercab.ui.core.slidingbutton.SlidingButton android:id="@id/ub__collect_cash_summary_completion_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:contentDescription="@string/payment_cash_collection_completion_button_description" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:analyticsId="f4bb74a0-b7a5" app:baseSlideType="negative" app:showLoadingOnSlide="true" />
+</com.ubercab.payment_carbon_cash_collect.operation.summary.CollectCashSummaryView>

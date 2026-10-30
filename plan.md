@@ -1,6 +1,6 @@
 # plan.md — Declaração inicial do clone Qolari
 
-**Versão:** 1.1 · **Data:** 2026-10-26 · **Documento de trabalho:** `PROMPT_CLONE_MEGA.md`
+**Versão:** 1.0 · **Data:** 2026-10-25 · **Documento de trabalho:** `PROMPT_CLONE_MEGA.md`
 
 ## 1. Identificação
 
@@ -12,7 +12,7 @@
 | Backoffice | `BACKOFFICE/` — React + Vite, servido pelo backend |
 | Marca do entregável | **Qolari** (própria; não é a marca do original) |
 | Distribuição | Nenhuma. Não se publica, não se opera a sério |
-| Raiz | `C:\xampp\htdocs\QOLARI\PROJETOS OFICIAIS\QOLARI DRIVER TESTE\` |
+| Raiz | `C:\xampp\htdocs\QOLARI\PROJETOS OFICIAIS\QOLARI DRIVER\` |
 
 ### Artefactos de referência
 
@@ -76,8 +76,8 @@ comissão e taxa de frota. Ver `topology.md` §1.
 | Estado de conta | **aberto** (motorista aprovado, passageira ativa) | home/menu/online capturados |
 | Identidade | **aberto** no laboratório (seed) | estados de aprovação simulados |
 | Peer | **parcial** — precisa de Rider + Driver em simultâneo | estados de viagem via laboratório; `peer` declarado |
-| Geo | **aberto** — GPS real + backend | Google Maps SDK com chave local; rota OSRM com fallback |
-| Terceiros presos ? assinatura | **parcial** ? login social n?o implementado; Maps e FCM pr?prios configurados | `thirdparty` s? para social; mapas/FCM s?o nossos |
+| Geo | **parcial** — GPS real + simulação no backend | mapa desenhado; sem SDK |
+| Terceiros presos à assinatura | **fechado/indisponível** — Maps SDK sem chave, FCM não configurado, login social não implementado | `thirdparty`; não contamina a spec |
 | Marca/legal | **não se transplanta** | marca Qolari e desenhos próprios |
 
 ## 6. Modo por role
@@ -96,7 +96,7 @@ comissão e taxa de frota. Ver `topology.md` §1.
   `RECRIACAO/` têm lote; os validados no telemóvel estão em `VALIDACAO.md`; os que não
   estão, têm razão.
 - **Rider:** os 32 PNG de `ANDOIRD/USER_LITE/ux_capture/` estão classificados e a
-  recriação existe em `ANDOIRD/USER_LITE/RECRIACAO/` (Kotlin + Views, 11 testes). A
+  recriação existe em `ANDOIRD/USER_LITE/RECRIACAO/` (Kotlin + Views, 10 testes). A
   captura está incompleta (Ajuda completa, Promoções, Legal, Gerir conta); os gaps estão
   declarados, não escondidos. A conta é `designed` (não há captura da Lite).
 - **Fleet:** zero ecrãs capturados. A cobertura prometida é **funcional** (contrato e
@@ -109,12 +109,25 @@ comissão e taxa de frota. Ver `topology.md` §1.
 Aceites e escritos no relatório final:
 
 1. **Fonte Uber Move → fonte do sistema** (D4). Quebras de linha ligeiramente diferentes.
-2. **Mapas:** os ecrãs principais usam Google Maps SDK (chave em `local.properties`,
-   valor em `google_maps_api_key.txt`); as miniaturas decorativas dos cartões continuam
-   desenhadas e não são interativas. A rota por estrada usa OSRM público, com fallback em
-   linha reta se o serviço falhar.
-3. **FCM/push:** configurado para Driver e Rider (`qolari-driver-prod`); o
-   `ramen` (long-poll) fica como fallback. iOS fora do ?mbito.
+2. **Mapa:** real do Google quando `MAPS_API_KEY` está em `local.properties` (Rider e
+   Driver); a rota é uma linha reta até haver OSRM. Sem chave, mapa desenhado próprio.
+   O original usa Google Maps; a forma do mapa não é replicada.
+3. **FCM/push:** não configurado; o canal `ramen` (long-poll) é o tempo real do
+   laboratório. Notificações do sistema não são capturáveis.
+4. **Login social / reCAPTCHA / IAP:** ausentes por decisão; o login é nativo por telefone.
+5. **Páginas web** (Ajuda, Documentos, Privacidade, Comfort): conteúdo próprio, não o
+   conteúdo do original. 18 páginas em `ui_spec/` ficam fora do âmbito visual.
+6. **Estados de viagem sem captura original:** forma tirada dos layouts (`static`) e
+   comportamento do backend; dados `served`. Não são `live`.
+7. **Fleet:** sem paridade visual; só contrato e operação. A app usada no
+   laboratório é a APK re-branded (`com.qolari.fleet`), instrumento e não
+   entregável; a UI própria não foi recriada.
+8. **Rider:** o contrato nativo é `designed` (a referência Lite é WebView). A conta
+   é `designed`. Entradas sem equivalente (entrega, reserva, paragens, cidade,
+   filtro pessoal) foram retiradas da UI; ver `capabilities.md`.
+9. **iOS:** fora do âmbito atual.
+10. **Versão 4.600 vs 4.601:** ecrãs que mudaram entre versões estão assinalados em
+    `coverage.md`; a referência de layout é a 4.600.
 
 ## 9. Portões
 
@@ -127,9 +140,8 @@ Aceites e escritos no relatório final:
 - [x] FASE 4.6 — máquina de estados + teste dos três espelhos
 - [x] FASE 5 — Driver e Rider recriadas; Fleet coberta por contrato/operação
       (app de laboratório, sem paridade visual — declarado em §8)
-- [x] FASE 6 — validação final no Honor; Driver e Rider fechadas (`VALIDACAO_MEGA.md`)
-- [x] FASE 7 — backlog fechado; zero `gap` para o alvo `funcional` (R-12, R-13, R-14,
-      D-03, D-04, D-05 e D-06 corrigidos e validados no telemóvel; mapas Google reais)
+- [x] FASE 6 — validação no Honor (Rider e Driver); ecossistema declarado
+- [x] FASE 7 — `capabilities.md`, `backlog.md`, `RELATORIO_FINAL.md`; zero gaps no alvo
 
 ## 10. O que não se faz
 

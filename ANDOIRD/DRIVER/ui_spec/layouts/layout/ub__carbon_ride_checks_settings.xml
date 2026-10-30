@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ride_checks.settings.RideChecksSettingsView android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="143ee9d0-3283"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" uber:srcCompat="@drawable/ic_ride_check_settings_banner" />
+            <com.ubercab.ui.core.UTextView android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__ride_checks_settings_menu_title" style="@style/Platform.TextStyle.Subtitle.Normal" />
+            <com.ubercab.ui.core.UTextView android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__ride_checks_settings_menu_subtitle" android:paddingStart="@dimen/ui__spacing_unit_3x" android:paddingEnd="@dimen/ui__spacing_unit_3x" style="@style/Platform.TextStyle.Small.Secondary" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__ride_checks_settings_anomaly_container" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_3x" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="67aa3a8b-611c">
+                <com.ubercab.ui.core.UTextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__ride_checks_settings_switch_anomalies" android:layout_weight="1.0" style="@style/Platform.TextStyle.Small.Normal" />
+                <com.ubercab.ui.core.USwitchCompat android:theme="@style/Carbon.Button.Checkbox.Primary" android:id="@id/ub__ride_checks_settings_anomaly_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__ride_checks_settings_anomaly_switch_text" android:padding="@dimen/ui__spacing_unit_3x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Secondary" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__ride_checks_settings_vehicle_crash_container" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_3x" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="a178f392-c5be">
+                <com.ubercab.ui.core.UTextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__ride_checks_settings_switch_vehicle_crash" android:layout_weight="1.0" style="@style/Platform.TextStyle.Small.Normal" />
+                <com.ubercab.ui.core.USwitchCompat android:theme="@style/Carbon.Button.Checkbox.Primary" android:id="@id/ub__ride_checks_settings_vehicle_crash_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__ride_checks_settings_vehicle_crash_switch_text" android:padding="@dimen/ui__spacing_unit_3x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Secondary" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ride_checks.settings.RideChecksSettingsView>

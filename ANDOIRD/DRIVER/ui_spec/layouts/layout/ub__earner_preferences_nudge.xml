@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.earnerpreferencesnudges.presentation.EarnerPreferencesNudgeView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UPlainView android:id="@id/earner_preferences_nudge_scrim" android:background="?alertsScrimBackground" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.6" android:importantForAccessibility="no" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="bottom" android:id="@id/earner_preferences_nudge_content_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.uber.earnerpreferencesnudges.presentation.EarnerPreferencesNudgeView>

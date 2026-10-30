@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewStub android:id="@id/leading_custom_view" android:layout="@layout/base_map_marker_content_leading_custom_view" android:inflatedId="@id/leading_custom_view" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/leading_icon" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ViewStub android:id="@id/leading_icon" android:layout="@layout/base_map_marker_content_icon" android:inflatedId="@id/leading_icon" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/text_container" app:layout_constraintStart_toEndOf="@id/leading_custom_view" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/text_container" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/trailing_icon" app:layout_constraintStart_toEndOf="@id/leading_icon" app:layout_constraintTop_toTopOf="parent">
+        <ViewStub android:id="@id/map_marker_title_stub" android:layout="@layout/base_map_marker_content_title" android:inflatedId="@id/map_marker_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/map_marker_subtitle_stub" android:layout="@layout/base_map_marker_content_subtitle" android:inflatedId="@id/map_marker_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <ViewStub android:id="@id/trailing_icon" android:layout="@layout/base_map_marker_content_icon" android:inflatedId="@id/trailing_icon" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/text_container" app:layout_constraintTop_toTopOf="parent" />
+</merge>

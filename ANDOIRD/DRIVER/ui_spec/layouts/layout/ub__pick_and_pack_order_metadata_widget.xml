@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:gravity="center_horizontal" android:id="@id/ub__pick_and_pack_order_metadata_title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="gravity" style="@style/Platform.TextStyle.HeadingDefault" />
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center_horizontal" android:id="@id/ub__pick_and_pack_order_metadata_description_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="gravity" android:paddingHorizontal="@dimen/ui__spacing_unit_3x" style="@style/Platform.TextStyle.LabelLarge" />
+    <com.ubercab.ui.core.UFlexboxLayout android:id="@id/ub__pick_and_pack_order_metadata_tag_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" app:alignItems="center" app:dividerDrawable="@drawable/ub__ueo_flexbox_divider_drawable" app:flexDirection="row" app:flexWrap="wrap" app:justifyContent="space_evenly" app:showDivider="middle" />
+</merge>

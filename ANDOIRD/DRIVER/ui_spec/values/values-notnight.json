@@ -1,0 +1,22 @@
+{
+ "styles": {
+  "styles": {
+   "TapAndPayTheme": {
+    "parent": null,
+    "items": {
+     "android:windowNoTitle": "true",
+     "android:windowActionBar": "false",
+     "android:windowTranslucentStatus": "false",
+     "android:windowDrawsSystemBarBackgrounds": "true",
+     "android:statusBarColor": "@color/tapandpay_sdk_default_color_background",
+     "android:navigationBarColor": "@color/tapandpay_sdk_default_color_background",
+     "android:windowLightStatusBar": "true",
+     "android:windowLightNavigationBar": "true",
+     "backgroundColor": "@color/tapandpay_sdk_default_color_background",
+     "colorPrimaryVariantGoogle": "@color/tapandpay_sdk_default_color_primary_variant",
+     "colorSecondary": "@color/tapandpay_sdk_default_color_secondary"
+    }
+   }
+  }
+ }
+}

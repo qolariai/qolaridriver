@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__top_divider" android:background="?borderSelected" android:layout_width="fill_parent" android:layout_height="@dimen/dash_width" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" />
+    <com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelLarge" android:textStyle="bold" android:id="@id/ub__label" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="1e12ddfd-d8af" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelLarge" android:textStyle="bold" android:id="@id/ub__value" android:layout_width="0.0dip" android:layout_height="wrap_content" android:textAlignment="viewEnd" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_3.5x" app:analyticsId="5f608f51-bd06" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ub__label" app:layout_constraintTop_toTopOf="parent" />
+    </com.ubercab.ui.core.UConstraintLayout>
+</com.ubercab.ui.core.ULinearLayout>

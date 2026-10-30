@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.photo_flow.step.transform.PhotoProcessorView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__photo_processor_preview_image" android:layout_width="0.0dip" android:layout_height="0.0dip" android:scaleType="fitEnd" app:analyticsId="548074bd-f2ac" app:layout_constraintDimensionRatio="H,3:4" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UTextView android:gravity="center" android:id="@id/ub__photo_processor_text" android:layout_width="0.0dip" android:layout_height="0.0dip" app:analyticsId="acbdef38-bb29" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__photo_processor_preview_image" style="@style/Platform.TextStyle.DisplayLarge.Medium" />
+</com.ubercab.photo_flow.step.transform.PhotoProcessorView>

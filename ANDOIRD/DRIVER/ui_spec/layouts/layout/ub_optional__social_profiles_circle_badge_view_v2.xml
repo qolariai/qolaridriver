@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:circleImageView="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.CircleImageView android:id="@id/social_profile_circle_image" android:layout_width="@dimen/ui__spacing_unit_11x" android:layout_height="@dimen/ui__spacing_unit_11x" circleImageView:circleImageBorderWidth="@dimen/ub__social_profiles_circle_image_border_width" />
+        <com.ubercab.ui.core.UTextView android:textColor="?white" android:gravity="center" android:layout_gravity="end|top" android:id="@id/social_profile_circle_badge_number" android:background="@drawable/ub__social_profiles_circle_badge" android:paddingTop="@dimen/ub__social_profiles_spacing_unit_0.5x" android:paddingBottom="@dimen/ub__social_profiles_circle_badge_padding_with_offset" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" fontPath="@string/ub__font_medium" style="@style/Platform.TextStyle.Meta.Normal" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/social_profile_circle_badge_text" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="@dimen/ui__spacing_unit_13x" android:layout_height="wrap_content" android:scrollHorizontally="false" style="@style/Platform.TextStyle.H5.News.Primary" />
+</merge>

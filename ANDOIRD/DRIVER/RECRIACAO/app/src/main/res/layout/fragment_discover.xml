@@ -5,17 +5,22 @@
     android:background="@color/qd_background"
     android:orientation="vertical">
 
-    <!-- Descobrir (capturas 010, 061, 081): título e faixa de dias fixos; a lista (filtros, promoções, dias) faz scroll por baixo. -->
+    <!-- Descobrir (capturas 010, 061, 081): filtros logo por baixo do título, depois a faixa de dias. -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="16dp"
-        android:paddingTop="16dp"
+        android:paddingTop="56dp"
         android:paddingEnd="16dp"
         android:text="@string/tab_discover"
         android:textColor="@color/qd_ink"
-        android:textSize="28sp"
-        android:textStyle="bold" />
+        android:textSize="35sp"
+        android:letterSpacing="-0.02"
+        android:fontFamily="sans-serif" />
+
+    <include
+        android:id="@+id/chipsHeader"
+        layout="@layout/item_discover_chips" />
 
     <HorizontalScrollView
         android:id="@+id/dayStripScroll"
@@ -28,8 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp" />
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
     </HorizontalScrollView>
 
     <View
@@ -43,5 +48,5 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
-        android:paddingBottom="16dp" />
+        android:paddingBottom="64dp" />
 </LinearLayout>

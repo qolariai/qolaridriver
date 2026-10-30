@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.deeplink.DeeplinkView android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="1" style="@style/MobileStudio.Plugin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="fill_horizontal|start" android:layout_width="0.0dip" android:text="Deeplink" style="@style/MobileStudio.Plugin.Header" />
+    <EditText android:id="@id/deeplink_editview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__mobilestudio_padding_2x" android:hint="Enter deeplink" android:inputType="textUri" />
+    <Button android:layout_gravity="start|center" android:id="@id/deeplink_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__mobilestudio_padding_2x" android:text="Go To Deeplink" />
+</com.uber.mobilestudio.deeplink.DeeplinkView>

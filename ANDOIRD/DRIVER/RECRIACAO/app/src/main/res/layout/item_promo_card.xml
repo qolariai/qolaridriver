@@ -6,7 +6,10 @@
     android:layout_margin="4dp"
     android:background="@drawable/bg_promo_card"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:paddingStart="16dp"
+    android:paddingTop="18dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,36 +27,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/qd_ink"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/promoSubtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="6dp"
                 android:textColor="@color/qd_core_gray600"
-                android:textSize="14sp" />
+                android:textSize="15sp" />
         </LinearLayout>
 
+        <!-- Miniatura de mapa (captura 061): pequena, à direita do texto. -->
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="44dp"
+            android:layout_height="52dp"
             android:layout_marginStart="12dp"
             app:cardCornerRadius="6dp"
             app:cardElevation="0dp"
             app:strokeWidth="0dp">
 
-            <com.qolari.drivereplica.ui.map.StaticMapView
+            <ImageView
                 android:id="@+id/promoThumb"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/map_thumb" />
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
+    <!-- Barra de progresso vazia no fundo do cartão (captura 061). -->
     <View
         android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_pill_gray_soft" />
+        android:layout_height="6dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/bg_promo_track" />
 </LinearLayout>

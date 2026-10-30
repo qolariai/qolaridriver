@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/list_item_image" android:visibility="gone" android:layout_width="?avatarSmall" android:layout_height="?avatarSmall" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsEnabled="false" app:analyticsId="3ad7b1e9-5306" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:analyticsEnabled="false">
+        <com.ubercab.ui.core.UTextView android:id="@id/list_item_text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsEnabled="false" style="@style/Platform.TextStyle.H5.News" />
+        <com.ubercab.ui.core.UTextView android:id="@id/list_item_text_secondary" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsEnabled="false" style="@style/Platform.TextStyle.H6.News.Tertiary" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:id="@id/list_item_image_end" android:visibility="gone" android:layout_width="?avatarTiny" android:layout_height="?avatarTiny" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsEnabled="false" app:analyticsId="8e5723f8-b3fe" />
+</merge>

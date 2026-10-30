@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCardView android:id="@id/pick_pack_thumbnail_order_item_view_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="@dimen/ui__spacing_unit_2x" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UMaterialCardView android:id="@id/task_updates_thumbnail_item_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="@dimen/ui__spacing_unit_2x" app:cardElevation="0.0dip">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/task_updates_thumbnail_item_image" android:layout_width="@dimen/ui__spacing_unit_9x" android:layout_height="@dimen/ui__spacing_unit_9x" />
+    </com.ubercab.ui.core.UMaterialCardView>
+    <com.uber.ui_compose_view.core.tag.BaseTag android:layout_gravity="start|top" android:id="@id/task_updates_thumbnail_item_tag" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</com.ubercab.ui.core.UCardView>

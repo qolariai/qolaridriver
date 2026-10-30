@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.overflow_deaf_hoh.OverflowDeafHohView android:orientation="vertical" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/ui__spacing_unit_2x" app:analyticsId="5b52e2ae-fdc1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/deaf_hoh_icon" android:layout_width="@dimen/ui__spacing_unit_2.5x" android:layout_height="@dimen/ui__spacing_unit_2.5x" android:scaleType="centerInside" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:tint="?iconSecondary" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/deaf_hoh_label_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_4.5x" />
+</com.uber.overflow_deaf_hoh.OverflowDeafHohView>

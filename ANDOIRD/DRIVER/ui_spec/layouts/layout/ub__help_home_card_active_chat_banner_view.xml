@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?colorAccentInverse" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="57282a24-181f" app:srcCompat="@drawable/ub_ic_speech_bubble" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle" android:dividerPadding="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.UTextView android:textColor="?textInverse" android:id="@id/ub__help_home_active_chat_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_home_active_chat_title" app:analyticsId="4c7b85e1-ea2a" style="@style/Platform.TextStyle.LabelSmall" />
+        <com.ubercab.ui.core.UTextView android:textColor="?textInverse" android:id="@id/ub__help_home_active_chat_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_home_active_chat_subtitle" app:analyticsId="16e7d42c-33c8" style="@style/Platform.TextStyle.ParagraphDefault" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

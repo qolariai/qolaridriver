@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?contentPrimary" />
+    <stroke android:width="@dimen/ui__spacing_unit_0x" android:color="?contentPrimary" />
+    <corners android:topLeftRadius="@dimen/ub__base_slider_thumb_radius" android:topRightRadius="@dimen/ub__base_slider_thumb_radius" android:bottomLeftRadius="@dimen/ub__base_slider_thumb_radius" android:bottomRightRadius="@dimen/ub__base_slider_thumb_radius" />
+</shape>

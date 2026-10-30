@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.risk.challenges.penny_auth.verify.PennyAuthVerifyView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+        <com.ubercab.ui.core.UScrollView android:paddingBottom="@dimen/ui__spacing_unit_11x" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x">
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/tv_card_verification_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.ParagraphDefault" />
+                <com.ubercab.ui.core.banner.BaseBanner android:id="@id/auth_timestamp_banner" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" app:banner_background_color="?backgroundLightAccent" app:banner_hierarchy="low" app:banner_start_artwork_type="icon" />
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/auth_hold_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" style="@style/Platform.TextStyle.ParagraphDefault" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/auth_input_fields_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.ui.core.text.BaseTextView android:textColor="?textPrimary" android:id="@id/cant_see_auth_cta" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphDefault" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:enabled="false" android:layout_gravity="bottom" android:id="@id/penny_auth_verify_continue" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/penny_auth_verify_confirm" app:buttonType="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.risk.challenges.penny_auth.verify.PennyAuthVerifyView>

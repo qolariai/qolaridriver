@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_bottom_sheet" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.bottomsheet.ui.DefaultBottomSheetView android:orientation="vertical" android:id="@id/bottom_sheet_view" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.ubercab.ui.bottomsheet.AnchoredBottomSheetBehavior" />
+</com.ubercab.ui.core.UCoordinatorLayout>

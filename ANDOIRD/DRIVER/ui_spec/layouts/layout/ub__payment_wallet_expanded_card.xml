@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.wallet_home.ui.view.WalletExpandedCardView android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:id="@id/ub__wallet_expanded_card_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?android:selectableItemBackground" uber:cardCornerRadius="@dimen/ui__spacing_unit_2x" uber:cardElevation="@dimen/ub__wallet_card_no_elevation">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__wallet_expanded_card_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:id="@id/ub__wallet_expanded_card_illustration" android:layout_width="fill_parent" android:layout_height="@dimen/ub__wallet_card_illustration_height" android:scaleType="centerCrop" uber:analyticsId="0619c40a-e434" />
+            <include layout="@layout/ub__payment_wallet_expanded_card_body" />
+            <Space android:id="@id/ub__wallet_expanded_card_content_bottom_space" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_3x" />
+            <include layout="@layout/ub__payment_wallet_expanded_card_text_link" />
+            <include layout="@layout/ub__payment_wallet_expanded_card_footer" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCardView>
+</com.ubercab.wallet_home.ui.view.WalletExpandedCardView>

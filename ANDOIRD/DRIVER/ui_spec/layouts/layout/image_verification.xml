@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/image_verification_taskbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.uber.taskbuildingblocks.views.TaskHeaderView android:id="@id/image_verification_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/image_verification_container_deprecated" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x">
+                <com.ubercab.ui.core.image.BaseImageView android:id="@id/image_verification_photo_thumbnail_deprecated" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/image_verification_image_title_deprecated" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.LabelSmall" />
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/image_verification_image_subtitle_deprecated" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" style="@style/Platform.TextStyle.ParagraphSmall" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UConstraintLayout android:id="@id/image_verification_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x">
+                <com.ubercab.ui.core.image.BaseImageView android:id="@id/image_verification_photo_thumbnail" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" app:layout_constraintDimensionRatio="1:1" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/image_verification_image_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/image_verification_photo_thumbnail" style="@style/Platform.TextStyle.LabelSmall" />
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/image_verification_image_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/image_verification_image_title" style="@style/Platform.TextStyle.ParagraphSmall" />
+            </com.ubercab.ui.core.UConstraintLayout>
+            <com.uber.taskbuildingblocks.views.taskbutton.TaskButtonView android:id="@id/image_verification_image_button" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.UPlainView android:background="?borderOpaque" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_divider_height" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/image_verification_disclaimer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.uber.taskbuildingblocks.views.taskbutton.TaskFooterView android:id="@id/image_verification_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

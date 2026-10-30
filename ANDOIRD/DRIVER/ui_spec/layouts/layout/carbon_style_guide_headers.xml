@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?accentPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="?toolbarTheme" android:id="@id/main_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:contentInsetStartWithNavigation="0.0dip" />
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="@style/ThemeOverlay.Carbon.Header.Dark" android:id="@id/dark_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:contentInsetStartWithNavigation="0.0dip" />
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="@style/ThemeOverlay.Carbon.Header.Light" android:id="@id/light_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:contentInsetStartWithNavigation="0.0dip" />
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="@style/ThemeOverlay.Carbon.Header.Transparent.Dark" android:id="@id/dark_transparent_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:contentInsetStartWithNavigation="0.0dip" />
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="@style/ThemeOverlay.Carbon.Header.Transparent.Light" android:id="@id/light_transparent_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:contentInsetStartWithNavigation="0.0dip" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.carbon.features.hourly.HourlyOvertimeSecondaryActionButtonView android:background="@drawable/ub__carbon_icon_circle_medium" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="03f6bff0-12dc"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/icon" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:tint="?iconColor" app:analyticsId="841be029-4c0f" app:srcCompat="@drawable/ub_ic_alert" />
+</com.uber.carbon.features.hourly.HourlyOvertimeSecondaryActionButtonView>

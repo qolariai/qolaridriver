@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mentorship.chat.zerostate.MentorshipConversationZeroStateView android:gravity="center" android:orientation="vertical" android:id="@id/ub__intercom_conversation_zero_state" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub_ic_bell" app:tint="?contentTertiary" />
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mentorship_conversation_zero_state_view_message" style="@style/Platform.TextStyle.ParagraphLarge" />
+</com.uber.mentorship.chat.zerostate.MentorshipConversationZeroStateView>

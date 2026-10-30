@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.preferences.preference.singleselect.entry.SingleSelectPreferenceEntryView android:orientation="horizontal" android:background="?android:colorBackground" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/driver_preferences_single_select_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Paragraph.Medium" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/driver_preferences_single_select_summary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textAlignment="textEnd" style="@style/Platform.TextStyle.Paragraph.Normal" />
+</com.ubercab.carbon.preferences.preference.singleselect.entry.SingleSelectPreferenceEntryView>

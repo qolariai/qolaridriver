@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout android:id="@id/ub__shimmer_view" android:layout_width="wrap_content" android:layout_height="wrap_content" app:shimmer_auto_start="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UPlainView android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_1.5x" android:textAlignment="viewStart" style="@style/PerfHubShimmerView" />
+        <com.ubercab.ui.core.UPlainView android:layout_width="@dimen/ui__spacing_unit_10x" android:layout_height="@dimen/ui__spacing_unit_3x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:textAlignment="viewStart" style="@style/PerfHubShimmerView" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_3x" android:layout_marginEnd="@dimen/ui__spacing_unit_3x">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__payment_sdf_error_image" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_8x" android:scaleType="centerCrop" android:adjustViewBounds="true" uber:srcCompat="@drawable/ub__payment_sdf_error_icon" />
+        <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/ub__payment_sdf_error_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__payments_sdf_error_title" style="@style/Platform.TextStyle.HeadingXSmall" />
+        <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/ub__payment_sdf_error_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" style="@style/Platform.TextStyle.Paragraph.Medium" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__payment_sdf_error_retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__payments_sdf_error_retry_button_title" uber:buttonType="secondary" uber:shape="pill" uber:size="medium" style="@style/Platform.Button.Base.Secondary.Medium" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

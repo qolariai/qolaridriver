@@ -17,11 +17,8 @@ import random
 
 from core.db import touch
 from domain import geo, pricing, push, settings
-from domain.models import (Driver, LedgerEntry, Offer, Organization, Product, Promo, Rider,
+from domain.models import (Driver, DriverSession, LedgerEntry, Offer, Organization, Product, Promo, Rider,
                            RiderPromo, Trip, TripEvent, Vehicle, jget, jset, now)
-
-# Raio aceite entre o destino da viagem e o destino escolhido no "modo destino".
-DESTINATION_RADIUS_M = 15_000
 
 
 class TripError(Exception):
@@ -34,6 +31,16 @@ class TripError(Exception):
 def _event(db, trip: Trip, kind: str, actor: str, detail: str = ""):
     db.add(TripEvent(trip_id=trip.id, kind=kind, actor=actor, detail=detail[:300]))
     touch(db, "trips", f"trip:{trip.uuid}")
+
+
+def add_message(db, trip: Trip, sender: str, text: str):
+    """Mensagem do chat da viagem (vídeo 2026-10-30), guardada como TripEvent `message`.
+
+    O passageiro e o condutor leem o historico pelo estado da viagem; nao ha websocket, a app
+    faz polling como para o resto do estado.
+    """
+    _event(db, trip, "message", sender, text)
+    db.flush()
 
 
 def _notify(db, trip: Trip):
@@ -69,8 +76,7 @@ def _rider_promo(db, rider: Rider, product: Product) -> Promo | None:
 
 def request_trip(db, rider: Rider, product: Product, pickup: tuple, dropoff: tuple | None,
                  pickup_address: str = "", dropoff_address: str = "", payment: str | None = None,
-                 actor: str = "rider", pin_required: bool = False,
-                 scheduled_at: int | None = None, stops: list | None = None) -> Trip:
+                 actor: str = "rider", pin_required: bool = False) -> Trip:
     """pin_required: so quando o passageiro escolhe verificar a viagem com PIN (por omissao nao ha PIN)."""
     if rider.status != "active":
         raise TripError("conta do passageiro bloqueada", "rider_blocked")
@@ -84,16 +90,13 @@ def request_trip(db, rider: Rider, product: Product, pickup: tuple, dropoff: tup
     promo = _rider_promo(db, rider, product)
     dlat, dlng = dropoff if dropoff else (None, None)
     q = pricing.estimate(db, product, pickup[0], pickup[1], dlat, dlng, promo)
-    stops = stops or []
-    stop_fee = 50 * len(stops)
     trip = Trip(city_id=city.id, rider=rider, product=product, pickup_lat=pickup[0],
                 pickup_lng=pickup[1], pickup_address=pickup_address, dropoff_lat=dlat,
                 dropoff_lng=dlng, dropoff_address=dropoff_address, est_distance_m=q.distance_m,
-                est_duration_s=q.duration_s, est_fare=q.total + stop_fee, surge=product.surge,
+                est_duration_s=q.duration_s, est_fare=q.total, surge=product.surge,
                 payment_method=payment or rider.default_payment, pin=f"{random.randint(0, 9999):04d}" if pin_required else "",
                 promo_id=promo.id if promo else None, source="console" if actor == "admin" else "rider",
-                scheduled_at=scheduled_at, stops=jset([dict(s, done=False) for s in stops]),
-                fare_breakdown=jset({"estimate": q.as_dict(), "stops_fee": stop_fee}))
+                fare_breakdown=jset({"estimate": q.as_dict()}))
     db.add(trip)
     db.flush()
     _event(db, trip, "requested", actor, f"{product.name} · estimativa {q.total / 100:.2f}")
@@ -104,28 +107,29 @@ def request_trip(db, rider: Rider, product: Product, pickup: tuple, dropoff: tup
 
 # ---- despacho --------------------------------------------------------------------------------
 def candidates(db, trip: Trip) -> list[tuple[Driver, float]]:
-    """Motoristas elegiveis, do mais proximo para o mais longe."""
+    """Motoristas elegiveis, do mais proximo para o mais longe.
+
+    Quem ignorou uma proposta de Radar volta a ser candidato: e assim que a viagem reaparece
+    como Exclusiva para o motorista mais proximo depois de o leilao coletivo falhar.
+    """
     radius = settings.get(db, "dispatch_radius_km") * 1000
-    tried = {o.driver_id for o in trip.offers}
+    # So sai da lista quem recusou/ignorou uma proposta EXCLUSIVA (ou ja ficou com a viagem).
+    tried = {o.driver_id for o in trip.offers
+             if o.kind != "radar" and o.state in ("rejected", "expired", "accepted", "withdrawn")}
     busy = {d for (d,) in db.query(Offer.driver_id).filter(Offer.state == "pending").all()}
+    # So conta quem esta online numa sessao aberta e com localizacao recente: um motorista com a app fechada
+    # (sessao antiga, GPS parado) nao deve receber propostas nem atrasar quem esta mesmo online.
+    online = {d for (d,) in db.query(DriverSession.driver_id).filter(DriverSession.ended_at.is_(None)).all()}
+    recent = now() - 600
     out = []
     for d in (db.query(Driver).filter(Driver.status == "approved", Driver.availability == "online",
                                       Driver.lat.is_not(None)).all()):
+        if d.id not in online:
+            continue
+        if (d.location_at or 0) < recent:
+            continue
         if d.id in tried or d.id in busy:
             continue
-        p = d.preferences
-        if p:
-            if p.break_until and p.break_until > now():
-                continue
-            if p.destination_mode and p.destination_lat is not None and p.destination_lng is not None \
-                    and trip.dropoff_lat is not None and trip.dropoff_lng is not None:
-                if geo.haversine_m(p.destination_lat, p.destination_lng,
-                                   trip.dropoff_lat, trip.dropoff_lng) > DESTINATION_RADIUS_M:
-                    continue
-            if p.area_mode and p.area_lat is not None and p.area_lng is not None:
-                if geo.haversine_m(p.area_lat, p.area_lng,
-                                   trip.pickup_lat, trip.pickup_lng) > p.area_radius_km * 1000:
-                    continue
         v = d.vehicle
         if not v or v.status != "active" or (v.product_ids and trip.product_id not in v.product_ids):
             continue
@@ -139,10 +143,17 @@ def candidates(db, trip: Trip) -> list[tuple[Driver, float]]:
 
 
 def dispatch(db, trip: Trip) -> Offer | None:
-    """Faz a proxima proposta (se nao houver uma pendente)."""
+    """Faz a proxima proposta (se nao houver uma pendente).
+
+    Dois tipos de pedido, como na Uber Driver:
+      - **Exclusivo**: um motorista de cada vez, com `offer_timeout_s` para decidir.
+      - **Radar**: a mesma viagem vai para varios motoristas em simultaneo (`radar_batch_size`).
+        Quem toca entra no emparelhamento (`accept_offer` -> `claim`); ao fim de `radar_window_s`
+        o melhor ETA fica com a viagem e os restantes recebem "ja nao esta disponivel".
+        Ignorar o Radar nao conta para a taxa de aceitacao.
+    Uma viagem que passe o numero de recusas no Radar volta a sair como Exclusiva.
+    """
     if trip.state != "requested":
-        return None
-    if trip.scheduled_at and trip.scheduled_at > now():
         return None
     if any(o.state == "pending" for o in trip.offers):
         return None
@@ -150,33 +161,129 @@ def dispatch(db, trip: Trip) -> Offer | None:
         return _no_drivers(db, trip, "propostas esgotadas")
     found = candidates(db, trip)
     if not found:
-        started = trip.scheduled_at or trip.requested_at
-        if now() - started >= settings.get(db, "search_timeout_s"):
+        if now() - trip.requested_at >= settings.get(db, "search_timeout_s"):
             _no_drivers(db, trip, "sem motoristas disponiveis")
         return None
+
+    # Conta RONDAS de Radar falhadas (um lote = uma ronda), nao propostas: um lote de 6 motoristas
+    # que ignora a viagem e UMA tentativa coletiva, nao seis.
+    radar_rounds = {o.created_at for o in trip.offers
+                    if o.kind == "radar" and o.state in ("rejected", "expired")}
+    radar_failed = len(radar_rounds) >= settings.get(db, "radar_max_rejections")
+    use_radar = settings.get(db, "radar_enabled") and not radar_failed
+
+    if use_radar:
+        # Nem toda a viagem vai ao Radar: como na Uber, o Radar serve para escoar as viagens de
+        # recolha longa e as que ja falharam no despacho individual. As restantes sao Exclusivas,
+        # uma de cada vez — e o motorista mais proximo recebe a viagem directo.
+        nearest_km = found[0][1] * settings.get(db, "road_factor") / 1000
+        if not _goes_to_radar(db, trip, nearest_km, radar_failed):
+            use_radar = False
+
+    if use_radar:
+        # No Radar o lote nao pode repetir quem ja o ignorou nesta viagem.
+        radar_seen = {o.driver_id for o in trip.offers if o.kind == "radar"}
+        batch = [(d, dist) for d, dist in found if d.id not in radar_seen]
+        if batch:
+            return _dispatch_radar(db, trip, batch)
+
     driver, dist = found[0]
     road = dist * settings.get(db, "road_factor")
     eta = int(road / (settings.get(db, "avg_speed_kmh") / 3.6))
-    offer = Offer(trip=trip, driver=driver, pickup_distance_m=int(road), pickup_eta_s=eta,
+    offer = Offer(trip=trip, driver=driver, kind="exclusive", pickup_distance_m=int(road), pickup_eta_s=eta,
                   expires_at=now() + settings.get(db, "offer_timeout_s"))
     db.add(offer)
     driver.offers_received += 1
     db.flush()
-    _event(db, trip, "offer", "system", f"proposta a {driver.name} ({road / 1000:.1f} km)")
+    _event(db, trip, "offer", "system", f"proposta exclusiva a {driver.name} ({road / 1000:.1f} km)")
     push.send(db, "driver", driver.uuid, "offer", offer_payload(offer))
     touch(db, "drivers")
-    p = driver.preferences
-    if p and p.auto_accept:
-        try:
-            accept_offer(db, offer, actor="system")
-        except TripError:
-            pass
     return offer
+
+
+def _goes_to_radar(db, trip: Trip, nearest_km: float, radar_failed: bool) -> bool:
+    """Decide se esta viagem vai ao Radar ou sai como Exclusiva (despacho normal).
+
+    Regras (as mesmas da Uber, simplificadas):
+      1. Recolha longa (`radar_min_pickup_km`) -> Radar: e o caso tipico de "poucos motoristas
+         a quem da jeito", que se escoa em lote.
+      2. Viagem que ja falhou no despacho individual -> Radar: e o "segundo leilao" antes de
+         voltar a exclusiva.
+      3. Restantes: so uma parte (`radar_share_pct`) vai ao Radar, para o motorista nao viver
+         so de lotes. A escolha e estavel por viagem (nao muda entre rondas).
+    """
+    if nearest_km >= settings.get(db, "radar_min_pickup_km"):
+        return True
+    if any(o.kind == "exclusive" and o.state in ("rejected", "expired") for o in trip.offers):
+        return True
+    share = int(settings.get(db, "radar_share_pct")) / 100.0
+    if share <= 0:
+        return False
+    # Hash estavel do uuid: a mesma viagem cai sempre do mesmo lado.
+    h = sum(ord(c) * (i + 1) for i, c in enumerate(trip.uuid)) % 100
+    return h < share * 100
+
+
+def _dispatch_radar(db, trip: Trip, found: list) -> Offer | None:
+    """Manda a mesma viagem a um lote de motoristas (Radar de viagens).
+
+    `radar_window_s` e o tempo que cada motorista tem para tocar (o cartao mostra-o).
+    Depois do primeiro toque comeca o emparelhamento (`radar_match_s`, ver `settle_radar`).
+    """
+    size = max(1, int(settings.get(db, "radar_batch_size")))
+    window = max(1, int(settings.get(db, "radar_window_s")))
+    batch = found[:size]
+    first = None
+    for driver, dist in batch:
+        road = dist * settings.get(db, "road_factor")
+        eta = int(road / (settings.get(db, "avg_speed_kmh") / 3.6))
+        offer = Offer(trip=trip, driver=driver, kind="radar", pickup_distance_m=int(road), pickup_eta_s=eta,
+                      expires_at=now() + window)
+        db.add(offer)
+        driver.offers_received += 1
+        db.flush()
+        push.send(db, "driver", driver.uuid, "offer", offer_payload(offer))
+        first = first or offer
+    _event(db, trip, "radar", "system", f"radar para {len(batch)} motoristas")
+    touch(db, "drivers")
+    return first
+
+
+def radar_claimed(db, trip: Trip) -> Offer | None:
+    """Motorista que tocou no Radar e entrou no emparelhamento (o melhor ETA)."""
+    claims = [o for o in trip.offers if o.kind == "radar" and o.claimed_at]
+    if not claims:
+        return None
+    return min(claims, key=lambda o: (o.pickup_eta_s, o.claimed_at))
+
+
+def settle_radar(db, trip: Trip) -> Trip | None:
+    """Fecha a janela do Radar: entrega a viagem ao melhor ETA e avisa os restantes.
+
+    E o passo de "emparelhamento em lote": varios motoristas querem, um fica com a viagem.
+    """
+    if trip.state != "requested":
+        return None
+    pending = [o for o in trip.offers if o.kind == "radar" and o.state == "pending"]
+    claims = [o for o in pending if o.claimed_at]
+    if not claims:
+        return None    # O emparelhamento corre a partir do 1.º toque: espera para ver se aparece melhor ETA.
+    if now() < min(o.claimed_at for o in claims) + settings.get(db, "radar_match_s"):
+        return None
+    winner = min(claims, key=lambda o: (o.pickup_eta_s, o.claimed_at))
+    for o in pending:
+        if o is winner:
+            continue
+        o.state, o.responded_at = "withdrawn", now()
+        push.send(db, "driver", o.driver.uuid, "offer", offer_payload(o))
+        _event(db, trip, "radar_lost", "system", o.driver.name)
+    return accept_offer(db, winner, actor="driver", from_radar=True)
 
 
 def offer_payload(offer: Offer) -> dict:
     t = offer.trip
     return {"offerUUID": offer.uuid, "tripUUID": t.uuid, "expiresAt": offer.expires_at,
+            "kind": offer.kind, "claimedAt": offer.claimed_at,
             "pickup": {"latitude": t.pickup_lat, "longitude": t.pickup_lng, "address": t.pickup_address},
             "dropoff": {"latitude": t.dropoff_lat, "longitude": t.dropoff_lng, "address": t.dropoff_address},
             "product": t.product.name, "fare": t.est_fare, "pickupEtaSeconds": offer.pickup_eta_s,
@@ -219,7 +326,8 @@ def offer_to(db, trip: Trip, driver: Driver, actor: str = "admin") -> Offer:
     return offer
 
 
-def accept_offer(db, offer: Offer, actor: str = "driver") -> Trip:
+def accept_offer(db, offer: Offer, actor: str = "driver", from_radar: bool = False) -> Trip:
+    """Aceitar. No Radar o toque nao garante a viagem: entra no emparelhamento e espera a janela."""
     trip, driver = offer.trip, offer.driver
     if offer.state != "pending" or offer.expires_at <= now():
         raise TripError("a proposta ja nao esta disponivel", "offer_expired")
@@ -227,14 +335,37 @@ def accept_offer(db, offer: Offer, actor: str = "driver") -> Trip:
         raise TripError("a viagem ja nao esta disponivel", "trip_unavailable")
     if driver.availability != "online":
         raise TripError("o motorista nao esta online", "driver_offline")
+
+    # Radar: fica "em verificacao" ate a janela fechar (batch matching). O retorno diz ao ecra
+    # para mostrar "A verificar se e a melhor correspondencia".
+    if offer.kind == "radar" and not from_radar:
+        if offer.claimed_at:
+            return trip
+        offer.claimed_at = now()
+        # O relogio da proposta passa a cobrir o emparelhamento: o ticker nao pode expira-la
+        # enquanto se decide qual dos motoristas que tocaram fica com a viagem.
+        offer.expires_at = offer.claimed_at + settings.get(db, "radar_match_s") + 5
+        _event(db, trip, "radar_claim", actor, driver.name)
+        db.flush()
+        touch(db, "drivers")
+        return trip
+
     t = now()
     offer.state, offer.responded_at = "accepted", t
     driver.offers_accepted += 1
+    # A taxa de aceitacao so conta propostas exclusivas (Radar ignorado nao penaliza).
+    if offer.kind == "exclusive":
+        driver.offers_received = max(driver.offers_received, 1)
     driver.availability = "on_trip"
     trip.driver, trip.vehicle, trip.org_id = driver, driver.vehicle, driver.org_id
     trip.state, trip.accepted_at = "accepted", t
     _event(db, trip, "accepted", actor, f"{driver.name} · {driver.vehicle.label if driver.vehicle else ''}")
     _notify(db, trip)
+    # A viagem saiu do mercado: as outras propostas (do Radar) caem.
+    for other in trip.offers:
+        if other is not offer and other.state == "pending":
+            other.state, other.responded_at = "withdrawn", t
+            push.send(db, "driver", other.driver.uuid, "offer", offer_payload(other))
     touch(db, "drivers")
     return trip
 
@@ -245,8 +376,13 @@ def reject_offer(db, offer: Offer, actor: str = "driver", expired: bool = False)
     offer.state, offer.responded_at = ("expired" if expired else "rejected"), now()
     trip = offer.trip
     push.send(db, "driver", offer.driver.uuid, "offer", offer_payload(offer))  # a app tira o cartao da proposta
-    _event(db, trip, "offer_expired" if expired else "offer_rejected", actor, offer.driver.name)
+    # Radar: ignorar/recusar NAO conta para a taxa de aceitacao (protecao das metricas do motorista);
+    # no exclusivo conta, e o motorista sai da lista de candidatos desta viagem.
+    kind = "radar" if offer.kind == "radar" else "exclusive"
+    _event(db, trip, f"{kind}_{'expired' if expired else 'rejected'}", actor, offer.driver.name)
     db.flush()
+    # Se a viagem estava num lote de Radar, espera a janela fechar; so volta a despachar quando
+    # nao houver mais propostas abertas.
     dispatch(db, trip)
 
 
@@ -289,20 +425,6 @@ def start(db, trip: Trip, pin: str | None = None, actor: str = "driver") -> Trip
     return trip
 
 
-def complete_stop(db, trip: Trip, actor: str = "driver") -> Trip:
-    """Marca a proxima paragem intermedia como concluida."""
-    _require(trip, "in_progress")
-    stops = jget(trip.stops, [])
-    for s in stops:
-        if not s.get("done"):
-            s["done"] = True
-            trip.stops = jset(stops)
-            _event(db, trip, "stop_completed", actor, s.get("address", ""))
-            _notify(db, trip)
-            return trip
-    raise TripError("sem paragens pendentes")
-
-
 def complete(db, trip: Trip, distance_m: int | None = None, duration_s: int | None = None,
              dropoff: tuple | None = None, actor: str = "driver") -> Trip:
     _require(trip, "in_progress")
@@ -322,9 +444,7 @@ def complete(db, trip: Trip, distance_m: int | None = None, duration_s: int | No
                         pricing.promo_discount(promo) if promo else None)
     trip.distance_m, trip.duration_s = distance_m, duration_s
     trip.fare, trip.discount = q.total, q.discount
-    stops_fee = 50 * len(jget(trip.stops, []))
-    trip.fare += stops_fee
-    trip.fare_breakdown = jset({**_breakdown(trip), "final": q.as_dict(), "stops_fee": stops_fee})
+    trip.fare_breakdown = jset({**_breakdown(trip), "final": q.as_dict()})
     trip.state, trip.completed_at = "completed", t
     if promo:
         promo.uses += 1
@@ -332,7 +452,7 @@ def complete(db, trip: Trip, distance_m: int | None = None, duration_s: int | No
                                           RiderPromo.used_trip_id.is_(None)).first())
         if rp:
             rp.used_trip_id = trip.id
-    _settle(db, trip, gross=q.subtotal + stops_fee, paid=q.total + stops_fee, discount=q.discount)
+    _settle(db, trip, gross=q.subtotal, paid=q.total, discount=q.discount)
     _free_driver(db, trip.driver)
     _event(db, trip, "completed", actor, f"{q.total / 100:.2f} · {distance_m / 1000:.1f} km")
     from domain.models import Notification
@@ -369,8 +489,16 @@ def cancel(db, trip: Trip, by: str, reason: str = "") -> Trip:
 
 def rate(db, trip: Trip, by: str, stars: int, comment: str = "") -> Trip:
     _require(trip, "completed")
-    if not 1 <= stars <= 5:
+    if not 0 <= stars <= 5:
         raise TripError("classificacao de 1 a 5", "bad_rating")
+    if stars == 0:
+        # 0 = "agora nao": fecha a avaliacao sem contar para a media de ninguem.
+        if by == "rider":
+            trip.rider_to_driver_rating = 0
+        else:
+            trip.driver_to_rider_rating = 0
+        _event(db, trip, "rating_skipped", by, comment[:300])
+        return trip
     if by == "rider":
         if trip.rider_to_driver_rating is None and trip.driver:
             trip.driver.rating_sum += stars
@@ -451,7 +579,7 @@ def _settle(db, trip: Trip, gross: int, paid: int, discount: int, kind: str = "f
                ("driver", driver.id, "commission", -commission, f"Comissão {pct:g}%"),
                ("platform", None, "commission", commission, "")]
     if fleet_fee:
-        entries += [("driver", driver.id, "fleet_fee", -fleet_fee, f"Frota {org.name}"),
+        entries += [("driver", driver.id, "fleet_fee", -fleet_fee, f"Taxa de frota ({org.name})"),
                     ("fleet", org.id, "fleet_fee", fleet_fee, driver.name)]
     if discount:
         entries.append(("platform", None, "promo", -discount, "Desconto promocional"))
@@ -559,9 +687,20 @@ def assign_vehicle(db, driver: Driver, vehicle: Vehicle | None):
 # ---- relogio (thread em segundo plano, 1x por segundo) ---------------------------------------
 def tick(db) -> None:
     t = now()
+    # Radar PRIMEIRO: um motorista que tocou tem de ver a janela de emparelhamento fechar antes
+    # de o ticker expirar a proposta. Se a expiracao corresse primeiro, o toque perdia-se
+    # (foi o que aconteceu: oferta com claimed_at mas ja "expired").
+    for trip in db.query(Trip).filter(Trip.state == "requested").all():
+        if settle_radar(db, trip):
+            continue
     for offer in db.query(Offer).filter(Offer.state == "pending", Offer.expires_at <= t).all():
+        # No Radar, uma proposta com toque ainda esta a competir: nao expira, espera o settle.
+        if offer.kind == "radar" and offer.claimed_at:
+            continue
         reject_offer(db, offer, actor="system", expired=True)
     for trip in db.query(Trip).filter(Trip.state == "requested").all():
+        if any(o.state == "pending" for o in trip.offers):
+            continue
         dispatch(db, trip)
     if settings.get(db, "simulate_movement"):
         _simulate(db)

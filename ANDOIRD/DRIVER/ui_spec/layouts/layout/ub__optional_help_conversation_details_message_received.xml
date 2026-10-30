@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.CircleImageView android:id="@id/help_conversation_details_message_received_avatar" android:layout_width="?avatarMedium" android:layout_height="?avatarMedium" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="10214d29-497d" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/help_conversation_details_message_received_parts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_space_1x" android:showDividers="middle" />
+        <com.ubercab.ui.core.UCardView android:id="@id/help_conversation_details_message_received_customized_status_message_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/help_conversation_details_message_received_customized_status_message_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/help_conversation_details_message_received_customized_status_message_icon" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_1x" android:layout_height="@dimen/ui__spacing_unit_1x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:tint="?colorPrimary" android:layout_marginStart="@dimen/ui__spacing_unit_1x" />
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Meta.Normal" android:textColor="?android:textColorPrimaryInverse" android:gravity="center_vertical" android:id="@id/help_conversation_details_message_received_customized_status_message_text" android:padding="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UCardView>
+        <com.ubercab.ui.core.UCardView android:id="@id/help_conversation_details_message_received_contact_status_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H6.News.Primary.Inverse" android:gravity="center_vertical" android:id="@id/help_conversation_details_message_received_contact_status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/ui__spacing_unit_1x" />
+        </com.ubercab.ui.core.UCardView>
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H6.News.Tertiary" android:gravity="start" android:layout_gravity="start" android:id="@id/help_conversation_details_message_received_subtext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

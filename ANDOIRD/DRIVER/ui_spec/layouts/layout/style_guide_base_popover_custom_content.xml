@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/custom_content_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/style_guide_base_popover_custom_content_tv_text" style="@style/Platform.TextStyle.Paragraph.Medium" />
+    <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividersize="cell" app:dividerstyle="list" />
+    <com.ubercab.ui.core.image.BaseImageView android:layout_width="@dimen/ui__spacing_unit_3.5x" android:layout_height="@dimen/ui__spacing_unit_3.5x" android:layout_marginVertical="@dimen/ui__spacing_unit_0.5x" app:srcCompat="@drawable/ub_ic_basketball" />
+    <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividersize="cell" app:dividerstyle="list" />
+</com.ubercab.ui.core.ULinearLayout>

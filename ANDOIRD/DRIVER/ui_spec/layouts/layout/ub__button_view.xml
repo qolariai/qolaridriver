@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <include layout="@layout/ub__button_component" />
+    <include layout="@layout/ub__button_shimmer" />
+</merge>

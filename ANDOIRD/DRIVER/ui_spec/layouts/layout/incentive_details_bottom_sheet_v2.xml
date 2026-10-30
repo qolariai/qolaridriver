@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.planning_hub_libs.incentive_details.incentive_details_bottom_sheet.IncentiveDetailsBottomSheetView android:orientation="vertical" android:background="@drawable/rectangle_top_corners_rounded" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.ubercab.presidio.behaviors.core.ExpandingBottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:layout_gravity="center_horizontal" android:id="@id/ub_primary_divider_standard_view_top" android:background="@drawable/ub__divider_background" android:layout_width="@dimen/inspection_sheet_top_divider_width" android:layout_height="@dimen/ui__spacing_unit_0.5x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_0x" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/incentive_details_sheet" android:paddingTop="@dimen/ui__spacing_unit_1x" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/inspection_scroll_view" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/incentive_details_container" android:paddingTop="@dimen/ui__spacing_unit_1x" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.planning_hub_libs.incentive_details.incentive_details_bottom_sheet.IncentiveDetailsBottomSheetView>

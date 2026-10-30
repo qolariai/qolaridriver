@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.referrals.contact_sync_app_setting.contact_sync_rib.ContactSyncView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.referrals.contact_sync_app_setting.contact_sync_rib.SettingToggleView android:id="@id/toggle_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ubercab.referrals.contact_sync_app_setting.contact_sync_rib.ContactSyncView>

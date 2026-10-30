@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UImageView android:gravity="center" android:layout_gravity="center" android:id="@id/status_assistant_agenda_button" android:visibility="invisible" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="fill_parent" android:scaleType="centerInside" app:analyticsId="b17b84ce-0c6d" app:srcCompat="@drawable/ub__status_assistant_agenda_button" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

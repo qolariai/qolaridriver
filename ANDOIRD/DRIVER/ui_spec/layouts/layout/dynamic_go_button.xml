@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/schedule_button" android:padding="@dimen/ui__spacing_unit_0.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/schedule_button_text" android:textAlignment="center" app:analyticsId="34c5ac7e-bdf6" app:analyticsImpressionId="f0d17472-baab" app:buttonType="primary" app:shape="pill" app:size="large" style="@style/Platform.TextStyle.HeadingDefault" />
+</merge>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.airbnb.lottie.LottieAnimationView android:id="@id/ub__identity_verification_document_artwork_animation" android:layout_width="@dimen/ub__ic_photo_identity_verification_flow_default_id_size" android:layout_height="@dimen/ub__ic_photo_identity_verification_flow_default_id_size" android:scaleType="fitCenter" app:lottie_loop="true" />
+        <com.ubercab.ui.core.UImageView android:id="@id/ub__identity_verification_document_artwork_static_image" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="ab144b0d-204f" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UTextView android:gravity="center_horizontal" android:id="@id/ub__identity_verification_document_artwork_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" app:analyticsId="95a29ec8-195c" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__identity_verification_document_artwork_status" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="8f9156c6-89b3" style="@style/Platform.TextStyle.LabelSmall" />
+</com.ubercab.ui.core.ULinearLayout>

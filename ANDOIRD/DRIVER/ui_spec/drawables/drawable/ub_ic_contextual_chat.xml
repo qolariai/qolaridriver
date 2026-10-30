@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ub__contextual_chat_size" android:width="@dimen/ub__contextual_chat_size" android:viewportWidth="@dimen/ub__contextual_chat_size" android:viewportHeight="@dimen/ub__contextual_chat_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?iconColor" android:pathData="M12.3333 9.66634V0.333008H29.6666V17.6663H28.3333L20.3333 9.66634H12.3333ZM2.33325 29.6663H0.333252V12.333H17.6666V25.6663H6.33325L2.33325 29.6663Z" android:fillType="evenOdd" />
+</vector>

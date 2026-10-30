@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:circleImageView="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.CircleImageView android:layout_gravity="start|top" android:id="@id/sp_compliment_feed_item_image" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:circleImageBorderWidth="@dimen/ub__social_profiles_circle_image_border_width" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="top" android:orientation="vertical" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_9x" android:layout_marginEnd="@dimen/ui__spacing_unit_9x">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="center" android:id="@id/sp_compliment_feed_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__social_profiles_spacing_unit_0.5x" style="@style/Platform.TextStyle.Paragraph.Normal" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/sp_compliment_feed_item_body" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Normal" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:tint="?starIconColor" app:srcCompat="@drawable/ub_ic_star" />
+            <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:tint="?starIconColor" app:srcCompat="@drawable/ub_ic_star" />
+            <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:tint="?starIconColor" app:srcCompat="@drawable/ub_ic_star" />
+            <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:tint="?starIconColor" app:srcCompat="@drawable/ub_ic_star" />
+            <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:tint="?starIconColor" app:srcCompat="@drawable/ub_ic_star" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:layout_gravity="end|top" android:id="@id/sp_compliment_feed_item_cta" android:background="?selectableItemBackground" android:layout_width="@dimen/ui__spacing_unit_7x" android:layout_height="@dimen/ui__spacing_unit_3x" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ub_ic_three_dots" />
+    <com.ubercab.ui.core.UPlainView android:layout_gravity="bottom" android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="@dimen/ub__social_profiles_divider_height" />
+</com.ubercab.ui.core.UFrameLayout>

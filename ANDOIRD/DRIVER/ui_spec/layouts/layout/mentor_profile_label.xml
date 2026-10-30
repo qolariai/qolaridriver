@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/ub__icon" android:layout_width="@dimen/profile_label_icon_size" android:layout_height="@dimen/profile_label_icon_size" uber:tint="?contentTertiary" />
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?contentTertiary" android:layout_gravity="center" android:id="@id/ub__title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" />
+</merge>

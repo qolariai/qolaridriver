@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.DoPanelSectionTitleView android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorSecondary" android:id="@id/do_panel_section_title" android:paddingLeft="@dimen/ui__spacing_unit_3x" android:paddingTop="@dimen/ui__spacing_unit_4x" android:paddingRight="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/carbon_ui__spacing_unit_1.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_3x" android:paddingEnd="@dimen/ui__spacing_unit_3x" />
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+</com.ubercab.DoPanelSectionTitleView>

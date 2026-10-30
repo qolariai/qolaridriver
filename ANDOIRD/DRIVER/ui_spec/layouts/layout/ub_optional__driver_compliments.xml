@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.social_profiles.compliments.DriverProfileComplimentsView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="@dimen/ub__social_profiles_divider_height" />
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__compliments_title" android:paddingTop="@dimen/ui__spacing_unit_3x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="7557c902-6db8" style="@style/Platform.TextStyle.Headline.Normal" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__compliments_stickers" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.socialprofiles.profile.ui.SnappyRecyclerView android:id="@id/ub__compliments_notes" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_4x" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="@dimen/ub__social_profiles_divider_height" />
+</com.ubercab.social_profiles.compliments.DriverProfileComplimentsView>

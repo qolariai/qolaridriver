@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:layout_marginRight="@dimen/ui__spacing_unit_1x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.CircleImageView android:layout_gravity="center" android:id="@id/ub__contact_picker_placeholder_bubble_image" android:background="@drawable/ub__contact_picker_placeholder_bubble" android:layout_width="@dimen/ub__contact_picker_suggestion_bubble_image_size" android:layout_height="@dimen/ub__contact_picker_suggestion_bubble_image_size" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center_horizontal" android:background="?brandGrey40" android:layout_width="@dimen/ub__contact_picker_placeholder_first_name_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:maxLines="1" app:analyticsId="aa2efa0b-e4a6" style="@style/Platform.TextStyle.H6.News.Primary" />
+    <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center_horizontal" android:background="?brandGrey40" android:layout_width="@dimen/ub__contact_picker_placeholder_last_name_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__contact_picker_contact_bubble_label_padding" android:maxLines="1" app:analyticsId="2a2e3143-ea64" style="@style/Platform.TextStyle.H6.News.Primary" />
+</com.ubercab.ui.core.ULinearLayout>

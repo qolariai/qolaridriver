@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="ring" android:useLevel="false" android:innerRadius="0.0dip" android:thickness="@dimen/ub__browse_tracker_page_indicator_thickness">
+            <solid android:color="?brandTransparent" />
+            <stroke android:width="@dimen/ub__browse_tracker_page_indicator_stroke_width" android:color="?brandWhite" />
+        </shape>
+    </item>
+</layer-list>

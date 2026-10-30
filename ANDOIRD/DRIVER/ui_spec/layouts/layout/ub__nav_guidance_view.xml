@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.android.nav.LaneGuidanceView android:id="@id/ub__nav_lane_guidance_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_guidance_secondary_height" style="?ub__nav_laneGuidanceStyle" />
+    <com.ubercab.android.nav.CompoundManeuverView android:id="@id/ub__nav_compound_maneuver_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_guidance_secondary_height" style="?ub__nav_compoundManeuverViewStyle" />
+    <com.ubercab.android.nav.ReminderView android:id="@id/ub__nav_reminder_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_guidance_secondary_height" style="?ub__nav_reminderViewStyle" />
+    <com.ubercab.android.nav.AddressView android:id="@id/ub__nav_address_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ub__nav_guidance_secondary_height" style="?ub__nav_addressViewStyle" />
+    <com.ubercab.android.nav.ManeuverView android:id="@id/ub__nav_maneuver_view" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_guidance_primary_height" style="?ub__nav_maneuverStyle" />
+    <com.ubercab.android.nav.NotificationView android:id="@id/ub__nav_notification_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_guidance_primary_height" style="?ub__nav_notificationViewStyle" />
+    <com.ubercab.android.nav.CollapsedToolbar android:id="@id/ub__nav_collapsed_toolbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__nav_guidance_primary_collapsed_height" style="?ub__nav_collapsedGuidanceToolbarStyle" />
+    <androidx.appcompat.widget.AppCompatImageButton android:id="@id/ub__nav_guidance_menu" android:background="@null" android:paddingBottom="@dimen/ub__nav_spacing_unit_2x" android:layout_width="@dimen/ub__nav_guidance_menu_size" android:layout_height="@dimen/ub__nav_guidance_menu_size" android:paddingStart="@dimen/ub__nav_spacing_unit_3x" android:paddingEnd="0.0dip" app:srcCompat="@drawable/ub__nav_icon_menu" />
+</merge>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UTextView android:background="?selectableItemBackground" android:paddingLeft="?contentInset" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingRight="?contentInset" android:paddingBottom="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/payment_combo_card_post_add_list_footer" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" app:analyticsId="11246a1c-97e1" style="@style/Platform.TextStyle.H6.News.Tertiary"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

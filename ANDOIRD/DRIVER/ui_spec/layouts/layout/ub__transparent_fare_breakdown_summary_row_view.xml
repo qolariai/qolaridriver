@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="fdb4c6e8-5221"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center_horizontal" android:id="@id/ub__transparent_fare_breakdown_summary_row_view_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" uber:analyticsId="39a08ebb-883a" style="@style/Platform.TextStyle.LabelLarge" />
+    <com.uber.feedback.transparent_fare_breakdown.TransparentFareBreakdownView android:id="@id/ub__transparent_fare_breakdown_summary_row_view_breakdown" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" />
+</merge>

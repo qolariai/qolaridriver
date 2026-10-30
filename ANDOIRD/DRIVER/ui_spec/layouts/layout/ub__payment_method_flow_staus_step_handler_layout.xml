@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URelativeLayout android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.emptystate.EmptyStateView android:id="@id/ub__payment_method_flow_status_step_handler_empty_state_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" app:empty_state_action_title="@string/ub__payment_method_flow_status_action_btn" app:empty_state_headline_text="@string/ub__payment_method_flow_status_completed_title" app:empty_state_paragraph_text="@string/ub__payment_method_flow_status_message" app:empty_state_type="success" />
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__payment_method_flow_status_step_handler_close_btn" android:background="?brandTransparent" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:tint="?brandBlack" android:layout_alignParentTop="true" android:contentDescription="@string/close" android:layout_alignParentStart="true" app:srcCompat="@drawable/ic_close" />
+    </com.ubercab.ui.core.URelativeLayout>
+</merge>

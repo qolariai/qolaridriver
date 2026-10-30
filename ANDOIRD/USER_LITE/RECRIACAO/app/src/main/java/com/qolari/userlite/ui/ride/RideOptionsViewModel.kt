@@ -3,8 +3,6 @@ package com.qolari.userlite.ui.ride
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.qolari.userlite.data.AppGraph
-import com.qolari.userlite.data.PendingTrip
-import com.qolari.userlite.data.PendingTripStore
 import com.qolari.userlite.data.UserRepository
 import com.qolari.userlite.net.Payment
 import com.qolari.userlite.net.QuoteProduct
@@ -62,32 +60,18 @@ class RideOptionsViewModel @JvmOverloads constructor(
         }
     }
 
-    fun request(pickup: RoutePoint, dropoff: RoutePoint, promoCode: String? = null,
-                scheduledAt: Long? = null, stops: List<RoutePoint> = emptyList()) {
+    fun request(pickup: RoutePoint, dropoff: RoutePoint, promoCode: String? = null) {
         val product = _state.value.selected ?: return
         if (_state.value.requesting) return
         _state.value = _state.value.copy(requesting = true, requestError = null)
         viewModelScope.launch {
-            repository.request(pickup, dropoff, product.id, _state.value.payment.id, promoCode, scheduledAt, stops)
+            repository.request(pickup, dropoff, product.id, _state.value.payment.id, promoCode)
                 .onSuccess { _state.value = _state.value.copy(requesting = false, trip = it) }
                 .onFailure {
-                    val http = it as? retrofit2.HttpException
-                    if (http == null || http.code() >= 500) {
-                        PendingTripStore.save(
-                            AppGraph.context,
-                            PendingTrip(pickup, dropoff, product.id, _state.value.payment.id,
-                                promoCode, scheduledAt, stops),
-                        )
-                        _state.value = _state.value.copy(
-                            requesting = false,
-                            requestError = "Sem ligação. O pedido ficou guardado e será enviado quando a rede voltar.",
-                        )
-                    } else {
-                        _state.value = _state.value.copy(
-                            requesting = false,
-                            requestError = com.qolari.userlite.net.ApiClient.errorMessage(it),
-                        )
-                    }
+                    _state.value = _state.value.copy(
+                        requesting = false,
+                        requestError = com.qolari.userlite.net.ApiClient.errorMessage(it),
+                    )
                 }
         }
     }

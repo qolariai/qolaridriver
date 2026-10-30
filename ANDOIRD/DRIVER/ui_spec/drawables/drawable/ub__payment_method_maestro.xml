@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/ub__payment_maestro_card_1" android:pathData="M23,4H1v16h22V4Z" />
+    <path android:fillColor="@color/ub__payment_maestro_card_2" android:pathData="M9,17A5,5 0,1 0,9 7a5,5 0,0 0,0 10Z" />
+    <path android:fillColor="@color/ub__payment_maestro_card_3" android:pathData="M15,7c-1.63,0 -3.06,0.79 -3.98,2h1.95c0.23,0.31 0.44,0.64 0.6,1h-3.16c-0.14,0.32 -0.25,0.65 -0.32,1h3.8c0.07,0.32 0.1,0.66 0.1,1h-4c0,0.34 0.04,0.68 0.1,1h3.8c-0.07,0.35 -0.18,0.68 -0.32,1h-3.16c0.16,0.36 0.37,0.69 0.6,1h1.95c-0.28,0.37 -0.61,0.7 -0.98,0.98a4.98,4.98 0,0 0,3 1.02c2.76,0 5,-2.24 5,-5S17.76,7 15,7Z" />
+</vector>

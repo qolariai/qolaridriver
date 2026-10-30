@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.trip_details.TripDetailsCanceledLegView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.image.AspectRatioImageView android:id="@id/leg_map" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/trip_details_leg_header" />
+    <com.ubercab.ui.core.UImageView android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:srcCompat="?dividerHorizontal" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/ui__spacing_unit_4x" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_4x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UPlainView android:background="?android:textColorSecondary" android:layout_width="@dimen/ui__spacing_unit_1x" android:layout_height="@dimen/ui__spacing_unit_1x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.ubercab.ui.core.UTextView android:id="@id/leg_pickup_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H6.News.Secondary" />
+            <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/leg_pickup_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.H5.News.Primary" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.trip_details.TripDetailsCanceledLegView>

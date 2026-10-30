@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.badge.NotificationBaseBadge android:layout_width="wrap_content" android:layout_height="wrap_content" app:notification_type="number" app:numberToDisplay="9" />
+    <com.ubercab.ui.core.badge.NotificationBaseBadge android:layout_width="wrap_content" android:layout_height="wrap_content" app:notificationIcon="@drawable/ub_ic_airplane" app:notification_type="icon" />
+</com.ubercab.ui.core.ULinearLayout>

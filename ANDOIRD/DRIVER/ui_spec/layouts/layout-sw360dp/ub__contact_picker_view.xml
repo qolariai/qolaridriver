@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URecyclerView android:id="@id/contact_list" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/button_container" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/button_container" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:elevation="@dimen/ui__spacing_unit_3x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <com.ubercab.ui.core.UTextView android:textColor="?contentSecondary" android:id="@id/button_disclaimer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" app:analyticsId="672ba1b0-c648" style="@style/Platform.TextStyle.ParagraphSmall" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/button_select" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAllCaps="false" app:analyticsId="ce083344-1a50" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

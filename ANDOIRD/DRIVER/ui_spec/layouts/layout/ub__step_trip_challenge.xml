@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.app_onboarding.core.entry.onboard.steps.trip_challenge.TripChallengeView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UImageView android:id="@id/trip_challenge_trip_image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:contentDescription="@string/trip_image_description" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:paddingTop="@dimen/ui__spacing_unit_4x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/have_you_taken_this_trip" style="@style/Platform.TextStyle.H3.News" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:paddingTop="@dimen/ui__spacing_unit_4x" android:paddingBottom="@dimen/ui__spacing_unit_4x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.CircleImageView android:id="@id/trip_challenge_driver_image" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="@dimen/ui__avatar_size_medium" android:layout_height="@dimen/ui__avatar_size_medium" android:contentDescription="@string/driver_image_description" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+                    <com.ubercab.ui.core.UTextView android:id="@id/trip_challenge_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H5.News" />
+                    <com.ubercab.ui.core.UTextView android:id="@id/trip_challenge_vehicle_info" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H5.News.Secondary" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.UTextView android:gravity="end" android:id="@id/trip_challenge_trip_amount" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Platform.TextStyle.H5.News" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/trip_challenge_button_no" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/no" android:layout_weight="1.0" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+                <Space android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="wrap_content" />
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/trip_challenge_button_yes" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/onboarding_yes" android:layout_weight="1.0" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.presidio.app_onboarding.core.entry.onboard.steps.trip_challenge.TripChallengeView>

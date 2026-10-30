@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_search" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="88925103-a147"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/loading_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/loading_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?colorPrimary" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.ui.core.UCoordinatorLayout>

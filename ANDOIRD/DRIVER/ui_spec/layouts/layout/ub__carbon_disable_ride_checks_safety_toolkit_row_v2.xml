@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ride_checks.safety_toolkit.disable_row.DisableRideChecksSafetyToolkitRowView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__ride_checks_settings_turn_off_v2" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" android:paddingVertical="@dimen/ui__spacing_unit_1.5x" style="@style/Platform.TextStyle.LabelSmall"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

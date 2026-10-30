@@ -39,7 +39,7 @@ login foi feito por ele. Nenhuma password ou código de login está escrita em f
 | Identidade | aberto no laboratório | seed com motoristas aprovados/pendentes |
 | Peer | parcial | oferta real observada; aceitar/viagem exigiu o laboratório (Rider + Driver) |
 | Geo | parcial | GPS real nas capturas; simulação no backend |
-| Terceiros | Maps/FCM pr?prios configurados; sem SDK de terceiros preso ? assinatura | mapa real e push validados no Honor; social/IAP fora |
+| Terceiros | Maps SDK sem chave; FCM não configurado | mapa por desenhar; push do sistema não capturável |
 | Marca | não se transplanta | Qolari |
 
 ### Rider (Uber Lite)
@@ -51,7 +51,7 @@ login foi feito por ele. Nenhuma password ou código de login está escrita em f
 | Estado de conta | aberto | conta ativa; sem viagens no histórico |
 | Peer | **bloqueado por regra** | nunca se confirmou um pedido real (geraria cobrança e motorista real) |
 | Geo | aberto | localização real; moradas ocultadas nas imagens |
-| Terceiros | Maps/FCM pr?prios configurados; sem SDK de terceiros preso ? assinatura | mapa real e push validados no Honor; social/IAP fora |
+| Terceiros | WebView da Uber | o conteúdo é web; sem layouts nativos |
 | Marca | não se transplanta | Qolari |
 
 ### Fleet
@@ -63,7 +63,7 @@ login foi feito por ele. Nenhuma password ou código de login está escrita em f
 | Estado de conta | aberto | frota com motoristas e veículos |
 | Peer | aberto | backend próprio |
 | Geo | aberto | posições simuladas/real |
-| Terceiros | **parcial** | FCM do instrumento Fleet n?o configurado; opera??o no backend/backoffice; sem SDK de terceiros no entreg?vel |
+| Terceiros | nenhum relevante | — |
 | Marca | não se transplanta | Qolari |
 
 ### Backoffice
@@ -75,11 +75,11 @@ com RBAC `admin` / `operator` / `finance` e registo de ações.
 
 Aplicado a qualquer captura de build modificado (`repack_suspect`):
 
-- [x] **Mapas** — Google Maps SDK com chave em `local.properties`; o mapa é real. Não se confunde
+- [x] **Mapas** — o SDK exige chave; no laboratório o mapa é desenhado. Não se confunde
       mapa em branco com design.
 - [x] **WebViews** — a moldura é spec; o conteúdo de terceiros não. As páginas web do
       original não entram no entregável.
-- [x] **Push/FCM** - configurado para Driver/Rider (`qolari-driver-prod`); o instrumento Fleet n?o tem push. O `ramen` ? fallback.
+- [x] **Push/FCM** — não configurado; o canal `ramen` é o tempo real do laboratório.
       Estados de notificação do sistema não são capturáveis.
 - [x] **Login social / SSO** — ausente por decisão; o login é nativo por telefone.
 - [x] **IAP / pagamentos** — não se usam. O laboratório tem liquidação interna.
@@ -108,7 +108,7 @@ contra `ui_spec/` do binário original. O que não se confirmar fica marcado par
   (não se confirmou um pedido real).
 - **Fleet:** cobertura funcional; sem paridade visual.
 - **Backoffice:** cobertura da máquina de estados; sem paridade visual.
-- **Toler?ncia:** miniaturas de mapa, login social, p?ginas web, fonte, iOS, vers?o 4.600 vs 4.601.
+- **Tolerância:** mapa, FCM, login social, páginas web, fonte, iOS, versão 4.600 vs 4.601.
 
 ## 7. O que nunca se faz
 
@@ -122,8 +122,7 @@ contra `ui_spec/` do binário original. O que não se confirmar fica marcado par
 
 ## 8. Riscos abertos
 
-1. **Mapa real:** resolvido com Google Maps SDK e a chave em `local.properties`; as
-   miniaturas decorativas dos cartões continuam desenhadas.
+1. **Mapa real:** falta `MAPS_API_KEY`. Sem ela, o mapa é um desenho.
 2. **Rota real:** OSRM opcional; sem ele a rota é uma linha reta.
 3. **Fleet:** sem captura, a paridade visual não é mensurável.
 4. **Rider pós-pedido:** a regra de não confirmar viagem real mantém estes ecrãs em

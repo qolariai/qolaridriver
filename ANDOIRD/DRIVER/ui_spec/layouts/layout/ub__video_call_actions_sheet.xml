@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UConstraintLayout android:id="@id/video_call_actions_constraint" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.constraintlayout.helper.widget.Flow android:orientation="horizontal" android:id="@id/video_call_actions_flow" android:layout_width="0.0dip" android:layout_height="wrap_content" app:flow_horizontalStyle="packed" app:flow_verticalStyle="packed" app:flow_wrapMode="aligned" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    </com.ubercab.ui.core.UConstraintLayout>
+</merge>

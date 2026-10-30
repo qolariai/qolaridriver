@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.features.settings.sections.preferences.ProfileSettingsPreferencesView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__profile_settings_section_header_container" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__profile_settings_section_header_title" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.HeadingSmall" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__profile_settings_section_header_subtitle" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphSmall" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__profile_settings_section_preferences" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.UPlainView android:background="?dividerHorizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__profile_settings_section_delete" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__profile_settings_section_footer" android:paddingLeft="?contentInset" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="?contentInset" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="d7a36134-af17" style="@style/Platform.TextStyle.H6.News.Tertiary" />
+</com.ubercab.profiles.features.settings.sections.preferences.ProfileSettingsPreferencesView>

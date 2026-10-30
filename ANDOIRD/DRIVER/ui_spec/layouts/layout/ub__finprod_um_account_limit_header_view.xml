@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelLarge" android:textColor="?contentPrimary" android:layout_gravity="center_vertical" android:id="@id/ub__finprod_um_account_limit_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uber_money_title" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

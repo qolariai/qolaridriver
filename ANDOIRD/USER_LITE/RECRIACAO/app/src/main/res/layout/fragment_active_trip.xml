@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/ql_white">
 
-    <com.qolari.shared.map.GoogleMapView
+    <com.qolari.userlite.ui.map.RealMapView
         android:id="@+id/map"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -209,15 +209,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tripStops"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:textColor="@color/ql_gray_600"
-                    android:textSize="14sp"
-                    android:visibility="gone" />
-
                 <LinearLayout
                     android:id="@+id/fareCard"
                     android:layout_width="match_parent"
@@ -244,145 +235,6 @@
                         android:fontFamily="sans-serif-medium"
                         android:textColor="@color/ql_black"
                         android:textSize="26sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/rideCheckCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/bg_card"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:visibility="gone">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/trip_ride_check"
-                        android:textColor="@color/ql_black"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="@string/trip_ride_check_question"
-                        android:textColor="@color/ql_gray_600"
-                        android:textSize="14sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/rideOk"
-                            style="@style/Widget.QolariLite.Button.Light"
-                            android:layout_width="0dp"
-                            android:layout_height="46dp"
-                            android:layout_weight="1"
-                            android:text="@string/trip_ride_ok" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/rideHelp"
-                            android:layout_width="0dp"
-                            android:layout_height="46dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_weight="1"
-                            android:backgroundTint="@color/ql_red"
-                            android:text="@string/trip_ride_help"
-                            android:textColor="@color/ql_white" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tipCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/bg_card"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:visibility="gone">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/trip_tip_title"
-                        android:textColor="@color/ql_black"
-                        android:textSize="17sp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/tip1"
-                            style="@style/Widget.QolariLite.Button.Light"
-                            android:layout_width="0dp"
-                            android:layout_height="46dp"
-                            android:layout_weight="1"
-                            android:text="@string/trip_tip_1" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/tip2"
-                            style="@style/Widget.QolariLite.Button.Light"
-                            android:layout_width="0dp"
-                            android:layout_height="46dp"
-                            android:layout_marginStart="6dp"
-                            android:layout_weight="1"
-                            android:text="@string/trip_tip_2" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/tip5"
-                            style="@style/Widget.QolariLite.Button.Light"
-                            android:layout_width="0dp"
-                            android:layout_height="46dp"
-                            android:layout_marginStart="6dp"
-                            android:layout_weight="1"
-                            android:text="@string/trip_tip_5" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/tip0"
-                            style="@style/Widget.QolariLite.Button.Light"
-                            android:layout_width="0dp"
-                            android:layout_height="46dp"
-                            android:layout_marginStart="6dp"
-                            android:layout_weight="1"
-                            android:text="@string/trip_tip_0" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/receiptRow"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/receiptButton"
-                        style="@style/Widget.QolariLite.Button.Light"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:text="@string/trip_receipt" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/disputeButton"
-                        style="@style/Widget.QolariLite.Button.Light"
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_weight="1"
-                        android:text="@string/trip_dispute" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -493,3 +345,4 @@
         app:layout_constraintTop_toTopOf="@id/map" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

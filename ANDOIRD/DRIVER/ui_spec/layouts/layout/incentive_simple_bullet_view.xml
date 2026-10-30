@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_horizontal" android:id="@id/item_icon_layout" android:padding="@dimen/ui__spacing_unit_0.5x" android:layout_width="wrap_content" android:layout_height="@dimen/ui__spacing_unit_3x">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/bullet_icon" android:layout_width="@dimen/ui__spacing_unit_0.5x" android:layout_height="@dimen/ui__spacing_unit_0.5x" app:analyticsId="c456d76a-3e52" app:srcCompat="@drawable/incentives_icon_circle" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/item_description" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_1x" app:analyticsId="6d0865c4-5e26" style="@style/Platform.TextStyle.Small.Normal" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.session_summary.infosheet.InfoSheetView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/info_sheet_header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:header_state="collapse" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/info_sheet_sdui_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.uber.session_summary.infosheet.InfoSheetView>

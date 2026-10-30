@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.do_panel_waypoint_ratings.WaypointRatingsView android:orientation="vertical" android:background="@drawable/ub__ratings_layout_border" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="68310d48-0190"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/do_panel_section_title_view" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/waypoint_ratings_frame_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/waypoint_ratings_thumbs_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_13x">
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/waypoint_ratings_thumb_down_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0" app:analyticsId="e5507839-db6f">
+                <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/waypoint_ratings_thumb_down" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" android:scaleType="centerCrop" android:tint="?iconTertiary" app:srcCompat="@drawable/ub__ic_thumbs_down_outline" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="@dimen/ui__divider_width" android:layout_height="fill_parent" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/waypoint_ratings_thumb_up_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0" app:analyticsId="6e699ab8-f0fc">
+                <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/waypoint_ratings_thumb_up" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" android:scaleType="centerCrop" android:tint="?iconTertiary" app:srcCompat="@drawable/ub__ic_thumbs_up_outline" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/waypoint_ratings_confirmation_layout" android:padding="@dimen/ui__spacing_unit_3x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_13x">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/waypoint_ratings_confirmed_thumb" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" android:scaleType="centerCrop" android:tint="?iconSecondary" app:analyticsId="a35002a4-f164" app:srcCompat="@drawable/ub__ic_thumbs_down" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/waypoint_ratings_confirmation_text_layout" android:paddingTop="@dimen/ub__spacing_unit_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:textColor="?android:textColorSecondary" android:id="@id/waypoint_ratings_confirmation_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/thumbs_confirmation_title" />
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Subtitle.Medium" android:textColor="?accentLink" android:id="@id/waypoint_ratings_reconfirm_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAllCaps="true" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.do_panel_waypoint_ratings.WaypointRatingsView>

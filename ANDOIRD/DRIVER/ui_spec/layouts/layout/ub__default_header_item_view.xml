@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.job_overflow_default.header.DefaultHeaderItemView android:gravity="center" android:orientation="horizontal" android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/leading_icon" android:visibility="gone" android:layout_width="@dimen/carbon_ui__text_size_button" android:layout_height="@dimen/carbon_ui__text_size_button" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" app:tint="?accentPrimary" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Bold" android:textColor="?accentPrimary" android:id="@id/warning_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UImageView android:id="@id/trailing_icon" android:layout_width="@dimen/carbon_ui__text_size_button" android:layout_height="@dimen/carbon_ui__text_size_button" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" app:srcCompat="@drawable/ub_ic_circle_i" app:tint="?accentPrimary" />
+</com.ubercab.job_overflow_default.header.DefaultHeaderItemView>

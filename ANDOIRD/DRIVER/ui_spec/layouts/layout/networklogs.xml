@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.networklog.ui.NetworkLogView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.URecyclerView android:id="@id/networklog_rv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:orientation="horizontal" android:id="@id/back_button" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/back" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+</com.ubercab.networklog.ui.NetworkLogView>

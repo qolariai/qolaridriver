@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__document_attachments_widget_container" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="5d6c3287-20b2">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_0x" app:analyticsId="d1006bcb-4293">
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__document_attachments_widget_title" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="62ab6d75-06c4" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.UTextView android:textColor="?contentSecondary" android:id="@id/ub__document_attachments_widget_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="ec97d8b1-7406" style="@style/Platform.TextStyle.ParagraphXSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/ub__document_attachments_widget_image" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="fill_parent" app:analyticsId="9c0b2b59-96be" app:srcCompat="@drawable/ub_ic_document" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

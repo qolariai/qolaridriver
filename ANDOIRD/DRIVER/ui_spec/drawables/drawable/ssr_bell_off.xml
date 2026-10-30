@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="75.0dip" android:width="75.0dip" android:viewportWidth="75.0" android:viewportHeight="75.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M6.854,6.854h61v61h-61z" />
+        <path android:fillColor="?black" android:pathData="M29.898,60.595C30.779,63.803 33.762,66.16 37.354,66.16C40.946,66.16 43.928,63.803 44.81,60.595H29.898Z" />
+        <path android:fillColor="?blue200" android:pathData="M61.076,50.906H13.632V57.257H61.076V50.906Z" />
+        <path android:fillColor="?blue600" android:pathData="M58.095,40.635V29.302C58.095,24 55.045,19.09 50.097,16.667L41.151,12.215C41.151,10.186 39.456,8.549 37.355,8.549C35.254,8.549 33.56,10.186 33.56,12.215L28.792,14.588L58.095,40.635ZM23.986,17.005C19.467,19.578 16.615,24.23 16.615,29.302V44.753C16.615,46.127 16.141,47.502 15.327,48.615L13.633,50.907H61.077L59.383,48.615C59.278,48.483 59.181,48.348 59.089,48.209L23.986,17.005Z" android:fillType="evenOdd" />
+        <path android:fillColor="?black" android:pathData="M12.515,10.132L66.515,58.132" android:strokeColor="?blue600" android:strokeWidth="5.0" />
+    </group>
+</vector>

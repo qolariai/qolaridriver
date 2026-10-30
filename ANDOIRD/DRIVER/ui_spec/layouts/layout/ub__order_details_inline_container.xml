@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="start|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Headline.Medium" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/ub__order_details_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" uber:analyticsId="3c9cd319-62cd" uber:autoSizeMaxTextSize="?textSizeHeadline" uber:autoSizeMinTextSize="?textSizeSubtitle" uber:autoSizeTextType="uniform" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Subtitle.Normal" android:ellipsize="middle" android:id="@id/ub__order_details_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" uber:analyticsId="53f965f8-ae81" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Subtitle.Normal" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/ub__order_details_suffix" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" uber:analyticsId="910446ab-e005" />
+</com.ubercab.ui.core.ULinearLayout>

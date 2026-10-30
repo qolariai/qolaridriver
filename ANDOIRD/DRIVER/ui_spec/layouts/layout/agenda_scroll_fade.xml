@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UPlainView android:layout_gravity="bottom" android:id="@id/scroll_fade" android:background="@drawable/ub__agenda_scroll_fade_gradient_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_4x" app:layout_behavior="com.ubercab.carbon.core.agenda.BottomSheetScrollFadeBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

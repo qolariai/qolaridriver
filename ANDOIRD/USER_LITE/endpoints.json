@@ -8,225 +8,24 @@
   "integrity": "clean",
   "nota": "A Uber Lite desenha o conteudo numa WebView e nao expoe um contrato nativo utilizavel. Estes endpoints sao a spec do NOSSO backend para a app nova; nao sao uma copia do protocolo da Uber.",
   "endpoints": [
-    {
-      "method": "GET",
-      "path": "/rt/lite/session",
-      "screens": [
-        "Inicio",
-        "Conta"
-      ],
-      "response": {
-        "firstName": "string",
-        "riderUUID": "string",
-        "payment": "objeto"
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/rt/lite/location",
-      "screens": [
-        "Inicio"
-      ],
-      "request": {
-        "latitude": "float",
-        "longitude": "float"
-      },
-      "response": {
-        "ok": "bool"
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/rt/lite/home",
-      "screens": [
-        "Inicio"
-      ],
-      "response": {
-        "headline": "string",
-        "savedPlace": "place",
-        "suggestions": "array",
-        "promos": "array"
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/rt/lite/places",
-      "screens": [
-        "Pesquisa de destino"
-      ],
-      "request": {
-        "q": "string"
-      },
-      "response": {
-        "places": "array"
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/rt/lite/quote",
-      "screens": [
-        "Escolher viagem"
-      ],
-      "request": {
-        "pickup": "ponto",
-        "dropoff": "ponto"
-      },
-      "response": {
-        "products": "array",
-        "dropoff": "place",
-        "promo": "opcional"
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/rt/lite/request",
-      "screens": [
-        "Pedir"
-      ],
-      "request": {
-        "pickup": "ponto",
-        "dropoff": "ponto",
-        "productId": "int",
-        "payment": "cash|card",
-        "promoCode": "opcional"
-      },
-      "response": {
-        "trip": "Trip (com PIN)"
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/rt/lite/active",
-      "screens": [
-        "Viagem ativa"
-      ],
-      "response": {
-        "trip": "Trip ou null"
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/rt/lite/trips/{tripUUID}",
-      "screens": [
-        "Detalhe da viagem"
-      ],
-      "response": {
-        "trip": "Trip"
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/rt/lite/trips/{tripUUID}/cancel",
-      "screens": [
-        "Cancelar"
-      ],
-      "request": {
-        "reason": "string"
-      },
-      "response": {
-        "trip": "Trip cancelada"
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/rt/lite/trips/{tripUUID}/rate",
-      "screens": [
-        "Avaliar"
-      ],
-      "request": {
-        "stars": "1..5",
-        "comment": "string"
-      },
-      "response": {
-        "trip": "Trip com myRating"
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/rt/lite/history",
-      "screens": [
-        "Atividade"
-      ],
-      "response": {
-        "trips": "array"
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/rt/lite/wallet",
-      "screens": [
-        "Carteira"
-      ],
-      "response": {
-        "cash": "label",
-        "profiles": "array"
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/rt/lite/payments/select",
-      "screens": [
-        "Pagamento"
-      ],
-      "request": {
-        "id": "cash|card"
-      },
-      "response": {
-        "payment": "objeto"
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/rt/lite/promotions",
-      "screens": [
-        "Promocoes"
-      ],
-      "response": {
-        "promotions": "array"
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/rt/lite/promotions/apply",
-      "screens": [
-        "Promocoes"
-      ],
-      "request": {
-        "code": "string"
-      },
-      "response": {
-        "promo": "objeto"
-      }
-    },
-    {
-      "method": "POST",
-      "path": "/rt/lite/route",
-      "screens": [
-        "Inicio",
-        "Escolher viagem",
-        "Viagem ativa"
-      ],
-      "request": {
-        "origin": "ponto",
-        "destination": "ponto"
-      },
-      "response": {
-        "polyline": "ponto[]",
-        "distanceMeters": "int",
-        "durationSeconds": "int",
-        "source": "osrm|straight_line"
-      }
-    }
+    {"method": "GET", "path": "/rt/lite/session", "screens": ["Inicio", "Conta"], "response": {"firstName": "string", "riderUUID": "string", "payment": "objeto"}},
+    {"method": "POST", "path": "/rt/lite/location", "screens": ["Inicio"], "request": {"latitude": "float", "longitude": "float"}, "response": {"ok": "bool"}},
+    {"method": "GET", "path": "/rt/lite/home", "screens": ["Inicio"], "response": {"headline": "string", "savedPlace": "place", "suggestions": "array", "promos": "array"}},
+    {"method": "GET", "path": "/rt/lite/places", "screens": ["Pesquisa de destino"], "request": {"q": "string"}, "response": {"places": "array"}},
+    {"method": "POST", "path": "/rt/lite/quote", "screens": ["Escolher viagem"], "request": {"pickup": "ponto", "dropoff": "ponto"}, "response": {"products": "array", "dropoff": "place", "promo": "opcional"}},
+    {"method": "POST", "path": "/rt/lite/request", "screens": ["Pedir"], "request": {"pickup": "ponto", "dropoff": "ponto", "productId": "int", "payment": "cash|card", "promoCode": "opcional"}, "response": {"trip": "Trip (com PIN)"}},
+    {"method": "GET", "path": "/rt/lite/active", "screens": ["Viagem ativa"], "response": {"trip": "Trip ou null"}},
+    {"method": "GET", "path": "/rt/lite/trips/{tripUUID}", "screens": ["Detalhe da viagem"], "response": {"trip": "Trip"}},
+    {"method": "POST", "path": "/rt/lite/trips/{tripUUID}/cancel", "screens": ["Cancelar"], "request": {"reason": "string"}, "response": {"trip": "Trip cancelada"}},
+    {"method": "POST", "path": "/rt/lite/trips/{tripUUID}/rate", "screens": ["Avaliar"], "request": {"stars": "1..5", "comment": "string"}, "response": {"trip": "Trip com myRating"}},
+    {"method": "GET", "path": "/rt/lite/history", "screens": ["Atividade"], "response": {"trips": "array"}},
+    {"method": "GET", "path": "/rt/lite/wallet", "screens": ["Carteira"], "response": {"cash": "label", "profiles": "array"}},
+    {"method": "POST", "path": "/rt/lite/payments/select", "screens": ["Pagamento"], "request": {"id": "cash|card"}, "response": {"payment": "objeto"}},
+    {"method": "GET", "path": "/rt/lite/promotions", "screens": ["Promocoes"], "response": {"promotions": "array"}},
+    {"method": "POST", "path": "/rt/lite/promotions/apply", "screens": ["Promocoes"], "request": {"code": "string"}, "response": {"promo": "objeto"}}
   ],
   "eventos": [
-    {
-      "nome": "trip_status",
-      "subscritores": [
-        "rider lite"
-      ],
-      "transporte": "ramen ou polling de /rt/lite/active",
-      "evidence": "served"
-    }
+    {"nome": "trip_status", "subscritores": ["rider lite"], "transporte": "ramen ou polling de /rt/lite/active", "evidence": "served"}
   ],
   "lacunas": [
     "Sem captura de viagem real (regra: nunca confirmar um pedido na Uber).",

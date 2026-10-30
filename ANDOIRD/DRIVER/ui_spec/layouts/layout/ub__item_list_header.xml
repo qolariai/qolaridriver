@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UTextView android:textColor="?contentTertiary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" android:textAlignment="viewStart" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" android:paddingVertical="@dimen/ui__spacing_unit_0.5x" app:analyticsId="a74c01d8-d1cb" style="@style/Platform.TextStyle.LabelXSmall"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

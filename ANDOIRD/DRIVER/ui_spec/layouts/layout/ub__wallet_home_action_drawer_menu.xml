@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.payment_integration.actions.drawermenu.DrawerMenuView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="40372298-cf2e"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?textPrimary" android:id="@id/drawer_menu_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="a5e8c9bd-88de" style="@style/Platform.TextStyle.ParagraphDefault" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/drawer_menu_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.payment_integration.actions.drawermenu.DrawerMenuView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UAppBarLayout android:id="@id/appbar" android:background="?android:colorBackground" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStartWithNavigation="0.0dip" app:elevation="@dimen/ui__header_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:titleTextAppearance="@style/Platform.TextStyle.LabelDefault" style="@style/Widget.Platform.Toolbar">
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="09ab8c87-a719" style="@style/Platform.TextStyle.HeadingDefault" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.UToolbar>
+</com.ubercab.ui.core.UAppBarLayout>

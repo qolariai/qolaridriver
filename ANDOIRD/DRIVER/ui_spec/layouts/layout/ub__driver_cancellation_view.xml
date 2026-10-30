@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.driver_cancellation.DriverCancellationView android:gravity="center|top" android:orientation="vertical" android:background="?backgroundSecondary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="f2e6a4f8-7cee"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize">
+        <com.ubercab.ui.core.UImageButton android:id="@id/cancel_back_arrow" android:background="?backgroundTransparent" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="fd945b7e-eff1" app:srcCompat="@drawable/ub_ic_x" />
+        <com.ubercab.ui.core.UTextView android:id="@id/cancel_feedback_screen_title" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:analyticsId="09f66c3d-0146" style="@style/Platform.TextStyle.ParagraphLarge" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?borderOpaque" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/ub__driver_cancellation_get_help" />
+            <com.ubercab.ui.core.UTextView android:textColor="?contentSecondary" android:id="@id/cancel_feedback_section_header" android:paddingLeft="@dimen/ui__spacing_unit_3x" android:paddingTop="@dimen/ui__spacing_unit_4x" android:paddingRight="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/carbon_ui__spacing_unit_1.5x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_3x" android:paddingEnd="@dimen/ui__spacing_unit_3x" app:analyticsId="e61e2ea2-edfa" style="@style/Platform.TextStyle.ParagraphSmall" />
+            <com.ubercab.ui.core.UPlainView android:id="@id/cancel_feedback_section_header_divider" android:background="?borderOpaque" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.URecyclerView android:id="@id/cancel_feedback_recycler_view" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_10x" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.driver_cancellation.DriverCancellationView>

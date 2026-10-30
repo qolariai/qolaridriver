@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.features.voucher_selector.VoucherSelectorView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__voucher_improved_title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__voucher_selector_title" android:paddingLeft="?contentInset" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingRight="?contentInset" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/voucher_section_title" android:layout_weight="1.0" style="@style/Platform.TextStyle.ListHeader" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:enabled="true" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/ub__voucher_see_details_button" android:padding="?contentInset" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="?contentInset" android:text="@string/voucher_section_see_details_button" android:layout_weight="0.0" uber:buttonType="secondary" uber:shape="pill" uber:size="small" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__voucher_selector_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ubercab.profiles.features.voucher_selector.VoucherSelectorView>

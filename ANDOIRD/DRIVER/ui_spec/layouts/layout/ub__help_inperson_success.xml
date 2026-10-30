@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?gutterSize" android:paddingEnd="?gutterSize">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_weight="0.0" app:analyticsId="75ac84d4-c6c9" app:srcCompat="@drawable/ub__help_inperson_success_check" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Headline.Normal" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/help_inperson_appointment_success_header" android:layout_weight="0.0" app:analyticsId="a751d6cb-eb93" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:gravity="center_horizontal" android:id="@id/help_inperson_appointment_success_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_weight="1.0" app:analyticsId="82618d7d-4095" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/help_inperson_appointment_success_dismiss_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/help_inperson_appointment_success_dismiss" android:layout_weight="0.0" app:analyticsId="3755199f-1ce1" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</merge>

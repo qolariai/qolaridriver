@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:id="@id/style_guide_screen_empty_state" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="06d0ebbd-a7f5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.emptystate.EmptyStateView android:id="@id/empty_state" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" />
+</com.ubercab.ui.core.UFrameLayout>

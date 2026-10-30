@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.text.BaseTextView android:textColor="?contentInversePrimary" android:id="@id/toast_alert" android:paddingLeft="?contentInset" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingRight="?contentInset" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="4" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" style="@style/Platform.TextStyle.ParagraphSmall"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

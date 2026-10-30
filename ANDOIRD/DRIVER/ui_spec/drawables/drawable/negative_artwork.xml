@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?red50" />
+            <size android:height="@dimen/ub__restricted_delivery_dialog_artwork_height" android:width="@dimen/ub__restricted_delivery_dialog_artwork_width" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:id="@id/artwork_icon" android:drawable="@drawable/ic_alert" />
+</layer-list>

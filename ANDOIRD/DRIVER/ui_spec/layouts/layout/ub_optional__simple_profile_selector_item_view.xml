@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__simple_profile_selector_platform_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/ub__simple_profile_selector_action_button" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:minWidth="@dimen/ui__spacing_unit_10x" android:text="@string/ub__simple_profile_selector_item_edit_button_text" android:layout_marginStart="@dimen/ui__spacing_unit_8x" app:backgroundTint="?buttonSecondary" app:buttonType="secondary" app:cornerRadius="@dimen/ui__spacing_unit_13x" app:foregroundSelectorColor="?foregroundSelectorColor" app:shape="pill" app:size="small" />
+</com.ubercab.ui.core.ULinearLayout>

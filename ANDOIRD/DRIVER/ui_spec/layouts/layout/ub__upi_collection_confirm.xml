@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.upi_collection.operation.confirm.UPICollectionConfirmView android:orientation="vertical" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="@string/ub__upi_collection_confirm_impression"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" uber:srcCompat="@drawable/ub__upi_collect_confirm_interstitial" />
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__upi_collection_confirm_title" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" style="@style/Platform.TextStyle.H3.News" />
+            <com.ubercab.ui.core.UTextView android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/ub__upi_collection_confirm_description" style="@style/Platform.TextStyle.H4.News" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__upi_collection_confirm_close" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginRight="?contentInset" android:layout_marginBottom="?contentInset" android:text="@string/ub__upi_collection_confirm_vpa" uber:analyticsId="@string/ub__upi_collection_confirm_close_button_id" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+</com.ubercab.presidio.payment.upi_collection.operation.confirm.UPICollectionConfirmView>

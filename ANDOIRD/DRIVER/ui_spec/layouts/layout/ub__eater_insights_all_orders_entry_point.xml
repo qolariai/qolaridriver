@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.privacy.privacy_center.eater_insights.EaterInsightsBannerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="130e48d7-1e5d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.banner.BaseBanner android:id="@id/ub__eater_insights_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:analyticsId="a2981136-66b3" app:banner_action_button_icon="@drawable/ub_ic_chevron_right" app:banner_background_color="?backgroundSecondary" app:banner_hierarchy="high" app:banner_message_text="@string/ub__eater_insights_all_orders_title_v2" app:banner_start_artwork_type="none" app:banner_start_icon="@drawable/eater_insights_light_bulb" app:banner_text_color="?contentPrimary" app:banner_type="custom" />
+</com.uber.privacy.privacy_center.eater_insights.EaterInsightsBannerView>

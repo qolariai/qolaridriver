@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:background="?dividerHorizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/checkbox_container" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/sticky_checkbox_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Platform.TextStyle.Subtitle.Medium" />
+        <com.ubercab.ui.core.UCheckBox android:id="@id/sticky_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" app:tint="?buttonPrimaryTint" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/secondary_sticky_cta_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/primary_sticky_cta_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/tertiary_sticky_cta_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:buttonType="tertiary" style="@style/Platform.Button.BaseDynamic" />
+</merge>

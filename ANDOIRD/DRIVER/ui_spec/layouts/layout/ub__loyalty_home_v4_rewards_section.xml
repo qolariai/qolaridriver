@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.driver_loyalty.home_v4.section_header.LoyaltySectionHeaderView android:id="@id/ub__loyalty_rewards_section_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__loyalty_rewards_recycler_adapter" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

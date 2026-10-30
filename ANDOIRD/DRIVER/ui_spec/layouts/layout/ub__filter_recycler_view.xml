@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/filter_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" app:analyticsId="3ef9062f-6d84" style="@style/Platform.TextStyle.LabelLarge" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/filter_recycler_view" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

@@ -1,0 +1,19 @@
+{
+ "strings": {
+  "string": {
+   "login_confirmation_notification_subject": "\"새로운 기기에서 계정에 로그인했습니다.\n이 로그인 정보를 확인해 주세요.\"",
+   "login_confirmation_notification_text": "\"새로운 기기에서 계정에 로그인했습니다.\n이 로그인 정보를 확인해 주세요.\n%1$s\n%2$s\n%3$s\"",
+   "login_confirmation_notification_title": "새로운 기기에서 로그인",
+   "login_confirmation_summary": "\"최근에 새 기기에서 귀하의 계정에 액세스했습니다. 의심스럽다면 즉시 계정을\n보호할 수 있습니다.\"",
+   "login_confirmation_title": "새 기기에서 로그인",
+   "login_request_body_short": "Uber에 로그인을 시도 중인지 확인해 주세요.",
+   "login_request_network_error": "\"알 수 없는\n네트워크 오류가 발생했습니다. 나중에 다시 시도해 주세요.\"",
+   "login_request_network_error_title": "네트워크 오류",
+   "login_request_no": "아니요",
+   "login_request_title": "\"로그인\n요청\"",
+   "login_request_yes": "예",
+   "this_was_me": "제가 로그인했습니다",
+   "this_wasnt_me": "제가 로그인하지 않았습니다"
+  }
+ }
+}

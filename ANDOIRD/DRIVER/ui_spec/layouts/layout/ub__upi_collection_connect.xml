@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.upi_collection.operation.connect.UPICollectionConnectView android:orientation="vertical" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="@string/ub__upi_collection_connect_impression_id"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:orientation="vertical" android:id="@id/ub__payment_add_payment_coordinator_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/fixed_header" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" uber:srcCompat="@drawable/ub__upi_connect_interstitial" />
+                    <com.ubercab.ui.core.UTextView android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__upi_collection_connect_title" style="@style/Platform.TextStyle.H2.News.Primary" />
+                    <com.ubercab.ui.core.UTextView android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ub__upi_collection_connect_description" style="@style/Platform.TextStyle.H5.News.Primary" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.UScrollView>
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__upi_collection_create_vpa" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginTop="@dimen/ui__spacing_unit_5x" android:layout_marginRight="?contentInset" android:layout_marginBottom="?contentInset" android:text="@string/ub__upi_collection_create_vpa" uber:analyticsId="@string/ub__upi_collection_connect_create_vpa_button_id" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__upi_collection_link_existing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginRight="?contentInset" android:layout_marginBottom="?contentInset" android:text="@string/ub__upi_collection_existing_account_link" uber:analyticsId="@string/ub__upi_collection_connect_link_existing_view_id" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</com.ubercab.presidio.payment.upi_collection.operation.connect.UPICollectionConnectView>

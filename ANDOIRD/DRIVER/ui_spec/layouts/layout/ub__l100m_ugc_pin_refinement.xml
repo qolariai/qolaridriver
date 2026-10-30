@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.driver_ugc.l100m_ugc_report.pinrefinement.L100mUGCPinRefinementView android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="d48d5516-b18d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundTransparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__l100m_ugc_pin_refinement_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__l100m_ugc_pin_refinement_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:layout_marginStart="@dimen/ui__spacing_unit_1.5x" android:elevation="@dimen/ui__button_elevation_raised" android:backgroundTint="?backgroundPrimary" app:buttonType="tertiary" app:icon="@drawable/ub_ic_x" app:shape="circle" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.UFrameLayout android:layout_gravity="end" android:id="@id/ub__l100m_ugc_pin_refinement_controls_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.ubercab.ui.core.UFrameLayout android:layout_gravity="end|top" android:id="@id/ub__l100m_ugc_pin_refinement_map_type_selection_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:layout_marginEnd="@dimen/ui__spacing_unit_1.5x" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="bottom" android:id="@id/ub__l100m_ugc_pin_refinement_bottom_sheet_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.driver_ugc.l100m_ugc_report.pinrefinement.L100mUGCPinRefinementView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center|top" android:id="@id/ub__nav_maneuver_icon" android:layout_width="@dimen/ub__nav_maneuver_icon_size" android:layout_height="@dimen/ub__nav_maneuver_icon_size" android:layout_marginTop="@dimen/ub__nav_perimeter_margin" android:scaleType="centerInside" android:layout_alignParentTop="true" style="@style/NavView.Widget.ManeuverIcon" />
+    <TextView android:gravity="center" android:id="@id/ub__nav_maneuver_distance" android:layout_width="@dimen/ub__nav_primary_guidance_icon_block_width" android:layout_height="wrap_content" android:layout_below="@id/ub__nav_maneuver_icon" style="@style/NavView.Widget.ManeuverDistance" />
+    <com.ubercab.android.nav.TextSizeByLinesTextView android:ellipsize="end" android:gravity="start|center" android:id="@id/ub__nav_maneuver_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="4" android:layout_centerVertical="true" app:ub__nav_fourLineTextSize="@dimen/ub__nav_text_size_primary_maneuver_four_lines" app:ub__nav_oneLineTextSize="@dimen/ub__nav_text_size_primary_maneuver_one_line" app:ub__nav_threeLineTextSize="@dimen/ub__nav_text_size_primary_maneuver_three_lines" app:ub__nav_twoLineTextSize="@dimen/ub__nav_text_size_primary_maneuver_two_lines" style="@style/NavView.Widget.ManeuverText" />
+</merge>

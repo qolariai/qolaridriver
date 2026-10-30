@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.payment_carbon_cash_collect.operation.info.CollectCashInfoView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__collect_cash_info_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="@dimen/ui__spacing_unit_0x" app:header_state="collapse" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__collect_cash_info_recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.ubercab.payment_carbon_cash_collect.operation.info.CollectCashInfoView>

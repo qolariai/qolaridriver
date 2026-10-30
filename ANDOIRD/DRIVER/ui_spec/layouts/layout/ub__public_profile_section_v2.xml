@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__public_profile_section_container" android:background="@drawable/ub__public_profile_item_border" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.uber.earner_profile.section.public_profile.PublicProfileStartContentV2View android:layout_gravity="center_vertical" android:id="@id/ub__public_profile_item_driver_start_content" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/ub__public_profile_section_item_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_3x">
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__public_profile_item_driver_name" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:ellipsize="end" android:id="@id/ub__public_profile_item_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" android:text="@string/ub__public_profile_section_v2_button_text" android:maxLines="2" android:singleLine="false" app:buttonType="secondary" app:shape="pill" app:size="small" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

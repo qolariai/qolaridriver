@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.drivenui.ui.DrivenRichTextLabelView android:id="@id/driven_richtext_label" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="2165699b-79e1"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

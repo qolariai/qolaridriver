@@ -37,8 +37,6 @@ GRPC_PORTS = {"driver": int(os.environ.get("DRIVER_GRPC_PORT", "8092"))}
 BIND_HOST = os.environ.get("BIND_HOST", "0.0.0.0")
 # IP que as APKs usam (so para mostrar na consola)
 PUBLIC_HOST = os.environ.get("PUBLIC_HOST", "127.0.0.1")
-# Base publica da consola/partilha (ex.: https://admin-driver.qolari.com). Vazio = host:porta de laboratorio.
-PUBLIC_BASE_URL = os.environ.get("PUBLIC_BASE_URL", "").rstrip("/")
 
 # Login sem SMS: o codigo de verificacao e sempre este
 OTP_CODE = os.environ.get("OTP_CODE", "0000")
@@ -66,47 +64,5 @@ UPLOAD_MAX_BYTES = 8 * 1024 * 1024
 # Relogio do dominio (expira propostas, despacho, simulacao); os testes desligam-no
 RUN_TICKER = os.environ.get("RUN_TICKER", "1") == "1"
 
-# Rate limit em memoria (login/map-report); os testes desligam-no
-RATE_LIMIT = os.environ.get("RATE_LIMIT", "1") == "1"
-
 # Long-polling das apps (ramen) e da consola
 POLL_HOLD_S = float(os.environ.get("POLL_HOLD_S", "20"))
-
-# FCM HTTP v1 (a chave da conta de servico nunca vai para o repositorio)
-FCM_SERVICE_ACCOUNT = Path(os.environ.get("FCM_SERVICE_ACCOUNT", DATA_DIR / "firebase-service-account.json"))
-FCM_PROJECT_ID = os.environ.get("FCM_PROJECT_ID", "qolari-driver-prod")
-
-# 'lab' (por omissao) ou 'production'. Em producao, validate_production() recusa os defaults.
-ENVIRONMENT = os.environ.get("ENVIRONMENT", "lab")
-PRODUCTION = ENVIRONMENT == "production"
-
-
-def production_problems() -> list[str]:
-    """Problemas que impedem arrancar com ENVIRONMENT=production."""
-    problems = []
-    if SECRET == "qolari-lab-trocar":
-        problems.append("SECRET ainda e o default do laboratorio")
-    if ADMIN_PASSWORD == "admin":
-        problems.append("ADMIN_PASSWORD ainda e 'admin'")
-    if not STRICT_AUTH:
-        problems.append("STRICT_AUTH=0 (qualquer pedido sem token usa o 1.o utilizador)")
-    if DB_URL.startswith("sqlite"):
-        problems.append("DB_URL e SQLite; usar PostgreSQL em producao")
-    if not RATE_LIMIT:
-        problems.append("RATE_LIMIT=0")
-    if OTP_CODE == "0000":
-        problems.append("OTP_CODE fixo (0000); ligar SMS/OTP real")
-    if PUBLIC_HOST in ("127.0.0.1", "localhost"):
-        problems.append("PUBLIC_HOST ainda aponta para localhost")
-    if not (os.environ.get("GOOGLE_MAPS_KEY", "").strip()
-            or (DATA_DIR / "google_maps_api_key.txt").is_file()
-            or (BASE_DIR.parent / "google_maps_api_key.txt").is_file()):
-        problems.append("sem GOOGLE_MAPS_KEY nem google_maps_api_key.txt")
-    return problems
-
-
-def validate_production() -> None:
-    if PRODUCTION:
-        problems = production_problems()
-        if problems:
-            raise RuntimeError("configuracao de producao insegura: " + "; ".join(problems))

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.core.agenda_following_tasks_base.ui.ScopeSummaryContentView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="start|bottom" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.Medium" android:id="@id/overview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.Book" android:id="@id/product_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.Book" android:layout_gravity="start|top" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/description" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="8a074412-6c9b" style="@style/Platform.TextStyle.ParagraphDefault" />
+</com.ubercab.core.agenda_following_tasks_base.ui.ScopeSummaryContentView>

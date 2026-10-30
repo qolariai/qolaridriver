@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ugc_reporter_icon_circle" android:background="@drawable/ub__ugc_circle" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.android.nav.PlatformIconView android:id="@id/ugc_reporter_platform_icon" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ugc_reporter_icon_selector" android:background="@drawable/ub__ugc_circle_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.UImageView android:id="@id/ugc_reporter_icon_image" android:padding="@dimen/ub__ugc_icon_spacing" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="69281fb0-acb1" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ugc_reporter_icon_checkmark" android:background="@drawable/ub__ugc_circle_checkmark" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

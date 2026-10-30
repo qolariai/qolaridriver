@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__vouchers_dynamic_header_video_thumbnail" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__vouchers_dynamic_header_video_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

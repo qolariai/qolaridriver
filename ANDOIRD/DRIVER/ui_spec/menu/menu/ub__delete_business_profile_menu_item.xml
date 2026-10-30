@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_red_trash_can" android:id="@id/ub__delete_business_profile_menu_item" android:title="@string/intent_profile_settings_delete_profile_menu_title" app:showAsAction="always|collapseActionView" />
+</menu>

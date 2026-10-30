@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.networklog.ui.info.NetworkLogInfoView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" app:srcCompat="@drawable/ic_search" />
+        <com.ubercab.ui.core.UEditText android:id="@id/ub__network_log_search_bar" android:background="@drawable/ub__white_button_rounded_corners" android:padding="@dimen/ui__spacing_unit_0.5x" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/network_search_for" android:maxLines="1" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionSearch" android:layout_marginStart="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UScrollView android:id="@id/ub__network_log_info_scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textColorHighlight="?accentPrimary" android:id="@id/ub__network_log_info_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" />
+                <com.ubercab.ui.core.UTextView android:textColorHighlight="@color/text_highlight" android:id="@id/ub__network_log_info_protocol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" />
+                <com.ubercab.ui.core.UTextView android:textColorHighlight="@color/text_highlight" android:id="@id/ub__network_log_info_host" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" />
+                <com.ubercab.ui.core.UTextView android:textColorHighlight="@color/text_highlight" android:id="@id/ub__network_log_info_path" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" />
+                <com.ubercab.ui.core.UTextView android:textColorHighlight="@color/text_highlight" android:id="@id/ub__network_log_info_query_params" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" />
+                <com.ubercab.ui.core.UTextView android:textColorHighlight="@color/text_highlight" android:id="@id/ub__network_log_info_request" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:textIsSelectable="true" />
+                <com.ubercab.ui.core.UTextView android:textColorHighlight="@color/text_highlight" android:id="@id/ub__network_log_info_response" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:textIsSelectable="true" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:orientation="horizontal" android:id="@id/back_button" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/back" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.networklog.ui.info.NetworkLogInfoView>

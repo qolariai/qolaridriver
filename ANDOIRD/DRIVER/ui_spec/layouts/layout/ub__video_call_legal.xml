@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.video_call.base.VideoCallActionsSheetView android:id="@id/video_call_waiting_actions_flow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelXSmall" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/video_call_legal_preview_text" android:textAlignment="center" app:analyticsId="300e5f9f-58b9" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

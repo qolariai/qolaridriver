@@ -13,4 +13,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "qolari-userlite-recriacao"
 include(":app")
-

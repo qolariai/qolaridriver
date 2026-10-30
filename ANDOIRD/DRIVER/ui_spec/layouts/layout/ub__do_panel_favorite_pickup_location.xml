@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.do_panel_favorite_pickup_location.FavoritePickupLocationView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/do_panel_section_title_view" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/do_panel_favorite_pickup_location_container" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="915ffcbe-2041">
+            <com.ubercab.ui.core.UImageView android:id="@id/do_panel_favorite_pickup_location_save_button" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:scaleType="center" android:adjustViewBounds="true" app:analyticsId="2fd1f7d0-25de" app:srcCompat="@drawable/ub__star_empty" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorPrimary" android:layout_gravity="center_vertical" android:id="@id/do_panel_favorite_pickup_location_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:analyticsId="94819d59-4fce" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.carbon.core.ui.ProgressFrameLayout android:layout_gravity="center" android:id="@id/do_panel_favorite_pickup_location_outline" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+</com.ubercab.do_panel_favorite_pickup_location.FavoritePickupLocationView>

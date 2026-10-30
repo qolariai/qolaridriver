@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ui__spacing_unit_8x" android:width="@dimen/ui__spacing_unit_8x" android:autoMirrored="true" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateX="-2544.0" android:translateY="-881.0">
+        <group android:translateX="2552.0" android:translateY="882.0">
+            <path android:fillColor="?iconAccent" android:pathData="M3 6C4.65685 6 6 4.65685 6 3 6 1.34315 4.65685 0 3 0 1.34315 0 0 1.34315 0 3 0 4.65685 1.34315 6 3 6Z" />
+        </group>
+        <group android:translateX="2553.1" android:translateY="890.0">
+            <path android:fillColor="?iconAccent" android:pathData="M13.1 9.1l-2.7 1.3C9.8 9.2 9.2 7.9 9.2 7.9l-4.3 0C4.3 7.9 3.8 7.6 3.6 7.1L0.00000038147 0 9.9 0l0 3 -4 0 1 2 4.1 0 2.1 4.1z" />
+        </group>
+        <group android:translateX="2546.0" android:translateY="887.0">
+            <path android:fillColor="?iconAccent" android:pathData="M17 16l-5 0C9.5 16 7.3 14.6 6.2 12.4L0 0 3.4 0 8.9 11.1C9.5 12.3 10.7 13 12 13l3.5 0 1.5 3z" />
+        </group>
+    </group>
+</vector>

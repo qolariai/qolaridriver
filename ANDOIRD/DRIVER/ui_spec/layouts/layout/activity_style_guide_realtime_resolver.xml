@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_realtime_resolver" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="58fb069d-6e06"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_0.5x" android:showDividers="middle">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_text_color" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_text" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_background_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_background_text" />
+                <com.ubercab.ui.core.UPlainView android:id="@id/style_guide_realtime_resolver_background_color_constant_box" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_border_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_border" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_border_text" />
+                <com.ubercab.ui.core.UPlainView android:id="@id/style_guide_realtime_resolver_border_color_constant_box" android:background="#ff0000ff" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_global_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_global" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_global_text" />
+                <com.ubercab.ui.core.UPlainView android:id="@id/style_guide_realtime_resolver_global_color_constant_box" android:background="#ff0000ff" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_icon" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_text" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_realtime_resolver_icon_imageview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_no_background_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_icon_background" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_resolver_text" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_realtime_resolver_icon_imageview_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?accentWarning" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_background_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_icon_background_res" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_resolver_text" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_realtime_resolver_icon_imageview_background_res" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?accentWarning" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_background_smaller_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_icon_small_background_res" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_resolver_text" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_realtime_resolver_icon_imageview_small_background_res" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?accentWarning" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_background_tint_override_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_icon_tint_res" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_resolver_text" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_realtime_resolver_icon_imageview_tint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?accentWarning" android:backgroundTint="?backgroundInversePrimary" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_realtime_resolver_icon_imageview_tint_res" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?accentWarning" android:backgroundTint="?backgroundPrimary" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_background_rounded_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_icon_rounded_background_res" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_resolver_text" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_realtime_resolver_icon_imageview_rounded_background_res" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?accentWarning" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_background_frame_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_icon_background_frame" android:background="?selectableItemBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_icon_resolver_text" />
+                <com.ubercab.ui.core.UFrameLayout android:id="@id/style_guide_realtime_resolver_frame_imageview_background" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UImageView android:id="@id/style_guide_realtime_resolver_icon_imageview_frame_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?accentWarning" />
+                </com.ubercab.ui.core.UFrameLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_dimen_text_title" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/style_guide_realtime_resolver_dimen_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/style_guide_realtime_resolver_dimen_text" />
+                <com.ubercab.ui.core.UPlainView android:id="@id/style_guide_realtime_resolver_dimen_constant_box" android:background="#ff0000ff" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

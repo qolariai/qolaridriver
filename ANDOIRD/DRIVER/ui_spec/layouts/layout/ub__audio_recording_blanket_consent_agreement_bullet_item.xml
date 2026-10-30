@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:paddingTop="@dimen/ui__spacing_unit_1.5x" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:layout_width="@dimen/ub__safety_audio_recording_numbered_circle_size" android:layout_height="@dimen/ub__safety_audio_recording_numbered_circle_size" app:analyticsId="bfff774e-59ce" app:srcCompat="@drawable/ub__audio_recording_numbered_circle_background" />
+        <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:gravity="center" android:layout_gravity="center" android:id="@id/audio_recording_blanket_consent_item_number" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="9d59db16-9540" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UTextView android:gravity="center_vertical" android:id="@id/audio_recording_blanket_consent_item_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_4x" app:analyticsId="22765bd3-b864" style="@style/Platform.TextStyle.Paragraph.Medium" />
+    <com.ubercab.ui.core.UPlainView android:background="?borderOpaque" android:layout_width="fill_parent" android:layout_height="@dimen/ub__safety_audio_recording_divider_height" android:layout_marginStart="@dimen/ui__spacing_unit_6x" />
+</com.ubercab.ui.core.ULinearLayout>

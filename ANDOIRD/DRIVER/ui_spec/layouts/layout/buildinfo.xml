@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.buildinfo.BuildInfoView android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="2" style="@style/MobileStudio.Plugin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:layout_gravity="fill_horizontal|start" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Build Information" android:layout_columnSpan="2" style="@style/MobileStudio.Plugin.Header" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="start|center" android:text="Version" style="@style/MobileStudio.Plugin.RowTitle" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="fill_horizontal|start|center" android:id="@id/mobilestudio_buildinfo_version" style="@style/MobileStudio.Plugin.RowText" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="start|center" android:text="SHA" style="@style/MobileStudio.Plugin.RowTitle" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="fill_horizontal|start|center" android:id="@id/mobilestudio_buildinfo_sha" style="@style/MobileStudio.Plugin.RowText" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="start|center" android:text="Date" style="@style/MobileStudio.Plugin.RowTitle" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="fill_horizontal|start|center" android:id="@id/mobilestudio_buildinfo_date" style="@style/MobileStudio.Plugin.RowText" />
+</com.uber.mobilestudio.buildinfo.BuildInfoView>

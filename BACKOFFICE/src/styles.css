@@ -357,9 +357,3 @@ td.row-actions { margin: 0; justify-content: flex-end; }
   .fleet-stats { grid-template-columns: repeat(2, 1fr); }
   .toasts { left: 16px; right: 16px; }
 }
-
-.chat { display: flex; flex-direction: column; gap: 8px; max-height: 360px; overflow: auto; padding: 8px 0; }
-.chat-row { display: flex; flex-direction: column; gap: 2px; max-width: 78%; padding: 8px 12px; border-radius: 10px; }
-.chat-row.user { align-self: flex-start; background: #eef1f6; }
-.chat-row.support { align-self: flex-end; background: #111; color: #fff; }
-.chat-row small { opacity: .6; font-size: 11px; }

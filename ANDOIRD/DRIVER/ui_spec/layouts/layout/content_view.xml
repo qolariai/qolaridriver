@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.inspection_sheet.core.ContentView android:orientation="vertical" android:id="@id/content_view" android:background="@drawable/ub__rectangle_top_corners_rounded" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:layout_gravity="center_horizontal" android:id="@id/ub_primary_divider_standard_view_top" android:background="@drawable/ub__divider_background" android:layout_width="@dimen/inspection_sheet_top_divider_width" android:layout_height="@dimen/ui__spacing_unit_0.5x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_0x" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/header_container" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/content_container" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.URelativeLayout>
+</com.ubercab.inspection_sheet.core.ContentView>

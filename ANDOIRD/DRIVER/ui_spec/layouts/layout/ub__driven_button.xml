@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.drivenui.ui.DrivenButtonView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.uber.drivenui.ui.DrivenBaseMaterialButton android:id="@id/rect" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="6b65ebd0-3d3b" style="@style/Platform.Button.BaseDynamic" />
+    <com.uber.drivenui.ui.DrivenSquareCircleButton android:id="@id/square" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="94328421-d773" app:icon="@drawable/ic_location_home" style="@style/Platform.Button.Base.CircleSquareDynamic" />
+</com.uber.drivenui.ui.DrivenButtonView>

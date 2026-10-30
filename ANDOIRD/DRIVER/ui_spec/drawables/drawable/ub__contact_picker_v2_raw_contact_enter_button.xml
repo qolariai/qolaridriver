@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/ub__contact_picker_v2_raw_contact_enter_button_border" android:color="?accentLink" />
+    <corners android:radius="@dimen/ui__corner_radius" />
+</shape>

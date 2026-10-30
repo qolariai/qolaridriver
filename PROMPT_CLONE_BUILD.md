@@ -47,10 +47,7 @@ elemento | x | y | w | h | cor | fontSize | weight | lineHeight | raio
 ```
 
 Mede na imagem. **Não estimes a olho.** Cruza com `ui_spec/` e, se divergirem,
-diz qual seguiste e porquê. Se tiveres o artefacto descodificado
-(`decode_android_resources`), os valores de `values/` são a fonte dos tokens —
-mas quem decide é a medição no PNG: se divergirem, ganha o PNG e a divergência
-entra na lista de assunções.
+diz qual seguiste e porquê.
 
 Se já existir `tokens.md` (ou o teu ficheiro de tema), usa-o e acrescenta-lhe o
 que falta — no fim, escreve lá os valores novos. Ecrãs medidos isoladamente

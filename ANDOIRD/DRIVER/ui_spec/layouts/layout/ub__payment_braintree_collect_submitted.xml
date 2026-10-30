@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.braintree.operation.collection.submit.BraintreeCollectSubmittedView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="6a344ddf-195b"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_horizontal" android:layout_width="@dimen/ui__spacing_unit_10x" android:layout_height="@dimen/ui__spacing_unit_10x">
+                <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/braintree_payment_success_loading" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/braintree_payment_success_icon" android:layout_width="@dimen/ui__spacing_unit_10x" android:layout_height="@dimen/ui__spacing_unit_10x" uber:srcCompat="@drawable/ic__payment_success" />
+            </com.ubercab.ui.core.UFrameLayout>
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:id="@id/braintree_payment_submit_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/payment_successful_title_text" style="@style/Platform.TextStyle.Headline.Normal" />
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:id="@id/braintree_payment_submit_byline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/payment_confirmed_byline" android:layout_marginStart="@dimen/ui__spacing_unit_5x" android:layout_marginEnd="@dimen/ui__spacing_unit_5x" style="@style/Platform.TextStyle.Paragraph.Normal" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="bottom" android:id="@id/ub__secondary_button" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="@dimen/ui__braintree_collection_spacing_unit_1.5x" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="bottom" android:id="@id/ub__primary_button" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/payment_complete_see_balance" android:layout_weight="1.0" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.presidio.payment.braintree.operation.collection.submit.BraintreeCollectSubmittedView>

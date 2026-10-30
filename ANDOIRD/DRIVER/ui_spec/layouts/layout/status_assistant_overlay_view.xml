@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/status_assistant_background_view" android:background="?colorNegative" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="75722ff9-db76" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimaryInverse" android:gravity="center" android:layout_gravity="center" android:id="@id/status_assistant_overlay_text" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/status_assistant_unable_to_go_offline" android:paddingStart="@dimen/ui__spacing_unit_6x" android:paddingEnd="@dimen/ui__spacing_unit_6x" app:analyticsId="cc1463ed-546c" app:autoSizeMaxTextSize="?textSizeTitle" app:autoSizeTextType="uniform" style="@style/Platform.TextStyle.Title.Medium" />
+</merge>

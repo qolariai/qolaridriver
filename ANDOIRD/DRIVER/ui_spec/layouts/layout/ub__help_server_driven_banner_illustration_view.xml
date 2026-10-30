@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/server_driven_banner_illustration_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="f9740b26-aa54" />
+    <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:id="@id/server_driven_banner_illustration_spinner" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:indeterminate="true" android:indeterminateTint="?textPositive" android:indeterminateTintMode="src_in" style="@style/Widget.AppCompat.ProgressBar" />
+    <com.ubercab.ui.core.progress.BaseProgressBar android:gravity="center" android:layout_gravity="center" android:id="@id/server_driven_banner_illustration_spinner_base" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" app:progress_size="small" style="@style/Platform.Progress.CircleIndeterminate" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/server_driven_banner_illustration_text_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.Button.BaseDynamic" />
+    <com.ubercab.ui.core.button.SquareCircleButton android:layout_gravity="center" android:id="@id/server_driven_banner_illustration_icon_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.Button.Base.CircleSquareDynamic" />
+</merge>

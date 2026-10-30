@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/map_marker_needle_view" android:background="@drawable/map_marker_needle" android:layout_width="@dimen/map_marker_needle_width" android:layout_height="@dimen/map_marker_needle_height_off" android:translationY="@dimen/map_marker_needle_translationY" app:layout_constraintBottom_toTopOf="@id/map_marker_anchor" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/map_marker_pin_head" />
+    <com.ubercab.map_marker_ui.BaseMapMarkerContentView android:id="@id/map_marker_pin_head" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.map_marker_ui.AnchorView android:id="@id/map_marker_anchor" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/map_marker_needle_view" />
+    <ViewStub android:id="@id/map_marker_badge_stub" android:layout="@layout/badge_view" android:inflatedId="@id/map_marker_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/map_marker_pin_head" app:layout_constraintStart_toEndOf="@id/map_marker_pin_head" />
+</merge>

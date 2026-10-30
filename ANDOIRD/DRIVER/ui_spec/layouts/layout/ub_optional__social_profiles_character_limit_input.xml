@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.social_profiles_form.ui.CharacterLimitedTextInputLayout android:orientation="vertical" android:id="@id/edit_container" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.commons.widget.ClearableEditText android:id="@id/edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLength="@integer/form_character_limit" style="@style/Platform.TextStyle.Paragraph.Normal" />
+    <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/helper_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Normal" />
+    <com.ubercab.ui.core.UTextView android:textColor="?textNegative" android:id="@id/error_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.Small.Normal" />
+</com.ubercab.social_profiles_form.ui.CharacterLimitedTextInputLayout>

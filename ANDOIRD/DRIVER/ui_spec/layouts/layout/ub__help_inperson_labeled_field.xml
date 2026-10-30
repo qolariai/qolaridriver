@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.News" android:id="@id/help_inperson_labeled_field_name" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="7c09b9dd-f6b5" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H6.News.Tertiary" android:id="@id/help_inperson_labeled_field_value" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="1b9503df-3d8b" />
+</merge>

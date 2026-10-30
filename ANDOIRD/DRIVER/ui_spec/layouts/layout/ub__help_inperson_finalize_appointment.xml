@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/help_inperson_finalize_appointment_content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.help.feature.in_person.HelpInPersonSiteSummaryView android:id="@id/help_inperson_finalize_appointment_site_summary" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.commons.image.AspectRatioImageView android:id="@id/help_inperson_finalize_appointment_site_image" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.ListHeader" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_4x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_inperson_section_header_appointment_details" app:analyticsId="c1234d20-7746" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?dividerHorizontal" android:showDividers="middle">
+                <com.ubercab.help.feature.in_person.HelpInPersonLabeledFieldView android:id="@id/help_inperson_finalize_appointment_time" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.help.feature.in_person.HelpInPersonLabeledFieldView android:id="@id/help_inperson_finalize_appointment_issue" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.help.feature.in_person.HelpInPersonLabeledFieldView android:id="@id/help_inperson_finalize_appointment_trip" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/help_inperson_finalize_appointment_submit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/help_inperson_finalize_appointment_submit" app:analyticsId="33784b49-7b8f" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/help_inperson_outbound_channel_preferences" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.help.feature.in_person.HelpInPersonLoadingView android:id="@id/help_inperson_finalize_appointment_loading" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.ubercab.help.feature.in_person.HelpInPersonErrorView android:id="@id/help_inperson_finalize_appointment_error" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</merge>

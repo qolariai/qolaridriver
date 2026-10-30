@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="start|center" android:id="@id/wait_time_bar_leading_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="b661f595-0c46" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:id="@id/wait_time_bar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="31a734c8-fe72" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.UTextView android:id="@id/wait_time_bar_description" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="bab486be-c350" style="@style/Platform.TextStyle.ParagraphSmall" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UTextView android:layout_gravity="end|center" android:id="@id/wait_time_bar_timer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:analyticsId="2820ba15-9b77" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.UImageView android:layout_gravity="end|center" android:id="@id/wait_time_bar_trailing_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:analyticsId="356a912e-284b" />
+</merge>

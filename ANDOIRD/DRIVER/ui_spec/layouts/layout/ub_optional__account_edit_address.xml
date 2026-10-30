@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textColor="@color/ub__ui_core_accent_primary" android:layout_gravity="end" android:id="@id/account_edit_save_address" android:focusable="true" android:visibility="visible" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/identity_account_edit_save" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="6f5de219-ab25" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UTextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x">
+                <com.ubercab.ui.core.UTextInputEditText android:id="@id/account_edit_address1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/identity_edit_account_address_address1" android:inputType="text" android:imeOptions="actionNext" />
+            </com.ubercab.ui.core.UTextInputLayout>
+            <com.ubercab.ui.core.UTextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x">
+                <com.ubercab.ui.core.UTextInputEditText android:id="@id/account_edit_address2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/identity_edit_account_address_address2" android:inputType="text" android:imeOptions="actionNext" />
+            </com.ubercab.ui.core.UTextInputLayout>
+            <com.ubercab.ui.core.UTextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x">
+                <com.ubercab.ui.core.UTextInputEditText android:id="@id/account_edit_city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/identity_edit_account_address_city" android:inputType="text" android:imeOptions="actionNext" />
+            </com.ubercab.ui.core.UTextInputLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:weightSum="100.0">
+                <com.ubercab.ui.core.UTextInputLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="50.0">
+                    <com.ubercab.ui.core.UTextInputEditText android:id="@id/account_edit_state" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/identity_edit_account_address_state" android:inputType="text" android:imeOptions="actionNext" />
+                </com.ubercab.ui.core.UTextInputLayout>
+                <com.ubercab.ui.core.UTextInputLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="50.0">
+                    <com.ubercab.ui.core.UTextInputEditText android:id="@id/account_edit_zip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/identity_edit_account_address_zipcode" android:inputType="text" android:imeOptions="actionGo" />
+                </com.ubercab.ui.core.UTextInputLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UTextView android:textColor="@color/ub__ui_core_negative" android:id="@id/account_edit_address_error" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</merge>

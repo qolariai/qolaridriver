@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorSecondary" android:paddingLeft="?gutterSize" android:paddingTop="?contentInset" android:paddingRight="?gutterSize" android:paddingBottom="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/carbon_help_home_card_learning_hub_title" />
+    <com.ubercab.ui.core.UCardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginRight="?gutterSize" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" uber:analyticsId="2a45579d-5ad1" uber:cardCornerRadius="@dimen/learning_hub_help_card_corner_radius" uber:cardElevation="@dimen/ui__elevation_low">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_space_1x" android:showDividers="middle">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/learning_hub_image" android:visibility="gone" android:layout_width="@dimen/learning_hub_help_card_image_width" android:layout_height="@dimen/learning_hub_help_card_image_height" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_space_1x" android:showDividers="middle">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Medium" android:textColor="?android:textColorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/learning_hub_title" />
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorSecondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/carbon_help_home_card_learning_hub_description" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCardView>
+</merge>

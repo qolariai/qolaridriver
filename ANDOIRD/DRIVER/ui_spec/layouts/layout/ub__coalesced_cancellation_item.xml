@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/ui__spacing_unit_3x" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_3x" android:paddingEnd="@dimen/ui__spacing_unit_3x" uber:analyticsId="f6de4b63-6082"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Headline.Medium" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@id/coalesced_cancel_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Subtitle.Normal" android:textColor="?android:textColorPrimary" android:ellipsize="middle" android:id="@id/coalesced_cancel_item_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:layout_marginStart="@dimen/ui__spacing_unit_1x" uber:srcCompat="@drawable/ub_ic_chevron_right_small" uber:tint="?iconTertiary" />
+</com.ubercab.ui.core.ULinearLayout>

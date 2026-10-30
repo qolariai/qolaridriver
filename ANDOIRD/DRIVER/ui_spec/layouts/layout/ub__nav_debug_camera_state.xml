@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/ub__nav_debug_camera_mode" android:layout_width="wrap_content" android:layout_height="@dimen/ub__nav_debug_row_height_small" style="@style/NavView.Widget.Debug.CameraStateInfo" />
+    <TextView android:id="@id/ub__nav_debug_camera_control" android:layout_width="0.0dip" android:layout_height="@dimen/ub__nav_debug_row_height_small" android:layout_weight="1.0" style="@style/NavView.Widget.Debug.CameraStateInfo" />
+</merge>

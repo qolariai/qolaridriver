@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Display.Normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_tint_title" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_tint_description" android:layout_weight="1.0" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_viewutils_tint_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub_ic_android" android:layout_weight="0.0" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Display.Normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_tintblendmodedrawable_title" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_tintblendmodedrawable_description" android:layout_weight="1.0" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_viewutils_tintblendmodedrawable_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub_ic_android" android:layout_weight="0.0" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Display.Normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_tintmodedrawable_title" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_tintmodedrawable_description" android:layout_weight="1.0" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_viewutils_tintmodedrawable_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub_ic_android" android:layout_weight="0.0" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Display.Normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_colorfilterdrawable_title" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_colorfilterdrawable_description" android:layout_weight="1.0" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_viewutils_colorfilterdrawable_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub_ic_android" android:layout_weight="0.0" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Display.Normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_alphadrawable_title" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_alphadrawable_description" android:layout_weight="1.0" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_viewutils_alphadrawable_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub_ic_android" android:layout_weight="0.0" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Display.Normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_tintlistdrawable_title" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/style_guide_viewutils_tintlistdrawable_description" android:layout_weight="1.0" />
+                <com.ubercab.ui.core.UImageView android:id="@id/style_guide_viewutils_tintlistdrawable_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ub_ic_android" android:layout_weight="0.0" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

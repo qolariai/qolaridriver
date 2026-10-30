@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="line"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?red400" />
+    <stroke android:width="@dimen/driving_insights_barchart_legend_stroke_width" android:color="?red400" />
+    <size android:height="@dimen/driving_insights_barchart_legend_line_height" android:width="@dimen/driving_insights_barchart_legend_line_width" />
+</shape>

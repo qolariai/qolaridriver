@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.firefly_settings.FireflySettingsView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/firefly_settings_top_layout" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="@dimen/firefly_settings_top_layout_height">
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center" android:id="@id/firefly_settings_bluetooth_instruction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/firefly_bluetooth_off_instruction" />
+            <com.ubercab.ui.core.URelativeLayout android:id="@id/firefly_settings_unpaired_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.UTextView android:id="@id/firefly_settings_serial_number_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/firefly_serial_label" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+                <com.ubercab.ui.core.UEditText android:id="@id/firefly_settings_selected_serial" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:hint="@string/firefly_serial_hint" android:layout_below="@id/firefly_settings_serial_number_label" android:inputType="textCapCharacters" android:layout_alignParentStart="true" />
+                <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/firefly_settings_pairing_instructions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minLines="2" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" />
+            </com.ubercab.ui.core.URelativeLayout>
+            <com.ubercab.ui.core.URelativeLayout android:id="@id/firefly_settings_paired_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.UTextView android:id="@id/firefly_settings_serial_number_label_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/firefly_serial_label" android:layout_alignParentTop="true" android:layout_alignParentStart="true" />
+                <com.ubercab.ui.core.UTextView android:textSize="@dimen/carbon_ui__text_size_display" android:id="@id/firefly_settings_paired_serial" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/firefly_settings_serial_number_label_2" android:layout_alignParentStart="true" />
+                <com.ubercab.ui.core.UTextView android:id="@id/firefly_settings_battery_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" />
+                <com.ubercab.ui.core.UImageView android:layout_width="?avatarLarge" android:layout_height="?avatarLarge" android:tint="?celebrationGreen" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ub_ic_circle_check" />
+            </com.ubercab.ui.core.URelativeLayout>
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/firefly_settings_bottom_layout" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.UImageView android:id="@id/firefly_settings_background_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/firefly_settings_bluetooth_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/firefly_pair_cta_bluetooth" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/firefly_settings_pair_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/firefly_pair_cta" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/firefly_settings_unpair_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/firefly_pair_cta_unpair" app:buttonType="destructive" style="@style/Platform.Button.BaseDynamic" />
+            </com.ubercab.ui.core.UFrameLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.firefly_settings.FireflySettingsView>

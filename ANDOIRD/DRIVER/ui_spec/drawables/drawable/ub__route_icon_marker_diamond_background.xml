@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center" android:id="@id/map_marker_diamond_background" android:left="@dimen/ub__route_icon_marker_large_width" android:top="@dimen/ub__route_icon_marker_large_width" android:right="@dimen/ub__route_icon_marker_large_width" android:bottom="@dimen/ub__route_icon_marker_large_width">
+        <rotate android:fromDegrees="45.0">
+            <shape>
+                <corners android:radius="@dimen/ub__route_icon_marker_corner_radius" />
+                <size android:height="@dimen/ub__route_icon_marker_large_height" android:width="@dimen/ub__route_icon_marker_large_width" />
+                <solid android:color="?iconColor" />
+                <stroke android:width="@dimen/ub__route_icon_border_width" android:color="?iconColor" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

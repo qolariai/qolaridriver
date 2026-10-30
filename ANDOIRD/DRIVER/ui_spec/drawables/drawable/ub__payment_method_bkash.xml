@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="32.0dip" android:width="32.0dip" android:viewportWidth="32.0" android:viewportHeight="32.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/ub__payment_bkash_brand_background" android:pathData="M30.6667,5.3333H1.3333V26.6667H30.6667V5.3333Z" />
+    <path android:fillColor="?brandWhite" android:pathData="M14.4835,15.6358L15.9985,10.1211L9.5748,9.3333L14.4835,15.6358ZM14.7876,15.6959L16.3026,10.1812L21.0294,16.7261L14.7876,15.6959ZM22.7274,13.5748L22.3032,14.8474H24L22.7274,13.5748ZM15.5754,19.5751L14.7876,15.9997L20.787,16.9693L15.5754,19.5751ZM14.4833,16.0598L15.4529,20.4836L12.5441,22.847L14.4833,16.0598ZM21.0307,17.1511L20.8489,17.7571L16.3039,19.5146L21.0307,17.1511ZM10.1211,10.4241L12.1209,13.0299L9.3333,10.4241H10.1211ZM22.4827,13.5748L21.3313,16.726L19.4527,14.0596L22.4827,13.5748Z" android:fillType="evenOdd" />
+</vector>

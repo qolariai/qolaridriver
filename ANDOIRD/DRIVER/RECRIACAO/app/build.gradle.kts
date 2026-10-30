@@ -9,7 +9,6 @@ val localProps = Properties().apply {
 
 plugins {
     id("com.android.application")
-    id("com.google.gms.google-services")
     // Compose so para os ecras que a original faz em Compose (ux_capture/toolkit_por_ecra.csv, STACK_DECISAO.md).
     id("org.jetbrains.kotlin.plugin.compose") version "2.2.10"
 }
@@ -24,27 +23,12 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "0.1.0"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         manifestPlaceholders["MAPS_API_KEY"] = localProps.getProperty("MAPS_API_KEY", "")
-        buildConfigField("String", "MAPS_API_KEY", "\"${localProps.getProperty("MAPS_API_KEY", "")}\"")
     }
 
-    signingConfigs {
-        if (!localProps.getProperty("RELEASE_STORE_FILE").isNullOrBlank()) {
-            create("release") {
-                storeFile = file(localProps.getProperty("RELEASE_STORE_FILE")!!)
-                storePassword = localProps.getProperty("RELEASE_STORE_PASSWORD")
-                keyAlias = localProps.getProperty("RELEASE_KEY_ALIAS")
-                keyPassword = localProps.getProperty("RELEASE_KEY_PASSWORD")
-            }
-        }
-    }
     buildTypes {
         release {
             isMinifyEnabled = false
-            if (!localProps.getProperty("RELEASE_STORE_FILE").isNullOrBlank()) {
-                signingConfig = signingConfigs.getByName("release")
-            }
         }
     }
     buildFeatures {
@@ -71,8 +55,6 @@ tasks.withType<Test>().configureEach {
 
 dependencies {
     // UI (Views). Compose entra no lote 1, so para os ecras que a original faz em Compose (STACK_DECISAO.md).
-    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
-    implementation("com.google.firebase:firebase-messaging")
     implementation("androidx.core:core-ktx:1.16.0")
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("com.google.android.material:material:1.12.0")
@@ -86,8 +68,7 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.1.7")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-
-    // Google Maps SDK (mapa real; chave em local.properties -> MAPS_API_KEY)
+    // Mapas reais (Maps SDK for Android), com a chave em local.properties.
     implementation("com.google.android.gms:play-services-maps:20.1.0")
 
     // Compose (ilhas hospedadas em Fragments por ComposeView)
@@ -106,10 +87,4 @@ dependencies {
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
-
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test:runner:1.6.1")
-    androidTestImplementation("androidx.test:rules:1.6.1")
-    androidTestImplementation("androidx.test:core:1.6.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.HeadingSmall" android:id="@id/help_workflow_phone_number_input_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" app:analyticsId="a4924d05-8f09" />
+    <com.ubercab.ui.core.UConstraintLayout android:layout_gravity="center_horizontal" android:id="@id/help_workflow_phone_number_input_base_view_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.input.BaseEditText android:id="@id/help_workflow_phone_number_input_country_picker_base" android:focusable="false" android:layout_width="@dimen/ub__optional_help_workflow_phone_number_input_country_picker_width" android:layout_height="wrap_content" android:inputType="none" app:input_clearButtonEnabled="false" app:layout_constraintStart_toStartOf="parent" />
+        <com.ubercab.ui.core.input.BaseEditText android:id="@id/help_workflow_phone_number_input_digits_base" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:inputType="phone" android:layout_marginStart="@dimen/ui__spacing_unit_1x" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/help_workflow_phone_number_input_country_picker_base" />
+    </com.ubercab.ui.core.UConstraintLayout>
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?textColorError" android:id="@id/help_workflow_phone_number_input_error" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:textAlignment="viewStart" app:analyticsId="9c78cfcb-a504" />
+</merge>

@@ -18,17 +18,10 @@ class SessionStore(private val context: Context) {
         private val KEY_TOKEN = stringPreferencesKey("access_token")
         private val KEY_REFRESH = stringPreferencesKey("refresh_token")
         private val KEY_PHONE = stringPreferencesKey("phone")
-        private val KEY_TERMINAL = stringPreferencesKey("terminal_trip")
     }
 
     val token = context.dataStore.data.map { it[KEY_TOKEN] }
     val phone = context.dataStore.data.map { it[KEY_PHONE] ?: "" }
-
-    suspend fun lastTerminal(): String? = context.dataStore.data.first()[KEY_TERMINAL]
-
-    suspend fun markTerminal(uuid: String) {
-        context.dataStore.edit { it[KEY_TERMINAL] = uuid }
-    }
 
     suspend fun current(): SessionSnapshot {
         val p = context.dataStore.data.first()
@@ -48,8 +41,6 @@ class SessionStore(private val context: Context) {
     }
 
     suspend fun clear() {
-        context.dataStore.edit {
-            it.remove(KEY_TOKEN); it.remove(KEY_REFRESH); it.remove(KEY_TERMINAL)
-        }
+        context.dataStore.edit { it.remove(KEY_TOKEN); it.remove(KEY_REFRESH) }
     }
 }

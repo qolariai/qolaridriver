@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__contact_picker_bit_loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:bli_bitColor="?colorAccent" />
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.image.BaseImageView android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:scaleType="fitXY" android:layout_marginStart="?contentInset" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ub_ic_search" />
+            <com.ubercab.ui.TokenizingEditText android:textColor="?contentTertiary" android:id="@id/ub__contact_picker_token_edit_text" android:background="?backgroundPrimary" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="@integer/ub__contact_picker_search_bar_max_lines" android:inputType="textFilter|textMultiLine|textNoSuggestions" style="@style/Platform.TextStyle.ParagraphSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?borderOpaque" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/ub__contact_picker_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:id="@id/ub__contact_picker_fallback_headline" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.P" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:id="@id/ub__contact_picker_fallback_cta" android:paddingLeft="?contentInset" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingRight="?contentInset" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphXSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

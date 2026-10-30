@@ -129,11 +129,6 @@
         <action android:id="@+id/action_menu_to_promotions" app:destination="@id/promotionsFragment" />
         <action android:id="@+id/action_menu_to_legal" app:destination="@id/legalFragment" />
         <action android:id="@+id/action_menu_to_account" app:destination="@id/accountFragment" />
-        <action android:id="@+id/action_menu_to_support" app:destination="@id/supportFragment" />
-        <action android:id="@+id/action_menu_to_safety" app:destination="@id/safetyFragment" />
-        <action android:id="@+id/action_menu_to_saved" app:destination="@id/savedPlacesFragment" />
-        <action android:id="@+id/action_menu_to_extras" app:destination="@id/accountExtrasFragment" />
-        <action android:id="@+id/action_menu_to_appearance" app:destination="@id/appearanceFragment" />
     </fragment>
 
     <fragment android:id="@+id/walletFragment" android:name="com.qolari.userlite.ui.wallet.WalletFragment" android:label="wallet" />
@@ -148,11 +143,6 @@
     </fragment>
     <fragment android:id="@+id/legalTopicFragment" android:name="com.qolari.userlite.ui.legal.LegalTopicFragment" android:label="legal-topic" />
     <fragment android:id="@+id/accountFragment" android:name="com.qolari.userlite.ui.account.AccountFragment" android:label="account" />
-    <fragment android:id="@+id/savedPlacesFragment" android:name="com.qolari.userlite.ui.account.SavedPlacesFragment" android:label="saved-places" />
-    <fragment android:id="@+id/accountExtrasFragment" android:name="com.qolari.userlite.ui.account.AccountExtrasFragment" android:label="account-extras" />
-    <fragment android:id="@+id/appearanceFragment" android:name="com.qolari.userlite.ui.account.AppearanceFragment" android:label="appearance" />
-    <fragment android:id="@+id/supportFragment" android:name="com.qolari.userlite.ui.support.SupportFragment" android:label="support" />
-    <fragment android:id="@+id/safetyFragment" android:name="com.qolari.userlite.ui.safety.SafetyFragment" android:label="safety" />
     <fragment android:id="@+id/infoFragment" android:name="com.qolari.userlite.ui.info.InfoFragment" android:label="info" />
 
 </navigation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.dynamicform.v1.standard.StandardFormView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="bbe82f13-b1a5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_1.5x" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/core_form_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/submit_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__gutter_size" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.Button.Primary" />
+        <com.ubercab.ui.core.dockedbutton.ButtonDock android:id="@id/standard_form_button_dock" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__gutter_size" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.dynamicform.v1.standard.StandardFormView>

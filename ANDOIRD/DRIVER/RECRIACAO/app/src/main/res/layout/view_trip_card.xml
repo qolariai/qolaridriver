@@ -69,43 +69,6 @@
         android:textSize="14sp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/tripNavigate"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/drive_navigate" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/tripCompleteStop"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/drive_stop_button"
-        android:textColor="@color/qd_core_white"
-        android:visibility="gone"
-        app:backgroundTint="@color/qd_core_blue600"
-        app:cornerRadius="8dp" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/tripRecord"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/drive_record_start"
-        android:visibility="gone" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/tripVideo"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/drive_video_start"
-        android:visibility="gone" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/tripPinButton"
         android:layout_width="match_parent"
         android:layout_height="56dp"

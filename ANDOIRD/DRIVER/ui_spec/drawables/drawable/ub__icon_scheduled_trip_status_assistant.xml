@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="?bgLoyaltyPrimary" />
+            <size android:height="@dimen/ui__spacing_unit_3x" android:width="@dimen/ui__spacing_unit_3x" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:id="@id/clock_icon" android:drawable="@drawable/ub_ic_clock" android:left="@dimen/ui__spacing_unit_0.5x" android:top="@dimen/ui__spacing_unit_0.5x" android:right="@dimen/ui__spacing_unit_0.5x" android:bottom="@dimen/ui__spacing_unit_0.5x" />
+</layer-list>

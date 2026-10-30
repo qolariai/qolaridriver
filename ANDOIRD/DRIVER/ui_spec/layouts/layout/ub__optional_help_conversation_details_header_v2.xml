@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.H2.Book" android:id="@id/help_conversation_details_header_v2_title" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="014d2234-1239" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/help_conversation_details_header_v2_job_row" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="eaa7e0bb-0a00">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.H5.News.Primary" android:id="@id/help_conversation_details_header_v2_job_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.H5.News.Secondary" android:id="@id/help_conversation_details_header_v2_job_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.H6.News" android:textColor="?accentCta" android:layout_gravity="center_vertical" android:id="@id/help_conversation_details_header_v2_job_details_cta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_conversation_details_header_trip_details" android:layout_weight="0.0" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

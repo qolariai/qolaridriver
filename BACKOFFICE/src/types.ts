@@ -26,41 +26,6 @@ export type Doc = {
   notes: string; reviewed_by: string; reviewed_at: number | null; created_at: number
 }
 
-export type MapReport = {
-  id: number; uuid: string; driver: PersonShort | null; reason: string; reason_label: string; note: string
-  latitude: number | null; longitude: number | null; created_at: number
-  status: 'open' | 'resolved' | 'dismissed'
-}
-
-export type SupportThread = {
-  uuid: string; app: AppName; name: string; phone: string; category: string
-  status: 'open' | 'closed'; updated_at: number; last_message: string; unread: number
-}
-
-export type SupportMessage = {
-  id: number; sender: 'user' | 'support'; body: string; createdAt: number
-  fileName?: string; hasFile?: boolean
-}
-
-export type SafetyIncident = {
-  uuid: string; kind: string; app: AppName; subjectName: string; subjectPhone: string
-  tripUuid: string; latitude: number | null; longitude: number | null; note: string
-  status: 'open' | 'closed'; createdAt: number; closedAt: number | null
-  contacts: { name: string; phone: string }[]
-}
-
-export type Adjustment = {
-  uuid: string; driver: string; driver_id: number; trip_uuid: string
-  kind: 'tolls' | 'manual_fare' | 'other'; amount: number; note: string
-  status: 'pending' | 'approved' | 'rejected'; created_at: number
-  reviewed_by: string; reviewed_at: number | null
-}
-
-export type Recording = {
-  uuid: string; trip_uuid: string; app: AppName; driver: string; kind: 'audio' | 'video'
-  started_at: number; ended_at: number | null; duration_s: number; has_file: boolean
-}
-
 export type Session = { id: string; app: AppName; subject_uuid: string; subject_name?: string; created_at: number; last_used_at: number; ip: string; user_agent: string; revoked: boolean }
 export type Device = { id: number; app: AppName; device_key: string; subject_uuid: string | null; subject_name?: string; model: string; os_version: string; app_version: string; has_push_token: boolean; ip: string; first_seen_at: number; last_seen_at: number }
 

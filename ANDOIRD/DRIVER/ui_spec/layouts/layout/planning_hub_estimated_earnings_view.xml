@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:textColor="?brandWhite" android:gravity="center" android:id="@id/estimated_earnings_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="1" android:layout_marginStart="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.Small.Bold" />
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ott_card.next.OttNextCardView android:orientation="horizontal" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="6aeab58a-3ed5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/ott_next_card_icon" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" app:analyticsId="dc85d715-ab18" app:srcCompat="@drawable/ub__ott_next_card_icon" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:textColor="?colorPrimary" android:id="@id/ott_next_card_title" android:layout_width="wrap_content" android:layout_height="fill_parent" app:analyticsId="b7178c2a-f056" style="@style/Platform.TextStyle.Subtitle.Medium" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ott_next_card_cta" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ub_ic_x" />
+</com.ubercab.ott_card.next.OttNextCardView>

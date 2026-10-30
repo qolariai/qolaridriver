@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UImageView android:layout_width="?avatarSmall" android:layout_height="?avatarSmall" android:foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

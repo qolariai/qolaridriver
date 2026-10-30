@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__emobi_bike_image" android:layout_width="@dimen/ub__emobi_information_visual_l_width" android:layout_height="@dimen/ub__emobi_information_visual_l_width" android:scaleType="fitCenter" android:layout_marginStart="@dimen/ui__emobi_spacing_unit_2.5x" android:layout_marginEnd="@dimen/ui__emobi_spacing_unit_2.5x" app:analyticsEnabled="false" app:analyticsId="cbb84ff8-5c35"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

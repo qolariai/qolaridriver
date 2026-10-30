@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <!-- Vibração do aviso de novo pedido (vídeo 2026-10-29). -->
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <!-- usesCleartextTraffic: estagio LAN do spec (FASE 4); o URL do ambiente vive so em config/AppConfig.kt -->
     <application
@@ -20,31 +18,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.QolariDriver">
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="${MAPS_API_KEY}" />
-
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_channel_id"
-            android:value="qolari_default" />
-
-        <service
-            android:name=".push.QolariMessagingService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
-        <service
-            android:name=".capture.ScreenShareService"
-            android:exported="false"
-            android:foregroundServiceType="mediaProjection" />
-
-        <service
-            android:name=".capture.ScreenRecordService"
-            android:exported="false"
-            android:foregroundServiceType="mediaProjection" />
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="${MAPS_API_KEY}" />
 
         <activity
             android:name=".MainActivity"
@@ -58,3 +32,4 @@
         </activity>
     </application>
 </manifest>
+

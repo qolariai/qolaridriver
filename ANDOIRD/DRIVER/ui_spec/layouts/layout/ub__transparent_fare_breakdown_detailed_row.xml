@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:paddingTop="@dimen/ui__spacing_unit_1.5x" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_space_2x" android:showDividers="middle" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+        <com.uber.feedback.transparent_fare_breakdown.TransparentFareBreakdownTextView android:id="@id/ub__transparent_fare_breakdown_detailed_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:textColor="?contentSecondary" style="@style/Platform.TextStyle.ParagraphSmall" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.uber.feedback.transparent_fare_breakdown.TransparentFareBreakdownTextView android:id="@id/ub__transparent_fare_breakdown_detailed_trailing_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewEnd" app:textColor="?contentSecondary" style="@style/Platform.TextStyle.ParagraphSmall" />
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:id="@id/ub__transparent_fare_breakdown_detailed_trailing_icon" android:visibility="gone" android:layout_width="@dimen/ub__detailed_trailing_icon_size" android:layout_height="@dimen/ub__detailed_trailing_icon_size" android:tint="?contentSecondary" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" app:srcCompat="@drawable/ub_ic_circle_i" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.divider.DividerView android:id="@id/ub__transparent_fare_breakdown_detailed_row_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" app:dividersize="cell" app:dividerstyle="list" />
+</merge>

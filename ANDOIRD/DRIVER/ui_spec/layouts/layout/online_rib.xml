@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.core.online.OnlineView android:orientation="vertical" android:id="@id/online_view" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="edca1497-2a1b"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" />

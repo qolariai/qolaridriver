@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.preferences.group_rib.GroupPreferencesView android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="c3e5dfc7-dd76"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.carbon.preferences.feedback.DriverPreferencesFeedbackView android:id="@id/group_preferences_feedback" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UScrollView android:id="@id/group_preferences_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_1x" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/group_preferences_scrollable_views" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/group_preferences_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.ubercab.carbon.preferences.ui.PreferencesInfoFooterView android:id="@id/group_preferences_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="27fc5137-6f7b" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.UCoordinatorLayout android:layout_gravity="bottom" android:id="@id/group_preferences_bottom_sheet_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.carbon.preferences.group_rib.GroupPreferencesView>

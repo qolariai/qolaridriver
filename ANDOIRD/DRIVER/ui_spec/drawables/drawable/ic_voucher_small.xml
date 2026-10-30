@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="@dimen/ui__spacing_unit_2x" android:width="@dimen/ui__spacing_unit_2x" android:drawable="@drawable/ub_ic_ticket" />
+</layer-list>

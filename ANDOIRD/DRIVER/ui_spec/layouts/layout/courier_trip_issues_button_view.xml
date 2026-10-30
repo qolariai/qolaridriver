@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.courier_trip_issues.CourierTripIssuesButtonView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.CircleButton android:id="@id/courier_trip_issues_button_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:icon="@drawable/ub_ic_alert" uber:size="small" uber:type="secondary" style="@style/Platform.Button.Base.CircleSquareDynamic" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/courier_trip_issues_button_default" android:background="@drawable/ub__courier_trip_issues_button_circle_background" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="cacb17be-9b7b">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:tint="@color/ub__ui_carbon_white" uber:analyticsId="eb73797f-a9f0" uber:srcCompat="@drawable/ub_ic_alert" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.courier_trip_issues.CourierTripIssuesButtonView>

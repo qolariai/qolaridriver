@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/help_conversation_details_message_sent_parts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_space_1x" android:showDividers="middle" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H6.News.Tertiary" android:gravity="end" android:layout_gravity="end" android:id="@id/help_conversation_details_message_sent_timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.CircleImageView android:id="@id/help_conversation_details_message_sent_avatar" android:layout_width="?avatarMedium" android:layout_height="?avatarMedium" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:analyticsId="d7cf3bbb-a7d0" />
+</merge>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.styleguide.v2.tab_sections.UpcomingTabView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/caution_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ub__card_border_width" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ub__card_border_width" />
+        <com.ubercab.ui.core.UTextView android:id="@id/upcoming_in_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_6x" android:text="@string/style_guide_v2_upcoming_in_progress" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingSmall" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/upcoming_in_progress_recylerview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" />
+        <com.ubercab.ui.core.UTextView android:id="@id/upcoming_design_only" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3.5x" android:text="@string/style_guide_v2_upcoming_design_only" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingSmall" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/upcoming_design_only_recylerview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.presidio.styleguide.v2.tab_sections.UpcomingTabView>

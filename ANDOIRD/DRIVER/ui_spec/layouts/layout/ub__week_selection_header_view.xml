@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/week_selector_header_text" android:includeFontPadding="false" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:analyticsId="08efdeac-331f" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.ParagraphDefault" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__week_selection_header_day_container" android:layout_width="@dimen/ui__week_selector_day_container_width" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_0.5x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</merge>

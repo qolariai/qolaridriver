@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.loginconfirmation.LoginConfirmationView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_confirmation_title" style="@style/Platform.TextStyle.H2.News" />
+    <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_confirmation_summary" style="@style/Platform.TextStyle.H3.News.Secondary" />
+    <com.ubercab.ui.core.UImageView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UTextView android:id="@id/date" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H3.News.Secondary" />
+    <com.ubercab.ui.core.UTextView android:id="@id/location" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H3.News.Secondary" />
+    <com.ubercab.ui.core.UTextView android:id="@id/device" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H3.News.Secondary" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/btn_this_was_me" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/this_was_me" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/btn_this_wasnt_me" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/this_wasnt_me" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+</com.ubercab.loginconfirmation.LoginConfirmationView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__loyalty_home_section_header_text_container" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/ub__loyalty_home_section_header_trailing_illustration" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__loyalty_home_section_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__loyalty_home_section_header_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__loyalty_home_section_header_trailing_illustration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/loyalty_rewards_tier_image" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/ub__loyalty_home_section_header_text_container" app:layout_constraintTop_toTopOf="@id/ub__loyalty_home_section_header_text_container" />
+</merge>

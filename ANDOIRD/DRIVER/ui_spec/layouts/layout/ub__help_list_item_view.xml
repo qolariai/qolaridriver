@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/help_list_item_content_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:id="@id/help_list_item_leading_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="0.0dip" />
+        <com.ubercab.ui.core.list.PlatformListItemView android:layout_gravity="center" android:id="@id/help_list_item" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/help_csat_embedded_thumbs_size" android:width="@dimen/help_csat_embedded_thumbs_size" android:viewportWidth="40.0" android:viewportHeight="40.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?ruleColor" android:pathData="M20 40a20 20 0 1 0 0 -40 20 20 0 0 0 0 40z" />
+    <path android:fillColor="?iconColor" android:pathData="M22.5 12.5v5h4.58c1.17 0 2.09 0.92 2.09 2.08v2.5l-2.25 4.84a2.5 2.5 0 0 1 -2.25 1.41h-8.84v-10L19.58 10H20c1.42 0 2.5 1.08 2.5 2.5zm-10.83 5.83h2.5v10h-2.5v-10z" android:fillType="evenOdd" />
+</vector>

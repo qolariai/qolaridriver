@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_suggestions_taskbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_no_suggestions_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/pick_pack_suggestions_scroll_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/pick_pack_suggestions_main_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_suggestions_list_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UPlainView android:id="@id/pick_pack_suggestions_list_spacer" android:background="?borderOpaque" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:minHeight="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" />
+            <com.uber.taskbuildingblocks.views.taskbutton.TaskFooterView android:id="@id/pick_pack_suggestions_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UPlainView android:id="@id/pick_pack_actionable_footer_divider" android:background="?borderOpaque" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_1x" />
+            <com.uber.taskbuildingblocks.views.taskbutton.TaskActionableListView android:id="@id/pick_pack_suggestions_actionable_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.uber.taskbuildingblocks.views.taskbutton.TaskActionableListView2 android:id="@id/pick_pack_suggestions_actionable_footer_v2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/pick_pack_suggestions_loading_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0">
+        <com.ubercab.ui.core.progress.BaseProgressBar android:layout_gravity="center" android:id="@id/pick_pack_suggestions_loading" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.Progress.CircleIndeterminate" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

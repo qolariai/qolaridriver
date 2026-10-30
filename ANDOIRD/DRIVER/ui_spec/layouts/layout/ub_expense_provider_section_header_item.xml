@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_6x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?textPrimary" android:id="@id/ub__expense_provider_section_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.HeadingXSmall" />
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?textSecondary" android:id="@id/ub__expense_provider_section_header_body" android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphSmall" />
+</com.ubercab.ui.core.ULinearLayout>

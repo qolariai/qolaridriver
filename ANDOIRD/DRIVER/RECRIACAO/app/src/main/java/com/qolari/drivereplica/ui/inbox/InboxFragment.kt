@@ -58,16 +58,17 @@ class InboxFragment : ComposeFragment() {
         // Ao abrir, as notificações passam a lidas no servidor (o contador da barra zera); o texto a negrito mantém-se neste ecrã.
         LaunchedEffect(state) { if (state is LoadState.Data && unread > 0) AppGraph.repository.markNotificationsRead() }
         Column(Modifier.fillMaxSize()) {
-            Box(Modifier.fillMaxWidth().padding(top = 12.dp, end = 16.dp)) {
+            Box(Modifier.fillMaxWidth().padding(top = 16.dp, end = 16.dp)) {
+                // Caixa de entrada com seta para baixo, como na captura 063 (não é o cubo 3D).
                 Icon(
-                    painterResource(R.drawable.ic_box), contentDescription = null,
+                    painterResource(R.drawable.ic_inbox_tray), contentDescription = null,
                     tint = colorResource(R.color.qd_ink),
-                    modifier = Modifier.align(Alignment.CenterEnd).size(28.dp),
+                    modifier = Modifier.align(Alignment.CenterEnd).size(30.dp),
                 )
             }
             Text(
-                stringResource(R.string.tab_inbox), color = colorResource(R.color.qd_ink), fontSize = 32.sp,
-                fontWeight = FontWeight.Bold, modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 4.dp),
+                stringResource(R.string.tab_inbox), color = colorResource(R.color.qd_ink), fontSize = 32.sp, lineHeight = 38.sp,
+                fontWeight = FontWeight.Bold, modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 18.dp),
             )
             InboxTabs(selected = tab, unread = unread, onSelect = { tab = it })
             if (tab == 0) {
@@ -96,21 +97,21 @@ private fun InboxTabs(selected: Int, unread: Int, onSelect: (Int) -> Unit) {
                 Modifier.weight(1f).clickable { onSelect(i) },
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                Row(Modifier.height(48.dp), verticalAlignment = Alignment.CenterVertically) {
+                Row(Modifier.height(52.dp), verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        stringResource(label), fontSize = 14.sp,
+                        stringResource(label), fontSize = 15.sp,
                         color = colorResource(if (i == selected) R.color.qd_ink else R.color.qd_core_gray600),
                         fontWeight = if (i == selected) FontWeight.Medium else FontWeight.Normal,
                     )
                     if (i == 0 && unread > 0) {
                         Box(
-                            Modifier.padding(start = 8.dp).size(22.dp).clip(CircleShape).background(colorResource(R.color.qd_core_blue600)),
+                            Modifier.padding(start = 8.dp).size(24.dp).clip(CircleShape).background(colorResource(R.color.qd_core_blue600)),
                             contentAlignment = Alignment.Center,
-                        ) { Text(unread.toString(), color = colorResource(R.color.qd_core_white), fontSize = 12.sp) }
+                        ) { Text(unread.toString(), color = colorResource(R.color.qd_core_white), fontSize = 13.sp) }
                     }
                 }
                 Box(
-                    Modifier.fillMaxWidth().height(2.dp)
+                    Modifier.fillMaxWidth().height(3.dp)
                         .background(colorResource(if (i == selected) R.color.qd_ink else R.color.qd_line))
                 )
             }
@@ -122,17 +123,17 @@ private fun InboxTabs(selected: Int, unread: Int, onSelect: (Int) -> Unit) {
 private fun NotificationRow(item: InboxItem) {
     Column(Modifier.fillMaxWidth()) {
         Row(
-            Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 16.dp),
+            Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 18.dp),
             verticalAlignment = Alignment.Top, horizontalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             Text(
-                item.title, color = colorResource(R.color.qd_ink), fontSize = 15.sp, maxLines = 2,
+                item.title, color = colorResource(R.color.qd_ink), fontSize = 18.sp, maxLines = 2,
                 overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                 fontWeight = if (item.unread) FontWeight.Bold else FontWeight.Normal,
                 modifier = Modifier.weight(1f),
             )
             Column(horizontalAlignment = Alignment.End) {
-                Text(item.age, color = colorResource(R.color.qd_core_gray600), fontSize = 13.sp)
+                Text(item.age, color = colorResource(R.color.qd_core_gray600), fontSize = 14.sp)
                 if (item.unread) {
                     Box(
                         Modifier.padding(top = 8.dp).size(8.dp).clip(CircleShape).background(colorResource(R.color.qd_core_blue600))

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+        <include layout="@layout/ub__shimmer_item" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:id="@id/help_workflow_date_input_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" app:analyticsId="17c48dc8-6a51" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_space_1x" android:showDividers="middle">
+        <com.ubercab.ui.core.input.BaseEditText android:id="@id/help_workflow_date_base_input_date_text" android:paddingTop="@dimen/ui__spacing_unit_1x" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.input.BaseEditText android:layout_gravity="bottom" android:id="@id/help_workflow_date_base_input_time_text" android:paddingTop="@dimen/ui__spacing_unit_1x" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?textColorError" android:id="@id/help_workflow_date_input_error" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:textAlignment="viewStart" app:analyticsId="d8b282f7-4ded" />
+</merge>

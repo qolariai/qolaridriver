@@ -144,7 +144,7 @@ Convenções: `evidence` = `live` (captura do original), `static` (layout/string
 | Sessao expirada (401) | U/D/F | strings de erro | presumed | Nao capturado; implementar estados de erro. |
 | Modo escuro | U/D/F | `values-night` | static | Nao capturado; tokens existem. |
 | 3. nivel de Definicoes e Ajuda | D | layouts/strings | static | Nao visitado; conteudo proprio. |
-| Mapa real / rota | U/D/F | Google Maps SDK + OSRM | served | Implementado; miniaturas decorativas. |
+| Mapa real / rota | U/D/F | Google Maps SDK | thirdparty | Falta `MAPS_API_KEY`. |
 | Notificacoes do sistema (FCM) | U/D/F | Firebase Messaging | thirdparty | Nao configurado; o `ramen` cobre o tempo real. |
 | Login social / reCAPTCHA / IAP | U/D | strings | out_of_scope | Ausente por decisao (D6/D7). |
 
@@ -153,7 +153,7 @@ Convenções: `evidence` = `live` (captura do original), `static` (layout/string
 | Capturas | Ecrã | Evidência | Estado na recriação |
 |---|---|---|---|
 | 000-003 | arranque, telefone, pais | live | Sim (login nativo, código `0000`) |
-| 010-011 | inicio, menu | live | Sim (dados do backend; mapa Google Maps) |
+| 010-011 | inicio, menu | live | Sim (dados do backend; mapa desenhado) |
 | 012, 020 | ajuda | live | Sim (conteúdo próprio; pesquisa) |
 | 021 | wallet | live | Sim (saldo e formas de pagamento do laboratório) |
 | 022 | atividade | live | Sim (histórico real; vazio com ação) |
@@ -162,47 +162,16 @@ Convenções: `evidence` = `live` (captura do original), `static` (layout/string
 | 050-052 | offline | live | Sim (banner de rede em todos os ecrãs) |
 
 **Recriação:** [`ANDOIRD/USER_LITE/RECRIACAO/`](ANDOIRD/USER_LITE/RECRIACAO/) —
-Kotlin + Views, 11 testes de unidade, `assembleDebug` a passar. O contrato é
+Kotlin + Views, 10 testes de unidade, `assembleDebug` a passar. O contrato é
 [`ANDOIRD/USER_LITE/endpoints.json`](ANDOIRD/USER_LITE/endpoints.json) (`designed`):
 a referência Lite é uma WebView, pelo que a forma nativa foi desenhada a partir dos
-PNG e dos ecrãs materializados. A app está no telemóvel de trabalho (Honor) para a
-validação final.
+PNG e dos ecrãs materializados. Validada no telemóvel de trabalho (Honor,
+`AQCK024C17020494`) em 2026-10-27, incluindo o ciclo completo com a Driver.
 
 **Entradas removidas por não terem equivalente funcional neste âmbito:**
-entrega/courier, paragens intermédias, escolha de cidade e filtro pessoal/empresa.
-Não são botões mortos: deixaram de existir na UI. O agendamento foi entretanto
-implementado (data/hora + espera pelo despacho) e já não é uma entrada removida.
-Ver [`capabilities.md`](capabilities.md).
-
-## Ecrãs novos da recriação (`designed`)
-
-Ecrãs que não têm captura equivalente na Uber mas fazem parte do produto Qolari. Não
-são promovidos a `live`: a evidência é o contrato e o teste.
-
-| Ecrã | App | Estado | Prova |
-|---|---|---|---|
-| Apoio (chat) | Driver + Rider | sim | `test_support_chat`, `Support.tsx` |
-| Segurança (contactos, SOS, 112) | Driver + Rider | sim | `test_safety` |
-| Partilha pública da viagem | Web | sim | `test_safety`, `/share/{token}` |
-| Documentos: upload e verificação | Driver | sim | `test_documents_upload` |
-| Preferências de condução | Driver | sim | `test_driver_preferences` |
-| Saldo, transferências e extratos | Driver | sim | `test_payouts` |
-| Agendar viagem | Rider | sim | `test_scheduling` |
-| Gorjeta, recibo, top-up e disputa | Rider | sim | `test_rider_money` |
-| Ride check | Driver + Rider | sim | `test_safety` |
-| Fila do aeroporto | Driver | sim | `test_airport_queue` |
-| Missões, pontos/Pro e referral | Driver | sim | `test_incentives` |
-| Ajustes, faturas e impostos | Driver + Backoffice | sim | `test_adjustments` |
-| Locais guardados | Rider | sim | `test_saved_places` |
-| Empresa, família/teens e Uber One | Rider | sim | `test_account_extras` |
-| Perfil empresarial/delegado | Driver | sim | `test_business_profile` |
-| Aparência e idioma | Driver + Rider | parcial | build + lint |
-| Paragens intermédias | Driver + Rider | sim | `test_stops` |
-| Offline com fila | Rider | sim | `PendingTripStore` |
-| Partilha do ecrã completo | Driver + Rider + Backoffice | sim | `test_screen_share_roundtrip` |
-| Gravação de vídeo (ecrã) | Driver + Backoffice | sim | `test_video_recording_start_stop` |
-| Gravação de áudio | Driver + Backoffice | sim | `test_audio_recording_start_stop` |
-| Suporte e Segurança | Backoffice | sim | `test_support_chat`, `test_safety` |
+entrega/courier, reserva/agendamento, paragens intermédias, escolha de cidade e
+filtro pessoal/empresa. Não são botões mortos: deixaram de existir na UI. Ver
+[`capabilities.md`](capabilities.md).
 
 ## Fleet
 
@@ -225,8 +194,8 @@ Sem captura própria. Cobertura **funcional** (contrato e operação), não visu
 
 | Razão | Ecrãs |
 |---|---|
-| `out_of_scope` | 022, 026, 027-030, 033, 081 (Comfort, vídeo de boas-vindas/câmara, login por e-mail, adicionar veículo) |
-| `thirdparty` | FCM, páginas web de terceiros |
+| `out_of_scope` | 022, 026, 027–030, 033, 081 (Comfort, vídeo, gravação, login por e-mail, adicionar veículo) |
+| `thirdparty` | mapa real, FCM, páginas web de terceiros |
 | `state` | 035 (ações necessárias), estados de viagem sem captura |
 | `peer` | aceitar, recolha, PIN, em viagem, fim, avaliação |
 | `geo` | posição real/simulada |

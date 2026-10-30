@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:header_state="collapse" />
+    <com.ubercab.external_web_view.core.AutoAuthWebView android:id="@id/ub__help_web_autoauthwebview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

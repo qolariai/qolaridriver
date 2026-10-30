@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__tax_document_forms_header" android:layout_width="fill_parent" android:layout_height="wrap_content" app:header_state="collapse" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__tax_document_forms_recycler_view" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__tax_document_forms_header" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__tax_document_forms_loading_indicator" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="?lineIndicatorHeight" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__tax_document_forms_header" />
+</merge>

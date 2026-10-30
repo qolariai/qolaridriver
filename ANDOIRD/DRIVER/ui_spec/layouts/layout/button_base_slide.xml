@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/background_button" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelLarge" android:ellipsize="end" android:layout_gravity="center" android:id="@id/button_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:autoSizeMaxTextSize="?textSizeSubtitle" app:autoSizeMinTextSize="@dimen/ui__text_size_micro" app:autoSizeTextType="uniform" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/slide_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.slidingbutton.ProgressFrameLayout android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelLarge" android:ellipsize="end" android:layout_gravity="center" android:id="@id/slide_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:autoSizeMaxTextSize="?textSizeSubtitle" app:autoSizeMinTextSize="@dimen/ui__text_size_micro" app:autoSizeTextType="uniform" />
+        <com.ubercab.ui.core.UImageView android:layout_gravity="end|center" android:id="@id/slide_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ub_ic_arrow_dot_right" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

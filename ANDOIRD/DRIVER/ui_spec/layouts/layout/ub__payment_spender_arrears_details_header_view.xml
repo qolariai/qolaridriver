@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__spender_arrears_details_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?gutterSize" app:analyticsId="73a220cb-1226" style="@style/Platform.TextStyle.HeadingLarge" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__spender_arrears_details_header_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?gutterSize" app:analyticsId="2ea110f9-7547" style="@style/Platform.TextStyle.ParagraphDefault" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__spender_arrears_details_header_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?gutterSize" app:analyticsId="6c187368-6ead" style="@style/Platform.TextStyle.ParagraphDefault" />
+</merge>

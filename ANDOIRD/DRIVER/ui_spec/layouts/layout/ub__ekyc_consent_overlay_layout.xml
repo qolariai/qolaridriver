@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="43f3119c-21ca"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UToolbar android:id="@id/ekyc_consent_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:analyticsId="1ff3d7af-bfa1" app:contentInsetStartWithNavigation="0.0dip" style="@style/Widget.Platform.Toolbar">
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center" android:id="@id/ekyc_consent_toolbar_title" android:layout_width="wrap_content" android:layout_height="fill_parent" app:analyticsId="97371fe5-de1e" style="@style/Platform.TextStyle.Small.Bold" />
+        </com.ubercab.ui.core.UToolbar>
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:analyticsId="9e65aa6a-0d00">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__ekyc_consent_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__ekyc_consent_primary_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" app:analyticsId="c986c9d4-59f4" app:buttonType="primary" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.ULinearLayout>

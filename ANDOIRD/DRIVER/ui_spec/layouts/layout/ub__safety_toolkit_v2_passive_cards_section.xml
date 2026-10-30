@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:orientation="vertical" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="a03127b1-976f"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListHeadingView android:id="@id/ub__toolkit_v2_section_list_title" android:paddingTop="@dimen/ui__spacing_unit_1x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Barrier android:id="@id/barrier" android:layout_width="fill_parent" android:layout_height="wrap_content" app:barrierDirection="bottom" app:constraint_referenced_ids="ub__toolkit_v2_section_list_title" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/barrier">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/ub__toolkit_v2_card_carousel" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_1x" />
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_horizontal" android:id="@id/ub__toolkit_v2_card_page_control_v2" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.uber_beacon.account.pairing.BeaconPairingView android:background="?colorHeaderBackground" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="start|top" android:id="@id/beacon_pairing_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" app:analyticsId="748abda8-23a0" app:srcCompat="@drawable/ub_ic_arrow_left" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:id="@id/beacon_pairing_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.uber_beacon.account.pairing.BeaconPairingView>

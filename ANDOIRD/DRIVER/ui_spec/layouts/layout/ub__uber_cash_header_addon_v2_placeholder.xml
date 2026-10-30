@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__uber_cash_header_addon_v2_placeholder_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" android:paddingVertical="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="@dimen/ui__uc_header_title_width" android:layout_height="@dimen/ui__spacing_unit_6x" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholder_corner_radius="@dimen/ui__spacing_unit_1.5x" />
+            <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:paddingVertical="@dimen/ui__spacing_unit_1x" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:placeholder_corner_radius="@dimen/ui__spacing_unit_0.5x" />
+        </com.ubercab.ui.core.UConstraintLayout>
+        <com.ubercab.ui.core.ULinearLayout android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_4x" app:placeholder_corner_radius="@dimen/ui__spacing_unit_0.5x" />
+            <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_4x" android:paddingStart="@dimen/ui__spacing_unit_4x" app:placeholder_corner_radius="@dimen/ui__spacing_unit_0.5x" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_4x" app:placeholder_corner_radius="@dimen/ui__spacing_unit_0.5x" />
+            <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_4x" android:paddingStart="@dimen/ui__spacing_unit_4x" app:placeholder_corner_radius="@dimen/ui__spacing_unit_0.5x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

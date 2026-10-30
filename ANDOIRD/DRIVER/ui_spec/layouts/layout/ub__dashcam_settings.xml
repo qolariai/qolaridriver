@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.dashcam_settings.DashcamSettingsView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="8afa856f-6245"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:id="@id/nauto_logo" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="f3a4328c-b96a" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/nauto_logo" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/program_information_button" android:background="?selectableItemBackground" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/program_information_button" app:analyticsId="91e47cee-3c6f" app:layout_constraintBottom_toTopOf="@id/remove_dashcam_button" style="@style/Platform.TextStyle.Subtitle.Normal" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:textColor="?textColorNegative" android:id="@id/remove_dashcam_button" android:background="?selectableItemBackground" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/leave_dashcam_button" android:textAllCaps="true" app:analyticsId="849b6b62-d65d" app:layout_constraintBottom_toBottomOf="parent" style="@style/Platform.TextStyle.Subtitle.Normal" />
+        </com.ubercab.ui.core.UConstraintLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.dashcam_settings.DashcamSettingsView>

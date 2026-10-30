@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="?backgroundStateDisabled" />
+        </shape>
+    </item>
+    <item android:state_focused="true" app:state_positive="true">
+        <shape>
+            <stroke android:width="@dimen/base_edit_text_border_width" android:color="?borderPositive" />
+            <solid android:color="?backgroundPrimary" />
+        </shape>
+    </item>
+    <item android:state_focused="true" app:state_negative="true">
+        <shape>
+            <stroke android:width="@dimen/base_edit_text_border_width" android:color="?borderNegative" />
+            <solid android:color="?backgroundPrimary" />
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape>
+            <stroke android:width="@dimen/base_edit_text_border_width" android:color="?borderSelected" />
+            <solid android:color="?backgroundPrimary" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="?backgroundTertiary" />
+        </shape>
+    </item>
+</selector>

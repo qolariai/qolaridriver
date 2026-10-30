@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__earnings_tracker_entry_public_mode_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="d92e7183-ad4f">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/ub__earnings_tracker_indicator_card" android:background="@drawable/ub__earnings_tracker_counter_pill_background" android:layout_width="wrap_content" android:layout_height="@dimen/ui__spacing_unit_6x" android:animateLayoutChanges="true" />
+        <com.ubercab.ui.core.UFrameLayout android:gravity="center" android:layout_gravity="center" android:padding="@dimen/ui__spacing_unit_1x" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UCardView android:gravity="center" android:layout_gravity="center" android:id="@id/ub__tracker_entry_public_label_container" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardBackgroundColor="?android:colorBackground" app:cardCornerRadius="@dimen/ui__corner_radius" app:contentPaddingBottom="@dimen/counter_label_text_padding_top" app:contentPaddingLeft="@dimen/ui__spacing_unit_1x" app:contentPaddingRight="@dimen/ui__spacing_unit_1x" app:contentPaddingTop="@dimen/counter_label_text_padding_top">
+                <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:id="@id/ub__earnings_tracker_label_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/Platform.TextStyle.Paragraph.Medium" />
+            </com.ubercab.ui.core.UCardView>
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__earnings_tracker_entry_private_mode_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="b97136e2-f423">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/ub__earnings_tracker_private_pill" android:background="@drawable/ub__earnings_tracker_counter_pill_private_mode_background" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x">
+            <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:tint="?brandWhite" app:srcCompat="@drawable/ub_ic_hide" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UFrameLayout android:gravity="center" android:layout_gravity="center" android:padding="@dimen/ui__spacing_unit_1x" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UCardView android:gravity="center" android:layout_gravity="center" android:id="@id/ub__tracker_entry_private_label_container" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardBackgroundColor="?android:colorBackground" app:cardCornerRadius="@dimen/ui__corner_radius" app:contentPaddingBottom="@dimen/counter_label_text_padding_top" app:contentPaddingLeft="@dimen/ui__spacing_unit_1x" app:contentPaddingRight="@dimen/ui__spacing_unit_1x" app:contentPaddingTop="@dimen/counter_label_text_padding_top">
+                <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/counter_privacy_mode_label" android:maxLines="1" style="@style/Platform.TextStyle.Paragraph.Medium" />
+            </com.ubercab.ui.core.UCardView>
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UFrameLayout>

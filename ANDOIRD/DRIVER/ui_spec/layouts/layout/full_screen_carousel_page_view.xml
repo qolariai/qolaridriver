@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.learning_hub_topic.image_view.FullScreenForCarouselPageView android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.learning_hub_topic.FullScreenCarouselScrollView android:id="@id/learning_carousel_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center|bottom" android:id="@id/learning_cta_button" android:paddingBottom="@dimen/ui__spacing_unit_8x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginRight="?contentInset" app:analyticsId="f38ba079-fdd8" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.learning_hub_topic.image_view.FullScreenForCarouselPageView>

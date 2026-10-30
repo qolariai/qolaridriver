@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.URelativeLayout android:padding="@dimen/team_list_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="?android:textAppearanceListItemSmall" android:gravity="center_vertical" android:id="@id/presidio_appfeedback_bug_name" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minHeight="?android:listPreferredItemHeightSmall" android:layout_alignParentStart="true" app:analyticsId="331d1f0d-8bb3" />
+    <com.ubercab.ui.core.UImageView android:id="@id/presidio_appfeedback_delete" android:clickable="true" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:tint="?colorWarning" android:layout_centerVertical="true" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_toEndOf="@id/presidio_appfeedback_bug_name" app:analyticsId="e0a3dab8-95df" app:srcCompat="@drawable/ic_close" />
+    <com.ubercab.ui.core.UImageView android:id="@id/presidio_appfeedback_next" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:analyticsId="339e9628-d84d" app:srcCompat="@drawable/ub__ic_more_teams_right" />
+</com.ubercab.ui.core.URelativeLayout>

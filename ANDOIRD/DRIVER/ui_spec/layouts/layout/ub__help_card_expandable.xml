@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.help.feature.help_card.orchestration.HelpCardView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/help_card_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:analyticsId="82f34239-098c" app:elevation="0.0dip" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/help_card_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/help_cards_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="middle" />
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.emptystate.EmptyStateView android:layout_gravity="center" android:id="@id/help_card_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:empty_state_action_title="@string/help_card_error_retry" app:empty_state_headline_text="@string/help_card_error_title" app:empty_state_paragraph_text="@string/help_card_error_subtitle" app:empty_state_type="failure" />
+    <com.ubercab.ui.core.emptystate.EmptyStateView android:layout_gravity="center" android:id="@id/help_card_loading_empty_state" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:empty_state_headline_text="@string/help_card_loading" app:empty_state_type="loading" />
+</com.ubercab.help.feature.help_card.orchestration.HelpCardView>

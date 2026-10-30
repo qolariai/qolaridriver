@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.reminders_full_page.RemindersFullPageView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/reminders_full_page_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:header_state="collapsing" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/reminders_full_page_web_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.uber.reminders_full_page.RemindersFullPageView>

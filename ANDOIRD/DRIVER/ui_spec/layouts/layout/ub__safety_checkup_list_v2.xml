@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety_canvas.sfclist.rib.SafetyCheckupListViewV2 android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__safety_checkup_base_header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:analyticsId="d205a83c-82fd" app:header_state="collapse" app:navigationContentDescription="@string/ub__safety_checkup_close_btn" />
+    <com.ubercab.ui.core.emptystate.EmptyStateView android:id="@id/ub__safety_checkup_empty_state_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" app:empty_state_headline_text="@string/ub__safety_checkup_loading_text" app:empty_state_type="loading" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/ub__safety_checkup_list_scroll_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ub__safety_checkup_base_header" android:overScrollMode="never">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__safety_checkup_linear_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_alignParentStart="true">
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/ub__safety_checkup_preview_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_weight="1.0" android:importantForAccessibility="no" app:analyticsId="7f8f9de6-d870" />
+            <com.ubercab.ui.core.list.PlatformListHeadingView android:id="@id/ub__safety_checkup_list_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.URecyclerView android:id="@id/ub__safety_checkup_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.uber.safety_canvas.sfclist.rib.SafetyCheckupListViewV2>

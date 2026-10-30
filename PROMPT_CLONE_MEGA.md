@@ -31,13 +31,6 @@ ecrã por prompt, num agente de código. Este documento sozinho produz um agente
 lento e hesitante; o BUILD produz o ecrã. O MEGA não fecha na FASE 6: a FASE 7
 fecha os gaps.
 
-**Ferramentas (v3).** A execução usa o servidor MCP **REA**, ligado por
-**`REA_BINDINGS.md`**: capacidade → ferramenta → artefacto. A regra de
-precedência está no §1 (regras 14-16) e a tradução de evidência no §2.1. O
-catálogo de ferramentas e as instruções de workflow que o REA instala **não
-substituem** nenhuma fase, gate ou critério de fecho deste documento — o
-programa é este.
-
 Substitui `<APP>`, `<PKG>`, `<ROLE>`, `<STACK_UI>`.
 
 ```
@@ -116,17 +109,6 @@ Se não consegues decidir o modo, não estás pronto para a FASE 2: falta sonda.
 13. **Nenhum botão decorativo.** `fora do âmbito`, `em breve`, `TODO`, toast
     sem efeito, `disabled` sem razão = falha de entrega, não gap. O utilizador
     nunca tem de descobrir o que falta; o agente inventaria e fecha.
-14. **Ferramenta nomeada, não comando improvisado.** Se a capacidade existe em
-    `REA_BINDINGS.md`, usa-se a ferramenta REA. Comando cru (`adb`, `apktool`,
-    `jadx`, `frida`) só como fallback declarado no `plan.md`, com a razão
-    escrita. O instrumento não é negociável; o método é deste documento.
-15. **Evidência traduzida, nunca promovida.** O vocabulário do REA não é o
-    deste documento. A conversão do §2.1 é obrigatória e uma leitura de binário
-    nunca se escreve como `live`.
-16. **Limitação declarada é limitação registada.** Todo o `unknown`/limitação
-    devolvido por uma ferramenta entra em `coverage.md` ou `backlog.md`. O que
-    não tem linha não foi verificado; o que não foi verificado não se afirma.
-    Ferramenta indisponível também é linha, não silêncio.
 
 ---
 
@@ -151,35 +133,6 @@ Duas dimensões ortogonais. Um facto tem sempre as duas.
 Regra de promoção: `repack_suspect` só passa a `clean` quando o elemento for
 confirmado contra `ui_spec/` (layout, drawable, string, dimens) **do binário
 original**. O que não se confirmar fica `repack_suspect` para sempre.
-
-### 2.1 Tradução de evidência (REA → este documento)
-
-A ferramenta devolve evidência com cobertura, limites e `unknowns`; este
-documento usa seis níveis. A conversão é obrigatória e faz-se uma vez, no
-momento em que o facto entra na spec:
-
-| Vem de `inspect_*` / `trace_*` / `decode_*` / captura | Vira | Nunca |
-|---|---|---|
-| Leitura estática do binário (manifest, método, recurso, assinatura) | `static` | `live`, `served` |
-| Request/resposta realmente capturado, ponta a ponta | `live` | `static` |
-| Ecrã materializado pelo teu backend | `served` (+ `repack_suspect` se veio de build modificado) | `live` |
-| Referência pública: loja, help center, vídeo | `unverified` | `static` |
-| Inferência tua | `presumed` | qualquer nível acima |
-| Ecrã/painel que não existe no original | `designed` | `unverified` |
-
-Regras:
-
-- **`unknowns`, `limitations` e `coverage`** devolvidos pela ferramenta entram
-  em `coverage.md` e, se bloquearem o alvo, em `backlog.md`. Um `unknown` sem
-  linha é omissão, não ausência de evidência.
-- **A ferramenta não fecha um gate.** Ela produz matéria-prima; o gate é do
-  MEGA e exige o artefacto citado (ex.: inventário do pacote), não a sensação
-  de que a análise correu bem.
-- **Origem citada.** Cada facto da spec aponta o artefacto que o sustenta em
-  `rea_evidence/` (ver `REA_BINDINGS.md` §3), com caminho e data.
-- **Ferramenta indisponível** (provider em falta, alvo não suportado): escreve
-  no `plan.md` o que ficou sem cobertura e como obtiveste o substituto. Nunca
-  se inventa evidência para preencher a tabela.
 
 ---
 
@@ -453,13 +406,7 @@ ganhas um contrato coerente, versionado e implementável.
 **Manifest** → activities, deep links, permissões, componentes exportados,
 `queries`/providers (o que a app consulta fora).
 
-**Ferramentas (obrigatórias).** `pull_adb_package` traz o conjunto completo
-(base + todos os splits, como `pm path` os reporta); `inspect_artifact`
-classifica e inventaria o que foi extraído, com digest. `adb pull` manual só
-como fallback declarado.
-
-**GATE:** `device_apk/` intacto + hash em `plan.md` + `decompiled/` +
-`jadx_src/` + inventário do artefacto em `rea_evidence/00_artifact/`.
+**GATE:** `device_apk/` intacto + hash em `plan.md` + `decompiled/` + `jadx_src/`.
 
 ---
 
@@ -491,15 +438,8 @@ esperada** (`live`/`served`/`static`) e **laboratório** (`completo`/`parcial`).
 Inclui cobertura prometida, tolerância declarada e a lista do que fica de fora
 **com razão**.
 
-**Ferramentas (obrigatórias).** `inspect_android_package` para manifest, SDK,
-permissões e componentes exportados; inspeção de assinatura do artefacto para o
-veredicto de re-assinatura. Os dois alimentam a linha de hardening e o teste de
-repack — sem eles, o `access_plan.md` é opinião. Para iOS,
-`project_apple_application_graph`.
-
 **GATE:** `access_plan.md` fechado + classificação preliminar do tipo de app
-(§4.5.1) + evidência de pacote e assinatura em `rea_evidence/01_access/`. Sem
-isto não há FASE 2.
+(§4.5.1). Sem isto não há FASE 2.
 
 ---
 
@@ -511,12 +451,6 @@ isto não há FASE 2.
 **Canal B — interrogativo (cópia repointada + stub backend).** Cada toque produz
 um request em `handled.log`; serves o DTO populado **inteiro**; itera até o ecrã
 renderizar. Só existe se a sonda de repack da FASE 1 passou.
-
-**Ferramentas (canal A).** `capture_adb_screen` por ecrã (frame único,
-content-addressed, digest estável para diff), `start_adb_app` para arranque
-reprodutível, `read_adb_logcat` para correlacionar crash/erro com o ecrã. A
-travessia e o dump de UI continuam a ser teus: a ferramenta dá o frame, não
-decide o próximo nó.
 
 ### Preparação (canal A)
 
@@ -590,19 +524,11 @@ Estados que só chegam com ator externo: `estado → trigger externo → role`.
 Na FASE 5 viram peer-bot.
 
 **GATE:** nós todos visitados **ou** todos classificados (§3.6); `coverage.md`
-escrito; `ux_reference/` público marcado `unverified`; frames de captura em
-`rea_evidence/02_capture/`.
+escrito; `ux_reference/` público marcado `unverified`.
 
 ---
 
 ## FASE 3 — Spec estática + stack
-
-**Ferramentas (obrigatórias).** `decode_android_resources` para layouts,
-`values/`, drawables, animações e fontes; `inspect_android_package` para o mapa
-de manifest/activities/deep links; `search_android_classes` →
-`inspect_android_method` → `trace_android_references` para DTOs, enums de
-estado e construtores de URL, sempre **por identificador**, nunca por leitura
-integral. `inspect_apktool_client` só para diagnosticar o provider.
 
 Tudo por greps direcionados:
 
@@ -623,18 +549,14 @@ não se troca XML por Compose nem UIKit por SwiftUI "porque é mais moderno".
 **Correlação:** cada ecrã de `ux_capture/` mapeia para um layout de `ui_spec/`.
 Os que não mapeiam estão classificados em `coverage.md` (§3.6).
 
-**GATE:** `ui_spec/` + `stack.md` + tabela de correlação sem órfãos + extracto
-descodificado e referências citadas em `rea_evidence/03_spec/`.
+**GATE:** `ui_spec/` + `stack.md` + tabela de correlação sem órfãos.
 
 ---
 
 ## FASE 4 — Contrato de dados
 
 `endpoints.json` **bottom-up** (canal B da FASE 2) + DTOs estáticos para os
-campos que a UI nunca renderizou. O tráfego grava-se e inspeciona-se com
-`inspect_web_network_capture` (HAR 1.2, SAZ, mitmproxy) e compara-se
-antes/depois com `compare_web_captures`. O shape que entra no contrato é o
-observado, não o reconstruído de memória.
+campos que a UI nunca renderizou.
 
 Por endpoint:
 
@@ -662,8 +584,7 @@ nome, visibilidade por role. Nunca dois `Trip` divergentes.
 URL confirmarem.
 
 **GATE:** todo o host classificado, todo o endpoint com pelo menos um ecrã,
-`evidence` em cada shape, zero segredos, e a captura de origem de cada shape
-citada em `rea_evidence/04_contract/`.
+`evidence` em cada shape, zero segredos.
 
 ---
 
@@ -808,9 +729,7 @@ de estados** (§4.5.4), não por paridade visual. Marca esses ecrãs como
 **GATE:** `topology.md` completo; cada estado que a app mostra tem um ator no teu
 sistema que o move; cada backend separado tem razão escrita; cada backoffice tem
 lista de ecrãs; cada exclusão tem equivalente funcional ou entrada removida, com
-aprovação escrita; e cada inferência de backoffice (§4.5.4) cita a string, o
-enum, o endpoint ou o estado órfão que a sustenta — sem citação é `presumed` e
-vai a `coverage.md`.
+aprovação escrita.
 
 ---
 
@@ -996,9 +915,6 @@ equivalente próprio funcional ou ponto de entrada removido — nunca placeholde
    remove a entrada
 8. **handoff em chat** — não só ficheiro: alvo, feito, gaps fechados, gaps
    abertos, bloqueios externos, veredicto "pronto para <alvo>? sim/não"
-9. **cobertura medida** — `evaluate_reconstruction_coverage` contra o limite
-   declarado no `plan.md`; o número entra no `RELATORIO_FINAL.md`. Cobertura
-   abaixo do prometido é gap, não tolerância.
 
 ---
 
@@ -1011,7 +927,6 @@ A FASE 6 diz o que está fiel. A FASE 7 fecha o que está morto. Nenhum projeto 
 
 Gera `capabilities.md` a partir de:
 - todos os ecrãs de `coverage.md` e do `ux_behavior.md`;
-- todos os `unknowns`/limitações registados em `rea_evidence/`;
 - todos os elementos interativos (botões, tabs, menus, chips, FABs, gestos,
   deep links, notificações);
 - todos os endpoints de `endpoints.json` e do backend;
@@ -1124,10 +1039,6 @@ Regras:
       testado antes de prometer cobertura
 - [ ] `coverage.md` — zero nós por visitar **ou** todos classificados
       (`auth`/`state`/`peer`/`geo`/`flag`/`thirdparty`/`broken`)
-- [ ] `rea_evidence/` — artefacto, acesso, captura, spec e contrato com digest e
-      ferramenta citada; `unknowns` traduzidos para `coverage.md`/`backlog.md`
-- [ ] Precedência respeitada — nenhuma capacidade de `REA_BINDINGS.md` feita por
-      comando cru sem razão escrita no `plan.md`
 - [ ] `ux_capture/` — screenshots do **binário original** (repointado vale com
       flag); screenshots da app nova **nunca** entram na spec (`newapp_*` à parte)
 - [ ] `ux_behavior.md` — grafo de navegação, gestos, animações, feedback, back,
@@ -1174,11 +1085,6 @@ Regras:
   para transformar "não deu" em decisão, não em projeto paralelo.
 - **Aceitar pixel de build modificado sem flag.** Mapas em branco parecem design.
 - **Promover evidência.** `served` não é `live`, `presumed` não é `static`.
-- **Preferir comando cru à ferramenta nomeada.** Se a capacidade existe em
-  `REA_BINDINGS.md`, o comando improvisado volta a ser o que era: errático e
-  sem evidência citável.
-- **Engolir um `unknown`.** Limitação que não vira linha em `coverage.md` ou
-  `backlog.md` transforma-se em spec inventada duas fases depois.
 - **Preencher a spec com "parece que".** Se não mediste, escreve que assumiste.
 - **Copiar assets "só para testar".** Contamina o repo e o entregável.
 - **Avançar de fase sem o GATE.** Cada fase produz artefactos verificáveis; sem
@@ -1355,7 +1261,6 @@ idevicescreenshot <nome>.png
   plan.md                # declaração inicial, gates, modo, tolerância
   access_plan.md         # decisão por app/role
   coverage.md            # ecrã → evidência → integridade → razão de gap
-  rea_evidence/          # artefactos por fase: digest + ferramenta + unknown
   device_apk/            # original intocado + hash
   decompiled/            # apktool
   jadx_src/              # jadx (referência para greps)

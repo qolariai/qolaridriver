@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.planning_hub_libs.incentive_details.objects.informationv2.InspectionInfoInformationListView android:orientation="vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?gutterSize" android:layout_marginBottom="@dimen/ui__spacing_unit_3x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:layout_marginRight="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" app:analyticsId="e0ef1585-abf8" style="@style/Platform.TextStyle.HeadingSmall" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/list" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_1x" android:layout_marginRight="@dimen/ui__spacing_unit_1x" />
+</com.ubercab.planning_hub_libs.incentive_details.objects.informationv2.InspectionInfoInformationListView>

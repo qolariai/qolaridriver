@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?brandWhite" />
+    <stroke android:width="@dimen/ui__spacing_unit_1x" android:color="?backgroundTransparent" />
+    <padding android:left="@dimen/ui__spacing_unit_1x" android:top="@dimen/ui__spacing_unit_1x" android:right="@dimen/ui__spacing_unit_1x" android:bottom="@dimen/ui__spacing_unit_1x" />
+</shape>

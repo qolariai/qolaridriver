@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.core.off_job.OffJobView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/go_online_view_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__go_online_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <ViewStub android:layout_gravity="center" android:id="@id/online_button_outline_stub" android:layout="@layout/off_job_online_button_outline" android:inflatedId="@id/online_button_outline" android:layout_width="@dimen/ui__spacing_unit_9x" android:layout_height="@dimen/ui__spacing_unit_9x" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" />
+        <ViewStub android:layout_gravity="center" android:id="@id/online_text_stub" android:layout="@layout/off_job_online_text" android:inflatedId="@id/online_text" android:layout_width="@dimen/ub__go_online_text_size" android:layout_height="@dimen/ui__spacing_unit_4x" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.carbon.core.off_job.OffJobView>

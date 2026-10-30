@@ -2,6 +2,7 @@ package com.qolari.drivereplica
 
 import com.google.gson.Gson
 import com.google.gson.JsonObject
+import com.qolari.drivereplica.drive.AcceptResult
 import com.qolari.drivereplica.drive.ActiveTrip
 import com.qolari.drivereplica.drive.DriveParser
 import com.qolari.drivereplica.drive.DriveSource
@@ -126,7 +127,7 @@ class DriveTest {
 
     // ---- ciclo no ViewModel ----
 
-    private val offer = OfferCard("o1", "UberX", "7,04 €", "Ana · ★ 5,00", "2 min (0,7 km) de distância", "Rossio", "Viagem de 20 min (11,4 km)", "Aeroporto", 20, 0, 38.7 to -9.1, 38.8 to -9.2)
+    private val offer = OfferCard("o1", "UberX", "7,04 €", "22 min • 12,1 km", "2 min (0,7 km) de distância", "Rossio", "Viagem de 20 min (11,4 km)", "Aeroporto", 20, 0, 38.7 to -9.1, 38.8 to -9.2)
     private fun trip(phase: TripPhase, pin: com.qolari.drivereplica.drive.PinTask? = null, wait: Long? = null) =
         ActiveTrip("t1", phase, "Ana", 5.0, "Rossio", 38.7, -9.1, "7,04 €", wait, pin)
     private val pinTask = com.qolari.drivereplica.drive.PinTask("4821", 3, "Peça o PIN", "…", 4, listOf("e1", "e2", "e3"), false)
@@ -138,12 +139,11 @@ class DriveTest {
         val calls = mutableListOf<String>()
         override suspend fun offers() = Result.success(offer)
         override suspend fun tasks() = if (fail) Result.failure(IOException("x")) else Result.success(trip)
-        override suspend fun accept(offerUuid: String): Result<ActiveTrip?> { calls += "accept"; return Result.success(trip) }
+        override suspend fun accept(offerUuid: String): Result<AcceptResult> { calls += "accept"; return Result.success(AcceptResult(trip)) }
         override suspend fun reject(offerUuid: String, expired: Boolean): Result<Unit> { calls += if (expired) "expire" else "reject"; return Result.success(Unit) }
         override suspend fun arrive(tripUuid: String): Result<ActiveTrip?> { calls += "arrive"; return Result.success(trip) }
         override suspend fun confirmPin(tripUuid: String): Result<Unit> { calls += "pin"; return Result.success(Unit) }
         override suspend fun begin(tripUuid: String, pin: String?): Result<ActiveTrip?> { calls += "begin:$pin"; return Result.success(trip) }
-        override suspend fun completeStop(tripUuid: String): Result<ActiveTrip?> { calls += "stop"; return Result.success(trip) }
         override suspend fun end(tripUuid: String): Result<Unit> { calls += "end"; return Result.success(Unit) }
         override suspend fun rate(tripUuid: String, stars: Int): Result<Unit> { calls += "rate:$stars"; return Result.success(Unit) }
         override suspend fun summary(tripUuid: String) = Result.success(TripSummary(tripUuid, "5,00 €", emptyList()))
@@ -152,6 +152,16 @@ class DriveTest {
         override suspend fun route(fromLat: Double, fromLng: Double, toLat: Double, toLng: Double): Result<List<Pair<Double, Double>>> {
             calls += "route"
             return if (routeFails) Result.failure(IOException("x")) else Result.success(listOf(fromLat to fromLng, toLat to toLng))
+        }
+        override suspend fun routeWithSteps(
+            fromLat: Double, fromLng: Double, toLat: Double, toLng: Double,
+        ): Result<com.qolari.drivereplica.net.RouteResponse?> = Result.success(null)
+        override suspend fun lastPosition(): Pair<Double, Double>? = null
+        override suspend fun sendMessage(tripUuid: String, text: String): Result<Unit> {
+            calls += "msg:$text"; return Result.success(Unit)
+        }
+        override suspend fun cancel(tripUuid: String, reason: String): Result<Unit> {
+            calls += "cancel:$reason"; return Result.success(Unit)
         }
     }
 

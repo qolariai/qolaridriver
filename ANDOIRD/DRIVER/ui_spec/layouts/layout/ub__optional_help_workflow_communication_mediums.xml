@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/help_workflow_communication_mediums_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" app:analyticsId="f555e00e-1d5b" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/help_workflow_communication_mediums_rows_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?dividerHorizontal" />
+</merge>

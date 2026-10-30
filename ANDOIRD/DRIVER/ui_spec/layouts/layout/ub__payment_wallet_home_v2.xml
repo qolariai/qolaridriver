@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.wallet_home.home.WalletHomeView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="56254fa8-23ba"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ProgressBar android:layout_gravity="center" android:id="@id/ub__payment_wallet_home_progressbar" android:visibility="gone" android:layout_width="@dimen/ub__loading_indicator_progress_size" android:layout_height="@dimen/ub__loading_indicator_progress_size" android:indeterminate="true" android:indeterminateTint="?contentPrimary" android:indeterminateTintMode="src_in" style="@style/ProgressBarStyle" />
+        <com.ubercab.wallet_common.view.WalletFullscreenErrorView android:id="@id/ub__payment_wallet_home_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.USwipeRefreshLayout android:id="@id/ub__payment_wallet_home_swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <com.ubercab.ui.core.URecyclerView android:id="@id/ub__payment_wallet_home_list" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </com.ubercab.ui.core.USwipeRefreshLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.wallet_home.home.WalletHomeView>

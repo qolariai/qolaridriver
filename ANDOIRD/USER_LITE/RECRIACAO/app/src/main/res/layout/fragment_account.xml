@@ -23,134 +23,457 @@
             app:tint="@color/ql_black" />
     </FrameLayout>
 
+    <LinearLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <TextView
+            android:id="@+id/tabHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@string/account_home"
+            android:textColor="@color/ql_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tabPersonal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.65"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@string/account_personal"
+            android:textColor="@color/ql_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tabSecurity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.25"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@string/account_security"
+            android:textColor="@color/ql_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tabPrivacy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.45"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@string/account_privacy"
+            android:textColor="@color/ql_black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/ql_gray_200">
+
+        <View
+            android:id="@+id/tabIndicator"
+            android:layout_width="90dp"
+            android:layout_height="3dp"
+            android:background="@color/ql_black" />
+    </FrameLayout>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingStart="@dimen/ql_margin"
+            android:paddingTop="18dp"
             android:paddingEnd="@dimen/ql_margin"
-            android:paddingBottom="24dp">
+            android:paddingBottom="28dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/account_title"
-                android:textColor="@color/ql_black"
-                android:textSize="32sp" />
-
+            <!-- Casa -->
             <LinearLayout
+                android:id="@+id/homeContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_card"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="18dp">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/avatar"
-                    android:layout_width="58dp"
-                    android:layout_height="58dp"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center_horizontal"
                     android:background="@drawable/bg_avatar"
                     android:gravity="center"
                     android:textColor="@color/ql_black"
-                    android:textSize="22sp"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:textColor="@color/ql_black"
+                    android:textSize="21sp" />
 
-                    <TextView
-                        android:id="@+id/name"
+                <TextView
+                    android:id="@+id/detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/ql_gray_500"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/personalCard"
+                        android:layout_width="0dp"
+                        android:layout_height="112dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_card_soft"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_person"
+                            app:tint="@color/ql_black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:lineSpacingExtra="1dp"
+                            android:text="@string/account_personal"
+                            android:textColor="@color/ql_black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/securityCard"
+                        android:layout_width="0dp"
+                        android:layout_height="112dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_card_soft"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_shield"
+                            app:tint="@color/ql_black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:lineSpacingExtra="1dp"
+                            android:text="@string/account_security"
+                            android:textColor="@color/ql_black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/privacyCard"
+                        android:layout_width="0dp"
+                        android:layout_height="112dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_card_soft"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_lock"
+                            app:tint="@color/ql_black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:lineSpacingExtra="1dp"
+                            android:text="@string/account_privacy"
+                            android:textColor="@color/ql_black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/account_suggestions"
+                    android:textColor="@color/ql_black"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_card"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-medium"
+                            android:lineSpacingExtra="2dp"
+                            android:text="@string/account_verify_title"
+                            android:textColor="@color/ql_black"
+                            android:textSize="23sp" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="12dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_account"
+                            app:tint="@color/ql_blue" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="@string/account_verify_body_short"
+                        android:textColor="@color/ql_gray_600"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/verifyButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_pill_light"
+                        android:gravity="center"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:text="@string/account_verify_start"
                         android:textColor="@color/ql_black"
-                        android:textSize="22sp" />
+                        android:textSize="16sp" />
+                </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/detail"
-                        android:layout_width="match_parent"
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/ql_divider" />
+
+                <LinearLayout
+                    android:id="@+id/homeRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_home"
+                        app:tint="@color/ql_black" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:textColor="@color/ql_gray_500"
-                        android:textSize="14sp" />
+                        android:layout_marginStart="18dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account_home"
+                            android:textColor="@color/ql_black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/homeValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/account_home_value"
+                            android:textColor="@color/ql_gray_500"
+                            android:textSize="14sp" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
+            <!-- Informações pessoais -->
             <LinearLayout
-                android:id="@+id/homeRow"
+                android:id="@+id/personalContent"
                 android:layout_width="match_parent"
-                android:layout_height="76dp"
-                android:background="?attr/selectableItemBackground"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:contentDescription="@null"
-                    android:src="@drawable/ic_home"
-                    app:tint="@color/ql_black" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/account_personal"
+                    android:textColor="@color/ql_black"
+                    android:textSize="30sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/account_home"
-                        android:textColor="@color/ql_black"
-                        android:textSize="19sp" />
+                <TextView
+                    android:id="@+id/personalName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:textColor="@color/ql_black"
+                    android:textSize="19sp" />
 
-                    <TextView
-                        android:id="@+id/homeValue"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/account_home_value"
-                        android:textColor="@color/ql_gray_500"
-                        android:textSize="14sp" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/personalEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/ql_gray_500"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/personalPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/ql_gray_500"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/editButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/bg_pill_black"
+                    android:gravity="center"
+                    android:text="@string/account_edit"
+                    android:textColor="@color/ql_white"
+                    android:textSize="16sp" />
             </LinearLayout>
 
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/ql_divider" />
+            <!-- Segurança -->
+            <LinearLayout
+                android:id="@+id/securityContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <LinearLayout android:id="@+id/personalRow" style="@style/AccountRow">
-                <ImageView style="@style/AccountIcon" android:src="@drawable/ic_account" app:tint="@color/ql_black" />
-                <TextView style="@style/AccountText" android:text="@string/account_personal" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/account_security"
+                    android:textColor="@color/ql_black"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/securityBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/ql_gray_600"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/signOutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="28dp"
+                    android:background="@drawable/bg_pill_black"
+                    android:gravity="center"
+                    android:text="@string/account_sign_out"
+                    android:textColor="@color/ql_white"
+                    android:textSize="16sp" />
             </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/ql_divider" />
 
-            <LinearLayout android:id="@+id/securityRow" style="@style/AccountRow">
-                <ImageView style="@style/AccountIcon" android:src="@drawable/ic_shield" app:tint="@color/ql_black" />
-                <TextView style="@style/AccountText" android:text="@string/account_security" />
+            <!-- Privacidade e Dados -->
+            <LinearLayout
+                android:id="@+id/privacyContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/account_privacy"
+                    android:textColor="@color/ql_black"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/account_privacy_body"
+                    android:textColor="@color/ql_gray_600"
+                    android:textSize="16sp" />
             </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/ql_divider" />
-
-            <LinearLayout android:id="@+id/privacyRow" style="@style/AccountRow">
-                <ImageView style="@style/AccountIcon" android:src="@drawable/ic_lock" app:tint="@color/ql_black" />
-                <TextView style="@style/AccountText" android:text="@string/account_privacy" />
-            </LinearLayout>
-            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/ql_divider" />
-
-            <LinearLayout android:id="@+id/verifyRow" style="@style/AccountRow">
-                <ImageView style="@style/AccountIcon" android:src="@drawable/ic_check" app:tint="@color/ql_black" />
-                <TextView style="@style/AccountText" android:text="@string/account_verify" />
-            </LinearLayout>
-
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaults>
+    <entry>
+        <key>get_mobile_parameters_grpc_migration_enabled</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>get_mobile_parameters_client_bucket_probability</key>
+        <value>0.5</value>
+    </entry>
+    <entry>
+        <key>enable_fileuploader_gzip</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>enable_request_gzip</key>
+        <value />
+    </entry>
+    <entry>
+        <key>grpc_network_tracing_tag</key>
+        <value>enable_network_monitoring</value>
+    </entry>
+    <entry>
+        <key>get_cached_host_name_timeout_in_milli_seconds</key>
+        <value>500</value>
+    </entry>
+    <entry>
+        <key>wni_grpc_network_tracing</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>is_get_cached_host_name_anr_fix_enabled</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>grpc_network_tracing_url_block_list</key>
+        <value>/event/user/v2</value>
+    </entry>
+    <entry>
+        <key>enable_network_status_metrics</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>grpc_cronet_stream_logger</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>network_status_mismatch_threshold_ms</key>
+        <value>2000</value>
+    </entry>
+    <entry>
+        <key>wni_disable_certificate_pinner</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>wni_cert_pinning</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>cert_pinning_version</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>public_key_pins_hash</key>
+        <value />
+    </entry>
+    <entry>
+        <key>public_key_pins_hash_signature</key>
+        <value />
+    </entry>
+    <entry>
+        <key>enable_ssl_key_expire_alert</key>
+        <value>true</value>
+    </entry>
+</defaults>

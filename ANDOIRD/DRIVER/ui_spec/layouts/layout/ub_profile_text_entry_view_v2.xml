@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.view.text_entry.TextEntryView android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="df015626-c581"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="?contentInset" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset">
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__text_entry_header_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" uber:analyticsId="29583a53-cace" style="@style/Platform.TextStyle.DisplayXSmall" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:id="@id/ub__text_entry_subtitle_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" uber:analyticsId="76221a58-6ae4" style="@style/Platform.TextStyle.ParagraphDefault" />
+            <com.ubercab.ui.core.input.BaseEditText android:id="@id/ub__text_entry_base_edit_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" uber:input_size="medium" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:id="@id/ub__text_entry_message_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" style="@style/Platform.TextStyle.ParagraphDefault" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <androidx.legacy.widget.Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.ULinearLayout android:id="@id/ub__text_entry_footer_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginRight="?contentInset" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__text_entry_primary_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="?contentInset" android:textAllCaps="false" uber:analyticsId="b3601105-9558" uber:buttonType="primary" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.profiles.view.text_entry.TextEntryView>

@@ -40,7 +40,9 @@ class WalletFragment : Fragment() {
         binding.payments.adapter = adapter
         binding.backButton.setOnClickListener { findNavController().navigateUp() }
         binding.addPayment.setOnClickListener { choosePayment() }
-        binding.topUp.setOnClickListener { chooseTopUp() }
+        binding.withdrawButton.setOnClickListener {
+            Snackbar.make(binding.root, R.string.wallet_withdraw_unavailable, Snackbar.LENGTH_SHORT).show()
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -49,8 +51,12 @@ class WalletFragment : Fragment() {
                     binding.error.isVisible = state.error != null
                     binding.error.text = state.error
                     state.wallet?.let { w ->
+                        binding.balanceValue.text = w.cash.label
                         binding.cashValue.text = w.cash.label
-                        binding.paymentValue.text = getString(R.string.ride_payment, w.payment.label)
+                        val nextMonday = java.time.LocalDate.now()
+                            .with(java.time.temporal.TemporalAdjusters.next(java.time.DayOfWeek.MONDAY))
+                            .format(java.time.format.DateTimeFormatter.ofPattern("dd/MM"))
+                        binding.paymentScheduled.text = getString(R.string.wallet_scheduled, nextMonday)
                         profiles = w.profiles
                         selectedId = w.payment.id
                         adapter.submit(w.profiles, w.payment.id)
@@ -78,16 +84,6 @@ class WalletFragment : Fragment() {
                 viewModel.select(profiles[which].id)
                 dialog.dismiss()
             }
-            .setNegativeButton(R.string.error_cancel, null)
-            .show()
-    }
-
-    private fun chooseTopUp() {
-        val amounts = intArrayOf(1000, 2000, 5000)
-        val labels = amounts.map { getString(R.string.wallet_topup_amount, it / 100) }.toTypedArray()
-        MaterialAlertDialogBuilder(requireContext())
-            .setTitle(R.string.wallet_topup)
-            .setItems(labels) { _, which -> viewModel.topUp(amounts[which]) }
             .setNegativeButton(R.string.error_cancel, null)
             .show()
     }

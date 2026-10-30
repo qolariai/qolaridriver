@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="533ddb65-d9e5">
+        <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <include layout="@layout/ub__cashout_fixed_appbar" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__cashout_content_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_anchor="@id/ub__cashout_appbar" app:layout_anchorGravity="bottom" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <com.ubercab.ui.core.UScrollView android:id="@id/ub__cashout_content_scrollview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__cashout_cards_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </com.ubercab.ui.core.UScrollView>
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__cashout_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_anchor="@id/ub__cashout_appbar" app:layout_anchorGravity="bottom">
+                <include layout="@layout/ub__cashout_error" />
+            </com.ubercab.ui.core.UFrameLayout>
+            <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:id="@id/ub__cashout_progress" android:visibility="gone" android:layout_width="@dimen/ub__loading_indicator_progress_size" android:layout_height="@dimen/ub__loading_indicator_progress_size" android:indeterminate="true" app:analyticsId="08474a87-2ff7" style="@style/ProgressBarStyle" />
+        </com.ubercab.ui.core.UCoordinatorLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__cashout_bottom_content_layout" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/ui__elevation_high">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__cashout_cards_bottom_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.slidingbutton.SlidingButton android:id="@id/ub__cashout_slide_confirmation_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x" android:layout_margin="@dimen/ui__spacing_unit_2x" app:analyticsId="85882718-babf" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

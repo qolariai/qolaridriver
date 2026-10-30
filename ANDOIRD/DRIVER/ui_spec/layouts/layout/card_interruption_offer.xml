@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.event_card.interruption_offer.CardInterruptionOfferView android:orientation="horizontal" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/interruption_offer_image_container" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_8x" android:layout_marginLeft="?gutterSize" android:layout_marginRight="?gutterSize" android:layout_marginStart="?gutterSize" android:layout_marginEnd="?gutterSize">
+        <com.ubercab.core.event_card.CardImageView android:layout_gravity="center" android:id="@id/interruption_offer_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:id="@id/interruption_offer_title_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Headline.Medium" android:id="@id/interruption_offer_title_text" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="e3596db6-d4b1" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:id="@id/interruption_offer_subtitle_container" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Subtitle.Normal" android:id="@id/interruption_offer_subtitle_text" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="4071c54a-3d0d" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UPlainView android:background="?borderPrimary" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <com.ubercab.ui.core.ULinearLayout android:id="@id/interruption_offer_extrainfo_container" android:paddingTop="@dimen/ui__spacing_unit_0.5x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Medium" android:id="@id/interruption_offer_extrainfo_text" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="32ff15a2-667c" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.event_card.interruption_offer.CardInterruptionOfferView>

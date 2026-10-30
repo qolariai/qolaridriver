@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.mobilestudio.logviewer.ui.FilterBottomSheet android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/log_logType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_0.5x" android:text="@string/bs__tag_logType" app:analyticsId="5069b05d-934f" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/list_linearLayout_logType" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UPlainView android:background="?backgroundTertiary" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/list_loglevel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:id="@id/log_logLevel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" android:text="@string/bs__tag_logLevel" app:analyticsId="f5656e9c-fee6" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.USpinner android:layout_gravity="center_vertical" android:id="@id/logLevel_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" android:layout_weight="1.0" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.mobilestudio.logviewer.ui.FilterBottomSheet>

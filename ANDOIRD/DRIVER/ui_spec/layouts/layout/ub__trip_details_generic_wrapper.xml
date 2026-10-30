@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.upfront_driver_assignment.trip_details_wrapper.UDATripDetailsGenericWrapperView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.Platform.Light.Header" android:id="@id/trip_details_wrapper_toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/trip_details_wrapper_bit_loading" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:bli_bitColor="?contentPrimary" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/trip_details_wrapper_toolbar" />
+    <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/trip_details_wrapper_error_view" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/trip_details_wrapper_bit_loading" />
+</com.ubercab.upfront_driver_assignment.trip_details_wrapper.UDATripDetailsGenericWrapperView>

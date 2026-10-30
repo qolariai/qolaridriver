@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:padding="?contentInset" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_9x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="start|center" android:id="@id/ub__create_org_invite_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="14154da7-2a4f" />
+    <Space android:layout_width="?contentInset" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UTextView android:gravity="center_vertical" android:id="@id/ub__create_org_invite_action_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:analyticsId="d5293673-713c" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__create_org_invite_caret" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?iconTertiary" app:analyticsId="a3eab6bc-f578" app:srcCompat="@drawable/ub_ic_chevron_right_small" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.features.voucher_add_code_button.VoucherAddCodeButtonView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="7d7e2e9e-cdba"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:gravity="start" android:id="@id/ub__vouchers_label" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/voucher_section_title" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:analyticsId="98f41166-c6dd" style="@style/Platform.TextStyle.HeadingXSmall" />
+    <com.ubercab.ui.core.list.PlatformListHeadingView android:id="@id/ub__vouchers_label_heading_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="98f41166-c6dd" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__vouchers_add_code_list_item" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="6613521c-4958" />
+</com.ubercab.profiles.features.voucher_add_code_button.VoucherAddCodeButtonView>

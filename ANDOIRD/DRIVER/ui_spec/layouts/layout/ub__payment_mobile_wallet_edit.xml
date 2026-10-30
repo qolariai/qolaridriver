@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.payment_mobile_wallet.operation.edit.MobileWalletEditView android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="8f05b97c-e5c7"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.Platform.Light.Header" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/form_container" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="5f4aa164-5b92" />
+</com.ubercab.payment_mobile_wallet.operation.edit.MobileWalletEditView>

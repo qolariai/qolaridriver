@@ -1,0 +1,9 @@
+{
+ "decoded": "C:\\xampp\\htdocs\\QOLARI\\PROJETOS OFICIAIS\\QOLARI DRIVER\\ANDOIRD\\DRIVER\\spec_src\\decoded_4600",
+ "apk": "spec_src\\apk_instalado\\base.apk",
+ "apk_sha256": "3ab0036b245c8654b4835798ac237739a996277f1f82e60f9de6b0b0112b8dc0",
+ "versionName": "4.600.10000",
+ "versionCode": "313129",
+ "minSdk": "29",
+ "targetSdk": "36"
+}

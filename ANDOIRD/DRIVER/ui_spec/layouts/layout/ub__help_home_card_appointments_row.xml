@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="2e14b996-2f74" app:srcCompat="@drawable/ub_ic_calendar" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginRight="?contentInset">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Subtitle.Normal" android:textColor="?android:textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help_home_card_appointments_row_header" app:analyticsId="a7855280-a796" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorSecondary" android:id="@id/help_home_card_appointments_row_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="2fca4125-5b58" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorSecondary" android:id="@id/help_home_card_appointments_row_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="b178d917-149c" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

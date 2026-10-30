@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:theme="@style/Theme.Carbon.DayNight" android:background="@drawable/widget_layout_background" android:layout_width="@dimen/ub__quest_widget_min_height" android:layout_height="@dimen/ub__quest_widget_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    <ImageView android:layout_gravity="end|top" android:layout_width="@dimen/ui__spacing_unit_8x" android:layout_height="@dimen/ui__spacing_unit_7x" android:layout_margin="@dimen/ui__spacing_unit_2x" android:scaleType="fitCenter" android:contentDescription="@null" app:srcCompat="@drawable/ub__uber_logo" />
+</FrameLayout>

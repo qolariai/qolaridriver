@@ -117,10 +117,9 @@ class Lote3Test {
     fun withoutFiltersEverythingIsShown() {
         val vm = discover()
         val rows = vm.state.value.rows
-        assertEquals(DiscoverRow.Chips, rows.first())
-        assertTrue(rows[1] is DiscoverRow.Promos)
+        assertTrue(rows.first() is DiscoverRow.Promos)
+        assertEquals(today, (rows[1] as DiscoverRow.DayHeader).date)
         assertEquals(DiscoverFixtures.items(today).size, vm.itemRows().size)
-        assertEquals(today, (rows[2] as DiscoverRow.DayHeader).date)
     }
 
     @Test

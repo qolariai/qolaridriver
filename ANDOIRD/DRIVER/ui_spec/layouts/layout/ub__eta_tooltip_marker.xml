@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.map_ui.tooltip.core.EtaTooltipView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/ub__tooltip_min_height">
+        <com.ubercab.ui.core.UTextView android:textSize="@dimen/ub__tooltip_eta_title_text_size" android:gravity="start|center" android:layout_gravity="center_vertical" android:id="@id/ub__eta_value" android:paddingLeft="@dimen/ub__tooltip_padding_extra" android:paddingRight="@dimen/ub__tooltip_padding_extra" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@style/Platform.TextStyle.H2.Book" />
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/ub__tooltip_padding_extra">
+            <com.ubercab.ui.core.UTextView android:textSize="@dimen/ub__tooltip_eta_label_text_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/time_unit_short_minute" android:maxLines="1" android:includeFontPadding="false" android:textAllCaps="true" style="@style/Platform.TextStyle.H6.News.Secondary" />
+            <com.ubercab.ui.core.UTextView android:textSize="@dimen/ub__tooltip_eta_label_text_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/eta" android:maxLines="1" android:includeFontPadding="false" android:textAllCaps="true" style="@style/Platform.TextStyle.H6.News.Secondary" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.map_ui.tooltip.core.EtaTooltipView>

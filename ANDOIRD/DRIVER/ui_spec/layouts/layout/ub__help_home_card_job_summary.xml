@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?android:textColorSecondary" android:id="@id/help_home_card_job_summary_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginRight="?gutterSize" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" app:analyticsId="4ce0dcc2-bd8d" style="@style/Platform.TextStyle.ParagraphSmall" />
+    <com.ubercab.ui.commons.image.AspectRatioImageView android:id="@id/help_home_card_job_summary_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:scaleType="centerCrop" app:analyticsId="301b4966-de62" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?android:textColorPrimary" android:id="@id/help_home_card_job_summary_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="?gutterSize" android:layout_marginEnd="?gutterSize" app:analyticsId="d62ba1d5-f724" style="@style/Platform.TextStyle.Paragraph.Medium" />
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?android:textColorPrimary" android:id="@id/help_home_card_job_fare" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="?gutterSize" android:layout_marginEnd="?gutterSize" app:analyticsId="00c80f4c-2d3b" style="@style/Platform.TextStyle.Paragraph.Medium" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?android:textColorSecondary" android:id="@id/help_home_card_job_summary_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" android:layout_marginRight="?gutterSize" app:analyticsId="26adb081-43ee" style="@style/Platform.TextStyle.ParagraphSmall" />
+</merge>

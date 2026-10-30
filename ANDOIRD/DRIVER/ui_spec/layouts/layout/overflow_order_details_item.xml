@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:textColor="?contentPositive" android:id="@id/overflow_order_details_quantity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_marginStart="@dimen/ui__spacing_unit_0x" android:layout_marginEnd="@dimen/ui__spacing_unit_0.5x" uber:analyticsId="be07da4b-d5c7" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:textColor="?contentPrimary" android:id="@id/overflow_order_details_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" uber:analyticsId="280e2735-40d5" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.URecyclerView android:id="@id/overflow_order_details_item_options_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_4x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+</com.ubercab.ui.core.ULinearLayout>

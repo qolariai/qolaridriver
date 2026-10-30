@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.bankcard.addon.postadd.combocard.ComboCardPostAddPaymentView android:orientation="vertical" android:background="?brandWhite" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="010e2876-7bf9"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.URecyclerView android:id="@id/credit_transfer_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UTextView android:id="@id/combo_card_footer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginRight="?gutterSize" android:layout_marginBottom="@dimen/ui__spacing_unit_6x" android:layout_weight="1.0" uber:analyticsId="cc017d0d-c2e5" style="@style/Platform.TextStyle.H5.News.Tertiary" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.presidio.payment.bankcard.addon.postadd.combocard.ComboCardPostAddPaymentView>

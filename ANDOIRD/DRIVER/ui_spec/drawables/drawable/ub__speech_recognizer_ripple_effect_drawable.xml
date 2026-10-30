@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="@dimen/ub__help_speech_recognizer_mic_animation_ripple_padding" android:color="?gray800" />
+        </shape>
+    </item>
+    <item android:left="@dimen/ui__spacing_unit_1x" android:top="@dimen/ui__spacing_unit_1x" android:right="@dimen/ui__spacing_unit_1x" android:bottom="@dimen/ui__spacing_unit_1x">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="@dimen/ub__help_speech_recognizer_mic_animation_ripple_padding" android:color="?black" />
+        </shape>
+    </item>
+</layer-list>

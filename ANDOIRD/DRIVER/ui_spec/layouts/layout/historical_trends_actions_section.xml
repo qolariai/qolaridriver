@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.core.agenda_integration.section.ActionSectionView android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ub__agenda_height" app:analyticsId="0d1c0b27-1c5a" app:ctaText="@string/agenda_item_earnings_trends_title" app:icon="@drawable/ub_ic_chart_bar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

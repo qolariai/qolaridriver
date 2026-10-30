@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__emobi_entity_image" android:layout_width="@dimen/ui__spacing_unit_9x" android:layout_height="@dimen/ui__spacing_unit_9x" app:layout_constraintBottom_toTopOf="@id/guideline" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.legacy.widget.Space android:orientation="horizontal" android:id="@id/guideline" android:focusable="false" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintLeft_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__emobi_entity_image" />
+    <com.ubercab.ui.core.UChip android:id="@id/ub__emobi_entity_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/ui__elevation_low" app:chipBackgroundColor="?backgroundPrimary" app:layout_constraintBottom_toTopOf="@id/guideline" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/guideline" app:rippleColor="?backgroundTransparent" style="@style/Platform.TextStyle.LabelDefault" />
+</com.ubercab.ui.core.UConstraintLayout>

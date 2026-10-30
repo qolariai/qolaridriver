@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center" android:id="@id/pin_entry_button_layout" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/pin_entry_button_html_style" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="df74a118-db54" />
+    <com.ubercab.ui.core.UButton android:id="@id/pin_entry_button_button_style" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="4473be77-b118" style="@style/Platform.Button.Primary" />
+</com.ubercab.ui.core.ULinearLayout>

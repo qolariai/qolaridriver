@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.features.settings.ProfileSettingsView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.widget.CollapsingHeaderAppBarLayout android:theme="@style/U4BLightHeader" android:id="@id/appbar" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/header_elevation" uber:contentInsetStartWithNavigation="0.0dip" uber:elevation="0.0dip" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__profile_settings_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/intent_profile_settings_toolbar_title" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" uber:analyticsId="83831df1-66b1" style="@style/U4BBaseHeaderMedium" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__profile_settings_section" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__profile_settings_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_1.5x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="66c4c5e3-82c8" style="@style/Platform.TextStyle.H6.News.Tertiary" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.profiles.features.settings.ProfileSettingsView>

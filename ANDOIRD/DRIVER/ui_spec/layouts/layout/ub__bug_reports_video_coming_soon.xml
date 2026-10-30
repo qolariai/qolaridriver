@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bug_reporter_fab_video_coming_soon" app:analyticsId="190e9856-6f89" style="@style/Platform.TextStyle.HeadingDefault" />
+    <com.ubercab.ui.core.UTextView android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bug_reporter_fab_video_thanks" app:analyticsId="e69bb005-3e5e" style="@style/Platform.TextStyle.ParagraphLarge" />
+</com.ubercab.ui.core.ULinearLayout>

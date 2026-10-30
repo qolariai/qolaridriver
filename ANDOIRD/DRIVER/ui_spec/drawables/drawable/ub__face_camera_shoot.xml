@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="Oval-3" android:fillColor="?buttonPrimaryColor" android:pathData="M40,0 C62.0914,0,80,17.9086,80,40 C80,62.0914,62.0914,80,40,80 C17.9086,80,0,62.0914,0,40 C0,17.9086,17.9086,0,40,0 Z" android:strokeWidth="1.0" />
+    <path android:name="path-1" android:fillColor="?colorAccent" android:pathData="M40,12 C55.464,12,68,24.536,68,40 C68,55.464,55.464,68,40,68 C24.536,68,12,55.464,12,40 C12,24.536,24.536,12,40,12 Z" android:strokeWidth="1.0" />
+    <path android:name="path-1" android:fillColor="?colorAccentInverse" android:pathData="M40,12 C55.464,12,68,24.536,68,40 C68,55.464,55.464,68,40,68 C24.536,68,12,55.464,12,40 C12,24.536,24.536,12,40,12 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    <path android:name="path-1" android:fillColor="?colorAccentInverse" android:pathData="M40,12 C55.464,12,68,24.536,68,40 C68,55.464,55.464,68,40,68 C24.536,68,12,55.464,12,40 C12,24.536,24.536,12,40,12 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+</vector>

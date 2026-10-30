@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UToolbar android:id="@id/ub__cash_drop_toolbar" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Widget.Platform.Toolbar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageButton android:layout_gravity="start" android:id="@id/ub__cash_drop_toolbar_back_button" android:background="?brandTransparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" uber:srcCompat="@drawable/navigation_icon_back" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_gravity="end|center" android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginEnd="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/ub__cash_drop_toolbar_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.Paragraph.Medium" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/ub__cash_drop_toolbar_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.Paragraph.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UToolbar>

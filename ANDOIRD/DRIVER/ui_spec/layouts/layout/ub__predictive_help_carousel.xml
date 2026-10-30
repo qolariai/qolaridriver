@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Subtitle.Normal" android:id="@id/ub__predictive_help_empty_state" android:background="?android:colorBackground" android:paddingLeft="?gutterSize" android:paddingTop="?contentInset" android:paddingRight="?gutterSize" android:paddingBottom="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__predictive_help_default_state" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H5.News" android:id="@id/ub__predictive_help_carousel_header" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:layout_marginBottom="?contentInset" android:text="@string/past_trips_predictive_help_header" />
+        <com.ubercab.ui.core.UHorizontalScrollView android:orientation="horizontal" android:id="@id/ub__predictive_help_scrollview" android:background="?android:colorBackground" android:scrollbars="none" android:fadingEdge="horizontal" android:fadingEdgeLength="@dimen/ui__spacing_unit_2x" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:overScrollMode="never" android:requiresFadingEdge="horizontal">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__predictive_help_cards_container" android:background="?android:colorBackground" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/divider_space_2x" android:showDividers="beginning|middle|end" />
+        </com.ubercab.ui.core.UHorizontalScrollView>
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

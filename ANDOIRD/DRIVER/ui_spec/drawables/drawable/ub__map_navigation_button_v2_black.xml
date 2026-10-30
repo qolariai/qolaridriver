@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="fill_horizontal|center" android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="?backgroundInversePrimary" />
+            <corners android:radius="@dimen/ui__spacing_unit_3x" />
+        </shape>
+    </item>
+    <item android:gravity="fill_horizontal|center" android:id="@android:id/progress">
+        <clip android:gravity="right">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/ub_map_navigation_button_progress_color" />
+                <corners android:radius="@dimen/ui__spacing_unit_3x" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

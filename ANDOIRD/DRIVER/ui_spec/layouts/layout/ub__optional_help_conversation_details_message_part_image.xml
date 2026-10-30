@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:id="@id/help_conversation_details_message_part_image_card" android:layout_width="0.0dip" android:layout_height="0.0dip" android:foreground="?selectableItemBackground" uber:analyticsId="098594f7-37dd" uber:layout_constraintDimensionRatio="1:1" uber:layout_constraintEnd_toEndOf="parent" uber:layout_constraintHorizontal_bias="1.0" uber:layout_constraintStart_toStartOf="parent" uber:layout_constraintWidth_percent="0.5">
+        <com.ubercab.ui.core.UImageView android:id="@id/help_conversation_details_message_part_image_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </com.ubercab.ui.core.UCardView>
+</merge>

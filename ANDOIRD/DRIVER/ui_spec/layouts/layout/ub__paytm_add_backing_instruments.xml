@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.paytm.operation.addbackinginstrument.PaytmAddBackingInstrumentView android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="3ad008a5-b157"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.text.BaseTextView android:paddingLeft="?contentInset" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_backing_instrument_description" style="@style/Platform.TextStyle.ParagraphSmall" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/ub__add_backing_instrument_picker" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.presidio.payment.paytm.operation.addbackinginstrument.PaytmAddBackingInstrumentView>

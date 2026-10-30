@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_4x" android:divider="@drawable/divider_space_2x" android:showDividers="middle">
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UPlainView android:background="@drawable/celebration_step_circle_background" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimaryInverse" android:layout_gravity="center" android:id="@id/step_num" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="0cdcbcd6-e687" style="@style/Platform.TextStyle.LabelLarge" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:layout_gravity="center_vertical" android:id="@id/step_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="48ebc8f3-a0f9" style="@style/Platform.TextStyle.LabelDefault" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_5x">
+        <com.ubercab.ui.core.UPlainView android:layout_gravity="center" android:id="@id/step_vertical_line" android:background="?backgroundInversePrimary" android:layout_width="@dimen/ui__divider_width" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UFrameLayout>

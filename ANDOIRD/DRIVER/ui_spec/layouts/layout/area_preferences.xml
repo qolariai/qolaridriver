@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.preferences.area_preferences.AreaPreferencesView android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="2ab5e402-a031"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFloatingActionButton android:id="@id/area_prefs_back" android:padding="@dimen/carbon_ui__spacing_unit_1.5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:minWidth="@dimen/ui__spacing_unit_3x" android:minHeight="@dimen/ui__spacing_unit_3x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:analyticsId="5bc9b361-4b71" app:backgroundTint="?android:colorBackground" app:borderWidth="0.0dip" app:elevation="@dimen/ui__elevation_medium" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ub_ic_arrow_left" />
+    <com.ubercab.ui.core.UCoordinatorLayout android:id="@id/bottom_sheet_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+</com.ubercab.carbon.preferences.area_preferences.AreaPreferencesView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="bounds" android:pathData="M0,24 L24,24 L24,0 L0,0 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+    <path android:name="Page-1" android:fillColor="?colorAccentInverse" android:pathData="M12,1 C5.92467,1,1,5.925,1,12 C1,18.075,5.92467,23,12,23 C18.0753,23,23,18.075,23,12 C23,5.925,18.0753,1,12,1 M12,19.5 C11.1717,19.5,10.5,18.8283,10.5,18 C10.5,17.1717,11.1717,16.5,12,16.5 C12.8283,16.5,13.5,17.1717,13.5,18 C13.5,18.8283,12.8283,19.5,12,19.5 M13,13.374 L13,15 L11,15 L11,11.9493 L11,11.5 L12,11.5 C13.1047,11.5,14,10.6047,14,9.5 C14,8.39533,13.1047,7.5,12,7.5 C10.8953,7.5,10,8.39533,10,9.5 L8,9.5 C8,7.291,9.79067,5.5,12,5.5 C14.2093,5.5,16,7.291,16,9.5 C16,11.3637,14.7253,12.93,13,13.374" android:strokeWidth="1.0" android:fillType="evenOdd" />
+</vector>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge app:cardUseCompatPadding="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:id="@id/help_chat_widget_content_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" android:maxLines="1" android:textAlignment="viewStart" app:analyticsId="96af5c06-82f1" style="@style/Platform.TextStyle.ParagraphSmall" />
+        <com.ubercab.ui.core.UTextView android:id="@id/help_chat_widget_content_card_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:textAlignment="viewStart" app:analyticsId="40119eac-80c0" style="@style/Platform.TextStyle.ParagraphLarge" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

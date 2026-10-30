@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.navigation.setdestination.SetDestinationView android:orientation="vertical" android:background="?brandTransparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:id="@id/set_destination_cardview" android:fitsSystemWindows="@bool/use_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_margin="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/carbon_ui__spacing_unit_1.5x" uber:cardBackgroundColor="?android:colorBackground" uber:cardCornerRadius="@dimen/ui__spacing_unit_3x" uber:cardElevation="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ub__search" android:padding="@dimen/carbon_ui__spacing_unit_1.5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/ui__spacing_unit_3x" android:minHeight="@dimen/ui__spacing_unit_3x" uber:analyticsId="ea9e57e7-8d0e" uber:srcCompat="@drawable/ub_ic_search" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:gravity="center_vertical" android:id="@id/input_edit_text" android:background="@android:color/transparent" android:padding="@dimen/carbon_ui__spacing_unit_1.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/set_destination_address" android:maxLines="1" android:singleLine="true" uber:analyticsId="9c885f64-8c06" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCardView>
+</com.ubercab.navigation.setdestination.SetDestinationView>

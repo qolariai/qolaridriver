@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.socialprofiles.question.ugc_policy.SocialProfilesUGCPolicyView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize">
+        <com.ubercab.external_web_view.core.AutoAuthWebView android:id="@id/ub__social_profiles_ugc_auto_auth_web_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__social_profiles_question_ugc_confirm_button" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/ub__social_profiles_ugc_confirmation" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__social_profiles_ugc_loading" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?colorAccent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.ubercab.socialprofiles.question.ugc_policy.SocialProfilesUGCPolicyView>

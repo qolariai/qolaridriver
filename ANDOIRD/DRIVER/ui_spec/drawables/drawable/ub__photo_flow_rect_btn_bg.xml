@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/ub__photo_flow_button_border_width" android:color="?colorAccentInverse" />
+    <corners android:topLeftRadius="@dimen/ui__spacing_unit_1x" android:topRightRadius="@dimen/ui__spacing_unit_1x" android:bottomLeftRadius="@dimen/ui__spacing_unit_1x" android:bottomRightRadius="@dimen/ui__spacing_unit_1x" />
+</shape>

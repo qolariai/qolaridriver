@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.bankcard.kcp.form.BankCardAddExtrasKoreaFormView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/payment_extras_korea_page_description" style="@style/Platform.TextStyle.Paragraph.Medium" />
+        <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__payment_bank_card_extras_form_switch_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" />
+        <com.ubercab.ui.core.input.BaseEditText android:id="@id/ub__payment_bank_card_extras_korea_form_edit_text_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:hint="@string/payment_extras_korea_dob_placeholder" android:inputType="date" app:input_heading="@string/payment_extras_korea_dob_expiry_label" />
+        <com.ubercab.ui.core.input.BaseEditText android:id="@id/ub__payment_bank_card_extras_korea_form_edit_text_brn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:hint="@string/payment_extras_korea_brn_placeholder" android:inputType="number" app:input_heading="@string/payment_extras_korea_brn_label" />
+        <com.ubercab.ui.core.input.BaseEditText android:id="@id/ub__payment_bank_card_extras_korea_form_edit_text_pin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="numberPassword" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:input_heading="@string/payment_extras_korea_pin_label" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.presidio.payment.bankcard.kcp.form.BankCardAddExtrasKoreaFormView>

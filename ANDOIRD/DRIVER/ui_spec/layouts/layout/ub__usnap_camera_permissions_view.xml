@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.usnap.permission.USnapCameraPermissionsView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="04226b92-8ddf"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingBottom="?contentInset" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="?contentInset" android:paddingEnd="?contentInset">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/ub__usnap_camera_permissions_art" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" app:analyticsId="a2c9fe4e-e899" />
+            <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:id="@id/ub__usnap_camera_permissions_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" app:analyticsId="51690d9a-177b" style="@style/Platform.TextStyle.DisplayXSmall" />
+            <com.ubercab.ui.core.UTextView android:id="@id/ub__usnap_camera_permissions_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" app:analyticsId="b7a46332-2847" style="@style/Platform.TextStyle.ParagraphDefault" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="center" android:id="@id/ub__usnap_camera_permissions_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="64696aa2-5d8b" app:buttonType="primary" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+</com.uber.usnap.permission.USnapCameraPermissionsView>

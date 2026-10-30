@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="line"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?transparent" />
+    <stroke android:width="@dimen/stat_list_item_divider_stroke_width" android:color="?dividerColor" android:dashWidth="@dimen/stat_list_item_divider_dash_width" android:dashGap="@dimen/stat_list_item_divider_dash_gap" />
+</shape>

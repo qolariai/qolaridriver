@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:id="@id/pill" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" app:cardBackgroundColor="?backgroundTertiary" app:cardCornerRadius="@dimen/ui__spacing_unit_2.5x" app:cardElevation="0.0dip" app:contentPaddingBottom="@dimen/ui__spacing_unit_1x" app:contentPaddingLeft="@dimen/ui__spacing_unit_1.5x" app:contentPaddingRight="@dimen/ui__spacing_unit_1.5x" app:contentPaddingTop="@dimen/ui__spacing_unit_1x">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/pill_content" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/ui__spacing_unit_1.5x" />
+            <com.ubercab.ui.commons.widget.OvalTextView android:id="@id/badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/ui__spacing_unit_4x" android:maxHeight="@dimen/ui__spacing_unit_4x" android:minWidth="@dimen/ui__spacing_unit_2.5x" android:minHeight="@dimen/ui__spacing_unit_2.5x" android:layout_marginStart="@dimen/ui__spacing_unit_1x" style="@style/Platform.TextStyle.LabelXSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCardView>
+</merge>

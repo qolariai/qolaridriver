@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:background="?selectableItemBackground" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/driver_preferences_multi_select_text" android:paddingTop="?contentInset" android:paddingBottom="?contentInset" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Platform.TextStyle.P" />
+    <com.ubercab.ui.core.UCheckBox android:id="@id/driver_preferences_multi_select_check" android:padding="@dimen/ui__spacing_unit_1x" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</com.ubercab.ui.core.ULinearLayout>

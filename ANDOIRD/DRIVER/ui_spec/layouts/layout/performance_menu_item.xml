@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="2" style="@style/MobileStudio.Plugin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="fill_horizontal|start" android:layout_width="fill_parent" android:text="Performance Stats" android:layout_columnSpan="2" style="@style/MobileStudio.Plugin.Header" />
+    <TextView android:layout_gravity="start|center" android:text="Show Performance Stats" style="@style/MobileStudio.Plugin.RowTitle" />
+    <androidx.appcompat.widget.SwitchCompat android:layout_gravity="start|center" android:id="@id/ms_performance_stats_enabled" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__mobilestudio_padding_2x" />
+</GridLayout>

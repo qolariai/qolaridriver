@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.uber.feedback.transparent_fare_breakdown.TransparentFareBreakdownTextView android:textColor="?contentSecondary" android:id="@id/ub__transparent_fare_breakdown_cell_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.ParagraphSmall" />
+    <com.ubercab.ui.core.UFlexboxLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:alignItems="flex_end" app:flexDirection="row" app:flexWrap="wrap">
+        <com.uber.feedback.transparent_fare_breakdown.TransparentFareBreakdownTextView android:id="@id/ub__transparent_fare_breakdown_cell_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" app:textColor="?contentPrimary" style="@style/Platform.TextStyle.HeadingSmall" />
+        <com.uber.feedback.transparent_fare_breakdown.TransparentFareBreakdownTextView android:id="@id/ub__transparent_fare_breakdown_cell_strikethrough_amount" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_0.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_0.5x" app:textColor="?contentSecondary" style="@style/Platform.TextStyle.ParagraphSmall" />
+    </com.ubercab.ui.core.UFlexboxLayout>
+</merge>

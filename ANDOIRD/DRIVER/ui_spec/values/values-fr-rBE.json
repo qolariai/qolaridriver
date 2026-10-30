@@ -1,0 +1,9 @@
+{
+ "strings": {
+  "string": {
+   "helix_phone_country_picker_description": "Le code du pays est %1$s",
+   "helix_phone_enter_your_mobile_number": "Saisissez votre numéro de téléphone portable",
+   "helix_phone_mobile_number": "Numéro de portable"
+  }
+ }
+}

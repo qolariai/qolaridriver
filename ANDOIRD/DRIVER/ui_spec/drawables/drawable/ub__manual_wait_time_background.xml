@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/ui__spacing_unit_3x" />
+    <size android:height="@dimen/ui__spacing_unit_4x" android:width="@dimen/ub__manual_wait_time_trigger_width" />
+    <solid android:color="?android:colorBackground" />
+    <stroke android:width="@dimen/ui__corner_radius" android:color="?colorPrimary" />
+</shape>

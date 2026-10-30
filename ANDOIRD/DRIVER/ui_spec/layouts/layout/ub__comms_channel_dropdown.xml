@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:textColor="?contentPrimary" android:layout_gravity="center_vertical" android:id="@id/ub__channel_dropdown_selector_view_text" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:id="@id/ub__channel_dropdown_selector_image" android:layout_width="@dimen/ui__avatar_size_extra_tiny" android:layout_height="@dimen/ui__avatar_size_extra_tiny" android:scaleType="fitCenter" android:tint="?contentPrimary" android:layout_marginEnd="?contentInset" app:srcCompat="@drawable/ic_caret_down_16" />
+</merge>

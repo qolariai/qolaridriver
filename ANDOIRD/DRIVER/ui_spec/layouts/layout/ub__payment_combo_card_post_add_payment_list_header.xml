@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.commons.widget.HeaderTextView android:id="@id/section_text" android:paddingLeft="?contentInset" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingRight="?contentInset" android:paddingBottom="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" style="@style/Platform.TextStyle.H5.News.Secondary"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

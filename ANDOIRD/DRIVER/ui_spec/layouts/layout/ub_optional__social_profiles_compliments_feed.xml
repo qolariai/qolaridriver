@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.social_profiles_driver.profile.compliments.details.SocialProfilesComplimentsFeedView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="7dc396d1-867d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__social_profiles_compliments_feed" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__social_profiles_loading" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?colorAccent" app:layout_anchor="@id/ub__social_profiles_compliments_feed" app:layout_anchorGravity="top" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.ubercab.social_profiles_driver.profile.compliments.details.SocialProfilesComplimentsFeedView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_gravity="center" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="@dimen/ui__spacing_unit_8x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/ub__base_input_start_enhancer_internal_container" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/left_side_start_enhancer_composite_view" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/right_side_start_enhancer_composite_view" android:visibility="gone" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" android:adjustViewBounds="true" app:srcCompat="@drawable/ub_ic_chevron_down_small" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UFrameLayout>

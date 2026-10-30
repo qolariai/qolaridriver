@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.destination.rows.action.DestinationActionButtonView android:orientation="vertical" android:id="@id/action_button_row_container" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:id="@id/inspection_sheet_action_base_material_button" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="65bdbcef-2f60" uber:buttonType="primary" uber:size="large" />
+</com.ubercab.destination.rows.action.DestinationActionButtonView>

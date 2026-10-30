@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.learningcenter.LearningCenterView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="38b12bd2-e95f"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_13x" uber:contentInsetStartWithNavigation="0.0dip" uber:elevation="0.0dip">
+        <com.ubercab.ui.core.widget.HeaderLayout android:id="@id/collapsing_toolbar" android:background="?backgroundPrimary" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:collapsedTitleTextAppearance="@style/Platform.TextStyle.LabelDefault" uber:contentInsetStartWithNavigation="0.0dip" uber:expandedTitleMarginBottom="@dimen/ui__spacing_unit_2x" uber:expandedTitleMarginEnd="?contentInset" uber:expandedTitleMarginStart="?contentInset" uber:expandedTitleMarginTop="@dimen/ui__spacing_unit_2x" uber:expandedTitleTextAppearance="@style/Platform.TextStyle.DisplayXSmall" uber:fontPath="@string/ub__font_uber_move_medium" uber:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+            <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" uber:contentInsetStartWithNavigation="0.0dip" uber:layout_collapseMode="pin" uber:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/Widget.Platform.Toolbar" />
+        </com.ubercab.ui.core.widget.HeaderLayout>
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.ULinearLayout android:background="?backgroundTertiary" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/bit_loading_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="f7afc1f4-7374" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/sections_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="517cbea0-87b0" />
+        <com.ubercab.ui.core.emptystate.EmptyStateView android:id="@id/ub__empty_error_view" android:background="?backgroundPrimary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.learningcenter.LearningCenterView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.drive_pass.DrivePassView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="b6a598e4-3069"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_alignParentTop="true" android:titleTextAppearance="@style/Platform.TextStyle.LabelLarge" app:analyticsId="3d39f3cc-bc6a" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="14d4d65d-8ba0" app:bli_bitColor="?contentPrimary" />
+    <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/ub__error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="78430ad8-db66" />
+</com.uber.drive_pass.DrivePassView>

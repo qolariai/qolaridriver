@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.bug_reporter.BugReporterMobileStudioView android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MobileStudio.Plugin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:layout_gravity="fill_horizontal|start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__mobile_studio_bug_reporter_title" android:layout_columnSpan="2" app:analyticsId="c5282af4-73f6" style="@style/MobileStudio.Plugin.Header" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/mobile_studio_bugreporter_trigger_switch_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.uber.mobilestudio.bug_reporter.BugReporterMobileStudioView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.social_profiles_driver.profile.notes.SocialProfilesNotesView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ub_optional__social_profiles_notes_transparent_header" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__social_profiles_notes_recycler_view" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</com.ubercab.social_profiles_driver.profile.notes.SocialProfilesNotesView>

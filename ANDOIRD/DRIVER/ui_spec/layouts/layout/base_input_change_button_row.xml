@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:id="@id/ub__input_change_row_text" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ub__input_change_row_button" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__input_change_row_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__input_change_button" app:buttonType="secondary" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:shape="pill" app:size="small" style="@style/Platform.Button.BaseDynamic" />
+</merge>

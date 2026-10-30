@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__payment_info_icon" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x" android:scaleType="fitCenter" app:analyticsId="3ed799a0-352" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?contentSecondary" android:ellipsize="end" android:id="@id/ub__payment_info_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" app:analyticsId="4477e0fe-354" />
+</com.ubercab.ui.core.ULinearLayout>

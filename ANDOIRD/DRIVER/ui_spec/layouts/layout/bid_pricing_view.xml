@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.carbon.feature.bid.pricing.BidPricingView android:layout_gravity="center" android:orientation="vertical" android:id="@id/bid_action_view" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/sheet_toolbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="@drawable/ub_ic_arrow_left" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ul_data_layout" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="@drawable/ub_ic_arrow_left" style="@style/Widget.Platform.Toolbar" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub_bid_data_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.bottomsheet.ui.DefaultBottomSheetView android:orientation="vertical" android:id="@id/ub_bid_sheet_data_container" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.ubercab.ui.bottomsheet.AnchoredBottomSheetBehavior" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:layout_gravity="bottom" android:id="@id/ub_btn_fl_confirm" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:elevation="@dimen/ui__elevation_high" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:analyticsId="8f3fecda-292b" app:layout_anchor="@id/ub_bid_sheet_data_container" app:layout_anchorGravity="bottom" />
+</com.uber.carbon.feature.bid.pricing.BidPricingView>

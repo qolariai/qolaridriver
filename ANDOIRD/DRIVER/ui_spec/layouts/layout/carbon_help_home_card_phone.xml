@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorSecondary" android:id="@id/carbon_help_home_card_phone_text_header" android:paddingLeft="?gutterSize" android:paddingTop="?contentInset" android:paddingRight="?gutterSize" android:paddingBottom="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/carbon_help_home_card_phone_header" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/carbon_help_home_card_phone_row_phone" android:background="?selectableItemBackground" android:paddingLeft="?gutterSize" android:paddingTop="?contentInset" android:paddingRight="?gutterSize" android:paddingBottom="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/carbon_help_home_card_phone_row_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub_ic_phone" />
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.Subtitle.Normal" android:textColor="?android:textColorPrimary" android:id="@id/carbon_help_home_card_phone_row_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="?contentInset" android:layout_marginRight="?contentInset" android:text="@string/carbon_help_home_card_phone_title" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

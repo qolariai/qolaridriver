@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/ub__byoc_switch_mode_menu_item" android:visible="false" android:title="@string/ub__byoc_order_list_switch_mode" app:showAsAction="ifRoom|withText" />
+</menu>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_progress" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.bottomsheet.ui.DefaultBottomSheetView android:orientation="vertical" android:id="@id/uber__progress_bottom_sheet" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.ubercab.ui.bottomsheet.AnchoredBottomSheetBehavior" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub_indeterminate_progress_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.uber.ui_compose_view.core.BaseProgressSpinnerView android:layout_gravity="center" android:id="@id/ub_circle_progress_spinner_compose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4.5x" app:progressDetermine="false" />
+                <com.ubercab.ui.core.progress.BaseProgressBar android:layout_gravity="center" android:id="@id/ub_circle_progress_indeterminate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4.5x" />
+                <com.ubercab.ui.core.progress.BaseProgressIndicator android:id="@id/ub__indeterminate_horizontal_progress" android:layout_width="fill_parent" android:layout_height="@dimen/ub__base_progress_horizontal_size_small" android:layout_marginTop="@dimen/ui__spacing_unit_4.5x" style="@style/HorizontalIndeterminate" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub_determinate_progress_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.uber.ui_compose_view.core.progressbar.BaseProgressBarView android:layout_gravity="center" android:id="@id/compose_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4.5x" app:progressDetermine="true" />
+                <com.ubercab.ui.core.progress.BasePillProgressBar android:layout_gravity="center" android:id="@id/ub_oval_progress_determinate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2.5x" app:progress_bar_bg_color="?backgroundTertiary" app:progress_bar_color="?accent" app:progress_bar_size="large" app:progress_bar_text_color="?contentPrimary" />
+                <com.ubercab.ui.core.progress.BaseProgressBar android:layout_gravity="center" android:id="@id/ub_horizon_progress_determinate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4.5x" app:baseprogress_type="rect_determinate" app:progress_size="large" app:progress_text="" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub_steps_progress_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.progress.BaseStepsProgressBar android:layout_gravity="center" android:id="@id/ub_steps_progressbar" android:layout_width="fill_parent" android:layout_height="@dimen/ub__base_step_progress_medium" android:layout_marginTop="@dimen/ui__spacing_unit_2.5x" android:layout_marginStart="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <include layout="@layout/collapsing_header" />
+</com.ubercab.ui.core.UCoordinatorLayout>

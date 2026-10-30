@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:gravity="start|center" android:id="@id/help_workflow_receipt_item_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="bd5090d8-7655" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.MonoLabelDefault" android:gravity="end|center" android:id="@id/help_workflow_receipt_item_amount" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:analyticsId="1a96ced1-b297" />
+</merge>

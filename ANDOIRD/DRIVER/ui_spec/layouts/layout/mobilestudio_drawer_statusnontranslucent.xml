@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.presenter.drawer.MobileStudioDrawerLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/mobilestudio_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:theme="@style/Base.MobileStudio" android:id="@id/mobilestudio_content_overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <FrameLayout android:theme="@style/Theme.Platform.Dark" android:layout_gravity="end" android:id="@id/mobilestudio_menu_container" android:background="@color/ub__mobilestudio_drawer_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="@dimen/ub__mobilestudio_drawer_elevation" />
+</com.uber.mobilestudio.presenter.drawer.MobileStudioDrawerLayout>

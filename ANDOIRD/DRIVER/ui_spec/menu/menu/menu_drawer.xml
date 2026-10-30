@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/theme_type_group">
+        <item android:id="@id/theme_light" android:title="@string/style_guide_theme_type_light" app:actionViewClass="com.ubercab.ui.core.URadioButton" app:showAsAction="always" />
+        <item android:id="@id/theme_dark" android:title="@string/style_guide_theme_type_dark" app:actionViewClass="com.ubercab.ui.core.URadioButton" app:showAsAction="always" />
+    </group>
+    <group android:id="@id/theme_app_group">
+        <item android:id="@id/theme_platform" android:title="@string/style_guide_theme_app_platform" app:actionViewClass="com.ubercab.ui.core.URadioButton" app:showAsAction="always" />
+        <item android:id="@id/theme_helix" android:title="@string/style_guide_theme_app_helix" app:actionViewClass="com.ubercab.ui.core.URadioButton" app:showAsAction="always" />
+        <item android:id="@id/theme_carbon" android:title="@string/style_guide_theme_app_carbon" app:actionViewClass="com.ubercab.ui.core.URadioButton" app:showAsAction="always" />
+        <item android:id="@id/theme_eats" android:title="@string/style_guide_theme_app_eats" app:actionViewClass="com.ubercab.ui.core.URadioButton" app:showAsAction="always" />
+        <item android:id="@id/theme_eats_legacy" android:visible="false" android:title="@string/style_guide_theme_app_eats_legacy" app:actionViewClass="com.ubercab.ui.core.URadioButton" app:showAsAction="always" />
+    </group>
+</menu>

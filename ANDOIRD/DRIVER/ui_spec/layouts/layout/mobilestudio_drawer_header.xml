@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/ub__mobilestudio_plugin_padding" android:paddingBottom="@dimen/ub__mobilestudio_plugin_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ub__mobilestudio_padding_2x" style="@style/MobileStudio.MainHeader"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:layout_weight="1.0">
+        <ImageView android:paddingTop="@dimen/ub__mobilestudio_padding_1x" android:paddingBottom="@dimen/ub__mobilestudio_padding_1x" android:layout_width="wrap_content" android:layout_height="@dimen/ub__mobilestudio_header_icon_size" android:scaleType="centerInside" app:srcCompat="@drawable/ub__mobilestudio_icon" />
+        <TextView android:textColor="?ms_colorHeaderTextPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_title" android:lines="1" android:layout_marginStart="@dimen/ub__mobilestudio_padding_1x" android:layout_marginEnd="@dimen/ub__mobilestudio_padding_1x" style="@style/Platform.TextStyle.H3.Book" />
+    </LinearLayout>
+    <TextView android:textColor="?ms_colorHeaderTextPrimary" android:gravity="center" android:id="@id/mobilestudio_subtitle" android:layout_width="wrap_content" android:layout_height="0.0dip" android:lines="1" android:layout_weight="1.0" style="@style/Platform.TextStyle.H5.News.Secondary" />
+    <com.uber.ui_compose_view.core.BaseSearchFieldView android:id="@id/mobilestudio_search_field" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__mobilestudio_padding_2x" android:layout_marginEnd="@dimen/ub__mobilestudio_padding_2x" app:inputPlaceholderText="@string/ub__mobilestudio_search_hint" />
+</LinearLayout>

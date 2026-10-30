@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="15.0dip" android:width="9.0dip" android:viewportWidth="9.0" android:viewportHeight="15.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:name="Landing" android:translateX="-328.0" android:translateY="-552.0">
+        <group android:name="sheet" android:translateY="525.0">
+            <group android:name="Group" android:translateX="23.0" android:translateY="19.0">
+                <group android:name="ic_caret_right_16" android:translateX="301.0" android:translateY="7.0">
+                    <path android:name="Fill-1" android:pathData="M 0 16 L 16 16 L 16 0 L 0 0 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                    <path android:name="Fill-2" android:fillColor="?accentCta" android:pathData="M 4.6467 2.3534 L 10.7927 8.5004 L 4.6467 14.6464 L 5.3527 15.3544 L 12.2067 8.5004 L 5.3527 1.6474 Z" android:strokeWidth="1.0" android:fillType="evenOdd" />
+                </group>
+            </group>
+        </group>
+    </group>
+</vector>

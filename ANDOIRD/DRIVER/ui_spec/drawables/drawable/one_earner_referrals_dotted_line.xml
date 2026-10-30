@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/one_earner_referrals_dotted_line_horizontal" android:right="@dimen/one_earner_referrals_dotted_line_horizontal">
+        <rotate android:visible="true" android:fromDegrees="90.0">
+            <shape android:shape="line">
+                <stroke android:width="@dimen/one_earner_referrals_dotted_line_width" android:color="?primaryA" android:dashWidth="@dimen/one_earner_referrals_dotted_line_dash_width" android:dashGap="@dimen/one_earner_referrals_dotted_line_dash_gap" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

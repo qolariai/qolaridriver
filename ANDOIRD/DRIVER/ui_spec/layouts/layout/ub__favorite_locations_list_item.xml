@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="eb35496c-52d0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/ub__list_item_favorite_locations_name" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="15f8bd8d-cf38" style="@style/Platform.TextStyle.Small.Medium" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/ub__list_item_favorite_locations_date" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="5d8e4984-40d2" style="@style/Platform.TextStyle.Meta.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ub__list_item_favorite_locations_more_button" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" android:adjustViewBounds="true" app:analyticsId="1796ad94-7e17" app:srcCompat="@drawable/ub_ic_three_dots" />
+</com.ubercab.ui.core.ULinearLayout>

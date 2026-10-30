@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.next_plugin_tabs.NextMarkerInspectionSheetTabsView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.buttongroup.BaseButtonGroup android:id="@id/next_inspection_sheet_tabs_button_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/next_inspection_sheet_tabs_view_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.uber.next_plugin_tabs.NextMarkerInspectionSheetTabsView>

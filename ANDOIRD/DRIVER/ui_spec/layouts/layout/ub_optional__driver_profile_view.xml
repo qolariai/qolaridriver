@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.social_profiles.DriverProfileView android:background="?android:colorBackground" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="08c34a76-6847"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__social_profiles_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/ub_optional__social_profiles_transparent_header" />
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/ub__social_profiles_loading" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:bli_bitColor="?colorAccent" uber:layout_anchor="@id/ub__social_profiles_content" uber:layout_anchorGravity="top" uber:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</com.ubercab.social_profiles.DriverProfileView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_buttons" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.badge.BaseBadge android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/style_guide_badge_title" app:badge_color="accent" app:badge_hierarchy="primary" app:badge_shape="pill" />
+            <com.ubercab.ui.core.badge.DotBaseBadge android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.badge.NotificationBaseBadge android:layout_width="wrap_content" android:layout_height="wrap_content" app:numberToDisplay="9" />
+            <com.ubercab.ui.core.badge.NotificationBaseBadge android:layout_width="wrap_content" android:layout_height="wrap_content" app:notificationIcon="@drawable/ub_ic_airplane" app:notification_type="icon" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

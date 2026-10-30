@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCardView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="@dimen/ui__spacing_unit_2x" uber:cardBackgroundColor="?white" uber:cardElevation="@dimen/ui__elevation_medium"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URelativeLayout android:layout_width="@dimen/ub__bikesafety_checklist_card_width" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UScrollView android:id="@id/visualchecklist_scrollview" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.URelativeLayout android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_3x" android:paddingEnd="@dimen/ui__spacing_unit_3x">
+                <com.ubercab.ui.core.UTextView android:textColor="?black" android:id="@id/bikesafetychecklist_title" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="0190d57d-c1fd" style="@style/Platform.TextStyle.HeadingXSmall" />
+                <com.ubercab.ui.core.UTextView android:textColor="?black" android:id="@id/bikesafetychecklist_subtitle" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_below="@id/bikesafetychecklist_title" uber:analyticsId="b5e6039d-220c" style="@style/Platform.TextStyle.ParagraphDefault" />
+                <com.ubercab.ui.core.UTextView android:textColor="?black" android:id="@id/bikesafetychecklist_subtitle_placeholder" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_below="@id/bikesafetychecklist_title" uber:analyticsId="10bd97eb-a909" style="@style/Platform.TextStyle.ParagraphDefault" />
+            </com.ubercab.ui.core.URelativeLayout>
+        </com.ubercab.ui.core.UScrollView>
+    </com.ubercab.ui.core.URelativeLayout>
+</com.ubercab.ui.core.UCardView>

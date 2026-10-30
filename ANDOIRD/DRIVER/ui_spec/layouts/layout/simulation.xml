@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.simulation.SimulationView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MobileStudio.Plugin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_simulation" app:analyticsId="1eb5c467-3dd0" style="@style/MobileStudio.Plugin.Header" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.URadioGroup android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/radio_simulation" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MobileStudio.Plugin.RowWidget">
+            <com.ubercab.ui.core.URadioButton android:id="@id/radio_simulation_off" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_simulation_radio_off" style="@style/MobileStudio.Plugin.RowWidget" />
+            <com.ubercab.ui.core.URadioButton android:id="@id/radio_simulation_route_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_simulation_radio_route_line" style="@style/MobileStudio.Plugin.RowWidget" />
+            <com.ubercab.ui.core.URadioButton android:id="@id/radio_simulation_playback" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_simulation_radio_playback" style="@style/MobileStudio.Plugin.RowWidget" />
+        </com.ubercab.ui.core.URadioGroup>
+    </LinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/route_simulation_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:id="@id/toggle_simulation_speed_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_simulation_simulation_speed" app:analyticsId="0db203e5-aa09" style="@style/MobileStudio.Plugin.RowTitle" />
+            <com.ubercab.ui.core.UTextView android:id="@id/simulation_speed_value" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="068f1fe9-c624" style="@style/MobileStudio.Plugin.RowTitle" />
+        </LinearLayout>
+        <com.ubercab.ui.core.USeekBar android:id="@id/simulation_speed_seekbar" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:id="@id/toggle_simulation_horizontal_accuracy_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_simulation_simulation_horizontal_accuracy" style="@style/MobileStudio.Plugin.RowTitle" />
+            <com.ubercab.ui.core.UTextView android:id="@id/simulation_horizontal_accuracy_value" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MobileStudio.Plugin.RowTitle" />
+        </LinearLayout>
+        <com.ubercab.ui.core.USeekBar android:id="@id/simulation_horizontal_accuracy_seekbar" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/playback_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:layout_gravity="start|center" android:id="@id/playback_file_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_simulation_playback_file_title" app:analyticsId="484ac82c-2b22" style="@style/MobileStudio.Plugin.RowTitle" />
+        <com.ubercab.ui.core.USpinner android:layout_gravity="start|center" android:id="@id/playback_file" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MobileStudio.Plugin.RowTitle" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.mobilestudio.simulation.SimulationView>

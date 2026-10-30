@@ -13,7 +13,7 @@ Todas as entidades expostas as apps tem `uuid` (as apps identificam tudo por UUI
 """
 import json, time, uuid as _uuid
 
-from sqlalchemy import Boolean, Float, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy import Boolean, Float, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from core.db import Base
@@ -183,9 +183,6 @@ class Driver(Base):
 
     organization: Mapped[Organization | None] = relationship(back_populates="drivers")
     vehicle: Mapped["Vehicle | None"] = relationship(foreign_keys=[vehicle_id])
-    preferences: Mapped["DriverPreference | None"] = relationship(
-        back_populates="driver", uselist=False, cascade="all, delete-orphan"
-    )
 
     @property
     def name(self) -> str:
@@ -237,7 +234,6 @@ class Rider(Base):
     rating_sum: Mapped[int] = mapped_column(Integer, default=0)
     rating_count: Mapped[int] = mapped_column(Integer, default=0)
     default_payment: Mapped[str] = mapped_column(String(10), default="cash")   # cash | card
-    wallet_cents: Mapped[int] = mapped_column(Integer, default=0)              # saldo Qolari Cash (laboratorio)
     lat: Mapped[float | None] = mapped_column(Float, nullable=True)
     lng: Mapped[float | None] = mapped_column(Float, nullable=True)
     created_at: Mapped[int] = mapped_column(Integer, default=now)
@@ -320,7 +316,6 @@ class Trip(Base):
     pickup_lat: Mapped[float] = mapped_column(Float)
     pickup_lng: Mapped[float] = mapped_column(Float)
     pickup_address: Mapped[str] = mapped_column(String(200), default="")
-    stops: Mapped[str] = mapped_column(Text, default="[]")
     dropoff_lat: Mapped[float | None] = mapped_column(Float, nullable=True)
     dropoff_lng: Mapped[float | None] = mapped_column(Float, nullable=True)
     dropoff_address: Mapped[str] = mapped_column(String(200), default="")
@@ -331,7 +326,6 @@ class Trip(Base):
     distance_m: Mapped[int | None] = mapped_column(Integer, nullable=True)
     duration_s: Mapped[int | None] = mapped_column(Integer, nullable=True)
     fare: Mapped[int | None] = mapped_column(Integer, nullable=True)        # final, ja com desconto
-    tip_cents: Mapped[int] = mapped_column(Integer, default=0)
     discount: Mapped[int] = mapped_column(Integer, default=0)
     fare_breakdown: Mapped[str] = mapped_column(Text, default="{}")        # JSON
     promo_id: Mapped[int | None] = mapped_column(ForeignKey("promos.id"), nullable=True)
@@ -343,7 +337,6 @@ class Trip(Base):
     driver_to_rider_rating: Mapped[int | None] = mapped_column(Integer, nullable=True)
     rider_comment: Mapped[str] = mapped_column(String(300), default="")
     requested_at: Mapped[int] = mapped_column(Integer, default=now, index=True)
-    scheduled_at: Mapped[int | None] = mapped_column(Integer, nullable=True, index=True)
     accepted_at: Mapped[int | None] = mapped_column(Integer, nullable=True)
     arrived_at: Mapped[int | None] = mapped_column(Integer, nullable=True)
     started_at: Mapped[int | None] = mapped_column(Integer, nullable=True)
@@ -376,13 +369,24 @@ class TripEvent(Base):
 
 
 class Offer(Base):
-    """Proposta de uma viagem a um motorista (despacho). Uma pendente de cada vez por viagem."""
+    """Proposta de uma viagem a um motorista (despacho). Uma pendente de cada vez por viagem.
+
+    `kind` separa os dois tipos de pedido da Uber Driver:
+      - `exclusive`: viagem exclusiva (so este motorista a recebe; recusar conta para a taxa de aceitacao);
+      - `radar`: Radar de viagens (varios motoristas ao mesmo tempo; quem toca entra no emparelhamento
+        e so um fica com a viagem; ignorar NAO conta para a taxa de aceitacao).
+    `claimed_at` marca quem tocou no Radar; `offered_at` quando a proposta foi entregue.
+    """
     __tablename__ = "offers"
     id: Mapped[int] = mapped_column(primary_key=True)
     uuid: Mapped[str] = mapped_column(String(36), unique=True, default=new_uuid)
     trip_id: Mapped[int] = mapped_column(ForeignKey("trips.id"), index=True)
     driver_id: Mapped[int] = mapped_column(ForeignKey("drivers.id"), index=True)
-    state: Mapped[str] = mapped_column(String(12), default="pending")  # pending|accepted|rejected|expired|withdrawn
+    state: Mapped[str] = mapped_column(String(12), default="pending")
+    # exclusive|radar
+    kind: Mapped[str] = mapped_column(String(10), default="exclusive")
+    # no Radar: true depois de o motorista tocar (entrou no emparelhamento)
+    claimed_at: Mapped[int | None] = mapped_column(Integer, nullable=True)
     pickup_distance_m: Mapped[int] = mapped_column(Integer, default=0)
     pickup_eta_s: Mapped[int] = mapped_column(Integer, default=0)
     created_at: Mapped[int] = mapped_column(Integer, default=now)
@@ -454,7 +458,6 @@ class LoginAttempt(Base):
 
 class Device(Base):
     __tablename__ = "devices"
-    __table_args__ = (UniqueConstraint("app", "device_key", name="uq_devices_app_key"),)
     id: Mapped[int] = mapped_column(primary_key=True)
     app: Mapped[str] = mapped_column(String(10))
     device_key: Mapped[str] = mapped_column(String(120), index=True)   # id que a app envia
@@ -517,192 +520,3 @@ class Notification(Base):
     body: Mapped[str] = mapped_column(String(400), default="")
     created_at: Mapped[int] = mapped_column(Integer, default=now, index=True)
     read: Mapped[bool] = mapped_column(Boolean, default=False)
-
-
-class MapReport(Base):
-    """Problema de mapa comunicado pelo motorista (botao 'Comunicar um problema com o mapa')."""
-    __tablename__ = "map_reports"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    uuid: Mapped[str] = mapped_column(String(36), unique=True, default=new_uuid)
-    driver_id: Mapped[int] = mapped_column(ForeignKey("drivers.id"), index=True)
-    reason: Mapped[str] = mapped_column(String(80))
-    note: Mapped[str] = mapped_column(String(500), default="")
-    latitude: Mapped[float | None] = mapped_column(Float, nullable=True)
-    longitude: Mapped[float | None] = mapped_column(Float, nullable=True)
-    created_at: Mapped[int] = mapped_column(Integer, default=now, index=True)
-    status: Mapped[str] = mapped_column(String(20), default="open")
-
-
-class SupportThread(Base):
-    """Conversa de apoio de uma conta (Driver/Rider/Fleet) com a operacao."""
-    __tablename__ = "support_threads"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    uuid: Mapped[str] = mapped_column(String(36), unique=True, default=new_uuid)
-    app: Mapped[str] = mapped_column(String(10), index=True)
-    subject_uuid: Mapped[str] = mapped_column(String(36), index=True)
-    subject_name: Mapped[str] = mapped_column(String(120), default="")
-    subject_phone: Mapped[str] = mapped_column(String(30), default="")
-    category: Mapped[str] = mapped_column(String(60), default="outro")
-    status: Mapped[str] = mapped_column(String(20), default="open", index=True)
-    created_at: Mapped[int] = mapped_column(Integer, default=now, index=True)
-    updated_at: Mapped[int] = mapped_column(Integer, default=now, index=True)
-
-
-class SupportMessage(Base):
-    """Mensagem de uma conversa de apoio: sender 'user' ou 'support'."""
-    __tablename__ = "support_messages"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    thread_id: Mapped[int] = mapped_column(ForeignKey("support_threads.id"), index=True)
-    sender: Mapped[str] = mapped_column(String(10), default="user")
-    body: Mapped[str] = mapped_column(Text, default="")
-    file_name: Mapped[str | None] = mapped_column(String(120), nullable=True)
-    created_at: Mapped[int] = mapped_column(Integer, default=now, index=True)
-    read_by_user: Mapped[bool] = mapped_column(Boolean, default=False)
-    read_by_support: Mapped[bool] = mapped_column(Boolean, default=False)
-
-class TrustedContact(Base):
-    """Contacto de confianca de uma conta (Driver/Rider) para emergencias e partilha."""
-    __tablename__ = "trusted_contacts"
-    __table_args__ = (UniqueConstraint("app", "subject_uuid", "phone", name="uq_trusted_contact"),)
-    id: Mapped[int] = mapped_column(primary_key=True)
-    uuid: Mapped[str] = mapped_column(String(36), unique=True, default=new_uuid)
-    app: Mapped[str] = mapped_column(String(10), index=True)
-    subject_uuid: Mapped[str] = mapped_column(String(36), index=True)
-    name: Mapped[str] = mapped_column(String(120))
-    phone: Mapped[str] = mapped_column(String(30))
-    created_at: Mapped[int] = mapped_column(Integer, default=now)
-
-
-class SafetyIncident(Base):
-    """Alerta de seguranca (SOS) ou pedido de partilha registado pela operacao."""
-    __tablename__ = "safety_incidents"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    uuid: Mapped[str] = mapped_column(String(36), unique=True, default=new_uuid)
-    app: Mapped[str] = mapped_column(String(10), index=True)
-    subject_uuid: Mapped[str] = mapped_column(String(36), index=True)
-    subject_name: Mapped[str] = mapped_column(String(120), default="")
-    subject_phone: Mapped[str] = mapped_column(String(30), default="")
-    kind: Mapped[str] = mapped_column(String(20), default="sos")
-    trip_uuid: Mapped[str] = mapped_column(String(36), default="", index=True)
-    latitude: Mapped[float | None] = mapped_column(Float, nullable=True)
-    longitude: Mapped[float | None] = mapped_column(Float, nullable=True)
-    note: Mapped[str] = mapped_column(String(500), default="")
-    status: Mapped[str] = mapped_column(String(20), default="open", index=True)
-    created_at: Mapped[int] = mapped_column(Integer, default=now, index=True)
-    closed_at: Mapped[int | None] = mapped_column(Integer, nullable=True)
-
-
-class TripShare(Base):
-    """Ligacao publica (token) para acompanhar uma viagem em curso."""
-    __tablename__ = "trip_shares"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    token: Mapped[str] = mapped_column(String(64), unique=True, index=True)
-    trip_uuid: Mapped[str] = mapped_column(String(36), index=True)
-    app: Mapped[str] = mapped_column(String(10))
-    subject_uuid: Mapped[str] = mapped_column(String(36), index=True)
-    created_at: Mapped[int] = mapped_column(Integer, default=now)
-    expires_at: Mapped[int] = mapped_column(Integer, default=now)
-
-class DriverPreference(Base):
-    """Preferencias de despacho: modo destino, area, aceitacao automatica e pausa."""
-    __tablename__ = "driver_preferences"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    driver_id: Mapped[int] = mapped_column(ForeignKey("drivers.id"), unique=True, index=True)
-    destination_mode: Mapped[bool] = mapped_column(Boolean, default=False)
-    destination_address: Mapped[str] = mapped_column(String(200), default="")
-    destination_lat: Mapped[float | None] = mapped_column(Float, nullable=True)
-    destination_lng: Mapped[float | None] = mapped_column(Float, nullable=True)
-    area_mode: Mapped[bool] = mapped_column(Boolean, default=False)
-    area_label: Mapped[str] = mapped_column(String(120), default="")
-    area_lat: Mapped[float | None] = mapped_column(Float, nullable=True)
-    area_lng: Mapped[float | None] = mapped_column(Float, nullable=True)
-    area_radius_km: Mapped[float] = mapped_column(Float, default=5.0)
-    auto_accept: Mapped[bool] = mapped_column(Boolean, default=False)
-    break_until: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    updated_at: Mapped[int] = mapped_column(Integer, default=now)
-
-    driver: Mapped["Driver"] = relationship(back_populates="preferences")
-
-class AirportQueue(Base):
-    """Fila de espera de motoristas no aeroporto (posicao por ordem de entrada)."""
-    __tablename__ = "airport_queue"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    driver_id: Mapped[int] = mapped_column(ForeignKey("drivers.id"), unique=True, index=True)
-    city_id: Mapped[int] = mapped_column(ForeignKey("cities.id"), index=True)
-    joined_at: Mapped[int] = mapped_column(Integer, default=now, index=True)
-    status: Mapped[str] = mapped_column(String(20), default="waiting")
-
-class Quest(Base):
-    """Missao/desafio do motorista (periodo, alvo de viagens e recompensa)."""
-    __tablename__ = "quests"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    uuid: Mapped[str] = mapped_column(String(36), unique=True, default=new_uuid)
-    title: Mapped[str] = mapped_column(String(120))
-    description: Mapped[str] = mapped_column(String(300), default="")
-    target_trips: Mapped[int] = mapped_column(Integer, default=3)
-    reward_cents: Mapped[int] = mapped_column(Integer, default=500)
-    starts_at: Mapped[int] = mapped_column(Integer, default=now)
-    ends_at: Mapped[int] = mapped_column(Integer, default=now)
-    active: Mapped[bool] = mapped_column(Boolean, default=True)
-
-
-class QuestClaim(Base):
-    __tablename__ = "quest_claims"
-    __table_args__ = (UniqueConstraint("quest_id", "driver_id", name="uq_quest_claim"),)
-    id: Mapped[int] = mapped_column(primary_key=True)
-    quest_id: Mapped[int] = mapped_column(ForeignKey("quests.id"), index=True)
-    driver_id: Mapped[int] = mapped_column(ForeignKey("drivers.id"), index=True)
-    claimed_at: Mapped[int] = mapped_column(Integer, default=now)
-
-
-class Referral(Base):
-    __tablename__ = "referrals"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    code: Mapped[str] = mapped_column(String(20), index=True)
-    owner_driver_id: Mapped[int] = mapped_column(ForeignKey("drivers.id"), index=True)
-    invited_phone: Mapped[str] = mapped_column(String(30))
-    status: Mapped[str] = mapped_column(String(20), default="pending")
-    created_at: Mapped[int] = mapped_column(Integer, default=now)
-    rewarded_at: Mapped[int | None] = mapped_column(Integer, nullable=True)
-
-class AdjustmentRequest(Base):
-    """Pedido de ajuste do motorista (portagens, tarifa manual, outro)."""
-    __tablename__ = "adjustment_requests"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    uuid: Mapped[str] = mapped_column(String(36), unique=True, default=new_uuid)
-    driver_id: Mapped[int] = mapped_column(ForeignKey("drivers.id"), index=True)
-    trip_uuid: Mapped[str] = mapped_column(String(36), default="")
-    kind: Mapped[str] = mapped_column(String(20), default="other")
-    amount_cents: Mapped[int] = mapped_column(Integer, default=0)
-    note: Mapped[str] = mapped_column(String(300), default="")
-    status: Mapped[str] = mapped_column(String(20), default="pending", index=True)
-    created_at: Mapped[int] = mapped_column(Integer, default=now, index=True)
-    reviewed_by: Mapped[str] = mapped_column(String(120), default="")
-    reviewed_at: Mapped[int | None] = mapped_column(Integer, nullable=True)
-
-class ScreenShare(Base):
-    """Sessao de partilha do ecra da app com o apoio (ultimo frame em ficheiro)."""
-    __tablename__ = "screen_shares"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    uuid: Mapped[str] = mapped_column(String(36), unique=True, default=new_uuid)
-    thread_id: Mapped[int] = mapped_column(ForeignKey("support_threads.id"), index=True)
-    app: Mapped[str] = mapped_column(String(10))
-    subject_uuid: Mapped[str] = mapped_column(String(36))
-    active: Mapped[bool] = mapped_column(Boolean, default=True)
-    file_name: Mapped[str | None] = mapped_column(String(120), nullable=True)
-    frame_at: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    created_at: Mapped[int] = mapped_column(Integer, default=now)
-
-class TripRecording(Base):
-    """Gravacao de audio/video associada a uma viagem (ficheiro no UPLOAD_DIR)."""
-    __tablename__ = "trip_recordings"
-    id: Mapped[int] = mapped_column(primary_key=True)
-    uuid: Mapped[str] = mapped_column(String(36), unique=True, default=new_uuid)
-    trip_uuid: Mapped[str] = mapped_column(String(36), index=True)
-    app: Mapped[str] = mapped_column(String(10))
-    subject_uuid: Mapped[str] = mapped_column(String(36))
-    kind: Mapped[str] = mapped_column(String(10), default="audio")
-    file_name: Mapped[str | None] = mapped_column(String(120), nullable=True)
-    started_at: Mapped[int] = mapped_column(Integer, default=now)
-    ended_at: Mapped[int | None] = mapped_column(Integer, nullable=True)
-    duration_s: Mapped[int] = mapped_column(Integer, default=0)

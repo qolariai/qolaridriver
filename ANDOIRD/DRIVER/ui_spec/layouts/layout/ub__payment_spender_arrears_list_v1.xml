@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/baseHeader" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:elevation="0.0dip" app:header_state="collapse" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/ub__payment_spender_arrears_list_items_v2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

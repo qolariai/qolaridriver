@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.meter_settings.details.MeterDetailsView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="e3acd10d-baa9"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/bit_loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" app:bli_bitColor="?colorAccent" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.meter_settings.details.MeterSignalStatusView android:id="@id/ub__signal_status" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.meter_settings.details.MeterInformationView android:id="@id/ub__meter_information" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__unpair_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/unpair_meter_button" app:analyticsId="1ed8901e-52fe" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__confirm_unpair_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/confirm_unpair_meter_button" app:analyticsId="2fc34336-a0a6" app:backgroundTint="?colorNegative" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.meter_settings.details.MeterDetailsView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?backgroundPrimary" />
+    <stroke android:width="@dimen/ub__base_tag_border_stroke" android:color="?borderOpaque" />
+    <corners android:radius="@dimen/ub__base_banner_default_radius" />
+</shape>

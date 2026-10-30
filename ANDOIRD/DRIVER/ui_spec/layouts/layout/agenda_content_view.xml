@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/agenda_content_parent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/ub__carbon_divider_horizontal">
+        <com.ubercab.carbon.core.agenda.sections.AgendaSectionContainer android:orientation="vertical" android:id="@id/agenda_content_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.carbon.core.agenda.sections.AgendaSectionContainer android:orientation="vertical" android:id="@id/agenda_content_upcoming" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" />
+        <com.ubercab.carbon.core.agenda.sections.AgendaSectionContainer android:orientation="vertical" android:id="@id/agenda_content_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.carbon.core.agenda.sections.AgendaHeaderSectionContainer android:orientation="vertical" android:id="@id/agenda_content_action" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:sectionHeaderText="@string/agenda_section_header_following" />
+        <com.ubercab.carbon.core.agenda.sections.AgendaSectionContainer android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/agenda_content_footer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_4x" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UFrameLayout>

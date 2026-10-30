@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_8x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:id="@id/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x" android:paddingVertical="@dimen/ui__spacing_unit_2x" app:analyticsId="e14de018-42cc" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/icon" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UImageView android:id="@id/icon" android:visibility="invisible" android:layout_width="@dimen/ui__spacing_unit_2.5x" android:layout_height="@dimen/ui__spacing_unit_2.5x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:analyticsId="280339c4-4c22" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</com.ubercab.ui.core.UConstraintLayout>

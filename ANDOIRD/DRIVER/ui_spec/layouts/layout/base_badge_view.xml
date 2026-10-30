@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/ub_badge_leading_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentOnColor" android:ellipsize="end" android:id="@id/ub_badge_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ub_badge_trailing_icon" app:layout_constraintStart_toEndOf="@id/ub_badge_leading_icon" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.UImageView android:id="@id/ub_badge_trailing_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</merge>

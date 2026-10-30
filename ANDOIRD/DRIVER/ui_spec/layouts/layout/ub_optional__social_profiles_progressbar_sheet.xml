@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.socialprofiles.profile.ui.ProgressbarBottomSheetView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:layout_gravity="top" android:id="@id/sp_confirmation_loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="?contentInset" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/modal_confirmation_content" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x">
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/sp_confirmation_modal_button_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="28722aae-881c" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+            <Space android:id="@id/confirmation_modal_button_space" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/sp_confirmation_modal_button_secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="6a180638-97ba" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.socialprofiles.profile.ui.ProgressbarBottomSheetView>

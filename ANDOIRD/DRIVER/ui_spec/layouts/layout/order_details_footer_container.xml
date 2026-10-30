@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="start|center" android:orientation="vertical" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:divider="@drawable/order_details_footer_divider" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:orientation="vertical" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="7e49da2d-e331"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="start" android:id="@id/ub__toolkit_v2_section_title" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:paddingStart="@dimen/ui__spacing_unit_2x" app:analyticsId="dc486f67-aecc" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.list.PlatformListHeadingView android:id="@id/ub__toolkit_v2_section_list_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Barrier android:id="@id/barrier" android:layout_width="fill_parent" android:layout_height="wrap_content" app:barrierDirection="bottom" app:constraint_referenced_ids="ub__toolkit_v2_section_title, ub__toolkit_v2_section_list_title" />
+    <com.ubercab.ui.core.URecyclerView android:orientation="horizontal" android:id="@id/ub__toolkit_v2_section_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" app:layout_constraintTop_toBottomOf="@id/barrier" />
+</com.ubercab.ui.core.UConstraintLayout>

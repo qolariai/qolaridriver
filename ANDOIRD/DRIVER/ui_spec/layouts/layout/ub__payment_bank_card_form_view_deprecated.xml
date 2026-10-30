@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.bankcard.ui.form.BankCardFormViewDeprecated android:paddingLeft="@dimen/ui__gutter_size" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingRight="@dimen/ui__gutter_size" android:paddingBottom="@dimen/ui__gutter_size" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ub__payment_bank_card_form_deprecated" />
+</com.uber.bankcard.ui.form.BankCardFormViewDeprecated>

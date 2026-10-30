@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?backgroundTertiary" />
+        </shape>
+    </item>
+    <item android:gravity="end|center" android:drawable="@drawable/ub_ic_chevron_down_small" android:right="@dimen/ui__spacing_unit_2x" />
+</layer-list>

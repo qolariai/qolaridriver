@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="?transparent" app:cardCornerRadius="@dimen/ui__spacing_unit_1x" app:cardElevation="0.0dip" app:cardMaxElevation="0.0dip">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.help.util.list_item.ListItemView android:gravity="center_vertical" android:id="@id/list_item_content_list_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UPlainView android:id="@id/divider" android:background="?borderOpaque" android:layout_width="fill_parent" android:layout_height="?dividerWidth" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCardView>
+</merge>

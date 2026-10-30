@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/actionable_alert_dialog_imageview" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/actionable_alert_dialog_close_button" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="@dimen/ui__spacing_unit_6x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:buttonType="tertiary" app:icon="@drawable/ub_ic_x" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:shape="circle" app:size="medium" />
+</com.ubercab.ui.core.UConstraintLayout>

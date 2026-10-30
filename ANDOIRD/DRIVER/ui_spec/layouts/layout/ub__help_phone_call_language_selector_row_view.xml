@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:background="?android:windowBackground" android:paddingLeft="@dimen/ui__gutter_size" android:paddingRight="@dimen/ui__gutter_size" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/help_phone_call_language_selector_row_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" app:analyticsId="3cdab80a-6b1a" style="@style/Platform.TextStyle.Paragraph.Normal" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/help_phone_call_language_selector_row_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" app:analyticsId="aa8103e5-cc7e" style="@style/Platform.TextStyle.Small.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UCheckBox android:layout_gravity="center_vertical" android:id="@id/help_phone_call_language_selector_row_checkbox" android:layout_width="@dimen/ui__avatar_size_extra_tiny" android:layout_height="@dimen/ui__avatar_size_extra_tiny" app:analyticsId="c47b84ad-9dd1" app:tint="?buttonPrimaryTint" />
+</com.ubercab.ui.core.ULinearLayout>

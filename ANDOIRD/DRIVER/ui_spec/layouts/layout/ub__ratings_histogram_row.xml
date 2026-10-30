@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__histogram_row_leading_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewStart" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.progress.BaseProgressBar android:id="@id/ub__histogram_row_progress_bar" android:background="@drawable/ub__ratings_histogram_progress_rounded" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:baseprogress_type="rect_determinate" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__histogram_row_trailing_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="viewEnd" style="@style/Platform.TextStyle.LabelDefault" />
+</merge>

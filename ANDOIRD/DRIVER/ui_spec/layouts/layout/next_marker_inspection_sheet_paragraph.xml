@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.next_inspection_sheet.objects.paragraph.NextMarkerInspectionSheetParagraphView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/inspection_sheet_paragraph_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="f04b8815-dc91" style="@style/Platform.TextStyle.Title.Normal" />
+    <com.ubercab.ui.core.UTextView android:id="@id/inspection_sheet_paragraph_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="b5a773ae-2236" style="@style/Platform.TextStyle.Paragraph.Normal" />
+</com.ubercab.next_inspection_sheet.objects.paragraph.NextMarkerInspectionSheetParagraphView>

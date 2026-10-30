@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <layer-list
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="?backgroundColorScrimDark" />
+                </shape>
+            </item>
+            <item android:id="@id/ugc_reporter_icon_overlay" android:drawable="@drawable/ub__ugc_ic_checkmark" android:left="@dimen/ub__ugc_overlay_icon_spacing_h" android:top="@dimen/ub__ugc_overlay_icon_spacing_v" android:right="@dimen/ub__ugc_overlay_icon_spacing_h" android:bottom="@dimen/ub__ugc_overlay_icon_spacing_v" />
+        </layer-list>
+    </item>
+</selector>

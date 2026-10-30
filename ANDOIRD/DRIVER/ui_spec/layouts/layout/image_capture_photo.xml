@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:id="@id/image_capture_photo_container" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_vertical" android:id="@id/image_capture_photo_thumbnail" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" android:scaleType="centerCrop" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="2dfc20d4-257a" />
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/image_capture_photo_status_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/image_capture_photo_status_title" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="72299be5-d66b" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/image_capture_photo_status_description" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="d8e7255c-6c34" style="@style/Platform.TextStyle.ParagraphSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UHorizontalScrollView android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/image_capture_photo_action_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/image_capture_photo_action_capture" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="1f6d553d-577b" app:buttonType="secondary" app:icon="@drawable/ub_ic_camera" app:shape="pill" app:size="small" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/image_capture_photo_action_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="b6497483-3e86" app:buttonType="secondary" app:icon="@drawable/ub_ic_photo_landscape" app:shape="pill" app:size="small" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/image_capture_photo_action_retake" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:analyticsId="7a35f5db-fda4" app:buttonType="secondary" app:icon="@drawable/ub_ic_arrow_clockwise" app:shape="pill" app:size="small" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UHorizontalScrollView>
+</merge>

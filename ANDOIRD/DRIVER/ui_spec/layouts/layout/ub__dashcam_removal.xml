@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.dashcam_settings.removal.DashcamRemovalView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="ab048515-16e3"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <com.ubercab.ui.core.UConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UTextView android:id="@id/remove_camera_title" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/remove_camera_title" app:analyticsId="cc7d4906-5788" app:layout_constraintTop_toTopOf="parent" style="@style/Platform.TextStyle.Headline.Normal" />
+            <com.ubercab.ui.core.UTextView android:autoLink="phone" android:id="@id/remove_camera_description" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/remove_camera_description" app:analyticsId="e976e29e-3362" app:layout_constraintTop_toBottomOf="@id/remove_camera_title" style="@style/Platform.TextStyle.Subtitle.Normal" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/email_nauto_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:text="@string/email_nauto" android:textAllCaps="true" android:layout_marginStart="@dimen/ui__spacing_unit_3x" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" app:analyticsId="62fe1af7-2e63" app:buttonType="primary" app:layout_constraintBottom_toBottomOf="parent" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.UConstraintLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.dashcam_settings.removal.DashcamRemovalView>

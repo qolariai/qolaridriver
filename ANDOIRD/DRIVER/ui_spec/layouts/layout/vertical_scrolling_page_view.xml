@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.learning_hub_topic.vertical_scrolling_view.VerticalScrollingPageView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.ToolbarFont" android:id="@id/toolbar" android:background="?brandTransparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.URecyclerView android:id="@id/vertical_scrolling_recycler_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/sticky_cta_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UPlainView android:background="?dividerHorizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/sticky_checkbox_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.text.BaseTextView android:id="@id/sticky_checkbox_label" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="1.0" app:analyticsId="ed92de5c-25e9" style="@style/Platform.TextStyle.ParagraphDefault" />
+                <com.ubercab.ui.core.UCheckBox android:id="@id/sticky_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="b7ced2d5-1e64" app:tint="?contentPrimary" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/primary_sticky_cta_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="4a9e773d-0c88" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/secondary_sticky_cta_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="b0ecb071-ffd8" app:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/tertiary_sticky_cta_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="71f86461-ff21" app:buttonType="tertiary" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/full_screen_video_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.learning_hub_topic.vertical_scrolling_view.VerticalScrollingPageView>

@@ -17,34 +17,46 @@
             android:orientation="vertical"
             android:paddingBottom="24dp">
 
-            <!-- Rendimentos (capturas 011/062): título, botão Ajuda, resumo da semana, saldo, tendências, sessões. -->
-            <TextView
-                android:id="@+id/btnHelp"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/bg_pill_gray_soft"
-                android:drawablePadding="8dp"
-                android:gravity="center_vertical"
-                android:paddingStart="14dp"
-                android:paddingEnd="16dp"
-                android:text="@string/earnings_help"
-                android:textColor="@color/qd_ink"
-                android:textSize="14sp"
-                app:drawableStartCompat="@drawable/ic_help"
-                app:drawableTint="@color/qd_ink" />
+            <!-- Rendimentos (capturas 011/062): "Ajuda" sozinho no topo direito e o título por baixo, como na original. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp">
+
+                <TextView
+                    android:id="@+id/btnHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_pill_gray_soft"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/earnings_help"
+                    android:textColor="@color/qd_ink"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/ic_help"
+                    app:drawableTint="@color/qd_ink" />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="16dp"
+                android:paddingTop="0dp"
                 android:paddingEnd="16dp"
                 android:text="@string/tab_earnings"
                 android:textColor="@color/qd_ink"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="24sp"
+                android:autoSizeMaxTextSize="34sp"
+                android:maxLines="1" />
 
             <!-- Sem dados e sem rede (captura 122) -->
             <TextView
@@ -130,21 +142,28 @@
                     android:layout_marginEnd="16dp"
                     android:text="@string/earnings_details"
                     android:textColor="@color/qd_ink"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     app:backgroundTint="@color/qd_tile"
                     app:cornerRadius="8dp" />
+
+                <!-- Divisor antes de "Saldo" (captura 062). -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/qd_line" />
 
                 <LinearLayout
                     android:id="@+id/balanceRow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="0dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="16dp"
-                    android:paddingTop="16dp"
+                    android:paddingTop="20dp"
                     android:paddingEnd="16dp"
-                    android:paddingBottom="16dp">
+                    android:paddingBottom="20dp">
 
                     <TextView
                         android:layout_width="0dp"
@@ -152,7 +171,7 @@
                         android:layout_weight="1"
                         android:text="@string/earnings_balance"
                         android:textColor="@color/qd_ink"
-                        android:textSize="16sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/balanceValue"
@@ -160,7 +179,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:textColor="@color/qd_core_gray600"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:visibility="gone" />
 
                     <ImageView
                         android:layout_width="20dp"
@@ -211,16 +231,23 @@
                         app:tint="@color/qd_ink" />
                 </LinearLayout>
 
+                <!-- Divisor e título das sessões recentes (captura 062). -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/qd_line" />
+
                 <TextView
                     android:id="@+id/recentTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="16dp"
-                    android:paddingTop="28dp"
+                    android:paddingTop="24dp"
                     android:paddingEnd="16dp"
                     android:text="@string/earnings_recent"
                     android:textColor="@color/qd_ink"
-                    android:textSize="20sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <LinearLayout

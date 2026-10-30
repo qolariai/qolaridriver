@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.feature.bid.BidPriceView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub_bid_header_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_3x" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub_bid_content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_4x" />
+            <com.ubercab.ui.core.UPlainView android:id="@id/ub_bid_footer_plain_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub_bid_footer_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:gravity="center" android:layout_gravity="end" android:id="@id/ub_btn_confirm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:analyticsId="8f3fecda-292b" />
+</com.uber.feature.bid.BidPriceView>

@@ -1,0 +1,14 @@
+{
+ "dimens": {
+  "dimen": {
+   "mtrl_calendar_bottom_padding": "4.0dip",
+   "mtrl_calendar_day_corner": "18.0dip",
+   "mtrl_calendar_day_height": "40.0dip",
+   "mtrl_calendar_day_horizontal_padding": "2.0dip",
+   "mtrl_calendar_day_vertical_padding": "2.0dip",
+   "mtrl_calendar_day_width": "40.0dip",
+   "mtrl_calendar_days_of_week_height": "40.0dip",
+   "mtrl_calendar_month_horizontal_padding": "4.0dip"
+  }
+ }
+}

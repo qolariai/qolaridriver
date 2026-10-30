@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.nightmode_settings.NightModePickerView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.URadioGroup android:layout_gravity="start" android:id="@id/ub__nightmode_radiogroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="textStart" android:layoutDirection="rtl" android:layout_marginStart="@dimen/ui__spacing_unit_3x">
+        <com.ubercab.ui.core.URadioButton android:theme="@style/Platform.Button.Primary.ThemeOverlay" android:id="@id/ub__nightmode_always_off" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/night_mode_setting_mode_always_off" app:analyticsId="f4402622-2d5c" style="@style/Platform.TextStyle.Subtitle.Normal" />
+        <com.ubercab.ui.core.URadioButton android:theme="@style/Platform.Button.Primary.ThemeOverlay" android:id="@id/ub__nightmode_always_on" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/night_mode_setting_mode_always_on" app:analyticsId="bb18cf63-f283" style="@style/Platform.TextStyle.Subtitle.Normal" />
+        <com.ubercab.ui.core.URadioButton android:theme="@style/Platform.Button.Primary.ThemeOverlay" android:id="@id/ub__nightmode_automatic" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/night_mode_setting_mode_automatic" app:analyticsId="3dc7298d-3bd7" style="@style/Platform.TextStyle.Subtitle.Normal" />
+    </com.ubercab.ui.core.URadioGroup>
+</com.ubercab.nightmode_settings.NightModePickerView>

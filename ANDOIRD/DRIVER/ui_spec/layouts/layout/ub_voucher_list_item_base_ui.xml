@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="?android:selectableItemBackground" android:paddingTop="@dimen/ui__spacing_unit_3x" android:paddingBottom="@dimen/ui__spacing_unit_3x" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2.5x" android:paddingEnd="@dimen/ui__spacing_unit_2.5x" app:analyticsEnabled="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:gravity="center" android:id="@id/ub__voucher_item_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/ui__spacing_unit_2.5x" app:analyticsId="9c1b30bb-94eb" app:srcCompat="@drawable/ic_voucher_v2" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+        <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/ub__voucher_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:analyticsId="abce31fc-1c80" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/ub__voucher_item_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:analyticsId="8d7196bc-91a4" style="@style/Platform.TextStyle.ParagraphSmall" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.ULinearLayout>

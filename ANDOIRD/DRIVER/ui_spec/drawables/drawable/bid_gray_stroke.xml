@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/ub__bid_product_selector_border_width" android:color="?gray200" />
+    <corners android:radius="@dimen/ub__bid_product_selector_border_radius" />
+</shape>

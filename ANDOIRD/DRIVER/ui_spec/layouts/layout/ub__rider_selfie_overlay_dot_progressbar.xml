@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="@drawable/ub__rider_selfie_overlay_circle_primary" android:layout_width="@dimen/ui__spacing_unit_10x" android:layout_height="@dimen/ui__spacing_unit_10x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.125" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/one" android:layout_width="@dimen/ui__spacing_unit_1x" android:layout_height="@dimen/ui__spacing_unit_1x" app:analyticsId="533a4b4e-97f7" app:srcCompat="@drawable/ub__rider_selfie_overlay_progress_dot" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/two" android:layout_width="@dimen/ui__spacing_unit_1x" android:layout_height="@dimen/ui__spacing_unit_1x" app:analyticsId="04e39f83-d989" app:srcCompat="@drawable/ub__rider_selfie_overlay_progress_dot" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.25">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/three" android:layout_width="@dimen/ui__spacing_unit_1x" android:layout_height="@dimen/ui__spacing_unit_1x" app:analyticsId="508600dd-5539" app:srcCompat="@drawable/ub__rider_selfie_overlay_progress_dot" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.125" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.manual_input_flow.ManualInputView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:title="@string/manual_input_toolbar_title" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/ub__manual_input_title" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.DisplayXSmall" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__manual_input_flow_form_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ProgressBar android:layout_gravity="center" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/Widget.AppCompat.ProgressBar" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.manual_input_flow.ManualInputView>

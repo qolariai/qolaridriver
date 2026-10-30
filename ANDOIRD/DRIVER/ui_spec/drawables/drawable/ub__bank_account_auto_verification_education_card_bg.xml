@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" />
+    <stroke android:width="@dimen/ub__divider_section_size" android:color="@color/ub__bank_account_auto_verification_education_card_bg_color" />
+    <corners android:radius="@dimen/ui__spacing_unit_1.5x" />
+    <padding android:left="@dimen/ui__spacing_unit_0x" android:top="@dimen/ui__spacing_unit_0x" android:right="@dimen/ui__spacing_unit_0x" android:bottom="@dimen/ui__spacing_unit_0x" />
+</shape>

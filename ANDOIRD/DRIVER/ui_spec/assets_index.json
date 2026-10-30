@@ -1,0 +1,5062 @@
+[
+ {
+  "path": "a3ds2_srn",
+  "bytes": 32
+ },
+ {
+  "path": "analytics_filter_prod_all_apps.json",
+  "bytes": 861700
+ },
+ {
+  "path": "atd/b/342b567e1012d1baa-",
+  "bytes": 16545
+ },
+ {
+  "path": "atd/b/f9893ee9d4944eb8b-",
+  "bytes": 315641
+ },
+ {
+  "path": "audio_recording_animation_dark.json",
+  "bytes": 6390
+ },
+ {
+  "path": "audio_recording_animation_light.json",
+  "bytes": 6396
+ },
+ {
+  "path": "back_center.json",
+  "bytes": 12658
+ },
+ {
+  "path": "base_tooling/carbon_non_base_view_ids.json",
+  "bytes": 70
+ },
+ {
+  "path": "base_tooling/ignorable_classes.json",
+  "bytes": 530
+ },
+ {
+  "path": "base_tooling/non_base_classes.json",
+  "bytes": 846
+ },
+ {
+  "path": "bde934bd9986289af46ae59e3209c6cc681f0b7f9c21f35d55b3b3295691df79/ce6e45ac-bca1-e3c1-f93f-ca63f48f4c4d",
+  "bytes": 17616
+ },
+ {
+  "path": "BigEqualizer.json",
+  "bytes": 14725
+ },
+ {
+  "path": "bike_safety_item_bag.json",
+  "bytes": 13051
+ },
+ {
+  "path": "bike_safety_item_helmet.json",
+  "bytes": 11379
+ },
+ {
+  "path": "bike_safety_item_id.json",
+  "bytes": 5944
+ },
+ {
+  "path": "bike_safety_item_lane.json",
+  "bytes": 4259
+ },
+ {
+  "path": "bike_safety_item_lights.json",
+  "bytes": 6627
+ },
+ {
+  "path": "bike_safety_item_phone_mount.json",
+  "bytes": 9843
+ },
+ {
+  "path": "bike_safety_item_tire.json",
+  "bytes": 11187
+ },
+ {
+  "path": "bike_safety_item_vest.json",
+  "bytes": 20228
+ },
+ {
+  "path": "bool_parameters_hash.txt",
+  "bytes": 64
+ },
+ {
+  "path": "camera_back_id.json",
+  "bytes": 8101
+ },
+ {
+  "path": "camera_front_id.json",
+  "bytes": 31850
+ },
+ {
+  "path": "carbon-welcome.json",
+  "bytes": 481460
+ },
+ {
+  "path": "component_analytics_filter_prod_all_apps.json",
+  "bytes": 12818
+ },
+ {
+  "path": "connect.json",
+  "bytes": 4071
+ },
+ {
+  "path": "csc_overlay_flip_id.json",
+  "bytes": 50117
+ },
+ {
+  "path": "default_sprites.json",
+  "bytes": 5075
+ },
+ {
+  "path": "default_sprites.png",
+  "bytes": 10962
+ },
+ {
+  "path": "default_sprites@2x.json",
+  "bytes": 5092
+ },
+ {
+  "path": "default_sprites@2x.png",
+  "bytes": 24348
+ },
+ {
+  "path": "dexopt/baseline.prof",
+  "bytes": 41400
+ },
+ {
+  "path": "dexopt/baseline.profm",
+  "bytes": 4112
+ },
+ {
+  "path": "docscan_camera_init_animation.json",
+  "bytes": 19307
+ },
+ {
+  "path": "docscan_instruction_animation.json",
+  "bytes": 6331
+ },
+ {
+  "path": "dots.json",
+  "bytes": 4068
+ },
+ {
+  "path": "dynamic_features.json",
+  "bytes": 2
+ },
+ {
+  "path": "empty_asset_generated_by_bazel~",
+  "bytes": 0
+ },
+ {
+  "path": "face-id-intro.json",
+  "bytes": 109311
+ },
+ {
+  "path": "fonts/UberMove-Bold.otf",
+  "bytes": 67096
+ },
+ {
+  "path": "fonts/UberMove-Medium.otf",
+  "bytes": 65820
+ },
+ {
+  "path": "fonts/UberMoveMono-Medium.otf",
+  "bytes": 58040
+ },
+ {
+  "path": "fonts/UberMoveMono-Regular.otf",
+  "bytes": 57452
+ },
+ {
+  "path": "fonts/UberMoveText-Bold.otf",
+  "bytes": 67076
+ },
+ {
+  "path": "fonts/UberMoveText-Light.otf",
+  "bytes": 65904
+ },
+ {
+  "path": "fonts/UberMoveText-Medium.otf",
+  "bytes": 65952
+ },
+ {
+  "path": "fonts/UberMoveText-Regular.otf",
+  "bytes": 65276
+ },
+ {
+  "path": "front_center.json",
+  "bytes": 16779
+ },
+ {
+  "path": "geojson/california.geojson",
+  "bytes": 936
+ },
+ {
+  "path": "geojson/california_approximate.geojson",
+  "bytes": 225
+ },
+ {
+  "path": "geojson/china.geojson",
+  "bytes": 1341
+ },
+ {
+  "path": "geojson/china_approximate.geojson",
+  "bytes": 218
+ },
+ {
+  "path": "geojson/india.geojson",
+  "bytes": 2079
+ },
+ {
+  "path": "geojson/india_approximate.geojson",
+  "bytes": 212
+ },
+ {
+  "path": "geojson/japan.geojson",
+  "bytes": 1355
+ },
+ {
+  "path": "geojson/japan_approximate.geojson",
+  "bytes": 220
+ },
+ {
+  "path": "geojson/south_korea.geojson",
+  "bytes": 481
+ },
+ {
+  "path": "geojson/south_korea_approximate.geojson",
+  "bytes": 214
+ },
+ {
+  "path": "geojson/spain.geojson",
+  "bytes": 1024
+ },
+ {
+  "path": "geojson/spain_approximate.geojson",
+  "bytes": 212
+ },
+ {
+  "path": "geojson/taiwan.geojson",
+  "bytes": 310
+ },
+ {
+  "path": "geojson/taiwan_approximate.geojson",
+  "bytes": 220
+ },
+ {
+  "path": "geojson/usa.geojson",
+  "bytes": 2832
+ },
+ {
+  "path": "geojson/usa_approximate.geojson",
+  "bytes": 222
+ },
+ {
+  "path": "geojson/vietnam.geojson",
+  "bytes": 1117
+ },
+ {
+  "path": "geojson/vietnam_approximate.geojson",
+  "bytes": 473
+ },
+ {
+  "path": "iavrRecordingAnimation.json",
+  "bytes": 3123
+ },
+ {
+  "path": "identity-verification-intro-v2.json",
+  "bytes": 109311
+ },
+ {
+  "path": "identity-verification-intro.json",
+  "bytes": 34432
+ },
+ {
+  "path": "identity_verification_card_flip.json",
+  "bytes": 23594
+ },
+ {
+  "path": "intro_back.json",
+  "bytes": 88161
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_255",
+  "bytes": 144
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_27",
+  "bytes": 101
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_30",
+  "bytes": 96
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_31",
+  "bytes": 237
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_34",
+  "bytes": 198
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_350",
+  "bytes": 85
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_351",
+  "bytes": 201
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_352",
+  "bytes": 96
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_358",
+  "bytes": 272
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_359",
+  "bytes": 204
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_36",
+  "bytes": 132
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_372",
+  "bytes": 188
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_373",
+  "bytes": 158
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_375",
+  "bytes": 113
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_380",
+  "bytes": 333
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_381",
+  "bytes": 279
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_385",
+  "bytes": 239
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_39",
+  "bytes": 206
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_43",
+  "bytes": 963
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_44",
+  "bytes": 363
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_49",
+  "bytes": 12140
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_505",
+  "bytes": 92
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_506",
+  "bytes": 92
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_52",
+  "bytes": 214
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_54",
+  "bytes": 434
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_55",
+  "bytes": 118
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_58",
+  "bytes": 92
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_595",
+  "bytes": 300
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_61",
+  "bytes": 214
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_62",
+  "bytes": 378
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_63",
+  "bytes": 86
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_64",
+  "bytes": 151
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_66",
+  "bytes": 85
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_675",
+  "bytes": 95
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_676",
+  "bytes": 89
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_679",
+  "bytes": 95
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_7",
+  "bytes": 645
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_81",
+  "bytes": 227
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_84",
+  "bytes": 201
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_855",
+  "bytes": 104
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_856",
+  "bytes": 162
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_90",
+  "bytes": 177
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_91",
+  "bytes": 1667
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_94",
+  "bytes": 180
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_95",
+  "bytes": 93
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_971",
+  "bytes": 95
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_972",
+  "bytes": 108
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto_995",
+  "bytes": 352
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_800",
+  "bytes": 308
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_808",
+  "bytes": 293
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_870",
+  "bytes": 363
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_878",
+  "bytes": 299
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_881",
+  "bytes": 370
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_882",
+  "bytes": 988
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_883",
+  "bytes": 666
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_888",
+  "bytes": 291
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_979",
+  "bytes": 312
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AC",
+  "bytes": 328
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AD",
+  "bytes": 485
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AE",
+  "bytes": 666
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AF",
+  "bytes": 462
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AG",
+  "bytes": 767
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AI",
+  "bytes": 739
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AL",
+  "bytes": 789
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AM",
+  "bytes": 715
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AO",
+  "bytes": 347
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AR",
+  "bytes": 8316
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AS",
+  "bytes": 717
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AT",
+  "bytes": 2082
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AU",
+  "bytes": 1967
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AW",
+  "bytes": 463
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AX",
+  "bytes": 700
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_AZ",
+  "bytes": 1016
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BA",
+  "bytes": 994
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BB",
+  "bytes": 995
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BD",
+  "bytes": 2150
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BE",
+  "bytes": 804
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BF",
+  "bytes": 447
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BG",
+  "bytes": 1488
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BH",
+  "bytes": 576
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BI",
+  "bytes": 363
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BJ",
+  "bytes": 469
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BL",
+  "bytes": 482
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BM",
+  "bytes": 691
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BN",
+  "bytes": 382
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BO",
+  "bytes": 729
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BQ",
+  "bytes": 395
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BR",
+  "bytes": 1685
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BS",
+  "bytes": 963
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BT",
+  "bytes": 636
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BW",
+  "bytes": 822
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BY",
+  "bytes": 1245
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_BZ",
+  "bytes": 474
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CA",
+  "bytes": 1092
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CC",
+  "bytes": 833
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CD",
+  "bytes": 676
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CF",
+  "bytes": 377
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CG",
+  "bytes": 462
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CH",
+  "bytes": 713
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CI",
+  "bytes": 456
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CK",
+  "bytes": 327
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CL",
+  "bytes": 2233
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CM",
+  "bytes": 466
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CN",
+  "bytes": 13362
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CO",
+  "bytes": 1043
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CR",
+  "bytes": 630
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CU",
+  "bytes": 642
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CV",
+  "bytes": 437
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CW",
+  "bytes": 560
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CX",
+  "bytes": 851
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CY",
+  "bytes": 431
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_CZ",
+  "bytes": 794
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_DE",
+  "bytes": 4829
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_DJ",
+  "bytes": 345
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_DK",
+  "bytes": 783
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_DM",
+  "bytes": 730
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_DO",
+  "bytes": 1001
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_DZ",
+  "bytes": 650
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_EC",
+  "bytes": 759
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_EE",
+  "bytes": 1056
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_EG",
+  "bytes": 661
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_EH",
+  "bytes": 425
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ER",
+  "bytes": 382
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ES",
+  "bytes": 888
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ET",
+  "bytes": 948
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_FI",
+  "bytes": 1485
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_FJ",
+  "bytes": 482
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_FK",
+  "bytes": 269
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_FM",
+  "bytes": 465
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_FO",
+  "bytes": 458
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_FR",
+  "bytes": 886
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GA",
+  "bytes": 587
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GB",
+  "bytes": 2871
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GD",
+  "bytes": 796
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GE",
+  "bytes": 1203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GF",
+  "bytes": 623
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GG",
+  "bytes": 685
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GH",
+  "bytes": 781
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GI",
+  "bytes": 416
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GL",
+  "bytes": 389
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GM",
+  "bytes": 667
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GN",
+  "bytes": 490
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GP",
+  "bytes": 655
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GQ",
+  "bytes": 468
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GR",
+  "bytes": 1058
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GT",
+  "bytes": 455
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GU",
+  "bytes": 1078
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GW",
+  "bytes": 404
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_GY",
+  "bytes": 536
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_HK",
+  "bytes": 1571
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_HN",
+  "bytes": 763
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_HR",
+  "bytes": 933
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_HT",
+  "bytes": 413
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_HU",
+  "bytes": 722
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ID",
+  "bytes": 2116
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_IE",
+  "bytes": 1307
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_IL",
+  "bytes": 1258
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_IM",
+  "bytes": 626
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_IN",
+  "bytes": 8562
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_IO",
+  "bytes": 296
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_IQ",
+  "bytes": 530
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_IR",
+  "bytes": 1082
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_IS",
+  "bytes": 868
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_IT",
+  "bytes": 2394
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_JE",
+  "bytes": 788
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_JM",
+  "bytes": 991
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_JO",
+  "bytes": 1133
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_JP",
+  "bytes": 6680
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KE",
+  "bytes": 663
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KG",
+  "bytes": 838
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KH",
+  "bytes": 758
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KI",
+  "bytes": 678
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KM",
+  "bytes": 343
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KN",
+  "bytes": 709
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KP",
+  "bytes": 563
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KR",
+  "bytes": 2031
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KW",
+  "bytes": 758
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KY",
+  "bytes": 868
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_KZ",
+  "bytes": 911
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LA",
+  "bytes": 585
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LB",
+  "bytes": 596
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LC",
+  "bytes": 767
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LI",
+  "bytes": 859
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LK",
+  "bytes": 522
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LR",
+  "bytes": 583
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LS",
+  "bytes": 342
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LT",
+  "bytes": 645
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LU",
+  "bytes": 1357
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LV",
+  "bytes": 447
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_LY",
+  "bytes": 532
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MA",
+  "bytes": 704
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MC",
+  "bytes": 779
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MD",
+  "bytes": 579
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ME",
+  "bytes": 596
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MF",
+  "bytes": 501
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MG",
+  "bytes": 450
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MH",
+  "bytes": 382
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MK",
+  "bytes": 837
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ML",
+  "bytes": 604
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MM",
+  "bytes": 2192
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MN",
+  "bytes": 862
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MO",
+  "bytes": 503
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MP",
+  "bytes": 834
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MQ",
+  "bytes": 645
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MR",
+  "bytes": 387
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MS",
+  "bytes": 677
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MT",
+  "bytes": 584
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MU",
+  "bytes": 746
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MV",
+  "bytes": 550
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MW",
+  "bytes": 457
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MX",
+  "bytes": 1438
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MY",
+  "bytes": 1518
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_MZ",
+  "bytes": 436
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NA",
+  "bytes": 908
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NC",
+  "bytes": 480
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NE",
+  "bytes": 522
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NF",
+  "bytes": 406
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NG",
+  "bytes": 785
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NI",
+  "bytes": 421
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NL",
+  "bytes": 1698
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NO",
+  "bytes": 702
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NP",
+  "bytes": 826
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NR",
+  "bytes": 368
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NU",
+  "bytes": 332
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_NZ",
+  "bytes": 1088
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_OM",
+  "bytes": 527
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PA",
+  "bytes": 981
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PE",
+  "bytes": 768
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PF",
+  "bytes": 551
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PG",
+  "bytes": 558
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PH",
+  "bytes": 1193
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PK",
+  "bytes": 1841
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PL",
+  "bytes": 1217
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PM",
+  "bytes": 586
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PR",
+  "bytes": 644
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PS",
+  "bytes": 546
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PT",
+  "bytes": 833
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PW",
+  "bytes": 454
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_PY",
+  "bytes": 1810
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_QA",
+  "bytes": 501
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_RE",
+  "bytes": 617
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_RO",
+  "bytes": 736
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_RS",
+  "bytes": 737
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_RU",
+  "bytes": 2091
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_RW",
+  "bytes": 513
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SA",
+  "bytes": 626
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SB",
+  "bytes": 530
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SC",
+  "bytes": 413
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SD",
+  "bytes": 359
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SE",
+  "bytes": 2964
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SG",
+  "bytes": 951
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SH",
+  "bytes": 323
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SI",
+  "bytes": 788
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SJ",
+  "bytes": 548
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SK",
+  "bytes": 1318
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SL",
+  "bytes": 380
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SM",
+  "bytes": 598
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SN",
+  "bytes": 509
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SO",
+  "bytes": 757
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SR",
+  "bytes": 515
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SS",
+  "bytes": 344
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ST",
+  "bytes": 338
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SV",
+  "bytes": 584
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SX",
+  "bytes": 698
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SY",
+  "bytes": 507
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_SZ",
+  "bytes": 455
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TA",
+  "bytes": 245
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TC",
+  "bytes": 739
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TD",
+  "bytes": 396
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TG",
+  "bytes": 379
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TH",
+  "bytes": 660
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TJ",
+  "bytes": 694
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TK",
+  "bytes": 299
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TL",
+  "bytes": 455
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TM",
+  "bytes": 561
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TN",
+  "bytes": 463
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TO",
+  "bytes": 603
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TR",
+  "bytes": 1276
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TT",
+  "bytes": 841
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TV",
+  "bytes": 410
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TW",
+  "bytes": 1522
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_TZ",
+  "bytes": 607
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_UA",
+  "bytes": 998
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_UG",
+  "bytes": 742
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_US",
+  "bytes": 2122
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_UY",
+  "bytes": 841
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_UZ",
+  "bytes": 1579
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_VA",
+  "bytes": 711
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_VC",
+  "bytes": 802
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_VE",
+  "bytes": 492
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_VG",
+  "bytes": 757
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_VI",
+  "bytes": 918
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_VN",
+  "bytes": 1304
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_VU",
+  "bytes": 471
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_WF",
+  "bytes": 474
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_WS",
+  "bytes": 497
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_XK",
+  "bytes": 593
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_YE",
+  "bytes": 514
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_YT",
+  "bytes": 469
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ZA",
+  "bytes": 1130
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ZM",
+  "bytes": 585
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto_ZW",
+  "bytes": 1268
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AC",
+  "bytes": 212
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AD",
+  "bytes": 206
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AE",
+  "bytes": 255
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AF",
+  "bytes": 287
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AG",
+  "bytes": 237
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AI",
+  "bytes": 224
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AL",
+  "bytes": 390
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AM",
+  "bytes": 276
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AO",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AR",
+  "bytes": 385
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AS",
+  "bytes": 252
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AT",
+  "bytes": 433
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AU",
+  "bytes": 551
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AW",
+  "bytes": 231
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AX",
+  "bytes": 227
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_AZ",
+  "bytes": 301
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BA",
+  "bytes": 332
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BB",
+  "bytes": 231
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BD",
+  "bytes": 436
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BE",
+  "bytes": 544
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BF",
+  "bytes": 192
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BG",
+  "bytes": 279
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BH",
+  "bytes": 386
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BI",
+  "bytes": 323
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BJ",
+  "bytes": 317
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BL",
+  "bytes": 317
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BM",
+  "bytes": 224
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BN",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BO",
+  "bytes": 250
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BQ",
+  "bytes": 225
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BR",
+  "bytes": 761
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BS",
+  "bytes": 214
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BT",
+  "bytes": 250
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BW",
+  "bytes": 306
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BY",
+  "bytes": 269
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_BZ",
+  "bytes": 244
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CA",
+  "bytes": 320
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CC",
+  "bytes": 206
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CD",
+  "bytes": 302
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CF",
+  "bytes": 233
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CG",
+  "bytes": 204
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CH",
+  "bytes": 526
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CI",
+  "bytes": 282
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CK",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CL",
+  "bytes": 1068
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CM",
+  "bytes": 288
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CN",
+  "bytes": 404
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CO",
+  "bytes": 423
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CR",
+  "bytes": 449
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CU",
+  "bytes": 279
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CV",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CW",
+  "bytes": 225
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CX",
+  "bytes": 206
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CY",
+  "bytes": 258
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_CZ",
+  "bytes": 315
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_DE",
+  "bytes": 524
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_DJ",
+  "bytes": 192
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_DK",
+  "bytes": 309
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_DM",
+  "bytes": 233
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_DO",
+  "bytes": 220
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_DZ",
+  "bytes": 277
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_EC",
+  "bytes": 236
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_EE",
+  "bytes": 1774
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_EG",
+  "bytes": 298
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_EH",
+  "bytes": 220
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ER",
+  "bytes": 348
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ES",
+  "bytes": 742
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ET",
+  "bytes": 253
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_FI",
+  "bytes": 314
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_FJ",
+  "bytes": 317
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_FK",
+  "bytes": 200
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_FM",
+  "bytes": 237
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_FO",
+  "bytes": 267
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_FR",
+  "bytes": 615
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GA",
+  "bytes": 239
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GB",
+  "bytes": 660
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GD",
+  "bytes": 224
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GE",
+  "bytes": 324
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GF",
+  "bytes": 337
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GG",
+  "bytes": 284
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GH",
+  "bytes": 325
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GI",
+  "bytes": 530
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GL",
+  "bytes": 196
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GM",
+  "bytes": 235
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GN",
+  "bytes": 235
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GP",
+  "bytes": 329
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GR",
+  "bytes": 339
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GT",
+  "bytes": 290
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GU",
+  "bytes": 205
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GW",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_GY",
+  "bytes": 321
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_HK",
+  "bytes": 560
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_HN",
+  "bytes": 254
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_HR",
+  "bytes": 450
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_HT",
+  "bytes": 266
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_HU",
+  "bytes": 554
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ID",
+  "bytes": 313
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_IE",
+  "bytes": 390
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_IL",
+  "bytes": 323
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_IM",
+  "bytes": 280
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_IN",
+  "bytes": 1604
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_IQ",
+  "bytes": 335
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_IR",
+  "bytes": 583
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_IS",
+  "bytes": 375
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_IT",
+  "bytes": 611
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_JE",
+  "bytes": 326
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_JM",
+  "bytes": 251
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_JO",
+  "bytes": 376
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_JP",
+  "bytes": 309
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KE",
+  "bytes": 727
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KG",
+  "bytes": 252
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KH",
+  "bytes": 282
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KI",
+  "bytes": 288
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KM",
+  "bytes": 192
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KN",
+  "bytes": 233
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KP",
+  "bytes": 215
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KR",
+  "bytes": 502
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KW",
+  "bytes": 243
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KY",
+  "bytes": 205
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_KZ",
+  "bytes": 333
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LA",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LB",
+  "bytes": 236
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LC",
+  "bytes": 218
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LI",
+  "bytes": 267
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LK",
+  "bytes": 388
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LR",
+  "bytes": 300
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LS",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LT",
+  "bytes": 366
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LU",
+  "bytes": 279
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LV",
+  "bytes": 379
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_LY",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MA",
+  "bytes": 220
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MC",
+  "bytes": 226
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MD",
+  "bytes": 355
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ME",
+  "bytes": 341
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MF",
+  "bytes": 329
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MG",
+  "bytes": 229
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MH",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MK",
+  "bytes": 304
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ML",
+  "bytes": 594
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MM",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MN",
+  "bytes": 206
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MO",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MP",
+  "bytes": 205
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MQ",
+  "bytes": 353
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MR",
+  "bytes": 192
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MS",
+  "bytes": 225
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MT",
+  "bytes": 244
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MU",
+  "bytes": 254
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MV",
+  "bytes": 277
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MW",
+  "bytes": 282
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MX",
+  "bytes": 324
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MY",
+  "bytes": 511
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_MZ",
+  "bytes": 256
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NA",
+  "bytes": 244
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NC",
+  "bytes": 340
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NE",
+  "bytes": 385
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NF",
+  "bytes": 221
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NG",
+  "bytes": 254
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NI",
+  "bytes": 297
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NL",
+  "bytes": 384
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NO",
+  "bytes": 330
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NP",
+  "bytes": 271
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NR",
+  "bytes": 213
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NU",
+  "bytes": 212
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_NZ",
+  "bytes": 350
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_OM",
+  "bytes": 285
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PA",
+  "bytes": 202
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PE",
+  "bytes": 221
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PF",
+  "bytes": 195
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PG",
+  "bytes": 293
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PH",
+  "bytes": 215
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PK",
+  "bytes": 265
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PL",
+  "bytes": 320
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PM",
+  "bytes": 370
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PR",
+  "bytes": 205
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PS",
+  "bytes": 255
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PT",
+  "bytes": 404
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PW",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_PY",
+  "bytes": 359
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_QA",
+  "bytes": 257
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_RE",
+  "bytes": 223
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_RO",
+  "bytes": 436
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_RS",
+  "bytes": 257
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_RU",
+  "bytes": 238
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_RW",
+  "bytes": 236
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SA",
+  "bytes": 411
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SB",
+  "bytes": 295
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SC",
+  "bytes": 310
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SD",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SE",
+  "bytes": 558
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SG",
+  "bytes": 312
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SH",
+  "bytes": 255
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SI",
+  "bytes": 357
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SJ",
+  "bytes": 252
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SK",
+  "bytes": 301
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SL",
+  "bytes": 279
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SM",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SN",
+  "bytes": 417
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SO",
+  "bytes": 224
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SR",
+  "bytes": 211
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SS",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ST",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SV",
+  "bytes": 327
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SX",
+  "bytes": 205
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SY",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_SZ",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TC",
+  "bytes": 218
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TD",
+  "bytes": 192
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TG",
+  "bytes": 253
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TH",
+  "bytes": 854
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TJ",
+  "bytes": 224
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TL",
+  "bytes": 227
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TM",
+  "bytes": 197
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TN",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TO",
+  "bytes": 230
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TR",
+  "bytes": 1027
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TT",
+  "bytes": 214
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TV",
+  "bytes": 200
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TW",
+  "bytes": 354
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_TZ",
+  "bytes": 302
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_UA",
+  "bytes": 382
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_UG",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_US",
+  "bytes": 794
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_UY",
+  "bytes": 278
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_UZ",
+  "bytes": 322
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_VA",
+  "bytes": 206
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_VC",
+  "bytes": 218
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_VE",
+  "bytes": 227
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_VG",
+  "bytes": 218
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_VI",
+  "bytes": 205
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_VN",
+  "bytes": 203
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_VU",
+  "bytes": 191
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_WF",
+  "bytes": 195
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_WS",
+  "bytes": 267
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_XK",
+  "bytes": 224
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_YE",
+  "bytes": 206
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_YT",
+  "bytes": 211
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ZA",
+  "bytes": 443
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ZM",
+  "bytes": 218
+ },
+ {
+  "path": "io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto_ZW",
+  "bytes": 357
+ },
+ {
+  "path": "labels_image_quality.txt",
+  "bytes": 24
+ },
+ {
+  "path": "latam_national_id.json",
+  "bytes": 73909
+ },
+ {
+  "path": "licenses.html",
+  "bytes": 440564
+ },
+ {
+  "path": "loading_white.json",
+  "bytes": 4680
+ },
+ {
+  "path": "moto_courier_safety_bag_female.json",
+  "bytes": 15802
+ },
+ {
+  "path": "moto_courier_safety_bag_male.json",
+  "bytes": 15733
+ },
+ {
+  "path": "moto_safety_extra_helmet_female.json",
+  "bytes": 11836
+ },
+ {
+  "path": "moto_safety_extra_helmet_male.json",
+  "bytes": 11878
+ },
+ {
+  "path": "moto_safety_helmet.json",
+  "bytes": 13589
+ },
+ {
+  "path": "moto_safety_helmet_v2.json",
+  "bytes": 16094
+ },
+ {
+  "path": "moto_safety_item_defensive_riding.json",
+  "bytes": 4451
+ },
+ {
+  "path": "moto_safety_phone_mount.json",
+  "bytes": 9906
+ },
+ {
+  "path": "moto_safety_protective_clothing_female.json",
+  "bytes": 63052
+ },
+ {
+  "path": "moto_safety_protective_clothing_male.json",
+  "bytes": 62764
+ },
+ {
+  "path": "moto_safety_vehicle_check.json",
+  "bytes": 42076
+ },
+ {
+  "path": "mutumbo-human-review.json",
+  "bytes": 105735
+ },
+ {
+  "path": "org/apache/commons/math3/exception/util/LocalizedFormats_fr.properties",
+  "bytes": 30461
+ },
+ {
+  "path": "org/apache/commons/math3/random/new-joe-kuo-6.1000",
+  "bytes": 61866
+ },
+ {
+  "path": "parameters.json",
+  "bytes": 4752975
+ },
+ {
+  "path": "pulse-lottie-animation.json",
+  "bytes": 2159
+ },
+ {
+  "path": "rg_uploader_success.json",
+  "bytes": 22584
+ },
+ {
+  "path": "rg_uploader_verify.json",
+  "bytes": 38699
+ },
+ {
+  "path": "safety-shield-animation.json",
+  "bytes": 12076
+ },
+ {
+  "path": "Scan_to_EnterCode.json",
+  "bytes": 7948
+ },
+ {
+  "path": "scanning_handheld_document_front.json",
+  "bytes": 73907
+ },
+ {
+  "path": "sda_async.json",
+  "bytes": 1339
+ },
+ {
+  "path": "sda_async_blocking.json",
+  "bytes": 3727
+ },
+ {
+  "path": "sda_sync.json",
+  "bytes": 338
+ },
+ {
+  "path": "selfie_photo_quality_captured_ring.json",
+  "bytes": 9659
+ },
+ {
+  "path": "selfie_photo_quality_capturing.json",
+  "bytes": 4990
+ },
+ {
+  "path": "selfie_photo_quality_error.json",
+  "bytes": 9593
+ },
+ {
+  "path": "selfie_photo_quality_initiation.json",
+  "bytes": 12117
+ },
+ {
+  "path": "selfie_photo_quality_loading.json",
+  "bytes": 14219
+ },
+ {
+  "path": "selfie_photo_quality_static_ring.json",
+  "bytes": 10792
+ },
+ {
+  "path": "selfie_photo_quality_success.json",
+  "bytes": 15418
+ },
+ {
+  "path": "selfie_verification_captured_ring.json",
+  "bytes": 9659
+ },
+ {
+  "path": "selfie_verification_capturing.json",
+  "bytes": 4990
+ },
+ {
+  "path": "selfie_verification_error.json",
+  "bytes": 9593
+ },
+ {
+  "path": "selfie_verification_initiation.json",
+  "bytes": 12117
+ },
+ {
+  "path": "selfie_verification_intro.json",
+  "bytes": 109311
+ },
+ {
+  "path": "selfie_verification_loading.json",
+  "bytes": 14219
+ },
+ {
+  "path": "selfie_verification_static_ring.json",
+  "bytes": 10792
+ },
+ {
+  "path": "selfie_verification_success.json",
+  "bytes": 15418
+ },
+ {
+  "path": "shield-animation.json",
+  "bytes": 12076
+ },
+ {
+  "path": "SmallEqualizer.json",
+  "bytes": 6237
+ },
+ {
+  "path": "streaming_animation.json",
+  "bytes": 12716
+ },
+ {
+  "path": "style_guide_dots.json",
+  "bytes": 17674
+ },
+ {
+  "path": "tzdb/Africa/Abidjan.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Accra.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Addis_Ababa.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Africa/Algiers.dat",
+  "bytes": 231
+ },
+ {
+  "path": "tzdb/Africa/Asmara.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Africa/Asmera.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Africa/Bamako.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Bangui.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/Banjul.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Bissau.dat",
+  "bytes": 47
+ },
+ {
+  "path": "tzdb/Africa/Blantyre.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Brazzaville.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/Bujumbura.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Cairo.dat",
+  "bytes": 579
+ },
+ {
+  "path": "tzdb/Africa/Casablanca.dat",
+  "bytes": 347
+ },
+ {
+  "path": "tzdb/Africa/Ceuta.dat",
+  "bytes": 231
+ },
+ {
+  "path": "tzdb/Africa/Conakry.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Dakar.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Dar_es_Salaam.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Africa/Djibouti.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Africa/Douala.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/El_Aaiun.dat",
+  "bytes": 299
+ },
+ {
+  "path": "tzdb/Africa/Freetown.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Gaborone.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Harare.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Johannesburg.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/Africa/Juba.dat",
+  "bytes": 195
+ },
+ {
+  "path": "tzdb/Africa/Kampala.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Africa/Khartoum.dat",
+  "bytes": 195
+ },
+ {
+  "path": "tzdb/Africa/Kigali.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Kinshasa.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/Lagos.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/Libreville.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/Lome.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Luanda.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/Lubumbashi.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Lusaka.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Malabo.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/Maputo.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Maseru.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/Africa/Mbabane.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/Africa/Mogadishu.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Africa/Monrovia.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Africa/Nairobi.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Africa/Ndjamena.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Africa/Niamey.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/Nouakchott.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Ouagadougou.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Porto-Novo.dat",
+  "bytes": 95
+ },
+ {
+  "path": "tzdb/Africa/Sao_Tome.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Africa/Timbuktu.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Africa/Tripoli.dat",
+  "bytes": 195
+ },
+ {
+  "path": "tzdb/Africa/Tunis.dat",
+  "bytes": 207
+ },
+ {
+  "path": "tzdb/Africa/Windhoek.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/America/Adak.dat",
+  "bytes": 415
+ },
+ {
+  "path": "tzdb/America/Anchorage.dat",
+  "bytes": 415
+ },
+ {
+  "path": "tzdb/America/Anguilla.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Antigua.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Araguaina.dat",
+  "bytes": 251
+ },
+ {
+  "path": "tzdb/America/Argentina/Buenos_Aires.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/America/Argentina/Catamarca.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/America/Argentina/ComodRivadavia.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/America/Argentina/Cordoba.dat",
+  "bytes": 299
+ },
+ {
+  "path": "tzdb/America/Argentina/Jujuy.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/America/Argentina/La_Rioja.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/America/Argentina/Mendoza.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/America/Argentina/Rio_Gallegos.dat",
+  "bytes": 327
+ },
+ {
+  "path": "tzdb/America/Argentina/Salta.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/America/Argentina/San_Juan.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/America/Argentina/San_Luis.dat",
+  "bytes": 347
+ },
+ {
+  "path": "tzdb/America/Argentina/Tucuman.dat",
+  "bytes": 343
+ },
+ {
+  "path": "tzdb/America/Argentina/Ushuaia.dat",
+  "bytes": 327
+ },
+ {
+  "path": "tzdb/America/Aruba.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Asuncion.dat",
+  "bytes": 467
+ },
+ {
+  "path": "tzdb/America/Atikokan.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/America/Atka.dat",
+  "bytes": 415
+ },
+ {
+  "path": "tzdb/America/Bahia.dat",
+  "bytes": 291
+ },
+ {
+  "path": "tzdb/America/Bahia_Banderas.dat",
+  "bytes": 299
+ },
+ {
+  "path": "tzdb/America/Barbados.dat",
+  "bytes": 107
+ },
+ {
+  "path": "tzdb/America/Belem.dat",
+  "bytes": 163
+ },
+ {
+  "path": "tzdb/America/Belize.dat",
+  "bytes": 435
+ },
+ {
+  "path": "tzdb/America/Blanc-Sablon.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Boa_Vista.dat",
+  "bytes": 179
+ },
+ {
+  "path": "tzdb/America/Bogota.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Boise.dat",
+  "bytes": 415
+ },
+ {
+  "path": "tzdb/America/Buenos_Aires.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/America/Cambridge_Bay.dat",
+  "bytes": 351
+ },
+ {
+  "path": "tzdb/America/Campo_Grande.dat",
+  "bytes": 411
+ },
+ {
+  "path": "tzdb/America/Cancun.dat",
+  "bytes": 223
+ },
+ {
+  "path": "tzdb/America/Caracas.dat",
+  "bytes": 103
+ },
+ {
+  "path": "tzdb/America/Catamarca.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/America/Cayenne.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Cayman.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/America/Chicago.dat",
+  "bytes": 759
+ },
+ {
+  "path": "tzdb/America/Chihuahua.dat",
+  "bytes": 287
+ },
+ {
+  "path": "tzdb/America/Ciudad_Juarez.dat",
+  "bytes": 311
+ },
+ {
+  "path": "tzdb/America/Coral_Harbour.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/America/Cordoba.dat",
+  "bytes": 299
+ },
+ {
+  "path": "tzdb/America/Costa_Rica.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/America/Coyhaique.dat",
+  "bytes": 675
+ },
+ {
+  "path": "tzdb/America/Creston.dat",
+  "bytes": 97
+ },
+ {
+  "path": "tzdb/America/Cuiaba.dat",
+  "bytes": 403
+ },
+ {
+  "path": "tzdb/America/Curacao.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Danmarkshavn.dat",
+  "bytes": 187
+ },
+ {
+  "path": "tzdb/America/Dawson.dat",
+  "bytes": 419
+ },
+ {
+  "path": "tzdb/America/Dawson_Creek.dat",
+  "bytes": 275
+ },
+ {
+  "path": "tzdb/America/Denver.dat",
+  "bytes": 439
+ },
+ {
+  "path": "tzdb/America/Detroit.dat",
+  "bytes": 393
+ },
+ {
+  "path": "tzdb/America/Dominica.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Edmonton.dat",
+  "bytes": 555
+ },
+ {
+  "path": "tzdb/America/Eirunepe.dat",
+  "bytes": 187
+ },
+ {
+  "path": "tzdb/America/El_Salvador.dat",
+  "bytes": 67
+ },
+ {
+  "path": "tzdb/America/Ensenada.dat",
+  "bytes": 591
+ },
+ {
+  "path": "tzdb/America/Fort_Nelson.dat",
+  "bytes": 619
+ },
+ {
+  "path": "tzdb/America/Fort_Wayne.dat",
+  "bytes": 215
+ },
+ {
+  "path": "tzdb/America/Fortaleza.dat",
+  "bytes": 203
+ },
+ {
+  "path": "tzdb/America/Glace_Bay.dat",
+  "bytes": 379
+ },
+ {
+  "path": "tzdb/America/Godthab.dat",
+  "bytes": 419
+ },
+ {
+  "path": "tzdb/America/Goose_Bay.dat",
+  "bytes": 1009
+ },
+ {
+  "path": "tzdb/America/Grand_Turk.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/America/Grenada.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Guadeloupe.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Guatemala.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/America/Guayaquil.dat",
+  "bytes": 87
+ },
+ {
+  "path": "tzdb/America/Guyana.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/America/Halifax.dat",
+  "bytes": 731
+ },
+ {
+  "path": "tzdb/America/Havana.dat",
+  "bytes": 519
+ },
+ {
+  "path": "tzdb/America/Hermosillo.dat",
+  "bytes": 103
+ },
+ {
+  "path": "tzdb/America/Indiana/Indianapolis.dat",
+  "bytes": 215
+ },
+ {
+  "path": "tzdb/America/Indiana/Knox.dat",
+  "bytes": 431
+ },
+ {
+  "path": "tzdb/America/Indiana/Marengo.dat",
+  "bytes": 223
+ },
+ {
+  "path": "tzdb/America/Indiana/Petersburg.dat",
+  "bytes": 279
+ },
+ {
+  "path": "tzdb/America/Indiana/Tell_City.dat",
+  "bytes": 211
+ },
+ {
+  "path": "tzdb/America/Indiana/Vevay.dat",
+  "bytes": 135
+ },
+ {
+  "path": "tzdb/America/Indiana/Vincennes.dat",
+  "bytes": 215
+ },
+ {
+  "path": "tzdb/America/Indiana/Winamac.dat",
+  "bytes": 243
+ },
+ {
+  "path": "tzdb/America/Indianapolis.dat",
+  "bytes": 215
+ },
+ {
+  "path": "tzdb/America/Inuvik.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/America/Iqaluit.dat",
+  "bytes": 343
+ },
+ {
+  "path": "tzdb/America/Jamaica.dat",
+  "bytes": 131
+ },
+ {
+  "path": "tzdb/America/Jujuy.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/America/Juneau.dat",
+  "bytes": 419
+ },
+ {
+  "path": "tzdb/America/Kentucky/Louisville.dat",
+  "bytes": 525
+ },
+ {
+  "path": "tzdb/America/Kentucky/Monticello.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/America/Knox_IN.dat",
+  "bytes": 431
+ },
+ {
+  "path": "tzdb/America/Kralendijk.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/La_Paz.dat",
+  "bytes": 65
+ },
+ {
+  "path": "tzdb/America/Lima.dat",
+  "bytes": 135
+ },
+ {
+  "path": "tzdb/America/Los_Angeles.dat",
+  "bytes": 557
+ },
+ {
+  "path": "tzdb/America/Louisville.dat",
+  "bytes": 525
+ },
+ {
+  "path": "tzdb/America/Lower_Princes.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Maceio.dat",
+  "bytes": 211
+ },
+ {
+  "path": "tzdb/America/Managua.dat",
+  "bytes": 159
+ },
+ {
+  "path": "tzdb/America/Manaus.dat",
+  "bytes": 171
+ },
+ {
+  "path": "tzdb/America/Marigot.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Martinique.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Matamoros.dat",
+  "bytes": 175
+ },
+ {
+  "path": "tzdb/America/Mazatlan.dat",
+  "bytes": 295
+ },
+ {
+  "path": "tzdb/America/Mendoza.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/America/Menominee.dat",
+  "bytes": 395
+ },
+ {
+  "path": "tzdb/America/Merida.dat",
+  "bytes": 271
+ },
+ {
+  "path": "tzdb/America/Metlakatla.dat",
+  "bytes": 271
+ },
+ {
+  "path": "tzdb/America/Mexico_City.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/America/Miquelon.dat",
+  "bytes": 243
+ },
+ {
+  "path": "tzdb/America/Moncton.dat",
+  "bytes": 819
+ },
+ {
+  "path": "tzdb/America/Monterrey.dat",
+  "bytes": 295
+ },
+ {
+  "path": "tzdb/America/Montevideo.dat",
+  "bytes": 395
+ },
+ {
+  "path": "tzdb/America/Montreal.dat",
+  "bytes": 747
+ },
+ {
+  "path": "tzdb/America/Montserrat.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Nassau.dat",
+  "bytes": 747
+ },
+ {
+  "path": "tzdb/America/New_York.dat",
+  "bytes": 751
+ },
+ {
+  "path": "tzdb/America/Nipigon.dat",
+  "bytes": 747
+ },
+ {
+  "path": "tzdb/America/Nome.dat",
+  "bytes": 419
+ },
+ {
+  "path": "tzdb/America/Noronha.dat",
+  "bytes": 203
+ },
+ {
+  "path": "tzdb/America/North_Dakota/Beulah.dat",
+  "bytes": 431
+ },
+ {
+  "path": "tzdb/America/North_Dakota/Center.dat",
+  "bytes": 407
+ },
+ {
+  "path": "tzdb/America/North_Dakota/New_Salem.dat",
+  "bytes": 407
+ },
+ {
+  "path": "tzdb/America/Nuuk.dat",
+  "bytes": 419
+ },
+ {
+  "path": "tzdb/America/Ojinaga.dat",
+  "bytes": 303
+ },
+ {
+  "path": "tzdb/America/Panama.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/America/Pangnirtung.dat",
+  "bytes": 343
+ },
+ {
+  "path": "tzdb/America/Paramaribo.dat",
+  "bytes": 115
+ },
+ {
+  "path": "tzdb/America/Phoenix.dat",
+  "bytes": 97
+ },
+ {
+  "path": "tzdb/America/Port-au-Prince.dat",
+  "bytes": 271
+ },
+ {
+  "path": "tzdb/America/Port_of_Spain.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Porto_Acre.dat",
+  "bytes": 179
+ },
+ {
+  "path": "tzdb/America/Porto_Velho.dat",
+  "bytes": 163
+ },
+ {
+  "path": "tzdb/America/Puerto_Rico.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Punta_Arenas.dat",
+  "bytes": 611
+ },
+ {
+  "path": "tzdb/America/Rainy_River.dat",
+  "bytes": 563
+ },
+ {
+  "path": "tzdb/America/Rankin_Inlet.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/America/Recife.dat",
+  "bytes": 203
+ },
+ {
+  "path": "tzdb/America/Regina.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/America/Resolute.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/America/Rio_Branco.dat",
+  "bytes": 179
+ },
+ {
+  "path": "tzdb/America/Rosario.dat",
+  "bytes": 299
+ },
+ {
+  "path": "tzdb/America/Santa_Isabel.dat",
+  "bytes": 591
+ },
+ {
+  "path": "tzdb/America/Santarem.dat",
+  "bytes": 171
+ },
+ {
+  "path": "tzdb/America/Santiago.dat",
+  "bytes": 659
+ },
+ {
+  "path": "tzdb/America/Santo_Domingo.dat",
+  "bytes": 151
+ },
+ {
+  "path": "tzdb/America/Sao_Paulo.dat",
+  "bytes": 411
+ },
+ {
+  "path": "tzdb/America/Scoresbysund.dat",
+  "bytes": 431
+ },
+ {
+  "path": "tzdb/America/Shiprock.dat",
+  "bytes": 439
+ },
+ {
+  "path": "tzdb/America/Sitka.dat",
+  "bytes": 419
+ },
+ {
+  "path": "tzdb/America/St_Barthelemy.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/St_Johns.dat",
+  "bytes": 1457
+ },
+ {
+  "path": "tzdb/America/St_Kitts.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/St_Lucia.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/St_Thomas.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/St_Vincent.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Swift_Current.dat",
+  "bytes": 139
+ },
+ {
+  "path": "tzdb/America/Tegucigalpa.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/America/Thule.dat",
+  "bytes": 203
+ },
+ {
+  "path": "tzdb/America/Thunder_Bay.dat",
+  "bytes": 747
+ },
+ {
+  "path": "tzdb/America/Tijuana.dat",
+  "bytes": 591
+ },
+ {
+  "path": "tzdb/America/Toronto.dat",
+  "bytes": 747
+ },
+ {
+  "path": "tzdb/America/Tortola.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Vancouver.dat",
+  "bytes": 715
+ },
+ {
+  "path": "tzdb/America/Virgin.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/America/Whitehorse.dat",
+  "bytes": 419
+ },
+ {
+  "path": "tzdb/America/Winnipeg.dat",
+  "bytes": 563
+ },
+ {
+  "path": "tzdb/America/Yakutat.dat",
+  "bytes": 415
+ },
+ {
+  "path": "tzdb/America/Yellowknife.dat",
+  "bytes": 555
+ },
+ {
+  "path": "tzdb/Antarctica/Casey.dat",
+  "bytes": 195
+ },
+ {
+  "path": "tzdb/Antarctica/Davis.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Antarctica/DumontDUrville.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Antarctica/Macquarie.dat",
+  "bytes": 419
+ },
+ {
+  "path": "tzdb/Antarctica/Mawson.dat",
+  "bytes": 39
+ },
+ {
+  "path": "tzdb/Antarctica/McMurdo.dat",
+  "bytes": 455
+ },
+ {
+  "path": "tzdb/Antarctica/Palmer.dat",
+  "bytes": 363
+ },
+ {
+  "path": "tzdb/Antarctica/Rothera.dat",
+  "bytes": 31
+ },
+ {
+  "path": "tzdb/Antarctica/South_Pole.dat",
+  "bytes": 455
+ },
+ {
+  "path": "tzdb/Antarctica/Syowa.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Antarctica/Troll.dat",
+  "bytes": 55
+ },
+ {
+  "path": "tzdb/Antarctica/Vostok.dat",
+  "bytes": 55
+ },
+ {
+  "path": "tzdb/Arctic/Longyearbyen.dat",
+  "bytes": 307
+ },
+ {
+  "path": "tzdb/Asia/Aden.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Almaty.dat",
+  "bytes": 267
+ },
+ {
+  "path": "tzdb/Asia/Amman.dat",
+  "bytes": 395
+ },
+ {
+  "path": "tzdb/Asia/Anadyr.dat",
+  "bytes": 315
+ },
+ {
+  "path": "tzdb/Asia/Aqtau.dat",
+  "bytes": 263
+ },
+ {
+  "path": "tzdb/Asia/Aqtobe.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/Asia/Ashgabat.dat",
+  "bytes": 155
+ },
+ {
+  "path": "tzdb/Asia/Ashkhabad.dat",
+  "bytes": 155
+ },
+ {
+  "path": "tzdb/Asia/Atyrau.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/Asia/Baghdad.dat",
+  "bytes": 287
+ },
+ {
+  "path": "tzdb/Asia/Bahrain.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Asia/Baku.dat",
+  "bytes": 315
+ },
+ {
+  "path": "tzdb/Asia/Bangkok.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Barnaul.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/Asia/Beirut.dat",
+  "bytes": 323
+ },
+ {
+  "path": "tzdb/Asia/Bishkek.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/Asia/Brunei.dat",
+  "bytes": 201
+ },
+ {
+  "path": "tzdb/Asia/Calcutta.dat",
+  "bytes": 123
+ },
+ {
+  "path": "tzdb/Asia/Chita.dat",
+  "bytes": 331
+ },
+ {
+  "path": "tzdb/Asia/Choibalsan.dat",
+  "bytes": 251
+ },
+ {
+  "path": "tzdb/Asia/Chongqing.dat",
+  "bytes": 163
+ },
+ {
+  "path": "tzdb/Asia/Chungking.dat",
+  "bytes": 163
+ },
+ {
+  "path": "tzdb/Asia/Colombo.dat",
+  "bytes": 115
+ },
+ {
+  "path": "tzdb/Asia/Dacca.dat",
+  "bytes": 111
+ },
+ {
+  "path": "tzdb/Asia/Damascus.dat",
+  "bytes": 531
+ },
+ {
+  "path": "tzdb/Asia/Dhaka.dat",
+  "bytes": 111
+ },
+ {
+  "path": "tzdb/Asia/Dili.dat",
+  "bytes": 63
+ },
+ {
+  "path": "tzdb/Asia/Dubai.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Dushanbe.dat",
+  "bytes": 147
+ },
+ {
+  "path": "tzdb/Asia/Famagusta.dat",
+  "bytes": 411
+ },
+ {
+  "path": "tzdb/Asia/Gaza.dat",
+  "bytes": 1187
+ },
+ {
+  "path": "tzdb/Asia/Harbin.dat",
+  "bytes": 163
+ },
+ {
+  "path": "tzdb/Asia/Hebron.dat",
+  "bytes": 1189
+ },
+ {
+  "path": "tzdb/Asia/Ho_Chi_Minh.dat",
+  "bytes": 107
+ },
+ {
+  "path": "tzdb/Asia/Hong_Kong.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/Asia/Hovd.dat",
+  "bytes": 251
+ },
+ {
+  "path": "tzdb/Asia/Irkutsk.dat",
+  "bytes": 323
+ },
+ {
+  "path": "tzdb/Asia/Istanbul.dat",
+  "bytes": 535
+ },
+ {
+  "path": "tzdb/Asia/Jakarta.dat",
+  "bytes": 119
+ },
+ {
+  "path": "tzdb/Asia/Jayapura.dat",
+  "bytes": 67
+ },
+ {
+  "path": "tzdb/Asia/Jerusalem.dat",
+  "bytes": 491
+ },
+ {
+  "path": "tzdb/Asia/Kabul.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Asia/Kamchatka.dat",
+  "bytes": 315
+ },
+ {
+  "path": "tzdb/Asia/Karachi.dat",
+  "bytes": 91
+ },
+ {
+  "path": "tzdb/Asia/Kashgar.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Kathmandu.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Asia/Katmandu.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Asia/Khandyga.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/Asia/Kolkata.dat",
+  "bytes": 123
+ },
+ {
+  "path": "tzdb/Asia/Krasnoyarsk.dat",
+  "bytes": 323
+ },
+ {
+  "path": "tzdb/Asia/Kuala_Lumpur.dat",
+  "bytes": 117
+ },
+ {
+  "path": "tzdb/Asia/Kuching.dat",
+  "bytes": 201
+ },
+ {
+  "path": "tzdb/Asia/Kuwait.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Macao.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/Asia/Macau.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/Asia/Magadan.dat",
+  "bytes": 331
+ },
+ {
+  "path": "tzdb/Asia/Makassar.dat",
+  "bytes": 67
+ },
+ {
+  "path": "tzdb/Asia/Manila.dat",
+  "bytes": 115
+ },
+ {
+  "path": "tzdb/Asia/Muscat.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Nicosia.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/Asia/Novokuznetsk.dat",
+  "bytes": 315
+ },
+ {
+  "path": "tzdb/Asia/Novosibirsk.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/Asia/Omsk.dat",
+  "bytes": 323
+ },
+ {
+  "path": "tzdb/Asia/Oral.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/Asia/Phnom_Penh.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Pontianak.dat",
+  "bytes": 99
+ },
+ {
+  "path": "tzdb/Asia/Pyongyang.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/Asia/Qatar.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Asia/Qostanay.dat",
+  "bytes": 267
+ },
+ {
+  "path": "tzdb/Asia/Qyzylorda.dat",
+  "bytes": 267
+ },
+ {
+  "path": "tzdb/Asia/Rangoon.dat",
+  "bytes": 67
+ },
+ {
+  "path": "tzdb/Asia/Riyadh.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Saigon.dat",
+  "bytes": 107
+ },
+ {
+  "path": "tzdb/Asia/Sakhalin.dat",
+  "bytes": 331
+ },
+ {
+  "path": "tzdb/Asia/Samarkand.dat",
+  "bytes": 147
+ },
+ {
+  "path": "tzdb/Asia/Seoul.dat",
+  "bytes": 171
+ },
+ {
+  "path": "tzdb/Asia/Shanghai.dat",
+  "bytes": 163
+ },
+ {
+  "path": "tzdb/Asia/Singapore.dat",
+  "bytes": 117
+ },
+ {
+  "path": "tzdb/Asia/Srednekolymsk.dat",
+  "bytes": 323
+ },
+ {
+  "path": "tzdb/Asia/Taipei.dat",
+  "bytes": 219
+ },
+ {
+  "path": "tzdb/Asia/Tashkent.dat",
+  "bytes": 147
+ },
+ {
+  "path": "tzdb/Asia/Tbilisi.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/Asia/Tehran.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/Asia/Tel_Aviv.dat",
+  "bytes": 491
+ },
+ {
+  "path": "tzdb/Asia/Thimbu.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Asia/Thimphu.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Asia/Tokyo.dat",
+  "bytes": 71
+ },
+ {
+  "path": "tzdb/Asia/Tomsk.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/Asia/Ujung_Pandang.dat",
+  "bytes": 67
+ },
+ {
+  "path": "tzdb/Asia/Ulaanbaatar.dat",
+  "bytes": 251
+ },
+ {
+  "path": "tzdb/Asia/Ulan_Bator.dat",
+  "bytes": 251
+ },
+ {
+  "path": "tzdb/Asia/Urumqi.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Ust-Nera.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/Asia/Vientiane.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Asia/Vladivostok.dat",
+  "bytes": 323
+ },
+ {
+  "path": "tzdb/Asia/Yakutsk.dat",
+  "bytes": 323
+ },
+ {
+  "path": "tzdb/Asia/Yangon.dat",
+  "bytes": 67
+ },
+ {
+  "path": "tzdb/Asia/Yekaterinburg.dat",
+  "bytes": 351
+ },
+ {
+  "path": "tzdb/Asia/Yerevan.dat",
+  "bytes": 299
+ },
+ {
+  "path": "tzdb/Atlantic/Azores.dat",
+  "bytes": 619
+ },
+ {
+  "path": "tzdb/Atlantic/Bermuda.dat",
+  "bytes": 483
+ },
+ {
+  "path": "tzdb/Atlantic/Canary.dat",
+  "bytes": 211
+ },
+ {
+  "path": "tzdb/Atlantic/Cape_Verde.dat",
+  "bytes": 55
+ },
+ {
+  "path": "tzdb/Atlantic/Faeroe.dat",
+  "bytes": 195
+ },
+ {
+  "path": "tzdb/Atlantic/Faroe.dat",
+  "bytes": 195
+ },
+ {
+  "path": "tzdb/Atlantic/Jan_Mayen.dat",
+  "bytes": 307
+ },
+ {
+  "path": "tzdb/Atlantic/Madeira.dat",
+  "bytes": 575
+ },
+ {
+  "path": "tzdb/Atlantic/Reykjavik.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Atlantic/South_Georgia.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Atlantic/St_Helena.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Atlantic/Stanley.dat",
+  "bytes": 331
+ },
+ {
+  "path": "tzdb/Australia/ACT.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Australia/Adelaide.dat",
+  "bytes": 407
+ },
+ {
+  "path": "tzdb/Australia/Brisbane.dat",
+  "bytes": 115
+ },
+ {
+  "path": "tzdb/Australia/Broken_Hill.dat",
+  "bytes": 415
+ },
+ {
+  "path": "tzdb/Australia/Canberra.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Australia/Currie.dat",
+  "bytes": 447
+ },
+ {
+  "path": "tzdb/Australia/Darwin.dat",
+  "bytes": 91
+ },
+ {
+  "path": "tzdb/Australia/Eucla.dat",
+  "bytes": 123
+ },
+ {
+  "path": "tzdb/Australia/Hobart.dat",
+  "bytes": 447
+ },
+ {
+  "path": "tzdb/Australia/LHI.dat",
+  "bytes": 295
+ },
+ {
+  "path": "tzdb/Australia/Lindeman.dat",
+  "bytes": 131
+ },
+ {
+  "path": "tzdb/Australia/Lord_Howe.dat",
+  "bytes": 295
+ },
+ {
+  "path": "tzdb/Australia/Melbourne.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Australia/North.dat",
+  "bytes": 91
+ },
+ {
+  "path": "tzdb/Australia/NSW.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Australia/Perth.dat",
+  "bytes": 123
+ },
+ {
+  "path": "tzdb/Australia/Queensland.dat",
+  "bytes": 115
+ },
+ {
+  "path": "tzdb/Australia/South.dat",
+  "bytes": 407
+ },
+ {
+  "path": "tzdb/Australia/Sydney.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Australia/Tasmania.dat",
+  "bytes": 447
+ },
+ {
+  "path": "tzdb/Australia/Victoria.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Australia/West.dat",
+  "bytes": 123
+ },
+ {
+  "path": "tzdb/Australia/Yancowinna.dat",
+  "bytes": 415
+ },
+ {
+  "path": "tzdb/Brazil/Acre.dat",
+  "bytes": 179
+ },
+ {
+  "path": "tzdb/Brazil/DeNoronha.dat",
+  "bytes": 203
+ },
+ {
+  "path": "tzdb/Brazil/East.dat",
+  "bytes": 411
+ },
+ {
+  "path": "tzdb/Brazil/West.dat",
+  "bytes": 171
+ },
+ {
+  "path": "tzdb/Canada/Atlantic.dat",
+  "bytes": 731
+ },
+ {
+  "path": "tzdb/Canada/Central.dat",
+  "bytes": 563
+ },
+ {
+  "path": "tzdb/Canada/Eastern.dat",
+  "bytes": 747
+ },
+ {
+  "path": "tzdb/Canada/Mountain.dat",
+  "bytes": 555
+ },
+ {
+  "path": "tzdb/Canada/Newfoundland.dat",
+  "bytes": 1457
+ },
+ {
+  "path": "tzdb/Canada/Pacific.dat",
+  "bytes": 715
+ },
+ {
+  "path": "tzdb/Canada/Saskatchewan.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/Canada/Yukon.dat",
+  "bytes": 419
+ },
+ {
+  "path": "tzdb/CET.dat",
+  "bytes": 471
+ },
+ {
+  "path": "tzdb/Chile/Continental.dat",
+  "bytes": 659
+ },
+ {
+  "path": "tzdb/Chile/EasterIsland.dat",
+  "bytes": 503
+ },
+ {
+  "path": "tzdb/CST6CDT.dat",
+  "bytes": 759
+ },
+ {
+  "path": "tzdb/Cuba.dat",
+  "bytes": 519
+ },
+ {
+  "path": "tzdb/EET.dat",
+  "bytes": 291
+ },
+ {
+  "path": "tzdb/Egypt.dat",
+  "bytes": 579
+ },
+ {
+  "path": "tzdb/Eire.dat",
+  "bytes": 661
+ },
+ {
+  "path": "tzdb/EST.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/EST5EDT.dat",
+  "bytes": 751
+ },
+ {
+  "path": "tzdb/Etc/GMT+0.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+1.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+10.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+11.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+12.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+2.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+3.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+4.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+5.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+6.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+7.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+8.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT+9.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-0.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-1.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-10.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-11.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-12.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-13.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-14.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-2.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-3.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-4.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-5.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-6.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-7.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-8.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT-9.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/GMT0.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/Greenwich.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/UCT.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/Universal.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/UTC.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Etc/Zulu.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Europe/Amsterdam.dat",
+  "bytes": 471
+ },
+ {
+  "path": "tzdb/Europe/Andorra.dat",
+  "bytes": 171
+ },
+ {
+  "path": "tzdb/Europe/Astrakhan.dat",
+  "bytes": 323
+ },
+ {
+  "path": "tzdb/Europe/Athens.dat",
+  "bytes": 291
+ },
+ {
+  "path": "tzdb/Europe/Belfast.dat",
+  "bytes": 707
+ },
+ {
+  "path": "tzdb/Europe/Belgrade.dat",
+  "bytes": 211
+ },
+ {
+  "path": "tzdb/Europe/Berlin.dat",
+  "bytes": 307
+ },
+ {
+  "path": "tzdb/Europe/Bratislava.dat",
+  "bytes": 307
+ },
+ {
+  "path": "tzdb/Europe/Brussels.dat",
+  "bytes": 471
+ },
+ {
+  "path": "tzdb/Europe/Bucharest.dat",
+  "bytes": 283
+ },
+ {
+  "path": "tzdb/Europe/Budapest.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/Europe/Busingen.dat",
+  "bytes": 239
+ },
+ {
+  "path": "tzdb/Europe/Chisinau.dat",
+  "bytes": 567
+ },
+ {
+  "path": "tzdb/Europe/Copenhagen.dat",
+  "bytes": 307
+ },
+ {
+  "path": "tzdb/Europe/Dublin.dat",
+  "bytes": 661
+ },
+ {
+  "path": "tzdb/Europe/Gibraltar.dat",
+  "bytes": 531
+ },
+ {
+  "path": "tzdb/Europe/Guernsey.dat",
+  "bytes": 707
+ },
+ {
+  "path": "tzdb/Europe/Helsinki.dat",
+  "bytes": 203
+ },
+ {
+  "path": "tzdb/Europe/Isle_of_Man.dat",
+  "bytes": 707
+ },
+ {
+  "path": "tzdb/Europe/Istanbul.dat",
+  "bytes": 535
+ },
+ {
+  "path": "tzdb/Europe/Jersey.dat",
+  "bytes": 707
+ },
+ {
+  "path": "tzdb/Europe/Kaliningrad.dat",
+  "bytes": 379
+ },
+ {
+  "path": "tzdb/Europe/Kiev.dat",
+  "bytes": 231
+ },
+ {
+  "path": "tzdb/Europe/Kirov.dat",
+  "bytes": 303
+ },
+ {
+  "path": "tzdb/Europe/Kyiv.dat",
+  "bytes": 231
+ },
+ {
+  "path": "tzdb/Europe/Lisbon.dat",
+  "bytes": 623
+ },
+ {
+  "path": "tzdb/Europe/Ljubljana.dat",
+  "bytes": 211
+ },
+ {
+  "path": "tzdb/Europe/London.dat",
+  "bytes": 707
+ },
+ {
+  "path": "tzdb/Europe/Luxembourg.dat",
+  "bytes": 471
+ },
+ {
+  "path": "tzdb/Europe/Madrid.dat",
+  "bytes": 375
+ },
+ {
+  "path": "tzdb/Europe/Malta.dat",
+  "bytes": 411
+ },
+ {
+  "path": "tzdb/Europe/Mariehamn.dat",
+  "bytes": 203
+ },
+ {
+  "path": "tzdb/Europe/Minsk.dat",
+  "bytes": 359
+ },
+ {
+  "path": "tzdb/Europe/Monaco.dat",
+  "bytes": 475
+ },
+ {
+  "path": "tzdb/Europe/Moscow.dat",
+  "bytes": 437
+ },
+ {
+  "path": "tzdb/Europe/Nicosia.dat",
+  "bytes": 259
+ },
+ {
+  "path": "tzdb/Europe/Oslo.dat",
+  "bytes": 307
+ },
+ {
+  "path": "tzdb/Europe/Paris.dat",
+  "bytes": 475
+ },
+ {
+  "path": "tzdb/Europe/Podgorica.dat",
+  "bytes": 211
+ },
+ {
+  "path": "tzdb/Europe/Prague.dat",
+  "bytes": 307
+ },
+ {
+  "path": "tzdb/Europe/Riga.dat",
+  "bytes": 327
+ },
+ {
+  "path": "tzdb/Europe/Rome.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Europe/Samara.dat",
+  "bytes": 303
+ },
+ {
+  "path": "tzdb/Europe/San_Marino.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Europe/Sarajevo.dat",
+  "bytes": 211
+ },
+ {
+  "path": "tzdb/Europe/Saratov.dat",
+  "bytes": 311
+ },
+ {
+  "path": "tzdb/Europe/Simferopol.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Europe/Skopje.dat",
+  "bytes": 211
+ },
+ {
+  "path": "tzdb/Europe/Sofia.dat",
+  "bytes": 279
+ },
+ {
+  "path": "tzdb/Europe/Stockholm.dat",
+  "bytes": 307
+ },
+ {
+  "path": "tzdb/Europe/Tallinn.dat",
+  "bytes": 311
+ },
+ {
+  "path": "tzdb/Europe/Tirane.dat",
+  "bytes": 267
+ },
+ {
+  "path": "tzdb/Europe/Tiraspol.dat",
+  "bytes": 567
+ },
+ {
+  "path": "tzdb/Europe/Ulyanovsk.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/Europe/Uzhgorod.dat",
+  "bytes": 231
+ },
+ {
+  "path": "tzdb/Europe/Vaduz.dat",
+  "bytes": 239
+ },
+ {
+  "path": "tzdb/Europe/Vatican.dat",
+  "bytes": 399
+ },
+ {
+  "path": "tzdb/Europe/Vienna.dat",
+  "bytes": 291
+ },
+ {
+  "path": "tzdb/Europe/Vilnius.dat",
+  "bytes": 339
+ },
+ {
+  "path": "tzdb/Europe/Volgograd.dat",
+  "bytes": 331
+ },
+ {
+  "path": "tzdb/Europe/Warsaw.dat",
+  "bytes": 395
+ },
+ {
+  "path": "tzdb/Europe/Zagreb.dat",
+  "bytes": 211
+ },
+ {
+  "path": "tzdb/Europe/Zaporozhye.dat",
+  "bytes": 231
+ },
+ {
+  "path": "tzdb/Europe/Zurich.dat",
+  "bytes": 239
+ },
+ {
+  "path": "tzdb/GB-Eire.dat",
+  "bytes": 707
+ },
+ {
+  "path": "tzdb/GB.dat",
+  "bytes": 707
+ },
+ {
+  "path": "tzdb/Greenwich.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Hongkong.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/HST.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/Iceland.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Indian/Antananarivo.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Indian/Chagos.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Indian/Christmas.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Indian/Cocos.dat",
+  "bytes": 67
+ },
+ {
+  "path": "tzdb/Indian/Comoro.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Indian/Kerguelen.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Indian/Mahe.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Indian/Maldives.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Indian/Mauritius.dat",
+  "bytes": 67
+ },
+ {
+  "path": "tzdb/Indian/Mayotte.dat",
+  "bytes": 83
+ },
+ {
+  "path": "tzdb/Indian/Reunion.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Iran.dat",
+  "bytes": 335
+ },
+ {
+  "path": "tzdb/Israel.dat",
+  "bytes": 491
+ },
+ {
+  "path": "tzdb/Jamaica.dat",
+  "bytes": 131
+ },
+ {
+  "path": "tzdb/Japan.dat",
+  "bytes": 71
+ },
+ {
+  "path": "tzdb/Kwajalein.dat",
+  "bytes": 91
+ },
+ {
+  "path": "tzdb/Libya.dat",
+  "bytes": 195
+ },
+ {
+  "path": "tzdb/MET.dat",
+  "bytes": 471
+ },
+ {
+  "path": "tzdb/Mexico/BajaNorte.dat",
+  "bytes": 591
+ },
+ {
+  "path": "tzdb/Mexico/BajaSur.dat",
+  "bytes": 295
+ },
+ {
+  "path": "tzdb/Mexico/General.dat",
+  "bytes": 319
+ },
+ {
+  "path": "tzdb/MST.dat",
+  "bytes": 97
+ },
+ {
+  "path": "tzdb/MST7MDT.dat",
+  "bytes": 439
+ },
+ {
+  "path": "tzdb/Navajo.dat",
+  "bytes": 439
+ },
+ {
+  "path": "tzdb/NZ-CHAT.dat",
+  "bytes": 359
+ },
+ {
+  "path": "tzdb/NZ.dat",
+  "bytes": 455
+ },
+ {
+  "path": "tzdb/Pacific/Apia.dat",
+  "bytes": 183
+ },
+ {
+  "path": "tzdb/Pacific/Auckland.dat",
+  "bytes": 455
+ },
+ {
+  "path": "tzdb/Pacific/Bougainville.dat",
+  "bytes": 103
+ },
+ {
+  "path": "tzdb/Pacific/Chatham.dat",
+  "bytes": 359
+ },
+ {
+  "path": "tzdb/Pacific/Chuuk.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Pacific/Easter.dat",
+  "bytes": 503
+ },
+ {
+  "path": "tzdb/Pacific/Efate.dat",
+  "bytes": 139
+ },
+ {
+  "path": "tzdb/Pacific/Enderbury.dat",
+  "bytes": 47
+ },
+ {
+  "path": "tzdb/Pacific/Fakaofo.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Pacific/Fiji.dat",
+  "bytes": 163
+ },
+ {
+  "path": "tzdb/Pacific/Funafuti.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Galapagos.dat",
+  "bytes": 67
+ },
+ {
+  "path": "tzdb/Pacific/Gambier.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Guadalcanal.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Guam.dat",
+  "bytes": 171
+ },
+ {
+  "path": "tzdb/Pacific/Honolulu.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/Pacific/Johnston.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/Pacific/Kanton.dat",
+  "bytes": 47
+ },
+ {
+  "path": "tzdb/Pacific/Kiritimati.dat",
+  "bytes": 87
+ },
+ {
+  "path": "tzdb/Pacific/Kosrae.dat",
+  "bytes": 135
+ },
+ {
+  "path": "tzdb/Pacific/Kwajalein.dat",
+  "bytes": 91
+ },
+ {
+  "path": "tzdb/Pacific/Majuro.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Marquesas.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Midway.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Pacific/Nauru.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/Pacific/Niue.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Pacific/Norfolk.dat",
+  "bytes": 115
+ },
+ {
+  "path": "tzdb/Pacific/Noumea.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/Pacific/Pago_Pago.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Pacific/Palau.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Pacific/Pitcairn.dat",
+  "bytes": 59
+ },
+ {
+  "path": "tzdb/Pacific/Pohnpei.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Ponape.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Port_Moresby.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Pacific/Rarotonga.dat",
+  "bytes": 187
+ },
+ {
+  "path": "tzdb/Pacific/Saipan.dat",
+  "bytes": 171
+ },
+ {
+  "path": "tzdb/Pacific/Samoa.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Pacific/Tahiti.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Tarawa.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Tongatapu.dat",
+  "bytes": 111
+ },
+ {
+  "path": "tzdb/Pacific/Truk.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Pacific/Wake.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Wallis.dat",
+  "bytes": 51
+ },
+ {
+  "path": "tzdb/Pacific/Yap.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/Poland.dat",
+  "bytes": 395
+ },
+ {
+  "path": "tzdb/Portugal.dat",
+  "bytes": 623
+ },
+ {
+  "path": "tzdb/PRC.dat",
+  "bytes": 163
+ },
+ {
+  "path": "tzdb/PST8PDT.dat",
+  "bytes": 557
+ },
+ {
+  "path": "tzdb/ROC.dat",
+  "bytes": 219
+ },
+ {
+  "path": "tzdb/ROK.dat",
+  "bytes": 171
+ },
+ {
+  "path": "tzdb/Singapore.dat",
+  "bytes": 117
+ },
+ {
+  "path": "tzdb/Turkey.dat",
+  "bytes": 535
+ },
+ {
+  "path": "tzdb/UCT.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/Universal.dat",
+  "bytes": 23
+ },
+ {
+  "path": "tzdb/US/Alaska.dat",
+  "bytes": 415
+ },
+ {
+  "path": "tzdb/US/Aleutian.dat",
+  "bytes": 415
+ },
+ {
+  "path": "tzdb/US/Arizona.dat",
+  "bytes": 97
+ },
+ {
+  "path": "tzdb/US/Central.dat",
+  "bytes": 759
+ },
+ {
+  "path": "tzdb/US/East-Indiana.dat",
+  "bytes": 215
+ },
+ {
+  "path": "tzdb/US/Eastern.dat",
+  "bytes": 751
+ },
+ {
+  "path": "tzdb/US/Hawaii.dat",
+  "bytes": 75
+ },
+ {
+  "path": "tzdb/US/Indiana-Starke.dat",
+  "bytes": 431
+ },
+ {
+  "path": "tzdb/US/Michigan.dat",
+  "bytes": 393
+ },
+ {
+  "path": "tzdb/US/Mountain.dat",
+  "bytes": 439
+ },
+ {
+  "path": "tzdb/US/Pacific.dat",
+  "bytes": 557
+ },
+ {
+  "path": "tzdb/US/Samoa.dat",
+  "bytes": 79
+ },
+ {
+  "path": "tzdb/W-SU.dat",
+  "bytes": 437
+ },
+ {
+  "path": "tzdb/WET.dat",
+  "bytes": 623
+ },
+ {
+  "path": "tzdb/Zulu.dat",
+  "bytes": 23
+ },
+ {
+  "path": "ub__carbon_facecamera_success_check_anim.json",
+  "bytes": 4130
+ },
+ {
+  "path": "ub__csc_direction_pill.json",
+  "bytes": 6331
+ },
+ {
+  "path": "ub__csc_dotdotdot_4fps.json",
+  "bytes": 5286
+ },
+ {
+  "path": "ub__csc_flip_id.json",
+  "bytes": 50117
+ },
+ {
+  "path": "ub__csc_white_frame.json",
+  "bytes": 19307
+ },
+ {
+  "path": "uistate/uistate_mapping_rule.json",
+  "bytes": 13758
+ },
+ {
+  "path": "uscan_model_labels.txt",
+  "bytes": 76
+ },
+ {
+  "path": "verification_under_review.json",
+  "bytes": 105735
+ },
+ {
+  "path": "verifying.json",
+  "bytes": 292905
+ },
+ {
+  "path": "verifying_id.json",
+  "bytes": 292905
+ },
+ {
+  "path": "webview-animation.json",
+  "bytes": 8320
+ },
+ {
+  "path": "webview_parameters.json",
+  "bytes": 2
+ }
+]

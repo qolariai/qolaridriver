@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.tracker.browse.loyalty_error.LoyaltyErrorCardView android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="7781967a-8541"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" />

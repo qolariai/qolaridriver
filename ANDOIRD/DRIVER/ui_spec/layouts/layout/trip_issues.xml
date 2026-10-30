@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.trip_issues.TripIssuesView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/ub__carbon_base_divider_horizontal" android:showDividers="middle|end"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

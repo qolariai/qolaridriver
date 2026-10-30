@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Aviso de falha no arranque (captura 117): barra escura com "Tente novamente". -->
+                
                 <LinearLayout
                     android:id="@+id/errorBanner"
                     android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                         android:textSize="16sp" />
                 </LinearLayout>
 
-                <!-- Atalhos do topo (capturas 000/060): escudo de segurança e preferências. -->
+                
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -99,11 +99,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="16dp"
-                    android:paddingTop="12dp"
+                    android:paddingTop="10dp"
                     android:paddingEnd="16dp"
                     android:textColor="@color/qd_ink"
-                    android:textSize="32sp"
-                    android:textStyle="bold" />
+                    android:textSize="40sp" />
 
                 <TextView
                     android:id="@+id/subtitle"
@@ -114,9 +113,9 @@
                     android:paddingEnd="16dp"
                     android:text="@string/home_ready"
                     android:textColor="@color/qd_ink"
-                    android:textSize="16sp" />
+                    android:textSize="18sp" />
 
-                <!-- Ações necessárias (captura 060): só aparece quando o servidor devolve bloqueios. -->
+                
                 <LinearLayout
                     android:id="@+id/blockersCard"
                     android:layout_width="match_parent"
@@ -167,20 +166,20 @@
                         android:orientation="vertical" />
                 </LinearLayout>
 
-                <!-- Mapa: espaço reservado desenhado (MapPlaceholderView). -->
+                
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/mapCard"
                     android:layout_width="match_parent"
-                    android:layout_height="260dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_height="310dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
                     app:cardBackgroundColor="@color/qd_tile"
-                    app:cardCornerRadius="20dp"
+                    app:cardCornerRadius="12dp"
                     app:cardElevation="0dp"
                     app:strokeWidth="0dp">
 
-                    <com.qolari.shared.map.GoogleMapView
+                    <com.qolari.drivereplica.ui.home.RealMapView
                         android:id="@+id/mapView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent" />
@@ -201,8 +200,9 @@
                         android:id="@+id/btnSearch"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_gravity="bottom|end"
-                        android:layout_margin="12dp"
+                        android:layout_gravity="top|end"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
                         android:background="@drawable/bg_circle_white"
                         android:contentDescription="@string/map_search"
                         android:elevation="3dp"
@@ -211,7 +211,25 @@
                         app:tint="@color/qd_ink" />
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Estado de erro (capturas 117/120): sem resposta do servidor no arranque. -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGoOnline"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/home_go_online"
+                    android:textColor="@color/qd_core_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/qd_core_blue600"
+                    app:cornerRadius="24dp"
+                    app:icon="@drawable/ic_steering"
+                    app:iconGravity="textStart"
+                    app:iconPadding="10dp"
+                    app:iconTint="@color/qd_core_white" />
+
+                
                 <LinearLayout
                     android:id="@+id/errorState"
                     android:layout_width="match_parent"
@@ -252,7 +270,7 @@
 
                 </LinearLayout>
 
-                <!-- Secções com scroll (capturas 060_s1..s3). Conteúdo de exemplo. -->
+                
                 <LinearLayout
                     android:id="@+id/sections"
                     android:layout_width="match_parent"
@@ -261,31 +279,5 @@
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-    <!-- Botão fixo "Ficar online" (go_online_button na original): por cima do conteúdo, por baixo da barra. -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/qd_background"
-        android:paddingStart="16dp"
-        android:paddingTop="4dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoOnline"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="@string/home_go_online"
-            android:textColor="@color/qd_core_white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:backgroundTint="@color/qd_core_blue600"
-            app:cornerRadius="28dp"
-            app:icon="@drawable/ic_steering"
-            app:iconGravity="textStart"
-            app:iconPadding="10dp"
-            app:iconTint="@color/qd_core_white" />
-    </FrameLayout>
 </FrameLayout>
+

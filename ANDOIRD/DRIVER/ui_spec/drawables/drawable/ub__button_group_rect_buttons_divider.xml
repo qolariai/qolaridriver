@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/ub__base_button_group_vertical_spacing" android:width="@dimen/ub__base_button_group_rect_spacing" />
+</shape>

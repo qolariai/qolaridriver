@@ -167,9 +167,6 @@ def device_upsert(call: Call):
     if not row:
         row = Device(app=call.app, device_key=key)
         db.add(row)
-    for extra in db.query(Device).filter_by(app=call.app, device_key=key).all():
-        if extra is not row:
-            db.delete(extra)
     row.subject_uuid = subj.uuid if subj else row.subject_uuid
     row.model = str(dev.get("deviceModel") or dev.get("model") or call.headers.get("x-uber-device-model")
                     or call.headers.get("x-qolari-device-model") or row.model)[:120]
@@ -181,29 +178,6 @@ def device_upsert(call: Call):
     row.ip, row.last_seen_at = call.ip, now()
     touch(db, "devices")
     return {"isGuestMode": False}
-
-
-@handles(APPS, "POST", "/rt/devices/push-token")
-def push_token(call: Call):
-    """Registo do token FCM do aparelho (subject autenticado)."""
-    token = str((call.body or {}).get("token") or "").strip()
-    if not token:
-        return {"ok": False}
-    subj = call.subject(required=False)
-    key = str(call.headers.get("x-uber-device-id") or call.headers.get("x-qolari-device-id") or call.ip)
-    row = call.db.query(Device).filter_by(app=call.app, device_key=key).first()
-    if not row:
-        row = Device(app=call.app, device_key=key)
-        call.db.add(row)
-    for extra in call.db.query(Device).filter_by(app=call.app, device_key=key).all():
-        if extra is not row:
-            call.db.delete(extra)
-    if subj:
-        row.subject_uuid = subj.uuid
-    row.push_token = token[:300]
-    row.ip, row.last_seen_at = call.ip, now()
-    touch(call.db, "devices")
-    return {"ok": True}
 
 
 @handles(APPS, "POST", "/rt/devices/task")

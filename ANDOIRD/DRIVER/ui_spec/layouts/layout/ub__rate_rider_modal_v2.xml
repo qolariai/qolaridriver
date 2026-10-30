@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.rate_rider.modal.RateRiderView android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="df1a0fb5-b02d"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/scrim" android:background="?alertsScrimBackground" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:alpha="0.0" android:importantForAccessibility="no" uber:analyticsEnabled="false" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__rate_rider_modal_container" android:background="@drawable/ub__rate_rider_modal_background" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.ubercab.ui.core.UFrameLayout android:background="@drawable/ub__rate_rider_modal_background" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x">
+            <com.ubercab.ui.core.UTextView android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/ub__dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" uber:analyticsId="a5a9b930-08d8" style="@style/Platform.TextStyle.LabelLarge" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="end|center" android:id="@id/ub__close_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:buttonType="tertiary" uber:icon="@drawable/ub_ic_x" uber:shape="circle" uber:size="medium" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__shadow_box" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <com.ubercab.ui.core.URecyclerView android:id="@id/ub__rider_ratings_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" uber:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            <com.ubercab.ui.core.UPlainView android:layout_gravity="top" android:background="@drawable/ub__vertical_fade_top" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_2x" />
+            <com.ubercab.ui.core.UPlainView android:layout_gravity="bottom" android:background="@drawable/ub__vertical_fade_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__complete_ratings_button_v2" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" uber:analyticsId="b3c2a0d2-f5a9" uber:buttonType="primary" uber:shape="rect" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.rate_rider.modal.RateRiderView>

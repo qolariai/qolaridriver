@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UToolbar android:id="@id/earner_trip_image_capture_preview_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="41105365-6c26" app:contentInsetStartWithNavigation="@dimen/ui__spacing_unit_0x" app:navigationIcon="@drawable/ub_ic_arrow_left" style="@style/Widget.Platform.Toolbar">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentOnColor" android:id="@id/earner_trip_image_capture_preview_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="b9c1557b-453d" style="@style/Platform.TextStyle.LabelLarge" />
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:layout_gravity="end|center" android:orientation="horizontal" android:id="@id/earner_trip_image_capture_preview_toolbar_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.UToolbar>
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0">
+            <com.ubercab.ui.core.UCardView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="@dimen/ui__spacing_unit_1.5x">
+                <com.ubercab.ui.core.image.BaseImageView android:id="@id/earner_trip_image_capture_preview_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" app:analyticsId="4f9557af-9834" />
+            </com.ubercab.ui.core.UCardView>
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentOnColor" android:gravity="center" android:id="@id/earner_trip_image_capture_preview_description" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="b8aebbc8-3201" style="@style/Platform.TextStyle.ParagraphSmall" />
+        <com.ubercab.ui.core.UFrameLayout android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="start|center" android:id="@id/earner_trip_image_capture_preview_retake_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_capture_library_review_retake_button_title" app:analyticsId="1ebe3268-e976" app:buttonType="primary" app:icon="@drawable/ub_ic_arrow_counter_clockwise" app:shape="pill" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="end|center" android:id="@id/earner_trip_image_capture_preview_confirm_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_capture_library_review_confirm_button_title" app:analyticsId="ea32b6c1-06f9" app:buttonType="tertiary" app:icon="@drawable/ub_ic_checkmark" app:shape="pill" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

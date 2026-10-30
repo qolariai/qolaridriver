@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_divider" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="cd01c873-d0b2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foregroundGravity="center_vertical">
+        <com.ubercab.ui.core.text.BaseTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Style=PRIMARY ; Size=CELL" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividersize="cell" app:dividerstyle="primary" />
+        <com.ubercab.ui.core.text.BaseTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Style=PRIMARY ; Size=SECTION" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividersize="section" app:dividerstyle="primary" />
+        <com.ubercab.ui.core.text.BaseTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Style=PRIMARY ; Size=MODULE" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividersize="module" app:dividerstyle="primary" />
+        <com.ubercab.ui.core.text.BaseTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Style=LIST ; Size=CELL" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividersize="cell" app:dividerstyle="list" />
+        <com.ubercab.ui.core.text.BaseTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Style=LIST ; Size=SECTION" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividersize="section" app:dividerstyle="list" />
+        <com.ubercab.ui.core.text.BaseTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Style=LIST ; Size=MODULE" style="@style/Platform.TextStyle.LabelDefault" />
+        <com.ubercab.ui.core.divider.DividerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividersize="module" app:dividerstyle="list" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UCoordinatorLayout>

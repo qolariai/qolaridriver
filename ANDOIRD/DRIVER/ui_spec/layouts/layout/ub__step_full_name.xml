@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.app_onboarding.core.entry.onboard.steps.fullname.FullNameView android:theme="@style/Theme.Helix.Light" android:orientation="vertical" android:background="?android:colorBackground" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UScrollView android:id="@id/full_name_scroll_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingLeft="@dimen/ui__spacing_unit_3x" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_3x" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UTextView android:gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_6x" android:minHeight="@dimen/ui__spacing_unit_6x" android:text="@string/whats_your_name" style="@style/Platform.TextStyle.H3.Book" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x">
+                <com.ubercab.ui.commons.widget.PresidioTextInputLayout android:layout_gravity="center|top" android:id="@id/text_input_layout_first_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:hintEnabled="false">
+                    <com.ubercab.ui.commons.widget.ClearableEditText android:id="@id/full_name_field_first" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/first" android:maxLines="1" android:inputType="textPersonName" android:imeOptions="actionNext" style="@style/Platform.TextStyle.H3.News" />
+                </com.ubercab.ui.commons.widget.PresidioTextInputLayout>
+                <Space android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="wrap_content" />
+                <com.ubercab.ui.commons.widget.PresidioTextInputLayout android:layout_gravity="center|top" android:id="@id/text_input_layout_last_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:hintEnabled="false">
+                    <com.ubercab.ui.commons.widget.ClearableEditText android:id="@id/full_name_field_last" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/last" android:maxLines="1" android:inputType="textPersonName" android:imeOptions="actionNext" style="@style/Platform.TextStyle.H3.News" />
+                </com.ubercab.ui.commons.widget.PresidioTextInputLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+            <include android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:layout_weight="1.0" layout="@layout/ub__fab_with_legal_include" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/full_name_button_next_new" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/next_button_description" android:contentDescription="@string/next_button_description" app:buttonType="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.presidio.app_onboarding.core.entry.onboard.steps.ui.OnboardingAppBarView android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:scrollView="@id/full_name_scroll_view" />
+</com.ubercab.presidio.app_onboarding.core.entry.onboard.steps.fullname.FullNameView>

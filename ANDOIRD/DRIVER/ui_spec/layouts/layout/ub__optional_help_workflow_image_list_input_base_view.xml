@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/help_workflow_image_list_input_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:textAlignment="viewStart" app:analyticsId="72f6ac02-90dd" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/help_workflow_image_list_input_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+        <com.ubercab.ui.core.UHorizontalScrollView android:layout_width="0.0dip" android:layout_height="@dimen/ub__optional_help_workflow_base_image_list_input_container_height" android:fillViewport="true" android:layout_weight="1.0" android:layout_marginEnd="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/help_workflow_image_list_input_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/divider_space_2x" android:animateLayoutChanges="true" android:showDividers="middle" />
+        </com.ubercab.ui.core.UHorizontalScrollView>
+        <com.ubercab.ui.core.UImageView android:id="@id/help_workflow_image_list_input_add_image" android:background="?backgroundTertiary" android:layout_width="@dimen/ui__spacing_unit_7x" android:layout_height="fill_parent" android:scaleType="centerInside" android:iconTint="@color/ub__base_button_secondary_content_color" app:analyticsId="618ec9d5-e86e" app:srcCompat="@drawable/ub_ic_camera" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UImageView android:id="@id/help_workflow_image_list_input_empty_add_image" android:background="?backgroundTertiary" android:layout_width="fill_parent" android:layout_height="@dimen/ub__optional_help_workflow_base_image_list_input_container_height" android:scaleType="centerInside" android:iconTint="@color/ub__base_button_secondary_content_color" app:analyticsId="3f8f60bd-66f7" app:srcCompat="@drawable/ub_ic_camera" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?textColorError" android:id="@id/help_workflow_image_list_input_error" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:textAlignment="viewStart" app:analyticsId="6fa5c9f8-c6a9" />
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.input.BaseEditText android:id="@id/help_workflow_text_input_baseedittext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAutofill="no" />
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.ParagraphSmall" android:textColor="?textColorError" android:id="@id/help_workflow_text_input_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:textAlignment="viewStart" app:analyticsId="7a3f2553-67cc" />
+</merge>

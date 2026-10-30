@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.feature.navigation.settings.NavigationSettingsDetailView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.URadioGroup android:layout_gravity="start" android:id="@id/ub__navigation_settings_detail_radiogroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:textAlignment="textStart" android:layoutDirection="rtl" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+</com.ubercab.carbon.feature.navigation.settings.NavigationSettingsDetailView>

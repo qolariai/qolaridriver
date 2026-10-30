@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/signature_collect_taskbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/signature_collect_sv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.uber.taskbuildingblocks.views.TaskHeaderView android:id="@id/signature_collect_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" />
+            <com.uber.taskbuildingblocks.views.taskinput.TaskInputView android:id="@id/signature_collect_name_input" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:input_clearButtonEnabled="true" />
+            <com.uber.taskbuildingblocks.views.taskinput.TaskInputView android:id="@id/signature_collect_relationship_input" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" />
+            <com.uber.taskbuildingblocks.signaturecollect.views.SignatureCollectInputView android:id="@id/signature_collect_input" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/signature_collect_disclaimer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.uber.taskbuildingblocks.views.TaskFooterView android:id="@id/signature_collect_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

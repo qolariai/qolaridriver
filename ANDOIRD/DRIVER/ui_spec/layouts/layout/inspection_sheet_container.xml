@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.inspection_sheet.core.InspectionSheetContainerView android:id="@id/inspection_sheet_container" android:background="@null" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFloatingActionButton android:id="@id/inspection_sheet_back_button" android:padding="@dimen/carbon_ui__spacing_unit_1.5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:minWidth="@dimen/ui__spacing_unit_3x" android:minHeight="@dimen/ui__spacing_unit_3x" android:contentDescription="@string/back_description" android:layout_marginStart="@dimen/ui__spacing_unit_2x" uber:analyticsId="1ffc8b76-c9c7" uber:backgroundTint="?android:colorBackground" uber:borderWidth="0.0dip" uber:elevation="@dimen/ui__elevation_medium" uber:srcCompat="@drawable/ub_ic_arrow_left" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="end" android:id="@id/inspection_sheet_auxiliary_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:contentDescription="@string/auxiliary_description" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="ccfe19bc-ca97" uber:backgroundTint="?android:colorBackground" uber:elevation="@dimen/ui__elevation_medium" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/inspection_sheet_bottom_sheet_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UCoordinatorLayout android:id="@id/inspection_sheet_bottom_sheet_parent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.ULinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/inspection_sheet_bottom_sheet_footer_container" android:background="?backgroundPrimary" android:padding="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/ui__spacing_unit_1x" />
+        </com.ubercab.ui.core.UCoordinatorLayout>
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/inspection_sheet_view_pager_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.ubercab.inspection_sheet.core.InspectionSheetContainerView>

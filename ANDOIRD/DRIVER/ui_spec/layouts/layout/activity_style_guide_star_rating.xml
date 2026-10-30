@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="@dimen/ub__card_border_width" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.uber.ui_compose_view.core.BaseStarRatingView android:id="@id/ub__star_rating_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:starSize="mediumStar" app:trailingTextDescriptive="@string/ub__star_rating_trailing" app:valueDescriptive="4.5" app:valueVisualInteractive="2" />
+    <com.uber.ui_compose_view.core.BaseStarRatingView android:id="@id/ub__star_rating_view_model" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" />
+</com.ubercab.ui.core.ULinearLayout>

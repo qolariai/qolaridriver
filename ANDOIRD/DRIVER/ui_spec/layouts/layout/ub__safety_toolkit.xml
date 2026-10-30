@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.safety_toolkit_base.SafetyToolkitView android:orientation="vertical" android:background="?bgScrimDark" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="5cf3dead-0b6c"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__safety_toolkit_scrim" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:alpha="0.5" />
+    <com.ubercab.ui.core.UScrollView android:background="@drawable/ub__safety_toolkit_corners" android:fadingEdgeLength="@dimen/ui__spacing_unit_4x" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:requiresFadingEdge="vertical">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__safety_toolkit_component_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.safety_toolkit_base.SafetyToolkitView>

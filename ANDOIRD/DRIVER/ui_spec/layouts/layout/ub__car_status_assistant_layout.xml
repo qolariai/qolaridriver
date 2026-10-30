@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/status_assistant_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/status_assistant_content_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:layout_marginStart="@dimen/ui__spacing_unit_1.5x" android:layout_marginEnd="@dimen/ui__spacing_unit_1.5x">
+        <com.ubercab.ui.core.progress.BaseProgressBar android:layout_gravity="center_vertical" android:id="@id/loading_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:baseprogress_type="circle_indeterminate" app:progress_size="small" />
+        <com.ubercab.ui.core.text.BaseTextView android:layout_gravity="center_vertical" android:id="@id/assistant_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</merge>

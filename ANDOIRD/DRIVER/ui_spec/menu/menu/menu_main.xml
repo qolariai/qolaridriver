@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ub_ic_circle_check" android:id="@id/action_toggle_theme" android:title="@string/style_guide_toggle_theme" app:showAsAction="always" />
+    <item android:icon="@drawable/ub_ic_android" android:id="@id/action_sample_item" android:title="@string/style_guide_android_item" app:showAsAction="always" />
+    <item android:icon="@drawable/ub_ic_circle_i" android:id="@id/action_show_docs" android:title="@string/style_guide_show_docs" app:showAsAction="always" />
+</menu>

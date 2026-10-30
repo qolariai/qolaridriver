@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.chatui.precanned.PrecannedCarouselRecyclerView android:layout_gravity="center|bottom" android:orientation="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_1.5x" android:paddingEnd="@dimen/ui__spacing_unit_1.5x"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

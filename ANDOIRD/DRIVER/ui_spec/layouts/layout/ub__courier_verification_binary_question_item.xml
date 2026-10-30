@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.courier_verification.BinaryQuestionView android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="fe51cc2f-8ffc"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/ub__courier_verification_question_item_title" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="horizontal" android:background="?panelBackgroundColor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_13x">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/courier_verification_binary_negative_box" android:background="@drawable/binary_negative" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_13x" android:layout_weight="1.0" uber:analyticsId="3b741536-0578">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/courier_verification_binary_negative_image" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" android:scaleType="fitCenter" android:tint="?iconAccent" uber:srcCompat="@drawable/ic_close" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Medium" android:textColor="?accentLink" android:gravity="center_horizontal" android:id="@id/courier_verification_binary_negative_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="@dimen/ui__divider_width" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/courier_verification_binary_affirmative_box" android:background="@drawable/binary_affirmative" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_13x" android:layout_weight="1.0" uber:analyticsId="20d38408-fc9e">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/courier_verification_binary_affirmative_image" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" android:scaleType="fitCenter" android:tint="?iconAccent" uber:srcCompat="@drawable/ic_done" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Medium" android:textColor="?accentLink" android:gravity="center_horizontal" android:id="@id/courier_verification_binary_affirmative_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+</com.ubercab.courier_verification.BinaryQuestionView>

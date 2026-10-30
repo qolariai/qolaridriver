@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.presidio.payment.feature.spenderarrears.banner.v1.SpenderArrearsBannerView android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="fe233052-05dc"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.banner.BaseBanner android:id="@id/ub__payment_spender_arrears_base_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:analyticsId="3a48421b-6741" app:banner_hierarchy="low" app:banner_start_artwork_type="badge" />
+</com.uber.presidio.payment.feature.spenderarrears.banner.v1.SpenderArrearsBannerView>

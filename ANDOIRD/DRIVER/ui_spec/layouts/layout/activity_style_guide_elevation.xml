@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_elevation" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="72f06c43-1fc2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/style_guide_elevation_dimens" android:textAlignment="center" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/style_guide_elevation_low" style="@style/Platform.TextStyle.LabelXSmall" />
+                    <com.ubercab.ui.core.UFloatingActionButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_3x" android:tint="?contentPrimary" android:contentDescription="@string/style_guide_elevation_content_search" app:backgroundTint="?backgroundTertiary" app:elevation="@dimen/ui__elevation_low" app:srcCompat="@drawable/ic_search" style="?platformButtonPrimary" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/style_guide_elevation_medium" style="@style/Platform.TextStyle.LabelXSmall" />
+                    <com.ubercab.ui.core.UFloatingActionButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_3x" android:tint="?contentPrimary" android:contentDescription="@string/style_guide_elevation_content_search" app:backgroundTint="?backgroundTertiary" app:elevation="@dimen/ui__elevation_medium" app:srcCompat="@drawable/ic_search" style="?platformButtonPrimary" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/style_guide_elevation_high" style="@style/Platform.TextStyle.LabelXSmall" />
+                    <com.ubercab.ui.core.UFloatingActionButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_3x" android:tint="?contentPrimary" android:contentDescription="@string/style_guide_elevation_content_search" app:backgroundTint="?backgroundTertiary" app:elevation="@dimen/ui__elevation_high" app:srcCompat="@drawable/ic_search" style="?platformButtonPrimary" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

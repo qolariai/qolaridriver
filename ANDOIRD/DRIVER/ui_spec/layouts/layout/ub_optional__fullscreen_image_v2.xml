@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.socialprofiles.profile.v2.ribs.fullimage.FullscreenImageView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="ebf62074-16b3"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:header_state="collapse" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/fullscreen_imageview_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.image.BaseImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.socialprofiles.profile.v2.ribs.fullimage.FullscreenImageView>

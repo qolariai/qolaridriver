@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.features.voucher_add_code.VoucherAddCodeViewV2 android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/ub__voucher_add_code_scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="false" android:layout_weight="1.0" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+            <com.uber.ui_compose_view.core.BaseTextFieldView android:id="@id/ub__voucher_add_code_edit_text_base" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:enabled="false" android:gravity="center" android:id="@id/ub__voucher_add_code_button" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/voucher_add_code_button" android:layout_weight="0.0" uber:analyticsId="48df987e-5ed1" uber:shape="rect" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.profiles.features.voucher_add_code.VoucherAddCodeViewV2>

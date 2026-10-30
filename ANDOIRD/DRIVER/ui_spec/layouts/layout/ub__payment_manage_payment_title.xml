@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/ub__manage_widget_payment_methods_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/payment_manage_payment_methods_title" android:maxLines="2" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingXSmall"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

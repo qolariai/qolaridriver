@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="@drawable/ub__bottomsheet_background" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="15c7dcd3-dba8"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageView android:id="@id/add_comment_dialog_close" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_close" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.Medium" android:textColor="@color/ub__button_text_color" android:gravity="end" android:id="@id/add_comment_dialog_save" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/save" android:layout_weight="1.0" android:textAllCaps="true" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorPrimary" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_comment_header" />
+    <com.ubercab.ui.commons.widget.PresidioTextInputLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__spacing_unit_half">
+        <com.ubercab.ui.commons.widget.ClearableEditText android:textColor="?android:textColorPrimary" android:gravity="top" android:id="@id/add_comment_entry_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textMultiLine" android:paddingStart="@dimen/ui__spacing_unit_1x" style="@style/Uber.Widget.EditText" />
+    </com.ubercab.ui.commons.widget.PresidioTextInputLayout>
+</com.ubercab.ui.core.ULinearLayout>

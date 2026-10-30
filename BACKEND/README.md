@@ -38,20 +38,6 @@ cd ..\BACKOFFICE && npm install && npm run build
 
 Contas de teste (seed): Rider `+351910000001` Ana · `+351910000002` Bruno · `+351910000003` Carla — Driver `+351920000001` Carlos (Frota Tejo) · `+351920000004` Diana (independente) · `+351920000006` Inês (por aprovar) — Fleet `+351930000001` Rui (Frota Tejo) · `+351930000002` Sofia (Lisboa Drive Partners). Código promocional `BEMVINDO`.
 
-## Mapas e rotas
-
-As apps usam o Google Maps SDK (chave em `local.properties`; valor em
-`../google_maps_api_key.txt`). O backend expõe:
-
-- `POST /rt/navigation/v3/route` e `POST /rt/lite/route` — rota por estrada; usa
-  `ROUTING_URL` (por omissão o demo público do OSRM, definido em `server.py`) e cai
-  numa linha reta se o serviço falhar. As rotas ficam em cache
-  (`ROUTE_CACHE_TTL_S`, 600 s; falhas 60 s). Para self-host:
-  `docker run -p 5000:5000 osrm/osrm-backend` com o extracto de Portugal e
-  `ROUTING_URL=http://127.0.0.1:5000`.
-- `POST /rt/support/map-report` — problema de mapa comunicado pelo motorista, guardado
-  na tabela `map_reports`.
-
 ## Estrutura
 
 | Pasta | O quê |
@@ -65,7 +51,7 @@ As apps usam o Google Maps SDK (chave em `local.properties`; valor em
 | `apps/catalog.py` + `contracts/` | Catálogo de endpoints e modelos extraídos de cada APK (Rider 1055 endpoints/1894 modelos, Driver 1053 paths/2022 modelos, Fleet 647/527) |
 | `console/` | API da consola `/api/*` (papéis admin / operator / finance, registo de ações) e página Integração |
 | `tools/extract_models.py` | Extrai modelos (classe → campos) do smali: `python tools/extract_models.py <raiz smali> <saida.json> <pastas...>` |
-| `tests/` | Ciclo completo pelas 3 apps + consola e teste dos três espelhos: `.venv\Scripts\python -m pytest -q tests` (81 testes) |
+| `tests/` | Ciclo completo pelas 3 apps + consola e teste dos três espelhos: `.venv\Scripts\python -m pytest -q tests` (54 testes) |
 
 ## Domínio
 

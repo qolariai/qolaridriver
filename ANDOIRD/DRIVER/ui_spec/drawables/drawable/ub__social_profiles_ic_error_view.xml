@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?buttonPrimaryColor" android:pathData="M0,40c0,22.09 17.91,40 40,40 22.09,0 40,-17.91 40,-40C80,17.91 62.09,0 40,0 17.91,0 0,17.91 0,40" />
+    <path android:fillColor="?buttonPrimaryColor" android:pathData="M0,40c0,22.09 17.91,40 40,40 22.09,0 40,-17.91 40,-40C80,17.91 62.09,0 40,0 17.91,0 0,17.91 0,40" />
+    <path android:fillColor="?brandBlack" android:pathData="M40,0v80c22.09,0 40,-17.91 40,-40C80,17.91 62.09,0 40,0" />
+    <path android:fillColor="?brandSecondary" android:pathData="M40,74.54C20.95,74.54 5.45,59.05 5.45,40 5.45,20.95 20.95,5.45 40,5.45c19.05,0 34.54,15.5 34.54,34.55 0,19.05 -15.5,34.54 -34.54,34.54" />
+    <path android:fillColor="?buttonPrimaryColor" android:pathData="M40,5.45v69.09c19.05,0 34.54,-15.5 34.54,-34.54C74.54,20.95 59.05,5.45 40,5.45" />
+    <path android:fillColor="?brandWhite" android:pathData="M40,72.73C21.95,72.73 7.27,58.05 7.27,40 7.27,21.95 21.95,7.27 40,7.27v65.45z" />
+    <path android:fillColor="?brandSecondary" android:pathData="M40,7.78v65.45c18.05,0 32.73,-14.68 32.73,-32.73C72.73,22.46 58.05,7.78 40,7.78" />
+    <path android:fillColor="?brandBlack" android:pathData="M43.51,51.2a3.42,3.42 0,1 1,-6.85 0,3.42 3.42,0 0,1 6.85,0M42.12,44.28h-4.55a0.91,0.91 0,0 1,-0.91 -0.91V27.58a0.91,0.91 0,0 1,0.91 -0.91h4.55a0.91,0.91 0,0 1,0.91 0.91v15.79a0.91,0.91 0,0 1,-0.91 0.91" />
+</vector>

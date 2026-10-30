@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape>
+        <size android:height="?dividerWidth" />
+        <solid android:color="?borderOpaque" />
+    </shape>
+</inset>

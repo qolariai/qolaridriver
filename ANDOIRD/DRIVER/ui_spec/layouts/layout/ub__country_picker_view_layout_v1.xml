@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UCoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" />
+        <com.ubercab.ui.core.URecyclerView android:id="@id/ub__country_picker_recycler_view" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </com.ubercab.ui.core.UCoordinatorLayout>
+</merge>

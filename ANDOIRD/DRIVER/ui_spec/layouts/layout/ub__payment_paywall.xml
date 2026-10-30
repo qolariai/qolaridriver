@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:theme="@style/Theme.Helix.Light" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/paywall_base_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__header_height" app:elevation="0.0dip" app:header_state="expand" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/paywall_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:layout_gravity="end|center" android:id="@id/paywall_skip" android:padding="@dimen/ui__spacing_unit_1x" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/paywall_skip_button_title" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" app:analyticsId="057b1a4c-66ef" style="@style/Platform.TextStyle.LabelLarge" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="3c354528-854c" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.progress.BaseProgressBar android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:baseprogress_type="circle_indeterminate" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:progress_size="medium" />
+</com.ubercab.ui.core.UConstraintLayout>

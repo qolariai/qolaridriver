@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimaryInverse" android:gravity="center" android:id="@id/online_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/carbon_go_online" android:maxLines="1" android:elevation="@dimen/ub__go_online_text_elevation" app:autoSizeMaxTextSize="?textSizeHeadline" app:autoSizeMinTextSize="@dimen/ui__text_size_micro" app:autoSizeTextType="uniform" style="@style/Platform.TextStyle.Headline.Medium"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

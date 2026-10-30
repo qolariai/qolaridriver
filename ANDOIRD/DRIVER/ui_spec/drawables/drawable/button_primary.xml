@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="0.0dip" android:insetRight="0.0dip" android:insetTop="@dimen/ub__abc_button_inset_vertical_material" android:insetBottom="@dimen/ub__abc_button_inset_vertical_material"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ripple android:color="?android:colorControlHighlight">
+        <item>
+            <selector>
+                <item android:state_enabled="false">
+                    <shape android:shape="rectangle">
+                        <corners android:radius="?buttonCornerRadius" />
+                        <solid android:color="?android:colorButtonNormal" />
+                        <padding android:left="@dimen/ub__abc_button_padding_horizontal_material" android:top="@dimen/ub__abc_button_padding_vertical_material" android:right="@dimen/ub__abc_button_padding_horizontal_material" android:bottom="@dimen/ub__abc_button_padding_vertical_material" />
+                    </shape>
+                </item>
+                <item>
+                    <shape android:shape="rectangle">
+                        <corners android:radius="?buttonCornerRadius" />
+                        <solid android:color="?android:colorAccent" />
+                        <padding android:left="@dimen/ub__abc_button_padding_horizontal_material" android:top="@dimen/ub__abc_button_padding_vertical_material" android:right="@dimen/ub__abc_button_padding_horizontal_material" android:bottom="@dimen/ub__abc_button_padding_vertical_material" />
+                    </shape>
+                </item>
+            </selector>
+        </item>
+    </ripple>
+</inset>

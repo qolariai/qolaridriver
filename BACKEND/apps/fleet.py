@@ -44,22 +44,11 @@ def _vehicle_of(call: Call, org, uuid) -> Vehicle:
     return v
 
 
-def _midnight(year: int, month: int, day: int) -> int:
-    return int(_time.mktime((year, month, day, 0, 0, 0, 0, 0, -1)))
-
-
-def _day_bounds(ts: int | None = None) -> tuple[int, int]:
-    """Meia-noite local e a meia-noite seguinte, por calendário (DST-safe)."""
-    lt = _time.localtime(ts if ts is not None else _time.time())
-    return (_midnight(lt.tm_year, lt.tm_mon, lt.tm_mday),
-            _midnight(lt.tm_year, lt.tm_mon, lt.tm_mday + 1))
-
-
 def _week_bounds(offset_weeks: int = 0) -> tuple[int, int]:
     lt = _time.localtime()
-    monday = lt.tm_mday - lt.tm_wday - offset_weeks * 7
-    return (_midnight(lt.tm_year, lt.tm_mon, monday),
-            _midnight(lt.tm_year, lt.tm_mon, monday + 7))
+    today = int(_time.mktime((lt.tm_year, lt.tm_mon, lt.tm_mday, 0, 0, 0, 0, 0, -1)))
+    start = today - lt.tm_wday * 86400 - offset_weeks * 7 * 86400
+    return start, start + 7 * 86400
 
 
 def driver_overview(d: Driver) -> dict:
@@ -187,11 +176,12 @@ def _supply(db, d: Driver) -> dict:
     """supply.armada.GetDriverCurrentSupplyResponse."""
     t = trips.active_trip_for_driver(db, d)
     start, end = _week_bounds()
-    s = finance.summary(db, "driver", d.id, start, end)["by_kind"]
+    day0 = end - 7 * 86400
+    s = finance.summary(db, "driver", d.id, day0, end)["by_kind"]
     out = {"driverOverview": driver_overview(d),
            "location": {"point": {"latitude": d.lat, "longitude": d.lng}, "course": d.heading,
                         "realtimeStatus": REALTIME.get(d.availability, "OFFLINE")} if d.lat is not None else None,
-           "tripCount": db.query(Trip).filter(Trip.driver_id == d.id, Trip.completed_at >= start).count(),
+           "tripCount": db.query(Trip).filter(Trip.driver_id == d.id, Trip.completed_at >= day0).count(),
            "formattedEarnings": present.money(s.get("fare", 0) + s.get("commission", 0) + s.get("fleet_fee", 0))}
     if t:
         out["supplyOverview"] = {"tripUuid": t.uuid, "tripStatus": t.state.upper(),
@@ -398,10 +388,12 @@ def driver_daily(call: Call):
     db = call.db
     user, org = _org(call)
     d = _driver_of(call, org, call.get("driverUUID", "driverUuid", "uuid"))
-    start, end = _day_bounds()
+    lt = _time.localtime()
+    start = int(_time.mktime((lt.tm_year, lt.tm_mon, lt.tm_mday, 0, 0, 0, 0, 0, -1)))
     day = call.get("startAt", "date")
     if isinstance(day, (int, float)) and day > 10 ** 11:
-        start, end = _day_bounds(int(day // 1000))
+        start = int(day // 1000)
+    end = start + 86400
     rows = db.query(Trip).filter(Trip.driver_id == d.id, Trip.completed_at >= start, Trip.completed_at < end).all()
     return {"summary": summary_json(db, "driver", d.id, start, end), "breakdown": [],
             "trips": [trip_earnings(db, t) for t in rows]}
@@ -417,22 +409,12 @@ def trip_earn(call: Call):
     return {"trip": trip_earnings(db, t)}
 
 
-def _daily_rows(start: int, end: int) -> list[tuple[int, int]]:
-    rows = []
-    cur = start
-    while cur < end:
-        nxt = _day_bounds(cur)[1]
-        rows.append((cur, nxt))
-        cur = nxt
-    return rows
-
-
 @handles(APP, "POST", "/rt/fleet/get-partner-statement")
 def partner_statement(call: Call):
     db = call.db
     user, org = _org(call)
     start, end = _week_bounds(int(call.get("weekOffset", default=0) or 0))
-    days = [summary_json(db, "fleet", org.id, s, e) for s, e in _daily_rows(start, end)]
+    days = [summary_json(db, "fleet", org.id, s, s + 86400) for s in range(start, end, 86400)]
     return {"partnerStatement": {"summary": summary_json(db, "fleet", org.id, start, end), "days": days,
                                  "breakdown": []}}
 
@@ -444,7 +426,7 @@ def driver_statement(call: Call):
     d = _driver_of(call, org, call.get("driverUUID", "driverUuid", "uuid"))
     start, end = _week_bounds(int(call.get("weekOffset", default=0) or 0))
     return {"driverStatement": {"summary": summary_json(db, "driver", d.id, start, end),
-                                "days": [summary_json(db, "driver", d.id, s, e) for s, e in _daily_rows(start, end)]}}
+                                "days": [summary_json(db, "driver", d.id, s, s + 86400) for s in range(start, end, 86400)]}}
 
 
 @handles(APP, "POST", "/rt/fleet/get-partner-statement-history")
@@ -479,14 +461,14 @@ def feedback_count(call: Call):
     db = call.db
     user, org = _org(call)
     return {"driversFeedbackCount": [{"driverUUID": d.uuid, "count": db.query(Trip).filter(
-        Trip.driver_id == d.id, Trip.rider_to_driver_rating.is_not(None)).count()} for d in org.drivers]}
+        Trip.driver_id == d.id, Trip.rider_to_driver_rating > 0).count()} for d in org.drivers]}
 
 
 @handles(APP, "POST", "/rt/fleet/get-feedback-overview")
 def feedback_overview(call: Call):
     db = call.db
     user, org = _org(call)
-    rows = (db.query(Trip).filter(Trip.org_id == org.id, Trip.rider_to_driver_rating.is_not(None))
+    rows = (db.query(Trip).filter(Trip.org_id == org.id, Trip.rider_to_driver_rating > 0)
             .order_by(Trip.completed_at.desc()).limit(50).all())
     avg = round(sum(t.rider_to_driver_rating for t in rows) / len(rows), 2) if rows else None
     return {"summary": {"averageRating": avg, "count": len(rows)}, "tagTranslations": {},

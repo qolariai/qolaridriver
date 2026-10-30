@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.dockedbutton.ButtonDock android:id="@id/ub__button_dock" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__button_dock_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Primary" app:buttonType="primary" app:itemPriority="primary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__button_dock_secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Secondary" app:buttonType="secondary" app:itemPriority="secondary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__button_dock_tertiary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Tertiary" app:buttonType="tertiary" app:itemPriority="tertiary" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__button_dock_destructive" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Destructive" app:buttonType="destructive" app:itemPriority="destructive" app:shape="rect" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemPriority="accessory">
+            <com.ubercab.ui.core.UCheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
+            <com.ubercab.ui.core.UTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="I accept the above terms and conditions" android:layout_marginStart="@dimen/ui__spacing_unit_1.5x" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.dockedbutton.ButtonDock>
+</com.ubercab.ui.core.UFrameLayout>

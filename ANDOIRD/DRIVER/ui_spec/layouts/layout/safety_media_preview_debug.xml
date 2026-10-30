@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.safety_audio_recording.rmr_preview.RecordMyRidePreviewDebugView android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="8debfe45-ca20"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:background="?backgroundAlwaysDark" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="@dimen/ui__spacing_unit_3x" app:layout_constraintBottom_toTopOf="@id/preview_button" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.ubercab.safety_media_ui.rmr_preview.component.RecordMyRideCameraPreview android:id="@id/camera_preview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/preview_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:text="@string/mobilestudio_safety_media_start_preview_pip_label" android:layout_marginHorizontal="@dimen/ui__spacing_unit_3x" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</com.uber.mobilestudio.safety_audio_recording.rmr_preview.RecordMyRidePreviewDebugView>

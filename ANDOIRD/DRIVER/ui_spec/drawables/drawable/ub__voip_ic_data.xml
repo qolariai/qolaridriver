@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ub__voip_circular_button_size" android:width="@dimen/ub__voip_circular_button_size" android:viewportWidth="82.0" android:viewportHeight="82.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateX="-25251.0" android:translateY="2773.0">
+        <group android:translateX="25252.0" android:translateY="-2772.0">
+            <path android:fillColor="?brandWhite" android:pathData="M79.5 40C79.5 61.8152 61.8152 79.5 40 79.5l0 1C62.3675 80.5 80.5 62.3675 80.5 40l-1 0zM40 79.5C18.1848 79.5 0.5 61.8152 0.5 40l-1 0c0 22.3675 18.1325 40.5 40.5 40.5l0 -1zM0.5 40C0.5 18.1848 18.1848 0.5 40 0.5l0 -1C17.6325 -0.5 -0.5 17.6325 -0.5 40l1 0zM40 0.5c21.8152 0 39.5 17.6848 39.5 39.5l1 0C80.5 17.6325 62.3675 -0.5 40 -0.5l0 1z" />
+        </group>
+        <group android:translateX="25273.8" android:translateY="-2740.0">
+            <path android:fillColor="?brandWhite" android:pathData="M31.8281 6L36.375 0 0 0 4.54688 6 31.8281 6Zm-21.2187 8l-4.5469 -6 24.25 0 -4.5469 6 -15.1562 0zm7.5781 10l-6.0625 -8 12.125 0 -6.0625 8z" />
+        </group>
+    </group>
+</vector>

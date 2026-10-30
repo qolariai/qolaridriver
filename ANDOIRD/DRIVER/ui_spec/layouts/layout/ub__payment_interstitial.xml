@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.ui.interstitial.PaymentInterstitialView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.Platform.Light.Header" android:id="@id/ub__payment_interstitial_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_alignParentTop="true" android:titleTextAppearance="@style/Platform.TextStyle.Title.Normal" style="@style/Widget.Platform.Toolbar" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/ub__payment_interstitial_button_container" android:layout_below="@id/ub__payment_interstitial_toolbar">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:id="@id/ub__payment_interstitial_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:id="@id/ub__payment_interstitial_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.UTextView android:gravity="center" android:id="@id/ub__payment_interstitial_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.ParagraphLarge" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__payment_interstitial_button_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/ui__spacing_unit_2x" android:layout_marginRight="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__payment_interstitial_primary_cta" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__payment_interstitial_secondary_cta" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.presidio.payment.ui.interstitial.PaymentInterstitialView>

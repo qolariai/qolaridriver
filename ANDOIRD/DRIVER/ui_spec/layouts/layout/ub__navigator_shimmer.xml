@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_9x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/ub__shimmer_view" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ub__shimmer_navigation_forward" app:layout_constraintStart_toEndOf="@id/ub__shimmer_navigation_backward" app:layout_constraintTop_toTopOf="parent" app:shimmer_auto_start="false">
+        <com.ubercab.ui.core.UPlainView android:layout_gravity="center" android:layout_width="@dimen/ui__spacing_unit_23x" android:layout_height="@dimen/ui__spacing_unit_5x" style="@style/PerfHubShimmerView" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <com.ubercab.ui.core.UImageButton android:id="@id/ub__shimmer_navigation_backward" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?contentStateDisabled" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ub_ic_chevron_left_small" />
+    <com.ubercab.ui.core.UImageButton android:id="@id/ub__shimmer_navigation_forward" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?contentStateDisabled" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ub_ic_chevron_right_small" />
+</com.ubercab.ui.core.UConstraintLayout>

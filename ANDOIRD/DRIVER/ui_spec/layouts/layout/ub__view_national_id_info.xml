@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.safety.identity.verification.national.id.info.NationalIdInfoView android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:id="@id/ub__national_id_info_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__spain_id_why_is_this_required" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" app:analyticsId="0904a86d-c101" style="@style/Platform.TextStyle.HeadingSmall" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:id="@id/ub__national_id_info_body_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:text="@string/ub__spain_id_help_body_text" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" app:analyticsId="83127051-a647" style="@style/Platform.TextStyle.ParagraphLarge" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__national_id_info_privacy_policy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:text="@string/ub__spain_id_help_action_see_privacy" android:layout_marginStart="?contentInset" android:layout_marginEnd="?contentInset" app:analyticsId="f162d129-987f" app:buttonType="secondary" app:shape="pill" app:size="medium" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.uber.safety.identity.verification.national.id.info.NationalIdInfoView>

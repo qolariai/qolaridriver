@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:id="@id/onboarding_app_bar" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="?actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/onboarding_app_bar_close" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:scaleType="centerInside" android:adjustViewBounds="true" android:contentDescription="@string/close_button_description" android:layout_marginStart="@dimen/ui__spacing_unit_1x" app:analyticsId="18fb24de-02b4" app:srcCompat="@drawable/ic_close" />
+    <com.ubercab.ui.core.UTextView android:layout_gravity="end|center" android:id="@id/onboarding_skip" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/skip" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" app:analyticsId="515153a6-3eb0" style="@style/Platform.TextStyle.H4.Medium.Link" />
+    <com.ubercab.ui.core.UPlainView android:layout_gravity="bottom" android:id="@id/onboarding_app_bar_line" android:background="?android:listDivider" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/ui__divider_width" />
+</com.ubercab.ui.core.UFrameLayout>

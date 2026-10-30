@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.profileselection.profile_selector.ProfileSelectorV3View android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="116a888c-0072"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__own_profile_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/profile_selector_header_your_profiles" style="@style/Platform.TextStyle.HeadingSmall" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__own_profile_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__delegate_profile_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:text="@string/profile_selector_header_delegated_profiles" style="@style/Platform.TextStyle.HeadingSmall" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?android:textColorSecondary" android:id="@id/ub__shared_with_you_profile_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/profile_selector_header_shared_with_you_profiles" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" style="@style/TextStyle.Medium.Paragraph" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__shared_with_you_profile_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.uber.profileselection.profile_selector.ProfileSelectorV3View>

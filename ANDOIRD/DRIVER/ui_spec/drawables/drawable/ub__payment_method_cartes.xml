@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ub__payment_method_cartes__0" android:pathData="M23,4H1V20H23V4Z" />
+    <path android:fillColor="@color/ub__payment_cartes_card_fillcolor" android:pathData="M12.423,11.477C12.423,11.478 12.423,11.479 12.423,11.48V11.477H12.423Z" />
+    <path android:fillColor="@color/ub__payment_cartes_card_fillcolor" android:pathData="M7.826,7.492C10.566,7.492 12.309,9.055 12.423,11.477H7.972V11.976H12.423C12.313,14.401 10.588,15.974 7.826,15.974C5.067,15.974 3.224,14.382 3.224,11.733C3.224,9.165 4.997,7.492 7.826,7.492Z" />
+    <path android:fillColor="@color/ub__payment_cartes_card_fillcolor" android:pathData="M20.776,9.606C20.776,9.354 20.728,9.108 20.63,8.867C20.536,8.639 20.396,8.435 20.21,8.259C20.007,8.064 19.785,7.927 19.541,7.848C19.298,7.772 18.966,7.733 18.549,7.733H12.928V11.48H18.546C18.963,11.48 19.295,11.441 19.538,11.365C19.781,11.289 20.003,11.152 20.207,10.957C20.393,10.781 20.533,10.577 20.627,10.349C20.728,10.102 20.776,9.856 20.776,9.606Z" />
+    <path android:fillColor="@color/ub__payment_cartes_card_fillcolor" android:pathData="M20.776,13.856C20.776,13.604 20.728,13.357 20.63,13.114C20.536,12.883 20.396,12.682 20.21,12.502C20.007,12.308 19.785,12.171 19.541,12.092C19.298,12.013 18.966,11.976 18.549,11.976H12.928V15.73H18.546C18.963,15.73 19.295,15.691 19.538,15.615C19.781,15.535 20.003,15.402 20.207,15.204C20.393,15.027 20.533,14.824 20.627,14.592C20.728,14.355 20.776,14.109 20.776,13.856Z" />
+</vector>

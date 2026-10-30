@@ -1,0 +1,9 @@
+{
+ "dimens": {
+  "item": {
+   "driver_menu_item_extra_padding": "@dimen/ui__spacing_unit_10x",
+   "map_controls_bottom_padding": "@dimen/ui__spacing_unit_1.5x",
+   "map_controls_center_bottom_padding": "@dimen/ui__spacing_unit_1.5x"
+  }
+ }
+}

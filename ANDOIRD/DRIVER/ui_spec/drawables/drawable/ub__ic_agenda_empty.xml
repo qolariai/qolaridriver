@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="64.0dip" android:width="64.0dip" android:viewportWidth="64.0" android:viewportHeight="64.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateX="-4077.0" android:translateY="-9857.0">
+        <group>
+            <clip-path android:pathData="M4077 9857l64 0 0 64 -64 0 0 -64z" />
+            <group android:translateX="4087.0" android:translateY="9863.24">
+                <path android:fillColor="?brandQuinary" android:pathData="M1.92 57.76l40 0c1.04 0 1.92 -0.88 1.92 -1.92l0 -53.92C43.84 0.88 42.96 0.000000152588 41.92 0.000000152588l-40 0C0.88 0.0800002 0 0.96 0 2l0 53.92c0 0.96 0.88 1.84 1.92 1.84z" />
+            </group>
+            <group android:rotation="89.98141" android:translateX="4127.09" android:translateY="9867.03">
+                <path android:fillColor="?android:windowBackground" android:pathData="M50.24 0L0 0l0 36.4 50.24 0 0 -36.4z" />
+            </group>
+            <group android:translateX="4096.04" android:translateY="9872.2">
+                <path android:fillColor="?ruleColor" android:pathData="M25.68 0L0 0l0 5.44 25.68 0 0 -5.44z" />
+            </group>
+            <group android:translateX="4096.28" android:translateY="9857.0">
+                <path android:fillColor="?doPanelJobLabelColor" android:pathData="M21.44 6.32l-1.52 0C19.36 6.32 18.88 5.92 18.8 5.36 18.4 2.32 15.76 0 12.64 0 9.52 0 6.88 2.32 6.4 5.28 6.32 5.84 5.84 6.24 5.28 6.24l-1.52 0C1.68 6.24 0.000000305176 7.92 0.000000305176 10L25.2 10c0 -2.08 -1.68 -3.68 -3.76 -3.68zm-8.4 -0.08c-1.28 0.32 -2.4 -0.8 -2.08 -2.08 0.16 -0.56 0.64 -1.12 1.2 -1.2 1.28 -0.32 2.4 0.8 2.08 2.08 -0.08 0.56 -0.56 1.04 -1.2 1.2z" />
+            </group>
+            <group android:translateX="4096.36" android:translateY="9884.52">
+                <path android:fillColor="?brandQuinary" android:pathData="M-0.000000152588 1.1475L25.44 1.1475l0 -2.295 -25.440000152588 0 0 2.295z" />
+            </group>
+            <group android:translateX="4096.36" android:translateY="9892.12">
+                <path android:fillColor="?brandQuinary" android:pathData="M-0.000000152588 1.1475L25.44 1.1475l0 -2.295 -25.440000152588 0 0 2.295z" />
+            </group>
+            <group android:translateX="4096.36" android:translateY="9899.64">
+                <path android:fillColor="?brandQuinary" android:pathData="M0.0036084 1.2275L25.4436 1.14749 25.4364 -1.1475 -0.00360871 -1.06749 0.0036084 1.2275Z" />
+            </group>
+            <group android:translateX="4096.36" android:translateY="9907.24">
+                <path android:fillColor="?brandQuinary" android:pathData="M0.0036084 1.2275L25.4436 1.14749 25.4364 -1.1475 -0.00360871 -1.06749 0.0036084 1.2275Z" />
+            </group>
+        </group>
+    </group>
+</vector>

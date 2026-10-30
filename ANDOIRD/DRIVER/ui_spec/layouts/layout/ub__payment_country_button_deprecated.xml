@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.bankcard.ui.country.CountryButtonDeprecated android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.presidio.payment.ui.floatinglabel.FloatingLabelEditText android:id="@id/ub__payment_country_button_floatinglabeledittext" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:inputType="text" uber:floatingLabelErrorTextColor="?colorNegative" uber:floatingLabelLabelText="@string/country_code_hint" style="@style/FloatingLabel" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/ub__payment_country_button_clickable_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/country_code_hint" />
+</com.uber.bankcard.ui.country.CountryButtonDeprecated>

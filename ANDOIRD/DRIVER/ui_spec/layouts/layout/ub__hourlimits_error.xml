@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.hourlimits.error.DrivingHourLimitsErrorView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="65c6d57d-b342"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UImageView android:layout_width="@dimen/ui__avatar_size_large" android:layout_height="@dimen/ui__avatar_size_large" android:scaleType="fitXY" uber:srcCompat="@drawable/ub_ic_alert" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Title.Normal" android:id="@id/ub__hourlimits_error_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ub__hourlimits_error_title" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Paragraph.Normal" android:id="@id/ub__hourlimits_error_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__hourlimits_error_subtitle" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__hourlimits_retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__hourlimits_error_retry" uber:analyticsId="e19e9ba8-5cea" uber:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" xmlns:uber="http://schemas.android.com/apk/res-auto" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.hourlimits.error.DrivingHourLimitsErrorView>

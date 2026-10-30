@@ -37,13 +37,16 @@
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:layout_marginStart="16dp"
+        app:cardBackgroundColor="@color/qd_tile"
         app:cardCornerRadius="8dp"
         app:cardElevation="0dp"
         app:strokeWidth="0dp">
 
-        <com.qolari.drivereplica.ui.map.StaticMapView
-            android:id="@+id/oppThumb"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/map_thumb" />
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

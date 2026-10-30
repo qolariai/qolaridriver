@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.preferences.status_assistant.action.PreferencesStatusAssistantActionView android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="37ea7f58-0038"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/preferences_status_assistant_action_icon" android:background="@drawable/ub__preferences_status_assistant_action_background" android:layout_width="@dimen/ui__spacing_unit_5x" android:layout_height="@dimen/ui__spacing_unit_5x" android:scaleType="centerInside" android:contentDescription="@string/carbon_preferences_title" uber:srcCompat="@drawable/ub_ic_sliders" />
+</com.ubercab.carbon.preferences.status_assistant.action.PreferencesStatusAssistantActionView>

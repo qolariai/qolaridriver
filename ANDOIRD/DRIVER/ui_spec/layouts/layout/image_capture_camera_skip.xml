@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentOnColor" android:layout_gravity="end|center" android:id="@id/image_capture_camera_skip_button" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_capture_library_skip_button_title" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="97389260-6b51" style="@style/Platform.TextStyle.LabelDefault" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="end|center" android:id="@id/image_capture_camera_skip_button_material" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" app:analyticsId="97389260-6b52" />
+</com.ubercab.ui.core.UFrameLayout>

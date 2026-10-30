@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/account_edit_mobile_scroll_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:gravity="bottom" android:id="@id/account_edit_mobile_header_default" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_6x" android:minHeight="@dimen/ui__spacing_unit_6x" android:text="@string/identity_account_edit_mobile" app:analyticsId="29ad0411-3cbf" style="@style/Platform.TextStyle.H5.News.Tertiary" />
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/account_edit_mobile_header_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:gravity="start" android:id="@id/account_edit_mobile_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_5x" android:text="@string/identity_account_edit_mobile_header" app:analyticsId="e9276952-e1d8" style="@style/Platform.TextStyle.DisplayXSmall" />
+                <com.ubercab.ui.core.UTextView android:id="@id/account_edit_mobile_header_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:text="@string/identity_account_edit_mobile_subtitle" app:analyticsId="92e0fab4-01f8" style="@style/Platform.TextStyle.ParagraphDefault" />
+            </com.ubercab.ui.core.ULinearLayout>
+            <com.ubercab.ui.core.UFrameLayout android:gravity="center" android:id="@id/account_edit_mobile_input_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:contentDescription="@string/identity_account_edit_mobile_description" />
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/account_edit_save_mobile" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="?contentInset" android:text="@string/identity_account_edit_save_mobile" app:analyticsId="2878debe-ccae" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</merge>

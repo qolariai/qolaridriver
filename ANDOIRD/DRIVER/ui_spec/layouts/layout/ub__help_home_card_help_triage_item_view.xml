@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/help_home_card_help_triage_item_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" app:analyticsId="29ce9a59-ad06" />
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.ubercab.ui.core.UTextView android:id="@id/help_home_card_help_triage_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="228fa766-f40c" style="@style/Platform.TextStyle.LabelSmall" />
+        <com.ubercab.ui.core.UTextView android:id="@id/help_home_card_help_triage_item_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="1d8a9d3b-eafa" style="@style/Platform.TextStyle.Paragraph.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

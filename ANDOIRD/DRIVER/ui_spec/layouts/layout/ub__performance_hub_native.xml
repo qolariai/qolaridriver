@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:id="@id/appbar" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_13x" uber:contentInsetStartWithNavigation="0.0dip" uber:elevation="0.0dip">
+        <com.ubercab.ui.core.widget.HeaderLayout android:id="@id/collapsing_toolbar" android:background="?android:colorBackground" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fontFamily="@font/uber_move_bold" uber:collapsedTitleTextAppearance="@style/Platform.TextStyle.LabelDefault" uber:contentInsetStartWithNavigation="0.0dip" uber:expandedTitleMarginBottom="@dimen/ui__spacing_unit_2x" uber:expandedTitleMarginEnd="?contentInset" uber:expandedTitleMarginStart="?contentInset" uber:expandedTitleMarginTop="@dimen/ui__spacing_unit_2x" uber:expandedTitleTextAppearance="@style/Platform.TextStyle.DisplayXSmall" uber:layout_scrollFlags="scroll|exitUntilCollapsed|snap" fontPath="?fontPathDisplayDefault">
+            <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" uber:contentInsetStartWithNavigation="0.0dip" uber:layout_collapseMode="pin" uber:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/Widget.Platform.Toolbar">
+                <com.ubercab.ui.core.UImageView android:layout_gravity="end" android:id="@id/help_button" android:padding="?contentInset" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" uber:analyticsId="72b8483f-9ab8" uber:srcCompat="@drawable/ic_carbon_help" />
+                <include layout="@layout/ub__help_expanded_button" />
+            </com.ubercab.ui.core.UToolbar>
+        </com.ubercab.ui.core.widget.HeaderLayout>
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.USwipeRefreshLayout android:id="@id/swipe_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/bit_loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:bli_bitColor="?colorAccent" />
+            <com.ubercab.carbon.core.ui.CarbonErrorView android:id="@id/full_screen_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.ubercab.ui.core.URecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.USwipeRefreshLayout>
+    <com.ubercab.earnings_ui.error.EarningsErrorSnackbar android:layout_gravity="bottom" android:id="@id/error_snackbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

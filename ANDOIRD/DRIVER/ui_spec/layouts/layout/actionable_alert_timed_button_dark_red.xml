@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.commons.widget.TimedButtonLayout android:layout_width="fill_parent" android:layout_height="fill_parent" uber:timedButtonAnimationAlpha="39.999996%" uber:timedButtonAnimationColor="?android:colorBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UButton android:orientation="vertical" android:id="@id/actionableAlertButton" android:layout_width="fill_parent" android:layout_height="fill_parent" android:outlineProvider="bounds" style="@style/Carbon.Button.Positive.Cancel" />
+</com.ubercab.ui.commons.widget.TimedButtonLayout>

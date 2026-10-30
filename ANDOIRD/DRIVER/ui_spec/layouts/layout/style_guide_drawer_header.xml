@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="a923002e-b29e"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/style_guide_header_height" android:text="@string/presidio_style_guide_app_name" android:drawablePadding="@dimen/ui__spacing_unit_1x" android:drawableStart="@drawable/base_style_guide_header_view" app:analyticsId="04016646-0d7c" style="@style/Platform.TextStyle.HeadingDefault" />
+    <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="wrap_content" android:layout_height="@dimen/aosp_navigation_view_divider_height" />
+</com.ubercab.ui.core.ULinearLayout>

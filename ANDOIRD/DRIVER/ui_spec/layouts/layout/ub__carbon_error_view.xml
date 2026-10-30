@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:background="?android:colorBackground" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_horizontal" android:id="@id/icon" android:layout_width="@dimen/ui__avatar_size_large" android:layout_height="@dimen/ui__avatar_size_large" app:srcCompat="@drawable/ub_ic_alert" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:gravity="center_horizontal" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/error_view_title_default" style="@style/Platform.TextStyle.Paragraph.Normal" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:gravity="center_horizontal" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/carbon_ui_error_text_margin" android:text="@string/error_view_subtitle_server_error" style="@style/Platform.TextStyle.Small.Normal" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.button.BaseMaterialButton android:layout_gravity="bottom" android:id="@id/button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/error_view_try_again" android:textAllCaps="true" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.ui.core.UFrameLayout>

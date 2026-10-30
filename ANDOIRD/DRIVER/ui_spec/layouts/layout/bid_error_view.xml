@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.feature.bid.BidErrorView android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub_icon" android:layout_width="@dimen/ui__spacing_unit_7x" android:layout_height="@dimen/ui__spacing_unit_7x" app:analyticsId="fe82b553-a61f" />
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/ub_tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:analyticsId="db65a882-afdc" style="@style/Platform.TextStyle.HeadingXSmall" />
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/ub_tv_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" app:analyticsId="96ca3434-a901" style="@style/Platform.TextStyle.Paragraph.Medium" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub_btn_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" app:analyticsId="3fec9ce4-8fa4" app:buttonType="secondary" app:shape="pill" app:size="small" style="@style/Platform.Button.Base.Primary.Small" />
+</com.uber.feature.bid.BidErrorView>

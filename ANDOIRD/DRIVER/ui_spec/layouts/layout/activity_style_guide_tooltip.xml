@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UCoordinatorLayout android:id="@id/style_guide_screen_buttons" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="a9c3dd27-c993"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/collapsing_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/button_show_tooltip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:text="Show Tooltip" style="@style/Platform.Button.BaseDynamic" />
+            <com.ubercab.ui.core.UTextInputEditText android:id="@id/edit_text_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Tooltip title text" />
+            <com.ubercab.ui.core.UTextInputEditText android:id="@id/edit_text_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Tooltip body text" />
+            <com.ubercab.ui.core.UTextInputEditText android:id="@id/edit_text_cta" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Tooltip CTA text" />
+            <com.ubercab.ui.core.UTextInputEditText android:enabled="false" android:id="@id/edit_text_deep_link" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="CTA deep link" />
+            <com.ubercab.ui.core.UTextInputEditText android:id="@id/edit_text_delay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Delay (in milliseconds)" />
+            <com.ubercab.ui.core.UTextInputEditText android:id="@id/edit_text_auto_dismiss" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Auto dismiss (in milliseconds)" />
+            <com.ubercab.ui.core.UCheckBox android:id="@id/check_box_match_parent_width" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Match parent width?" />
+            <com.ubercab.ui.core.UCheckBox android:id="@id/check_box_show_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Show icon?" />
+            <com.ubercab.ui.core.UCheckBox android:id="@id/check_box_show_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Show close button?" />
+            <com.ubercab.ui.core.UCheckBox android:id="@id/check_box_show_anchor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Show anchor?" />
+            <com.ubercab.ui.core.UCheckBox android:id="@id/check_box_show_scrim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Show scrim?" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.ui.core.UCoordinatorLayout>

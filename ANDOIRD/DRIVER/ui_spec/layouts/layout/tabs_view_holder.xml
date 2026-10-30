@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progress" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_1x" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:max="100" android:progressDrawable="@drawable/tabs_progress_bar" android:layout_marginStart="@dimen/ui__gutter_size" android:layout_marginEnd="@dimen/ui__gutter_size" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?android:textColorPrimary" android:id="@id/progress_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__gutter_size" android:layout_marginEnd="@dimen/ui__gutter_size" style="@style/Platform.TextStyle.ParagraphDefault" />
+    <com.uber.learning_hub_common.viewholders.tabs.SelfMeasuringViewPager android:id="@id/learning_hub_tab_layout_pager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__gutter_size" android:layout_marginEnd="@dimen/ui__gutter_size">
+        <com.ubercab.ui.core.UTabLayout android:id="@id/learning_hub_tab_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.uber.learning_hub_common.viewholders.tabs.SelfMeasuringViewPager>
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.uber.taskbuildingblocks.views.TaskHeaderView android:id="@id/image_capture_camera_permission_header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="f5309fbd-447b" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/image_capture_camera_permission_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" app:analyticsId="d7c4ae27-3ced" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

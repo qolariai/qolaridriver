@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.widget.HeaderLayout android:id="@id/collapsing_toolbar" android:background="?colorPrimary" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:collapsedTitleTextAppearance="@style/Platform.TextStyle.LabelLarge" app:contentInsetStartWithNavigation="0.0dip" fontPath="?mediumFontPath">
+        <com.ubercab.ui.core.UToolbar android:theme="@style/ThemeOverlay.ToolbarFont" android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:layout_collapseMode="pin" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" style="@style/Platform.Toolbar">
+            <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ub__chat_toolbar_custom_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="?contentInset">
+                <com.uber.ui_compose_view.core.tag.BaseTag android:id="@id/ub__chat_header_tag" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_1x" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:ellipsize="end" android:id="@id/ub__chat_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.HeadingXSmall" />
+                    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:ellipsize="end" android:id="@id/ub__chat_header_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.LabelSmall" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.ULinearLayout android:id="@id/ub__chat_header_actions_container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UToolbar>
+    </com.ubercab.ui.core.widget.HeaderLayout>
+</merge>

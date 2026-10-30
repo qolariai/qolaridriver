@@ -6,6 +6,7 @@
     android:background="@color/ql_white"
     android:orientation="vertical">
 
+    <!-- Captura 021: só a seta de voltar, sem título centrado. -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="58dp"
@@ -22,15 +23,6 @@
             android:padding="12dp"
             android:src="@drawable/ic_back"
             app:tint="@color/ql_black" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/wallet_title"
-            android:textColor="@color/ql_black"
-            android:textSize="24sp" />
     </FrameLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -47,10 +39,62 @@
             android:paddingEnd="@dimen/ql_margin"
             android:paddingBottom="24dp">
 
+            <!-- Cartão "Saldo" (captura 021). -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/bg_card_soft"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wallet_balance"
+                    android:textColor="@color/ql_gray_500"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/balanceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="0,00 €"
+                    android:textColor="@color/ql_black"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/paymentScheduled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:textColor="@color/ql_gray_500"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/withdrawButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_pill_black"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="@string/wallet_withdraw"
+                    android:textColor="@color/ql_white"
+                    android:textSize="18sp"
+                    app:drawableStartCompat="@drawable/ic_bolt"
+                    app:drawableTint="@color/ql_white" />
+            </LinearLayout>
+
+            <!-- Cartão Qolari Cash. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_cash_gradient"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -70,22 +114,6 @@
                     android:text="0,00 €"
                     android:textColor="@color/ql_black"
                     android:textSize="42sp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/topUp"
-                    style="@style/Widget.QolariLite.Button.Light"
-                    android:layout_width="wrap_content"
-                    android:layout_height="44dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/wallet_topup" />
-
-                <TextView
-                    android:id="@+id/paymentValue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/ql_gray_500"
-                    android:textSize="15sp" />
             </LinearLayout>
 
             <TextView
@@ -95,7 +123,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/wallet_payments"
                 android:textColor="@color/ql_black"
-                android:textSize="30sp" />
+                android:textSize="26sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/payments"

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.features.voucher_settings_row.VoucherSettingRowViewV2 android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="c7ac54e5-bdaa"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.list.PlatformListHeadingView android:id="@id/voucher_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="122c7fa8-b319" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/voucher_setting_row" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.divider.DividerView android:id="@id/ub__voucher_setting_row_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__list_item_image_bounds" uber:layout_constraintEnd_toEndOf="parent" uber:layout_constraintStart_toStartOf="parent" uber:layout_constraintTop_toBottomOf="@id/voucher_setting_row" />
+    <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/sent_voucher_setting_row" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.divider.DividerView android:id="@id/ub__voucher_setting_row_divider_2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__list_item_image_bounds" uber:layout_constraintEnd_toEndOf="parent" uber:layout_constraintStart_toStartOf="parent" uber:layout_constraintTop_toBottomOf="@id/sent_voucher_setting_row" />
+</com.ubercab.profiles.features.voucher_settings_row.VoucherSettingRowViewV2>

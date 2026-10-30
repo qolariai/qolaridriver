@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center|bottom" android:orientation="vertical" android:id="@id/pin" android:background="?backgroundTransparent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:importantForAccessibility="noHideDescendants">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/expanding_ls" android:layout_width="wrap_content" android:layout_height="@dimen/ub__location_pin_height" android:layout_marginTop="@dimen/ub__location_pin_margin" android:layout_marginBottom="0.0dip" android:animateLayoutChanges="true">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentInversePrimary" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/address_text" android:background="@drawable/ub__pin_rounded_corner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip" android:includeFontPadding="false" style="@style/Platform.TextStyle.Paragraph.Medium" />
+            <com.ubercab.ui.core.UPlainView android:layout_gravity="center" android:id="@id/pin_stem" android:background="?backgroundInversePrimary" android:layout_width="@dimen/ub__location_pin_stem_width" android:layout_height="@dimen/ub__location_pin_stem_height" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center|bottom" android:id="@id/location_circle" android:layout_width="@dimen/ub__location_pin_circle_size" android:layout_height="@dimen/ub__location_pin_circle_size" app:srcCompat="@drawable/ub__pin_circle" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:id="@id/empty_pin_view" android:background="?backgroundTransparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</merge>

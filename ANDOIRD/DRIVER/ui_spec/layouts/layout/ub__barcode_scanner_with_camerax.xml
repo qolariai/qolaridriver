@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.uber.ucamerax.UCameraXView android:id="@id/camerax_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true" app:cxLensFacing="back" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/lens_cover" android:background="?backgroundAlwaysDark" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

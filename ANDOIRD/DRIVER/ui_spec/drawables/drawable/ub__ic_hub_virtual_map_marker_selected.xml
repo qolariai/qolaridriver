@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ui__spacing_unit_3x" android:width="@dimen/ui__spacing_unit_3x" android:viewportWidth="48.0" android:viewportHeight="48.0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@drawable/$ub__ic_hub_virtual_map_marker_selected__0" android:pathData="M10.829,43.2822C7.9467,40.2239 18.5965,38.2061 22.4932,37.6194c7.3856,1.7924 13.3395,1.7369 10.6503,5.9509C29.8066,48.8424 15.3281,48.0708 10.8192,43.2804z" android:fillAlpha="0.7" />
+    <path android:fillColor="?iconColor" android:pathData="M37,18.94C37,27.2 22.5,41 22.5,41S8,27.2 8,18.94C8,10.7 14.5,4 22.5,4S37,10.69 37,18.94z" />
+    <path android:fillColor="?brandWhite" android:pathData="M20,14L26,14A1,1 0,0 1,27 15L27,21A1,1 0,0 1,26 22L20,22A1,1 0,0 1,19 21L19,15A1,1 0,0 1,20 14z" />
+</vector>

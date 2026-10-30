@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:gravity="center_vertical" android:id="@id/ub__driving_insights_modal_item_tv" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="wrap_content" android:paddingVertical="@dimen/ui__spacing_unit_2x" app:analyticsId="997767e2-6c9e" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/ub__driving_insights_modal_item_checkbox" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.ubercab.ui.core.URadioButton android:id="@id/ub__driving_insights_modal_item_checkbox" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="wrap_content" app:analyticsId="22d02bdf-8ee1" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</com.ubercab.ui.core.UConstraintLayout>

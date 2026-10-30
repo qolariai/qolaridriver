@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:gravity="start" android:id="@id/ub__carbon_share_location_contact_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H4.Medium" />
+    <com.ubercab.ui.core.ULinearLayout android:gravity="end|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageButton android:id="@id/ub__carbon_share_location_delete_contact" android:background="?brandTransparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/ub__carbon_share_location_delete_contact_accessibility" uber:analyticsId="06c18799-3dff" uber:srcCompat="@drawable/ub__carbon_share_location_delete_icon" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.ULinearLayout>

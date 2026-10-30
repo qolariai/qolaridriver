@@ -27,7 +27,7 @@ class PromotionsViewModel @JvmOverloads constructor(
         _state.value = _state.value.copy(loading = true, error = null)
         viewModelScope.launch {
             repository.promotions()
-                .onSuccess { _state.value = PromotionsUiState(loading = false, applied = it.applied, message = it.hint) }
+                .onSuccess { _state.value = PromotionsUiState(loading = false, applied = it.applied) }
                 .onFailure { _state.value = PromotionsUiState(error = com.qolari.userlite.net.ApiClient.errorMessage(it)) }
         }
     }

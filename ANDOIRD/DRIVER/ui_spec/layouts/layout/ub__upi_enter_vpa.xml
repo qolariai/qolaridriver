@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.upi.operation.entervpa.UPIEnterVpaView android:orientation="vertical" android:background="?backgroundPrimary" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="@string/ub__upi_entervpa_impression_id"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/base_header" android:layout_width="fill_parent" android:layout_height="?actionBarSize" uber:header_state="collapse" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never">
+            <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:id="@id/ub__upi_enter_vpa_title" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__upi_enter_vpa_title" style="@style/Platform.TextStyle.H5.News.Tertiary" />
+                <com.ubercab.ui.commons.widget.PresidioTextInputLayout android:id="@id/ub__upi_enter_vpa_text_container" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" uber:hintEnabled="false">
+                    <com.ubercab.ui.core.UTextInputEditText android:textStyle="bold" android:id="@id/ub__upi_enter_vpa_text_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/ub__upi_enter_vpa_hint" android:inputType="text" android:imeOptions="actionNext" style="@style/Platform.TextStyle.H3.News" />
+                </com.ubercab.ui.commons.widget.PresidioTextInputLayout>
+                <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__upi_enter_vpa_description_container" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.ubercab.ui.core.UPlainView android:id="@id/ub__upi_enter_vpa_description_plain_view" android:background="?backgroundInversePrimary" android:layout_width="@dimen/ub__upi_enter_vpa_vertical_view_width" android:layout_height="fill_parent" android:layout_marginTop="@dimen/ui__spacing_unit_1x" />
+                    <com.ubercab.ui.core.UTextView android:id="@id/ub__upi_enter_vpa_description" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="@string/ub__upi_enter_vpa_description" style="@style/Platform.TextStyle.P" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.UScrollView>
+        <com.ubercab.ui.commons.widget.KeyboardButton android:layout_gravity="bottom" android:id="@id/ub__upi_enter_vpa_save" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__upi_save" uber:analyticsId="@string/ub__upi_entervpa_save_button_id" style="?platformButtonPrimary" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.presidio.payment.upi.operation.entervpa.UPIEnterVpaView>

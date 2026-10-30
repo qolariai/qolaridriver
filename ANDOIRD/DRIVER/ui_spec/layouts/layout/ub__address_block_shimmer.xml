@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout android:id="@id/ub__shimmer_view" android:layout_width="wrap_content" android:layout_height="wrap_content" app:shimmer_auto_start="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UConstraintLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UPlainView android:id="@id/pick_up_image" android:layout_width="@dimen/ui__spacing_unit_1.5x" android:layout_height="@dimen/ui__spacing_unit_1.5x" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/pick_up_text" style="@style/PerfHubShimmerView" />
+        <com.ubercab.ui.core.UPlainView android:id="@id/drop_off_image" android:layout_width="@dimen/ui__spacing_unit_1.5x" android:layout_height="@dimen/ui__spacing_unit_1.5x" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/drop_off_text" style="@style/PerfHubShimmerView" />
+        <com.ubercab.ui.core.UPlainView android:id="@id/pick_up_text" android:layout_width="@dimen/ui__spacing_unit_12x" android:layout_height="@dimen/ui__spacing_unit_1.5x" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginStart="@dimen/ui__spacing_unit_1x" app:layout_constraintStart_toEndOf="@id/pick_up_image" app:layout_constraintTop_toTopOf="parent" style="@style/PerfHubShimmerView" />
+        <com.ubercab.ui.core.UPlainView android:id="@id/drop_off_text" android:layout_width="@dimen/ui__spacing_unit_12x" android:layout_height="@dimen/ui__spacing_unit_1.5x" android:layout_marginTop="@dimen/ui__spacing_unit_1.5x" android:layout_marginStart="@dimen/ui__spacing_unit_1x" app:layout_constraintStart_toEndOf="@id/drop_off_image" app:layout_constraintTop_toBottomOf="@id/pick_up_text" style="@style/PerfHubShimmerView" />
+    </com.ubercab.ui.core.UConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="ring" android:innerRadiusRatio="@dimen/ub__profile_photo_loyalty_ring_inner_radius_ratio" android:thicknessRatio="@dimen/ub__profile_photo_loyalty_ring_thickness_ratio" android:useLevel="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?brandBlack" />
+</shape>

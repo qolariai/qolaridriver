@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ui__spacing_unit_8x" android:width="@dimen/ui__spacing_unit_8x" android:autoMirrored="true" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateX="-760.0" android:translateY="-1895.0">
+        <group android:translateX="760.9" android:translateY="1895.0">
+            <path android:fillColor="?iconWarning" android:pathData="M11.1 0L-0.0000000238419 20 22.2 20 11.1 0Zm0 17c-0.6 0 -1 -0.4 -1 -1 0 -0.6 0.4 -1 1 -1 0.6 0 1 0.4 1 1 0 0.6 -0.4 1 -1 1zm-1 -4l0 -6 2 0 0 6 -2 0z" />
+        </group>
+    </group>
+</vector>

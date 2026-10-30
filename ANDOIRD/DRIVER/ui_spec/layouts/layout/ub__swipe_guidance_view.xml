@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.android.nav.GuidanceView android:id="@id/swipe_nav_guidance_maneuver_view" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

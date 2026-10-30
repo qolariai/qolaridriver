@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.invoice.operation.code.InvoiceCollectCodeView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="bade7c49-f627"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/fixed_header" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.list.PlatformListItemView android:id="@id/ub__payment_invoice_collect_code_pending_payment_banner" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" />
+            <include layout="@layout/ub__payment_copyable_code_v2" />
+            <com.ubercab.ui.core.URecyclerView android:id="@id/ub__payment_invoice_collect_code_info_items" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include layout="@layout/ub__payment_horizontal_divider" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:textColor="?android:textColorSecondary" android:id="@id/ub__payment_invoice_collect_code_payment_instructions_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:text="@string/ub__payment_invoice_collect_how_to_submit_payment_title" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="8d2a03eb-b05c" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:textColor="?android:textColorSecondary" android:id="@id/ub__payment_invoice_collect_code_payment_instructions_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="?gutterSize" android:text="@string/ub__payment_invoice_collect_how_to_submit_payment_description_v2" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" uber:analyticsId="e116ab6f-bca5" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.UCardView android:id="@id/bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:cardBackgroundColor="?android:colorBackground" uber:cardElevation="@dimen/ui__elevation_high">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x">
+                <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__payment_invoice_collect_code_submit_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__payment_invoice_collect_submitted_payment_button_title" uber:analyticsId="8b0c0558-4e98" uber:buttonType="primary" style="@style/Platform.Button.BaseDynamic" />
+                <com.ubercab.ui.core.UProgressBar android:layout_gravity="center" android:id="@id/ub__payment_invoice_collect_code_submit_loading" android:visibility="gone" android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" style="@style/Platform.Progress.CircleIndeterminate" />
+            </com.ubercab.ui.core.UFrameLayout>
+            <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__payment_invoice_collect_code_close_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" android:text="@string/ub__payment_invoice_collect_invoice_button_close" uber:analyticsId="ab073b4f-f14e" uber:buttonType="tertiary" style="@style/Platform.Button.BaseDynamic" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UCardView>
+</com.ubercab.presidio.payment.invoice.operation.code.InvoiceCollectCodeView>

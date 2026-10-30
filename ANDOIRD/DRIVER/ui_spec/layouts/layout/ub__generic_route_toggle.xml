@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.map_ui.optional.generic_route_toggle.GenericRouteToggleView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFloatingActionButton android:layout_gravity="end|bottom" android:id="@id/ub__generic_route_toggle_fab" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_2x" android:scaleType="center" android:contentDescription="@string/generic_toggle_description" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="563f4ec2-7f55" app:backgroundTint="?android:colorBackground" app:borderWidth="0.0dip" app:fabCustomSize="@dimen/ub__map_fab_size" app:rippleColor="?android:textColorTertiary" app:srcCompat="@drawable/ub__ic_route_toggle_selected" />
+</com.ubercab.map_ui.optional.generic_route_toggle.GenericRouteToggleView>

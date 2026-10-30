@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginHorizontal="@dimen/ui__spacing_unit_2x" android:layout_marginVertical="@dimen/ui__spacing_unit_3x"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/venue_summary_subsection_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.text.BaseTextView android:gravity="center" android:id="@id/venue_summary_subsection_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.ubercab.ui.core.ULinearLayout>

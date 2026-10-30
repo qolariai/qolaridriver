@@ -55,7 +55,8 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/promotions_title"
                 android:textColor="@color/ql_black"
-                android:textSize="32sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -87,6 +88,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="14dp"
                 android:text="@string/promotions_apply"
+                android:textColor="@color/ql_button_text"
                 android:enabled="false" />
 
             <com.google.android.material.button.MaterialButton
@@ -114,31 +116,12 @@
                 android:textColor="@color/ql_black"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/empty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/promotions_empty"
-                android:textColor="@color/ql_gray_500"
-                android:textSize="16sp"
-                android:visibility="gone" />
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/applied"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:nestedScrollingEnabled="false" />
-
-            <TextView
-                android:id="@+id/hint"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:text="@string/promotions_hint"
-                android:textColor="@color/ql_gray_400"
-                android:textSize="14sp" />
 
             <ProgressBar
                 android:id="@+id/loading"

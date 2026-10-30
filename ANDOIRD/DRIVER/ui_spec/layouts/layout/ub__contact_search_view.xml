@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.input.BaseEditText android:id="@id/search_box" android:layout_width="fill_parent" android:layout_height="wrap_content" android:imeOptions="actionSearch" app:analyticsId="aa093fc3-e0ad" app:input_clearButtonEnabled="true" app:input_placeholderHint="@string/contact_manager_hint_search" app:input_startEnhancer_drawable="@drawable/ub_ic_search" />
+    <com.uber.ui_compose_view.core.BaseSearchFieldView android:id="@id/base_search_box" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:inputSize="medium" />
+</merge>

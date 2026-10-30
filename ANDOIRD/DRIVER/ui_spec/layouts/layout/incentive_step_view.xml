@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center_horizontal" android:id="@id/step_icon_layout" android:layout_width="@dimen/ui__spacing_unit_2x" android:layout_height="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/step_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="a3e7fd15-b383" app:srcCompat="@drawable/incentive_step_bullet" />
+        </com.ubercab.ui.core.UFrameLayout>
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_horizontal" android:id="@id/step_line" android:layout_width="@dimen/ub__step_line_width" android:layout_height="fill_parent" app:analyticsId="0b4c6611-2392" app:srcCompat="@drawable/incentive_step_line" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/step_description" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="@dimen/ui__spacing_unit_0x" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_1x" app:analyticsId="839d23ed-d88c" style="@style/Platform.TextStyle.Paragraph.Normal" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.photo_flow.ui.PhotoFlowFaceCameraGuide android:orientation="vertical" android:id="@id/ub__carbon_facecamera_help_container" android:background="?colorAccent" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.9"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/photo_flow_guide_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UTextView android:gravity="center" android:id="@id/ub__carbon_face_guide_overlay_close" android:background="@drawable/ub__photo_flow_rect_btn_bg" android:padding="@dimen/ui__spacing_unit_2x" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" android:textAllCaps="true" app:analyticsId="a2cd8648-a85d" style="@style/Platform.TextStyle.H4.Medium.Primary.Inverse" />
+</com.ubercab.photo_flow.ui.PhotoFlowFaceCameraGuide>

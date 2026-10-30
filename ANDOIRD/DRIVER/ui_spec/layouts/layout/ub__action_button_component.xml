@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UChip android:textAppearance="@style/Platform.TextStyle.LabelSmall" android:id="@id/ub__action_button_chip" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="1cf5f810-c61c" app:chipBackgroundColor="?backgroundTertiary" app:chipStartPadding="@dimen/ui__spacing_unit_1x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

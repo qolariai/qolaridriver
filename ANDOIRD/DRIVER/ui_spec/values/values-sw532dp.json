@@ -1,0 +1,13 @@
+{
+ "bools": {
+  "bool": {
+   "isTablet": "true"
+  }
+ },
+ "dimens": {
+  "item": {
+   "ub__orders_list_left_right_padding": "@dimen/ui__spacing_unit_0x",
+   "ub__orders_list_top_bottom_padding": "@dimen/ui__spacing_unit_1x"
+  }
+ }
+}

@@ -19,8 +19,7 @@ _CACHE_FILE = config.DATA_DIR / "geocode_cache.json"
 def _key() -> str:
     if "GOOGLE_MAPS_KEY" in os.environ:
         return os.environ["GOOGLE_MAPS_KEY"].strip()
-    for p in (config.DATA_DIR / "google_maps_api_key.txt", config.BASE_DIR.parent / "google_maps_api_key.txt",
-              config.BASE_DIR.parent / "ANDOIRD" / "google_maps_api_key.txt"):
+    for p in (config.DATA_DIR / "google_maps_api_key.txt", config.BASE_DIR.parent / "ANDOIRD" / "google_maps_api_key.txt"):
         if p.is_file():
             return p.read_text(encoding="utf-8").strip()
     return ""
@@ -82,104 +81,6 @@ def reverse(lat: float, lng: float) -> dict:
     if data.get("status") != "OK" or not results:
         return _fallback(lat, lng)
     out = _parse(results[0], lat, lng)
-    with _lock:
-        _load()[ck] = out
-        try:
-            _CACHE_FILE.write_text(json.dumps(_cache, ensure_ascii=False), encoding="utf-8")
-        except OSError:
-            pass
-    return out
-
-
-def places_search(query: str, near_lat: float | None = None, near_lng: float | None = None,
-                  limit: int = 8) -> list[dict]:
-    """Pesquisa de locais/POIs (Google Places Text Search). Sem chave/erro devolve []."""
-    q = (query or "").strip()
-    if not q:
-        return []
-    lat0 = near_lat if near_lat is not None else 38.7223
-    lng0 = near_lng if near_lng is not None else -9.1393
-    ck = f"p:{q.lower()}@{lat0:.3f},{lng0:.3f}"
-    with _lock:
-        hit = _load().get(ck)
-    if hit is not None:
-        return hit
-    key = _key()
-    if not key:
-        return []
-    params = {"query": q, "location": f"{lat0},{lng0}", "radius": "30000",
-              "language": LANG, "region": "pt", "key": key}
-    try:
-        import httpx
-        r = httpx.get("https://maps.googleapis.com/maps/api/place/textsearch/json", params=params, timeout=5.0)
-        data = r.json()
-    except Exception:
-        return []
-    if data.get("status") not in ("OK", "ZERO_RESULTS"):
-        return []
-    out = []
-    for res in (data.get("results") or [])[:limit]:
-        loc = (res.get("geometry") or {}).get("location") or {}
-        lat, lng = loc.get("lat"), loc.get("lng")
-        if lat is None or lng is None:
-            continue
-        full = res.get("formatted_address") or res.get("name") or ""
-        out.append({
-            "id": res.get("place_id") or f"place:{lat:.6f},{lng:.6f}",
-            "name": res.get("name") or full,
-            "line1": full,
-            "line2": "",
-            "full": full,
-            "lat": float(lat),
-            "lng": float(lng),
-            "provider": "google_places",
-        })
-    with _lock:
-        _load()[ck] = out
-        try:
-            _CACHE_FILE.write_text(json.dumps(_cache, ensure_ascii=False), encoding="utf-8")
-        except OSError:
-            pass
-    return out
-
-
-def forward(query: str, near_lat: float | None = None, near_lng: float | None = None,
-            limit: int = 8) -> list[dict]:
-    """Pesquisa de moradas/locais (texto -> resultados com coordenadas). Sem chave/erro devolve []."""
-    q = (query or "").strip()
-    if not q:
-        return []
-    bias = f"@{near_lat:.3f},{near_lng:.3f}" if near_lat is not None and near_lng is not None else ""
-    ck = f"q:{q.lower()}{bias}"
-    with _lock:
-        hit = _load().get(ck)
-    if hit is not None:
-        return hit
-    key = _key()
-    if not key:
-        return []
-    params = {"address": q, "language": LANG, "key": key, "components": "country:PT", "region": "pt"}
-    if near_lat is not None and near_lng is not None:
-        params["bounds"] = f"{near_lat - 0.25:.4f},{near_lng - 0.45:.4f}|{near_lat + 0.25:.4f},{near_lng + 0.45:.4f}"
-    else:
-        params["bounds"] = "38.60,-9.30|38.85,-9.05"
-    try:
-        import httpx
-        r = httpx.get("https://maps.googleapis.com/maps/api/geocode/json", params=params, timeout=4.0)
-        data = r.json()
-    except Exception:
-        return []
-    if data.get("status") != "OK":
-        return []
-    out = []
-    for res in (data.get("results") or [])[:limit]:
-        loc = (res.get("geometry") or {}).get("location") or {}
-        lat, lng = loc.get("lat"), loc.get("lng")
-        if lat is None or lng is None:
-            continue
-        p = _parse(res, float(lat), float(lng))
-        p.update({"lat": float(lat), "lng": float(lng)})
-        out.append(p)
     with _lock:
         _load()[ck] = out
         try:

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/ub__inspection_sheet_action_button_border_radius" />
+    <solid android:color="?white" />
+    <stroke android:width="@dimen/ub__inspection_sheet_timed_action_button_border" android:color="?accent" />
+</shape>

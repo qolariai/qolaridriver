@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:fitsSystemWindows="@bool/use_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UPlainView android:id="@id/scrim" android:background="@color/ub__ui_core_black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:alpha="0.0" android:importantForAccessibility="yes" android:accessibilityTraversalAfter="@id/bottomsheet" app:analyticsEnabled="false" />
+    <com.ubercab.ui.core.widget.BottomSheet android:id="@id/bottomsheet" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="yes" />
+</com.ubercab.ui.core.UFrameLayout>

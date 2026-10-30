@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewFlipper android:id="@id/contacts_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/contact_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.emptystate.EmptyStateView android:layout_gravity="center" android:id="@id/contacts_error" android:layout_width="fill_parent" android:layout_height="wrap_content" app:empty_state_action_icon="@drawable/ub_ic_arrow_clockwise" app:empty_state_action_title="@string/ub__contact_manager_browse_mode_error_button" app:empty_state_badge="@drawable/empty_state_badge_failure" app:empty_state_headline_text="@string/contact_manager_details_error_generic" app:empty_state_paragraph_text="@string/ub__contact_manager_browse_mode_contact_fetch_error_message" app:empty_state_type="failure" />
+    </ViewFlipper>
+</merge>

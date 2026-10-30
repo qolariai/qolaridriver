@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.placeholder.PlaceholderView android:id="@id/ub__placeholder" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="@dimen/snapshot_placeholder_view_height" />
+</com.ubercab.ui.core.UFrameLayout>

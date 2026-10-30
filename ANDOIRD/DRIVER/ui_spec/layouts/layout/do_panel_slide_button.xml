@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.carbon.core.ui.ProgressFrameLayout android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/slide_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/slide_title_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/ui__spacing_unit_5x" android:paddingEnd="@dimen/ui__spacing_unit_5x">
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H4.Medium" android:ellipsize="end" android:gravity="center" android:id="@id/slide_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:textAllCaps="true" app:autoSizeMaxTextSize="?textSizeSubtitle" app:autoSizeMinTextSize="@dimen/ui__text_size_micro" app:autoSizeTextType="uniform" />
+            <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Medium" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/slide_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:textAllCaps="true" app:autoSizeMaxTextSize="?textSizeSubtitle" app:autoSizeMinTextSize="@dimen/ui__text_size_micro" app:autoSizeTextType="uniform" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UImageView android:layout_gravity="start|center" android:id="@id/slide_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ub__ic_swipe_right" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

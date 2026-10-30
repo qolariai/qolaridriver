@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon.core.root.active.MapModeWithActivityView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.drawerlayout.widget.DrawerLayout android:id="@id/active_drawer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/driver_menu_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/system_banner_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.ubercab.ui.core.UCoordinatorLayout android:id="@id/active_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/background_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/screen_stack_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.ubercab.ui.core.UFrameLayout android:id="@id/home_screen_overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.ubercab.ui.core.UFrameLayout android:id="@id/navigation_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </com.ubercab.ui.core.ULinearLayout>
+                <com.ubercab.ui.core.UCoordinatorLayout android:id="@id/bottom_sheet_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <com.ubercab.ui.core.UFrameLayout android:id="@id/overlay_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.ubercab.ui.core.UFrameLayout>
+        </com.ubercab.ui.core.UCoordinatorLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.carbon.core.root.active.MapModeWithActivityView>

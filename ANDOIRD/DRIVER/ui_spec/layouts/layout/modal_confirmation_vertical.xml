@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.widget.ConfirmationModalView android:orientation="vertical" android:id="@id/confirmation_modal_root" android:background="?android:colorBackground" android:padding="?contentInset" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" layout="@layout/modal_confirmation_content" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/confirmation_modal_buttons" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/confirmation_modal_button_primary_base" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsEnabled="false" uber:analyticsId="ab66dd98-e7c1" uber:buttonType="primary" uber:shape="rect" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+        <Space android:id="@id/confirmation_modal_button_space" android:layout_width="wrap_content" android:layout_height="@dimen/ui__spacing_unit_2x" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/confirmation_modal_button_secondary_base" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsEnabled="false" uber:analyticsId="a0207bc8-7437" uber:buttonType="secondary" uber:shape="rect" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.widget.ConfirmationModalView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.learning_hub_topic.celebration_view.CelebrationPageView android:theme="@style/Theme.UberColorTokens.DayNight" android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:background="?brandTransparent" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="0.0dip" app:titleTextAppearance="@style/Platform.TextStyle.LabelLarge" style="@style/Widget.Platform.Toolbar">
+        <com.ubercab.ui.core.UFrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UTextView android:textColor="?contentPrimary" android:layout_gravity="start|center" android:id="@id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="873d866e-1448" style="@style/Platform.TextStyle.LabelLarge" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.UToolbar>
+    <com.ubercab.ui.core.URecyclerView android:id="@id/celebration_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/celebration_single_screen_view" />
+    <include layout="@layout/celebration_scrollable_single_screen_view" />
+</com.ubercab.learning_hub_topic.celebration_view.CelebrationPageView>

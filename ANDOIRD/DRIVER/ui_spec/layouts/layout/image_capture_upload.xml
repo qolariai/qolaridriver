@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/image_capture_upload_taskbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="a25828e2-a61d" />
+    <com.uber.taskbuildingblocks.views.TaskHeaderView android:id="@id/image_capture_upload_header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="864221ca-f798" />
+    <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/image_capture_upload_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x" app:analyticsId="eb14c458-ebc3" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <com.ubercab.ui.commons.progress.multi_progress_indicator.MultiProgressIndicator android:layout_gravity="center" android:id="@id/image_capture_upload_progress_bar" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0.5x" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:layout_marginBottom="@dimen/ui__spacing_unit_13x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="e6770df9-01f7" app:indicatorType="pulse" app:pulseColor="?backgroundAccent" />
+</merge>

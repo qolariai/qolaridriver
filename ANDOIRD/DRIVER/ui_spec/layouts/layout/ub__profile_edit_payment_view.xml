@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.profiles.profile_edit_payment.ProfileEditPaymentView android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.header.BaseHeader android:theme="@style/Theme.Platform.Header" android:id="@id/ub__profile_edit_payment_header" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:elevation="0.0dip" uber:header_state="collapse" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__profile_edit_payment_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</com.ubercab.profiles.profile_edit_payment.ProfileEditPaymentView>

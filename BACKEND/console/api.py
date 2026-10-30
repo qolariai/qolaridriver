@@ -18,10 +18,9 @@ from core.db import session_scope, touch
 from core.security import hash_password, verify_password
 from domain import finance, pricing, settings, trips
 from domain.finance import FinanceError
-from domain.models import (TRIP_ACTIVE, AdjustmentRequest, AdminUser, AuditLog, AuthSession, City, Device, Document, Driver,
-                           FleetUser, LedgerEntry, MapReport, Offer, Organization, Payout, Product, Promo, PushMessage,
-                           Rider, SafetyIncident, ScreenShare, SupportMessage, SupportThread, Trip, TripRecording,
-                           TrustedContact, Vehicle, jget, jset, now)
+from domain.models import (TRIP_ACTIVE, AdminUser, AuditLog, AuthSession, City, Device, Document, Driver,
+                           FleetUser, LedgerEntry, Offer, Organization, Payout, Product, Promo, PushMessage,
+                           Rider, Trip, Vehicle, jget, jset, now)
 from domain.seed import PLACES
 from domain.trips import TripError
 
@@ -826,179 +825,6 @@ def document_file(doc_id: int):
         return FileResponse(config.UPLOAD_DIR / d.file_name)
 
 
-# ---- problemas de mapa (Driver -> /rt/support/map-report) -------------------------------------
-def _map_report_json(db, r: MapReport) -> dict:
-    d = db.get(Driver, r.driver_id)
-    labels = {
-        "address": "Rua ou morada errada",
-        "closed": "Local fechado ou inexistente",
-        "outdated": "Mapa desatualizado",
-        "other": "Outro problema",
-    }
-    return {"id": r.id, "uuid": r.uuid, "driver": serial.driver_short(d), "reason": r.reason,
-            "reason_label": labels.get(r.reason, r.reason),
-            "note": r.note, "latitude": r.latitude, "longitude": r.longitude,
-            "created_at": r.created_at, "status": r.status}
-
-
-@api.get("/map-reports")
-def list_map_reports(status: str = "open", page: int = 1, size: int = 50):
-    with session_scope() as db:
-        qq = db.query(MapReport)
-        if status:
-            qq = qq.filter(MapReport.status == status)
-        total = qq.count()
-        rows = (qq.order_by(MapReport.created_at.desc(), MapReport.id.desc())
-                .offset(max(0, (page - 1) * size)).limit(min(size, 200)).all())
-        return {"total": total, "page": page, "size": size,
-                "items": [_map_report_json(db, r) for r in rows]}
-
-
-class MapReportIn(BaseModel):
-    status: str = Field(pattern="^(open|resolved|dismissed)$")
-
-
-@api.patch("/map-reports/{report_id}")
-def update_map_report(report_id: int, body: MapReportIn, user: dict = Depends(OPS)):
-    with session_scope() as db:
-        r = _get(db, MapReport, report_id, "registo")
-        r.status = body.status
-        audit(db, user, "map_report.status", "map_report", r.uuid, body.status)
-        return _map_report_json(db, r)
-
-
-# ---- cidades, categorias, promocoes ----------------------------------------------------------
-@api.get("/support")
-def list_support(status: str = "open"):
-    with session_scope() as db:
-        qq = db.query(SupportThread)
-        if status:
-            qq = qq.filter(SupportThread.status == status)
-        rows = qq.order_by(SupportThread.updated_at.desc()).limit(200).all()
-        out = []
-        for t in rows:
-            msgs = (db.query(SupportMessage).filter_by(thread_id=t.id)
-                    .order_by(SupportMessage.id).all())
-            last = msgs[-1] if msgs else None
-            out.append({"uuid": t.uuid, "app": t.app, "name": t.subject_name,
-                        "phone": t.subject_phone, "category": t.category,
-                        "status": t.status, "updated_at": t.updated_at,
-                        "last_message": last.body if last else "",
-                        "unread": sum(1 for m in msgs if m.sender == "user" and not m.read_by_support)})
-        return {"items": out}
-
-
-class SupportReply(BaseModel):
-    message: str = Field(min_length=1, max_length=1000)
-
-
-@api.get("/support/{uuid}")
-def get_support(uuid: str):
-    with session_scope() as db:
-        t = db.query(SupportThread).filter_by(uuid=uuid).first()
-        if not t:
-            raise HTTPException(404, "conversa inexistente")
-        msgs = db.query(SupportMessage).filter_by(thread_id=t.id).order_by(SupportMessage.id).all()
-        for m in msgs:
-            if m.sender == "user":
-                m.read_by_support = True
-        return {"thread": {"uuid": t.uuid, "app": t.app, "name": t.subject_name,
-                           "phone": t.subject_phone, "category": t.category, "status": t.status},
-                "messages": [{"id": m.id, "sender": m.sender, "body": m.body, "createdAt": m.created_at,
-                              "fileName": m.file_name or "", "hasFile": bool(m.file_name)}
-                             for m in msgs]}
-
-
-@api.get("/support/attachment/{name}")
-def support_attachment(name: str, user: dict = Depends(OPS)):
-    if not name.startswith("support-") or "/" in name or "\\" in name:
-        raise HTTPException(404, "anexo inexistente")
-    target = config.UPLOAD_DIR / name
-    if not target.is_file():
-        raise HTTPException(404, "anexo inexistente")
-    return FileResponse(target)
-
-
-@api.get("/recordings")
-def list_recordings():
-    with session_scope() as db:
-        out = []
-        for r in db.query(TripRecording).order_by(TripRecording.id.desc()).limit(200):
-            t = db.query(Trip).filter_by(uuid=r.trip_uuid).first()
-            out.append({"uuid": r.uuid, "trip_uuid": r.trip_uuid, "app": r.app,
-                        "driver": t.driver.name if t and t.driver else "",
-                        "kind": r.kind, "started_at": r.started_at, "ended_at": r.ended_at,
-                        "duration_s": r.duration_s, "has_file": bool(r.file_name)})
-        return {"items": out}
-
-
-@api.get("/recordings/{uuid}/file")
-def recording_file(uuid: str, user: dict = Depends(OPS)):
-    with session_scope() as db:
-        r = db.query(TripRecording).filter_by(uuid=uuid).first()
-        if not r or not r.file_name:
-            raise HTTPException(404, "gravacao inexistente")
-        target = config.UPLOAD_DIR / r.file_name
-        if not target.is_file():
-            raise HTTPException(404, "gravacao inexistente")
-        return FileResponse(target, media_type="audio/mp4")
-
-
-@api.get("/support/{uuid}/screen-share")
-def support_screen_share(uuid: str):
-    with session_scope() as db:
-        t = db.query(SupportThread).filter_by(uuid=uuid).first()
-        if not t:
-            raise HTTPException(404, "conversa inexistente")
-        s = (db.query(ScreenShare).filter_by(thread_id=t.id)
-             .order_by(ScreenShare.id.desc()).first())
-        if not s:
-            return {"active": False}
-        return {"uuid": s.uuid, "active": s.active, "frame_at": s.frame_at,
-                "has_frame": bool(s.file_name)}
-
-
-@api.get("/support/screen-share/{share_uuid}/frame")
-def support_screen_frame(share_uuid: str, user: dict = Depends(OPS)):
-    with session_scope() as db:
-        s = db.query(ScreenShare).filter_by(uuid=share_uuid).first()
-        if not s or not s.file_name:
-            raise HTTPException(404, "frame inexistente")
-        target = config.UPLOAD_DIR / s.file_name
-        if not target.is_file():
-            raise HTTPException(404, "frame inexistente")
-        return FileResponse(target, media_type="image/jpeg")
-
-
-@api.post("/support/{uuid}/reply")
-def reply_support(uuid: str, body: SupportReply, user: dict = Depends(OPS)):
-    with session_scope() as db:
-        t = db.query(SupportThread).filter_by(uuid=uuid).first()
-        if not t:
-            raise HTTPException(404, "conversa inexistente")
-        m = SupportMessage(thread_id=t.id, sender="support", body=body.message.strip())
-        db.add(m)
-        t.status, t.updated_at = "open", now()
-        audit(db, user, "support.reply", "support", t.uuid)
-        db.flush()
-        return {"id": m.id, "sender": m.sender, "body": m.body, "createdAt": m.created_at}
-
-
-class SupportStatus(BaseModel):
-    status: str = Field(pattern="^(open|closed)$")
-
-
-@api.patch("/support/{uuid}")
-def close_support(uuid: str, body: SupportStatus, user: dict = Depends(OPS)):
-    with session_scope() as db:
-        t = db.query(SupportThread).filter_by(uuid=uuid).first()
-        if not t:
-            raise HTTPException(404, "conversa inexistente")
-        t.status, t.updated_at = body.status, now()
-        audit(db, user, "support.status", "support", t.uuid, body.status)
-        return {"uuid": t.uuid, "status": t.status}
-
-
 # ---- cidades, categorias, promocoes ----------------------------------------------------------
 @api.get("/catalog")
 def catalog():
@@ -1165,41 +991,6 @@ def ledger(party: str = "", party_id: int | None = None, kind: str = "", page: i
 def _party_name(db, party, pid):
     row = db.get(Driver if party == "driver" else Organization, pid)
     return row.name if row else "?"
-
-
-@api.get("/adjustments")
-def list_adjustments(status: str = ""):
-    with session_scope() as db:
-        qq = db.query(AdjustmentRequest)
-        if status:
-            qq = qq.filter(AdjustmentRequest.status == status)
-        out = []
-        for a in qq.order_by(AdjustmentRequest.id.desc()).limit(200):
-            d = db.get(Driver, a.driver_id)
-            out.append({"uuid": a.uuid, "driver": d.name if d else "?",
-                        "driver_id": a.driver_id, "trip_uuid": a.trip_uuid,
-                        "kind": a.kind, "amount": a.amount_cents, "note": a.note,
-                        "status": a.status, "created_at": a.created_at,
-                        "reviewed_by": a.reviewed_by, "reviewed_at": a.reviewed_at})
-        return {"items": out}
-
-
-@api.patch("/adjustments/{uuid}")
-def review_adjustment(uuid: str, body: dict, user: dict = Depends(FIN)):
-    with session_scope() as db:
-        a = db.query(AdjustmentRequest).filter_by(uuid=uuid).first()
-        if not a:
-            raise HTTPException(404, "ajuste inexistente")
-        status = str(body.get("status") or "")
-        if status not in ("approved", "rejected"):
-            raise HTTPException(400, "estado invalido")
-        if a.status != "pending":
-            raise HTTPException(409, "ajuste ja revisto")
-        a.status, a.reviewed_by, a.reviewed_at = status, user["email"], now()
-        if status == "approved":
-            finance.adjust(db, "driver", a.driver_id, a.amount_cents, a.note or f"Ajuste {a.kind}")
-        audit(db, user, "adjustment.review", "adjustment", a.id, jset({"status": status}))
-        return {"uuid": a.uuid, "status": a.status}
 
 
 @api.get("/payouts")
@@ -1424,49 +1215,6 @@ def audit_log(limit: int = 200):
 def offers_pending():
     with session_scope() as db:
         return [serial.offer(o) for o in db.query(Offer).filter(Offer.state == "pending").all()]
-
-
-@api.get("/safety")
-def safety_incidents(status: str = "", app: str = ""):
-    """Alertas de seguranca (SOS) com os contactos de confianca da conta."""
-    with session_scope() as db:
-        q = db.query(SafetyIncident)
-        if status:
-            q = q.filter(SafetyIncident.status == status)
-        if app:
-            q = q.filter(SafetyIncident.app == app)
-        out = []
-        for i in q.order_by(SafetyIncident.id.desc()).limit(200):
-            contacts = (
-                db.query(TrustedContact)
-                .filter_by(app=i.app, subject_uuid=i.subject_uuid)
-                .order_by(TrustedContact.id)
-                .all()
-            )
-            out.append({
-                "uuid": i.uuid, "kind": i.kind, "app": i.app,
-                "subjectName": i.subject_name, "subjectPhone": i.subject_phone,
-                "tripUuid": i.trip_uuid, "latitude": i.latitude, "longitude": i.longitude,
-                "note": i.note, "status": i.status, "createdAt": i.created_at,
-                "closedAt": i.closed_at,
-                "contacts": [{"name": c.name, "phone": c.phone} for c in contacts],
-            })
-        return {"items": out}
-
-
-@api.patch("/safety/{uuid}")
-def update_safety(uuid: str, body: dict, user: dict = Depends(OPS)):
-    with session_scope() as db:
-        i = db.query(SafetyIncident).filter_by(uuid=uuid).first()
-        if not i:
-            raise HTTPException(404, "alerta inexistente")
-        status = str(body.get("status") or "").strip()
-        if status not in ("open", "closed"):
-            raise HTTPException(400, "estado invalido")
-        i.status = status
-        i.closed_at = now() if status == "closed" else None
-        audit(db, user, "safety.update", "safety", i.id, jset({"status": status}))
-        return {"uuid": i.uuid, "status": i.status, "closedAt": i.closed_at}
 
 
 router.include_router(api)

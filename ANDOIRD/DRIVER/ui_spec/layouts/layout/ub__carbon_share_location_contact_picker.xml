@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.sharelocation.contactpicker.ShareLocationContactPickerView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:analyticsId="900d255d-cc88"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/fixed_header" />
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__carbon_share_location_contact_picker_container" android:layout_width="fill_parent" android:layout_height="fill_parent" uber:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:layout_gravity="bottom" android:id="@id/ub__carbon_share_location_contact_picker_button_container" android:background="?android:windowBackground" android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:layout_behavior="com.ubercab.sharelocation.contactpicker.SelectContactsButtonBehavior">
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/ub__carbon_share_location_contact_picker_select_contacts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__carbon_share_location_contact_confirm_select_contacts" uber:buttonType="primary" uber:shape="rect" uber:size="large" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.sharelocation.contactpicker.ShareLocationContactPickerView>

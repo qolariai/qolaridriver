@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="@dimen/ub__voucher_bar_chevron_height_width" android:width="@dimen/ub__voucher_bar_chevron_height_width" android:drawable="@drawable/ub_ic_chevron_right" android:start="@dimen/ui__spacing_unit_2x" />
+</layer-list>

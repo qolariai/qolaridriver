@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.social_profiles_form.SocialProfilesFormView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/ub_optional__social_profiles_edit_header" />
+    <com.ubercab.ui.core.UScrollView android:id="@id/form_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.UTextView android:id="@id/form_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" style="@style/Platform.TextStyle.Headline.Normal" />
+            <com.ubercab.ui.core.URecyclerView android:id="@id/form_selections" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include android:id="@id/form_input_container" android:visibility="gone" layout="@layout/ub_optional__social_profiles_character_limit_input" />
+            <com.ubercab.ui.core.UTextView android:textColor="?textColorAccent" android:id="@id/form_link" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_4x" style="@style/Platform.TextStyle.Small.Normal" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorTertiary" android:id="@id/form_footer_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__social_profiles_spacing_unit_0.5x" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" style="@style/Platform.TextStyle.Small.Normal" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/form_loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bli_bitColor="?colorAccent" app:layout_anchor="@id/appbar" app:layout_anchorGravity="top" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/form_update_loading" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UPlainView android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.5" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/form_submit_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateTint="?iconColor" android:indeterminateTintMode="src_in" style="@style/Widget.AppCompat.ProgressBar" />
+    </com.ubercab.ui.core.UFrameLayout>
+    <include android:id="@id/ub__social_profiles_error_view" android:visibility="gone" layout="@layout/ub_optional__social_profiles_error_view" />
+</com.ubercab.social_profiles_form.SocialProfilesFormView>

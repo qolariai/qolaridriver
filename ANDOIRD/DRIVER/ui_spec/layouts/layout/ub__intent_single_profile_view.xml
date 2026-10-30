@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.profileselection.intent_payment_selector.business_content.single_business.SingleBusinessProfileContentView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="ffaf4a82-4651"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.URecyclerView android:id="@id/ub__intent_single_business_invalid_states_recycle_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/ub__intent_single_business_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ub__intent_single_business_invalid_states_recycle_view">
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__intent_single_business_payment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__intent_single_business_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_6x" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UPlainView android:id="@id/ub__intent_single_business_overlay" android:background="?white" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/ub__intent_single_business_container" app:layout_constraintEnd_toEndOf="@id/ub__intent_single_business_container" app:layout_constraintStart_toStartOf="@id/ub__intent_single_business_container" app:layout_constraintTop_toTopOf="@id/ub__intent_single_business_container" />
+    </com.ubercab.ui.core.UConstraintLayout>
+</com.uber.profileselection.intent_payment_selector.business_content.single_business.SingleBusinessProfileContentView>

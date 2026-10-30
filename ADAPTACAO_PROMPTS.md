@@ -21,7 +21,7 @@ fechada**. Não é um recomeço: é a mesma matéria com portões mais exigentes
 | Contrato extraído | `ANDOIRD/DRIVER/endpoints.json` (1.104) | ✅ |
 | Recriação limpa | `ANDOIRD/DRIVER/RECRIACAO/` | ✅ lotes 0–5 |
 | Backend + backoffice | `BACKEND/`, `BACKOFFICE/` | ✅ operacionais |
-| Testes | backend 74, app Driver 74, app Rider 11 | ✅ |
+| Testes | backend 54, app 74 | ✅ |
 
 ## 2. O que faltava (e foi criado)
 
@@ -36,10 +36,6 @@ fechada**. Não é um recomeço: é a mesma matéria com portões mais exigentes
 | [`tools/spec_check.py`](tools/spec_check.py) | valida os portões (artefactos, evidência, topologia, endpoints, segredos) | — |
 | [`device_apk/README.md`](device_apk/README.md) | ponteiro para os originais + hashes (sem duplicar 400 MB) | MEGA FASE 0 |
 | [`ux_reference/README.md`](ux_reference/README.md) | referências públicas (vazia por opção; regras `unverified`) | MEGA FASE 2 |
-| [`ANDOIRD/DRIVER/ux_capture/peer_triggers.md`](ANDOIRD/DRIVER/ux_capture/peer_triggers.md) | estados gated do Driver → trigger/role/endpoint | MEGA FASE 2 |
-| [`ANDOIRD/USER_LITE/ux_capture/ux_behavior.md`](ANDOIRD/USER_LITE/ux_capture/ux_behavior.md) | navegação, gestos, estados e formulários da Rider | MEGA FASE 2 |
-| [`ANDOIRD/USER_LITE/ux_capture/peer_triggers.md`](ANDOIRD/USER_LITE/ux_capture/peer_triggers.md) | estados gated da Rider | MEGA FASE 2 |
-| [`ANDOIRD/USER_LITE/stack.md`](ANDOIRD/USER_LITE/stack.md) | stack e configuração da Rider recriada | MEGA FASE 3 |
 | [`ANDOIRD/USER_LITE/endpoints.json`](ANDOIRD/USER_LITE/endpoints.json) | contrato `designed` da Rider Lite (15 endpoints) | `userlite.py` |
 | [`BACKEND/tests/test_espelhos.py`](BACKEND/tests/test_espelhos.py) | teste dos três espelhos (U→D/F/B→U) | MEGA §4.6.7 |
 
@@ -54,8 +50,7 @@ fechada**. Não é um recomeço: é a mesma matéria com portões mais exigentes
 3. **Isolamento dos testes.** `test_driver_arrives_by_position` deixava uma viagem
    ativa no Bruno; o teste do Lite falhava por ordem de execução. Passou a cancelar a
    viagem no fim. O teste de promoção do Lite deixou de depender do estado da Ana.
-   Resultado: **74 testes a passar** (eram 48; entraram o Lite, os espelhos, mapa/rotas,
-suporte, rate limit, backup, migrações e health).
+   Resultado: **54 testes a passar** (eram 48; entraram 5 do Lite + 1 dos espelhos).
 
 ## 4. O que os novos prompts mudam na prática
 
@@ -83,29 +78,26 @@ suporte, rate limit, backup, migrações e health).
 | 4 Contrato | ✅ | catálogo + `endpoints.json` |
 | 4.5 Topologia | ✅ | `topology.md` |
 | 4.6 Orquestração | ✅ | teste dos espelhos |
-| 5 Recriação | ✅ Driver e Rider; ◻ Fleet (contrato/operação) | Driver lotes 0–5; Rider 11 testes |
-| 6 Validação | ✅ | Driver e Rider fechadas no Honor (`VALIDACAO_MEGA.md`) |
-| 7 Fecho de gaps | ✅ | R-12, R-13, D-03 e D-04 corrigidos; `backlog.md` sem itens abertos |
+| 5 Recriação | ✅ Driver e Rider; ◻ Fleet (contrato/operação) | Driver lotes 0–5; Rider 10 testes |
+| 6 Validação | ✅ | Driver e Rider validadas no Honor; 55 testes backend |
 
 ## 6. O que continua (por ordem)
 
 1. **Rider (Lite)**: recriação feita em `ANDOIRD/USER_LITE/RECRIACAO/` (Kotlin +
-   Views, 11 testes; build, login, viagem, conta e avaliação). O contrato `designed`
-   está em `BACKEND/apps/userlite.py` e `ANDOIRD/USER_LITE/endpoints.json`.
+   Views, 10 testes; build, login, viagem e conta). O contrato `designed` está em
+   `BACKEND/apps/userlite.py` e `ANDOIRD/USER_LITE/endpoints.json`.
 2. **Fleet**: sem recriação própria; o contrato e a operação estão cobertos pelo
    backend e pelo backoffice. A app usada no laboratório é a APK re-branded
    (instrumento, não entregável). Paridade visual declarada como não mensurável.
-3. **Driver**: os `parcial` de `coverage.md` que dependem de decis?o (v?deo,
-   Comfort) ficam assumidos no relatório final; o mapa real foi implementado com Google
-   Maps SDK + OSRM.
+3. **Driver**: os `parcial` de `coverage.md` que dependem de decisão (mapa real,
+   FCM, vídeo, Comfort) ficam assumidos no relatório final; o resto está fechado.
 4. **Backoffice**: separar financeiro de suporte num deploy próprio se o projeto sair do
    laboratório; hoje é RBAC + auditoria no mesmo SPA.
 5. **Publicação**: os handlers novos e as tabelas continuam por publicar no
    Hetzner; nada é publicado sem aprovação.
 6. **iOS**: fora do âmbito; as IPAs existem como laboratório.
-7. **Telemóvel Honor**: ciclo completo executado em 25/10 (Driver + Rider, viagem,
-   PIN, fim, avaliação, histórico e rendimentos); evidência em `VALIDACAO_HONOR/` e
-   `VALIDACAO_MEGA.md` §2.
+7. **Telemóvel Honor**: validação feita em 27/10 (login, oferta, PIN, fim,
+   avaliação dos dois lados, offline) e registada em `VALIDACAO_MEGA.md`.
 
 ## 7. Como usar os prompts adaptados
 
@@ -124,17 +116,6 @@ O backend ganhou, em paralelo, o contrato da **Rider Lite** (`BACKEND/apps/userl
 `BACKEND/tests/test_userlite.py`). Foi integrado como `designed` no `endpoints.json` e
 na `coverage.md`; não foi tratado como clone do protocolo da Uber. Se houver mais
 trabalho concorrente, a regra é a mesma: declarar a evidência e não promover níveis.
-
-## 10. Ronda de 2026-10-26
-
-A auditoria `ANALISE_FUNCIONALIDADES.md` fechou os P0/P1 do âmbito e declarou os P2/P3.
-As provas estão em `VALIDACAO_MEGA.md` §10 e nos testes `test_support_chat`,
-`test_safety`, `test_documents_upload`, `test_driver_preferences`, `test_payouts` e
-`test_scheduling`.
-
-O portão `tools/spec_check.py` continua a passar (**451 verificações**); o contrato
-`endpoints.json` cresceu para **70 endpoints** curados. Nada foi promovido de nível:
-as entregas novas são `designed` e a validação no telemóvel desta ronda não foi feita.
 
 ## 9. Comandos úteis
 

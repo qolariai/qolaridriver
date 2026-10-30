@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/ub__flow_selector_skip" android:title="@string/ub__flow_selector_skip_button" app:actionLayout="@layout/ub__menu_item_skip_highlighted" app:showAsAction="always" />
+</menu>

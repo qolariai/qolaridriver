@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:padding="@dimen/ui__spacing_unit_4x" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:layout_width="@dimen/ub__loading_indicator_progress_size" android:layout_height="@dimen/ub__loading_indicator_progress_size" android:indeterminate="true" android:indeterminateTint="?accentPrimary" android:indeterminateTintMode="src_in" style="@style/ProgressBarStyle" />
+</com.ubercab.ui.core.UFrameLayout>

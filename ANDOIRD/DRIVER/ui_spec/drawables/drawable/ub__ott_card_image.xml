@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/ub__ott_card_image_height" android:width="@dimen/ub__ott_card_image_width" android:viewportWidth="328.0" android:viewportHeight="220.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?artGray700" android:pathData="M 16 0 L 312 0 Q 328 0 328 16 L 328 204 Q 328 220 312 220 L 16 220 Q 0 220 0 204 L 0 16 Q 0 0 16 0 Z" />
+    <path android:fillColor="?artGray50" android:pathData="M 32 24 L 52 24 Q 60 24 60 32 L 60 52 Q 60 60 52 60 L 32 60 Q 24 60 24 52 L 24 32 Q 24 24 32 24 Z" />
+    <path android:fillColor="?artGray400" android:pathData="M60 52V39h-4a8 8 0 0 0-8 8v13h4a8 8 0 0 0 8-8zM24 52V39h4a8 8 0 0 1 8 8v13h-4a8 8 0 0 1-8-8z" />
+</vector>

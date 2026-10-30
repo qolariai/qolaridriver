@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.courier_verification.CourierVerificationView android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:background="?brandBlack" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageButton android:layout_gravity="center_vertical" android:id="@id/courier_verification_close_nav_button" android:background="?brandBlack" android:layout_width="@dimen/ui__spacing_unit_4x" android:layout_height="@dimen/ui__spacing_unit_4x" android:scaleType="fitCenter" android:tint="?brandWhite" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:srcCompat="@drawable/ic_close" />
+        <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Title.Normal" android:textColor="?android:textColorPrimaryInverse" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/courier_verification_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/courier_verification_title" android:maxLines="1" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.URecyclerView android:id="@id/courier_verification_recycler_view" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:analyticsId="ccd547cb-d73f" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</com.ubercab.courier_verification.CourierVerificationView>

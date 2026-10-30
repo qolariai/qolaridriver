@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.loginrequest.LoginRequestConfirmationView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="0b05c6c0-64de"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UAppBarLayout android:background="?brandTransparent" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetStartWithNavigation="0.0dip" app:elevation="0.0dip">
+        <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:analyticsId="8924e1f6-01c7" app:contentInsetStartWithNavigation="0.0dip" app:layout_collapseMode="pin" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:titleTextAppearance="@style/Platform.TextStyle.H3.Book" style="@style/Widget.Platform.Toolbar" />
+    </com.ubercab.ui.core.UAppBarLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/ui__spacing_unit_2x">
+        <com.ubercab.ui.core.UTextView android:id="@id/login_request_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_request_title" style="@style/Platform.TextStyle.H2.News" />
+        <com.ubercab.ui.core.UTextView android:id="@id/login_request_body" android:paddingTop="@dimen/ui__spacing_unit_4x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_request_body_short" style="@style/Platform.TextStyle.H3.News.Secondary" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:paddingTop="@dimen/ui__spacing_unit_4x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:id="@id/login_request_clock_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub__loginconfirmation_ic_clock" />
+            <com.ubercab.ui.core.UTextView android:id="@id/login_request_time" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H3.News.Secondary" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:id="@id/login_request_location_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ub__loginconfirmation_ic_location" />
+            <com.ubercab.ui.core.UTextView android:id="@id/login_request_location" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H3.News.Secondary" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <androidx.legacy.widget.Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/login_request_confirm_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_request_yes" app:analyticsId="a586c356-382b" app:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+        <com.ubercab.ui.core.button.BaseMaterialButton android:id="@id/login_request_deny_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/login_request_no" app:analyticsId="0a816368-e3a7" app:buttonType="secondary" style="@style/Platform.Button.BaseDynamic" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.loginrequest.LoginRequestConfirmationView>

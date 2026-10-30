@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.bug_reporter.ui.details.extension.advanced_settings.IssueDetailsAdvancedSettingsView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:id="@id/bug_reporter_show_advanced_settings_button" android:paddingTop="@dimen/ui__spacing_unit_1x" android:paddingBottom="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bug_reporter_issue_show_advanced_settings" uber:analyticsId="df262925-1798" style="@style/Platform.TextStyle.LabelSmall" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/bug_reporter_advanced_settings_parent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/bug_reporter_issue_severity_parent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="end|bottom" android:padding="?contentInset" android:layout_width="wrap_content" android:layout_height="wrap_content" uber:analyticsId="52c7de6b-6960" uber:srcCompat="@drawable/ic_dropdown_arrow" />
+            <com.ubercab.ui.core.UTextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:hint="@string/bug_reporter_issue_severity_hint" uber:analyticsId="bdff4633-7e3a">
+                <com.ubercab.ui.core.UTextInputEditText android:id="@id/bug_reporter_issue_severity_edittext" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="none" uber:analyticsId="51f120d0-79e7" style="@style/Platform.TextStyle.EditText" />
+            </com.ubercab.ui.core.UTextInputLayout>
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.bug_reporter.ui.details.extension.advanced_settings.IssueDetailsAdvancedSettingsView>

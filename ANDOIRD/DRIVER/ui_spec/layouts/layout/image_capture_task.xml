@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/image_capture_photo" />
+    <com.ubercab.ui.core.UPlainView android:id="@id/image_capture_divider" android:background="?borderOpaque" android:layout_width="fill_parent" android:layout_height="@dimen/image_capture_divider_width" />
+    <com.ubercab.ui.core.ULinearLayout android:id="@id/image_capture_note_container" android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" />
+</merge>

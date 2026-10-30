@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.MobileStudioView android:theme="@style/Base.MobileStudio" android:id="@id/ub__mobilestudio_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_gravity="end" android:background="?ms_colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/mobilestudio_menu_content_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ViewStub android:id="@id/ub__mobilestudio_menu_content_header" android:layout="@layout/mobilestudio_drawer_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ub__mobilestudio_padding_2x" />
+            <TextView android:id="@id/mobilestudio_search_empty" android:padding="@dimen/ub__mobilestudio_plugin_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ub__mobilestudio_search_empty" />
+        </LinearLayout>
+    </ScrollView>
+</com.uber.mobilestudio.MobileStudioView>

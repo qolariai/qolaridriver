@@ -1,0 +1,20 @@
+{
+ "colors": {
+  "color": {
+   "m3_sys_color_light_on_error_container": "@color/m3_ref_palette_error30",
+   "m3_sys_color_light_on_primary_container": "@color/m3_ref_palette_primary30",
+   "m3_sys_color_light_on_secondary_container": "@color/m3_ref_palette_secondary30",
+   "m3_sys_color_light_on_tertiary_container": "@color/m3_ref_palette_tertiary30"
+  }
+ },
+ "styles": {
+  "styles": {
+   "OptOutEdgeToEdgeEnforcement": {
+    "parent": null,
+    "items": {
+     "android:windowOptOutEdgeToEdgeEnforcement": "true"
+    }
+   }
+  }
+ }
+}

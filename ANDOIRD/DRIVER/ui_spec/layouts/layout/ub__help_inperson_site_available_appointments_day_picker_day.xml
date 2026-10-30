@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H3.Book" android:textColor="@color/ub__help_inperson_site_available_appointments_day_text_secondary" android:id="@id/help_inperson_site_available_appointments_day_picker_day_secondary" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="f7246aa0-cbcc" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.H3.News" android:textColor="@color/ub__help_inperson_site_available_appointments_day_text_primary" android:id="@id/help_inperson_site_available_appointments_day_picker_day_primary" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="d5564a1a-29df" />
+</com.ubercab.ui.core.ULinearLayout>

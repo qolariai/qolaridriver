@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UToolbar android:id="@id/task_modal_fullscreen_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetStartWithNavigation="@dimen/ui__spacing_unit_0x" app:navigationIcon="@drawable/ub_ic_x" style="@style/Widget.Platform.Toolbar">
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:layout_gravity="center" android:id="@id/task_modal_fullscreen_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:titleTextAppearance="@style/Platform.TextStyle.LabelLarge" style="@style/Platform.TextStyle.Paragraph.Medium" />
+    </com.ubercab.ui.core.UToolbar>
+    <com.ubercab.ui.core.URecyclerView android:id="@id/task_modal_fullscreen_recycler_view" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.uber.taskbuildingblocks.views.taskbutton.TaskFooterView android:id="@id/task_modal_fullscreen_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

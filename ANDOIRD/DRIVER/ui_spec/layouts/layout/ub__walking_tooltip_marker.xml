@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.map_ui.tooltip.optional.WalkingTooltipView android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="?android:textColorTertiary"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__text_container" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageView android:layout_gravity="center_vertical" android:id="@id/ub__icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="?android:textColorPrimaryInverse" />
+        <com.ubercab.ui.core.UTextView android:layout_gravity="center_vertical" android:id="@id/ub__label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H6.News.Primary.Inverse" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.map_ui.tooltip.optional.WalkingTooltipView>

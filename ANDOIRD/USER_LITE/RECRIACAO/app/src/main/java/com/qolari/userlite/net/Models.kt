@@ -78,47 +78,13 @@ data class UpdateAccount(
 
 data class HomePlaceRequest(val placeId: String)
 
+data class RateRequest(val stars: Int, val comment: String = "")
+
 data class SavedPlaceResponse(val savedPlace: Place = Place())
-
-data class BusinessProfile(
-    val active: Boolean = false,
-    val companyName: String = "",
-    val vat: String = "",
-    val email: String = "",
-    val costCenter: String = "",
-)
-
-data class FamilyMember(val name: String = "", val phone: String = "", val teen: Boolean = false)
-
-data class FamilyGroup(val members: List<FamilyMember> = emptyList(), val code: String = "")
-
-data class UberOne(val active: Boolean = false, val until: Long? = null, val plan: String = "")
-
-data class AccountExtrasResponse(
-    val business: BusinessProfile = BusinessProfile(),
-    val family: FamilyGroup = FamilyGroup(),
-    val uberOne: UberOne = UberOne(),
-)
-
-data class ScreenShareDto(
-    val uuid: String = "",
-    val active: Boolean = false,
-    val frameAt: Long? = null,
-    val hasFrame: Boolean = false,
-    val createdAt: Long = 0,
-)
-
-data class ScreenShareResponse(val share: ScreenShareDto? = null)
 
 data class RoutePoint(val lat: Double = 0.0, val lng: Double = 0.0, val address: String = "")
 
 data class QuoteRequest(val pickup: RoutePoint, val dropoff: RoutePoint)
-
-data class RouteRequest(val origin: RoutePoint, val destination: RoutePoint)
-
-data class RoutePointDto(val latitude: Double = 0.0, val longitude: Double = 0.0)
-
-data class RouteResponse(val polyline: List<RoutePointDto> = emptyList())
 
 data class QuoteProduct(
     val id: Int = 0,
@@ -151,8 +117,6 @@ data class RequestTrip(
     val productId: Int,
     val payment: String = "cash",
     val promoCode: String? = null,
-    val scheduledAt: Long? = null,
-    val stops: List<RoutePoint> = emptyList(),
 )
 
 data class Vehicle(
@@ -171,7 +135,6 @@ data class TripDriver(
     val phone: String = "",
     val lat: Double? = null,
     val lng: Double? = null,
-    val heading: Double = 0.0,
     val vehicle: Vehicle? = null,
 )
 
@@ -182,31 +145,18 @@ data class Fare(
     val discount: String? = null,
 )
 
-data class TripStop(
-    val lat: Double = 0.0,
-    val lng: Double = 0.0,
-    val address: String = "",
-    val done: Boolean = false,
-)
-
 data class Trip(
     val uuid: String = "",
     val state: String = "requested",
     val createdAt: Long = 0,
-    val scheduledAt: Long? = null,
     val product: TripProduct = TripProduct(),
     val pickup: RoutePoint = RoutePoint(),
-    val stops: List<TripStop> = emptyList(),
-    val nextStopIndex: Int? = null,
     val dropoff: RoutePoint = RoutePoint(),
     val pin: String? = null,
     val driver: TripDriver? = null,
     val driverEtaMin: Int? = null,
     val tripEtaMin: Int? = null,
     val fare: Fare = Fare(),
-    val tipCents: Int = 0,
-    val totalCents: Int = 0,
-    val canTip: Boolean = false,
     val payment: String = "cash",
     val canCancel: Boolean = false,
     val canRate: Boolean = false,
@@ -220,9 +170,6 @@ data class Trip(
 data class TripProduct(val id: Int = 0, val name: String = "")
 
 data class TripResponse(val trip: Trip? = null)
-
-/** Corpo do POST /rt/lite/trips/{uuid}/rate. Tipo concreto: o Retrofit rejeita `Map<String, ?>` como @Body. */
-data class RateRequest(val stars: Int, val comment: String = "")
 
 data class HistoryTrip(
     val uuid: String = "",
@@ -249,75 +196,5 @@ data class PromotionsResponse(
 )
 
 data class AppliedPromo(val code: String = "", val description: String = "", val valid: Boolean = true)
-
-data class ReceiptLine(val label: String = "", val amountCents: Int = 0)
-
-data class Receipt(
-    val uuid: String = "",
-    val date: String = "",
-    val pickup: String = "",
-    val dropoff: String = "",
-    val product: String = "",
-    val payment: String = "",
-    val driverName: String = "",
-    val distanceKm: Double = 0.0,
-    val durationMin: Int = 0,
-    val lines: List<ReceiptLine> = emptyList(),
-    val totalCents: Int = 0,
-    val total: String = "",
-    val tipCents: Int = 0,
-)
-
-data class ReceiptResponse(val receipt: Receipt? = null)
-
-data class DisputeResponse(val thread: SupportThreadDto? = null)
-
-data class TopUpResponse(val cash: Cash = Cash())
-
-data class SupportThreadDto(
-    val uuid: String = "",
-    val category: String = "",
-    val status: String = "",
-    val updatedAt: Long = 0,
-    val lastMessage: String = "",
-    val unread: Int = 0,
-)
-
-data class SupportMessageDto(
-    val id: Int = 0,
-    val sender: String = "",
-    val body: String = "",
-    val createdAt: Long = 0,
-    val fileName: String = "",
-    val hasFile: Boolean = false,
-)
-
-data class SupportThreadsResponse(val threads: List<SupportThreadDto> = emptyList())
-
-data class SupportThreadResponse(
-    val thread: SupportThreadDto? = null,
-    val messages: List<SupportMessageDto> = emptyList(),
-)
-
-data class SafetyContact(
-    val uuid: String = "",
-    val name: String = "",
-    val phone: String = "",
-    val createdAt: Long = 0,
-)
-
-data class SafetyContactsResponse(
-    val contacts: List<SafetyContact> = emptyList(),
-    val limit: Int = 10,
-)
-
-data class SafetyContactResponse(val contact: SafetyContact? = null)
-
-data class SafetyShareResponse(
-    val token: String = "",
-    val path: String = "",
-    val url: String = "",
-    val expiresAt: Long = 0,
-)
 
 data class ApiError(val code: String? = null, val message: String? = null)

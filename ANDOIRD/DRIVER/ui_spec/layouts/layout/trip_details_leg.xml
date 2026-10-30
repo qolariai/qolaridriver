@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.trip_details.TripDetailsLegView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.commons.image.AspectRatioImageView android:id="@id/leg_map" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/trip_details_leg_header" />
+    <com.ubercab.ui.core.UImageView android:paddingLeft="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" uber:srcCompat="?dividerHorizontal" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/ui__spacing_unit_4x" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingRight="@dimen/ui__spacing_unit_4x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.UPlainView android:background="?colorPositive" android:layout_width="@dimen/ui__spacing_unit_1x" android:layout_height="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+            <com.ubercab.ui.core.UPlainView android:background="?brandGrey80" android:layout_width="@dimen/ui__divider_width" android:layout_height="@dimen/ui__spacing_unit_5x" android:layout_marginStart="@dimen/ub__trip_leg_connector_line_spacing" />
+            <com.ubercab.ui.core.UPlainView android:background="?colorNegative" android:layout_width="@dimen/ui__spacing_unit_1x" android:layout_height="@dimen/ui__spacing_unit_1x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.ubercab.ui.core.UTextView android:id="@id/leg_pickup_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H6.News.Secondary" />
+            <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/leg_pickup_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.H5.News.Primary" />
+            <com.ubercab.ui.core.UTextView android:id="@id/leg_dropoff_label" android:paddingTop="@dimen/ui__spacing_unit_1x" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.H6.News.Secondary" />
+            <com.ubercab.ui.core.UTextView android:ellipsize="end" android:id="@id/leg_dropoff_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.H5.News.Primary" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.trip_details.TripDetailsLegView>

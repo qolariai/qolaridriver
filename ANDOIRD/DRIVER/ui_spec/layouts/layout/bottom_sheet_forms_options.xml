@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="?backgroundPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:text="Options" android:layout_marginStart="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.HeadingSmall" />
+    <com.ubercab.ui.core.USwitchCompat android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:gravity="center_vertical" android:id="@id/option_checked" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:checked="true" android:text="Checked" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" />
+    <com.ubercab.ui.core.USwitchCompat android:textAppearance="@style/Platform.TextStyle.LabelDefault" android:gravity="center_vertical" android:id="@id/option_enabled" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" android:checked="true" android:text="Enabled" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" />
+</com.ubercab.ui.core.ULinearLayout>

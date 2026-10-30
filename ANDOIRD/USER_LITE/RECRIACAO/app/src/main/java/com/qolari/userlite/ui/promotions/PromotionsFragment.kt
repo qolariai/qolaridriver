@@ -57,7 +57,6 @@ class PromotionsFragment : Fragment() {
                     binding.message.setTextColor(
                         requireContext().getColor(if (state.error != null) R.color.ql_red else R.color.ql_gray_500)
                     )
-                    binding.empty.isVisible = !state.loading && state.applied.isEmpty()
                     binding.applied.isVisible = state.applied.isNotEmpty()
                     binding.appliedTitle.isVisible = state.applied.isNotEmpty()
                     adapter.submit(state.applied)

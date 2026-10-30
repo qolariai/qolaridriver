@@ -4,18 +4,11 @@ r"""Arranque:  .venv\Scripts\python server.py
 Abre as 4 portas num so processo (uvicorn com varios sockets). Se uma porta estiver ocupada
 (ex.: Apache do XAMPP na 80) avisa e continua com as outras.
 """
-import os
 import socket, sys
 
 import uvicorn
 
 import config
-
-# Rota por estrada no laboratório: o demo público do OSRM. Se falhar, routing.py cai na linha reta.
-# Os testes não passam por aqui (importam main.py), por isso continuam offline.
-os.environ.setdefault("ROUTING_URL", "https://router.project-osrm.org")
-
-config.validate_production()
 
 LABEL = {"driver": "Qolari Driver", "rider": "Qolari Rider", "fleet": "Qolari Fleet"}
 

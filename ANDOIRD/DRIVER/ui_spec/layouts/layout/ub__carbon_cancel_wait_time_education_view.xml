@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UImageButton android:id="@id/cancel_wait_time_education_back" android:background="?selectableItemBackgroundBorderless" android:paddingTop="@dimen/ui__spacing_unit_1.5x" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2.5x" android:paddingEnd="@dimen/ui__spacing_unit_1.5x" app:srcCompat="@drawable/ub_ic_arrow_left" />
+        <com.ubercab.ui.core.UTextView android:id="@id/cancel_wait_time_education_nav_title" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_1.5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_1.5x" android:paddingEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="caa13752-fb1c" style="@style/Platform.TextStyle.LabelLarge" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/cancel_wait_time_education_bar_container" android:paddingBottom="@dimen/ui__elevation_medium" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_0x" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.UTextView android:id="@id/cancel_wait_time_education_title" android:paddingTop="@dimen/ui__spacing_unit_2.5x" android:paddingBottom="@dimen/ui__spacing_unit_2.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="5e6e88e9-4ea9" style="@style/Platform.TextStyle.DisplayXSmall" />
+            <com.ubercab.ui.core.UTextView android:id="@id/cancel_wait_time_education_description" android:paddingBottom="@dimen/ui__spacing_unit_2.5x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="c2024246-d79b" style="@style/Platform.TextStyle.ParagraphLarge" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/cancel_wait_time_education_actions" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

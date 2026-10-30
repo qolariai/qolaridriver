@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ub__post_linking_profile_switching_layout" android:background="?android:colorBackground" android:paddingBottom="@dimen/ui__spacing_unit_6x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__post_linking_profile_switching_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__post_linking_profile_switching_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.ubercab.ui.core.text.BaseTextView android:id="@id/ub__post_linking_profile_switching_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.HeadingSmall" />
+    <com.ubercab.ui.core.progress.BaseProgressBar android:id="@id/ub__profile_switching_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" app:baseprogress_type="circle_indeterminate" app:progress_size="large" />
+</com.ubercab.ui.core.ULinearLayout>

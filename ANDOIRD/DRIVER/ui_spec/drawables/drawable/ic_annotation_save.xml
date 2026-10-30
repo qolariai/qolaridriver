@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:name="save" android:height="29.0dip" android:width="29.0dip" android:viewportWidth="29.0" android:viewportHeight="29.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?iconColor" android:pathData="M 11.022 26.09 L 27.16 9.953 L 28.737 11.53 L 12.599 27.667 L 12.619 27.687 L 11.042 29.264 L 0 18.222 L 1.577 16.645 L 11.022 26.09 Z" android:strokeWidth="1.0" />
+</vector>

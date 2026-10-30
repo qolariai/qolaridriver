@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.destination.destination_inspection_sheet.DestinationInspectionSheetSecondaryView android:orientation="horizontal" android:id="@id/destination_inspection_sheet_secondary" android:background="?android:colorBackground" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?contentInset" android:paddingEnd="?contentInset" uber:analyticsId="9328a5af-32dc"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" uber:srcCompat="@drawable/ub_ic_location_marker" />
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:id="@id/destination_inspection_sheet_secondary_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/destination_inspection_sheet_secondary_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_1x" style="@style/Platform.TextStyle.P" />
+        <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:id="@id/destination_inspection_sheet_secondary_description" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Platform.TextStyle.P" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.destination.destination_inspection_sheet.DestinationInspectionSheetSecondaryView>

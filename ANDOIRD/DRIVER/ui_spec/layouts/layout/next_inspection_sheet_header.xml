@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.next_inspection_sheet.NextInspectionSheetHeaderView android:orientation="vertical" android:background="?android:colorBackground" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.URelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/ui__spacing_unit_1x" android:paddingEnd="@dimen/ui__spacing_unit_2x" android:layout_toStartOf="@id/inspection_sheet_icon_layout" android:layout_alignParentStart="true">
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@id/inspection_sheet_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" uber:autoSizeTextType="uniform" style="@style/Platform.TextStyle.Headline.Normal" />
+            <com.ubercab.ui.core.ULinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/inspection_sheet_header_description" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.Paragraph.Normal" />
+                <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/inspection_sheet_header_dot" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/description_distance_seperator_dot" android:layout_marginStart="@dimen/ui__spacing_unit_0.5x" android:layout_marginEnd="@dimen/ui__spacing_unit_0.5x" style="@style/Platform.TextStyle.Paragraph.Normal" />
+                <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:id="@id/inspection_sheet_header_distance" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Platform.TextStyle.Paragraph.Normal" />
+            </com.ubercab.ui.core.ULinearLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center|top" android:id="@id/inspection_sheet_icon_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/inspection_sheet_header_icon_circle" android:layout_width="?avatarMedium" android:layout_height="?avatarMedium" uber:srcCompat="@drawable/ub__carbon_icon_circle_small" />
+            <com.ubercab.ui.core.UImageView android:layout_gravity="center" android:id="@id/inspection_sheet_header_icon" android:layout_width="?avatarExtraTiny" android:layout_height="?avatarExtraTiny" android:tint="?android:textColorPrimaryInverse" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.URelativeLayout>
+</com.ubercab.next_inspection_sheet.NextInspectionSheetHeaderView>

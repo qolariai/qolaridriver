@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.partnersignup.webview.rib.PartnerSignupView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ubercab.ui.core.UToolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="?toolbarStyle" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/ub__partner_signup_webview_progressbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?actionBarSize" />
+</com.ubercab.partnersignup.webview.rib.PartnerSignupView>

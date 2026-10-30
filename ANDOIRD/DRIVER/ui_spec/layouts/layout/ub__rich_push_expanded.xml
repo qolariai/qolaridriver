@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/ub__rich_push_collapsed_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TextAppearance.Compat.Notification.Title" />
+    <TextView android:id="@id/ub__rich_push_expanded_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TextAppearance.Compat.Notification.Info" />
+    <TextView android:id="@id/ub__rich_push_collapsed_body" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TextAppearance.Compat.Notification" />
+    <ImageView android:id="@id/ub__rich_push_expanded_full_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ub__notification_media_margin" android:scaleType="centerCrop" android:adjustViewBounds="true" android:contentDescription="@string/ub__notification_image_desc" />
+</LinearLayout>

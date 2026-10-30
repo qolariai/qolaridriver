@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__social_profiles_tabs_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_2x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.button.BaseMaterialButton android:theme="@style/Theme.UberColorTokens.DayNight" android:id="@id/ub__social_profiles_rides_tab" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/social_profiles_rides" android:layout_weight="0.5" app:analyticsId="0015b1d9-fa6a" app:shape="pill" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+    <com.ubercab.ui.core.button.BaseMaterialButton android:theme="@style/Theme.UberColorTokens.DayNight" android:id="@id/ub__social_profiles_deliveries_tab" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/social_profiles_deliveries" android:layout_weight="0.5" app:analyticsId="f623075f-0885" app:shape="pill" app:size="large" style="@style/Platform.Button.BaseDynamic" />
+</com.ubercab.ui.core.ULinearLayout>

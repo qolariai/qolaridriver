@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.carbon_driver_menu.entry.badge.DriverMenuEntryBadgeView android:gravity="center" android:layout_gravity="end|top" android:id="@id/badge_view" android:background="@drawable/driver_ui_badge_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/driver_ui_badge_size" android:minHeight="@dimen/driver_ui_badge_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Meta.Bold" android:textSize="@dimen/carbon_ui__text_size_small" android:textColor="?android:textColorPrimaryInverse" android:layout_gravity="center" android:id="@id/badge_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center" app:analyticsId="6a791858-65f9" app:computeLineHeight="false" />
+</com.ubercab.carbon_driver_menu.entry.badge.DriverMenuEntryBadgeView>

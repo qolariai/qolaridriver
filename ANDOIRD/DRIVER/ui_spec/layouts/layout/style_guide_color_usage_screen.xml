@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UScrollView android:padding="?contentInset" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.ubercab.ui.core.UTextView android:textSize="@dimen/ui__text_size_medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="?contentInset" android:text="@string/style_guide_typography" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset">
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="textPrimary" android:layout_weight="1.0" style="@style/Platform.TextStyle.H3" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\#000000" style="@style/Platform.TextStyle.H3" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset">
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="textSecondary" android:layout_weight="1.0" style="@style/Platform.TextStyle.H3" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\#525760" style="@style/Platform.TextStyle.H3" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset">
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorTertiary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="textTertiary" android:layout_weight="1.0" style="@style/Platform.TextStyle.H3" />
+            <com.ubercab.ui.core.UTextView android:textColor="?android:textColorTertiary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\#A4A4AC" style="@style/Platform.TextStyle.H3" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" android:layout_marginTop="?contentInset" />
+        <com.ubercab.ui.core.UTextView android:textSize="@dimen/ui__text_size_medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:layout_marginBottom="?contentInset" android:text="Line" />
+        <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="@dimen/ui__spacing_unit_6x" android:layout_height="?dividerWidth" android:layout_marginTop="?contentInset" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset">
+            <com.ubercab.ui.core.UTextView android:textColor="?ruleColor" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="lineColor" android:layout_weight="1.0" style="@style/Platform.TextStyle.H3" />
+            <com.ubercab.ui.core.UTextView android:textColor="?ruleColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\#EDEDED" style="@style/Platform.TextStyle.H3" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UPlainView android:background="?ruleColor" android:layout_width="fill_parent" android:layout_height="?dividerWidth" android:layout_marginTop="?contentInset" />
+        <com.ubercab.ui.core.UTextView android:textSize="@dimen/ui__text_size_medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="?contentInset" android:layout_marginBottom="?contentInset" android:text="Icons" />
+        <com.ubercab.ui.core.UImageView android:layout_width="?avatarMedium" android:layout_height="?avatarMedium" android:layout_marginTop="?contentInset" app:srcCompat="@drawable/ub_ic_android" />
+        <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="?contentInset">
+            <com.ubercab.ui.core.UTextView android:textColor="?iconColor" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="iconColor" android:layout_weight="1.0" style="@style/Platform.TextStyle.H3" />
+            <com.ubercab.ui.core.UTextView android:textColor="?iconColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\#000000" style="@style/Platform.TextStyle.H3" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+</com.ubercab.ui.core.UScrollView>

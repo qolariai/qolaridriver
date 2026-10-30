@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" uber:analyticsId="9c5b35d3-2462"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.banner.BaseBanner android:id="@id/driver_preferences_feedback_banner" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/preferences_feedback_card_view_horizontal_margin_offset" android:layout_marginEnd="@dimen/preferences_feedback_card_view_horizontal_margin_offset" uber:analyticsId="9c5b35d3-2462" uber:banner_radius="default_radius" />
+</com.ubercab.ui.core.UFrameLayout>

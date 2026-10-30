@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.mobilestudio.styleguide.StyleGuideView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MobileStudio.Plugin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Style Guide" style="@style/MobileStudio.Plugin.Header" />
+    <Button android:id="@id/launch_styleguide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/ub__mobilestudio_padding_2x" android:text="Open Style Guide" />
+</com.uber.mobilestudio.styleguide.StyleGuideView>

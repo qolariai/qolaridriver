@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.chat_widget.system_message.action.SystemMessageActionsView android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:divider="@drawable/divider_space_2x" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

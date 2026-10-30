@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/ui__spacing_unit_8x"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ub__payment_bar_loading_container" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="36b62121-373e">
+        <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="@dimen/ui__spacing_unit_3x" android:layout_height="@dimen/ui__spacing_unit_3x" />
+        <com.ubercab.ui.core.placeholder.PlaceholderView android:layout_width="@dimen/ub__payment_bar_loading_placeholder_width" android:layout_height="@dimen/ui__spacing_unit_2x" android:layout_marginStart="@dimen/ui__spacing_unit_2x" app:placeholder_corner_radius="@dimen/ui__spacing_unit_0.5x" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__payment_bar_error_container" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="804ed76c-5f19">
+        <include android:layout_width="wrap_content" android:layout_height="fill_parent" layout="@layout/ub__payment_checkout_component_payment_bar_side_image" />
+        <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/ub__payment_bar_error_title_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/ub__payment_checkout_components_payment_bar_error_title" android:maxLines="3" android:layout_weight="1.0" android:textDirection="locale" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.LabelDefault" />
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/ub__payment_checkout_component_payment_bar_side_cta" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:orientation="horizontal" android:id="@id/ub__payment_bar_content_container" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="4bf68401-8a33">
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__payment_bar_leading_content_container" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ub__payment_bar_middle_content_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingStart="@dimen/ui__spacing_unit_2x" android:paddingEnd="@dimen/ui__spacing_unit_2x">
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentPrimary" android:ellipsize="end" android:id="@id/ub__payment_bar_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:textDirection="locale" style="@style/Platform.TextStyle.LabelDefault" />
+            <com.ubercab.ui.core.text.BaseTextView android:textColor="?contentSecondary" android:id="@id/ub__payment_bar_subtitle_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" android:textDirection="locale" style="@style/Platform.TextStyle.ParagraphSmall" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__payment_bar_trailing_content_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </com.ubercab.ui.core.ULinearLayout>
+</merge>

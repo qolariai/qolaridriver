@@ -35,7 +35,7 @@ class DiscoverFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        adapter = DiscoverAdapter(onFilter = viewModel::toggleFilter, onSave = viewModel::toggleSaved)
+        adapter = DiscoverAdapter(onSave = viewModel::toggleSaved)
         val manager = LinearLayoutManager(requireContext())
         binding.discoverList.layoutManager = manager
         binding.discoverList.adapter = adapter
@@ -45,14 +45,26 @@ class DiscoverFragment : Fragment() {
             }
         })
         buildDayStrip(viewModel.state.value.days)
+        with(binding.chipsHeader) {
+            chipReminders.setOnClickListener { viewModel.toggleFilter(DiscoverFilter.REMINDERS) }
+            chipPromos.setOnClickListener { viewModel.toggleFilter(DiscoverFilter.PROMOS) }
+            chipAirports.setOnClickListener { viewModel.toggleFilter(DiscoverFilter.AIRPORTS) }
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.state.collect { s ->
-                    adapter.submit(s.rows, s.filters)
+                    adapter.submit(s.rows)
+                    binding.chipsHeader.chipReminders.isSelected = DiscoverFilter.REMINDERS in s.filters
+                    binding.chipsHeader.chipPromos.isSelected = DiscoverFilter.PROMOS in s.filters
+                    binding.chipsHeader.chipAirports.isSelected = DiscoverFilter.AIRPORTS in s.filters
                     cells.forEach { (day, c) -> c.mark(day == s.selectedDay) }
                     cells[s.selectedDay]?.root?.let { cell ->
-                        binding.dayStripScroll.smoothScrollTo((cell.left - binding.dayStripScroll.width / 2 + cell.width / 2).coerceAtLeast(0), 0)
+                        binding.dayStripScroll.post {
+                            binding.dayStripScroll.smoothScrollTo(
+                                (cell.left - binding.dayStripScroll.width / 2 + cell.width / 2).coerceAtLeast(0), 0,
+                            )
+                        }
                     }
                 }
             }

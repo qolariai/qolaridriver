@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?red50" />
+    <stroke android:width="@dimen/ub__optional_help_video_fail_view_corner_width" android:color="?red200" />
+</shape>

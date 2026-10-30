@@ -11,10 +11,10 @@
         <item name="colorOnSurface">@color/ql_black</item>
         <item name="colorOnSurfaceVariant">@color/ql_gray_500</item>
         <item name="elevationOverlayEnabled">false</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/ql_white</item>
-        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:statusBarColor">@color/ql_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/ql_black</item>
+        <item name="android:windowLightNavigationBar">false</item>
         <item name="android:windowActionModeOverlay">true</item>
         <item name="materialButtonStyle">@style/Widget.QolariLite.Button</item>
     </style>

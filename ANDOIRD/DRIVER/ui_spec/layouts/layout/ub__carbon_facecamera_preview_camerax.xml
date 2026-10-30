@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.facecamera.facecameraV3.FaceCameraPreviewV3View android:orientation="vertical" android:background="?brandWhite" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UToolbar android:id="@id/ub__toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:titleTextColor="?brandBlack" style="@style/Widget.Platform.Toolbar">
+            <com.ubercab.ui.core.UTextView android:gravity="end" android:layout_gravity="end|center" android:id="@id/ub__carbon_facecamera_mask_help_link" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ub__carbon_facecamera_mask_help_link" android:paddingStart="@dimen/ui__spacing_unit_0x" android:paddingEnd="@dimen/ui__spacing_unit_2.5x" app:analyticsId="5d9ed5f8-de28" style="@style/Platform.TextStyle.LabelLarge" />
+        </com.ubercab.ui.core.UToolbar>
+        <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__carbon_facecamera_root_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/ub__carbon_facecamera_camerax_view" />
+            <com.ubercab.ui.core.UPlainView android:layout_gravity="top" android:id="@id/ub__facecamera_scanbar" android:background="@drawable/ub__carbon_facecamera_scanbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ub__carbon_facecamera_verification_camera_scanbar_height" />
+            <include layout="@layout/ub__carbon_facecamera_mask_v2" />
+            <com.ubercab.ui.core.UFrameLayout android:layout_gravity="center|bottom" android:id="@id/ub__carbon_facecamera_guide" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center" android:id="@id/ub__carbon_facecamera_eye_mouth_guide" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="0391e228-efe3" app:srcCompat="@drawable/ub__carbon_facecamera_eyes_mouth" />
+                <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center|bottom" android:id="@id/ub__facecamera_face_guide" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="220d2fc5-0991" app:srcCompat="@drawable/ub__carbon_facecamera_face_outline" />
+                <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center|bottom" android:id="@id/ub__carbon_facecamera_mask" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="0e731d4d-32b3" app:srcCompat="@drawable/ub__carbon_facecamera_full_mask" />
+            </com.ubercab.ui.core.UFrameLayout>
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="end|top" android:id="@id/ub__facecamera_selfie_taking_guide_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/ub__carbon_facecamera_photo_tips" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="f1e7c973-c0f2" app:srcCompat="@drawable/ub__carbon_facecamera_mask_help_btn" />
+        </com.ubercab.ui.core.UFrameLayout>
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.UTextView android:textColor="?textMonoPrimary" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ub__carbon_facecamera_mask_help_note" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_5x" android:text="@string/ub__carbon_facecamera_mask_help_note" android:layout_marginStart="@dimen/ui__spacing_unit_3x" android:layout_marginEnd="@dimen/ui__spacing_unit_3x" app:analyticsId="8e2b0cc9-3363" style="@style/Platform.TextStyle.HeadingSmall" />
+        <com.ubercab.ui.core.ULinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/ub__carbon_facecamera_controls_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ui__spacing_unit_3x">
+            <com.ubercab.ui.core.UTextView android:textColor="?brandWhite" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/ub__carbon_facecamera_help" android:background="@drawable/ub__carbon_facecamera_oval_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/ub__carbon_facecamera_verification_camera_max_help_text_width" android:text="@string/ub__carbon_facecamera_help_message_face_guide" android:drawablePadding="@dimen/ui__spacing_unit_1x" android:lineSpacingMultiplier="1.25" android:paddingStart="@dimen/ui__spacing_unit_2x" app:analyticsId="c45192d4-3b2b" style="@style/Platform.TextStyle.H6.News.Secondary.Inverse" />
+            <include layout="@layout/ub__carbon_facecamera_shutter_button" />
+        </com.ubercab.ui.core.ULinearLayout>
+        <com.ubercab.facecamera.widget.DotProgressBar android:layout_gravity="center|bottom" android:id="@id/ub__carbon_facecamera_verification_camera_progress_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_6x" android:layout_marginBottom="@dimen/ui__spacing_unit_6x" />
+        <include layout="@layout/ub__carbon_facecamera_success_view" />
+        <include layout="@layout/ub__carbon_facecamera_mask_verification_success_view" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <include layout="@layout/ub__carbon_facecamera_help" />
+    <include layout="@layout/ub__carbon_facecamera_mask_help" />
+</com.ubercab.facecamera.facecameraV3.FaceCameraPreviewV3View>

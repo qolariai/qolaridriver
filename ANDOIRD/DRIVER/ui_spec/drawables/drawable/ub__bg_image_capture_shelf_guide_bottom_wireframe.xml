@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:topLeftRadius="@dimen/ui__spacing_unit_1x" android:topRightRadius="@dimen/ui__spacing_unit_1x" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+    <stroke android:width="@dimen/ub__bg_image_capture_shelf_guide_top_wireframe_stroke_width" android:color="?warning" />
+</shape>

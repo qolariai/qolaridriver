@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="?colorPositive" />
+            <size android:height="@dimen/ui__spacing_unit_3x" android:width="@dimen/ui__spacing_unit_3x" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:id="@id/person_icon" android:height="@dimen/ui__spacing_unit_2x" android:width="@dimen/ui__spacing_unit_2x" android:drawable="@drawable/ub__voip_ic_person" />
+</layer-list>

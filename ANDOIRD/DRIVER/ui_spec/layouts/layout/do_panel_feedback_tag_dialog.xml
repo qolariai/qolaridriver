@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:background="@drawable/ub__bottomsheet_background" android:padding="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="1d7ad898-b5ca"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/feedback_tag_dialog_close" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_close" />
+    <com.ubercab.ui.core.UTextView android:textAppearance="@style/Platform.TextStyle.Small.Normal" android:gravity="center_horizontal" android:id="@id/feedback_tag_dialog_title" android:padding="@dimen/ui__spacing_unit_1x" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/what_went_wrong" />
+    <com.ubercab.ui.commons.tag_selection.TagSelectionLayout android:gravity="center" android:id="@id/feedback_tag_dialog_tags_view" android:paddingTop="@dimen/ui__spacing_unit_2x" android:paddingBottom="@dimen/ui__spacing_unit_2x" android:layout_width="fill_parent" android:layout_height="wrap_content" app:gutter="@dimen/ui__spacing_unit_1x" />
+    <com.ubercab.ui.core.UButton android:gravity="center_horizontal" android:id="@id/feedback_tag_dialog_add_comment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/ui__spacing_unit_1x" android:text="@string/add_comment" app:analyticsId="5ae09744-8227" style="@style/Platform.Button.Borderless" />
+    <com.ubercab.ui.core.UButton android:id="@id/feedback_tag_dialog_save" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/save" style="@style/Platform.Button.Primary" />
+</com.ubercab.ui.core.ULinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.consent.primer.fullscreen.PrimerFullScreenView android:orientation="vertical" android:background="?brandTransparent" android:fitsSystemWindows="@bool/use_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:uber="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/consent_frame" android:fitsSystemWindows="@bool/use_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:fitsSystemWindows="@bool/use_transparent_status_bar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.ubercab.ui.commons.widget.GravityImageView android:gravity="top" android:id="@id/consent_illustration" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="30.0" android:layout_centerHorizontal="true" android:importantForAccessibility="no" uber:imageGravity="bottom|center_horizontal" uber:imageScaleMode="crop" />
+            <com.ubercab.ui.core.UFrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="70.0">
+                <com.ubercab.ui.commons.widget.BitLoadingIndicator android:id="@id/consent_loading_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="?lineIndicatorHeight" uber:bli_bitColor="?colorAccent" />
+                <com.ubercab.ui.core.ULinearLayout android:orientation="vertical" android:paddingLeft="?contentInset" android:paddingRight="?contentInset" android:paddingBottom="?contentInset" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="?contentInset" android:paddingEnd="?contentInset">
+                    <com.ubercab.ui.core.UTextView android:layout_gravity="center|top" android:id="@id/consent_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_3x" style="@style/Platform.TextStyle.H3.News" />
+                    <com.ubercab.ui.core.UTextView android:layout_gravity="center|top" android:id="@id/consent_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" style="@style/Platform.TextStyle.P" />
+                    <Space android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                    <include layout="@layout/ub__consent_buttons" />
+                    <com.ubercab.ui.core.UTextView android:id="@id/consent_legal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_1x" style="@style/Platform.TextStyle.H6.News.Tertiary" />
+                </com.ubercab.ui.core.ULinearLayout>
+            </com.ubercab.ui.core.UFrameLayout>
+        </com.ubercab.ui.core.ULinearLayout>
+        <include layout="@layout/fixed_header" />
+    </com.ubercab.ui.core.UFrameLayout>
+</com.ubercab.presidio.consent.primer.fullscreen.PrimerFullScreenView>

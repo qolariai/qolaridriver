@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.uber.carbon.features.contact_recipient.GenericPinContactRecipientView android:orientation="vertical" android:background="@drawable/ub__bottomsheet_background" android:padding="@dimen/ui__spacing_unit_3x" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.ULinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/contact_option_call" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="6c28f132-87f6" app:srcCompat="@drawable/ub_ic_phone" />
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.Headline.Normal" android:textColor="?android:textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/contact_option_call_recipient" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_3x" app:analyticsId="193832ed-bde7" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/contact_option_sms" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="e091c6b5-511c" app:srcCompat="@drawable/ub_ic_speech_bubble" />
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.Headline.Normal" android:textColor="?android:textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/contact_option_sms_recipient" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_3x" app:analyticsId="183044f5-c805" />
+    </com.ubercab.ui.core.ULinearLayout>
+    <com.ubercab.ui.core.ULinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/contact_options_close" android:layout_width="fill_parent" android:layout_height="@dimen/ui__spacing_unit_7x">
+        <com.ubercab.ui.core.image.BaseImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:analyticsId="0d5ffedb-1874" app:srcCompat="@drawable/ub_ic_x" />
+        <com.ubercab.ui.core.text.BaseTextView android:textAppearance="@style/Platform.TextStyle.Headline.Normal" android:textColor="?android:textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/contact_option_close" android:layout_weight="1.0" android:layout_marginStart="@dimen/ui__spacing_unit_3x" app:analyticsId="8cb7d64e-a41c" />
+    </com.ubercab.ui.core.ULinearLayout>
+</com.uber.carbon.features.contact_recipient.GenericPinContactRecipientView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.image.BaseImageView android:id="@id/ub__payment_spender_arrears_confirmation_toolbar_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?gutterSize" android:layout_marginBottom="@dimen/ui__spacing_unit_3x" android:contentDescription="@string/ub__payment_close" app:analyticsId="b71c8ff8-0364" app:srcCompat="@drawable/ic_close" />
+    <com.ubercab.ui.core.UFrameLayout android:id="@id/ub__payment_spender_arrears_confirmation_container" android:paddingBottom="@dimen/ui__spacing_unit_9x" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.ubercab.ui.core.emptystate.EmptyStateView android:layout_gravity="center" android:id="@id/ub__payment_spender_arrears_confirmation_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:empty_state_action_title="@string/ub__settle_spender_arrears_payment_done" app:empty_state_add_bottom_padding="false" app:empty_state_headline_text="@string/ub__settle_spender_arrears_thanks" app:empty_state_paragraph_text="@string/ub__settle_spender_arrears_payment_received" app:empty_state_type="success" />
+    </com.ubercab.ui.core.UFrameLayout>
+</merge>

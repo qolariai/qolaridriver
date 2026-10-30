@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.wallet_home.ui.view.WalletProgressView android:orientation="vertical" android:id="@id/ub__wallet_expanded_card_progress_bar_container" android:paddingTop="@dimen/ui__spacing_unit_3x" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UProgressBar android:id="@id/ub__wallet_expanded_card_progress_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:progressBarStyleHorizontal" />
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__wallet_expanded_card_indicator_start" android:paddingTop="@dimen/ui__spacing_unit_1.5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/ub__wallet_expanded_card_progress_bar" android:layout_alignParentStart="true" app:analyticsId="54e21dfc-f221" style="@style/Platform.TextStyle.ParagraphDefault" />
+    <com.ubercab.ui.core.UTextView android:id="@id/ub__wallet_expanded_card_indicator_end" android:paddingTop="@dimen/ui__spacing_unit_1.5x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/ub__wallet_expanded_card_progress_bar" android:layout_alignParentEnd="true" app:analyticsId="c637049b-05ca" style="@style/Platform.TextStyle.ParagraphDefault" />
+</com.ubercab.wallet_home.ui.view.WalletProgressView>

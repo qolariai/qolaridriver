@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.safety_media_ui.onboarding.templates.audio.AudioRecordingOnboardingScreenTemplate android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:analyticsId="e44e623d-2297"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/content_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.image.BaseImageView android:layout_gravity="center_horizontal" android:id="@id/audio_recording_setup_template1_image" android:layout_width="@dimen/ub__safety_audio_recording_image_size" android:layout_height="@dimen/ub__safety_audio_recording_image_size" app:analyticsId="57ca2174-e6a4" />
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/audio_recording_setup_template1_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textDirection="locale" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="27fefdad-d33f" style="@style/Platform.TextStyle.HeadingXSmall" />
+            <com.ubercab.ui.core.text.BaseTextView android:id="@id/audio_recording_setup_template1_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ui__spacing_unit_2x" android:textDirection="locale" android:layout_marginStart="@dimen/ui__spacing_unit_2x" android:layout_marginEnd="@dimen/ui__spacing_unit_2x" app:analyticsId="9c6b66fd-50e8" style="@style/Platform.TextStyle.ParagraphDefault" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.safety_media_ui.onboarding.templates.audio.AudioRecordingOnboardingScreenTemplate>

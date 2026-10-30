@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ubercab.presidio.payment.uberpay.operation.submitted.UberPayCollectSubmittedView android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:analyticsId="a26774a1-5536"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:uber="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.ubercab.ui.core.UImageView android:id="@id/ub__payment_uberpay_collect_submitted_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?gutterSize" android:layout_marginTop="@dimen/ui__spacing_unit_3x" android:layout_marginRight="?gutterSize" android:contentDescription="@string/ub__payment_uberpay_close" app:analyticsId="b9451734-91c2" app:srcCompat="@drawable/ic_close" />
+    <com.ubercab.ui.core.UScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <com.ubercab.ui.core.ULinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.ubercab.ui.core.emptystate.EmptyStateView android:layout_gravity="center" android:id="@id/ub__payment_uberpay_collect_submitted_empty_state_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:empty_state_add_bottom_padding="false" />
+        </com.ubercab.ui.core.ULinearLayout>
+    </com.ubercab.ui.core.UScrollView>
+</com.ubercab.presidio.payment.uberpay.operation.submitted.UberPayCollectSubmittedView>
