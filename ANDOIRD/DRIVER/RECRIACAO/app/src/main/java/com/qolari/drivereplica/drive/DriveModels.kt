@@ -60,6 +60,9 @@ data class ActiveTrip(
     /** Destino final, para desenhar o 2.º leg do percurso (vermelho) na ida à recolha. */
     val dropoffLat: Double? = null,
     val dropoffLng: Double? = null,
+    /** Coordenadas da recolha, para o pino verde da fase 1 (vídeo 2026-10-30). */
+    val pickupLat: Double? = null,
+    val pickupLng: Double? = null,
     /** Telefone do passageiro, para o botão de chamada do ecrã de espera. */
     val riderPhone: String? = null,
 )
@@ -160,6 +163,8 @@ object DriveParser {
             product = tripInfo?.str("productName"),
             dropoffLat = tripInfo?.get("dropoffLat")?.takeIf { it.isJsonPrimitive }?.asDouble,
             dropoffLng = tripInfo?.get("dropoffLng")?.takeIf { it.isJsonPrimitive }?.asDouble,
+            pickupLat = tripInfo?.get("pickupLat")?.takeIf { it.isJsonPrimitive }?.asDouble,
+            pickupLng = tripInfo?.get("pickupLng")?.takeIf { it.isJsonPrimitive }?.asDouble,
             riderPhone = tripInfo?.str("riderPhone"),
         )
     }

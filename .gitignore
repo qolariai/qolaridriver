@@ -1,4 +1,4 @@
-# --- github-sync ---
+﻿# --- github-sync ---
 .env
 .env.*
 !.env.example
@@ -72,3 +72,7 @@ BACKEND BACKOOFICE CLONADO/
 ANDOIRD/**/TESTE/
 ANDOIRD/**/build/
 
+
+# --- frames de video (analise local, nao e codigo do projeto) ---
+ANDOIRD/**/ux_capture/honor_4603/
+ANDOIRD/**/ux_capture/video_*/

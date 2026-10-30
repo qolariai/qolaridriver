@@ -160,20 +160,36 @@ class MapFragment : Fragment(R.layout.fragment_map) {
                         if (tripRoute.size > 2) {
                             b.mapFull.setOfferRoutes(toPickup, tripRoute, cardH())
                         } else {
+                            // Sem a rota do servidor, pede-se a perna cliente -> destino aqui,
+                            // para as DUAS pernas ficarem sempre visíveis até aceitar/recusar.
                             DirectionsClient.fetch(requireContext(), pickup.first, pickup.second, dropoff.first, dropoff.second) { trip ->
-                                if (binding != null && trip.size > 1) b.mapFull.setOfferRoutes(toPickup, trip, cardH())
+                                if (binding == null) return@fetch
+                                // Mesmo com falha no Google, desenha-se a ligação direta:
+                                // um cartão sem traço nenhum não mostra o percurso.
+                                val tripLeg = if (trip.size > 1) trip else listOf(pickup, dropoff)
+                                val pickLeg = if (toPickup.size > 1) toPickup else listOf(from, pickup)
+                                b.mapFull.setOfferRoutes(pickLeg, tripLeg, cardH())
                             }
                         }
                     }
                 } else {
-                    b.mapFull.setOfferRoutes(emptyList(), tripRoute, cardH())
+                    // Sem GPS: liga o motorista à recolha e a recolha ao destino na mesma.
+                    val tripLeg = if (tripRoute.size > 2) tripRoute else listOf(pickup, dropoff)
+                    b.mapFull.setOfferRoutes(emptyList(), tripLeg, cardH())
                 }
 
                 card.post {
                     if (binding == null) return@post
-                    // Só reenquadra a câmara: não mexe nos traços nem pára o varrimento.
+                    // Plano amplo: as duas pernas + motorista, sempre visíveis.
                     b.mapFull.reframe()
                 }
+                // Repete depois do layout: a altura real do cartão só é conhecida então.
+                b.mapFull.postDelayed({
+                    if (binding != null) b.mapFull.reframe()
+                }, 400)
+                b.mapFull.postDelayed({
+                    if (binding != null) b.mapFull.reframe()
+                }, 900)
             }
             b.mapFull.showOfferMarkers = true
             return
@@ -198,12 +214,24 @@ class MapFragment : Fragment(R.layout.fragment_map) {
             // do ecrã inicial — sem isto "não se percebe nada" (feedback de 2026-10-30).
             b.mapFull.thickNavigation = true
             if (d.route.size > 1 && d.route != b.mapFull.route) b.mapFull.route = d.route
+            // Pino da paragem da fase (vídeo 2026-10-30): verde na recolha, vermelho no destino.
+            // Só um pino por fase — o mapa de navegação não mostra o outro extremo.
+            val stopPoint = d.navigation?.stop?.let { stop ->
+                when (stop.kind) {
+                    "dropoff" -> d.trip?.let { t ->
+                        if (t.latitude != null && t.longitude != null) t.latitude to t.longitude else null
+                    }
+                    else -> d.trip?.let { t -> t.pickupLat?.let { la -> t.pickupLng?.let { lo -> la to lo } } }
+                }
+            }
+            b.mapFull.setNavStop(stopPoint, d.navigation?.stop?.kind)
             bindNavigation(b, d)
             return
         }
         lastNavStage = null
         b.mapFull.thickNavigation = false
         b.mapFull.setStreetLabel(null)
+        b.mapFull.setNavStop(null, null)
         // Espera na recolha (print 2026-10-30 11:34): a barra "À espera do passageiro" fica
         // visível por baixo do painel, com filtros à esquerda e lista à direita. O cartão
         // completo (contador + contacto + Começar) vive por baixo dela.
@@ -478,6 +506,17 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         }
     }
 
+    /** Moradas separadas em rua + cidade, como no cartão do vídeo (cidade em linha própria). */
+    private fun splitCity(raw: String): Pair<String, String> {
+        val clean = raw.trim()
+        val comma = clean.lastIndexOf(',')
+        if (comma <= 0) return clean to ""
+        val tail = clean.substring(comma + 1).trim()
+        // Só separa quando a cauda parece uma localidade (curta e sem números).
+        if (tail.length !in 2..28 || tail.any { it.isDigit() }) return clean to ""
+        return clean.substring(0, comma).trim() to tail
+    }
+
     private fun bindOffer(b: FragmentMapBinding, o: OfferCard) {
         val c = b.offerCard
         c.offerProduct.text = o.product
@@ -490,18 +529,29 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         c.offerTotals.text = o.totals.orEmpty()
         c.offerTotals.isVisible = !o.totals.isNullOrBlank()
         c.offerPickupLine.text = o.pickupLine
-        c.offerPickupAddress.text = o.pickupAddress
+        // Rua em bold + cidade em linha própria, cinza (vídeo 2026-10-29):
+        //   "Avenida Doutor José Pontes 5"
+        //   "Amadora"
+        val (pickupStreet, pickupCity) = splitCity(o.pickupAddress)
+        c.offerPickupAddress.text = pickupStreet
+        c.offerPickupCity.text = pickupCity
+        c.offerPickupCity.isVisible = pickupCity.isNotBlank()
         c.offerTripLine.text = o.tripLine
         c.offerTripLine.isVisible = o.tripLine != null
-        c.offerDropoffAddress.text = o.dropoffAddress
+        val (dropStreet, dropCity) = splitCity(o.dropoffAddress.orEmpty())
+        c.offerDropoffAddress.text = dropStreet
         c.offerDropoffAddress.isVisible = o.dropoffAddress != null
+        c.offerDropoffCity.text = dropCity
+        c.offerDropoffCity.isVisible = dropCity.isNotBlank()
         // O rail acompanha o bloco de textos: círculo na 1.ª linha, quadrado na última.
         c.offerRail.post {
             val d = resources.displayMetrics.density
             val containerTop = c.offerRail.top.toFloat()
             c.offerRail.pickupCenterDp =
                 (c.offerPickupLine.top + c.offerPickupLine.height / 2f - containerTop) / d
-            val last = if (c.offerDropoffAddress.isVisible) c.offerDropoffAddress else c.offerTripLine
+            val last = if (c.offerDropoffCity.isVisible) c.offerDropoffCity
+                       else if (c.offerDropoffAddress.isVisible) c.offerDropoffAddress
+                       else c.offerTripLine
             c.offerRail.dropoffCenterDp = (last.top + last.height / 2f - containerTop) / d
         }
         // Sem barra de contagem: a original não mostra o tempo e o pedido expira em silêncio.

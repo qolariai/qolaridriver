@@ -20,8 +20,14 @@ REQUIRED = [
     "coverage.md",
     "topology.md",
     "endpoints.json",
+    "endpoints.discovered.json",
+    "endpoints.contract.json",
     "PROMPT_CLONE_MEGA.md",
     "PROMPT_CLONE_BUILD.md",
+    "FEATURE_TAXONOMY.md",
+    "REA_BINDINGS.md",
+    "peer_triggers.md",
+    "tokens.md",
     "ux_reference/README.md",
     "device_apk/README.md",
     "ADAPTACAO_PROMPTS.md",
@@ -29,7 +35,14 @@ REQUIRED = [
     "capabilities.md",
     "backlog.md",
     "RELATORIO_FINAL.md",
+    "features.md",
+    "APROVACAO_EXCLUSOES.md",
+    "ANDOIRD/USER_LITE/features.md",
+    "rea_evidence/INDEX.md",
+    "rea_evidence/05_close/obligations.json",
 ]
+
+FEATURE_STATUS = {"ok", "parcial", "em falta", "excluído", "excluido"}
 
 STATE_MACHINE = ["requested", "accepted", "arrived", "in_progress", "completed",
                  "cancelled", "no_drivers"]
@@ -67,15 +80,136 @@ def check_files():
 
 def check_closure():
     backlog = read("backlog.md")
-    ok("backlog.md declara zero gaps abertos", "Nenhum para `funcional`" in backlog,
-       "gaps abertos para o alvo")
     report = read("RELATORIO_FINAL.md")
-    ok("RELATORIO_FINAL.md tem veredicto", "Veredicto" in report and "pronto para `funcional`" in report,
-       "veredicto ausente")
     caps = read("capabilities.md")
+
+    # O veredicto tem de estar coerente com os gaps abertos, nao apenas presente.
+    caps_features = read("features.md")
+    open_gaps = len(re.findall(r"\*\*aberto\*\*", backlog))
+    ok("backlog.md indexa por F-ID", "F-ID" in backlog, "sem ligacao ao inventario")
+    ok("backlog.md tem contagem de gaps", "gaps abertos" in backlog.lower() or "**aberto**" in backlog,
+       "contagem ausente")
+    ok("backlog.md tem os gaps abertos contados", str(open_gaps) in backlog,
+       f"{open_gaps} linhas 'aberto' mas a contagem nao bate")
+
+    ok("RELATORIO_FINAL.md tem veredicto", "Veredicto" in report,
+       "veredicto ausente")
     ok("capabilities.md tem matriz", "| Status |" in caps and "| ok |" in caps,
        "matriz ausente")
-    ok("capabilities.md fecha o alvo", "Zero `gap`" in caps, "gaps por declarar")
+    ok("capabilities.md cita o inventario", "features.md" in caps,
+       "sem ligacao a FASE 4.7")
+
+    # Nao se afirma 'zero gaps' com gaps abertos: seria fecho falso.
+    afirma_zero = bool(re.search(r"(?i)zero\s+`?gap`?", caps)) or "Nenhum para `funcional`" in backlog
+    if open_gaps:
+        ok("nao declara zero gaps com gaps abertos", not afirma_zero,
+           f"{open_gaps} gaps abertos mas o texto afirma zero")
+    else:
+        ok("fecho declara zero gaps", afirma_zero, "gaps fechados mas sem declaracao")
+
+    # features.md tem de existir e ter linhas com F-ID
+    feats = [ln for ln in caps_features.splitlines()
+             if ln.startswith("| `F-") and ln.count("|") >= 10]
+    ok("features.md tem linhas com F-ID", len(feats) >= 50, f"{len(feats)} linhas")
+
+
+def check_features():
+    """FASE 4.7 — o gate do inventario."""
+    text = read("features.md")
+    rows = [ln for ln in text.splitlines() if ln.startswith("| `F-")]
+    ok("features.md tem inventario", len(rows) >= 50, f"{len(rows)} features")
+
+    seen = set()
+    statuses = {}
+    for ln in rows:
+        cols = [c.strip() for c in ln.strip("|").split("|")]
+        if len(cols) < 10:
+            ok("features.md linha completa", False, ln[:80])
+            continue
+        fid = cols[0].strip("`")
+        ok("features.md F-ID unico", fid not in seen, f"duplicado {fid}")
+        seen.add(fid)
+
+        status_cell = cols[8]
+        found = [s for s in ("em falta", "parcial", "excluído", "excluido", "ok")
+                 if f"**{s}**" in status_cell]
+        ok("features.md status valido", len(found) == 1,
+           f"{fid}: {status_cell[:40]}")
+        if found:
+            statuses[fid] = found[0]
+
+        ok("features.md tem evidencia", cols[3] not in ("", "?", "—") or cols[4] == "—",
+           f"{fid}: sem evidencia")
+
+    # Feature 'ok' sem teste e 'parcial' disfarcado (taxonomia, anti-padroes)
+    for ln in rows:
+        cols = [c.strip() for c in ln.strip("|").split("|")]
+        if len(cols) < 10:
+            continue
+        fid = cols[0].strip("`")
+        if statuses.get(fid) == "ok":
+            ok("feature ok tem teste", cols[9] not in ("", "—", "?", "-"),
+               f"{fid}: ok sem teste")
+
+    # Excluido exige aprovacao escrita
+    excl = [f for f, s in statuses.items() if s in ("excluído", "excluido")]
+    if excl:
+        ap = read("APROVACAO_EXCLUSOES.md")
+        ok("exclusoes tem aprovacao escrita", len(re.findall(r"X-\d\d", ap)) >= len(excl),
+           f"{len(excl)} exclusoes, {len(re.findall(r'X-\d\d', ap))} aprovacoes")
+
+    # Nenhuma captura pode ficar sem linha (F-ID ou exclusao aprovada)
+    if CAP.is_dir():
+        caps = {f[:-4] for f in __import__("os").listdir(CAP)
+                if f.endswith(".png") and not re.search(r"_(s|h)\d+\.png$", f)}
+        citadas = set(re.findall(r"`(\d{3}_[a-z0-9_]+)\.png`", text))
+        citadas |= set(re.findall(r"`(\d{3}_[a-z0-9_]+)`", text))
+        orfas = sorted(c for c in caps if c not in citadas)
+        ok("features.md cobre todas as capturas", not orfas,
+           f"{len(orfas)} sem linha, ex.: {orfas[:3]}")
+
+    ok("features.md declara zero orfaos de string", "orfa" in text or "atribuida" in text,
+       "sem classificacao de strings")
+    ok("features.md declara o gate", "Gate da FASE 4.7" in text, "gate ausente")
+
+
+def check_features_rider():
+    """FASE 4.7 — o gate do inventario da Rider."""
+    path = ROOT / "ANDOIRD" / "USER_LITE" / "features.md"
+    ok("Rider tem features.md", path.is_file(), "FASE 4.7 da Rider em falta")
+    if not path.is_file():
+        return
+    text = path.read_text(encoding="utf-8")
+    rows = [ln for ln in text.splitlines() if ln.startswith("| `F-")]
+    ok("Rider features.md tem inventario", len(rows) >= 20, f"{len(rows)} features")
+
+    seen = set()
+    for ln in rows:
+        cols = [c.strip() for c in ln.strip("|").split("|")]
+        if len(cols) < 10:
+            ok("Rider features.md linha completa", False, ln[:80])
+            continue
+        fid = cols[0].strip("`")
+        ok("Rider features.md F-ID unico", fid not in seen, f"duplicado {fid}")
+        seen.add(fid)
+        found = [s for s in ("em falta", "parcial", "excluído", "excluido", "ok")
+                 if f"**{s}**" in cols[8]]
+        ok("Rider features.md status valido", len(found) == 1,
+           f"{fid}: {cols[8][:40]}")
+
+    # Todas as capturas da Rider precisam de linha
+    rcap = ROOT / "ANDOIRD" / "USER_LITE" / "ux_capture"
+    if rcap.is_dir():
+        caps = {f[:-4] for f in __import__("os").listdir(rcap)
+                if f.endswith(".png") and not re.search(r"_(s|h)\d+\.png$", f)}
+        citadas = set(re.findall(r"`(\d{3}_[a-z0-9_]+)`", text))
+        orfas = sorted(c for c in caps if c not in citadas)
+        ok("Rider features.md cobre todas as capturas", not orfas,
+           f"{len(orfas)} sem linha, ex.: {orfas[:3]}")
+
+    ok("Rider features.md declara a diferenca WebView", "WebView" in text,
+       "nota de evidencia ausente")
+    ok("Rider features.md declara o gate", "Gate da FASE 4.7" in text, "gate ausente")
 
 
 def check_plan():
@@ -142,6 +276,80 @@ def check_endpoints():
     ok("endpoints.json tem lacunas", "lacunas" in data, "em falta")
 
 
+def check_endpoints_split():
+    """FASE 4 — dois ficheiros: universo (discovered) e contrato (implementado)."""
+    disc = json.loads(read("endpoints.discovered.json"))
+    con = json.loads(read("endpoints.contract.json"))
+
+    ok("discovered > contract", disc["total"] > con["total"],
+       f"{disc['total']} vs {con['total']}")
+    ok("discovered tem disposition em todos",
+       "por_classificar" not in disc.get("disposicao", {}),
+       str(disc.get("disposicao")))
+    ok("discovered sem disposicao invalida",
+       all(e.get("disposition") in ("contract", "substituir", "descartar", "telemetry")
+           for e in disc["endpoints"]), "disposicao invalida")
+
+    ok("contract tem feature em todos", con["com_feature"] == con["total"],
+       f"{con['com_feature']}/{con['total']}")
+    ok("contract declara origem por endpoint",
+       all(e.get("origin") in ("extracted", "designed") for e in con["endpoints"]),
+       "endpoint sem origin")
+    ok("contract declara a separacao", "designed" in con.get("nota", ""),
+       "nota ausente")
+
+
+def check_rea_evidence():
+    """FASE 6/7 — ledger, verify e cobertura."""
+    idx = read("rea_evidence/INDEX.md")
+    ok("rea_evidence tem aviso de origem", "REA não estava disponível" in idx
+       or "REA nao estava disponivel" in idx, "origem nao declarada")
+
+    led = json.loads(read("rea_evidence/05_close/obligations.json"))
+    ok("ledger tem obrigacoes", led["total_obrigacoes"] >= 50,
+       f"{led['total_obrigacoes']}")
+    ok("ledger tem abertas declaradas", "abertas" in led, "sem lista de abertas")
+    ok("ledger liga a features.md", all("feature" in o for o in led["obrigacoes"]),
+       "obrigacao sem F-ID")
+
+    ver = json.loads(read("rea_evidence/05_close/verify.json"))
+    ok("verify sem falhas", ver["falharam"] == 0, f"{ver['falharam']} falharam")
+    ok("verify tem verificacoes", len(ver["verificacoes"]) >= 5,
+       f"{len(ver['verificacoes'])}")
+
+    cov = json.loads(read("rea_evidence/05_close/coverage.json"))
+    ok("coverage tem percentagem", "cobertura_pct" in cov, "sem numero")
+    ok("coverage declara o limite", bool(cov.get("limite_declarado")), "limite ausente")
+
+
+def check_peer_tokens():
+    text = read("peer_triggers.md")
+    rows = [ln for ln in text.splitlines() if ln.startswith("| P-")]
+    ok("peer_triggers tem triggers", len(rows) >= 8, f"{len(rows)}")
+    ok("peer_triggers liga a F-ID",
+       all(re.search(r"F-[a-z0-9]+-\d\d", ln) for ln in rows), "linha sem F-ID")
+    ok("peer_triggers tem ator",
+       all("Driver" in ln or "Rider" in ln or "sistema" in ln or "backoffice" in ln
+           for ln in rows), "linha sem ator")
+
+    tok = read("tokens.md")
+    ok("tokens tem cores", "#" in tok, "sem hex")
+    ok("tokens tem tipografia", "sp" in tok, "sem tamanhos")
+    ok("tokens regista divergencias", "Divergências registadas" in tok
+       or "Divergencias registadas" in tok, "sem registo de divergencia")
+    ok("ux_capture existe", CAP.is_dir(), "em falta")
+    ok("capturas da app nova existem", NEW.is_dir(), "em falta")
+    if CAP.is_dir():
+        leaked = list(CAP.glob("newapp_*"))
+        ok("ux_capture sem capturas da app nova", not leaked, f"{len(leaked)} ficheiros")
+        ok("ux_capture tem PNG", len(list(CAP.glob("*.png"))) >= 100,
+           f"{len(list(CAP.glob('*.png')))} PNG")
+    if NEW.is_dir():
+        bad = list(NEW.rglob("*.png"))
+        ok("capturas da app nova marcadas", all("cmp_" in p.name or p.parent.name.startswith("lote") or p.name[:2].isdigit()
+                                               for p in bad), "nomes fora da convencao")
+
+
 def check_captures():
     ok("ux_capture existe", CAP.is_dir(), "em falta")
     ok("capturas da app nova existem", NEW.is_dir(), "em falta")
@@ -170,6 +378,11 @@ def main():
     check_coverage()
     check_topology()
     check_endpoints()
+    check_endpoints_split()
+    check_features()
+    check_features_rider()
+    check_peer_tokens()
+    check_rea_evidence()
     check_captures()
     check_closure()
     check_secrets()

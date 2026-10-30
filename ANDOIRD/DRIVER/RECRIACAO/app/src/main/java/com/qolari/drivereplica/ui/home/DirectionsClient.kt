@@ -3,6 +3,7 @@ package com.qolari.drivereplica.ui.home
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
+import com.qolari.drivereplica.config.AppConfig
 import okhttp3.Dns
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -47,7 +48,7 @@ object DirectionsClient {
                     .connectTimeout(6, TimeUnit.SECONDS)
                     .readTimeout(10, TimeUnit.SECONDS)
                     .build()
-                val url = "https://maps.googleapis.com/maps/api/directions/json" +
+                val url = AppConfig.DIRECTIONS_HOST + "/maps/api/directions/json" +
                     "?origin=$fromLat,$fromLng&destination=$toLat,$toLng&mode=driving&overview=full&key=$key"
                 client.newCall(Request.Builder().url(url).build()).execute().use { resp ->
                     val body = resp.body?.string()

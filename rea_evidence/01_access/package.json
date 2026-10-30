@@ -1,0 +1,11 @@
+{
+ "package": "com.ubercab.driver",
+ "permissions": 47,
+ "activities": 123,
+ "services": 19,
+ "receivers": 28,
+ "providers": 17,
+ "deeplinks": 50,
+ "fonte": "ANDOIRD/DRIVER/ui_spec/manifest.json",
+ "ferramenta": "decode_android_resources (via apktool) — extraido em sessao anterior"
+}

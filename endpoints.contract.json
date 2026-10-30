@@ -1,0 +1,1553 @@
+{
+ "schema": "qolari.endpoints.contract/1",
+ "app": "Ecossistema Qolari (Driver + Rider + Fleet + Backoffice)",
+ "versao": "1.0",
+ "data": "2026-10-25",
+ "fonte": "BACKEND/ (handlers implementados) + ANDOIRD/DRIVER/endpoints.json (catalogo extraido) + BACKEND/contracts/ (Rider e Fleet)",
+ "nota": "SUBCONJUNTO implementado do catalogo descoberto. Cada endpoint tem `feature` (F-ID de features.md) e `origin` — o gate da FASE 4 exige ambos. `extracted` = veio do binario; `designed` = desenhado por nos (a Rider Lite e WebView, o backoffice nao existe no original). O universo esta em endpoints.discovered.json.",
+ "apps": [
+  {
+   "nome": "Driver",
+   "role": "motorista",
+   "plataforma": "Android",
+   "pacote": "com.qolari.drivereplica",
+   "stack": "Kotlin + Views/Compose por evidencia"
+  },
+  {
+   "nome": "Rider",
+   "role": "passageiro",
+   "plataforma": "Android",
+   "pacote": "com.qolari.rider",
+   "stack": "Kotlin (laboratorio); referencia Uber Lite e WebView"
+  },
+  {
+   "nome": "Fleet",
+   "role": "frota",
+   "plataforma": "Android",
+   "pacote": "com.qolari.fleet",
+   "stack": "Kotlin (laboratorio)"
+  },
+  {
+   "nome": "Backoffice",
+   "role": "ops/suporte/financeiro",
+   "plataforma": "Web",
+   "pacote": "BACKOFFICE/",
+   "stack": "React + Vite + TypeScript"
+  }
+ ],
+ "convencoes": {
+  "evidence": [
+   "live",
+   "served",
+   "static",
+   "unverified",
+   "presumed",
+   "designed"
+  ],
+  "integrity": [
+   "clean",
+   "repack_suspect"
+  ],
+  "owner": "servico que possui a escrita do recurso (um so)",
+  "producer": "app/role que chama",
+  "consumers": "apps/roles que reagem ao resultado",
+  "emits": "evento publicado quando o estado muda",
+  "subscribes": "eventos que o ecra consome",
+  "peer_trigger": "estado seguinte depende de outro role"
+ },
+ "hosts": {
+  "driver": "http://192.168.1.204:80 (LAN) / https://driver.qolari.com (servidor)",
+  "rider": "http://192.168.1.204:8090",
+  "fleet": "http://192.168.1.204:3000",
+  "backoffice": "http://127.0.0.1:8300",
+  "nota": "No laboratorio a app e escolhida pela porta local; em producao seria pelo host. Nenhum segredo neste ficheiro."
+ },
+ "endpoints": [
+  {
+   "id": "identity.token",
+   "method": "POST",
+   "path": "/rt/identity/oauth2/token",
+   "app": "rider|driver|fleet",
+   "role": "todos",
+   "owner": "identity",
+   "producer": "rider|driver|fleet",
+   "consumers": [
+    "backoffice"
+   ],
+   "screens": [
+    "Login por telefone (Driver/Rider/Fleet)"
+   ],
+   "request": {
+    "grant_type": "password|refresh_token",
+    "username": "telefone",
+    "password": "codigo do laboratorio",
+    "refresh_token": "opcional"
+   },
+   "response": {
+    "accessToken": "string",
+    "refreshToken": "string",
+    "tokenType": "Bearer",
+    "expiresIn": "int"
+   },
+   "emits": [
+    "session.created"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/identity.py",
+   "feature": "F-auth-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "identity.web-login",
+   "method": "GET",
+   "path": "/v2",
+   "app": "rider|driver|fleet",
+   "role": "todos",
+   "owner": "identity",
+   "producer": "rider|driver|fleet",
+   "consumers": [
+    "backoffice"
+   ],
+   "screens": [
+    "Login nativo (WebView do original substituida por ecra nativo na recriacao)"
+   ],
+   "request": {
+    "query": "redirect_uri, app"
+   },
+   "response": {
+    "html": "pagina de login (ou redirect para a app)"
+   },
+   "emits": [
+    "session.created"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/identity.py",
+   "feature": "F-auth-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "rider.app-launch",
+   "method": "POST",
+   "path": "/rt/riders/me/app-launch",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "rider",
+   "producer": "rider",
+   "consumers": [],
+   "screens": [
+    "Rider: Inicio",
+    "Rider: mapa e categorias"
+   ],
+   "request": {
+    "targetLocation": "ponto opcional"
+   },
+   "response": {
+    "city": "City",
+    "clientStatus": "ClientStatus",
+    "eyeball": "nearbyVehicles",
+    "fulfillmentStateData": "FulfillmentStateData"
+   },
+   "emits": [],
+   "subscribes": [
+    "trip_status"
+   ],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/rider.py",
+   "feature": "F-onboarding-01",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.pickup",
+   "method": "POST",
+   "path": "/rt/riders/me/v2/pickup",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "trips",
+   "producer": "rider",
+   "consumers": [
+    "driver",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Rider: confirmar recolha",
+    "Driver: cartao de oferta",
+    "Backoffice: Viagens"
+   ],
+   "request": {
+    "pickupRequest": {
+     "requestPickupLocation": "ponto",
+     "requestDestinationLocation": "ponto",
+     "vehicleViewId": "int"
+    }
+   },
+   "response": {
+    "clientStatus": {
+     "status": "Dispatching"
+    },
+    "trip": {
+     "uuid": "string",
+     "state": "requested"
+    }
+   },
+   "emits": [
+    "offer",
+    "trip_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": "motorista online aceita",
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/rider.py",
+   "feature": "F-trip-01",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.status",
+   "method": "POST",
+   "path": "/rt/riders/me/status",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "rider",
+   "producer": "rider",
+   "consumers": [],
+   "screens": [
+    "Rider: a procurar",
+    "Rider: motorista a caminho",
+    "Rider: em viagem"
+   ],
+   "request": {
+    "targetLocation": "ponto opcional"
+   },
+   "response": {
+    "clientStatus": "Looking|Dispatching|WaitingForPickup|OnTrip",
+    "trip": "Trip opcional",
+    "riderAppOrdersResponse": "orders",
+    "metadata": {
+     "pollingIntervalMs": 4000
+    }
+   },
+   "emits": [],
+   "subscribes": [
+    "trip_status"
+   ],
+   "peer_trigger": "estado movido por Driver ou Backoffice",
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/rider.py",
+   "feature": "F-home-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "rider.cancel",
+   "method": "POST",
+   "path": "/rt/trips/{tripUUID}/rider-cancel",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "trips",
+   "producer": "rider",
+   "consumers": [
+    "driver",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Rider: cancelar viagem"
+   ],
+   "request": {
+    "reason": "string opcional"
+   },
+   "response": {
+    "trip": {
+     "state": "cancelled",
+     "cancelledBy": "rider"
+    }
+   },
+   "emits": [
+    "trip_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/rider.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "rider.feedback",
+   "method": "POST",
+   "path": "/rt/feedback/v2",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "trips",
+   "producer": "rider",
+   "consumers": [
+    "driver",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Rider: avaliar motorista"
+   ],
+   "request": {
+    "tripUUID": "string",
+    "rating": "1..5",
+    "comment": "string opcional"
+   },
+   "response": {
+    "ok": "bool"
+   },
+   "emits": [
+    "rating.created"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/rider.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "rider.lite-home",
+   "method": "GET",
+   "path": "/rt/lite/home",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "rider",
+   "producer": "rider",
+   "consumers": [],
+   "screens": [
+    "Rider Lite: Inicio"
+   ],
+   "request": {},
+   "response": {
+    "headline": "string",
+    "savedPlace": "place",
+    "suggestions": "array",
+    "promos": "array"
+   },
+   "emits": [],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/userlite.py",
+   "feature": "F-home-01",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.lite-quote",
+   "method": "POST",
+   "path": "/rt/lite/quote",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "pricing",
+   "producer": "rider",
+   "consumers": [],
+   "screens": [
+    "Rider Lite: escolher viagem"
+   ],
+   "request": {
+    "pickup": "ponto",
+    "dropoff": "ponto"
+   },
+   "response": {
+    "products": "array de precos",
+    "dropoff": "place"
+   },
+   "emits": [],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/userlite.py",
+   "feature": "F-trip-01",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.lite-request",
+   "method": "POST",
+   "path": "/rt/lite/request",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "trips",
+   "producer": "rider",
+   "consumers": [
+    "driver",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Rider Lite: pedir"
+   ],
+   "request": {
+    "pickup": "ponto",
+    "dropoff": "ponto",
+    "productId": "int",
+    "payment": "cash|card"
+   },
+   "response": {
+    "trip": "Trip (com pin)"
+   },
+   "emits": [
+    "offer",
+    "trip_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": "motorista online aceita",
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/userlite.py",
+   "feature": "F-trip-01",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.lite-active",
+   "method": "GET",
+   "path": "/rt/lite/active",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "rider",
+   "producer": "rider",
+   "consumers": [],
+   "screens": [
+    "Rider Lite: viagem ativa"
+   ],
+   "request": {},
+   "response": {
+    "trip": "Trip ou null"
+   },
+   "emits": [],
+   "subscribes": [
+    "trip_status"
+   ],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/userlite.py",
+   "feature": "F-trip-01",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.lite-cancel",
+   "method": "POST",
+   "path": "/rt/lite/trips/{tripUUID}/cancel",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "trips",
+   "producer": "rider",
+   "consumers": [
+    "driver",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Rider Lite: cancelar"
+   ],
+   "request": {
+    "reason": "string opcional"
+   },
+   "response": {
+    "trip": {
+     "state": "cancelled"
+    }
+   },
+   "emits": [
+    "trip_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/userlite.py",
+   "feature": "F-trip-01",
+   "origin": "designed"
+  },
+  {
+   "id": "driver.go-online",
+   "method": "POST",
+   "path": "/rt/drivers/v2/go-online",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "trips",
+   "producer": "driver",
+   "consumers": [
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Driver: Inicio",
+    "Driver: mapa"
+   ],
+   "request": {
+    "positionEvent": {
+     "location": "ponto"
+    }
+   },
+   "response": {
+    "driverTasks": {
+     "driverState": {
+      "online": true,
+      "available": true
+     }
+    }
+   },
+   "emits": [
+    "driver_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.go-offline",
+   "method": "POST",
+   "path": "/rt/drivers/v2/go-offline",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "trips",
+   "producer": "driver",
+   "consumers": [
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Driver: Inicio"
+   ],
+   "request": {},
+   "response": {
+    "driverTasks": {
+     "driverState": {
+      "online": false
+     }
+    }
+   },
+   "emits": [
+    "driver_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.available",
+   "method": "POST",
+   "path": "/rt/drivers/v2/available",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "trips",
+   "producer": "driver",
+   "consumers": [],
+   "screens": [
+    "Driver: painel e tarefas"
+   ],
+   "request": {},
+   "response": {
+    "driverTasks": {
+     "taskScopes": "array",
+     "driverState": "DriverState"
+    }
+   },
+   "emits": [],
+   "subscribes": [
+    "offer",
+    "trip_status"
+   ],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.accept",
+   "method": "POST",
+   "path": "/rt/drivers/accept-offers",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "trips",
+   "producer": "driver",
+   "consumers": [
+    "rider",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Driver: cartao de oferta",
+    "Rider: motorista a caminho"
+   ],
+   "request": {
+    "offerUUIDs": [
+     "string"
+    ]
+   },
+   "response": {
+    "driverTasks": {
+     "taskScopes": "pickupTaskData"
+    }
+   },
+   "emits": [
+    "trip_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": "passageiro pediu",
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.reject",
+   "method": "POST",
+   "path": "/rt/drivers/reject-offers",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "trips",
+   "producer": "driver",
+   "consumers": [
+    "backoffice"
+   ],
+   "screens": [
+    "Driver: cartao de oferta"
+   ],
+   "request": {
+    "offers": "opcional"
+   },
+   "response": {
+    "ok": "bool"
+   },
+   "emits": [
+    "offer.rejected",
+    "trip_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.positions",
+   "method": "POST",
+   "path": "/rt/unifiedlocation/uploadpositions",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "geo",
+   "producer": "driver",
+   "consumers": [
+    "rider",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Driver: mapa",
+    "Rider: mapa da viagem",
+    "Backoffice: mapa ao vivo"
+   ],
+   "request": {
+    "uploadLocationRequest": {
+     "positions": [
+      {
+       "point": {
+        "latitude": "float",
+        "longitude": "float"
+       },
+       "course": "float"
+      }
+     ]
+    }
+   },
+   "response": {},
+   "emits": [
+    "driver_location"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-home-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.start-waiting",
+   "method": "POST",
+   "path": "/rt/trips/v2/start-waiting",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "trips",
+   "producer": "driver",
+   "consumers": [
+    "rider",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Driver: recolha"
+   ],
+   "request": {},
+   "response": {
+    "driverTasks": "DriverTasks"
+   },
+   "emits": [
+    "trip_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.begin",
+   "method": "POST",
+   "path": "/rt/trips/v2/begin",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "trips",
+   "producer": "driver",
+   "consumers": [
+    "rider",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Driver: iniciar viagem",
+    "Rider: em viagem"
+   ],
+   "request": {
+    "uuid": "string",
+    "pin": "string opcional"
+   },
+   "response": {
+    "driverTasks": "DriverTasks"
+   },
+   "emits": [
+    "trip_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.end",
+   "method": "POST",
+   "path": "/rt/trips/v2/end",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "trips",
+   "producer": "driver",
+   "consumers": [
+    "rider",
+    "fleet",
+    "backoffice"
+   ],
+   "screens": [
+    "Driver: fim e ganhos",
+    "Rider: recibo"
+   ],
+   "request": {
+    "uuid": "string"
+   },
+   "response": {
+    "driverTasks": "DriverTasks"
+   },
+   "emits": [
+    "trip_status",
+    "ledger.created"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.documents",
+   "method": "GET|POST",
+   "path": "/rt/drivers/v2/documents",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "documents",
+   "producer": "driver",
+   "consumers": [
+    "backoffice"
+   ],
+   "screens": [
+    "Driver: Documentos"
+   ],
+   "request": {},
+   "response": {
+    "driverDocuments": "array",
+    "vehicleDocuments": "array"
+   },
+   "emits": [],
+   "subscribes": [
+    "document.review"
+   ],
+   "peer_trigger": "aprovacao no backoffice",
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-documents-01",
+   "origin": "designed"
+  },
+  {
+   "id": "driver.earnings",
+   "method": "POST",
+   "path": "/rt/earnings/get-weekly-earnings-view",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "finance",
+   "producer": "driver",
+   "consumers": [],
+   "screens": [
+    "Driver: Rendimentos"
+   ],
+   "request": {},
+   "response": {
+    "weeklyEarnings": "EarningsSummary",
+    "onlineSeconds": "int"
+   },
+   "emits": [],
+   "subscribes": [
+    "ledger.created"
+   ],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/driver.py",
+   "feature": "F-finance-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "driver.route",
+   "method": "GET|POST",
+   "path": "/rt/navigation/v3/route",
+   "app": "driver",
+   "role": "motorista",
+   "owner": "geo",
+   "producer": "driver",
+   "consumers": [],
+   "screens": [
+    "Driver: rota da proposta"
+   ],
+   "request": {
+    "origin": "ponto",
+    "destination": "ponto"
+   },
+   "response": {
+    "polyline": "string",
+    "distanceMeters": "int",
+    "durationSeconds": "int"
+   },
+   "emits": [],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/routing.py",
+   "feature": "F-trip-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "realtime.ramen",
+   "method": "GET",
+   "path": "/ramen/sessions/{sessionId}/messages",
+   "app": "rider|driver|fleet",
+   "role": "todos",
+   "owner": "notifications",
+   "producer": "rider|driver|fleet",
+   "consumers": [],
+   "screens": [
+    "Todas as apps (tempo real)"
+   ],
+   "request": {
+    "sessionId": "string"
+   },
+   "response": {
+    "msg": [
+     {
+      "type": "string",
+      "msg": "json",
+      "interpretType": "FULL"
+     }
+    ]
+   },
+   "emits": [],
+   "subscribes": [
+    "offer",
+    "trip_status",
+    "driver_status",
+    "driver_location"
+   ],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/common.py",
+   "feature": "F-platform-01",
+   "origin": "extracted"
+  },
+  {
+   "id": "fleet.drivers",
+   "method": "POST",
+   "path": "/rt/fleet/get-fleet-drivers-v2",
+   "app": "fleet",
+   "role": "frota",
+   "owner": "fleet",
+   "producer": "fleet",
+   "consumers": [],
+   "screens": [
+    "Fleet: motoristas"
+   ],
+   "request": {},
+   "response": {
+    "drivers": [
+     {
+      "uuid": "string",
+      "realtimeStatus": "OFFLINE|ONLINE|ONTRIP"
+     }
+    ]
+   },
+   "emits": [],
+   "subscribes": [
+    "driver_status",
+    "driver_trip"
+   ],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/fleet.py",
+   "feature": "F-platform-01",
+   "origin": "designed"
+  },
+  {
+   "id": "fleet.current-supply",
+   "method": "POST",
+   "path": "/rt/fleet/get-driver-current-supply",
+   "app": "fleet",
+   "role": "frota",
+   "owner": "trips",
+   "producer": "fleet",
+   "consumers": [],
+   "screens": [
+    "Fleet: viagem do motorista"
+   ],
+   "request": {
+    "driverUUID": "string"
+   },
+   "response": {
+    "supplyOverview": {
+     "tripUuid": "string",
+     "tripStatus": "ACCEPTED|ARRIVED|IN_PROGRESS"
+    }
+   },
+   "emits": [],
+   "subscribes": [
+    "trip_status"
+   ],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/fleet.py",
+   "feature": "F-trip-01",
+   "origin": "designed"
+  },
+  {
+   "id": "fleet.earnings",
+   "method": "POST",
+   "path": "/rt/fleet/get-fleet-earnings-v2",
+   "app": "fleet",
+   "role": "frota",
+   "owner": "finance",
+   "producer": "fleet",
+   "consumers": [],
+   "screens": [
+    "Fleet: ganhos"
+   ],
+   "request": {},
+   "response": {
+    "earningInfo": "EarningsSummary"
+   },
+   "emits": [],
+   "subscribes": [
+    "ledger.created"
+   ],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/fleet.py",
+   "feature": "F-finance-01",
+   "origin": "designed"
+  },
+  {
+   "id": "fleet.vehicle-create",
+   "method": "POST",
+   "path": "/rt/vehicle-supplier/vs-vehiclemanager/create-vehicle",
+   "app": "fleet",
+   "role": "frota",
+   "owner": "fleet",
+   "producer": "fleet",
+   "consumers": [
+    "backoffice"
+   ],
+   "screens": [
+    "Fleet: veiculos"
+   ],
+   "request": {
+    "vehicle": {
+     "licensePlate": "string",
+     "make": "string",
+     "model": "string",
+     "year": "int"
+    }
+   },
+   "response": {
+    "vehicle": "Vehicle"
+   },
+   "emits": [
+    "vehicle.created"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "served",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/fleet.py",
+   "feature": "F-vehicle-01",
+   "origin": "designed"
+  },
+  {
+   "id": "backoffice.trip-action",
+   "method": "POST",
+   "path": "/api/trips/{key}/action",
+   "app": "backoffice",
+   "role": "operator|admin",
+   "owner": "trips",
+   "producer": "backoffice",
+   "consumers": [
+    "rider",
+    "driver",
+    "fleet"
+   ],
+   "screens": [
+    "Backoffice: ficha da viagem",
+    "Backoffice: simulador"
+   ],
+   "request": {
+    "action": "offer|accept|reject|arrive|start|complete|cancel|force|rate",
+    "driver_id": "int opcional",
+    "state": "string opcional",
+    "reason": "string"
+   },
+   "response": {
+    "trip": "Trip serializada",
+    "state": "string"
+   },
+   "emits": [
+    "trip_status"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/console/api.py",
+   "feature": "F-trip-01",
+   "origin": "designed"
+  },
+  {
+   "id": "backoffice.document-review",
+   "method": "PATCH",
+   "path": "/api/documents/{doc_id}",
+   "app": "backoffice",
+   "role": "operator|admin",
+   "owner": "documents",
+   "producer": "backoffice",
+   "consumers": [
+    "driver",
+    "fleet"
+   ],
+   "screens": [
+    "Backoffice: Documentos",
+    "Driver: Documentos"
+   ],
+   "request": {
+    "status": "approved|rejected",
+    "note": "string"
+   },
+   "response": {
+    "document": "Document"
+   },
+   "emits": [
+    "document.review"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/console/api.py",
+   "feature": "F-documents-01",
+   "origin": "designed"
+  },
+  {
+   "id": "backoffice.payout-paid",
+   "method": "POST",
+   "path": "/api/payouts/{pid}/paid",
+   "app": "backoffice",
+   "role": "finance|admin",
+   "owner": "finance",
+   "producer": "backoffice",
+   "consumers": [
+    "driver",
+    "fleet"
+   ],
+   "screens": [
+    "Backoffice: Financas"
+   ],
+   "request": {
+    "reference": "string"
+   },
+   "response": {
+    "payout": "Payout",
+    "status": "paid"
+   },
+   "emits": [
+    "payout.paid"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/console/api.py",
+   "feature": "F-finance-01",
+   "origin": "designed"
+  },
+  {
+   "id": "backoffice.settings",
+   "method": "PATCH",
+   "path": "/api/settings",
+   "app": "backoffice",
+   "role": "admin",
+   "owner": "settings",
+   "producer": "backoffice",
+   "consumers": [
+    "rider",
+    "driver",
+    "fleet"
+   ],
+   "screens": [
+    "Backoffice: Definicoes"
+   ],
+   "request": {
+    "chave": "valor"
+   },
+   "response": {
+    "settings": "objeto"
+   },
+   "emits": [
+    "settings.updated"
+   ],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/console/api.py",
+   "feature": "F-platform-01",
+   "origin": "designed"
+  },
+  {
+   "id": "backoffice.changes",
+   "method": "GET",
+   "path": "/api/changes",
+   "app": "backoffice",
+   "role": "todos",
+   "owner": "notifications",
+   "producer": "backoffice",
+   "consumers": [],
+   "screens": [
+    "Backoffice: todas as paginas (recarga)"
+   ],
+   "request": {
+    "since": "int opcional"
+   },
+   "response": {
+    "version": "int",
+    "changed": [
+     "tabela"
+    ]
+   },
+   "emits": [],
+   "subscribes": [
+    "trip_status",
+    "driver_status",
+    "ledger.created"
+   ],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/console/api.py",
+   "feature": "F-platform-01",
+   "origin": "designed"
+  },
+  {
+   "id": "backoffice.dashboard",
+   "method": "GET",
+   "path": "/api/dashboard",
+   "app": "backoffice",
+   "role": "operator|admin|finance",
+   "owner": "backoffice",
+   "producer": "backoffice",
+   "consumers": [],
+   "screens": [
+    "Backoffice: Painel"
+   ],
+   "request": {},
+   "response": {
+    "indicadores": "objeto",
+    "mapa": "drivers",
+    "top": "array"
+   },
+   "emits": [],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/console/api.py",
+   "feature": "F-platform-01",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.lite-session",
+   "method": "GET",
+   "path": "/rt/lite/session",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "identity",
+   "producer": "rider",
+   "consumers": [],
+   "screens": [
+    "Rider Lite: Gerir conta",
+    "Rider Lite: Menu"
+   ],
+   "request": {},
+   "response": {
+    "riderUUID": "string",
+    "firstName": "string",
+    "name": "string",
+    "phone": "string",
+    "email": "string",
+    "rating": "float",
+    "payment": "Payment"
+   },
+   "emits": [],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/userlite.py",
+   "feature": "F-auth-01",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.lite-account-update",
+   "method": "PATCH",
+   "path": "/rt/lite/account",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "identity",
+   "producer": "rider",
+   "consumers": [],
+   "screens": [
+    "Rider Lite: Informacoes pessoais"
+   ],
+   "request": {
+    "firstName": "string",
+    "lastName": "string",
+    "email": "string"
+   },
+   "response": {
+    "session": "SessionResponse"
+   },
+   "emits": [],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/userlite.py",
+   "feature": "F-auth-01",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.lite-account-home",
+   "method": "POST",
+   "path": "/rt/lite/account/home",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "rider",
+   "producer": "rider",
+   "consumers": [],
+   "screens": [
+    "Rider Lite: Gerir conta (Casa)"
+   ],
+   "request": {
+    "placeId": "string"
+   },
+   "response": {
+    "savedPlace": "Place"
+   },
+   "emits": [],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/userlite.py",
+   "feature": "F-account-03",
+   "origin": "designed"
+  },
+  {
+   "id": "rider.lite-location",
+   "method": "POST",
+   "path": "/rt/lite/location",
+   "app": "rider",
+   "role": "passageiro",
+   "owner": "rider",
+   "producer": "rider",
+   "consumers": [],
+   "screens": [
+    "Rider Lite: Inicio (a minha localizacao)"
+   ],
+   "request": {
+    "lat": "float",
+    "lng": "float"
+   },
+   "response": {
+    "ok": "bool"
+   },
+   "emits": [],
+   "subscribes": [],
+   "peer_trigger": null,
+   "evidence": "designed",
+   "integrity": "clean",
+   "implemented": true,
+   "source": "BACKEND/apps/userlite.py",
+   "feature": "F-home-03",
+   "origin": "designed"
+  }
+ ],
+ "eventos": [
+  {
+   "nome": "offer",
+   "produtor": "trips.dispatch",
+   "subscritores": [
+    "driver"
+   ],
+   "transporte": "ramen",
+   "tipo_driver": "push_driver_unified_offers_v3",
+   "latencia": "imediata (long-poll)",
+   "evidence": "served"
+  },
+  {
+   "nome": "trip_status",
+   "produtor": "trips._notify",
+   "subscritores": [
+    "rider",
+    "driver",
+    "fleet",
+    "backoffice"
+   ],
+   "transporte": "ramen / /api/changes",
+   "tipo_driver": "push_drivers_tasks + push_earner_trip_core_domain",
+   "tipo_rider": "trip_status",
+   "tipo_fleet": "driver_trip",
+   "latencia": "imediata (long-poll); polling 4 s como fallback",
+   "evidence": "served"
+  },
+  {
+   "nome": "driver_status",
+   "produtor": "trips.go_online/go_offline/_free_driver",
+   "subscritores": [
+    "fleet",
+    "backoffice"
+   ],
+   "transporte": "ramen / /api/changes",
+   "tipo_fleet": "driver_status",
+   "latencia": "imediata",
+   "evidence": "served"
+  },
+  {
+   "nome": "driver_location",
+   "produtor": "trips.set_location",
+   "subscritores": [
+    "rider (viagem ativa)",
+    "fleet",
+    "backoffice"
+   ],
+   "transporte": "ramen / polling",
+   "latencia": "4 s (uploadpositions)",
+   "evidence": "served"
+  },
+  {
+   "nome": "document.review",
+   "produtor": "backoffice",
+   "subscritores": [
+    "driver",
+    "fleet"
+   ],
+   "transporte": "ramen + /api/changes",
+   "latencia": "imediata",
+   "evidence": "designed"
+  },
+  {
+   "nome": "payout.paid",
+   "produtor": "backoffice",
+   "subscritores": [
+    "driver",
+    "fleet",
+    "backoffice"
+   ],
+   "transporte": "/api/changes",
+   "latencia": "imediata",
+   "evidence": "designed"
+  }
+ ],
+ "catalogo_extraido": {
+  "driver": {
+   "ficheiro": "ANDOIRD/DRIVER/endpoints.json",
+   "endpoints": 1104,
+   "hosts": 129,
+   "classes": {
+    "rebuild": 1001,
+    "substituir": 96,
+    "descartar": 7
+   }
+  },
+  "rider": {
+   "ficheiro": "BACKEND/contracts/rider_endpoints.json",
+   "endpoints": 1055
+  },
+  "fleet": {
+   "ficheiro": "BACKEND/contracts/fleet_endpoints.json",
+   "endpoints": 647
+  },
+  "lite": {
+   "ficheiro": "ANDOIRD/USER_LITE/endpoints.json",
+   "endpoints": 15,
+   "nota": "contrato desenhado (WebView nao da contrato nativo)"
+  },
+  "backoffice": {
+   "ficheiro": "BACKEND/console/api.py",
+   "endpoints": 61
+  }
+ },
+ "lacunas": [
+  {
+   "id": "maps",
+   "descricao": "Google Maps SDK sem MAPS_API_KEY; mapa desenhado",
+   "evidence": "thirdparty"
+  },
+  {
+   "id": "fcm",
+   "descricao": "FCM nao configurado; o ramen cobre o tempo real",
+   "evidence": "thirdparty"
+  },
+  {
+   "id": "osrm",
+   "descricao": "Rota real depende de OSRM; sem ele e uma linha reta",
+   "evidence": "thirdparty"
+  },
+  {
+   "id": "social",
+   "descricao": "Login social/reCAPTCHA nao implementado",
+   "evidence": "out_of_scope"
+  },
+  {
+   "id": "ios",
+   "descricao": "Apps iOS fora do ambito atual",
+   "evidence": "out_of_scope"
+  },
+  {
+   "id": "fleet-visual",
+   "descricao": "Fleet sem captura; sem paridade visual",
+   "evidence": "static"
+  },
+  {
+   "id": "trip-pixels",
+   "descricao": "Estados de viagem sem captura original; forma dos layouts + dados servidos",
+   "evidence": "static+served"
+  }
+ ],
+ "fonte_discovered": "endpoints.discovered.json",
+ "total": 39,
+ "com_feature": 39,
+ "por_origem": {
+  "extracted": 17,
+  "designed": 22
+ }
+}

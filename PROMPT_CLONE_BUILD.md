@@ -1,9 +1,12 @@
 # PROMPT — Recriar UM ecrã (execução num agente de código)
 
-Um prompt por ecrã. Não coles vários ecrãs no mesmo pedido. Não peças o projeto
-todo — pedes um componente, verificas, avanças.
+> Versão 4.0 — fatia vertical (feature/ecrã) + inventário `features.md`.
 
-**Regra dura:** um ecrã só fecha quando todas as ações visíveis têm efeito real.
+Um prompt por fatia vertical (feature/ecrã). Não coles vários ecrãs no mesmo
+pedido. Não peças o projeto todo — pedes um componente, verificas, avanças.
+
+**Regra dura:** um ecrã só fecha quando todas as ações visíveis têm efeito real
+e o `F-ID` de `features.md` está mapeado.
 
 Substitui `<ECRÃ>`, `<STACK_UI>`, `<FICHEIRO_DESTINO>`.
 
@@ -28,6 +31,9 @@ Se o ecrã tiver uma ação sem endpoint/estado, **não avances com placeholder*
 abre a FASE 4/7, cria o contrato e implementa o efeito real. Um botão que só
 mostra "fora do âmbito" ou "em breve" não é uma entrega.
 
+Se o ecrã não tiver `F-ID` em `features.md`, **para**: abre a FASE 4.7 e cria a
+feature. Não inventes um F-ID nem deixes a feature sem linha.
+
 ---
 
 ## 1. MEDIR ANTES DE ESCREVER CÓDIGO
@@ -47,7 +53,10 @@ elemento | x | y | w | h | cor | fontSize | weight | lineHeight | raio
 ```
 
 Mede na imagem. **Não estimes a olho.** Cruza com `ui_spec/` e, se divergirem,
-diz qual seguiste e porquê.
+diz qual seguiste e porquê. Se tiveres o artefacto descodificado
+(`decode_android_resources`), os valores de `values/` são a fonte dos tokens —
+mas quem decide é a medição no PNG: se divergirem, ganha o PNG e a divergência
+entra na lista de assunções.
 
 Se já existir `tokens.md` (ou o teu ficheiro de tema), usa-o e acrescenta-lhe o
 que falta — no fim, escreve lá os valores novos. Ecrãs medidos isoladamente
@@ -147,7 +156,7 @@ também não.
 Preenche esta tabela para cada elemento interativo:
 
 ```
-elemento | ação | endpoint/estado | teste | status
+F-ID | elemento | ação | endpoint/estado | teste | status
 ```
 
 - `status` só pode ser `ok` ou `gap`. Um `gap` impede a entrega do ecrã.
@@ -156,6 +165,7 @@ elemento | ação | endpoint/estado | teste | status
 - Se a ação depende de terceiro que não podes usar, implementa equivalente
   próprio funcional ou remove a entrada. Nunca um botão que avisa que não faz.
 - A tabela entra em `capabilities.md` (projeto) e no fim da entrega.
+- Atualiza `features.md` com o `F-ID`, o estado da feature e o teste.
 
 **Não há terceira opção.** Ou o botão funciona, ou não existe. "Em breve",
 "fora do âmbito", `TODO`, toast e `disabled` sem razão não são estados válidos.
@@ -190,7 +200,9 @@ A evidência do ecrã (`live`/`served`/`static`) não muda esta regra: `served` 
 - [ ] Zero botões mortos: todo o elemento interativo tem efeito real e teste
 - [ ] Zero `fora do âmbito`/`em breve`/`TODO`/`FIXME`/`not implemented` no ecrã
 - [ ] Cada mutação testada: happy, empty, error, offline
-- [ ] `capabilities.md` atualizado com `elemento | ação | endpoint/estado | teste | status`
+- [ ] `capabilities.md` atualizado com `F-ID | elemento | ação | endpoint/estado | teste | status`
+- [ ] `F-ID` de `features.md` mapeado; status da feature atualizado
+- [ ] `features.md` atualizado com o teste e a evidência deste ecrã
 - [ ] Nenhuma ação crítica sem endpoint/estado; se faltar, o ecrã não está pronto
 - [ ] Sem HTTP dentro do componente
 - [ ] Zero assets copiados do original
@@ -231,6 +243,7 @@ Responde com:
 3. Assunções (se houver)
 4. Checklist do §9 marcado item a item
 5. Tabela de ações (§7.5) e atualização de `capabilities.md`/`backlog.md`
+6. `F-ID` e atualização de `features.md` (estado + teste)
 
 Se houver um `gap`, não digas que está pronto.
 

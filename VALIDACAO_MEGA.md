@@ -7,15 +7,19 @@
 
 | Verificação | Comando | Resultado |
 |---|---|---|
-| Backend (3 apps + consola + 3 espelhos) | `BACKEND\.venv\Scripts\python -m pytest -q tests` | **55 passed** |
+| Backend (3 apps + consola + 3 espelhos) | `BACKEND\.venv\Scripts\python -m pytest -q tests` | **88 passed** |
 | Teste dos três espelhos | `pytest -q tests\test_espelhos.py` | **1 passed** |
 | App Driver (build) | `gradlew.bat assembleDebug` | **BUILD SUCCESSFUL** |
 | App Driver (testes) | `gradlew.bat testDebugUnitTest` | **74 testes, 0 falhas** |
 | App Rider (build) | `gradlew.bat assembleDebug` | **BUILD SUCCESSFUL** |
 | App Rider (testes) | `gradlew.bat testDebugUnitTest` | **10 testes, 0 falhas** |
-| Portões do MEGA | `python tools\spec_check.py` | **315 verificações, 0 falhas** |
-| Backoffice (build) | `npm run build` | **built in 2.57s** |
-| Cobertura | `python tools\gen_coverage.py` | 109 ecrãs base classificados |
+| Portões do MEGA | `python tools\spec_check.py` | **818 verificações, 0 falhas** |
+| Inventário Driver (FASE 4.7) | `python tools\gen_features.py` | **86 features**, 109/109 capturas |
+| Inventário Rider (FASE 4.7) | `python tools\gen_features_rider.py` | **52 features**, 29/29 capturas |
+| Contrato descoberto vs implementado | `python tools\split_endpoints.py` | **1 104 → 39** (17 extracted, 22 designed) |
+| Ledger / verify / cobertura | `python tools\gen_rea_evidence.py` | **130 obrigações**, 14 abertas, **89,2 %** |
+| Backoffice (build) | `npm run build` | **built** |
+| Cobertura de ecrãs | `python tools\gen_coverage.py` | 109 ecrãs base classificados |
 
 ### 1.1 Validação no telemóvel Honor (2026-10-27)
 
@@ -85,7 +89,46 @@ do domínio (avaliação 0 = saltar).
 Ecrãs sem captura (viagem, PIN, fim, avaliação) têm forma `static` dos layouts e dados
 `served`; não são `live`. Ver `coverage.md`.
 
-### 4.1 Rider (recriação)
+## 4.1 FASE 4.7 — inventário de funcionalidades (v4)
+
+O V4 acrescenta a FASE 4.7, que a v3.1 não tinha. Estado:
+
+| App | `features.md` | features | `ok` | `excluído` | `em falta` | `parcial` |
+|---|---|---|---|---|---|---|
+| Driver | `features.md` | 86 | 72 | 8 | 6 | 0 |
+| Rider | `ANDOIRD/USER_LITE/features.md` | 52 | 44 | 0 | 8 | 0 |
+
+Reconciliação com este `coverage.md` (que conta ecrãs, não features):
+
+- os 84 `sim` → 84 F-ID `ok`;
+- os 13 `parcial` da oferta (`100_online_001..013`) → **1** feature `trip` `ok`;
+- os 4 `parcial` restantes → 4 F-ID `ok`;
+- os 8 `nao` → 8 F-ID `excluído`, com aprovação escrita em
+  [`APROVACAO_EXCLUSOES.md`](APROVACAO_EXCLUSOES.md).
+
+**Zero `parcial` na matriz final.** Os 14 `em falta` são todos de plataforma
+(push, deep links, biometria, i18n, dark mode, a11y, contactos, câmera, badge) e
+estão em `backlog.md`.
+
+### 4.2 Artefactos V4 criados nesta ronda
+
+| Artefacto | Conteúdo |
+|---|---|
+| `features.md` ×2 | inventário completo com F-ID, evidência, status e teste |
+| `APROVACAO_EXCLUSOES.md` | X-01 a X-08 assinadas |
+| `endpoints.discovered.json` | 1 104 endpoints, todos com `disposition` |
+| `endpoints.contract.json` | 39 endpoints, 39 com `feature`, com `origin` |
+| `peer_triggers.md` | 11 triggers com ator e prova |
+| `tokens.md` | cor, tipografia, espaço, movimento + divergências |
+| `rea_evidence/` | INDEX, ledger (130), verify (9/9), cobertura (89,2 %) |
+| `tools/gen_features*.py`, `split_endpoints.py`, `gen_rea_evidence.py` | geradores reprodutíveis |
+
+**Limitação declarada:** o servidor MCP **REA não estava disponível** nesta
+sessão. O ledger, o verify e a cobertura foram calculados localmente com o mesmo
+formato e estão marcados como `local` no `rea_evidence/INDEX.md`. Não se
+apresenta trabalho local como trabalho do REA.
+
+### 4.3 Rider (recriação)
 
 A Rider foi recriada em `ANDOIRD/USER_LITE/RECRIACAO/` (Kotlin + Views): 10 testes,
 build a passar, contrato `designed` em `BACKEND/apps/userlite.py`. A validação no
@@ -93,6 +136,10 @@ Honor cobriu login, início, mapa real, localização, pesquisa, casa guardada, 
 pedido, viagem completa, fim e avaliação dos dois lados. As entradas sem equivalente
 (entrega, reserva, paragens, cidade, filtro pessoal) foram removidas da UI; ver
 `capabilities.md`.
+
+O inventário FASE 4.7 da Rider está em
+[`ANDOIRD/USER_LITE/features.md`](ANDOIRD/USER_LITE/features.md): 52 features,
+29/29 capturas, 44 `ok`, 8 `em falta` (plataforma), zero `parcial`.
 
 ## 5. Topologia e orquestração
 
@@ -125,7 +172,16 @@ pedido, viagem completa, fim e avaliação dos dois lados. As entradas sem equiv
 - Nenhum `repack_suspect` promovido a `clean`.
 - Nenhuma captura da app nova usada como spec.
 - Nenhuma app chama outra; o backoffice não escreve na BD.
+- **Nenhum `parcial` no inventário final** (era 17 no `coverage.md`).
+- **Nenhum fecho falso:** o veredicto é `não` enquanto houver gaps abertos, e o
+  `spec_check` proíbe declarar "zero gaps" com gaps abertos.
 
-**Driver:** fechada e validada no Honor. **Rider:** recriada e validada no Honor
-(ciclo completo). **Fleet:** contrato e operação, sem paridade visual. **iOS:** fora do
-âmbito. Artefactos de fecho: `capabilities.md`, `backlog.md`, `RELATORIO_FINAL.md`.
+**Driver:** fechada e validada no device; 72 features `ok`, 8 `excluído`
+aprovadas. **Rider:** recriada e validada; 44 features `ok`. **Fleet:** contrato e
+operação, sem paridade visual. **iOS:** fora do âmbito.
+
+**Veredicto:** pronto para `funcional`? **não** — 14 gaps de plataforma
+(`backlog.md` §1–§2), cobertura **89,2 %**. Nenhum gap é ecrã.
+
+Artefactos de fecho: `features.md` ×2, `capabilities.md`, `backlog.md`,
+`RELATORIO_FINAL.md`, `rea_evidence/`.

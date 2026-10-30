@@ -1,0 +1,11 @@
+{
+ "layouts": 2693,
+ "drawables_xml": 4486,
+ "strings_idiomas": 172,
+ "strings_total": 622340,
+ "strings_pt_pt": 9553,
+ "tokens": "ui_spec/design_tokens.json",
+ "manifest": "ui_spec/manifest.json",
+ "fonte": "ANDOIRD/DRIVER/ui_spec/",
+ "ferramenta": "decode_android_resources (apktool) — sessao anterior"
+}

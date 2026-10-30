@@ -138,10 +138,21 @@ Aceites e escritos no relatório final:
 - [x] FASE 4 — catálogo extraído + `endpoints.json` do ecossistema
 - [x] FASE 4.5 — `topology.md`
 - [x] FASE 4.6 — máquina de estados + teste dos três espelhos
+- [x] FASE 4.7 — **`features.md`** (Driver): 86 features, 109/109 capturas,
+      72 `ok`, 8 `excluído` com aprovação escrita, 6 `em falta`
 - [x] FASE 5 — Driver e Rider recriadas; Fleet coberta por contrato/operação
       (app de laboratório, sem paridade visual — declarado em §8)
 - [x] FASE 6 — validação no Honor (Rider e Driver); ecossistema declarado
-- [x] FASE 7 — `capabilities.md`, `backlog.md`, `RELATORIO_FINAL.md`; zero gaps no alvo
+- [ ] FASE 7 — `capabilities.md` e `backlog.md` reindexados por F-ID; **6 gaps
+      `F-platform-*` abertos** + decisão de âmbito G-07
+
+### 9.1 Programa V4
+
+O programa é a versão **v4** (`COMPARAÇOES DE PROMPT/PROMPTS_V4/`), que acrescenta
+a FASE 4.7. O `PROMPT_CLONE_MEGA.md` desta pasta foi actualizado para v4.
+
+A FASE 4.7 da **Rider** ainda não existe: até existir, o `capabilities.md` da
+Rider não pode citar F-ID como a Driver faz. É o próximo passo de documentação.
 
 ## 10. O que não se faz
 

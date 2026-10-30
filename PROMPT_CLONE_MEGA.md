@@ -1,5 +1,8 @@
 # PROMPT — Clone de app: spec viva + contrato + recriação limpa
 
+> Versão 4.0 — inventário de funcionalidades genérico; default é a app
+> original, não o mercado. Doutrina da v3.1 intacta.
+
 Documento único. Substitui `PROMPT_SPEC_UIUX` e `PROMPT_SPEC_VIVO`, que ficam
 como referência histórica. Fusão de: fidelidade visual e template por ecrã
 (UIUX) + interrogação viva, plano de acesso e gradação de evidência (VIVO) +
@@ -20,6 +23,11 @@ próprio que funciona — ou o ponto de entrada não existe. O alvo
 (`funcional` | `produção` | `loja`) é declarado no `plan.md`; por omissão,
 `funcional`.
 
+**Default: a app original, não o mercado.** O inventário cobre todas as
+funcionalidades observáveis/declaradas da app alvo (layouts, strings, endpoints,
+manifest, SDKs, estados). Benchmark de mercado é um modo opcional
+(`market_parity.md`), nunca a fonte do clone.
+
 **Pressuposto por omissão: não tens credenciais.** Se tiveres, é um bónus — mas
 o método tem de funcionar sem elas (§3). **Ordem da conversa:** pergunta sempre
 primeiro por credenciais (N3/N0); se não houver, oferece **N2 — repoint +
@@ -31,19 +39,28 @@ ecrã por prompt, num agente de código. Este documento sozinho produz um agente
 lento e hesitante; o BUILD produz o ecrã. O MEGA não fecha na FASE 6: a FASE 7
 fecha os gaps.
 
+**Ferramentas (v3).** A execução usa o servidor MCP **REA**, ligado por
+**`REA_BINDINGS.md`**: capacidade → ferramenta → artefacto. A regra de
+precedência está no §1 (regras 14-16) e a tradução de evidência no §2.1. O
+catálogo de ferramentas e as instruções de workflow que o REA instala **não
+substituem** nenhuma fase, gate ou critério de fecho deste documento — o
+programa é este.
+
 Substitui `<APP>`, `<PKG>`, `<ROLE>`, `<STACK_UI>`.
 
 ```
 FASE 0 artefacto → FASE 1 plano de acesso → FASE 2 captura viva
 → FASE 3 spec estática → FASE 4 contrato → FASE 4.5 topologia
-→ FASE 4.6 orquestração entre apps → FASE 5 recriação → FASE 6 validação
+→ FASE 4.6 orquestração entre apps → FASE 4.7 inventário de funcionalidades
+→ FASE 5 recriação → FASE 6 validação
 → FASE 7 fecho de gaps (zero botões mortos)
 ```
 
 **Mapa para os prompts originais.** FASE 0 = UIUX/VIVO FASE 0 · FASE 1 = VIVO
 §0.5.0 · FASE 2 = UIUX §0.5 + VIVO §0.5.1-0.5.5 · FASE 3 = UIUX/VIVO FASE 1 ·
-FASE 4 = VIVO FASE 1 §3 · FASE 4.5 = novo · FASE 4.6 = novo · FASE 5 = UIUX/VIVO
-FASE 4 + UIUX APÊNDICE · FASE 6 = novo · FASE 7 = novo (fecho de gaps).
+FASE 4 = VIVO FASE 1 §3 · FASE 4.5 = novo · FASE 4.6 = novo · FASE 4.7 = novo
+(inventário genérico) · FASE 5 = UIUX/VIVO FASE 4 + UIUX APÊNDICE · FASE 6 =
+novo · FASE 7 = novo (fecho de gaps).
 
 ---
 
@@ -109,6 +126,20 @@ Se não consegues decidir o modo, não estás pronto para a FASE 2: falta sonda.
 13. **Nenhum botão decorativo.** `fora do âmbito`, `em breve`, `TODO`, toast
     sem efeito, `disabled` sem razão = falha de entrega, não gap. O utilizador
     nunca tem de descobrir o que falta; o agente inventaria e fecha.
+14. **Ferramenta nomeada, não comando improvisado.** Se a capacidade existe em
+    `REA_BINDINGS.md`, usa-se a ferramenta REA. Comando cru (`adb`, `apktool`,
+    `jadx`, `frida`) só como fallback declarado no `plan.md`, com a razão
+    escrita. O instrumento não é negociável; o método é deste documento.
+    **Excepção N2:** repoint, patch de smali, re-assinatura e stub server não
+    têm ferramenta REA (`REA_BINDINGS` §5). São manuais por desenho; a regra 14
+    não se lhes aplica. `install_adb_package` pode instalar a cópia assinada.
+15. **Evidência traduzida, nunca promovida.** O vocabulário do REA não é o
+    deste documento. A conversão do §2.1 é obrigatória e uma leitura de binário
+    nunca se escreve como `live`.
+16. **Limitação declarada é limitação registada.** Todo o `unknown`/limitação
+    devolvido por uma ferramenta entra em `coverage.md` ou `backlog.md`. O que
+    não tem linha não foi verificado; o que não foi verificado não se afirma.
+    Ferramenta indisponível também é linha, não silêncio.
 
 ---
 
@@ -133,6 +164,37 @@ Duas dimensões ortogonais. Um facto tem sempre as duas.
 Regra de promoção: `repack_suspect` só passa a `clean` quando o elemento for
 confirmado contra `ui_spec/` (layout, drawable, string, dimens) **do binário
 original**. O que não se confirmar fica `repack_suspect` para sempre.
+
+### 2.1 Tradução de evidência (REA → este documento)
+
+A ferramenta devolve evidência com cobertura, limites e `unknowns`; este
+documento usa seis níveis. A conversão é obrigatória e faz-se uma vez, no
+momento em que o facto entra na spec:
+
+| Vem de `inspect_*` / `trace_*` / `decode_*` / captura | Vira | Nunca |
+|---|---|---|
+| Leitura estática do binário (manifest, método, recurso, assinatura) | `static` | `live`, `served` |
+| Captura de ecrã do alvo **original** (`capture_adb_screen`, `capture_web_screenshot`) | `live` (+ `clean`) | `static` |
+| A mesma captura de build repointado/re-assinado | `served` (+ `repack_suspect`) | `live` |
+| Request/resposta realmente capturado, ponta a ponta | `live` | `static` |
+| Ecrã materializado pelo teu backend | `served` (+ `repack_suspect` se veio de build modificado) | `live` |
+| Referência pública: loja, help center, vídeo | `unverified` | `static` |
+| Inferência tua | `presumed` | qualquer nível acima |
+| Ecrã/painel que não existe no original | `designed` | `unverified` |
+
+Regras:
+
+- **`unknowns`, `limitations` e `coverage`** devolvidos pela ferramenta entram
+  em `coverage.md` e, se bloquearem o alvo, em `backlog.md`. Um `unknown` sem
+  linha é omissão, não ausência de evidência.
+- **A ferramenta não fecha um gate.** Ela produz matéria-prima; o gate é do
+  MEGA e exige o artefacto citado (ex.: inventário do pacote), não a sensação
+  de que a análise correu bem.
+- **Origem citada.** Cada facto da spec aponta o artefacto que o sustenta em
+  `rea_evidence/` (ver `REA_BINDINGS.md` §3), com caminho e data.
+- **Ferramenta indisponível** (provider em falta, alvo não suportado): escreve
+  no `plan.md` o que ficou sem cobertura e como obtiveste o substituto. Nunca
+  se inventa evidência para preencher a tabela.
 
 ---
 
@@ -389,24 +451,41 @@ ganhas um contrato coerente, versionado e implementável.
 ## FASE 0 — Obter e desempacotar o artefacto
 
 **Android**
-- `adb devices` → autorizar RSA no telefone
-- `adb shell pm list packages | grep -i <nome>` → `adb shell pm path <pkg>`
-- `adb pull` do `base.apk` (+ splits) → `device_apk/`
-- `.xapk` é ZIP → `base.apk` + splits de config; só o `base.apk` interessa
-- hash: `sha256sum device_apk/base.apk` → `plan.md`
+- `list_adb_devices` → escolher `<SERIAL>`; `inspect_adb_device` regista build/SDK
+- `resolve_adb_packages` → `<PKG>`; `list_adb_packages` para o inventário
+- `pull_adb_package` → `device_apk/` com **base + todos os splits**
+- `.xapk` é ZIP → `base.apk` + splits de config; **guarda todos** — os splits
+  carregam recursos (densidade, ABI, locale) que faltam na FASE 5 se os ignorares
+- `inspect_artifact` → `rea_evidence/00_artifact/inventory.json` (digest, split
+  count, assinatura)
+- fallback: `adb devices` / `adb pull` / `adb shell pm path` — só com razão
+  escrita no `plan.md`
+- hash: digest do `inspect_artifact` (ou `sha256sum device_apk/base.apk` como
+  fallback) → `plan.md`
 
 **iOS**
 - `.ipa` é ZIP → `Payload/<App>.app`; binário Mach-O (idealmente desencriptado)
 - nibs/storyboards compilados (`NIBArchive`)
 
-**Decompila sempre uma cópia**
-- `apktool d base.apk -o decompiled/` → `res/`, `smali*/`, `AndroidManifest.xml`, `assets/`
-- `jadx -d jadx_src/ base.apk` → referência para greps, não para leitura integral
+**Decompila uma cópia (manual, fallback declarado)**
+- Se usares as árvores manuais: `apktool d base.apk -o decompiled/` → `res/`,
+  `smali*/`, `AndroidManifest.xml`, `assets/`; `jadx -d jadx_src/ base.apk` →
+  referência para greps, não para leitura integral
+- Se usares o REA: `decode_android_resources` + `ui_spec/` +
+  `rea_evidence/03_spec/` substituem as árvores; `apktool`/`jadx` ficam como
+  fallback
 
 **Manifest** → activities, deep links, permissões, componentes exportados,
 `queries`/providers (o que a app consulta fora).
 
-**GATE:** `device_apk/` intacto + hash em `plan.md` + `decompiled/` + `jadx_src/`.
+**Ferramentas (obrigatórias).** `list_adb_devices`/`resolve_adb_packages` para
+identificar o alvo; `pull_adb_package` traz o conjunto completo (base + todos os
+splits, como `pm path` os reporta); `inspect_artifact` classifica e inventaria
+com digest. `adb` manual só como fallback declarado.
+
+**GATE:** `device_apk/` intacto + hash em `plan.md` + inventário em
+`rea_evidence/00_artifact/`. As vias de spec (`ui_spec/` +
+`rea_evidence/03_spec/` ou `decompiled/` + `jadx_src/`) verificam-se na FASE 3.
 
 ---
 
@@ -415,10 +494,12 @@ ganhas um contrato coerente, versionado e implementável.
 Sonda barata por role, antes de capturar:
 
 - credenciais: existem? de quem? para que role?
-- hardening: grep `CertificatePinner`, `SafetyNet`, `PlayIntegrity`,
-  signature/`PackageManager` checks, root/emulator detection
-- **teste de repack** (1 a 2 sessões): hosts patch → `apktool b` → `apksigner`
-  → `adb install` → passa do login?
+- hardening: `search_android_classes`/`find_xrefs_to_name` por
+  `CertificatePinner`, `SafetyNet`, `PlayIntegrity`, signature/`PackageManager`
+  checks, root/emulator detection; grep é fallback
+- **teste de repack** (1 a 2 sessões, manual — exceção N2): hosts patch →
+  `apktool b` → `apksigner` → `install_adb_package` (ou `adb install` como
+  fallback) → passa do login?
 - que superfícies de terceiros vão quebrar com re-assinatura (§3.5)
 - **device de teste compatível**: minSdk/targetSdk vs Android do device; se o
   device do cliente não corre a app, usa emulador/device de teste
@@ -438,19 +519,33 @@ esperada** (`live`/`served`/`static`) e **laboratório** (`completo`/`parcial`).
 Inclui cobertura prometida, tolerância declarada e a lista do que fica de fora
 **com razão**.
 
+**Ferramentas (obrigatórias).** `inspect_android_package` para manifest, SDK,
+permissões e componentes exportados; inspeção de assinatura do artefacto para o
+veredicto de re-assinatura. Os dois alimentam a linha de hardening e o teste de
+repack — sem eles, o `access_plan.md` é opinião. Para iOS,
+`project_apple_application_graph`.
+
 **GATE:** `access_plan.md` fechado + classificação preliminar do tipo de app
-(§4.5.1). Sem isto não há FASE 2.
+(§4.5.1) + evidência de pacote e assinatura em `rea_evidence/01_access/`. Sem
+isto não há FASE 2.
 
 ---
 
 ## FASE 2 — Captura viva (dois canais, um loop)
 
-**Canal A — passivo (binário original).** `screencap` + `uiautomator dump` +
-`input tap/swipe/text`. Risco zero, `integrity: clean`. É sempre o primeiro.
+**Canal A — passivo (binário original).** `capture_adb_screen` +
+`uiautomator dump` + `input tap/swipe/text`. Risco zero, `integrity: clean`. É
+sempre o primeiro.
 
 **Canal B — interrogativo (cópia repointada + stub backend).** Cada toque produz
 um request em `handled.log`; serves o DTO populado **inteiro**; itera até o ecrã
 renderizar. Só existe se a sonda de repack da FASE 1 passou.
+
+**Ferramentas (canal A).** `capture_adb_screen` por ecrã (frame único,
+content-addressed, digest estável para diff), `start_adb_app` para arranque
+reprodutível, `read_adb_logcat` para correlacionar crash/erro com o ecrã. A
+travessia e o dump de UI continuam a ser teus: a ferramenta dá o frame, não
+decide o próximo nó.
 
 ### Preparação (canal A)
 
@@ -473,7 +568,8 @@ coordenadas em `ux_capture/login.sh`.
 
 ### Loop por ecrã
 
-1. `adb exec-out screencap -p > ux_capture/<nome>.png`
+1. `capture_adb_screen` → `ux_capture/<nome>_<n>.png` (fallback declarado:
+   `adb exec-out screencap -p > ux_capture/<nome>.png`)
 2. `uiautomator dump` + pull → nós clicáveis com `bounds`
 3. ação: tap / swipe / keyevent / text
 4. canal B: o request correspondente entra em `handled.log` e no `endpoints.json`
@@ -524,13 +620,22 @@ Estados que só chegam com ator externo: `estado → trigger externo → role`.
 Na FASE 5 viram peer-bot.
 
 **GATE:** nós todos visitados **ou** todos classificados (§3.6); `coverage.md`
-escrito; `ux_reference/` público marcado `unverified`.
+escrito; `ux_reference/` público marcado `unverified`; frames de captura em
+`rea_evidence/02_capture/`.
 
 ---
 
 ## FASE 3 — Spec estática + stack
 
-Tudo por greps direcionados:
+**Ferramentas (obrigatórias).** `decode_android_resources` para layouts,
+`values/`, drawables, animações e fontes; `inspect_android_package` para o mapa
+de manifest/activities/deep links; `search_android_classes` →
+`inspect_android_method` → `trace_android_references` para DTOs, enums de
+estado e construtores de URL, sempre **por identificador**, nunca por leitura
+integral. `inspect_apktool_client` só para diagnosticar o provider.
+
+Tudo por **identificador** (ferramentas acima: `search` → `inspect` → `trace`);
+grep é fallback. O que extrair:
 
 - **layouts**: `res/layout*/`, `res/menu*/`, nav graphs, Composables,
   `.storyboard` → hierarquia por ecrã
@@ -549,14 +654,25 @@ não se troca XML por Compose nem UIKit por SwiftUI "porque é mais moderno".
 **Correlação:** cada ecrã de `ux_capture/` mapeia para um layout de `ui_spec/`.
 Os que não mapeiam estão classificados em `coverage.md` (§3.6).
 
-**GATE:** `ui_spec/` + `stack.md` + tabela de correlação sem órfãos.
+**GATE:** `ui_spec/` + `stack.md` + tabela de correlação sem órfãos + **uma**
+das vias de referência:
+(a) `rea_evidence/03_spec/` (REA), ou
+(b) `decompiled/` + `jadx_src/` (árvores manuais, fallback declarado).
 
 ---
 
 ## FASE 4 — Contrato de dados
 
-`endpoints.json` **bottom-up** (canal B da FASE 2) + DTOs estáticos para os
-campos que a UI nunca renderizou.
+`endpoints.discovered.json` **bottom-up** (canal B da FASE 2) + DTOs estáticos
+para os campos que a UI nunca renderizou. O tráfego grava-se e inspeciona-se com
+`inspect_web_network_capture` (HAR 1.2, SAZ, mitmproxy) e compara-se
+antes/depois com `compare_web_captures`. O shape que entra no contrato é o
+observado, não o reconstruído de memória.
+
+**Dois ficheiros, não um.** `endpoints.discovered.json` é o catálogo completo
+(todos os endpoints observados/extraídos); `endpoints.contract.json` é o
+subconjunto que o clone implementa. O `endpoints.json` curado pode ser o
+`contract`; o inventário de funcionalidades usa o `discovered`.
 
 Por endpoint:
 
@@ -566,6 +682,7 @@ Por endpoint:
 - `emits` — evento publicado quando muda estado · `subscribes` — eventos que o
   ecrã consome (ver FASE 4.6)
 - `screens: [...]` — que ecrãs o chamam (causal)
+- `feature` — F-ID de `features.md` que este endpoint alimenta
 - `request` — shape real observado
 - `response` — shape + `evidence: live|served|static|unverified|presumed` — e
   `designed` para os endpoints de backoffice que projetaste por não existirem
@@ -583,8 +700,11 @@ nome, visibilidade por role. Nunca dois `Trip` divergentes.
 (`a.b.c`), zero Retrofit → `presumed` até a interrogação ou os construtores de
 URL confirmarem.
 
-**GATE:** todo o host classificado, todo o endpoint com pelo menos um ecrã,
-`evidence` em cada shape, zero segredos.
+**GATE:** todo o host classificado, todo o endpoint do `discovered` com
+`disposition` (`contract`/`substituir`/`descartar`/`telemetry`), todo o endpoint
+do `contract` com pelo menos um ecrã/feature, `feature` em cada endpoint,
+`evidence` em cada shape, zero segredos, e a captura de origem citada em
+`rea_evidence/04_contract/`.
 
 ---
 
@@ -729,7 +849,9 @@ de estados** (§4.5.4), não por paridade visual. Marca esses ecrãs como
 **GATE:** `topology.md` completo; cada estado que a app mostra tem um ator no teu
 sistema que o move; cada backend separado tem razão escrita; cada backoffice tem
 lista de ecrãs; cada exclusão tem equivalente funcional ou entrada removida, com
-aprovação escrita.
+aprovação escrita; e cada inferência de backoffice (§4.5.4) cita a string, o
+enum, o endpoint ou o estado órfão que a sustenta — sem citação é `presumed` e
+vai a `coverage.md`.
 
 ---
 
@@ -845,6 +967,63 @@ de backoffice modeladas como transições auditadas; ordem de clonagem justifica
 
 ---
 
+## FASE 4.7 — Inventário de funcionalidades (genérico, obrigatório)
+
+A FASE 5 não começa sem `features.md`. O objetivo é enumerar **todas** as
+funcionalidades da app original, com ou sem ecrã próprio, antes de decidir o que
+se implementa. O default é a **app original**, não o mercado.
+
+### 4.7.1 Entradas
+
+- `ui_spec/` — todos os layouts, IDs, textos, contentDescriptions, menus.
+- `strings` — todos os idiomas; labels, títulos, settings, erros, permissões.
+- `endpoints.discovered.json` — catálogo completo, não o curado.
+- `AndroidManifest.xml` — activities, services, providers, deep links, permissões.
+- SDKs/libs — mapas, pagamentos, chat, push, câmara, ficheiros, biometria.
+- `topology.md` — estados, transições, jobs.
+- `ux_capture/` + `ux_behavior.md` — evidência viva.
+- `FEATURE_TAXONOMY.md` — domínios universais + regras de inferência.
+
+### 4.7.2 Método
+
+1. Extrai todos os layouts/IDs/strings/endpoints/manifest/SDKs.
+2. Agrupa por domínio: universal + inferido das strings/endpoints da app.
+3. Deduplica: uma feature pode ter vários ecrãs, endpoints e estados.
+4. Mapeia cada feature para evidência: layout/string/endpoint/state/manifest.
+5. Classifica cada string/endpoint órfão como `support`, `error`, `telemetry`,
+   `deprecated` ou `platform` — ou promove-o a feature.
+6. Gera `features.md` com:
+
+```
+id | domínio | funcionalidade | evidência | ecrã | ação | endpoint | estado | status | teste
+```
+
+`status`: `ok` | `parcial` | `em falta` | `excluído`.
+`excluído` só com aprovação escrita e entrada removida.
+`parcial` e `em falta` são **gap** para `funcional`.
+
+### 4.7.3 Cobertura mínima
+
+- Toda a string de UI pertence a uma feature ou a uma classe
+  `support`/`error`/`telemetry`/`deprecated`/`platform`.
+- Todo o endpoint do `discovered` tem `disposition`.
+- Toda a permissão/componente do manifest tem feature ou `platform`.
+- Toda a feature tem pelo menos uma evidência.
+- Features sem ecrã são obrigatórias: push, offline, background jobs, settings,
+  a11y, i18n, dark mode, permissões, biometria, deep links, widgets.
+
+### 4.7.4 Benchmark opcional
+
+Só se o cliente nomear um concorrente: `market_parity.md`, evidência
+`unverified`, nunca spec, nunca core. O default é a app original. Um benchmark
+não substitui o inventário da app alvo.
+
+**GATE:** `features.md` completo; zero features sem linha; zero strings/endpoints
+órfãos por classificar; `parcial`/`em falta` no `backlog.md`; `excluído` com
+aprovação escrita. Sem este gate não há FASE 5.
+
+---
+
 ## FASE 5 — Recriação (`app_nova/`)
 
 - Codebase nova, 100% tua. **Mesma stack** de `stack.md`
@@ -858,8 +1037,11 @@ de backoffice modeladas como transições auditadas; ordem de clonagem justifica
   backoffice como transições auditadas
 - Zero recursos copiados: fontes vetoriais originais tuas para cada forma
   (SVG / vector drawable / path nativo), nunca rasterizar nem reutilizar ficheiros
-- Por ecrã: corre **`PROMPT_CLONE_BUILD.md`** (não este documento) — um prompt
-  por ecrã, com o PNG e o layout anexados
+- **Implementa a partir de `features.md`**, não só de `coverage.md`: cada F-ID
+  `ok`/`parcial`/`em falta` tem destino.
+- **Uma fatia vertical por BUILD** (feature/ecrã), não o projeto todo; uma
+  feature pode atravessar vários ecrãs. Corre **`PROMPT_CLONE_BUILD.md`** com o
+  PNG, o layout e o F-ID anexados.
 - **Backend teu em estágios**: mock com fixtures → LAN (`0.0.0.0:8080` +
   cleartext no `network_security_config`) → servidor. A app não muda, muda a
   base URL
@@ -873,10 +1055,12 @@ de backoffice modeladas como transições auditadas; ordem de clonagem justifica
 - **Cada ação visível tem efeito real.** O BUILD não aceita placeholders: se o
   endpoint/estado não existe, cria-se antes de marcar o ecrã como pronto.
 
-**GATE:** todos os ecrãs de `coverage.md` implementados **e todas as ações
-visíveis funcionam** (endpoint + estado + feedback). Zero `fora do âmbito`,
-`em breve`, `TODO`, toast sem efeito ou botão inerte. Item não implementável:
-equivalente próprio funcional ou ponto de entrada removido — nunca placeholder.
+**GATE:** todos os ecrãs de `coverage.md` implementados **e todas as features de
+`features.md`** com status `ok` (ou `excluído` com aprovação escrita) para o
+alvo; todas as ações visíveis funcionam (endpoint + estado + feedback). Zero
+`fora do âmbito`, `em breve`, `TODO`, toast sem efeito ou botão inerte. Item não
+implementável: equivalente próprio funcional ou ponto de entrada removido —
+nunca placeholder.
 
 ---
 
@@ -891,9 +1075,11 @@ equivalente próprio funcional ou ponto de entrada removido — nunca placeholde
   assumida e escrita no relatório final
 
 **Fecho:**
-0. **Auditoria de capacidades** — gera `capabilities.md` a partir de todos os
-   ecrãs, ações, endpoints e estados. Para cada item: `ok` | `gap` |
-   `placeholder` | `missing-endpoint` | `missing-state` | `dead`. Cruza:
+0. **Auditoria de capacidades** — gera `capabilities.md` a partir de
+   `features.md` + todos os ecrãs, ações, endpoints e estados. Para cada item:
+   `ok` | `gap` | `placeholder` | `missing-endpoint` | `missing-state` | `dead`.
+   Cruza:
+   - cada feature de `features.md` tem status e teste?
    - cada ecrã tem todas as ações visíveis?
    - cada ação tem endpoint/estado e efeito?
    - cada endpoint tem consumidor?
@@ -915,6 +1101,11 @@ equivalente próprio funcional ou ponto de entrada removido — nunca placeholde
    remove a entrada
 8. **handoff em chat** — não só ficheiro: alvo, feito, gaps fechados, gaps
    abertos, bloqueios externos, veredicto "pronto para <alvo>? sim/não"
+9. **cobertura medida** — `build_reconstruction_obligation_ledger` +
+   `verify_reconstruction` + `evaluate_reconstruction_coverage` contra o limite
+   declarado no `plan.md`; o número entra no `RELATORIO_FINAL.md`. `features.md`
+   sem `parcial`/`em falta` para o alvo; cobertura abaixo do prometido é gap,
+   não tolerância.
 
 ---
 
@@ -926,16 +1117,21 @@ A FASE 6 diz o que está fiel. A FASE 7 fecha o que está morto. Nenhum projeto 
 ### 7.1 Inventário automático (o agente faz, não o cliente)
 
 Gera `capabilities.md` a partir de:
+- todas as features de `features.md` (incluindo as sem ecrã);
 - todos os ecrãs de `coverage.md` e do `ux_behavior.md`;
+- todos os `unknowns`/limitações registados em `rea_evidence/`;
+- o ledger de obrigações (`build_reconstruction_obligation_ledger`) e o
+  `verify_reconstruction`, quando existirem;
 - todos os elementos interativos (botões, tabs, menus, chips, FABs, gestos,
   deep links, notificações);
-- todos os endpoints de `endpoints.json` e do backend;
+- todos os endpoints de `endpoints.discovered.json` e de
+  `endpoints.contract.json`;
 - todos os estados de `topology.md` §8.
 
 Matriz obrigatória:
 
 ```
-capacidade | evidência no original | ecrã | ação | endpoint/estado | teste | status
+F-ID | capacidade | evidência no original | ecrã | ação | endpoint/estado | teste | status
 ```
 
 `status` só pode ser `ok` ou `gap`. `gap` tem: razão, bloqueia
@@ -990,7 +1186,7 @@ até o backlog estar vazio para o alvo.
 
 | Alvo | Obrigatório |
 |---|---|
-| `funcional` (default) | Todos os ecrãs e ações que existem no original funcionam (auth, upload, chat, alertas, favoritos, mapa, offline/cache **quando existirem**); zero botões mortos; testes E2E dos fluxos críticos; backend local com seed; backoffice operacional |
+| `funcional` (default) | Todas as features de `features.md` com status `ok` (ou `excluído` com aprovação escrita); todos os ecrãs e ações que existem no original funcionam; `parcial`/`em falta` = gap; zero botões mortos; testes E2E dos fluxos críticos; backend local com seed; backoffice operacional |
 | `produção` | `funcional` + PostgreSQL/migrações, rate limit, HTTPS, backups, logs/métricas, secrets, testes, a11y, i18n, dark mode |
 | `loja` | `produção` + release assinado, Play Console, privacidade/termos, GDPR, Data Safety, revisão legal |
 
@@ -1025,8 +1221,9 @@ Regras:
 ### 7.5 Artefactos
 
 `capabilities.md` (matriz), `backlog.md` (gaps priorizados),
-`RELATORIO_FINAL.md` (evidência/tolerância), `coverage.md` (captura) e
-`plan.md` (alvo/DoD) são a entrega. Sem os cinco, não há fecho.
+`RELATORIO_FINAL.md` (evidência/tolerância), `coverage.md` (captura),
+`plan.md` (alvo/DoD) e o ledger/verify do REA (quando usados) são a entrega.
+Sem eles, não há fecho.
 
 ---
 
@@ -1039,6 +1236,16 @@ Regras:
       testado antes de prometer cobertura
 - [ ] `coverage.md` — zero nós por visitar **ou** todos classificados
       (`auth`/`state`/`peer`/`geo`/`flag`/`thirdparty`/`broken`)
+- [ ] `features.md` — inventário completo (F-ID, evidência, status); zero
+      `parcial`/`em falta` para o alvo; `excluído` com aprovação escrita
+- [ ] `FEATURE_TAXONOMY.md` — aplicado; domínios universais + inferidos das
+      strings/endpoints da app
+- [ ] `endpoints.discovered.json` — catálogo completo com `disposition`;
+      `endpoints.contract.json` — subconjunto implementado, `feature` por endpoint
+- [ ] `rea_evidence/` — artefacto, acesso, captura, spec e contrato com digest e
+      ferramenta citada; `unknowns` traduzidos para `coverage.md`/`backlog.md`
+- [ ] Precedência respeitada — nenhuma capacidade de `REA_BINDINGS.md` feita por
+      comando cru sem razão escrita no `plan.md`
 - [ ] `ux_capture/` — screenshots do **binário original** (repointado vale com
       flag); screenshots da app nova **nunca** entram na spec (`newapp_*` à parte)
 - [ ] `ux_behavior.md` — grafo de navegação, gestos, animações, feedback, back,
@@ -1050,6 +1257,7 @@ Regras:
 - [ ] `stack.md` — stack respeitada na recriação
 - [ ] `endpoints.json` — bottom-up do log, não catálogo; `evidence` por shape,
       `screens` causal, `peer_trigger`; hosts todos classificados; zero segredos
+      (ou os dois ficheiros `discovered`/`contract` acima)
 - [ ] `topology.md` — tipo de app classificado com evidência; N backends e M
       backoffices justificados; matriz estado → ator → painel completa
 - [ ] Backoffice(s) — RBAC por função, ecrãs `designed`, máquina de estados
@@ -1064,7 +1272,7 @@ Regras:
       nos ecrãs
 - [ ] Backend(s) teu(s) — mock → LAN → servidor; peer-bots para fluxos gated
 - [ ] Validação em dois níveis + relatório de tolerância
-- [ ] `capabilities.md` — matriz `capacidade | evidência | ecrã | ação |
+- [ ] `capabilities.md` — matriz `F-ID | evidência | ecrã | ação |
       endpoint/estado | teste | status`; zero `gap` para o alvo
 - [ ] `backlog.md` — zero itens abertos para o alvo; exclusões só com aprovação
       escrita e entrada de UI removida
@@ -1072,6 +1280,8 @@ Regras:
       cada ação visível tem endpoint/estado e teste E2E
 - [ ] Backend — todos os endpoints usados pela UI existem e respondem; nenhuma
       ação depende de dados que não existem
+- [ ] `market_parity.md` — opcional; só com concorrente nomeado; `unverified`,
+      fora do spec e do core
 - [ ] Handoff em chat — alvo, feito, gaps fechados/abertos, blockers, veredicto
 - [ ] Marca de terceiros fora do entregável
 
@@ -1085,6 +1295,11 @@ Regras:
   para transformar "não deu" em decisão, não em projeto paralelo.
 - **Aceitar pixel de build modificado sem flag.** Mapas em branco parecem design.
 - **Promover evidência.** `served` não é `live`, `presumed` não é `static`.
+- **Preferir comando cru à ferramenta nomeada.** Se a capacidade existe em
+  `REA_BINDINGS.md`, o comando improvisado volta a ser o que era: errático e
+  sem evidência citável.
+- **Engolir um `unknown`.** Limitação que não vira linha em `coverage.md` ou
+  `backlog.md` transforma-se em spec inventada duas fases depois.
 - **Preencher a spec com "parece que".** Se não mediste, escreve que assumiste.
 - **Copiar assets "só para testar".** Contamina o repo e o entregável.
 - **Avançar de fase sem o GATE.** Cada fase produz artefactos verificáveis; sem
@@ -1118,6 +1333,18 @@ Regras:
 - **Mega-sessão.** Um ecrã por BUILD; sessões de milhares de eventos perdem a
   visão global e otimizam para o marco errado.
 - **"Demo" sem dizer.** O alvo é declarado no `plan.md`; demo não é o default.
+- **Inventário só por ecrãs.** Feature sem ecrã (push, offline, settings,
+  permissões, a11y, i18n, dark mode) fica de fora e o "zero gap" é falso.
+- **`endpoints.json` curado como universo.** O contrato é um subconjunto; a
+  descoberta usa o `discovered` completo.
+- **`parcial` como tolerância.** Para `funcional`, `parcial` é gap. Tolerância
+  sem aprovação escrita é fecho falso.
+- **Benchmark no core.** `market_parity.md` é opcional e `unverified`; o default
+  é a app original.
+- **Importar o domínio do clone anterior.** A taxonomia é inferida da app alvo;
+  "ride/order/listing" não são universais.
+- **Implementar tudo numa resposta.** Uma fatia vertical por BUILD; "tudo" numa
+  resposta termina em output-limit e `idle:failed`.
 
 ---
 
@@ -1134,7 +1361,8 @@ pelo toolkit de `stack.md` e `<ECRÃ>` pelo PNG/layout de referência.
 
 Recria fielmente o UI de `<ECRÃ>` num único componente autocontido na stack
 `<STACK_UI>` — a mesma da app original (`stack.md`). Consulta `ux_behavior.md`
-para este ecrã. Declara no topo: `evidence` do ecrã e `integrity` da captura.
+para este ecrã. Declara no topo: `evidence` do ecrã, `integrity` da captura e o
+`F-ID` de `features.md` (com o estado da feature).
 
 **FIDELIDADE VISUAL (prioridade máxima)**
 - Extrai a geometria REAL dos elementos gráficos (ilustrações, blobs, ícones,
@@ -1261,6 +1489,7 @@ idevicescreenshot <nome>.png
   plan.md                # declaração inicial, gates, modo, tolerância
   access_plan.md         # decisão por app/role
   coverage.md            # ecrã → evidência → integridade → razão de gap
+  rea_evidence/          # artefactos por fase: digest + ferramenta + unknown
   device_apk/            # original intocado + hash
   decompiled/            # apktool
   jadx_src/              # jadx (referência para greps)
@@ -1269,9 +1498,13 @@ idevicescreenshot <nome>.png
   ux_capture/            # PNGs, login.sh, ux_behavior.md, peer_triggers.md
   ux_reference/          # público, unverified
   handled.log            # requests observados (worklist do contrato)
-  endpoints.json         # contrato versionado, UM por ecossistema
+  endpoints.discovered.json # catálogo completo (descoberta)
+  endpoints.contract.json   # subconjunto implementado (antigo endpoints.json)
+  features.md               # inventário F-ID + evidência + status
+  FEATURE_TAXONOMY.md       # domínios universais + regras de inferência
+  market_parity.md          # opcional; só com concorrente nomeado
   topology.md            # tipo de app, atores, N backends, M backoffices
-  capabilities.md        # matriz ação → endpoint → estado → UI → status
+  capabilities.md        # matriz F-ID → endpoint → estado → UI → status
   backlog.md             # gaps priorizados; zero abertos para o alvo
   app_nova/              # codebase 100% nova (app ou apps)
   backend/               # N serviços, conforme topology.md

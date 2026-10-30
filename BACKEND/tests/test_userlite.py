@@ -92,7 +92,10 @@ def test_lite_full_trip_with_driver(client, admin):
 
     q = rider.post("/rt/lite/quote", {"pickup": ROSSIO, "dropoff": AEROPORTO}).json()
     pid = q["products"][0]["id"]
-    req = rider.post("/rt/lite/request", {"pickup": ROSSIO, "dropoff": AEROPORTO, "productId": pid})
+    # O PIN so existe quando o passageiro o pede (decisao de 2026-10-30). Este teste
+    # cobre o caminho COM PIN; o teste seguinte cobre o caminho sem ele.
+    req = rider.post("/rt/lite/request",
+                     {"pickup": ROSSIO, "dropoff": AEROPORTO, "productId": pid, "pinRequired": True})
     assert req.status_code == 200, req.text
     trip_uuid = req.json()["trip"]["uuid"]
     assert req.json()["trip"]["state"] == "requested"
@@ -124,6 +127,36 @@ def test_lite_full_trip_with_driver(client, admin):
     assert rider.get("/rt/lite/active").json()["trip"] is None
     history = rider.get("/rt/lite/history").json()["trips"]
     assert any(t["uuid"] == trip_uuid and t["state"] == "completed" for t in history)
+
+
+def test_lite_trip_without_pin_when_not_requested(client, admin):
+    """Sem pedido de PIN, a viagem nao tem PIN e o motorista nao o pede.
+
+    Decisao de 2026-10-30: o PIN so existe quando o passageiro o pede (ha motoristas
+    que simulam viagens sem o cliente dentro). Antes era forcado a True no endpoint.
+    """
+    rider = login(client, "rider", "+351910000003")
+    driver = login(client, "driver", CARLOS)
+    _only_carlos_online(client, admin)
+    r = driver.post("/rt/drivers/v2/go-online",
+                    {"positionEvent": {"location": {"latitude": ROSSIO["lat"], "longitude": ROSSIO["lng"]}}})
+    assert r.status_code == 200 and r.json()["driverTasks"]["driverState"]["online"] is True
+
+    q = rider.post("/rt/lite/quote", {"pickup": ROSSIO, "dropoff": AEROPORTO}).json()
+    req = rider.post("/rt/lite/request", {"pickup": ROSSIO, "dropoff": AEROPORTO,
+                                          "productId": q["products"][0]["id"]})
+    assert req.status_code == 200, req.text
+    trip_uuid = req.json()["trip"]["uuid"]
+
+    offer_uuid = _offer_for(driver)
+    assert driver.post("/rt/drivers/accept-offers", {"offerUUIDs": [offer_uuid]}).status_code == 200
+    active = rider.get("/rt/lite/active").json()["trip"]
+    assert active["pin"] is None, "sem pedido de PIN, a viagem nao deve ter PIN"
+
+    # E a viagem arranca sem PIN nenhum.
+    assert driver.post("/rt/trips/v2/start-waiting").status_code == 200
+    assert driver.post("/rt/trips/v2/begin", {"uuid": trip_uuid}).status_code == 200
+    assert rider.get("/rt/lite/active").json()["trip"]["state"] == "in_progress"
 
 
 def test_lite_cancel_and_no_drivers(client, admin):

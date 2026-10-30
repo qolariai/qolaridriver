@@ -1,0 +1,54 @@
+{
+ "schema": "qolari.verify/1",
+ "data": "2026-10-30",
+ "origem": "local (REA verify_reconstruction indisponivel)",
+ "verificacoes": [
+  {
+   "nome": "features.md da Driver existe",
+   "passou": true,
+   "detalhe": ""
+  },
+  {
+   "nome": "features.md da Rider existe",
+   "passou": true,
+   "detalhe": ""
+  },
+  {
+   "nome": "discovered >= contract",
+   "passou": true,
+   "detalhe": "1104 vs 39"
+  },
+  {
+   "nome": "contract tem feature em todos",
+   "passou": true,
+   "detalhe": "39/39"
+  },
+  {
+   "nome": "discovered tem disposition em todos",
+   "passou": true,
+   "detalhe": "{'contract': 1001, 'descartar': 7, 'substituir': 96}"
+  },
+  {
+   "nome": "peer_triggers.md existe",
+   "passou": true,
+   "detalhe": ""
+  },
+  {
+   "nome": "tokens.md existe",
+   "passou": true,
+   "detalhe": ""
+  },
+  {
+   "nome": "aprovacao de exclusoes existe",
+   "passou": true,
+   "detalhe": ""
+  },
+  {
+   "nome": "zero parcial na Driver",
+   "passou": true,
+   "detalhe": "0"
+  }
+ ],
+ "passaram": 9,
+ "falharam": 0
+}

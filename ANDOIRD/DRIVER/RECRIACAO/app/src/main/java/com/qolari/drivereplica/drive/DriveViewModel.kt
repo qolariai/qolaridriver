@@ -197,7 +197,11 @@ class DriveViewModel(
     private suspend fun fetchRoute(offer: OfferCard): List<Pair<Double, Double>>? {
         val a = offer.pickup ?: return null
         val b = offer.dropoff ?: return null
+        // A rota do servidor é a perna cliente -> destino. Se falhar, devolve a ligação
+        // direta para o cartão nunca ficar sem o percurso desenhado.
         return source.route(a.first, a.second, b.first, b.second).getOrNull()
+            ?.takeIf { it.size > 1 }
+            ?: listOf(a, b)
     }
 
     private fun applyTrip(trip: ActiveTrip) = _state.update { s ->

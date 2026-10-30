@@ -1,0 +1,18 @@
+{
+ "schema": "qolari.coverage/1",
+ "data": "2026-10-30",
+ "origem": "local (REA evaluate_reconstruction_coverage indisponivel)",
+ "limite_declarado": "funcional (plan.md)",
+ "total_features": 142,
+ "excluidas_aprovadas": 0,
+ "em_ambito": 142,
+ "cumpridas": 127,
+ "cobertura_pct": 89.4,
+ "por_app": {
+  "driver:em falta": 7,
+  "driver:ok": 83,
+  "rider:em falta": 8,
+  "rider:ok": 44
+ },
+ "nota": "Cobertura abaixo do prometido e gap, nao tolerancia (MEGA FASE 6.9)."
+}

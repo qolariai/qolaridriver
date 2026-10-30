@@ -1,0 +1,26 @@
+{
+ "artefactos": [
+  {
+   "app": "driver",
+   "path": "ANDOIRD/DRIVER/source-original.apk",
+   "bytes": 268728986,
+   "sha256": "e13afc35b3497b6aaecd939bcf63e14a8d23e138039fe3c4f1c257286103fd82",
+   "ferramenta": "local (sha256sum) — REA inspect_artifact indisponivel"
+  },
+  {
+   "app": "rider",
+   "path": "ANDOIRD/USER_LITE/spec_src/apk_instalado/lite_base.apk",
+   "bytes": 127084974,
+   "sha256": "b77a621177c065fee63b99f81bbeaed1708642c38a2cc255ed8be85244b597be",
+   "ferramenta": "local (sha256sum) — REA inspect_artifact indisponivel"
+  },
+  {
+   "app": "fleet",
+   "path": "ANDOIRD/FLEET/original.apk",
+   "bytes": 124698210,
+   "sha256": "4f8de80ac79bd2dde7d5c1beb598b3526fd34620048a61fa386aaaaef49647d1",
+   "ferramenta": "local (sha256sum) — REA inspect_artifact indisponivel"
+  }
+ ],
+ "data": "2026-10-30"
+}

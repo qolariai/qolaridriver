@@ -4,8 +4,53 @@
 quando tem efeito real (navegação, estado local, endpoint) e teste ou verificação
 no telemóvel; caso contrário é `gap` e não pode ficar na UI.
 
+**Fonte de verdade:** [`features.md`](features.md) (FASE 4.7). Este ficheiro é a
+**vista de implementação** desse inventário: cada linha aqui existe lá com um
+`F-ID`; nenhuma linha existe só aqui.
+
 **Âmbito do clone:** Driver + Rider + backend + backoffice. A Fleet é operação
 (contrato + backend), não recriação visual — ver “Exclusões declaradas”.
+
+## 0. Ligação ao inventário (F-ID)
+
+| Documento | Papel | Autoridade |
+|---|---|---|
+| [`features.md`](features.md) | o que a app Driver **tem** (86 features) | inventário |
+| [`ANDOIRD/USER_LITE/features.md`](ANDOIRD/USER_LITE/features.md) | o que a Rider **tem** (52 features) | inventário |
+| `capabilities.md` (este) | o que o clone **faz** de cada uma | implementação |
+| `backlog.md` | o que **falta** (14 gaps no total) | gaps |
+| `rea_evidence/05_close/` | ledger, verify e cobertura | prova |
+
+Contagem por estado:
+
+| App | Features | `ok` | `excluído` | `em falta` | `parcial` |
+|---|---|---|---|---|---|
+| Driver | 86 | 72 | 8 | 6 | 0 |
+| Rider | 52 | 44 | 0 | 8 | 0 |
+| **Total** | **138** | **116** | **8** | **14** | **0** |
+
+**Cobertura:** 116 / 130 em âmbito = **89,2 %** (`rea_evidence/05_close/coverage.json`).
+
+### 0.1 Mapa F-ID → secção deste ficheiro
+
+| Domínio | F-ID | Secção |
+|---|---|---|
+| `auth`, `onboarding` | `F-auth-01..02`, `F-onboarding-01..02` | §1 (Login) |
+| `home` | `F-home-01..03` | §1 (Início) |
+| `discover` | `F-discover-01..06` | §1 (Descobrir) |
+| `earnings` | `F-earnings-01..03` | §1 (Rendimentos) |
+| `inbox` | `F-inbox-01..03` | §1 (Caixa de entrada) |
+| `menu` | `F-menu-01..05` | §1 (Menu) |
+| `settings` | `F-settings-01..11` | §1 (Definições) |
+| `safety` | `F-safety-01..10` | §1 (Segurança) |
+| `documents` | `F-documents-01..08` | §1 (Documentos) |
+| `vehicle` | `F-vehicle-01..03` | §1 (Veículos) |
+| `finance` | `F-finance-01..04` | §1/§3 |
+| `support` | `F-support-01..04` | §1 (Ajuda) |
+| `trip` | `F-trip-01` | §1 (Oferta/viagem) |
+| `offline` | `F-offline-01` | §1 (Global) |
+| `notifications` | `F-notifications-01..03` | §1 (Definições) |
+| `platform` | `F-platform-01..06` | §5 (gaps) |
 
 ## 1. Driver — ações visíveis
 
@@ -108,12 +153,20 @@ no telemóvel; caso contrário é `gap` e não pode ficar na UI.
 
 ## 6. Resumo
 
-| App | Ações `ok` | `gap` | Nota |
+| App | Features `ok` | `em falta` | Nota |
 |---|---|---|---|
-| Driver | 24 grupos de ecrã | 0 | 74 testes; validada no Honor |
-| Rider | 30 grupos de ecrã | 0 | 10 testes; validada no Honor (ciclo completo) |
+| Driver | 72 | 6 (`F-platform-*`) | 74 testes; validada no device |
+| Rider | 44 | 8 (`F-platform-*`/`F-offline`) | 10 testes; validada no device |
 | Backoffice | 9 áreas | 0 | RBAC + auditoria |
-| Backend | 8 capacidades | 0 | 55 testes |
+| Backend | 8 capacidades | 0 | 88 testes |
 
-**Zero `gap` para o alvo `funcional` no âmbito Driver+Rider+backoffice.** As
-exclusões acima são tolerância escrita, não funcionalidade em falta na UI.
+**Fechado:** a UI de produto das duas apps — 116 features `ok`, zero `parcial`.
+**Não fechado:** 14 gaps, todos de plataforma (push do sistema, deep links,
+biometria, i18n, dark mode, a11y, contactos, câmera).
+
+**Veredicto honesto:** o alvo `funcional` **não fecha** — 14 gaps abertos,
+nenhum de ecrã. Detalhe em `backlog.md` §1 e `rea_evidence/05_close/coverage.json`
+(89,2 %).
+
+**Rider:** o inventário FASE 4.7 da Rider ainda não existe. Só depois dele o
+`capabilities.md` da Rider pode citar F-ID como a Driver faz.

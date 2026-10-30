@@ -36,6 +36,13 @@ object AppConfig {
 
     const val SESSION_STORE_NAME = "qolari_lite_session"
 
+    /**
+     * Host do Google (Directions e Geocode). Vive aqui, não nos clientes, para
+     * cumprir "zero hosts hardcoded fora do AppConfig" (BUILD §9), que o
+     * `ContractTest` impõe.
+     */
+    const val GOOGLE_MAPS_HOST = "https://maps.googleapis.com"
+
     fun resolveBaseUrl(saved: String?): String =
         saved?.trim()?.trimEnd('/')?.takeIf { it.isNotEmpty() } ?: defaultBaseUrl
 }

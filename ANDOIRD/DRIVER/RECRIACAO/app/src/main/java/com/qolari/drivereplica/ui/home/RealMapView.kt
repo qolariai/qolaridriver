@@ -95,6 +95,9 @@ class RealMapView @JvmOverloads constructor(
             field = value
             val p = value?.let { LatLng(it.first, it.second) } ?: return
             driverMarker?.position = p
+            // Durante o cartão do pedido a câmara fica em plano amplo e NÃO segue o GPS:
+            // o traço inteiro tem de ficar visível até aceitar/recusar.
+            if (showOfferMarkers) return
             if (navigating) followDriver()
             else if (routeData.isEmpty()) map?.moveCamera(CameraUpdateFactory.newLatLngZoom(p, 15f))
         }
@@ -112,6 +115,8 @@ class RealMapView @JvmOverloads constructor(
             thickRoute = false
             setRoute(value, animate = false, frameToRoute = false)
             focusedLatLng = value.lastOrNull()?.let { LatLng(it.first, it.second) }
+            // Com o cartão do pedido aberto, a câmara manda em reframe(): não se mexe aqui.
+            if (showOfferMarkers) return
             if (navigating) followDriver() else wideView()
         }
 
@@ -123,16 +128,26 @@ class RealMapView @JvmOverloads constructor(
 
     fun routeToDropoff(): List<Pair<Double, Double>> = tripRoute
 
-    /** Reenquadra a câmara na rota atual (sem redesenhar nem parar animações). */
+    /**
+     * Plano amplo: enquadra as duas pernas + motorista, com margem para o cartão em baixo
+     * e para o painel em cima. É este o enquadramento do cartão do pedido (vídeo 2026-10-29):
+     * o traço inteiro fica visível até o cartão desaparecer (aceitar/recusar).
+     */
     fun reframe() {
         val googleMap = map ?: return
         if (routeData.size < 2) return
         runCatching {
-            val bounds = LatLngBounds.Builder().apply {
-                routeData.forEach { include(LatLng(it.first, it.second)) }
-            }.build()
-            val pad = (32 * resources.displayMetrics.density).toInt()
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, pad))
+            val builder = LatLngBounds.Builder()
+            routeData.forEach { builder.include(LatLng(it.first, it.second)) }
+            deviceLocation?.let { builder.include(LatLng(it.first, it.second)) }
+            val bounds = builder.build()
+
+            // ATENÇÃO: o setPadding() JÁ reserva a área do cartão e do painel. Passar essa
+            // altura outra vez ao newLatLngBounds desconta-a duas vezes e o mapa afasta-se
+            // até ao país inteiro. Aqui só entra a margem visual.
+            val d = resources.displayMetrics.density
+            val margem = (28 * d).toInt()
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, margem))
         }
     }
 
@@ -153,8 +168,13 @@ class RealMapView @JvmOverloads constructor(
         pickupRoute = toPickup
         tripRoute = trip
         routeData = toPickup + trip.drop(1)
-        drawOfferRoutes(frameToRoute = true)
+        // Desenha SEM reenquadrar: o enquadramento é feito a seguir, depois de o padding
+        // estar aplicado. Enquadrar antes do padding dá a câmara errada e corta o traço.
+        drawOfferRoutes(frameToRoute = false)
         drawOfferMarkers()
+        // Plano amplo com as duas pernas + motorista, respeitando a altura do cartão.
+        reframe()
+        postDelayed({ reframe() }, 300)
         if (animate) startSweep()
     }
 
@@ -747,6 +767,47 @@ class RealMapView @JvmOverloads constructor(
                 .icon(BitmapDescriptorFactory.fromBitmap(dropoffPin()))
                 .anchor(0.5f, 1f)
                 .zIndex(3f),
+        )
+    }
+
+    /**
+     * Marcador da paragem durante a navegação (vídeo 2026-10-30): um só pino.
+     * Verde na recolha (fase 1), vermelho no destino (fase 2). O mapa de navegação
+     * não mostra o outro extremo — é a diferença entre "ir buscar" e "levar".
+     */
+    var navStopKind: String? = null
+        set(value) {
+            if (field == value) return
+            field = value
+            drawNavStopMarker()
+        }
+
+    private var navStopPoint: Pair<Double, Double>? = null
+        set(value) {
+            field = value
+            drawNavStopMarker()
+        }
+
+    private var navStopMarker: Marker? = null
+
+    fun setNavStop(point: Pair<Double, Double>?, kind: String?) {
+        navStopPoint = point
+        navStopKind = kind
+        drawNavStopMarker()
+    }
+
+    private fun drawNavStopMarker() {
+        val googleMap = map ?: return
+        navStopMarker?.remove()
+        navStopMarker = null
+        val p = navStopPoint ?: return
+        val k = navStopKind ?: return
+        val icon = if (k == "dropoff") dropoffPin() else pickupPin()
+        navStopMarker = googleMap.addMarker(
+            MarkerOptions().position(LatLng(p.first, p.second))
+                .icon(BitmapDescriptorFactory.fromBitmap(icon))
+                .anchor(0.5f, 1f)
+                .zIndex(4f),
         )
     }
 

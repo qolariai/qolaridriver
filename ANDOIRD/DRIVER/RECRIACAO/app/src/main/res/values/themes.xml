@@ -25,13 +25,15 @@
     <color name="qd_offer_close_bg">#f6f6f6</color>
     <!-- Etiqueta "Exclusivo"/"Radar" no cartão da proposta (azul da marca). -->
     <color name="qd_offer_kind">#276ef1</color>
+    <!-- Botao "Aceitar" do cartao do pedido: azul medido no video (#246CF0). -->
+    <color name="qd_offer_accept">#246CF0</color>
     <!-- Radar: cartão apagado enquanto "A verificar se é a melhor correspondência". -->
     <color name="qd_offer_dim">#99ffffff</color>
     <!-- Painel de navegação (vídeo 2026-10-29): preto opaco. -->
     <color name="qd_maneuver_bg">#111111</color>
     <!-- Paragens no painel de navegação (vídeo 2026-10-30): verde na recolha, vermelho no destino. -->
-    <color name="qd_stop_pickup">#0e8345</color>
-    <color name="qd_stop_dropoff">#de1135</color>
+    <color name="qd_stop_pickup">#077E41</color>
+    <color name="qd_stop_dropoff">#CB2509</color>
     <!-- Botão OFFLINE/ONLINE do "Recomendado para si" (print 2026-10-30). -->
     <color name="qd_offline_bg">#D9D9D9</color>
     <color name="qd_offline_ring">#F2F2F2</color>

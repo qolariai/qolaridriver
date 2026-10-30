@@ -37,7 +37,8 @@ object GeocodeClient {
                     .connectTimeout(6, TimeUnit.SECONDS)
                     .readTimeout(10, TimeUnit.SECONDS)
                     .build()
-                val url = "https://maps.googleapis.com/maps/api/geocode/json" +
+                val url = com.qolari.userlite.config.AppConfig.GOOGLE_MAPS_HOST +
+                    "/maps/api/geocode/json" +
                     "?latlng=$lat,$lng&language=pt&key=$key"
                 client.newCall(Request.Builder().url(url).build()).execute().use { resp ->
                     val body = resp.body?.string()

@@ -1,0 +1,21 @@
+{
+ "discovered": {
+  "ficheiro": "./endpoints.discovered.json",
+  "total": 1104,
+  "disposicao": {
+   "contract": 1001,
+   "descartar": 7,
+   "substituir": 96
+  }
+ },
+ "contract": {
+  "ficheiro": "./endpoints.contract.json",
+  "total": 39,
+  "com_feature": 39,
+  "por_origem": {
+   "extracted": 17,
+   "designed": 22
+  }
+ },
+ "nota": "Universo (discovered) != contrato. 22 dos 39 endpoints sao `designed`: a Rider Lite e WebView e o backoffice nao existe no original."
+}

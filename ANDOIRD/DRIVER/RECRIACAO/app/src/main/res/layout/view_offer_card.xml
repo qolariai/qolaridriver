@@ -162,6 +162,14 @@
                     android:textSize="18sp" />
 
                 <TextView
+                    android:id="@+id/offerPickupCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/qd_offer_secondary"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
                     android:id="@+id/offerTripLine"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -177,6 +185,14 @@
                     android:layout_marginTop="2dp"
                     android:textColor="@color/qd_offer_secondary"
                     android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/offerDropoffCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/qd_offer_secondary"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
 
@@ -191,7 +207,7 @@
             android:textColor="@color/qd_core_white"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:backgroundTint="@color/qd_ink"
+            app:backgroundTint="@color/qd_offer_accept"
             app:cornerRadius="8dp"
             app:elevation="0dp" />
     </LinearLayout>

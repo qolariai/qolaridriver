@@ -387,8 +387,13 @@ def request(call: Call):
     rider.default_payment = "cash" if payment == "cash" else "card"
     address = lambda o: str((o or {}).get("address") or "")
     try:
+        # PIN so quando o passageiro o pede (decisao de 2026-10-30, video 13:59):
+        # existem motoristas que simulam viagens sem o cliente dentro. O pedido traz
+        # `pinRequired`; sem ele, a viagem nao tem PIN e o ecra de espera nao o mostra.
+        pin_required = bool(call.body.get("pinRequired", False))
         t = trips.request_trip(db, rider, product, pickup, dropoff, address(call.body.get("pickup")),
-                               address(call.body.get("dropoff")), rider.default_payment, pin_required=True)
+                               address(call.body.get("dropoff")), rider.default_payment,
+                               pin_required=pin_required)
     except TripError as e:
         raise _err(e)
     return {"trip": trip_json(db, t)}
