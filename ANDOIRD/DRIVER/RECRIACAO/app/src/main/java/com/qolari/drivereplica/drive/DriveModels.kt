@@ -65,6 +65,18 @@ data class ActiveTrip(
     val pickupLng: Double? = null,
     /** Telefone do passageiro, para o botão de chamada do ecrã de espera. */
     val riderPhone: String? = null,
+    /** Destino final por extenso (folha de itinerário, campo "Destination"). */
+    val dropoffAddress: String? = null,
+    /** Hora de aceitação visualizável (folha de itinerário, campo "Time"). Epoch em segundos. */
+    val acceptedAtSec: Long? = null,
+    /** Hora de início da viagem. Epoch em segundos. */
+    val startedAtSec: Long? = null,
+    /** Nome do condutor (bloco "Driver" da folha de itinerário). */
+    val driverName: String? = null,
+    /** Matrícula do veículo (bloco "Driver"). */
+    val vehiclePlate: String? = null,
+    /** Lotação do veículo (bloco "Driver"). */
+    val vehicleCapacity: Int? = null,
 )
 
 /** Resumo no fim da viagem (ganhos: captura 011/062 mostra o total da semana; o da viagem vem de earnings/get-trip). */
@@ -166,6 +178,12 @@ object DriveParser {
             pickupLat = tripInfo?.get("pickupLat")?.takeIf { it.isJsonPrimitive }?.asDouble,
             pickupLng = tripInfo?.get("pickupLng")?.takeIf { it.isJsonPrimitive }?.asDouble,
             riderPhone = tripInfo?.str("riderPhone"),
+            dropoffAddress = tripInfo?.str("dropoffAddress"),
+            acceptedAtSec = tripInfo?.get("acceptedAt")?.takeIf { it.isJsonPrimitive }?.asDouble?.toLong(),
+            startedAtSec = tripInfo?.get("startedAt")?.takeIf { it.isJsonPrimitive }?.asDouble?.toLong(),
+            driverName = tripInfo?.str("driverName"),
+            vehiclePlate = tripInfo?.str("vehiclePlate"),
+            vehicleCapacity = tripInfo?.get("vehicleCapacity")?.takeIf { it.isJsonPrimitive }?.asInt,
         )
     }
 

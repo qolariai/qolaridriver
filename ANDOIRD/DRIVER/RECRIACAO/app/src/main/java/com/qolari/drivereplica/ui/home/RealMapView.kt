@@ -544,8 +544,11 @@ class RealMapView @JvmOverloads constructor(
                 .color(innerColor)
                 .zIndex(1.6f),
         )
-        // Setas brancas a marcar o sentido da marcha (video 2026-10-30).
-        if (thickNavigation) drawChevrons(googleMap)
+        // Setas brancas a marcar o sentido da marcha (video 2026-10-30). So em navegacao: na
+        // vista geral nao fazem sentido e o `thickNavigation` continua ligado (e uma propriedade
+        // diferente do modo da camara), por isso era o `navigating` que faltava aqui. Era a causa
+        // dos chevrons que apareciam na vista geral (reportado a 2026-10-31).
+        if (thickNavigation && navigating) drawChevrons(googleMap)
         if (frameToRoute && routeProgress >= 1f) {
             runCatching {
                 val bounds = LatLngBounds.Builder().apply {

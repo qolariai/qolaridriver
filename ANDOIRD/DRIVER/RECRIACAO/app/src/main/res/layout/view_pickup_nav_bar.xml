@@ -38,7 +38,9 @@
         android:id="@+id/pickupNavIcon"
         android:layout_width="26dp"
         android:layout_height="26dp"
-        android:importantForAccessibility="no"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/home_preferences"
+        android:padding="2dp"
         android:src="@drawable/ic_filter"
         app:tint="@color/qd_ink" />
 

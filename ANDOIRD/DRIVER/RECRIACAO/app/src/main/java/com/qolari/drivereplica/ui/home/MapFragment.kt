@@ -80,6 +80,11 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         b.pickupNavBar.pickupNavOptions.setOnClickListener {
             findNavController().navigate(R.id.tripPlannerFragment)
         }
+        // Filtros da barra de estado: mesmo destino do filtro solto da esquerda. Antes era um
+        // ImageView decorativo e o ecrã tinha dois ícones de filtros, só um a funcionar.
+        b.pickupNavBar.pickupNavIcon.setOnClickListener {
+            findNavController().navigate(R.id.preferencesServicesFragment)
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -143,9 +148,8 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         b.navShield.isVisible = navigating
         b.navFilters.isVisible = navigating
         // Na vista geral o botão "Navegar" aparece em baixo a direita: a coluna do A+ tem de
-        // subir para não ficar por cima dele (visto no Mi a 2026-10-31).
-        val actionsLift = if (navigating && !navMode) (56 * resources.displayMetrics.density).toInt() else 0
-        b.navActions.translationY = -actionsLift.toFloat()
+        // subir para não ficar por cima dele.
+        applyNavLayout(b, navigating)
         // O painel de manobras tapa o topo: o padding do mapa passa a ser a altura real do painel
         // (ver bindNavigation). Fora da navegação limpa-se.
         if (!navigating) b.mapFull.setTopPadding(0)
@@ -439,8 +443,24 @@ class MapFragment : Fragment(R.layout.fragment_map) {
     private var lastNavStage: DriveStage? = null
 
     /**
+     * Botões em baixo, à direita, na vista geral: o "Navegar" fica mais perto da barra e a coluna
+     * do A+ sobe acima dele. Os dois partilham a mesma margem (`112dp`) e, sem separação, o círculo
+     * do atalho ficava por cima do texto "Navegar" e só se lia "Nav" (visto no Mi a 2026-10-31).
+     *
+     * A altura do "Navegar" é 44dp e a coluna do A+ tem dois botões de 52dp com 12dp entre eles
+     * (116dp); o deslocamento tem de ser a altura do botão + a folga, não um valor redondo.
+     */
+    private fun applyNavLayout(b: FragmentMapBinding, navigating: Boolean) {
+        val d = resources.displayMetrics.density
+        val wide = navigating && !navMode
+        // +14dp de folga entre o topo do "Navegar" e a base do atalho.
+        val lift = if (wide) (44 + 14) * d else 0f
+        b.navActions.translationY = -lift
+    }
+
+    /**
      * Botão "Navegar" (vídeo 2026-10-30): na vista geral mostra "Navegar" e leva à navegação.
-     * Em modo navegação o botão desaparece, como no original — o mapa fica limpo.
+     * Em modo navegação o botão desaparece, como no original - o mapa fica limpo.
      */
     private fun toggleNavigationMode(b: FragmentMapBinding) {
         navMode = !navMode
@@ -448,6 +468,9 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         // Escondido a navegar; visível na vista geral, onde diz "Navegar" para voltar.
         b.navButton.isVisible = !navMode
         b.navButton.setText(if (navMode) R.string.nav_wide else R.string.nav_navigate)
+        // A coluna do A+ acompanha o modo: ao voltar à vista geral tem de subir para não tapar
+        // o "Navegar", e ao entrar em navegação tem de descer outra vez.
+        applyNavLayout(b, navigating = true)
     }
 
     /** Painel de manobras + barra "A recolher X" + selo de limite (vídeo 2026-10-29). */
@@ -727,6 +750,17 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         }
         if (audioNoticeTrip == trip.uuid) return
         audioNoticeTrip = trip.uuid
+        // O cartao vive no fundo do FrameLayout, por cima da barra de estado e da coluna de
+        // botoes (A+, atalho, escudo, filtros). Subia so pela altura da barra e continuava a tapar
+        // os botoes durante os 7 s (reportado a 2026-10-31). Sobe pela barra + a margem dos botoes.
+        val bar = b.pickupNavBar.root
+        val dpm = resources.displayMetrics.density
+        b.audioNotice.root.post {
+            if (binding == null) return@post
+            val barH = if (bar.isVisible && bar.height > 0) bar.height else 0
+            val buttonsH = (NAV_BUTTONS_BOTTOM_DP * dpm).toInt()
+            b.audioNotice.root.translationY = -(barH + buttonsH).toFloat()
+        }
         b.audioNotice.root.isVisible = true
         b.audioNotice.root.postDelayed({
             if (binding != null) b.audioNotice.root.isVisible = false
@@ -752,5 +786,11 @@ class MapFragment : Fragment(R.layout.fragment_map) {
 
         /** Tempo do aviso de gravacao de audio no ecra (video: ~7 s). */
         const val AUDIO_NOTICE_MS = 7000L
+
+        /**
+         * Altura reservada pelos botoes de navegacao acima da barra (`navShield`/`navFilters`
+         * usam `marginBottom=112dp`). O aviso sobe pela barra + este valor para nao os tapar.
+         */
+        const val NAV_BUTTONS_BOTTOM_DP = 112
     }
 }

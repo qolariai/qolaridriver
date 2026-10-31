@@ -14,7 +14,16 @@ data class DocumentItem(val key: String, val title: String, val status: DocStatu
 }
 
 /** Perfil do Menu (captura 064): nome, avaliação, taxa de aceitação e veículo. */
-data class ProfileSummary(val name: String, val rating: String, val acceptance: String, val vehicle: String?)
+data class ProfileSummary(
+    val name: String,
+    val rating: String,
+    val acceptance: String,
+    val vehicle: String?,
+    /** Matrícula, para o bloco "Driver" da folha de itinerário. */
+    val plate: String? = null,
+    /** Lotação do veículo, para o mesmo bloco. */
+    val capacity: String? = null,
+)
 
 /** Linha do Centro de segurança / ferramentas (capturas 014, 017). */
 data class SafetyRow(val title: String, val subtitle: String)
@@ -42,7 +51,15 @@ object ManageMapper {
     fun profile(hub: com.qolari.drivereplica.net.ProfileHub?): ProfileSummary? {
         val p = hub?.profile ?: return null
         val rating = p.rating?.let { "%.2f".format(java.util.Locale("pt", "PT"), it) } ?: "--"
-        return ProfileSummary(p.firstName.orEmpty(), rating, p.acceptanceRate?.let { "$it %" } ?: "-- %", p.vehicleLabel)
+        val v = p.vehicle
+        return ProfileSummary(
+            p.firstName.orEmpty(),
+            rating,
+            p.acceptanceRate?.let { "$it %" } ?: "-- %",
+            p.vehicleLabel,
+            plate = v?.get("licensePlate")?.asString?.takeIf { it.isNotBlank() },
+            capacity = v?.get("capacity")?.takeIf { it.isJsonPrimitive }?.asInt?.toString(),
+        )
     }
 }
 

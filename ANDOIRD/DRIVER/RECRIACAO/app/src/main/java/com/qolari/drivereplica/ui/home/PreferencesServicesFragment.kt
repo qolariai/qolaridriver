@@ -43,6 +43,9 @@ class PreferencesServicesFragment : Fragment(R.layout.fragment_preferences_servi
         val b = FragmentPreferencesServicesBinding.bind(view)
         binding = b
         b.prefsBack.setOnClickListener { findNavController().popBackStack() }
+        // "Ver mais": a grelha já mostra os 6 serviços do print e não há referência do original
+        // para o que este botão devia revelar. Fica sem ação até o cliente decidir — inventar um
+        // ecrã (ou escondê-lo, contra o print) seria pior do que o botão inerte que está reportado.
         b.prefsSeeMore.setOnClickListener { }
         buildGrid(b.prefsGrid)
         viewLifecycleOwner.lifecycleScope.launch {

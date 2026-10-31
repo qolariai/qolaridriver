@@ -195,6 +195,13 @@ def trip_scope(t: Trip, pin_ok: bool = False) -> dict:
                           "riderName": r.first_name,
                           "riderUUID": r.uuid,
                           "riderPhone": r.phone or "",
+                          # Folha de itinerario: hora real da viagem e bloco do condutor.
+                          # Sem `acceptedAt` a app so tinha a hora de abertura do ecra.
+                          "acceptedAt": t.accepted_at,
+                          "startedAt": t.started_at,
+                          "driverName": (t.driver.name if t.driver else ""),
+                          "vehiclePlate": (t.vehicle.plate if t.vehicle else ""),
+                          "vehicleCapacity": (t.vehicle.seats if t.vehicle else None),
                       }}},
                   "taskDataMap": {t.uuid: {"type": kind, kind: data}}}
     return {"blockingTasks": blocking, "nonBlockingTasks": non_blocking, "completionTask": completion,

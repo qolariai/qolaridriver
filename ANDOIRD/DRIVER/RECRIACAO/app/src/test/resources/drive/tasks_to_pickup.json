@@ -58,6 +58,23 @@
        "info": {
         "title": "Recolher Ana",
         "subtitle": "Rossio"
+       },
+       "tripInfo": {
+        "pickupAddress": "Praca Marques de Pombal, Lisboa",
+        "dropoffAddress": "Av. Lusiada, Lisboa",
+        "pickupLat": 38.7255,
+        "pickupLng": -9.15,
+        "dropoffLat": 38.736,
+        "dropoffLng": -9.15,
+        "city": "Lisboa",
+        "productName": "Qolari X",
+        "riderName": "Ana",
+        "riderPhone": "+351910000001",
+        "acceptedAt": 1793440000,
+        "startedAt": null,
+        "driverName": "Carlos Silva",
+        "vehiclePlate": "AA-11-BB",
+        "vehicleCapacity": 4
        }
       }
      },

@@ -87,6 +87,29 @@ class DriveTest {
         assertNull(t.waitStartSec); assertNull(t.pin)
     }
 
+    /**
+     * Folha de itinerário: o destino tem de ser o do servidor, não a recolha. Era o bug que
+     * mostrava a mesma morada em "From" e "Destination" (auditoria de 2026-10-31, F-01).
+     */
+    @Test
+    fun theTripCarriesTheDropoffAddressApartFromThePickup() {
+        val t = DriveParser.trip(tasks("tasks_to_pickup.json"))!!
+        assertEquals("Praca Marques de Pombal, Lisboa", t.pickupAddress)
+        assertEquals("Av. Lusiada, Lisboa", t.dropoffAddress)
+        assertTrue("o destino não pode ser a recolha", t.pickupAddress != t.dropoffAddress)
+    }
+
+    /** A folha de itinerário mostra a hora da viagem e o condutor, não a hora de abrir o ecrã. */
+    @Test
+    fun theTripCarriesTheTripTimeAndTheDriver() {
+        val t = DriveParser.trip(tasks("tasks_to_pickup.json"))!!
+        assertEquals(1793440000L, t.acceptedAtSec)
+        assertNull("ainda não arrancou", t.startedAtSec)
+        assertEquals("Carlos Silva", t.driverName)
+        assertEquals("AA-11-BB", t.vehiclePlate)
+        assertEquals(4, t.vehicleCapacity)
+    }
+
     @Test
     fun arrivedTripHasTheWaitTimer() {
         val t = DriveParser.trip(tasks("tasks_at_pickup.json"))!!

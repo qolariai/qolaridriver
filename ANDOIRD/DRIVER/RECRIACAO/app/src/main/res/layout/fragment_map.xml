@@ -311,7 +311,8 @@
         android:visibility="gone" />
 
     <!-- Aviso de gravacao de audio (video 2026-10-30, 0:00-0:07).
-         Fica DEPOIS da barra para ser desenhado por cima dela. -->
+         Fica DEPOIS da barra para ser desenhado por cima dela, mas sobe o suficiente para nao
+         tapar os controlos: o deslocamento e aplicado em MapFragment.updateAudioNotice(). -->
     <include
         android:id="@+id/audioNotice"
         layout="@layout/view_audio_notice" />
