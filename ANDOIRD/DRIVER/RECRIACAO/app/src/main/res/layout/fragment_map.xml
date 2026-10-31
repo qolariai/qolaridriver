@@ -82,20 +82,13 @@
         android:layout_marginBottom="132dp"
         android:orientation="vertical">
 
-        <ImageButton
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/bg_circle_white"
-            android:contentDescription="@string/map_trends"
-            android:elevation="3dp"
-            android:padding="13dp"
-            android:src="@drawable/ic_bolt"
-            app:tint="@color/qd_ink" />
+        <!-- O raio (⚡) saiu: no original só aparece em banners de Boost e não temos
+             ecrã de zonas. Ficava um ícone a prometer o que não existe (decisão de 2026-10-31). -->
 
         <ImageButton
+            android:id="@+id/mapReportShortcut"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginTop="12dp"
             android:background="@drawable/bg_circle_white"
             android:contentDescription="@string/map_report"
             android:elevation="3dp"
@@ -104,6 +97,7 @@
             app:tint="@color/qd_core_orange500" />
 
         <ImageButton
+            android:id="@+id/mapTrendsShortcut"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="12dp"
@@ -115,6 +109,7 @@
             app:tint="@color/qd_ink" />
 
         <ImageButton
+            android:id="@+id/mapLocateShortcut"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="12dp"

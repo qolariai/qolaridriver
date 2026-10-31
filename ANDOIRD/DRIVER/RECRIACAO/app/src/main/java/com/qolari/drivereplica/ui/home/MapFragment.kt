@@ -76,6 +76,28 @@ class MapFragment : Fragment(R.layout.fragment_map) {
             com.qolari.drivereplica.ui.manage.SafetySheet.show(this)
         }
         b.navFilters.setOnClickListener { findNavController().navigate(R.id.preferencesServicesFragment) }
+        // Atalhos do mapa em repouso (ids do original em ub__map_controls.xml):
+        //   escudo        -> safety_toolkit_container
+        //   A+ (pin+)     -> ugc_container  (relatório de mapa)
+        //   gráfico       -> earnings_trends_container
+        //   localizar     -> bottom_right_center_me ("Center map")
+        // O raio saiu: no original só existe em banners de Boost e não temos ecrã de zonas.
+        b.mapShield.setOnClickListener {
+            com.qolari.drivereplica.ui.manage.SafetySheet.show(this)
+        }
+        b.mapReportShortcut.setOnClickListener { MapReportSheet.show(this) }
+        b.mapTrendsShortcut.setOnClickListener {
+            // "Earnings Trends" no original é um ecrã próprio; aqui o mais perto que existe é o
+            // separador Rendimentos (que tem o gráfico da semana). Muda de separador em vez de
+            // inventar um ecrã novo.
+            requireActivity()
+                .findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottomNav)
+                ?.selectedItemId = R.id.earningsFragment
+        }
+        b.mapLocateShortcut.setOnClickListener {
+            // "Center map": volta a câmara ao motorista (o mapa já segue o GPS).
+            b.mapFull.deviceLocation = AppGraph.location.lastKnown()
+        }
         // Botão de lista do canto inferior direito: abre o Planeador de viagem (print 01:57).
         b.pickupNavBar.pickupNavOptions.setOnClickListener {
             findNavController().navigate(R.id.tripPlannerFragment)
