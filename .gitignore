@@ -78,8 +78,10 @@ ANDOIRD/**/ux_capture/honor_4603/
 ANDOIRD/**/ux_capture/video_*/
 
 # --- relatorios de auditoria e capturas de prova (ficam locais) ---
-# Sao ~230 MB de PNG. Os relatorios .md podem entrar quando o cliente quiser;
+# Sao ~240 MB de PNG. Os relatorios .md podem entrar quando o cliente quiser;
 # as capturas nao: no historico do git nao se apagam depois.
 AUDITORIA_*.md
 AUDITORIA_*/
 auditoria_*/
+ANALISE_*.md
+analise_*/

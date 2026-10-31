@@ -18,6 +18,7 @@ DEFAULTS = {
     "search_timeout_s": 90,            # sem motorista ao fim disto -> no_drivers
     "max_offers_per_trip": 6,
     "rider_free_cancel_s": 120,        # cancelar depois disto (com motorista atribuido) paga taxa
+    "wait_free_s": 120,                # espera gratis na recolha (contagem decrescente no ecra)
     "avg_speed_kmh": 28.0,             # estimativas de duracao e simulacao
     "road_factor": 1.35,               # distancia em linha reta -> estrada
     "simulate_movement": True,         # motoristas simulados andam sozinhos no mapa
@@ -41,6 +42,7 @@ LABELS = {
     "search_timeout_s": "Procura máxima por motorista (s)",
     "max_offers_per_trip": "Propostas máximas por viagem",
     "rider_free_cancel_s": "Cancelamento grátis do passageiro (s)",
+    "wait_free_s": "Espera grátis na recolha (s)",
     "avg_speed_kmh": "Velocidade média (km/h)",
     "road_factor": "Fator estrada / linha reta",
     "simulate_movement": "Simular movimento dos motoristas de teste",

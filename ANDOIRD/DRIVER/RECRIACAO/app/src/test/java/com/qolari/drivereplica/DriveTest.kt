@@ -110,6 +110,17 @@ class DriveTest {
         assertEquals(4, t.vehicleCapacity)
     }
 
+    /**
+     * Espera na recolha: o contador é uma contagem decrescente do tempo grátis (vídeo 2026-10-30,
+     * 1:44 → 1:05) e o tempo grátis vem do servidor (`wait_free_s`, 2 min por omissão).
+     */
+    @Test
+    fun theWaitTimerCountsDownFromTheFreeWindow() {
+        val t = DriveParser.trip(tasks("tasks_at_pickup.json"))!!
+        assertNotNull("chegou: há temporizador", t.waitStartSec)
+        assertEquals("2 min de espera grátis", 120L, t.waitFreeSec)
+    }
+
     @Test
     fun arrivedTripHasTheWaitTimer() {
         val t = DriveParser.trip(tasks("tasks_at_pickup.json"))!!
@@ -152,7 +163,11 @@ class DriveTest {
 
     private val offer = OfferCard("o1", "UberX", "7,04 €", "22 min • 12,1 km", "2 min (0,7 km) de distância", "Rossio", "Viagem de 20 min (11,4 km)", "Aeroporto", 20, 0, 38.7 to -9.1, 38.8 to -9.2)
     private fun trip(phase: TripPhase, pin: com.qolari.drivereplica.drive.PinTask? = null, wait: Long? = null) =
-        ActiveTrip("t1", phase, "Ana", 5.0, "Rossio", 38.7, -9.1, "7,04 €", wait, pin)
+        ActiveTrip(
+            uuid = "t1", phase = phase, riderName = "Ana", riderRating = 5.0, address = "Rossio",
+            latitude = 38.7, longitude = -9.1, fare = "7,04 €",
+            waitStartSec = wait, pin = pin,
+        )
     private val pinTask = com.qolari.drivereplica.drive.PinTask("4821", 3, "Peça o PIN", "…", 4, listOf("e1", "e2", "e3"), false)
 
     private class FakeDrive : DriveSource {

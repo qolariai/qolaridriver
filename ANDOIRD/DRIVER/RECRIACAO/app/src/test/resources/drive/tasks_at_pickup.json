@@ -23,7 +23,8 @@
         "taskDataUnion": {
          "type": "waitTimeTaskData",
          "waitTimeTaskData": {
-          "startTimeSec": 1792803735.0
+          "startTimeSec": 1792803735.0,
+          "freeWaitSec": 120.0
          }
         },
         "taskSourceKeyOption": {

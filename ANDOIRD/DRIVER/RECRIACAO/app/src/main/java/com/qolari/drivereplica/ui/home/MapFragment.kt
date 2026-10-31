@@ -89,16 +89,17 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch {
-                    // Tempo de espera na recolha: relógio que avança por segundos (WaitTimeTaskData.startTimeSec).
+                    // Espera na recolha: contagem decrescente do tempo grátis, como no vídeo.
                     while (true) {
                         val t = drive.state.value.trip
                         val start = t?.waitStartSec
+                        val free = t?.waitFreeSec
                         if (t != null && t.phase == TripPhase.AT_PICKUP && start != null) {
-                            val secs = (System.currentTimeMillis() / 1000 - start).coerceAtLeast(0)
-                            b.tripCard.tripWait.text = getString(R.string.drive_wait, "%d:%02d".format(secs / 60, secs % 60))
-                            // Cartão novo da espera (vídeo 2026-10-30): contador + barra azul.
-                            b.waitCard.waitTimer.text = "%d:%02d".format(secs / 60, secs % 60)
-                            b.waitCard.waitProgress.progress = (secs.coerceIn(0, 300) * 100 / 300).toInt()
+                            val text = formatWait(start, free)
+                            // Cartão antigo (só o PIN) e cartão novo da espera partilham o texto.
+                            b.tripCard.tripWait.text = getString(R.string.drive_wait, text)
+                            b.waitCard.waitTimer.text = text
+                            b.waitCard.waitProgress.progress = waitPercent(start, free)
                         }
                         delay(1000)
                     }
@@ -286,6 +287,13 @@ class MapFragment : Fragment(R.layout.fragment_map) {
             bar.pickupNavEta.text = ""
             bar.pickupNavDistance.text = ""
             bar.pickupNavDot.isVisible = false
+            // Vídeo 2026-10-30: a barra sobe para o TOPO do cartão de espera em vez de ficar por
+            // baixo dele (no original o cartão entra pela base e empurra a barra para cima).
+            bar.root.post {
+                if (binding == null) return@post
+                val cardH = b.waitCard.root.takeIf { it.isVisible }?.height ?: 0
+                bar.root.translationY = -cardH.toFloat()
+            }
             bar.root.post {
                 if (binding != null) b.mapFull.setBottomPadding(bar.root.height)
             }
@@ -352,12 +360,15 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         // Espera na recolha: o cartão novo do vídeo de 2026-10-30 (contador + contacto +
         // "Começar <produto>") substitui o cartão antigo com "Deslize: recolher".
         val waiting = trip != null && d.stage == DriveStage.AT_PICKUP
-        b.waitCard.root.isVisible = waiting
+        // A bordo, o mesmo cartão mostra "Concluir <produto>": é o único caminho para terminar a
+        // viagem pela UI (o cartão antigo com o deslize só existe quando há PIN).
+        val onTrip = trip != null && d.stage == DriveStage.ON_TRIP
+        b.waitCard.root.isVisible = waiting || onTrip
         // O cartão antigo só serve agora para o PIN (quando o passageiro o pediu).
         val pinNeeded = waiting && trip?.pin != null && !d.pinVerified
         b.tripCard.root.isVisible = pinNeeded
         if (trip != null && pinNeeded) bindTrip(b, trip, d)
-        if (trip != null && waiting) bindWaitCard(b, trip, d)
+        if (trip != null && (waiting || onTrip)) bindWaitCard(b, trip, d, onTrip)
 
         updateAudioNotice(b, d)
 
@@ -372,19 +383,28 @@ class MapFragment : Fragment(R.layout.fragment_map) {
     private var timerKey: String? = null
 
     /**
-     * Cartão de espera na recolha (vídeo 2026-10-30): nome, contacto, contador "À espera do
-     * utilizador" com barra azul, e o botão "Começar <produto>".
+     * Cartão de espera / de viagem (vídeo 2026-10-30): nome, contacto, contador "À espera do
+     * utilizador" com barra azul, e o botão "Começar <produto>" — ou "Concluir <produto>" quando
+     * o passageiro já está a bordo.
      */
-    private fun bindWaitCard(b: FragmentMapBinding, t: ActiveTrip, d: DriveUiState) {
+    private fun bindWaitCard(b: FragmentMapBinding, t: ActiveTrip, d: DriveUiState, onTrip: Boolean) {
         val c = b.waitCard
+        val product = t.product?.takeIf { it.isNotBlank() } ?: getString(R.string.drive_product_fallback)
         c.waitName.text = t.riderName
         c.waitStartLabel.text = getString(
-            R.string.wait_start,
-            t.product?.takeIf { it.isNotBlank() } ?: getString(R.string.drive_product_fallback),
+            if (onTrip) R.string.trip_finish else R.string.wait_start,
+            product,
         )
+        // A bordo já não há espera: esconde o contador e mostra só o contacto + "Concluir".
+        c.waitPanel.isVisible = !onTrip
+        if (onTrip) {
+            c.waitStart.setOnClickListener { drive.finishTrip() }
+            c.waitStart.isEnabled = !d.busy
+            return
+        }
         // O contador conta desde a chegada (waitTimeTaskData.startTimeSec do servidor).
-        c.waitTimer.text = formatWait(t.waitStartSec)
-        val pct = waitPercent(t.waitStartSec)
+        c.waitTimer.text = formatWait(t.waitStartSec, t.waitFreeSec)
+        val pct = waitPercent(t.waitStartSec, t.waitFreeSec)
         c.waitProgress.progress = pct
         // Vídeo 2026-10-30: o telefone abre o CHAT (mensagem ou ligação); o ícone de pessoa
         // abre a lista de motivos de cancelamento. São coisas diferentes.
@@ -418,17 +438,28 @@ class MapFragment : Fragment(R.layout.fragment_map) {
             .show()
     }
 
-    /** "1:35" a partir do instante de chegada; "0:00" se não houver carimbo. */    private fun formatWait(startSec: Long?): String {
+    /**
+     * Contagem decrescente da espera grátis (`waitFreeSec`, 2 min por omissão) — como no vídeo de
+     * 2026-10-30, onde o contador desce de 1:44 até 0:00. Antes subia desde a chegada.
+     * A chegar a 0 mostra "0:00": o tempo grátis acabou.
+     */
+    private fun formatWait(startSec: Long?, freeSec: Long? = null): String {
         if (startSec == null) return "0:00"
-        val secs = (System.currentTimeMillis() / 1000 - startSec).coerceAtLeast(0)
-        return "%d:%02d".format(secs / 60, secs % 60)
+        val free = freeSec ?: DEFAULT_WAIT_FREE_S
+        val elapsed = (System.currentTimeMillis() / 1000 - startSec).coerceAtLeast(0)
+        val left = (free - elapsed).coerceAtLeast(0)
+        return "%d:%02d".format(left / 60, left % 60)
     }
 
-    /** Progresso da barra: enche ao longo da espera (5 min = 100%, o máximo da Uber). */
-    private fun waitPercent(startSec: Long?): Int {
+    /**
+     * Barra da espera. Decisão do cliente (2026-10-31): com progresso, ao contrário do original
+     * (onde é fixa). Enche à medida que o tempo grátis é consumido.
+     */
+    private fun waitPercent(startSec: Long?, freeSec: Long? = null): Int {
         if (startSec == null) return 0
-        val secs = (System.currentTimeMillis() / 1000 - startSec).coerceIn(0, 300)
-        return (secs * 100 / 300).toInt()
+        val free = (freeSec ?: DEFAULT_WAIT_FREE_S).coerceAtLeast(1)
+        val elapsed = (System.currentTimeMillis() / 1000 - startSec).coerceAtLeast(0)
+        return ((elapsed * 100) / free).coerceIn(0, 100).toInt()
     }
 
     /**
@@ -592,6 +623,9 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         b.pickupNavBar.root.isVisible = false
         b.speedBadge.isVisible = false
         b.navButton.isVisible = false
+        // A barra sobe por cima do cartão de espera (translationY negativo). Ao sair da espera
+        // tem de voltar ao fundo, senão fica a flutuar a meio do mapa — visto no Mi a 2026-10-31.
+        b.pickupNavBar.root.translationY = 0f
         // Fora da navegação volta o mapa limpo do ecrã inicial.
         if (navMode) {
             navMode = false
@@ -792,5 +826,8 @@ class MapFragment : Fragment(R.layout.fragment_map) {
          * usam `marginBottom=112dp`). O aviso sobe pela barra + este valor para nao os tapar.
          */
         const val NAV_BUTTONS_BOTTOM_DP = 112
+
+        /** Espera grátis na recolha, quando o servidor não manda `freeWaitSec` (2 min). */
+        const val DEFAULT_WAIT_FREE_S = 120L
     }
 }

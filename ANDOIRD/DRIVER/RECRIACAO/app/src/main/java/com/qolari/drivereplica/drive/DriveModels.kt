@@ -50,6 +50,8 @@ data class ActiveTrip(
     val longitude: Double?,
     val fare: String?,
     val waitStartSec: Long?,
+    /** Tempo grátis de espera na recolha (s), do servidor; o ecrã faz a contagem decrescente. */
+    val waitFreeSec: Long? = null,
     val pin: PinTask?,
     /** Morada da recolha (2.ª secção do painel enquanto se vai buscar o passageiro). */
     val pickupAddress: String? = null,
@@ -135,6 +137,7 @@ object DriveParser {
         var lng: Double? = null
         var address: String? = null
         var waitStart: Long? = null
+        var waitFree: Long? = null
         scope.nonBlockingTasks.orEmpty().forEach { t ->
             val (type, body) = taskData(t.driverTaskDataUnion)
             when (type) {
@@ -143,7 +146,10 @@ object DriveParser {
                     lng = body?.get("longitude")?.asDouble
                     address = body?.str("title")
                 }
-                "waitTimeTaskData" -> waitStart = body?.get("startTimeSec")?.asDouble?.toLong()
+                "waitTimeTaskData" -> {
+                    waitStart = body?.get("startTimeSec")?.asDouble?.toLong()
+                    waitFree = body?.get("freeWaitSec")?.takeIf { it.isJsonPrimitive }?.asDouble?.toLong()
+                }
             }
         }
         val pin = scope.blockingTasks.orEmpty().firstNotNullOfOrNull { t ->
@@ -169,6 +175,7 @@ object DriveParser {
             longitude = lng,
             fare = data.getAsJsonObject("driverUpfrontFare")?.str("amount"),
             waitStartSec = waitStart,
+            waitFreeSec = waitFree,
             pin = pin,
             pickupAddress = tripInfo?.str("pickupAddress"),
             city = tripInfo?.str("city"),

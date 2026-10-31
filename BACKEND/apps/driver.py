@@ -18,7 +18,7 @@ import uuid
 
 from apps import common, present
 from apps.rtapi import Call, RtError, handles
-from domain import finance, trips
+from domain import finance, settings, trips
 from domain.models import Document, LedgerEntry, Notification, Offer, Trip, Vehicle, jget, now
 from domain.trips import TripError
 
@@ -136,7 +136,7 @@ def _product(t: Trip) -> dict:
     return {"globalProductType": "UBER_XL" if "XL" in t.product.name.upper() else "UBER_X", "name": t.product.name}
 
 
-def trip_scope(t: Trip, pin_ok: bool = False) -> dict:
+def trip_scope(t: Trip, pin_ok: bool = False, free_wait_s: int = 120) -> dict:
     cur = t.city.currency
     r = t.rider
     entity = {"firstName": r.first_name, "lastName": (r.last_name or "")[:1], "rating": float(r.rating or 5)}
@@ -172,7 +172,10 @@ def trip_scope(t: Trip, pin_ok: bool = False) -> dict:
             t.uuid, completed=pin_ok))
     if t.state == "arrived" and t.arrived_at:
         # temporizador de espera na recolha (WaitTimeTaskData.startTimeSec obrigatorio)
-        non_blocking.append(_task(f"{t.uuid}-wait", "waitTimeTaskData", {"startTimeSec": float(t.arrived_at)},
+        non_blocking.append(_task(f"{t.uuid}-wait", "waitTimeTaskData",
+                                  {"startTimeSec": float(t.arrived_at),
+                                   # tempo gratis da espera: a app faz a contagem decrescente
+                                   "freeWaitSec": float(free_wait_s)},
                                   t.uuid))
     if lat is not None:
         non_blocking.append(_task(f"{t.uuid}-{wp}-location", "locationTaskData", {
@@ -224,7 +227,8 @@ def driver_tasks(db, d) -> dict:
                         # telemovel esta sem fix de GPS (dentro de casa, GPS desligado).
                         "location": ({"latitude": d.lat, "longitude": d.lng} if d.lat is not None else None),
                         "preferencesState": {"isEnabled": False, "isSet": False}},
-        "taskScopes": [trip_scope(trip, trips.pin_verified(db, trip))] if trip else [],
+        "taskScopes": [trip_scope(trip, trips.pin_verified(db, trip),
+                                   settings.get(db, "wait_free_s"))] if trip else [],
         "meta": {"lastModifiedTimeMs": float(time.time() * 1000)}}}
 
 

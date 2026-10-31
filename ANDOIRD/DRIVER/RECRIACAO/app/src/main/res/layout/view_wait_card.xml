@@ -25,8 +25,10 @@
     android:paddingBottom="16dp"
     android:visibility="gone">
 
-    <!-- Contador de espera com barra de progresso (1.º bloco, como no print de 2026-10-30) -->
+    <!-- Contador de espera com barra de progresso (1.º bloco, como no print de 2026-10-30).
+         A bordo esconde-se (não há espera) e fica só o contacto + "Concluir". -->
     <LinearLayout
+        android:id="@+id/waitPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_wait_panel"

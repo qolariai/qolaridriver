@@ -214,6 +214,8 @@
     <string name="itinerary_title">Itinerário da viagem</string>
     <string name="itinerary_body">Recolha: %1$s \nDestino: %2$s \nPassageiro: %3$s</string>
     <string name="wait_start">Começar %1$s</string>
+    <!-- Viagem com o passageiro a bordo (vídeo 2026-10-30): o mesmo cartão, botão "Concluir". -->
+    <string name="trip_finish">Concluir %1$s</string>
     <!-- Nome do produto quando o servidor não o enviar. -->
     <string name="drive_product_fallback">a viagem</string>
     <!-- Motivos de cancelamento (print do vídeo 2026-10-30 17:30). -->
