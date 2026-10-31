@@ -123,6 +123,7 @@ def candidates(db, trip: Trip) -> list[tuple[Driver, float]]:
     recent = now() - 600
     out = []
     for d in (db.query(Driver).filter(Driver.status == "approved", Driver.availability == "online",
+                                      Driver.paused.is_(False),
                                       Driver.lat.is_not(None)).all()):
         if d.id not in online:
             continue
@@ -627,6 +628,7 @@ def go_online(db, driver: Driver, lat: float | None = None, lng: float | None = 
         set_location(db, driver, lat, lng)
     if driver.availability == "offline":
         driver.availability = "online"
+        driver.paused = False
         driver.online_since = now()
         open_session(db, driver)
     touch(db, "drivers")
@@ -642,12 +644,28 @@ def go_offline(db, driver: Driver) -> Driver:
     if driver.availability == "on_trip":
         raise TripError("termina a viagem antes de ficar offline", "on_trip")
     driver.availability = "offline"
+    driver.paused = False
     driver.online_since = None
     close_sessions(db, driver)
     for o in db.query(Offer).filter(Offer.driver_id == driver.id, Offer.state == "pending").all():
         reject_offer(db, o, actor="system", expired=True)
     for u in (driver.organization.users if driver.organization else []):
         push.send(db, "fleet", u.uuid, "driver_status", {"driverUUID": driver.uuid, "status": "offline"})
+    touch(db, "drivers")
+    return driver
+
+
+def set_paused(db, driver: Driver, paused: bool) -> Driver:
+    """'Parar novos pedidos' (botao do planeador): fica online mas sai do despacho.
+
+    Nao se usa `availability = "offline"`: isso fechava a sessao e perdia as horas online, e
+    durante uma viagem o motorista deixava de ver o estado dela. A pausa so tira o motorista
+    da lista de candidatos e retira as propostas pendentes.
+    """
+    driver.paused = bool(paused)
+    if paused:
+        for o in db.query(Offer).filter(Offer.driver_id == driver.id, Offer.state == "pending").all():
+            reject_offer(db, o, actor="system", expired=True)
     touch(db, "drivers")
     return driver
 

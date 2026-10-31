@@ -43,6 +43,12 @@ interface DriveSource {
     suspend fun routeWithSteps(fromLat: Double, fromLng: Double, toLat: Double, toLng: Double): Result<RouteResponse?>
     /** Última posição que o servidor conhece do motorista (para navegar sem fix de GPS). */
     suspend fun lastPosition(): Pair<Double, Double>?
+
+    /**
+     * "Parar novos pedidos" / "Retomar pedidos": o motorista fica online mas fora do despacho.
+     * Devolve o estado novo (true = parado).
+     */
+    suspend fun pauseDispatch(paused: Boolean): Result<Boolean>
 }
 
 enum class DriveStage { IDLE, OFFER, TO_PICKUP, AT_PICKUP, ON_TRIP, RATING }
@@ -68,6 +74,11 @@ data class DriveUiState(
     val navigation: NavigationInfo? = null,
     /** Chat com o passageiro (texto), mostrado no ecrã de contacto. */
     val messages: List<TripMessage> = emptyList(),
+    /**
+     * "Parar novos pedidos" (botão do planeador): true = online mas sem receber propostas.
+     * O servidor manda este estado em `driverState.available`; a app só o espelha.
+     */
+    val paused: Boolean = false,
 )
 
 /** Avisos únicos para o ecrã (a janela "Erro" já existe no lote 2). */
@@ -331,6 +342,24 @@ class DriveViewModel(
             navKey = null
             lastKnownPosition = null
             _state.update { DriveUiState(online = it.online) }
+        }
+    }
+
+    /**
+     * "Parar novos pedidos" / "Retomar pedidos" (botao do planeador de viagem).
+     * Continua online - so sai do despacho. O estado que fica no ecra e o que o servidor
+     * devolveu, nao o que se pediu: se a chamada falhar, o botao nao mente.
+     */
+    fun setPaused(paused: Boolean) {
+        if (_state.value.busy) return
+        _state.update { it.copy(busy = true) }
+        viewModelScope.launch {
+            source.pauseDispatch(paused)
+                .onSuccess { stopped -> _state.update { it.copy(paused = stopped, busy = false) } }
+                .onFailure {
+                    failed()
+                    _state.update { it.copy(busy = false) }
+                }
         }
     }
 

@@ -47,6 +47,10 @@ def _migrate():
             ("kind", "VARCHAR(10) DEFAULT 'exclusive'"),
             ("claimed_at", "INTEGER"),
         ],
+        "drivers": [
+            # "Parar novos pedidos" (botao do planeador): online mas fora do despacho.
+            ("paused", "BOOLEAN DEFAULT 0"),
+        ],
     }
     with engine.begin() as conn:
         for table, columns in wanted.items():

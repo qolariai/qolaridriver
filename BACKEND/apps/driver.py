@@ -206,11 +206,12 @@ def driver_tasks(db, d) -> dict:
     A proposta nao vai aqui (vai em push_driver_unified_offers_v3)."""
     online = d.availability != "offline"
     trip = trips.active_trip_for_driver(db, d)
-    # available = a aceitar pedidos (nao "em pausa"): com false durante a viagem a app mostra "Os pedidos foram
-    # interrompidos" e manda go-offline ao terminar (visto a 12-10). Sem pausa no dominio: = online.
+    # available = a aceitar pedidos. "Parar novos pedidos" (paused) mantem o motorista online
+    # mas com available=false: nao recebe propostas e o botao do planeador fica em "Retomar".
+    accepting = online and not d.paused
     return {"driverTasks": {
-        "driverState": {"online": online, "available": online,
-                        "dispatchable": online and d.status == "approved",
+        "driverState": {"online": online, "available": accepting,
+                        "dispatchable": accepting and d.status == "approved",
                         "awaitingRequesterConfirmation": False,
                         # Posicao do motorista: a app usa-a como origem da navegacao quando o
                         # telemovel esta sem fix de GPS (dentro de casa, GPS desligado).
@@ -319,6 +320,26 @@ def go_offline(call: Call):
         trips.go_offline(call.db, d)
     except TripError as e:
         raise _err(e)
+    return driver_tasks(call.db, d)
+
+
+@handles(APP, "POST", "/rt/drivers/v2/pause-dispatch")                     # 10; role driver
+def pause_dispatch(call: Call):
+    """'Parar novos pedidos' / 'Retomar pedidos' (botao do planeador de viagem).
+
+    O motorista continua ONLINE (sessao aberta, horas contam) e sem viagem em curso nao
+    recebe propostas. O corpo aceita `paused` (true/false) ou `stop` (true/false); sem
+    corpo alterna o estado. Devolve o mesmo DriverTasks das outras chamadas.
+    """
+    d = call.subject()
+    b = call.body or {}
+    if "paused" in b:
+        paused = bool(b.get("paused"))
+    elif "stop" in b:
+        paused = bool(b.get("stop"))
+    else:
+        paused = not d.paused
+    trips.set_paused(call.db, d, paused)
     return driver_tasks(call.db, d)
 
 

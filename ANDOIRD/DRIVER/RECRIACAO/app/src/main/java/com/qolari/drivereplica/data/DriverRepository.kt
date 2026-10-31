@@ -182,6 +182,17 @@ class DriverRepository(private val session: SessionStore) : HomeSource, Earnings
         if (lat != null && lng != null) lat to lng else null
     }.getOrNull()
 
+    /**
+     * "Parar novos pedidos": o servidor mantém o motorista online (sessão aberta) mas com
+     * `available = false`, o que o tira do despacho. Devolve o estado novo (true = parado).
+     */
+    override suspend fun pauseDispatch(paused: Boolean): Result<Boolean> = runCatching {
+        val body = JsonObject().apply { addProperty("paused", paused) }
+        val st = api().pauseDispatch(body).driverTasks?.driverState
+        // online + available=false  => parado; online + available=true => a receber pedidos.
+        st != null && st.online == true && st.available == false
+    }
+
     private fun body(fromLat: Double, fromLng: Double, toLat: Double, toLng: Double) = JsonObject().apply {
         fun pt(lat: Double, lng: Double) = JsonObject().apply { addProperty("latitude", lat); addProperty("longitude", lng) }
         add("origin", pt(fromLat, fromLng))

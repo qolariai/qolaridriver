@@ -166,6 +166,10 @@ class Driver(Base):
     status: Mapped[str] = mapped_column(String(20), default="pending")
     # offline | online | on_trip  (on_trip = tem viagem aceite/em curso)
     availability: Mapped[str] = mapped_column(String(20), default="offline")
+    # True = "Parar novos pedidos": continua online (sessao aberta, horas online contam) mas
+    # o despacho nao lhe manda propostas ate retomar. Nao muda `availability` para nao perder
+    # a sessao nem o estado da viagem em curso.
+    paused: Mapped[bool] = mapped_column(Boolean, default=False)
     vehicle_id: Mapped[int | None] = mapped_column(ForeignKey("vehicles.id", use_alter=True), nullable=True)
     lat: Mapped[float | None] = mapped_column(Float, nullable=True)
     lng: Mapped[float | None] = mapped_column(Float, nullable=True)

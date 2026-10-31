@@ -25,6 +25,10 @@ interface DriverApi {
     @POST("/rt/drivers/v2/go-offline")
     suspend fun goOffline(@Body body: JsonObject = JsonObject()): DriverTasksResponse
 
+    /** "Parar novos pedidos" / "Retomar pedidos" (botão do planeador de viagem). */
+    @POST("/rt/drivers/v2/pause-dispatch")
+    suspend fun pauseDispatch(@Body body: JsonObject): DriverTasksResponse
+
     @POST("/rt/drivers/v2/available")
     suspend fun available(@Body body: JsonObject = JsonObject()): DriverTasksResponse
 

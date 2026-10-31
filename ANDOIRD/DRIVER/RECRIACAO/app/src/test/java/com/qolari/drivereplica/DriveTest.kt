@@ -157,6 +157,13 @@ class DriveTest {
             fromLat: Double, fromLng: Double, toLat: Double, toLng: Double,
         ): Result<com.qolari.drivereplica.net.RouteResponse?> = Result.success(null)
         override suspend fun lastPosition(): Pair<Double, Double>? = null
+    /** "Parar novos pedidos": guarda o que foi pedido e devolve o estado resultante. */
+    var pausedState = false
+    override suspend fun pauseDispatch(paused: Boolean): Result<Boolean> {
+        calls += "pause:$paused"
+        pausedState = paused
+        return Result.success(paused)
+    }
         override suspend fun sendMessage(tripUuid: String, text: String): Result<Unit> {
             calls += "msg:$text"; return Result.success(Unit)
         }
@@ -324,6 +331,26 @@ class DriveTest {
         assertEquals(2, vm.state.value.route.size)
         vm.pollOnce()
         assertEquals("a mesma proposta não pede a rota outra vez", 1, src.calls.count { it == "route" })
+    }
+
+    @Test
+    fun stoppingNewRequestsKeepsTheDriverOnline() = runTest {
+        val src = FakeDrive().apply { trip = trip(TripPhase.TO_PICKUP) }
+        val vm = vm(src); vm.online()
+        vm.setPaused(true)
+        // O estado vem do servidor: "parado" e online com available=false.
+        assertTrue(vm.state.value.paused)
+        assertTrue("continua online", vm.state.value.online)
+        assertEquals(listOf("pause:true"), src.calls.filter { it.startsWith("pause") })
+    }
+
+    @Test
+    fun resumingRequestsPutsTheDriverBackInTheDispatch() = runTest {
+        val src = FakeDrive().apply { trip = trip(TripPhase.TO_PICKUP); pausedState = true }
+        val vm = vm(src); vm.online()
+        vm.setPaused(false)
+        assertFalse(vm.state.value.paused)
+        assertFalse(src.pausedState)
     }
 
     @Test

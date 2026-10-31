@@ -12,8 +12,6 @@ import com.qolari.drivereplica.databinding.FragmentTripPlannerBinding
 import com.qolari.drivereplica.drive.ActiveTrip
 import com.qolari.drivereplica.drive.DriveViewModel
 import com.qolari.drivereplica.drive.TripPhase
-import com.qolari.drivereplica.state.PreferencesViewModel
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -28,7 +26,6 @@ import androidx.lifecycle.repeatOnLifecycle
 class TripPlannerFragment : Fragment(R.layout.fragment_trip_planner) {
 
     private val drive: DriveViewModel by activityViewModels { DriveViewModel.Factory }
-    private val prefs: PreferencesViewModel by activityViewModels()
     private var binding: FragmentTripPlannerBinding? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -41,19 +38,18 @@ class TripPlannerFragment : Fragment(R.layout.fragment_trip_planner) {
         b.plannerSheetLink.setOnClickListener { findNavController().navigate(R.id.itinerarySheetFragment) }
         b.plannerFilters.setOnClickListener { findNavController().navigate(R.id.preferencesServicesFragment) }
         b.plannerSearch.setOnClickListener { findNavController().popBackStack() }
-        // "Parar novos pedidos": desliga a disponibilidade (não aceita mais viagens).
-        b.plannerStopIcon.setOnClickListener {
-            prefs.store.setStopped(b.plannerStopLabel.text == getString(R.string.planner_stop_requests))
-            findNavController().popBackStack()
-        }
+        // "Parar novos pedidos": o servidor mantém o motorista online mas tira-o do
+        // despacho (available=false). O ecrã fica aberto para o botão passar a "Retomar".
+        b.plannerStopIcon.setOnClickListener { drive.setPaused(!drive.state.value.paused) }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                combine(drive.state, prefs.store.stopped) { d, _ -> d }.collect { d -> bind(b, d.trip) }
+                drive.state.collect { d -> bind(b, d.trip, d.paused) }
             }
-        }    }
+        }
+    }
 
-    private fun bind(b: FragmentTripPlannerBinding, trip: ActiveTrip?) {
+    private fun bind(b: FragmentTripPlannerBinding, trip: ActiveTrip?, paused: Boolean) {
         val product = trip?.product?.takeIf { it.isNotBlank() }
             ?: getString(R.string.drive_product_fallback)
         val rider = trip?.riderName.orEmpty()
@@ -73,8 +69,15 @@ class TripPlannerFragment : Fragment(R.layout.fragment_trip_planner) {
         )
         // O botão alterna entre "Parar novos pedidos" e "Retomar pedidos".
         b.plannerStopLabel.setText(
-            if (prefs.store.stopped.value) R.string.planner_resume_requests
-            else R.string.planner_stop_requests
+            if (paused) R.string.planner_resume_requests else R.string.planner_stop_requests
+        )
+        // Parado = a mão fica neutra; a receber pedidos = circulo vermelho (print 01:57).
+        b.plannerStopIcon.setBackgroundResource(
+            if (paused) R.drawable.bg_circle_white else R.drawable.bg_circle_stop_red
+        )
+        b.plannerStopIcon.setColorFilter(
+            if (paused) requireContext().getColor(R.color.qd_ink)
+            else requireContext().getColor(R.color.qd_core_white)
         )
     }
 
