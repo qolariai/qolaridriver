@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Disco verde com a pessoa branca dentro (barra "A recolher", video 2026-10-30). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Circulo cheio: o padrao "m-r,0 a r,r 0 1,0 2r,0 a r,r 0 1,0 -2r,0" fecha bem. -->
+    <path
+        android:fillColor="#0E8345"
+        android:pathData="M12,12 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,7.1 m-2.3,0 a2.3,2.3 0 1,0 4.6,0 a2.3,2.3 0 1,0 -4.6,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,12.1 c-2.7,0 -4.9,1.5 -4.9,3.3 v1.2 h9.8 v-1.2 c0,-1.8 -2.2,-3.3 -4.9,-3.3 Z" />
+</vector>

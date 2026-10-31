@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cartao branco do aviso de gravacao, com cantos de 12dp (video 2026-10-30). -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/qd_core_white" />
+    <corners android:radius="12dp" />
+</shape>

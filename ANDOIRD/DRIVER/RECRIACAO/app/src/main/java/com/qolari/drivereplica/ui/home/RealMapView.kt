@@ -402,10 +402,11 @@ class RealMapView @JvmOverloads constructor(
         val cx = w / 2f
         val r = 17 * d
         val cy = r + 1 * d
-        // Haste escura até ao ponto de recolha (base do bitmap).
-        canvas.drawRect(cx - 1.5f * d, cy, cx + 1.5f * d, h - 5 * d, black)
-        canvas.drawCircle(cx, h - 5 * d, 5 * d, black)
-        canvas.drawCircle(cx, h - 5 * d, 2.4f * d, white)
+        // Haste VERDE ate ao ponto de recolha, com a base escura (video 2026-10-30).
+        // No original a haste acompanha a cor da bolha, nao e preta.
+        canvas.drawRect(cx - 1.6f * d, cy, cx + 1.6f * d, h - 5.5f * d, green)
+        canvas.drawCircle(cx, h - 5.5f * d, 4.8f * d, black)
+        canvas.drawCircle(cx, h - 5.5f * d, 2.2f * d, white)
         // Bolha verde com quadrado branco.
         canvas.drawCircle(cx, cy, r, green)
         val sq = RectF(cx - 4.5f * d, cy - 4.5f * d, cx + 4.5f * d, cy + 4.5f * d)
@@ -517,14 +518,17 @@ class RealMapView @JvmOverloads constructor(
         routeLine?.remove()
         routeCasing = null
         routeLine = null
+        clearChevrons()
         if (routeData.size < 2) return
         val points = routeData.map { LatLng(it.first, it.second) }
         val d = resources.displayMetrics.density
         // Navegação: traço grosso como na Uber (contorno preto + interior escuro), 20% mais fino.
         val casingW = if (thickNavigation) 12f * d else if (thickRoute) 13.5f * d else 6f * d
         val innerW = if (thickNavigation) 8f * d else if (thickRoute) 7f * d else 4f * d
+        // Navegacao: carmim como no video de 2026-10-30 (medido #E62042 no original).
+        // A proposta continua cinza claro; o traco fino de repouso mantem-se escuro.
         val innerColor = when {
-            thickNavigation -> Color.rgb(45, 45, 45)
+            thickNavigation -> NAV_ROUTE_RED
             thickRoute -> Color.rgb(165, 165, 165)
             else -> Color.rgb(17, 17, 17)
         }
@@ -540,6 +544,8 @@ class RealMapView @JvmOverloads constructor(
                 .color(innerColor)
                 .zIndex(1.6f),
         )
+        // Setas brancas a marcar o sentido da marcha (video 2026-10-30).
+        if (thickNavigation) drawChevrons(googleMap)
         if (frameToRoute && routeProgress >= 1f) {
             runCatching {
                 val bounds = LatLngBounds.Builder().apply {
@@ -550,6 +556,68 @@ class RealMapView @JvmOverloads constructor(
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, pad))
             }
         }
+    }
+
+    // ---- Chevrons brancos sobre o traco de navegacao (video 2026-10-30) ----
+    private val chevrons = mutableListOf<Marker>()
+
+    private fun clearChevrons() {
+        chevrons.forEach { it.remove() }
+        chevrons.clear()
+    }
+
+    /**
+     * Po e uma seta branca a cada [CHEVRON_STEP_M] metros ao longo da rota, rodada com o
+     * rumo do troco. Como no original, a seta aponta para o sentido de marcha.
+     */
+    private fun drawChevrons(googleMap: GoogleMap) {
+        if (routeData.size < 2) return
+        val icon = BitmapDescriptorFactory.fromBitmap(chevronBitmap())
+        var walked = CHEVRON_START_M
+        var placed = 0
+        for (i in 0 until routeData.size - 1) {
+            val a = LatLng(routeData[i].first, routeData[i].second)
+            val b = LatLng(routeData[i + 1].first, routeData[i + 1].second)
+            val seg = distance(a, b)
+            if (seg <= 0.0) continue
+            while (walked <= seg && placed < CHEVRON_MAX) {
+                val f = walked / seg
+                val p = LatLng(
+                    a.latitude + (b.latitude - a.latitude) * f,
+                    a.longitude + (b.longitude - a.longitude) * f,
+                )
+                googleMap.addMarker(
+                    MarkerOptions().position(p)
+                        .icon(icon)
+                        .anchor(0.5f, 0.5f)
+                        .rotation(bearingBetween(a, b))
+                        .flat(true)
+                        .zIndex(1.7f),
+                )?.let { chevrons += it }
+                placed++
+                walked += CHEVRON_STEP_M
+            }
+            walked -= seg
+        }
+    }
+
+    /** Seta branca cheia; o contorno carmim vem do traco por baixo. */
+    private fun chevronBitmap(): Bitmap {
+        val d = resources.displayMetrics.density
+        val size = (13 * d).toInt()
+        val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.WHITE }
+        val w = size.toFloat()
+        val path = android.graphics.Path().apply {
+            moveTo(w * 0.5f, w * 0.16f)
+            lineTo(w * 0.86f, w * 0.78f)
+            lineTo(w * 0.5f, w * 0.58f)
+            lineTo(w * 0.14f, w * 0.78f)
+            close()
+        }
+        canvas.drawPath(path, paint)
+        return bitmap
     }
 
     /** Reserva a área do cartão em baixo: o traço e os marcadores nunca ficam por baixo dele. */
@@ -632,6 +700,8 @@ class RealMapView @JvmOverloads constructor(
         set(value) {
             field = value
             applyMapStyle()
+            // As setas de sentido so fazem sentido de perto; na vista geral saem.
+            if (!value) clearChevrons() else drawRoute()
             if (value) followDriver() else wideView()
         }
 
@@ -877,8 +947,19 @@ class RealMapView @JvmOverloads constructor(
     }
 
     private companion object {
-        /** Compressão vertical do pino do motorista: 1 = redondo, 0.3 = deitado no mapa. */
-        const val PIN_FLATTEN = 0.50f
+        /** Carmim do traco de navegacao, medido no video de 2026-10-30 (#E62042). */
+        val NAV_ROUTE_RED = Color.rgb(230, 32, 66)
+
+        /** Espacamento entre chevrons e quantos no maximo (para nao encher o mapa). */
+        const val CHEVRON_STEP_M = 55.0
+        const val CHEVRON_START_M = 25.0
+        const val CHEVRON_MAX = 40
+
+        /**
+         * Pino do motorista: 1 = circulo perfeito. O original NAO e uma elipse (medi
+         * 71x71 px no video de 2026-10-30), por isso deixou de se achatar o pino.
+         */
+        const val PIN_FLATTEN = 1.0f
 
         /** Duração do traço progressivo da proposta (a Uber desenha em ~1,2 s). */
         const val ROUTE_ANIM_MS = 1200L

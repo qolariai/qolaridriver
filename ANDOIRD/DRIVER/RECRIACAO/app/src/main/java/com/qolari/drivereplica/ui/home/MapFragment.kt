@@ -142,6 +142,10 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         b.navActions.isVisible = navigating
         b.navShield.isVisible = navigating
         b.navFilters.isVisible = navigating
+        // Na vista geral o botão "Navegar" aparece em baixo a direita: a coluna do A+ tem de
+        // subir para não ficar por cima dele (visto no Mi a 2026-10-31).
+        val actionsLift = if (navigating && !navMode) (56 * resources.displayMetrics.density).toInt() else 0
+        b.navActions.translationY = -actionsLift.toFloat()
         // O painel de manobras tapa o topo: o padding do mapa passa a ser a altura real do painel
         // (ver bindNavigation). Fora da navegação limpa-se.
         if (!navigating) b.mapFull.setTopPadding(0)
@@ -351,6 +355,8 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         if (trip != null && pinNeeded) bindTrip(b, trip, d)
         if (trip != null && waiting) bindWaitCard(b, trip, d)
 
+        updateAudioNotice(b, d)
+
         val sheet = childFragmentManager.findFragmentByTag("rating")
         if (d.stage == DriveStage.RATING && d.summary != null) {
             if (sheet == null) RatingSheet().show(childFragmentManager, "rating")
@@ -420,6 +426,12 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         val secs = (System.currentTimeMillis() / 1000 - startSec).coerceIn(0, 300)
         return (secs * 100 / 300).toInt()
     }
+
+    /**
+     * Aviso de gravacao de audio (video 2026-10-30): mostra-se nos primeiros segundos de cada
+     * viagem aceite e desaparece sozinho. Guarda a viagem para nao voltar a aparecer.
+     */
+    private var audioNoticeTrip: String? = null
 
     /** Modo da câmara: true = navegação (câmara colada), false = vista ampla do percurso. */
     private var navMode = false
@@ -503,14 +515,19 @@ class MapFragment : Fragment(R.layout.fragment_map) {
             trip.phase == TripPhase.ON_TRIP -> getString(R.string.nav_dropoff_title, trip.riderName)
             else -> getString(R.string.nav_pickup_title, trip.riderName)
         }
-        // O símbolo da barra acompanha a fase: verde na recolha, vermelho na entrega (vídeo 2026-10-30).
+        // O símbolo da barra acompanha a fase: disco verde com pessoa na recolha,
+        // quadrado vermelho na entrega (vídeo 2026-10-30).
+        // No disco NAO se aplica tint: o drawable já traz o círculo verde e a pessoa branca,
+        // e um tint verde pintava também a pessoa (via-se só a silhueta).
         val dropoffPhase = trip?.phase == TripPhase.ON_TRIP
         bar.pickupNavDot.setImageResource(
-            if (dropoffPhase) R.drawable.ic_stop_dot_square else R.drawable.ic_person_filled
+            if (dropoffPhase) R.drawable.ic_stop_dot_square else R.drawable.ic_person_disc
         )
-        bar.pickupNavDot.imageTintList = android.content.res.ColorStateList.valueOf(
-            requireContext().getColor(if (dropoffPhase) R.color.qd_stop_dropoff else R.color.qd_core_green600)
-        )
+        bar.pickupNavDot.imageTintList = if (dropoffPhase) {
+            android.content.res.ColorStateList.valueOf(requireContext().getColor(R.color.qd_stop_dropoff))
+        } else {
+            null
+        }
         // O traço fino não deve ficar por baixo da barra inferior.
         bar.root.post {
             if (binding != null) b.mapFull.setBottomPadding(bar.root.height)
@@ -694,7 +711,30 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         }
     }
 
+    /**
+     * Aviso "O passageiro pode gravar audio nesta viagem" (video 2026-10-30, 0:00-0:07).
+     * Aparece uma vez por viagem, por cima da barra, e sai ao fim de [AUDIO_NOTICE_MS].
+     */
+    private fun updateAudioNotice(b: FragmentMapBinding, d: DriveUiState) {
+        val trip = d.trip
+        val navigating = d.stage == DriveStage.TO_PICKUP || d.stage == DriveStage.ON_TRIP
+        if (trip == null || !navigating) {
+            if (audioNoticeTrip != null && trip == null) {
+                audioNoticeTrip = null
+                b.audioNotice.root.isVisible = false
+            }
+            return
+        }
+        if (audioNoticeTrip == trip.uuid) return
+        audioNoticeTrip = trip.uuid
+        b.audioNotice.root.isVisible = true
+        b.audioNotice.root.postDelayed({
+            if (binding != null) b.audioNotice.root.isVisible = false
+        }, AUDIO_NOTICE_MS)
+    }
+
     override fun onDestroyView() {
+        audioNoticeTrip = null
         timerKey = null
         alertOfferUuid = null
         alerts?.stop()
@@ -709,5 +749,8 @@ class MapFragment : Fragment(R.layout.fragment_map) {
          * o botão "Navegar" e o percurso inteiro ficam ~2 s à vista antes de a câmara colar).
          */
         const val NAV_AUTO_START_MS = 2200L
+
+        /** Tempo do aviso de gravacao de audio no ecra (video: ~7 s). */
+        const val AUDIO_NOTICE_MS = 7000L
     }
 }

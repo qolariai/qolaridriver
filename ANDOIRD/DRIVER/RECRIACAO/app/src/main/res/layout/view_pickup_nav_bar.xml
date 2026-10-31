@@ -11,13 +11,27 @@
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
     android:background="@color/qd_background"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:paddingStart="16dp"
-    android:paddingTop="14dp"
-    android:paddingEnd="16dp"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
     android:paddingBottom="18dp"
     android:visibility="gone">
+
+    <!-- Pilula cinzenta de arrasto (video 2026-10-30): a barra pode ser puxada.
+         E decorativa: quem trata do toque e o painel de baixo. -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_pill_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
     <!-- Esquerda: filtros (no vídeo da Uber é o ícone de regulações, não a lista) -->
     <ImageView
@@ -51,14 +65,16 @@
                 android:textColor="@color/qd_ink"
                 android:textSize="24sp" />
 
+            <!-- Disco verde com a pessoa branca dentro, como no video de 2026-10-30.
+                 Antes era a silhueta com tint verde: a pessoa desaparecia no fundo.
+                 Sem tint aqui: as cores vivem dentro do drawable. -->
             <ImageView
                 android:id="@+id/pickupNavDot"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
                 android:layout_marginStart="12dp"
                 android:importantForAccessibility="no"
-                android:src="@drawable/ic_person_filled"
-                app:tint="@color/qd_core_green600" />
+                android:src="@drawable/ic_person_disc" />
 
             <TextView
                 android:id="@+id/pickupNavDistance"
@@ -86,4 +102,5 @@
         android:importantForAccessibility="no"
         android:src="@drawable/ic_list"
         app:tint="@color/qd_ink" />
+    </LinearLayout>
 </LinearLayout>

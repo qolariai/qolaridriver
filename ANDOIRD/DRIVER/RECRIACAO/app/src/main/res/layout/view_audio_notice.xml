@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Aviso de gravacao de audio (video 2026-10-30, 0:00-0:07).
+  Aparece por cima da barra inferior quando a viagem tem audio_ativo=true e desaparece
+  sozinho ao fim de alguns segundos, como no original.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/audioNotice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_audio_notice"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="14dp"
+    android:visibility="gone">
+
+    <ImageView
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_mic_solid" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:lineSpacingExtra="2dp"
+        android:text="@string/nav_audio_notice"
+        android:textColor="@color/qd_ink"
+        android:textSize="17sp" />
+</LinearLayout>

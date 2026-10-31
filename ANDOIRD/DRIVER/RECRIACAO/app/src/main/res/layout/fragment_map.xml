@@ -310,6 +310,12 @@
         android:tint="@color/qd_ink"
         android:visibility="gone" />
 
+    <!-- Aviso de gravacao de audio (video 2026-10-30, 0:00-0:07).
+         Fica DEPOIS da barra para ser desenhado por cima dela. -->
+    <include
+        android:id="@+id/audioNotice"
+        layout="@layout/view_audio_notice" />
+
     <!-- Selo de limite de velocidade, encostado ao canto inferior esquerdo. -->
     <LinearLayout
         android:id="@+id/speedBadge"

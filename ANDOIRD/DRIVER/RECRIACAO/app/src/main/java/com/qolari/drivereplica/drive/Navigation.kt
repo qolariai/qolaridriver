@@ -205,7 +205,11 @@ object Navigation {
     fun fmtKm(m: Double): String =
         "%.1f km".format(java.util.Locale("pt", "PT"), m / 1000).replace(".", ",")
 
-    fun fmtMin(s: Double): String = "${maxOf(1, Math.round(s / 60.0).toInt())} min"
+    /**
+     * Tempo restante. O video de 2026-10-30 mostra "0 min" nos ultimos metros antes da
+     * recolha, por isso nao se forca o minimo de 1 minuto: abaixo de ~30 s e zero.
+     */
+    fun fmtMin(s: Double): String = "${maxOf(0, Math.round(s / 60.0).toInt())} min"
 
     /** Distância em metros (fórmula de haversine). */
     fun dist(lat1: Double, lng1: Double, lat2: Double, lng2: Double): Double {
