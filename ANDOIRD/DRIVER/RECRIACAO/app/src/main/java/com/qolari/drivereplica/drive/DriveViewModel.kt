@@ -49,6 +49,12 @@ interface DriveSource {
      * Devolve o estado novo (true = parado).
      */
     suspend fun pauseDispatch(paused: Boolean): Result<Boolean>
+
+    /** Modo Destino: marcar (lat/lng) ou desligar (nulos). */
+    suspend fun setDestination(lat: Double?, lng: Double?, label: String): Result<DestinationMode>
+
+    /** Modo Destino: estado atual (destino marcado + filtros que restam hoje). */
+    suspend fun destinationState(): Result<DestinationMode>
 }
 
 enum class DriveStage { IDLE, OFFER, TO_PICKUP, AT_PICKUP, ON_TRIP, RATING }
@@ -68,6 +74,8 @@ data class DriveUiState(
     val pinVerified: Boolean = false,
     /** Radar: o motorista tocou e está à espera do emparelhamento ("A verificar…"). */
     val radarPending: Boolean = false,
+    /** Modo Destino (lupa): destino marcado e filtros que restam hoje. */
+    val destination: DestinationMode = DestinationMode(),
     /** Rota recolha -> destino da proposta, para desenhar no mapa. */
     val route: List<Pair<Double, Double>> = emptyList(),
     /** Navegação para a recolha (manobras, ETA e limite da via). */
@@ -125,6 +133,11 @@ class DriveViewModel(
     /** Uma ronda: posição, viagem ativa e (sem viagem) proposta. Público para os testes. */
     suspend fun pollOnce() {
         if (!_state.value.online) return
+        // Modo Destino: mantém os filtros que restam atualizados (mudam à meia-noite e a cada
+        // marcação). Vem do driverState, na mesma chamada que o tasks() já faz.
+        source.destinationState().getOrNull()?.let { m ->
+            _state.update { it.copy(destination = m) }
+        }
         val here = location()
         here?.let { (lat, lng) ->
             lastKnownPosition = here
@@ -356,6 +369,27 @@ class DriveViewModel(
         viewModelScope.launch {
             source.pauseDispatch(paused)
                 .onSuccess { stopped -> _state.update { it.copy(paused = stopped, busy = false) } }
+                .onFailure {
+                    failed()
+                    _state.update { it.copy(busy = false) }
+                }
+        }
+    }
+
+    /**
+     * Modo Destino (lupa): marcar para onde quer ir, ou desligar com lat/lng nulos.
+     * O estado que fica no ecrã é o que o servidor devolveu (inclui os filtros que restam),
+     * para o ecrã nunca mentir sobre quantos ainda tem.
+     */
+    fun setDestination(lat: Double?, lng: Double?, label: String) {
+        if (_state.value.busy) return
+        _state.update { it.copy(busy = true) }
+        viewModelScope.launch {
+            source.setDestination(lat, lng, label)
+                .onSuccess { m ->
+                    _state.update { it.copy(destination = m, busy = false) }
+                    if (m.enabled) pollOnce()   // o filtro muda já os pedidos que chegam
+                }
                 .onFailure {
                     failed()
                     _state.update { it.copy(busy = false) }

@@ -202,6 +202,24 @@ class DriveTest {
         pausedState = paused
         return Result.success(paused)
     }
+    /** Modo Destino: guarda o que foi pedido e devolve o estado com os filtros. */
+    var destinationState = com.qolari.drivereplica.drive.DestinationMode()
+    override suspend fun setDestination(
+        lat: Double?, lng: Double?, label: String,
+    ): Result<com.qolari.drivereplica.drive.DestinationMode> {
+        calls += "dest:$lat,$lng,$label"
+        destinationState = if (lat == null || lng == null) {
+            destinationState.copy(enabled = false, latitude = null, longitude = null, label = "")
+        } else {
+            destinationState.copy(
+                enabled = true, latitude = lat, longitude = lng, label = label,
+                filtersLeft = (destinationState.filtersLeft - 1).coerceAtLeast(0),
+            )
+        }
+        return Result.success(destinationState)
+    }
+    override suspend fun destinationState(): Result<com.qolari.drivereplica.drive.DestinationMode> =
+        Result.success(destinationState)
         override suspend fun sendMessage(tripUuid: String, text: String): Result<Unit> {
             calls += "msg:$text"; return Result.success(Unit)
         }
@@ -389,6 +407,31 @@ class DriveTest {
         vm.setPaused(false)
         assertFalse(vm.state.value.paused)
         assertFalse(src.pausedState)
+    }
+
+    /** Modo Destino: marcar consome um filtro e liga; desligar não gasta nem devolve. */
+    @Test
+    fun settingADestinationTurnsTheModeOnAndSpendsAFilter() = runTest {
+        val src = FakeDrive()
+        src.destinationState = src.destinationState.copy(filtersLeft = 2, filtersTotal = 2)
+        val vm = vm(src); vm.online()
+        vm.setDestination(38.7106, -9.1422, "Baixa-Chiado")
+        val d = vm.state.value.destination
+        assertTrue("liga com o destino marcado", d.enabled)
+        assertEquals(38.7106, d.latitude)
+        assertEquals("Baixa-Chiado", d.label)
+        assertEquals("gastou um dos 2 filtros", 1, d.filtersLeft)
+        assertTrue(src.calls.any { it.startsWith("dest:38.7106") })
+    }
+
+    @Test
+    fun turningTheDestinationModeOffDoesNotSpendFilters() = runTest {
+        val src = FakeDrive()
+        src.destinationState = src.destinationState.copy(filtersLeft = 1, filtersTotal = 2)
+        val vm = vm(src); vm.online()
+        vm.setDestination(null, null, "")
+        assertFalse(vm.state.value.destination.enabled)
+        assertEquals("desligar não gasta filtro", 1, vm.state.value.destination.filtersLeft)
     }
 
     @Test

@@ -36,6 +36,19 @@ data class DriverState(
     val dispatchable: Boolean?,
     /** Posição que o servidor conhece do motorista (origem da navegação sem GPS). */
     val location: RoutePoint? = null,
+    /** Modo Destino (lupa): destino marcado e filtros que restam hoje. */
+    val destinationMode: DestinationModeDto? = null,
+)
+
+/** Estado do Modo Destino tal como o servidor o manda em `driverState.destinationMode`. */
+data class DestinationModeDto(
+    val enabled: Boolean? = null,
+    val latitude: Double? = null,
+    val longitude: Double? = null,
+    val label: String? = null,
+    val filtersLeft: Int? = null,
+    val filtersTotal: Int? = null,
+    val radiusKm: Double? = null,
 )
 
 data class Meta(val lastModifiedTimeMs: Double?)

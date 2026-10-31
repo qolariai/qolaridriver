@@ -226,7 +226,9 @@ def driver_tasks(db, d) -> dict:
                         # Posicao do motorista: a app usa-a como origem da navegacao quando o
                         # telemovel esta sem fix de GPS (dentro de casa, GPS desligado).
                         "location": ({"latitude": d.lat, "longitude": d.lng} if d.lat is not None else None),
-                        "preferencesState": {"isEnabled": False, "isSet": False}},
+                        "preferencesState": {"isEnabled": False, "isSet": False},
+                        # Modo Destino (lupa): estado + filtros que restam hoje.
+                        "destinationMode": _destination_state(db, d)},
         "taskScopes": [trip_scope(trip, trips.pin_verified(db, trip),
                                    settings.get(db, "wait_free_s"))] if trip else [],
         "meta": {"lastModifiedTimeMs": float(time.time() * 1000)}}}
@@ -332,6 +334,51 @@ def go_offline(call: Call):
     except TripError as e:
         raise _err(e)
     return driver_tasks(call.db, d)
+
+
+@handles(APP, "POST", "/rt/drivers/v2/destination-mode")
+def destination_mode(call: Call):
+    """Modo Destino (lupa do mapa): marcar para onde quer ir.
+
+    Corpo: `{"latitude": .., "longitude": .., "label": "..", "enabled": true|false}`.
+    Desligar: `{"enabled": false}`.
+
+    Ligar consome um dos filtros do dia (`destination_mode_daily_filters`, 2). Com o modo
+    ligado, o despacho so oferece viagens cujo DESTINO fica a menos de
+    `destination_mode_radius_km` (7 km) do ponto marcado.
+    """
+    db = call.db
+    d = call.subject()
+    enabled = call.get("enabled")
+    if enabled is None:
+        enabled = call.body.get("latitude") is not None
+    try:
+        if enabled:
+            lat = call.get("latitude", "lat")
+            lng = call.get("longitude", "lng")
+            if lat is None or lng is None:
+                raise RtError(400, "invalid_destination", "latitude e longitude obrigatorias")
+            trips.set_destination(db, d, float(lat), float(lng), str(call.get("label") or ""))
+        else:
+            trips.set_destination(db, d, None, None)
+    except TripError as e:
+        raise _err(e)
+    db.commit()
+    return {"destinationMode": _destination_state(db, d)}
+
+
+def _destination_state(db, d) -> dict:
+    used, total = trips.destination_filters_left(db, d)
+    return {
+        "enabled": d.dest_lat is not None and d.dest_lng is not None,
+        "latitude": d.dest_lat,
+        "longitude": d.dest_lng,
+        "label": d.dest_label or "",
+        "filtersUsed": used,
+        "filtersTotal": total,
+        "filtersLeft": max(total - used, 0),
+        "radiusKm": settings.get(db, "destination_mode_radius_km"),
+    }
 
 
 @handles(APP, "POST", "/rt/drivers/v2/pause-dispatch")                     # 10; role driver

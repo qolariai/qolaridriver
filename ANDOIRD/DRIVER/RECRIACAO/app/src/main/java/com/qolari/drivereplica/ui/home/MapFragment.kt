@@ -98,6 +98,9 @@ class MapFragment : Fragment(R.layout.fragment_map) {
             // "Center map": volta a câmara ao motorista (o mapa já segue o GPS).
             b.mapFull.deviceLocation = AppGraph.location.lastKnown()
         }
+        // A lupa é o Modo Destino (print 2026-10-31 16:24): marcar para onde quer ir para só
+        // lhe caírem viagens nessa direção.
+        b.mapSearch.setOnClickListener { findNavController().navigate(R.id.destinationModeFragment) }
         // Botão de lista do canto inferior direito: abre o Planeador de viagem (print 01:57).
         b.pickupNavBar.pickupNavOptions.setOnClickListener {
             findNavController().navigate(R.id.tripPlannerFragment)
@@ -364,6 +367,17 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         val offerVisible = d.stage == DriveStage.OFFER && offer != null
         b.offerCard.root.isVisible = offerVisible
         b.radarCount.text = if (offer != null) "1" else "0"
+        // Modo Destino ligado: o motorista tem de saber porque é que só lhe caem viagens
+        // numa direção. Sem isto o filtro é invisível e parece que a app "perdeu" pedidos.
+        b.destinationBanner.isVisible = d.destination.enabled &&
+            d.stage != DriveStage.OFFER && d.stage != DriveStage.TO_PICKUP && d.stage != DriveStage.ON_TRIP
+        if (d.destination.enabled) {
+            b.destinationBanner.text = getString(
+                R.string.dest_on,
+                d.destination.radiusKm.toInt().toString(),
+                d.destination.label,
+            )
+        }
         if (offer != null && offerVisible) bindOffer(b, offer)
         // Radar: depois do toque o cartão apaga-se e o botão passa a "A verificar…" até o
         // servidor fechar a janela de emparelhamento (vídeo 2026-10-29, 0:07).

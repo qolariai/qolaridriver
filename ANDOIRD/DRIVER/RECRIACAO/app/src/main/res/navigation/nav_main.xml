@@ -56,6 +56,11 @@
         android:id="@+id/plannerCancelFragment"
         android:name="com.qolari.drivereplica.ui.home.PlannerCancelFragment"
         android:label="@string/cancel_prompt" />
+
+    <fragment
+        android:id="@+id/destinationModeFragment"
+        android:name="com.qolari.drivereplica.ui.home.DestinationModeFragment"
+        android:label="@string/dest_title" />
     <fragment
         android:id="@+id/discoverFragment"
         android:name="com.qolari.drivereplica.ui.discover.DiscoverFragment"

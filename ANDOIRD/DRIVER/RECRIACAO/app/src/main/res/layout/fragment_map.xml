@@ -187,6 +187,25 @@
         android:id="@+id/offerCard"
         layout="@layout/view_offer_card" />
 
+    <!-- Modo Destino ligado: faixa fina a dizer o raio e o destino marcado. -->
+    <TextView
+        android:id="@+id/destinationBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="132dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_prefs_hint"
+        android:gravity="center"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/qd_ink"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
     <!-- Flash do pedido (Definições > Acessibilidade > Iluminação do ecrã para pedidos). -->
     <View
         android:id="@+id/offerFlash"

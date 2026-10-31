@@ -29,6 +29,10 @@ interface DriverApi {
     @POST("/rt/drivers/v2/pause-dispatch")
     suspend fun pauseDispatch(@Body body: JsonObject): DriverTasksResponse
 
+    /** Modo Destino (lupa do mapa): marcar/limpar o destino para onde quer ir. */
+    @POST("/rt/drivers/v2/destination-mode")
+    suspend fun destinationMode(@Body body: JsonObject): JsonObject
+
     @POST("/rt/drivers/v2/available")
     suspend fun available(@Body body: JsonObject = JsonObject()): DriverTasksResponse
 

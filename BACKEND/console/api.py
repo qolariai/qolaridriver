@@ -463,6 +463,27 @@ def driver_offline(driver_id: int, user: dict = Depends(OPS)):
         return _driver_detail(db, d)
 
 
+@api.post("/drivers/reset-destination-filters")
+def reset_destination_filters(user: dict = Depends(OPS)):
+    """Zera a contagem diaria do Modo Destino (para testar ou repor um motorista)."""
+    with session_scope() as db:
+        for d in db.query(Driver).all():
+            d.dest_used_today = 0
+            d.dest_used_day = 0
+        audit(db, user, "driver.reset_destination_filters", "driver", 0)
+    return {"ok": True}
+
+
+@api.post("/drivers/{driver_id}/destination-mode-off")
+def destination_mode_off(driver_id: int, user: dict = Depends(OPS)):
+    """Desliga o Modo Destino de um motorista (usado na limpeza dos testes)."""
+    with session_scope() as db:
+        d = _get(db, Driver, driver_id, "motorista")
+        trips.set_destination(db, d, None, None)
+        audit(db, user, "driver.destination_mode_off", "driver", d.id)
+        return _driver_detail(db, d)
+
+
 @api.post("/drivers/{driver_id}/location")
 def driver_location(driver_id: int, body: LocationIn, user: dict = Depends(OPS)):
     with session_scope() as db:

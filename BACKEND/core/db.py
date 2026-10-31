@@ -50,6 +50,12 @@ def _migrate():
         "drivers": [
             # "Parar novos pedidos" (botao do planeador): online mas fora do despacho.
             ("paused", "BOOLEAN DEFAULT 0"),
+            # Modo Destino (lupa do mapa): destino marcado + filtros usados hoje.
+            ("dest_lat", "FLOAT"),
+            ("dest_lng", "FLOAT"),
+            ("dest_label", "VARCHAR(160) DEFAULT ''"),
+            ("dest_used_today", "INTEGER DEFAULT 0"),
+            ("dest_used_day", "INTEGER DEFAULT 0"),
         ],
     }
     with engine.begin() as conn:

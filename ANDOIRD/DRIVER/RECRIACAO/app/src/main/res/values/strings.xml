@@ -385,4 +385,13 @@
     <string name="cancel_reason_no_recording">Não queria ser gravado</string>
     <string name="cancel_reason_more">Mais problemas</string>
     <string name="map_route">Ver o percurso completo</string>
+
+    <!-- Modo Destino (lupa do mapa, print 2026-10-31 16:24). -->
+    <string name="dest_title">Modo Destino</string>
+    <string name="dest_subtitle">Encontre viagens na direção em que vai</string>
+    <string name="dest_search_hint">Procurar locais</string>
+    <string name="dest_filters_left">%1$d/%2$d filtros restantes</string>
+    <string name="dest_home">Casa</string>
+    <string name="dest_no_filters">Já usou os filtros de hoje</string>
+    <string name="dest_on">Modo Destino ligado: só viagens até %1$s km de %2$s</string>
 </resources>

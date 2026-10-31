@@ -46,6 +46,9 @@ object AppConfig {
      */
     const val DIRECTIONS_HOST = "https://maps.googleapis.com"
 
+    /** Places (Autocomplete + Details), usado pelo Modo Destino da lupa. */
+    const val PLACES_HOST = "https://maps.googleapis.com"
+
     /** URL efetivo: o guardado pelo utilizador (ecrã de definições do lote 2) ou o do ambiente. */
     fun resolveBaseUrl(saved: String?): String =
         saved?.trim()?.trimEnd('/')?.takeIf { it.isNotEmpty() } ?: defaultBaseUrl

@@ -137,8 +137,18 @@ def candidates(db, trip: Trip) -> list[tuple[Driver, float]]:
         if v.seats < trip.product.capacity or v.year < trip.product.min_vehicle_year:
             continue
         dist = geo.haversine_m(d.lat, d.lng, trip.pickup_lat, trip.pickup_lng)
-        if dist <= radius:
-            out.append((d, dist))
+        if dist > radius:
+            continue
+        # Modo Destino: o motorista marcou para onde quer ir; so lhe servem viagens cujo
+        # DESTINO fica dentro do raio desse ponto. Viagens sem coordenadas de destino nao
+        # entram (nao se pode provar que vao na direcao certa).
+        if d.dest_lat is not None and d.dest_lng is not None:
+            if trip.dropoff_lat is None or trip.dropoff_lng is None:
+                continue
+            dest_radius = settings.get(db, "destination_mode_radius_km") * 1000
+            if geo.haversine_m(d.dest_lat, d.dest_lng, trip.dropoff_lat, trip.dropoff_lng) > dest_radius:
+                continue
+        out.append((d, dist))
     out.sort(key=lambda x: x[1])
     return out
 
@@ -666,6 +676,45 @@ def set_paused(db, driver: Driver, paused: bool) -> Driver:
     if paused:
         for o in db.query(Offer).filter(Offer.driver_id == driver.id, Offer.state == "pending").all():
             reject_offer(db, o, actor="system", expired=True)
+    touch(db, "drivers")
+    return driver
+
+
+def _day_start(ts: int) -> int:
+    import time as _t
+    lt = _t.localtime(ts)
+    return int(_t.mktime((lt.tm_year, lt.tm_mon, lt.tm_mday, 0, 0, 0, 0, 0, -1)))
+
+
+def destination_filters_left(db, driver: Driver) -> tuple[int, int]:
+    """(usados hoje, total diario). Reinicia a contagem quando muda o dia."""
+    total = int(settings.get(db, "destination_mode_daily_filters"))
+    today = _day_start(now())
+    if (driver.dest_used_day or 0) != today:
+        return 0, total
+    return int(driver.dest_used_today or 0), total
+
+
+def set_destination(db, driver: Driver, lat: float | None, lng: float | None,
+                    label: str = "") -> Driver:
+    """Liga/desliga o Modo Destino.
+
+    Ligar consome um dos filtros do dia (a Uber conta cada definicao de destino como um
+    filtro). Desligar nao consome. Ao esgotar os filtros, ligar falha com `TripError`.
+    """
+    if lat is None or lng is None:
+        # Desligar: limpa o destino mas nao devolve filtros ja gastos.
+        driver.dest_lat = driver.dest_lng = None
+        driver.dest_label = ""
+        touch(db, "drivers")
+        return driver
+    used, total = destination_filters_left(db, driver)
+    if used >= total:
+        raise TripError("sem filtros do Modo Destino hoje", "no_filters_left")
+    driver.dest_lat, driver.dest_lng = float(lat), float(lng)
+    driver.dest_label = (label or "")[:160]
+    driver.dest_used_today = used + 1
+    driver.dest_used_day = _day_start(now())
     touch(db, "drivers")
     return driver
 

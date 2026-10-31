@@ -19,6 +19,9 @@ DEFAULTS = {
     "max_offers_per_trip": 6,
     "rider_free_cancel_s": 120,        # cancelar depois disto (com motorista atribuido) paga taxa
     "wait_free_s": 120,                # espera gratis na recolha (contagem decrescente no ecra)
+    # ---- Modo Destino (lupa do mapa) ----
+    "destination_mode_radius_km": 7.0,   # so viagens cujo destino fica a menos disto do marcado
+    "destination_mode_daily_filters": 2, # filtros por dia (o original mostra "2/2 filtros restantes")
     "avg_speed_kmh": 28.0,             # estimativas de duracao e simulacao
     "road_factor": 1.35,               # distancia em linha reta -> estrada
     "simulate_movement": True,         # motoristas simulados andam sozinhos no mapa
@@ -43,6 +46,8 @@ LABELS = {
     "max_offers_per_trip": "Propostas máximas por viagem",
     "rider_free_cancel_s": "Cancelamento grátis do passageiro (s)",
     "wait_free_s": "Espera grátis na recolha (s)",
+    "destination_mode_radius_km": "Modo Destino: raio à volta do destino (km)",
+    "destination_mode_daily_filters": "Modo Destino: filtros por dia",
     "avg_speed_kmh": "Velocidade média (km/h)",
     "road_factor": "Fator estrada / linha reta",
     "simulate_movement": "Simular movimento dos motoristas de teste",

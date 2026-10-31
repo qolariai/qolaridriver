@@ -84,6 +84,20 @@ data class ActiveTrip(
 /** Resumo no fim da viagem (ganhos: captura 011/062 mostra o total da semana; o da viagem vem de earnings/get-trip). */
 data class TripSummary(val tripUuid: String, val total: String, val lines: List<Pair<String, String>>)
 
+/**
+ * Modo Destino (lupa do mapa): o ponto para onde o motorista quer ir. Com isto ligado o
+ * servidor só lhe oferece viagens cujo destino fica dentro de [radiusKm].
+ */
+data class DestinationMode(
+    val enabled: Boolean = false,
+    val latitude: Double? = null,
+    val longitude: Double? = null,
+    val label: String = "",
+    val filtersLeft: Int = 0,
+    val filtersTotal: Int = 0,
+    val radiusKm: Double = 0.0,
+)
+
 object DriveParser {
 
     /** Primeira proposta aberta, ou nulo. [nowMs] só serve para descartar propostas já expiradas. */

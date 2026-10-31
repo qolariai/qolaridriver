@@ -4,6 +4,7 @@ import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import com.qolari.drivereplica.drive.AcceptResult
 import com.qolari.drivereplica.drive.ActiveTrip
+import com.qolari.drivereplica.drive.DestinationMode
 import com.qolari.drivereplica.drive.DriveParser
 import com.qolari.drivereplica.drive.DriveSource
 import com.qolari.drivereplica.drive.OfferCard
@@ -191,6 +192,51 @@ class DriverRepository(private val session: SessionStore) : HomeSource, Earnings
         val st = api().pauseDispatch(body).driverTasks?.driverState
         // online + available=false  => parado; online + available=true => a receber pedidos.
         st != null && st.online == true && st.available == false
+    }
+
+    /**
+     * Modo Destino (lupa): marca para onde o motorista quer ir. `lat`/`lng` nulos desligam.
+     * Ligar consome um dos filtros do dia; devolve o estado com os filtros que restam.
+     */
+    override suspend fun setDestination(lat: Double?, lng: Double?, label: String): Result<DestinationMode> =
+        runCatching {
+            val body = JsonObject().apply {
+                if (lat == null || lng == null) addProperty("enabled", false)
+                else {
+                    addProperty("latitude", lat)
+                    addProperty("longitude", lng)
+                    addProperty("label", label)
+                }
+            }
+            val o = api().destinationMode(body).getAsJsonObject("destinationMode")
+            fun str(k: String) = o.get(k)?.takeIf { it.isJsonPrimitive }?.asString
+            fun num(k: String) = o.get(k)?.takeIf { it.isJsonPrimitive }?.asDouble
+            DestinationMode(
+                enabled = o.get("enabled")?.asBoolean == true,
+                latitude = num("latitude"),
+                longitude = num("longitude"),
+                label = str("label").orEmpty(),
+                filtersLeft = num("filtersLeft")?.toInt() ?: 0,
+                filtersTotal = num("filtersTotal")?.toInt() ?: 0,
+                radiusKm = num("radiusKm") ?: 0.0,
+            )
+        }
+
+    /**
+     * Modo Destino (lupa): devolve o estado atual (destino + filtros que restam).
+     * Vem no `driverState` das DriverTasks, que é a mesma chamada que o `tasks()` usa.
+     */
+    override suspend fun destinationState(): Result<DestinationMode> = runCatching {
+        val st = api().available().driverTasks?.driverState?.destinationMode
+        DestinationMode(
+            enabled = st?.enabled == true,
+            latitude = st?.latitude,
+            longitude = st?.longitude,
+            label = st?.label.orEmpty(),
+            filtersLeft = st?.filtersLeft ?: 0,
+            filtersTotal = st?.filtersTotal ?: 0,
+            radiusKm = st?.radiusKm ?: 0.0,
+        )
     }
 
     private fun body(fromLat: Double, fromLng: Double, toLat: Double, toLng: Double) = JsonObject().apply {

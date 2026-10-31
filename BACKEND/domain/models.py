@@ -184,6 +184,15 @@ class Driver(Base):
     online_since: Mapped[int | None] = mapped_column(Integer, nullable=True)
     # True = motorista simulado (a consola move-o no mapa); a 1.a localizacao vinda da app -> False
     simulated: Mapped[bool] = mapped_column(Boolean, default=False)
+    # ---- Modo Destino (lupa do mapa) ----
+    # Destino marcado pelo motorista: so recebe viagens cujo DESTINO fica a menos de
+    # `destination_mode_radius_km` daqui. Nulo = desligado.
+    dest_lat: Mapped[float | None] = mapped_column(Float, nullable=True)
+    dest_lng: Mapped[float | None] = mapped_column(Float, nullable=True)
+    dest_label: Mapped[str] = mapped_column(String(160), default="")
+    # Filtros ja usados hoje e o dia (epoch do inicio do dia) a que se refere.
+    dest_used_today: Mapped[int] = mapped_column(Integer, default=0)
+    dest_used_day: Mapped[int] = mapped_column(Integer, default=0)
 
     organization: Mapped[Organization | None] = relationship(back_populates="drivers")
     vehicle: Mapped["Vehicle | None"] = relationship(foreign_keys=[vehicle_id])
