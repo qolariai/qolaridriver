@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.qolari.userlite.R
+import com.qolari.userlite.data.AppGraph
 import com.qolari.userlite.databinding.FragmentRideOptionsBinding
 import com.qolari.userlite.net.QuoteProduct
 import com.qolari.userlite.net.RoutePoint
@@ -60,9 +61,16 @@ class RideOptionsFragment : Fragment() {
         binding.zoomOut.setOnClickListener { binding.map.zoomOut() }
         binding.paymentRow.setOnClickListener { choosePayment() }
         binding.requestButton.setOnClickListener {
+            // Sem rede não há pedido: evita orçamentos antigos e o erro feio do socket.
+            if (!AppGraph.network.connected.value) {
+                Snackbar.make(binding.root, R.string.ride_offline, Snackbar.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
             viewModel.request(pickup, dropoff, ride.promoCode)
         }
         binding.error.setOnClickListener { load(pickup, dropoff) }
+        binding.whenChip.setOnClickListener { chooseWhen() }
+        binding.forChip.setOnClickListener { chooseForWhom() }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -72,12 +80,18 @@ class RideOptionsFragment : Fragment() {
                     binding.error.isVisible = state.error != null
                     binding.error.text = state.error
                     binding.paymentLabel.text = getString(R.string.ride_payment, state.payment.label)
+                    // Folha "A pedir a sua viagem" com o conteúdo por trás esbatido (original).
+                    binding.requestingScrim.isVisible = state.requesting
+                    binding.requestingOverlay.isVisible = state.requesting
                     state.quote?.let { quote ->
                         adapter.submit(quote.products, state.selected)
                         binding.requestButton.isVisible = quote.products.isNotEmpty()
                     }
                     state.selected?.let { product ->
                         binding.requestButton.text = getString(R.string.ride_request, product.name)
+                        // O ETA do mapa é o do produto escolhido, não um "3 min." fixo.
+                        binding.pickupEta.text = getString(R.string.ride_eta, product.etaMin)
+                        binding.pickupEta.isVisible = product.etaMin > 0
                     }
                     binding.requestButton.isEnabled = !state.requesting && state.selected != null
                     if (state.requesting) binding.requestButton.text = getString(R.string.loading)
@@ -87,6 +101,7 @@ class RideOptionsFragment : Fragment() {
                     if (state.trip != null) {
                         ride.select(state.selected!!)
                         ride.promoCode = null
+                        ride.reopenTrip()
                         findNavController().navigate(R.id.action_ride_to_active)
                     }
                 }
@@ -103,6 +118,30 @@ class RideOptionsFragment : Fragment() {
     private fun choose(product: QuoteProduct) {
         viewModel.select(product)
         ride.select(product)
+    }
+
+    private fun chooseWhen() {
+        val labels = arrayOf(getString(R.string.ride_when_now), getString(R.string.ride_when_later))
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.search_when)
+            .setItems(labels) { _, which ->
+                if (which == 1) {
+                    Snackbar.make(binding.root, R.string.ride_schedule_soon, Snackbar.LENGTH_SHORT).show()
+                }
+            }
+            .show()
+    }
+
+    private fun chooseForWhom() {
+        val labels = arrayOf(getString(R.string.ride_for_me), getString(R.string.ride_for_other))
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.search_for)
+            .setItems(labels) { _, which ->
+                if (which == 1) {
+                    Snackbar.make(binding.root, R.string.ride_for_other_soon, Snackbar.LENGTH_SHORT).show()
+                }
+            }
+            .show()
     }
 
     private fun choosePayment() {

@@ -53,10 +53,8 @@ class WalletFragment : Fragment() {
                     state.wallet?.let { w ->
                         binding.balanceValue.text = w.cash.label
                         binding.cashValue.text = w.cash.label
-                        val nextMonday = java.time.LocalDate.now()
-                            .with(java.time.temporal.TemporalAdjusters.next(java.time.DayOfWeek.MONDAY))
-                            .format(java.time.format.DateTimeFormatter.ofPattern("dd/MM"))
-                        binding.paymentScheduled.text = getString(R.string.wallet_scheduled, nextMonday)
+                        // Sem data de pagamento no servidor não inventamos uma no cliente.
+                        binding.paymentScheduled.isVisible = false
                         profiles = w.profiles
                         selectedId = w.payment.id
                         adapter.submit(w.profiles, w.payment.id)

@@ -25,6 +25,16 @@
             app:tint="@color/ql_black" />
     </FrameLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ql_margin"
+        android:layout_marginEnd="@dimen/ql_margin"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/wallet_title"
+        android:textColor="@color/ql_black"
+        android:textSize="34sp" />
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

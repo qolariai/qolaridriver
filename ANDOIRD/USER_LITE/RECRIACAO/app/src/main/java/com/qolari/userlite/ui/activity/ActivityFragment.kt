@@ -30,12 +30,15 @@ class ActivityFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        adapter = HistoryAdapter()
+        adapter = HistoryAdapter(
+            onClick = { trip -> openDetail(trip) },
+        )
         binding.trips.layoutManager = LinearLayoutManager(requireContext())
         binding.trips.adapter = adapter
         binding.backButton.setOnClickListener { findNavController().navigateUp() }
         binding.menuButton.setOnClickListener { findNavController().navigate(R.id.menuFragment) }
         binding.emptyAction.setOnClickListener { findNavController().navigate(R.id.searchFragment) }
+        binding.filterAll.setOnClickListener { showFilter() }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -50,6 +53,61 @@ class ActivityFragment : Fragment() {
             }
         }
         viewModel.load()
+    }
+
+    /** Detalhe da viagem: percurso, produto, valor e estado, com o conteúdo do próprio histórico. */
+    private fun openDetail(trip: com.qolari.userlite.net.HistoryTrip) {
+        val state = when (trip.state) {
+            "completed" -> getString(R.string.activity_trip_state_completed)
+            "cancelled" -> getString(R.string.activity_trip_state_cancelled)
+            "no_drivers" -> getString(R.string.activity_trip_state_no_drivers)
+            "requested" -> getString(R.string.activity_trip_state_requested)
+            "accepted" -> getString(R.string.activity_trip_state_accepted)
+            "arrived" -> getString(R.string.activity_trip_state_arrived)
+            "in_progress" -> getString(R.string.activity_trip_state_in_progress)
+            else -> trip.state
+        }
+        val charged = trip.state == "completed" && trip.fare.label.isNotBlank()
+        val body = buildString {
+            append(trip.date)
+            append("\n\n")
+            append(getString(R.string.trip_pickup))
+            append(": ")
+            append(trip.pickup.ifBlank { getString(R.string.activity_route_unknown) })
+            append("\n")
+            append(getString(R.string.trip_dropoff))
+            append(": ")
+            append(trip.dropoff.ifBlank { getString(R.string.activity_route_unknown) })
+            append("\n")
+            append(getString(R.string.activity_detail_product))
+            append(": ")
+            append(trip.product)
+            append("\n")
+            append(getString(R.string.activity_detail_state))
+            append(": ")
+            append(state)
+            append("\n")
+            append(getString(R.string.activity_detail_total))
+            append(": ")
+            append(if (charged) trip.fare.label else getString(R.string.activity_no_charge))
+        }
+        findNavController().navigate(
+            R.id.infoFragment,
+            com.qolari.userlite.ui.info.InfoFragment.args(getString(R.string.activity_detail_title), body)
+        )
+    }
+
+    private fun showFilter() {
+        val labels = arrayOf(
+            getString(R.string.activity_filter_all),
+            getString(R.string.activity_trip_state_completed),
+            getString(R.string.activity_trip_state_cancelled),
+            getString(R.string.activity_trip_state_no_drivers),
+        )
+        com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.activity_filter_title)
+            .setItems(labels) { _, which -> adapter.submit(viewModel.filtered(which)) }
+            .show()
     }
 
     override fun onDestroyView() {

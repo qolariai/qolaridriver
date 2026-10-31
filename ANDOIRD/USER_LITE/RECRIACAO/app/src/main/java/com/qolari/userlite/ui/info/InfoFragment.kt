@@ -34,5 +34,12 @@ class InfoFragment : Fragment() {
         const val ARG_TITLE = "title"
         const val ARG_BODY = "body"
         const val ROUTE = "infoFragment"
+
+        /** Bundle para `navigate(infoFragment, args(...))`. */
+        fun args(title: String, body: String): Bundle =
+            Bundle().apply {
+                putString(ARG_TITLE, title)
+                putString(ARG_BODY, body)
+            }
     }
 }

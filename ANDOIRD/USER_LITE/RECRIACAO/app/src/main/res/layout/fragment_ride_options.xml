@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/ql_black" />
 
-    <!-- Cartão de recolha (captura 032 real). -->
+    <!-- Cartão de recolha (captura 032 real). O ETA vem do produto selecionado. -->
     <LinearLayout
         android:id="@+id/pickupCard"
         android:layout_width="wrap_content"
@@ -55,7 +55,6 @@
             android:paddingTop="4dp"
             android:paddingEnd="8dp"
             android:paddingBottom="4dp"
-            android:text="3 min."
             android:textColor="@color/ql_white"
             android:textSize="14sp" />
 
@@ -165,9 +164,13 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/whenChip"
                 android:layout_width="wrap_content"
                 android:layout_height="42dp"
                 android:background="@drawable/bg_chip_soft"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingStart="12dp"
@@ -198,10 +201,14 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/forChip"
                 android:layout_width="wrap_content"
                 android:layout_height="42dp"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_chip_soft"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingStart="12dp"
@@ -242,7 +249,8 @@
                 android:id="@+id/products"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clipToPadding="false" />
+                android:clipToPadding="false"
+                android:paddingBottom="8dp" />
 
             <ProgressBar
                 android:id="@+id/loading"
@@ -272,17 +280,20 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:id="@+id/paymentIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_pill_black"
                 android:contentDescription="@null"
-                android:src="@drawable/ic_plus"
-                app:tint="@color/ql_black" />
+                android:padding="6dp"
+                android:src="@drawable/ic_wallet"
+                app:tint="@color/ql_white" />
 
             <TextView
                 android:id="@+id/paymentLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
+                android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:text="@string/ride_payment_add"
                 android:textColor="@color/ql_black"
@@ -306,5 +317,49 @@
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Estado "A pedir a sua viagem": folha branca com spinner, como no original. -->
+    <LinearLayout
+        android:id="@+id/requestingOverlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_sheet"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="26dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="26dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <ProgressBar
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:indeterminateTint="@color/ql_gray_400" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/ride_requesting"
+            android:textColor="@color/ql_black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Escurece o conteúdo por trás da folha "A pedir". -->
+    <View
+        android:id="@+id/requestingScrim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/ql_scrim"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Qolari Lite</string>
 
@@ -49,6 +49,7 @@
     <string name="home_error">Não foi possível carregar o início.</string>
     <string name="home_retry">Tentar novamente</string>
     <string name="home_cash">Qolari Cash</string>
+    <string name="home_ongoing_title">Viagem em curso</string>
 
     <!-- Pesquisa -->
     <string name="search_when">Recolher agora</string>
@@ -58,10 +59,12 @@
     <string name="search_for_me">Para mim</string>
     <string name="search_destination">Local de destino</string>
     <string name="search_add_stop">Adicionar paragem</string>
+    <string name="search_add_stop_soon">Adicionar paragens chega numa próxima versão.</string>
     <string name="search_map">Definir localização no mapa</string>
     <string name="search_city">Procurar numa cidade diferente</string>
     <string name="search_saved">Locais guardados</string>
     <string name="search_no_results">Sem resultados. Tente outra morada.</string>
+    <string name="search_offline">Sem ligação à internet. Verifique a rede e tente outra vez.</string>
     <string name="search_loading">A procurar…</string>
     <string name="search_error">Não foi possível procurar moradas.</string>
 
@@ -72,6 +75,14 @@
     <string name="ride_payment_add">Adicionar forma de pagamento</string>
     <string name="ride_payment">Pagamento: %1$s</string>
     <string name="ride_request">Pedir %1$s</string>
+    <string name="ride_requesting">A pedir a sua viagem</string>
+    <string name="ride_when_now">Recolher agora</string>
+    <string name="ride_when_later">Agendar recolha</string>
+    <string name="ride_for_me">Para mim</string>
+    <string name="ride_for_other">Para outra pessoa</string>
+    <string name="ride_for_other_soon">Pedidos para outra pessoa chegam numa próxima versão.</string>
+    <string name="ride_schedule_soon">Agendar a recolha chega numa próxima versão.</string>
+    <string name="ride_offline">Sem ligação à internet. Verifique a rede e tente novamente.</string>
     <string name="ride_loading">A calcular preços…</string>
     <string name="ride_error">Não foi possível calcular a viagem.</string>
     <string name="ride_no_products">Sem categorias disponíveis nesta cidade.</string>
@@ -84,6 +95,7 @@
     <string name="trip_searching">À procura de um motorista</string>
     <string name="trip_searching_detail">Estamos a encontrar o motorista mais próximo.</string>
     <string name="trip_accepted">O seu motorista está a caminho</string>
+    <string name="trip_accepted_detail">Vamos partilhar os detalhes do motorista em breve.</string>
     <string name="trip_arriving">O motorista está a chegar</string>
     <string name="trip_arrived">O seu motorista chegou</string>
     <string name="trip_arrived_detail">Mostre este PIN ao motorista.</string>
@@ -118,11 +130,35 @@
     <string name="trip_driver_plate">%1$s</string>
     <string name="trip_pickup">Recolha</string>
     <string name="trip_dropoff">Destino</string>
+    <string name="trip_details_title">Detalhes da viagem</string>
+    <string name="trip_details_expand">Mostrar detalhes da viagem</string>
+    <string name="trip_details_collapse">Ocultar detalhes da viagem</string>
+    <string name="trip_change">Alterar</string>
+    <string name="trip_security">Segurança</string>
+    <string name="trip_security_action">Segurança</string>
+    <string name="trip_share_title">Partilhar a minha viagem</string>
+    <string name="trip_share_action">Partilhar</string>
+    <string name="trip_message">Envie uma mensagem…</string>
+    <string name="trip_contact_unavailable">Contacto do motorista indisponível.</string>
+    <string name="trip_license">O número da licença das autoridades reguladoras do seu motorista é %1$s</string>
+    <string name="trip_pickup_in">Recolha em %1$d min</string>
+    <string name="trip_pickup_in_1">Recolha em 1 min</string>
+    <string name="trip_arrived_no_pin">O seu motorista está à sua espera.</string>
+    <string name="trip_cancel_with">Cancelar a sua viagem com %1$s?</string>
+    <string name="trip_cancel_driver_on_way">O seu motorista já está a caminho.</string>
+    <string name="trip_cancel_no">Não</string>
+    <string name="trip_cancel_sim">Sim, cancelar</string>
+    <string name="trip_security_body">Nesta recriação de laboratório não há partilha de dados com terceiros. Em caso de emergência ligue 112. O motorista, o veículo e a licença estão identificados no ecrã da viagem.</string>
+    <string name="trip_share_text">Vou na Qolari com %1$s (%2$s), de %3$s para %4$s.</string>
+    <string name="trip_accepted_at">Encontro em %1$s.</string>
+    <string name="ride_payment_card">Cartão</string>
+    <string name="ride_payment_cash">Dinheiro</string>
+    <string name="trip_choose_again">Escolher outro destino</string>
 
     <!-- Menu -->
     <string name="menu_close">Fechar</string>
     <string name="menu_help">Ajuda</string>
-    <string name="menu_wallet">Wallet</string>
+    <string name="menu_wallet">Carteira</string>
     <string name="menu_activity">Atividade</string>
     <string name="menu_cash">Qolari Cash</string>
     <string name="menu_manage_account">Gerir conta</string>
@@ -136,7 +172,7 @@
     <string name="menu_rating">%1$s ★</string>
 
     <!-- Wallet -->
-    <string name="wallet_title">Wallet</string>
+    <string name="wallet_title">Carteira</string>
     <string name="wallet_balance">Saldo</string>
     <string name="wallet_scheduled">Pagamento agendado: %1$s</string>
     <string name="wallet_withdraw">Levantamentos</string>
@@ -161,6 +197,17 @@
     <string name="activity_trip_state_completed">Concluída</string>
     <string name="activity_trip_state_cancelled">Cancelada</string>
     <string name="activity_trip_state_no_drivers">Sem motorista</string>
+    <string name="activity_trip_state_requested">À procura de motorista</string>
+    <string name="activity_trip_state_accepted">Motorista a caminho</string>
+    <string name="activity_trip_state_arrived">Motorista chegou</string>
+    <string name="activity_trip_state_in_progress">Em viagem</string>
+    <string name="activity_no_charge">Sem custo</string>
+    <string name="activity_route_unknown">Percurso indisponível</string>
+    <string name="activity_detail_title">Detalhes da viagem</string>
+    <string name="activity_detail_product">Serviço</string>
+    <string name="activity_detail_state">Estado</string>
+    <string name="activity_detail_total">Total</string>
+    <string name="activity_filter_title">Filtrar viagens</string>
 
     <!-- Ajuda -->
     <string name="help_title">Ajuda</string>
@@ -177,6 +224,7 @@
     <string name="help_messages">Mensagens de apoio</string>
     <string name="help_article_placeholder">Esta página de ajuda é conteúdo próprio do laboratório. A Uber não é afiliada e o texto original não é copiado.</string>
     <string name="help_error">Não foi possível carregar a ajuda.</string>
+    <string name="help_no_results">Nenhum tópico encontrado.</string>
 
     <!-- Promocoes -->
     <string name="promotions_title">Promoções</string>

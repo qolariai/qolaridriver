@@ -14,9 +14,13 @@ class RideProductAdapter(
     private val onClick: (QuoteProduct) -> Unit,
 ) : RecyclerView.Adapter<RideProductAdapter.Holder>() {
 
+    /** O mais rápido é o de menor ETA; só esse leva o selo (como no original). */
+    private var fastestId: Int? = null
+
     fun submit(list: List<QuoteProduct>, selected: QuoteProduct?) {
         items = list
         selectedId = selected?.id
+        fastestId = list.minByOrNull { it.etaMin }?.id
         notifyDataSetChanged()
     }
 
@@ -41,7 +45,7 @@ class RideProductAdapter(
                 .format(java.time.format.DateTimeFormatter.ofPattern("HH:mm"))
             binding.time.text = "$pickupAt · " + binding.root.context.getString(R.string.ride_eta, item.etaMin)
             binding.price.text = item.price
-            binding.fastest.isVisible = item.fastest || position == 0
+            binding.fastest.isVisible = item.id == fastestId
             binding.leaf.isVisible = item.name.contains("Electric", ignoreCase = true)
             binding.icon.setImageResource(
                 if (item.capacity >= 6 || item.name.contains("XL", ignoreCase = true)) R.drawable.ic_van else R.drawable.ic_car

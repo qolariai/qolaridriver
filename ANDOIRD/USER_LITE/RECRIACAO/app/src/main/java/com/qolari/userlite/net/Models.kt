@@ -117,6 +117,8 @@ data class RequestTrip(
     val productId: Int,
     val payment: String = "cash",
     val promoCode: String? = null,
+    /** A app pede sempre verificação por PIN: o passageiro mostra-o e o motorista valida. */
+    val pinRequired: Boolean = true,
 )
 
 data class Vehicle(
@@ -135,6 +137,8 @@ data class TripDriver(
     val phone: String = "",
     val lat: Double? = null,
     val lng: Double? = null,
+    /** Número da licença da autoridade reguladora (mostrado no ecrã da viagem). */
+    val licenseNumber: String? = null,
     val vehicle: Vehicle? = null,
 )
 

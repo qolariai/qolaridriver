@@ -95,8 +95,11 @@ def _money(cents: int, currency: str = "EUR") -> str:
     return present.money(cents, currency)
 
 
-def _nearest_eta(db, lat: float, lng: float, product=None) -> int:
-    """ETA (min) do motorista elegivel mais proximo; 1 min se nao houver nenhum (estado da captura)."""
+def _nearest_eta(db, lat: float, lng: float, product=None) -> int | None:
+    """ETA (min) do motorista elegivel mais proximo; None se nao houver nenhum online.
+
+    Devolver 1 min sem motoristas prometia ao passageiro uma chegada que nao existe.
+    """
     best = None
     for d in db.query(Driver).filter(Driver.status == "approved", Driver.availability == "online",
                                      Driver.lat.is_not(None)).all():
@@ -110,7 +113,9 @@ def _nearest_eta(db, lat: float, lng: float, product=None) -> int:
         dist = geo.haversine_m(lat, lng, d.lat, d.lng) * settings.get(db, "road_factor")
         eta = dist / (settings.get(db, "avg_speed_kmh") / 3.6)
         best = eta if best is None else min(best, eta)
-    return max(1, round((best or 60) / 60))
+    if best is None:
+        return None
+    return max(1, round(best / 60))
 
 
 def _driver_json(t: Trip) -> dict | None:
@@ -122,6 +127,7 @@ def _driver_json(t: Trip) -> dict | None:
         "name": d.first_name,
         "rating": d.rating,
         "phone": d.phone,
+        "licenseNumber": d.license_number or None,
         "lat": d.lat,
         "lng": d.lng,
         "vehicle": None if not v else {
@@ -282,7 +288,9 @@ def home(call: Call):
     return {
         "greeting": "Bom dia" if datetime.now().hour < 12 else ("Boa tarde" if datetime.now().hour < 20 else "Boa noite"),
         "firstName": rider.first_name or "Passageiro",
-        "headline": f"O seu motorista pode chegar em {eta} min",
+        # Sem motoristas online nao se promete uma chegada.
+        "headline": (f"O seu motorista pode chegar em {eta} min" if eta is not None
+                     else "Peça uma viagem quando quiser"),
         "etaMin": eta,
         "savedPlace": _place(saved),
         "city": city.name,
@@ -337,8 +345,11 @@ def quote(call: Call):
             "fastest": False,
         })
     if rows:
-        fastest = min(rows, key=lambda r: (r["etaMin"], r["cents"]))
-        fastest["fastest"] = True
+        # O mais rápido é o de menor ETA; sem motoristas online não há vencedor.
+        with_eta = [r for r in rows if r["etaMin"] is not None]
+        if with_eta:
+            fastest = min(with_eta, key=lambda r: (r["etaMin"], r["cents"]))
+            fastest["fastest"] = True
     return {
         "pickup": {"lat": pickup[0], "lng": pickup[1],
                    "address": str(call.body.get("pickup", {}).get("address") or "")},

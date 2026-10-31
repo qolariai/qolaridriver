@@ -73,8 +73,16 @@ class UserRepository(private val session: SessionStore) {
         payment: String,
         promoCode: String?,
     ): Result<Trip> = runCatching {
-        api().request(RequestTrip(pickup, dropoff, productId, payment, promoCode)).trip
-            ?: error("Resposta sem viagem")
+        api().request(
+            RequestTrip(
+                pickup = pickup,
+                dropoff = dropoff,
+                productId = productId,
+                payment = payment,
+                promoCode = promoCode,
+                pinRequired = true,
+            )
+        ).trip ?: error("Resposta sem viagem")
     }
 
     suspend fun active(): Result<Trip?> = runCatching { api().active().trip }

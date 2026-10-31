@@ -57,6 +57,11 @@ class SearchFragment : Fragment() {
                 select(place)
             }
         }
+        binding.whenChip.setOnClickListener { chooseWhen() }
+        binding.forChip.setOnClickListener { chooseForWhom() }
+        binding.addStop.setOnClickListener {
+            Snackbar.make(binding.root, R.string.search_add_stop_soon, Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.destinationInput.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
@@ -76,8 +81,14 @@ class SearchFragment : Fragment() {
                 viewModel.state.collect { state ->
                     adapter.submit(state.places)
                     binding.loading.isVisible = state.loading
-                    binding.emptyText.isVisible = !state.loading && state.places.isEmpty() &&
+                    // Distinguir "não há resultados" de "não há rede": a mesma lista vazia
+                    // significa coisas diferentes para o utilizador.
+                    val noResults = !state.loading && state.places.isEmpty() &&
                         binding.destinationInput.text.isNotEmpty()
+                    binding.emptyText.isVisible = noResults
+                    binding.emptyText.setText(
+                        if (state.error != null) R.string.search_offline else R.string.search_no_results
+                    )
                     if (state.error != null) {
                         Snackbar.make(binding.root, state.error, Snackbar.LENGTH_LONG).show()
                     }
@@ -116,6 +127,30 @@ class SearchFragment : Fragment() {
     private fun hideKeyboard() {
         WindowInsetsControllerCompat(requireActivity().window, binding.root)
             .hide(WindowInsetsCompat.Type.ime())
+    }
+
+    private fun chooseWhen() {
+        val labels = arrayOf(getString(R.string.ride_when_now), getString(R.string.ride_when_later))
+        com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.search_when)
+            .setItems(labels) { _, which ->
+                if (which == 1) {
+                    Snackbar.make(binding.root, R.string.ride_schedule_soon, Snackbar.LENGTH_SHORT).show()
+                }
+            }
+            .show()
+    }
+
+    private fun chooseForWhom() {
+        val labels = arrayOf(getString(R.string.ride_for_me), getString(R.string.ride_for_other))
+        com.google.android.material.dialog.MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.search_for)
+            .setItems(labels) { _, which ->
+                if (which == 1) {
+                    Snackbar.make(binding.root, R.string.ride_for_other_soon, Snackbar.LENGTH_SHORT).show()
+                }
+            }
+            .show()
     }
 
     override fun onDestroyView() {

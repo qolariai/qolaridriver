@@ -35,4 +35,15 @@ class ActivityViewModel @JvmOverloads constructor(
                 }
         }
     }
+
+    /** 0 = todas, 1 = concluídas, 2 = canceladas, 3 = sem motorista (ordem do diálogo). */
+    fun filtered(which: Int): List<HistoryTrip> {
+        val trips = _state.value.trips
+        return when (which) {
+            1 -> trips.filter { it.state == "completed" }
+            2 -> trips.filter { it.state == "cancelled" }
+            3 -> trips.filter { it.state == "no_drivers" }
+            else -> trips
+        }
+    }
 }

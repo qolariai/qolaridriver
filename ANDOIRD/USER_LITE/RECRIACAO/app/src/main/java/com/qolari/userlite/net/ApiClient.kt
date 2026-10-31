@@ -52,6 +52,17 @@ object ApiClient {
             }
             return "Erro ${e.code()}"
         }
-        return e.message ?: "Erro de rede"
+        // Falhas de socket/DNS: nunca mostrar o texto técnico do OkHttp ("Failed to connect to ...").
+        return when (e) {
+            is java.net.UnknownHostException,
+            is java.net.ConnectException,
+            is java.net.SocketTimeoutException,
+            is java.net.NoRouteToHostException,
+            -> "Sem ligação à internet. Verifique a rede e tente novamente."
+            else -> e.message?.takeIf { msg ->
+                msg.isNotBlank() && !msg.contains("Failed to connect", ignoreCase = true) &&
+                    !msg.contains("http://", ignoreCase = true) && !msg.contains("https://", ignoreCase = true)
+            } ?: "Erro de rede"
+        }
     }
 }

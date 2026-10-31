@@ -68,6 +68,17 @@
         android:textColor="@color/ql_dark_text"
         android:textSize="32sp" />
 
+    <TextView
+        android:id="@+id/emptyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ql_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/ql_margin"
+        android:textColor="@color/ql_dark_text_secondary"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/topics"
         android:layout_width="match_parent"

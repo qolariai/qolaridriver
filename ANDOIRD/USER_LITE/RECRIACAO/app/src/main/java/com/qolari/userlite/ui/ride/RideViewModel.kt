@@ -29,6 +29,22 @@ class RideViewModel : ViewModel() {
 
     var promoCode: String? = null
 
+    /**
+     * O utilizador fechou o ecrã da viagem com o "X". A viagem continua a correr, mas o Início
+     * não a volta a abrir sozinho (senão o X não fazia nada). Volta a ser reaberta quando a app
+     * sai do primeiro plano ou quando há um pedido novo.
+     */
+    var tripDismissed: Boolean = false
+        private set
+
+    fun dismissTrip() {
+        tripDismissed = true
+    }
+
+    fun reopenTrip() {
+        tripDismissed = false
+    }
+
     fun setPickup(point: RoutePoint) {
         _pickup.value = point
         _quote.value = null
@@ -54,5 +70,6 @@ class RideViewModel : ViewModel() {
         _quote.value = null
         _selected.value = null
         promoCode = null
+        tripDismissed = false
     }
 }

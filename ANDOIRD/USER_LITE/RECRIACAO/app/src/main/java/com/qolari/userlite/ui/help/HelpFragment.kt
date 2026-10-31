@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -35,7 +36,10 @@ class HelpFragment : Fragment() {
 
     private fun filter() {
         val q = binding.searchInput.text.toString().trim().lowercase()
-        adapter.submit(HelpTopics.all().filter { q.isEmpty() || it.title.lowercase().contains(q) })
+        val found = HelpTopics.all().filter { q.isEmpty() || it.title.lowercase().contains(q) }
+        adapter.submit(found)
+        binding.emptyText.isVisible = found.isEmpty()
+        binding.emptyText.text = getString(R.string.help_no_results)
     }
 
     private fun open(topic: HelpTopic) {

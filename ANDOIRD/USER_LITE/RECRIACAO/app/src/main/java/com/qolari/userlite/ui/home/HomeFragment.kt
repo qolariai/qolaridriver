@@ -69,6 +69,10 @@ class HomeFragment : Fragment() {
         }
         binding.retryButton.setOnClickListener { viewModel.load() }
         binding.refresh.setOnRefreshListener { viewModel.load(quiet = true) }
+        binding.ongoingCard.setOnClickListener {
+            ride.reopenTrip()
+            findNavController().navigate(R.id.action_home_to_active)
+        }
         binding.zoomIn.setOnClickListener { binding.map.zoomIn() }
         binding.zoomOut.setOnClickListener { binding.map.zoomOut() }
         binding.locateButton.setOnClickListener {
@@ -85,12 +89,14 @@ class HomeFragment : Fragment() {
                     binding.errorText.text = state.error ?: getString(R.string.home_error)
                     binding.scroll.isVisible = state.home != null
                     state.home?.let { render(it) }
-                    // Só reabre viagens em curso. Uma viagem concluída/cancelada deixa o Início livre
-                    // e evita navegar a partir de outro destino (menu, conta, ...), que fechava a app.
+                    // Viagens em curso: se o utilizador ainda não fechou o ecrã da viagem, abre-o
+                    // uma vez; se fechou (X), mostra o cartão para voltar quando quiser.
                     val active = state.activeTrip
                     val ongoing = active != null &&
                         active.state !in setOf("completed", "cancelled", "no_drivers")
-                    if (ongoing && !navigatedToTrip &&
+                    binding.ongoingCard.isVisible = ongoing && ride.tripDismissed
+                    binding.ongoingDetail.text = active?.dropoff?.address.orEmpty()
+                    if (ongoing && !ride.tripDismissed && !navigatedToTrip &&
                         findNavController().currentDestination?.id == R.id.homeFragment
                     ) {
                         navigatedToTrip = true
