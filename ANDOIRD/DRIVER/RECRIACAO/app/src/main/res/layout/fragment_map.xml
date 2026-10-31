@@ -245,6 +245,71 @@
         app:iconSize="18dp"
         app:iconTint="@color/qd_core_white" />
 
+    <!-- Botões da navegação (vídeo 2026-10-30): à direita o A+ (relatar obstáculo) e o
+         atalho do percurso; à esquerda o escudo de segurança e os filtros de serviços. -->
+    <LinearLayout
+        android:id="@+id/navActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="112dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/navReport"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_map_round_button"
+            android:contentDescription="@string/report_title"
+            android:elevation="3dp"
+            android:padding="13dp"
+            android:src="@drawable/ic_auto_accept" />
+
+        <ImageButton
+            android:id="@+id/navRoute"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_map_round_button"
+            android:contentDescription="@string/map_route"
+            android:elevation="3dp"
+            android:padding="13dp"
+            android:src="@drawable/ic_route"
+            app:tint="@color/qd_ink" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/navShield"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/bg_circle_white"
+        android:contentDescription="@string/safety_toolkit_title"
+        android:elevation="3dp"
+        android:padding="13dp"
+        android:src="@drawable/ic_shield"
+        android:tint="@color/qd_core_blue600"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/navFilters"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="172dp"
+        android:background="@drawable/bg_circle_white"
+        android:contentDescription="@string/home_preferences"
+        android:elevation="3dp"
+        android:padding="13dp"
+        android:src="@drawable/ic_filter"
+        android:tint="@color/qd_ink"
+        android:visibility="gone" />
+
     <!-- Selo de limite de velocidade, encostado ao canto inferior esquerdo. -->
     <LinearLayout
         android:id="@+id/speedBadge"

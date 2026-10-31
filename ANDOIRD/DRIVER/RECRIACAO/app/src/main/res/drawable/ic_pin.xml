@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Alfinete de morada (cabeçalho do cancelamento, print 2026-10-30, 01:59). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M12,2.2 a7.4,7.4 0 0,0 -7.4,7.4 c0,5.3 6.4,11.6 6.7,11.9 a1,1 0 0,0 1.4,0 c0.3,-0.3 6.7,-6.6 6.7,-11.9 A7.4,7.4 0 0,0 12,2.2 Z M12,12.6 a3,3 0 1,1 0,-6 a3,3 0 0,1 0,6 Z" />
+</vector>

@@ -40,16 +40,57 @@ data class CommunicationDraft(
     val canSave: Boolean get() = selected != saved
 }
 
+/** Um serviço das Preferências (print 2026-10-30, 02:10). */
+data class ServiceOption(val id: String, val labelRes: Int, val iconRes: Int)
+
+/**
+ * Serviços com que o motorista aceita trabalhar. Os três primeiros vêm marcados no print
+ * (Conforto, Package, UberX Priority); os restantes ficam disponíveis.
+ */
+data class ServicePrefs(
+    val selected: Set<String> = setOf("comfort", "package", "priority"),
+)
+
+/** Contribuição de mapa enviada pelo motorista (A+ durante a recolha). */
+data class MapReport(val kind: String, val atMs: Long)
+
 class PreferencesStore {
     private val _accessibility = MutableStateFlow(AccessibilityPrefs())
     private val _sounds = MutableStateFlow(SoundPrefs())
     private val _navigation = MutableStateFlow(NavigationPrefs())
     private val _communication = MutableStateFlow(CommunicationDraft())
+    private val _services = MutableStateFlow(ServicePrefs())
+    private val _mapReports = MutableStateFlow<List<MapReport>>(emptyList())
+    private val _stopped = MutableStateFlow(false)
 
     val accessibility: StateFlow<AccessibilityPrefs> = _accessibility.asStateFlow()
     val sounds: StateFlow<SoundPrefs> = _sounds.asStateFlow()
     val navigation: StateFlow<NavigationPrefs> = _navigation.asStateFlow()
     val communication: StateFlow<CommunicationDraft> = _communication.asStateFlow()
+
+    /** Serviços com que o motorista quer trabalhar (print 2026-10-30, 02:10). */
+    val services: StateFlow<ServicePrefs> = _services.asStateFlow()
+
+    /** Relatórios de mapa já enviados (print 2026-10-30, 02:16), do mais recente para o mais antigo. */
+    val mapReports: StateFlow<List<MapReport>> = _mapReports.asStateFlow()
+
+    fun toggleService(id: String) = _services.update { s ->
+        val on = id in s.selected
+        s.copy(selected = if (on) s.selected - id else s.selected + id)
+    }
+
+    /** Guarda a contribuição do motorista (A+ no mapa). */
+    fun addMapReport(kind: String) = _mapReports.update {
+        listOf(MapReport(kind, System.currentTimeMillis())) + it
+    }
+
+    /**
+     * "Parar novos pedidos" (print 2026-10-30, 01:57): o motorista deixa de receber pedidos
+     * depois de acabar a viagem em curso. Volta a ligar pelo mesmo botão.
+     */
+    fun setStopped(stopped: Boolean) = _stopped.update { stopped }
+
+    val stopped: StateFlow<Boolean> = _stopped.asStateFlow()
 
     fun setVibration(on: Boolean) = _accessibility.update { it.copy(vibrationForRequests = on) }
     fun setScreenFlash(on: Boolean) = _accessibility.update { it.copy(screenFlashForRequests = on) }

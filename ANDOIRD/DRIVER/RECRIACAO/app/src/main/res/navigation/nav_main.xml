@@ -41,6 +41,22 @@
         android:name="com.qolari.drivereplica.ui.home.CancelReasonsFragment"
         android:label="@string/cancel_prompt" />
     <fragment
+        android:id="@+id/tripPlannerFragment"
+        android:name="com.qolari.drivereplica.ui.home.TripPlannerFragment"
+        android:label="@string/planner_title" />
+    <fragment
+        android:id="@+id/itinerarySheetFragment"
+        android:name="com.qolari.drivereplica.ui.home.ItinerarySheetFragment"
+        android:label="@string/itinerary_sheet_title" />
+    <fragment
+        android:id="@+id/preferencesServicesFragment"
+        android:name="com.qolari.drivereplica.ui.home.PreferencesServicesFragment"
+        android:label="@string/home_preferences" />
+    <fragment
+        android:id="@+id/plannerCancelFragment"
+        android:name="com.qolari.drivereplica.ui.home.PlannerCancelFragment"
+        android:label="@string/cancel_prompt" />
+    <fragment
         android:id="@+id/discoverFragment"
         android:name="com.qolari.drivereplica.ui.discover.DiscoverFragment"
         android:label="@string/tab_discover" />

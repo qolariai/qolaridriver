@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Relatório "Construção" (print 2026-10-30): losango laranja com operário e sinal. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#F0842B"
+        android:pathData="M24,1.8 L46.2,24 L24,46.2 L1.8,24 Z" />
+    <!-- operário com capacete -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M15.5,19 m-3.2,0 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0" />
+    <path
+        android:fillColor="#F0842B"
+        android:pathData="M12.2,15.4 h6.6 a1,1 0 0,1 1,1 v0.9 h-8.6 v-0.9 a1,1 0 0,1 1,-1 Z" />
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M10.4,23 h10.2 a1.8,1.8 0 0,1 1.8,1.8 v6.4 h-2.6 v-4.6 h-8.6 v4.6 h-2.6 v-6.4 a1.8,1.8 0 0,1 1.8,-1.8 Z" />
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M9.8,32.4 h2.8 v4.2 h-2.8 Z M18.6,32.4 h2.8 v4.2 h-2.8 Z" />
+    <!-- sinal triangular -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M31.6,13.2 l6.4,11 h-12.8 Z" />
+    <path
+        android:fillColor="#F0842B"
+        android:pathData="M31.6,17.4 l4.2,7.2 h-8.4 Z" />
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M31,20.2 h1.2 v2.8 h-1.2 Z M31,23.8 h1.2 v1.2 h-1.2 Z" />
+    <!-- base -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M8,37.6 h32 v2.2 h-32 Z" />
+</vector>

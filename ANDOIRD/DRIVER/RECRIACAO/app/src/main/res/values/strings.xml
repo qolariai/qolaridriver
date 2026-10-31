@@ -322,4 +322,65 @@
     <string name="map_locate">A minha posição</string>
     <string name="map_content">Conteúdo</string>
     <string name="pin_confirm">Comecar viagem</string>
+    <!-- Relatórios de mapa (print 2026-10-30, 02:16): o motorista avisa os próximos condutores. -->
+    <string name="report_title">Adicionar um relatório de mapa</string>
+    <string name="report_help">Ajuda sobre relatórios de mapa</string>
+    <string name="report_accident">Acidente</string>
+    <string name="report_traffic">Trânsito</string>
+    <string name="report_construction">Construção</string>
+    <string name="report_closure">Encerramento</string>
+    <string name="report_speed">Controlo de velocidade</string>
+    <string name="report_wrong_direction">Indicações de orientação erradas</string>
+    <string name="report_mine">As minhas contribuições</string>
+    <string name="report_sent">Relatório enviado. Obrigado por ajudar os outros condutores.</string>
+
+    <!-- Planeador de viagem (print 2026-10-30, 01:57). -->
+    <string name="planner_title">Planeador de viagem</string>
+    <string name="planner_pickup">Recolha</string>
+    <string name="planner_dropoff">Entrega</string>
+    <string name="planner_offset">%1$s &#183; %2$s</string>
+    <string name="planner_sheet">Folha de itinerário</string>
+    <string name="planner_stop_requests">Parar novos pedidos</string>
+    <string name="planner_resume_requests">Retomar pedidos</string>
+
+    <!-- Folha de itinerário (print 2026-10-30, 02:06). -->
+    <string name="itinerary_sheet_title">Folha de itinerário</string>
+    <string name="itinerary_trip_information">TRIP INFORMATION</string>
+    <string name="itinerary_fare">Fare</string>
+    <string name="itinerary_trip">Trip</string>
+    <string name="itinerary_trip_number">Trip #</string>
+    <string name="itinerary_time">Time</string>
+    <string name="itinerary_passenger">Passenger Name</string>
+    <string name="itinerary_via">Via</string>
+    <string name="itinerary_from">From</string>
+    <string name="itinerary_destination">Destination</string>
+    <string name="itinerary_notes">Trip Notes</string>
+    <string name="itinerary_driver">Driver</string>
+    <string name="itinerary_name">Name</string>
+    <string name="itinerary_livery">Livery #</string>
+    <string name="itinerary_plate">License Plate #</string>
+    <string name="itinerary_capacity">Passenger Capacity</string>
+    <string name="itinerary_notes_body">A taxa de serviço é cobrada pela Qolari aos prestadores do serviço de transporte numa base semanal, nos termos da legislação aplicável.</string>
+
+    <!-- Preferências de serviços (print 2026-10-30, 02:10). -->
+    <string name="prefs_filter_hint">Filtrar viagens com base nas preferências</string>
+    <string name="prefs_services">Serviços</string>
+    <string name="prefs_see_more">Ver mais</string>
+    <string name="prefs_comfort">Conforto</string>
+    <string name="prefs_package">Package</string>
+    <string name="prefs_electric">Electric</string>
+    <string name="prefs_pet">Uber Pet</string>
+    <string name="prefs_uberx">UberX</string>
+    <string name="prefs_priority">UberX Priority</string>
+
+    <!-- Motivos de cancelamento no planeador (print 2026-10-30, 01:59). -->
+    <string name="cancel_reason_accepted_mistake">Aceitei por engano</string>
+    <string name="cancel_reason_pickup_route">Problema com a rota da recolha</string>
+    <string name="cancel_reason_lost_way">Enganei-me no caminho</string>
+    <string name="cancel_reason_not_worth">A recolha não compensa</string>
+    <string name="cancel_reason_not_safe">A recolha não é segura</string>
+    <string name="cancel_reason_vehicle">Problema com o veículo</string>
+    <string name="cancel_reason_no_recording">Não queria ser gravado</string>
+    <string name="cancel_reason_more">Mais problemas</string>
+    <string name="map_route">Ver o percurso completo</string>
 </resources>

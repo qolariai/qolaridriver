@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  "Folha de itinerÃ¡rio" (print 2026-10-30, 02:06): comprovativo com os dados da viagem,
+  aberto pelo link azul do planeador. Os rÃ³tulos seguem o original em inglÃªs; os valores
+  vÃªm todos da viagem que o servidor devolveu.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qd_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="14dp">
+
+            <ImageButton
+                android:id="@+id/itineraryBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back"
+                android:src="@drawable/ic_back"
+                app:tint="@color/qd_ink" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/itinerary_sheet_title"
+                android:textColor="@color/qd_ink"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <!-- Bloco 1: TRIP INFORMATION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_itinerary_block"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/itinerary_trip_information"
+                android:textColor="@color/qd_ink"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/qd_line" />
+
+            <include
+                android:id="@+id/itineraryFareRow"
+                layout="@layout/item_itinerary_row" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/qd_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/itinerary_trip"
+                android:textColor="@color/qd_ink"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/qd_line" />
+
+            <include android:id="@+id/itineraryTripRow" layout="@layout/item_itinerary_row" />
+            <include android:id="@+id/itineraryTimeRow" layout="@layout/item_itinerary_row" />
+            <include android:id="@+id/itineraryPassengerRow" layout="@layout/item_itinerary_row" />
+            <include android:id="@+id/itineraryViaRow" layout="@layout/item_itinerary_row" />
+            <include android:id="@+id/itineraryFromRow" layout="@layout/item_itinerary_row" />
+            <include android:id="@+id/itineraryDestinationRow" layout="@layout/item_itinerary_row" />
+            <include android:id="@+id/itineraryNotesRow" layout="@layout/item_itinerary_row" />
+        </LinearLayout>
+
+        <!-- Bloco 2: Driver -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_itinerary_block"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/itinerary_driver"
+                android:textColor="@color/qd_ink"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/qd_line" />
+
+            <include android:id="@+id/itineraryNameRow" layout="@layout/item_itinerary_row" />
+            <include android:id="@+id/itineraryLiveryRow" layout="@layout/item_itinerary_row" />
+            <include android:id="@+id/itineraryPlateRow" layout="@layout/item_itinerary_row" />
+            <include android:id="@+id/itineraryCapacityRow" layout="@layout/item_itinerary_row" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

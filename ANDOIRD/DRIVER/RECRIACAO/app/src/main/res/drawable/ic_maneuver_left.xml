@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Seta de manobra (esquerda), traço grosso como no painel do vídeo de 2026-10-29. -->
+<!-- Manobra à esquerda (vídeo 2026-10-30): haste grossa e cabeça larga. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
     <path
-        android:pathData="M10,20 V10 a4,4 0 0,1 4,-4 h3"
+        android:pathData="M16,21 V11 a5,5 0 0,0 -5,-5 h-3.4"
         android:fillColor="#00000000"
         android:strokeColor="#FFFFFF"
-        android:strokeWidth="3"
-        android:strokeLineCap="square"
-        android:strokeLineJoin="miter" />
+        android:strokeWidth="4"
+        android:strokeLineCap="butt" />
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M21,6 l-5,0 l0,-5 z" />
+        android:pathData="M9.5,1.5 l-7.5,4.5 l7.5,4.5 z" />
 </vector>

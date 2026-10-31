@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cartão de serviço nas Preferências: contorno preto quando escolhido, cinza quando não. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/qd_background" />
+            <corners android:radius="12dp" />
+            <stroke android:width="2dp" android:color="@color/qd_ink" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/qd_background" />
+            <corners android:radius="12dp" />
+            <stroke android:width="1.5dp" android:color="@color/qd_core_gray300" />
+        </shape>
+    </item>
+</selector>

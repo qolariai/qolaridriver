@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Manobra em frente. -->
+<!--
+  Manobra em frente (vídeo 2026-10-30): haste grossa e cabeça larga, como a seta do painel.
+  O traço era de 3 em 24; passa a 3.4 e a cabeça enche a largura útil.
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
     <path
-        android:pathData="M12,21 V6"
+        android:pathData="M12,21 V8"
         android:fillColor="#00000000"
         android:strokeColor="#FFFFFF"
-        android:strokeWidth="3"
-        android:strokeLineCap="square" />
+        android:strokeWidth="4"
+        android:strokeLineCap="butt" />
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M12,2 l5,6 h-10 z" />
+        android:pathData="M12,1.5 l6,8.5 h-12 z" />
 </vector>

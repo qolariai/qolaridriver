@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Balão de mensagem (cabeçalho do cancelamento, print 2026-10-30, 01:59). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M5,4.5 h14 a2.5,2.5 0 0,1 2.5,2.5 v8 a2.5,2.5 0 0,1 -2.5,2.5 h-8.2 L6.2,21 v-3.5 H5 A2.5,2.5 0 0,1 2.5,15 V7 A2.5,2.5 0 0,1 5,4.5 Z"
+        android:strokeColor="#1A1A1A"
+        android:strokeWidth="1.9"
+        android:strokeLineJoin="round" />
+</vector>

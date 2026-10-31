@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Relatório "Encerramento" (print 2026-10-30): losango vermelho com barra horizontal. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#DE1135"
+        android:pathData="M24,1.8 L46.2,24 L24,46.2 L1.8,24 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,22 h20 v4 h-20 Z" />
+</vector>

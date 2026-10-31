@@ -13,6 +13,19 @@ data class NavigationStep(
     val distanceMeters: Int,
     /** Rua da manobra (para a linha secundária / testes). */
     val street: String = "",
+    /**
+     * Distância separada para o painel do vídeo de 2026-10-30: "140" grande e "m" pequeno.
+     * Nulo quando ainda não há manobra com distância.
+     */
+    val distanceValue: String = "",
+    val distanceUnit: String = "",
+    /**
+     * Nome da via onde a manobra acontece, para a 1.ª secção do painel
+     * ("Avenida Duque de Loulé em direção a Praça do Marquês de Pombal").
+     */
+    val via: String = "",
+    /** Destino da manobra (a rua para onde se vira): "Praça do Marquês de Pombal". */
+    val toward: String = "",
 )
 
 /** Estado da navegação para a recolha: manobra atual, seguinte e limite da via. */
@@ -34,7 +47,14 @@ data class NavigationInfo(
     val stop: NavStop? = null,
     /** Chegou ao destino final: a secção 1 passa a bandeira ("20 m — R. da Mesquita 3"). */
     val atDestination: Boolean = false,
-)
+) {
+    /**
+     * Conteúdo da 2.ª secção do painel (vídeo de 2026-10-30): enquanto houver outra manobra
+     * à frente mostra **essa manobra** (seta + rua); quando a manobra actual é a última,
+     * mostra a **paragem** (quadrado verde/vermelho + morada + cidade).
+     */
+    val secondaryIsStop: Boolean get() = next == null && stop != null
+}
 
 /**
  * Paragem mostrada na 2.ª secção do painel preto (vídeo 2026-10-30):
@@ -93,8 +113,21 @@ object Navigation {
         val remainingM = steps.drop(index).sumOf { it.distanceMeters ?: 0.0 }
         val etaS = steps.drop(index).sumOf { it.durationSeconds ?: 0.0 }
 
+        // Via onde o motorista está agora (1.ª linha do painel do vídeo de 2026-10-30:
+        // "Avenida Duque de Loulé em direção a ...").
+        val via = step?.road.orEmpty().ifBlank {
+            steps.getOrNull((index - 1).coerceAtLeast(0))?.road.orEmpty()
+        }
+        // Destino da manobra: a primeira via DIFERENTE da actual a partir da manobra em foco.
+        // O Google repete o nome da via em passos consecutivos (o OSM devolve a mesma rua), por
+        // isso comparar só o passo em foco dava sempre "X em direção a X" e o painel ficava sem
+        // a frase do vídeo.
+        val toward = steps.drop(focusIndex)
+            .mapNotNull { it.road?.takeIf { r -> r.isNotBlank() && !r.equals(via, ignoreCase = true) } }
+            .firstOrNull().orEmpty()
+
         return NavigationInfo(
-            current = focus?.let { toNav(it, toFocus) },
+            current = focus?.let { toNav(it, toFocus, via, toward) },
             next = afterFocus?.let { toNav(it, it.distanceMeters ?: 0.0) },
             // Sem valor real != mostrar 50: fica nulo e o selo desaparece.
             speedLimitKmh = speedLimitKmh,
@@ -122,7 +155,7 @@ object Navigation {
         return steps.lastIndex
     }
 
-    private fun toNav(s: RouteStep, meters: Double): NavigationStep {
+    private fun toNav(s: RouteStep, meters: Double, via: String = "", toward: String = ""): NavigationStep {
         val man = s.maneuver.orEmpty()
         val kind = when {
             man.startsWith("turn-left") || man == "uturn-left" -> "turn-left"
@@ -134,19 +167,38 @@ object Navigation {
             man == "straight" || man.isEmpty() -> "straight"
             else -> man
         }
-        // O painel do Maps mostra a INSTRUÇÃO curta ("Vire à direita"), não a frase inteira.
-        // No "em frente" (1.º passo) mostra a rua onde se está ("Praceta da Regueira").
-        val text = when (kind) {
-            "straight" -> s.road.orEmpty().ifBlank { s.instructionShort.orEmpty() }
-            else -> s.instructionShort.orEmpty().ifBlank { s.instruction.orEmpty() }.ifBlank { s.road.orEmpty() }
+        val road = s.road.orEmpty()
+        // O painel do vídeo de 2026-10-30 mostra o NOME DA VIA onde se vai entrar
+        // ("Praça do Marquês de Pombal"), não a frase "Vire à direita". A instrução só serve
+        // de recurso quando o OSM/Google não dão nome à via.
+        val text = road.ifBlank {
+            s.instructionShort.orEmpty().ifBlank { s.instruction.orEmpty() }
         }
-        return NavigationStep(kind, text, fmtDistance(meters), meters.toInt(), s.road.orEmpty())
+        val (value, unit) = splitDistance(meters)
+        return NavigationStep(
+            kind, text, fmtDistance(meters), meters.toInt(), road,
+            distanceValue = value,
+            distanceUnit = unit,
+            via = via,
+            toward = toward,
+        )
     }
 
+    /** "140" + "m" / "1,2" + "km": a 1.ª secção usa o número grande e a unidade pequena. */
+    private fun splitDistance(m: Double): Pair<String, String> = when {
+        m < 1000 -> fmtDistance(m).removeSuffix(" m") to "m"
+        else -> fmtDistance(m).removeSuffix(" km") to "km"
+    }
+
+    /**
+     * Distância do painel. O original do vídeo mostra 140 m, 50, 40, 30, 25 e 20 m:
+     * abaixo de 100 m arredonda ao múltiplo de 5 mais próximo (nunca a 10) e entre
+     * 100 m e 1 km ao múltiplo de 10 mais próximo.
+     */
     fun fmtDistance(m: Double): String = when {
         m < 10 -> "${m.toInt()} m"
-        m < 100 -> "${(m / 10).toInt() * 10} m"
-        m < 1000 -> "${(m / 50).toInt() * 50} m"
+        m < 100 -> "${(Math.round(m / 5.0) * 5).toInt()} m"
+        m < 1000 -> "${(Math.round(m / 10.0) * 10).toInt()} m"
         else -> "%.1f km".format(java.util.Locale("pt", "PT"), m / 1000).replace(".", ",")
     }
 

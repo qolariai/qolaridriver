@@ -30,7 +30,11 @@
     <!-- Radar: cartão apagado enquanto "A verificar se é a melhor correspondência". -->
     <color name="qd_offer_dim">#99ffffff</color>
     <!-- Painel de navegação (vídeo 2026-10-29): preto opaco. -->
-    <color name="qd_maneuver_bg">#111111</color>
+    <color name="qd_maneuver_bg">#FF000000</color>
+    <!-- Texto secundário do painel ("em direção a"), cinza claro como no vídeo de 2026-10-30. -->
+    <color name="qd_maneuver_secondary">#BDBDBD</color>
+    <!-- Vermelho do botão "Parar novos pedidos" (print 2026-10-30, 01:57). -->
+    <color name="qd_stop_red">#C9110B</color>
     <!-- Paragens no painel de navegação (vídeo 2026-10-30): verde na recolha, vermelho no destino. -->
     <color name="qd_stop_pickup">#077E41</color>
     <color name="qd_stop_dropoff">#CB2509</color>
@@ -106,6 +110,28 @@
         <item name="android:paddingStart">14dp</item>
         <item name="android:paddingEnd">16dp</item>
         <item name="android:textColor">@color/chip_text</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Célula da grelha de relatórios de mapa (print 2026-10-30, 02:16). -->
+    <style name="QdReportCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <!-- Etiqueta por baixo do sinal do relatório. -->
+    <style name="QdReportLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/qd_ink</item>
         <item name="android:textSize">15sp</item>
     </style>
 </resources>

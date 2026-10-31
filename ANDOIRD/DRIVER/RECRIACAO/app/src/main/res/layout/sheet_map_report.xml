@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  "Adicionar um relatÃ³rio de mapa" (print 2026-10-30, 02:16).
+  Aberto pelo botÃ£o A+ do mapa durante a recolha/viagem. O motorista reporta um obstÃ¡culo que
+  encontra no caminho para os prÃ³ximos condutores ficarem a saber.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_sheet"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="14dp">
+
+        <ImageButton
+            android:id="@+id/reportClose"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_close"
+            app:tint="@color/qd_ink" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/report_title"
+            android:textColor="@color/qd_ink"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/reportHelp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/report_help"
+            android:src="@drawable/ic_help"
+            app:tint="@color/qd_ink" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/qd_line" />
+
+    <!-- Grelha 3x2 de sinais, como no print -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/reportAccident"
+                style="@style/QdReportCell">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_report_accident" />
+
+                <TextView
+                    style="@style/QdReportLabel"
+                    android:text="@string/report_accident" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportTraffic"
+                style="@style/QdReportCell">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_report_traffic" />
+
+                <TextView
+                    style="@style/QdReportLabel"
+                    android:text="@string/report_traffic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportConstruction"
+                style="@style/QdReportCell">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_report_construction" />
+
+                <TextView
+                    style="@style/QdReportLabel"
+                    android:text="@string/report_construction" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/reportClosure"
+                style="@style/QdReportCell">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_report_closure" />
+
+                <TextView
+                    style="@style/QdReportLabel"
+                    android:text="@string/report_closure" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportSpeed"
+                style="@style/QdReportCell">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_report_speed" />
+
+                <TextView
+                    style="@style/QdReportLabel"
+                    android:text="@string/report_speed" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reportWrongDirection"
+                style="@style/QdReportCell">
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_report_wrong_direction" />
+
+                <TextView
+                    style="@style/QdReportLabel"
+                    android:text="@string/report_wrong_direction" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/qd_line" />
+
+    <!-- "As minhas contribuiÃ§Ãµes" -->
+    <LinearLayout
+        android:id="@+id/reportMine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="22dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/report_mine"
+            android:textColor="@color/qd_ink"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_chevron"
+            app:tint="@color/qd_core_gray400" />
+    </LinearLayout>
+</LinearLayout>

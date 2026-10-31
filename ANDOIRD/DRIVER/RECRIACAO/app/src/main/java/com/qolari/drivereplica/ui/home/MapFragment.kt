@@ -67,6 +67,19 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         // "Navegar" alterna entre navegação (câmara colada) e vista ampla do percurso, como na
         // Uber (vídeo 2026-10-30). Guarda-se no fragment para sobreviver aos re-renders.
         b.navButton.setOnClickListener { toggleNavigationMode(b) }
+        // Botões da navegação (prints de 2026-10-30): A+ relata um obstáculo aos próximos
+        // condutores, o atalho mostra o percurso completo e o escudo abre o Conjunto de
+        // Ferramentas de Segurança. Os filtros escolhem os serviços com que se trabalha.
+        b.navReport.setOnClickListener { MapReportSheet.show(this) }
+        b.navRoute.setOnClickListener { toggleNavigationMode(b) }
+        b.navShield.setOnClickListener {
+            com.qolari.drivereplica.ui.manage.SafetySheet.show(this)
+        }
+        b.navFilters.setOnClickListener { findNavController().navigate(R.id.preferencesServicesFragment) }
+        // Botão de lista do canto inferior direito: abre o Planeador de viagem (print 01:57).
+        b.pickupNavBar.pickupNavOptions.setOnClickListener {
+            findNavController().navigate(R.id.tripPlannerFragment)
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -121,7 +134,14 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         b.mapPro.isVisible = chrome
         b.mapFull.showDemand = chrome
         // O selo depende de haver limite real: quem decide é bindNavigation (não o modo do ecrã).
-        b.navButton.isVisible = navigating
+        // O botão "Navegar"/"Vista geral" só aparece na VISTA GERAL (vídeo 2026-10-30): em modo
+        // navegação o original esconde-o e deixa só o mapa.
+        b.navButton.isVisible = navigating && !navMode
+        // Botões da fase de recolha/viagem (prints de 2026-10-30): A+ e atalho do percurso à
+        // direita, escudo e filtros à esquerda. Só existem nos ecrãs de navegação.
+        b.navActions.isVisible = navigating
+        b.navShield.isVisible = navigating
+        b.navFilters.isVisible = navigating
         // O painel de manobras tapa o topo: o padding do mapa passa a ser a altura real do painel
         // (ver bindNavigation). Fora da navegação limpa-se.
         if (!navigating) b.mapFull.setTopPadding(0)
@@ -203,12 +223,27 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         //   ON_TRIP   -> rota até ao destino (quadrado vermelho na 2.ª secção).
         if (d.stage == DriveStage.TO_PICKUP || d.stage == DriveStage.ON_TRIP) {
             // Ao entrar em navegação (aceitar a viagem ou iniciar a viagem com o cliente a bordo)
-            // a câmara passa logo a modo navegação, como no vídeo de 2026-10-30.
+            // o original mostra primeiro a VISTA GERAL com o botão "Navegar" e só depois entra
+            // no modo navegação (vídeo 2026-10-30, 0:00→0:02). Sem esta paragem inicial o botão
+            // nunca chegava a aparecer, porque em modo navegação ele está escondido.
             if (d.stage != lastNavStage) {
                 lastNavStage = d.stage
-                navMode = true
-                b.mapFull.navigating = true
-                b.navButton.setText(R.string.nav_wide)
+                val auto = prefs.store.navigation.value.autoStart
+                navMode = !auto
+                b.mapFull.navigating = navMode
+                b.navButton.isVisible = !navMode
+                b.navButton.setText(if (navMode) R.string.nav_wide else R.string.nav_navigate)
+                if (auto) {
+                    // "Navegação automática": a vista geral fica ~2 s e depois cola a câmara.
+                    b.mapFull.postDelayed({
+                        if (binding != null && lastNavStage == d.stage && !navMode) {
+                            navMode = true
+                            b.mapFull.navigating = true
+                            b.navButton.isVisible = false
+                            b.navButton.setText(R.string.nav_wide)
+                        }
+                    }, NAV_AUTO_START_MS)
+                }
             }
             // O mapa em navegação usa o estilo do Google Maps (ruas e nomes), não o mapa limpo
             // do ecrã inicial — sem isto "não se percebe nada" (feedback de 2026-10-30).
@@ -392,12 +427,14 @@ class MapFragment : Fragment(R.layout.fragment_map) {
     private var lastNavStage: DriveStage? = null
 
     /**
-     * Botão "Navegar" (vídeo 2026-10-30): alterna entre a navegação e a vista ampla.
-     * O rótulo acompanha o modo: em vista ampla diz "Navegar" (volta à navegação).
+     * Botão "Navegar" (vídeo 2026-10-30): na vista geral mostra "Navegar" e leva à navegação.
+     * Em modo navegação o botão desaparece, como no original — o mapa fica limpo.
      */
     private fun toggleNavigationMode(b: FragmentMapBinding) {
         navMode = !navMode
         b.mapFull.navigating = navMode
+        // Escondido a navegar; visível na vista geral, onde diz "Navegar" para voltar.
+        b.navButton.isVisible = !navMode
         b.navButton.setText(if (navMode) R.string.nav_wide else R.string.nav_navigate)
     }
 
@@ -412,20 +449,36 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         val bar = b.pickupNavBar
         bar.root.isVisible = trip != null
         if (nav?.current != null) {
-            panel.maneuverDistance.text = nav.current.distance
-            panel.maneuverRoad.text = nav.current.road
+            val step = nav.current
+            // Distância separada: "140" grande e "m" pequeno (vídeo 2026-10-30).
+            panel.maneuverDistance.text = step.distanceValue.ifBlank { step.distance }
+            panel.maneuverDistanceUnit.text = step.distanceUnit
+            panel.maneuverDistanceUnit.isVisible = step.distanceUnit.isNotBlank()
+            // Texto rico da 1.ª secção: via a branco + "em direção a" cinza + destino a branco.
+            panel.maneuverRoad.text = maneuverText(step)
             // Chegou ao destino final: a 1.ª secção passa a bandeira (vídeo 2026-10-30, 10:04).
             panel.maneuverIcon.setImageResource(
-                if (nav.atDestination) R.drawable.ic_flag_finish else maneuverIcon(nav.current.maneuver)
+                if (nav.atDestination) R.drawable.ic_flag_finish else maneuverIcon(step.maneuver)
             )
         }
-        // 2.ª secção: a paragem (verde = recolha, vermelho = entrega) com a cidade.
+        // 2.ª secção: o vídeo alterna entre a PRÓXIMA manobra (enquanto houver outra à frente)
+        // e a PARAGEM (quando a manobra actual já é a última). Nunca as duas ao mesmo tempo.
         val stop = nav?.stop
-        panel.stopSection.isVisible = stop != null
-        panel.maneuverDivider.isVisible = hasPanel && stop != null
-        if (stop != null) {
+        val showStop = nav != null && nav.secondaryIsStop
+        panel.stopSection.isVisible = showStop
+        panel.nextSection.isVisible = hasPanel && !showStop && nav?.next != null
+        panel.maneuverDivider.isVisible = hasPanel
+        if (hasPanel && !showStop) {
+            val nxt = nav?.next
+            if (nxt != null) {
+                panel.nextIcon.setImageResource(maneuverIcon(nxt.maneuver))
+                panel.nextRoad.text = nxt.road.ifBlank { nxt.distance }
+            }
+        }
+        if (showStop && stop != null) {
             panel.stopAddress.text = stop.address
             panel.stopCity.text = stop.city
+            panel.stopCity.isVisible = stop.city.isNotBlank()
             panel.stopDot.setBackgroundResource(
                 if (stop.kind == "dropoff") R.drawable.bg_stop_dot_dropoff
                 else R.drawable.bg_stop_dot_pickup
@@ -437,7 +490,7 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         b.speedBadge.isVisible = limit != null
         if (limit != null) b.speedLimit.text = limit.toString()
         // Balão com o nome da rua atual junto à seta (vídeo 2026-10-30 15:16).
-        b.mapFull.setStreetLabel(nav?.current?.street?.ifBlank { null })
+        b.mapFull.setStreetLabel(nav?.current?.street?.ifBlank { nav?.current?.via?.ifBlank { null } })
         // O map padding do topo tem de ser a altura REAL do painel (estava fixo em 176dp e
         // esmagava a área do mapa, deixando a seta fora do sítio).
         panel.root.post {
@@ -462,6 +515,36 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         bar.root.post {
             if (binding != null) b.mapFull.setBottomPadding(bar.root.height)
         }
+    }
+
+    /**
+     * Texto da 1.ª secção do painel, como no vídeo de 2026-10-30:
+     *   "Avenida Duque de Loulé **em** direção a Praça do Marquês de Pombal"
+     * A via e o destino ficam a branco (tamanho normal) e o "em direção a" em cinza e mais
+     * pequeno. Sem destino conhecido fica só o nome da via.
+     */
+    private fun maneuverText(step: com.qolari.drivereplica.drive.NavigationStep): CharSequence {
+        val via = step.via.ifBlank { step.street }.ifBlank { step.road }
+        val toward = step.toward.ifBlank { step.road }
+        if (via.isBlank()) return step.road
+        // Sem destino distinto da via não há frase a compor: mostra só a via.
+        if (toward.isBlank() || toward.equals(via, ignoreCase = true)) return via
+        val join = android.text.SpannableStringBuilder()
+        join.append(via)
+        join.append(" em direção a ")
+        join.setSpan(
+            android.text.style.ForegroundColorSpan(requireContext().getColor(R.color.qd_maneuver_secondary)),
+            via.length, join.length,
+            android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE,
+        )
+        join.setSpan(
+            android.text.style.RelativeSizeSpan(0.74f),
+            via.length, join.length,
+            android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE,
+        )
+        join.append(toward)
+        // O texto é branco por defeito (TextView); só o conector é pintado por cima.
+        return join
     }
 
     private fun hideNavigation(b: FragmentMapBinding) {
@@ -618,5 +701,13 @@ class MapFragment : Fragment(R.layout.fragment_map) {
         alerts = null
         binding = null
         super.onDestroyView()
+    }
+
+    private companion object {
+        /**
+         * Tempo da vista geral antes de a navegação automática arrancar (vídeo 2026-10-30:
+         * o botão "Navegar" e o percurso inteiro ficam ~2 s à vista antes de a câmara colar).
+         */
+        const val NAV_AUTO_START_MS = 2200L
     }
 }
